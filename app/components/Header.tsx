@@ -14,7 +14,8 @@ export default function Header() {
   const loading = status === "loading";
 
   const handleSignOut = async () => {
-    await signOut({ redirect: true });
+    setShowMenu(false);
+    await signOut({ callbackUrl: "/signin" });
   };
 
   return (

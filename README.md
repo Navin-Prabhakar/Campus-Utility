@@ -2,6 +2,26 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+Create `.env.local` with the auth and SMTP settings needed for OTP email delivery:
+
+```bash
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=replace-with-a-long-random-secret
+
+# Use either this single Nodemailer SMTP URL:
+EMAIL_SERVER=smtps://username:password@smtp.example.com:465
+
+# Or replace EMAIL_SERVER with these separate SMTP fields:
+# EMAIL_SERVER_HOST=smtp.example.com
+# EMAIL_SERVER_PORT=465
+# EMAIL_SERVER_USER=username
+# EMAIL_SERVER_PASSWORD=password
+
+EMAIL_FROM="IITP Unofficial <no-reply@example.com>"
+```
+
+For Gmail, use `smtp.gmail.com`, port `465`, and a 16-character Google App Password from the sender account. A normal Gmail password, revoked app password, or app password from a different Google account will be rejected by SMTP.
+
 First, run the development server:
 
 ```bash

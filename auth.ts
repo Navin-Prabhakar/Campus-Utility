@@ -9,6 +9,7 @@ export const authOptions: NextAuthOptions = {
       credentials: {
         email: { label: "Email", type: "email", placeholder: "name_rollnumber@iitp.ac.in" },
         otp: { label: "OTP", type: "text", placeholder: "123456" },
+        otpToken: { label: "OTP Token", type: "text" },
       },
       async authorize(credentials) {
         if (!credentials?.email) {
@@ -19,8 +20,13 @@ export const authOptions: NextAuthOptions = {
           throw new Error("OTP is required");
         }
 
+        if (!credentials?.otpToken) {
+          throw new Error("Please request a new OTP.");
+        }
+
         const email = credentials.email as string;
         const otp = credentials.otp as string;
+        const otpToken = credentials.otpToken as string;
 
         if (!validateIitpEmail(email)) {
           throw new Error(
@@ -28,7 +34,7 @@ export const authOptions: NextAuthOptions = {
           );
         }
 
-        if (!verifyOtp(email, otp)) {
+        if (!verifyOtp(email, otp, otpToken)) {
           throw new Error("Invalid or expired OTP. Please request a new code.");
         }
 

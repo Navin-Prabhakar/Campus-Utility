@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 interface ProfileAvatarProps {
   name?: string | null;
   email?: string | null;
@@ -15,18 +13,11 @@ export default function ProfileAvatar({
   image,
   size = "md",
 }: ProfileAvatarProps) {
-  const [initials, setInitials] = useState("");
-
-  useEffect(() => {
-    if (name) {
-      const parts = name.split(" ");
-      const init =
-        parts.length > 1
-          ? (parts[0][0] + parts[1][0]).toUpperCase()
-          : parts[0].substring(0, 2).toUpperCase();
-      setInitials(init);
-    }
-  }, [name]);
+  const parts = name?.trim().split(/\s+/).filter(Boolean) ?? [];
+  const initials =
+    parts.length > 1
+      ? `${parts[0][0]}${parts[1][0]}`.toUpperCase()
+      : (parts[0] ?? "User").substring(0, 2).toUpperCase();
 
   const sizeClasses = {
     sm: "h-8 w-8 text-xs",

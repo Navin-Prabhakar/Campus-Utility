@@ -1,29 +1,30 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const EMAIL_STORAGE_KEY = "savedIitpEmail";
 
+function getSavedEmail() {
+  if (typeof window === "undefined") {
+    return "";
+  }
+
+  return window.localStorage.getItem(EMAIL_STORAGE_KEY) ?? "";
+}
+
 export default function SignIn() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(getSavedEmail);
   const [otp, setOtp] = useState("");
+  const [otpToken, setOtpToken] = useState("");
   const [step, setStep] = useState<"email" | "otp">("email");
   const [error, setError] = useState("");
   const [info, setInfo] = useState("");
   const [loading, setLoading] = useState(false);
   const [rememberDevice, setRememberDevice] = useState(true);
   const router = useRouter();
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const saved = window.localStorage.getItem(EMAIL_STORAGE_KEY);
-    if (saved) {
-      setEmail(saved);
-    }
-  }, []);
 
   const sendOtp = async () => {
     setError("");
@@ -46,6 +47,13 @@ export default function SignIn() {
         return;
       }
 
+      if (typeof result.otpToken !== "string" || !result.otpToken) {
+        setError("Unable to prepare OTP verification. Please try again.");
+        return;
+      }
+
+      setOtp("");
+      setOtpToken(result.otpToken);
       setStep("otp");
       setInfo("OTP sent to your IIT Patna email. Please enter the code below.");
       if (rememberDevice && typeof window !== "undefined") {
@@ -68,6 +76,7 @@ export default function SignIn() {
       const result = await signIn("credentials", {
         email,
         otp,
+        otpToken,
         redirect: false,
       });
 
@@ -173,7 +182,7 @@ export default function SignIn() {
 
           <button
             type="submit"
-            disabled={loading || !email || (step === "otp" && !otp)}
+            disabled={loading || !email || (step === "otp" && (!otp || !otpToken))}
             className="rounded-lg bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? "Processing..." : step === "email" ? "Send OTP" : "Verify OTP"}
