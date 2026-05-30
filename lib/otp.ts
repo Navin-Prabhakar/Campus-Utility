@@ -2,7 +2,9 @@ import { Resend } from "resend";
 import { createHmac, randomBytes, randomInt, timingSafeEqual } from "crypto";
 
 const OTP_TTL_MS = 10 * 60 * 1000; // 10 minutes
-const resend = new Resend(process.env.RESEND_API_KEY);
+
+// New fail-safe code that bypasses empty build states
+const resend = new Resend(process.env.RESEND_API_KEY || "re_1234567890dummybuildkey");
 
 type OtpChallengePayload = {
   email: string;
