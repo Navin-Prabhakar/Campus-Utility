@@ -1,7 +1,8 @@
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 import { createHmac, randomBytes, randomInt, timingSafeEqual } from "crypto";
 
 const OTP_TTL_MS = 10 * 60 * 1000; // 10 minutes
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 type OtpChallengePayload = {
   email: string;
@@ -72,16 +73,30 @@ export async function sendOtpEmail(email: string, code: string) {
 
   const emailFrom = getEmailFrom();
 
-  const transporter = createOtpTransporter();
-
-  await transporter.sendMail({
+  // await resend.emails.send({
+  //   from: emailFrom,
+  //   to: email,
+  //   subject,
+  //   text,
+  //   html,
+  // });
+  const { data, error } = await resend.emails.send({
     from: emailFrom,
     to: email,
     subject,
     text,
     html,
   });
+  // 👇 PRINT THE ACTUAL ERROR TO YOUR TERMINAL
+  if (error) {
+    console.error("❌ Resend API Error:", error.name, error.message);
+    throw new Error(`Failed to send email via Resend: ${error.message}`);
+  }
+
+  console.log("✅ Resend success ID:", data?.id);
 }
+
+
 
 function signOtpPayload(payload: OtpChallengePayload) {
   const encodedPayload = Buffer.from(JSON.stringify(payload)).toString("base64url");
@@ -164,59 +179,5 @@ function getEmailFrom() {
     return emailFrom;
   }
 
-  const emailUser = process.env.EMAIL_SERVER_USER?.trim();
-
-  if (emailUser) {
-    return `IITP Unofficial <${emailUser}>`;
-  }
-
-  throw new Error("EMAIL_FROM or EMAIL_SERVER_USER is not configured.");
-}
-
-function createOtpTransporter() {
-  const emailServer = process.env.EMAIL_SERVER;
-
-  if (emailServer) {
-    if (emailServer.includes("smtp.example.com")) {
-      throw new Error("EMAIL_SERVER still contains the example SMTP host.");
-    }
-
-    //return nodemailer.createTransport(emailServer);
-    return nodemailer.createTransport({
-      url: emailServer,
-      logger: true, // 👈 PASTE HERE
-      debug: true,  // 👈 PASTE HERE
-    });
-  }
-
-  const host = process.env.EMAIL_SERVER_HOST?.trim();
-  const port = Number(process.env.EMAIL_SERVER_PORT);
-  const user = process.env.EMAIL_SERVER_USER?.trim();
-  const password = process.env.EMAIL_SERVER_PASSWORD?.trim();
-
-  if (!host || !port || !user || !password) {
-    throw new Error(
-      "Email delivery is not configured. Set EMAIL_SERVER or EMAIL_SERVER_HOST, EMAIL_SERVER_PORT, EMAIL_SERVER_USER, EMAIL_SERVER_PASSWORD, and EMAIL_FROM."
-    );
-  }
-
-  if (host === "smtp.example.com") {
-    throw new Error("EMAIL_SERVER_HOST still contains the example SMTP host.");
-  }
-
-  if (user === "username" || password === "password") {
-    throw new Error("SMTP username or password still contains an example value.");
-  }
-
-  const pass = host.includes("gmail.com") ? password.replace(/\s+/g, "") : password;
-
-  return nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    auth: {
-      user,
-      pass,
-    },
-  });
+  return "IITP Unofficial <onboarding@resend.dev>";
 }
