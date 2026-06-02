@@ -27,8 +27,7 @@ export default function BusPage() {
   const SHEET_URL = "https://docs.google.com/spreadsheets/d/1p0WTx2O5rUEatdvpVtoQwnPEhv86_nZf5F-LMPwEe_s/export?format=csv&gid=0";
 
   useEffect(() => {
-    // --- AUTOMATIC LIVE DAY DETECTION ---
-    const currentDay = new Date().getDay(); // 0 = Sunday, 6 = Saturday
+    const currentDay = new Date().getDay();
     setActiveTab(currentDay === 0 || currentDay === 6 ? "weekends" : "weekdays");
 
     const fetchAndParseBusData = async () => {
@@ -46,10 +45,9 @@ export default function BusPage() {
               return;
             }
 
-            const busColumns = [2, 6, 10, 14, 18, 22]; // Core strict columns
+            const busColumns = [2, 6, 10, 14, 18, 22];
             const parsedBuses: BusSchedule[] = [];
 
-            // Robust validation to accept any real clock formatted sequence
             const cleanAndExtractTime = (str: string): string | null => {
               if (!str) return null;
               const match = str.trim().match(/\b\d{1,2}\s*:\s*\d{2}\b/);
@@ -57,9 +55,6 @@ export default function BusPage() {
             };
 
             busColumns.forEach((colIndex, listIdx) => {
-              // ==========================================
-              // 👤 STEP 1: FIX METADATA FROM STEADY TOP BLOCK
-              // ==========================================
               let rawBusName = "";
               let rawDriver = "SWB Assigned Staff";
               let rawContact = "";
@@ -77,7 +72,6 @@ export default function BusPage() {
                 }
               }
 
-              // Merged fallback bounds check
               if (!rawBusName && colIndex > 0) {
                 rawBusName = rows[16]?.[colIndex - 1] || rows[16]?.[colIndex - 2] || "";
               }
@@ -106,9 +100,6 @@ export default function BusPage() {
                 contact = cleanDigits.slice(-10);
               }
 
-              // ==========================================
-              //  STEP 2: WEEKDAYS SCAN (Rows 19 to 65)
-              // ==========================================
               const weekdaysSchedule: TimeSlot[] = [];
               for (let i = 19; i <= 65; i++) {
                 const time = cleanAndExtractTime(rows[i]?.[colIndex] || "");
@@ -121,18 +112,12 @@ export default function BusPage() {
                 }
               }
 
-              // ==========================================
-              // ⛺ STEP 3: WEEKENDS UNRESTRICTED GLOBAL RESOLVER
-              // ==========================================
               const weekendsSchedule: TimeSlot[] = [];
-              
-              // Direct index mapping rules based on your precise raw trace metrics
               let weekendTargetCol = -1;
-              if (listIdx === 1) weekendTargetCol = 11;  // Bus 02 shifts to Index 11
-              if (listIdx === 4) weekendTargetCol = 23;  // Institute Bus 1 shifts to Index 23
+              if (listIdx === 1) weekendTargetCol = 11;
+              if (listIdx === 4) weekendTargetCol = 23;
 
               if (weekendTargetCol !== -1) {
-                // Poori row 66 se end tak scanning bina range bounding crash ke
                 for (let i = 66; i < rows.length; i++) {
                   const time = cleanAndExtractTime(rows[i]?.[weekendTargetCol] || "");
                   
@@ -179,72 +164,84 @@ export default function BusPage() {
     fetchAndParseBusData();
   }, []);
 
-  if (loading) return <div className="p-6 text-center text-gray-500 font-medium animate-pulse">Syncing live SWB schedule configurations...</div>;
-  if (error) return <div className="p-6 text-center text-red-500 font-medium">{error}</div>;
+  if (loading) return <div className="p-12 text-center text-zinc-500 font-medium animate-pulse">Syncing live SWB schedule configurations...</div>;
+  if (error) return <div className="p-8 text-center text-red-500 font-medium">{error}</div>;
 
   return (
-    <main className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Campus Utilities</h1>
-        
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-          {/* Notice header block */}
-          <div className="mb-6 p-5 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-900 shadow-xs space-y-2">
-            <div className="font-bold text-base flex items-center gap-1.5 mb-1 text-amber-950">⚠️ SWB Notice:</div>
+    /* 🛠️ UI CHANGE: Added max-h-screen and overflow-hidden to main wrapper to contain the full page view */
+    <main className="h-screen max-h-screen w-full bg-gray-50 flex flex-col overflow-hidden">
+      
+      {/* 🛠️ STICKY TOP CONTAINER: Yeh section screen par hamesha freeze rahega */}
+      <div className="w-full bg-gray-50 shrink-0 z-30 px-2 pt-1 pb-1 border-b border-gray-200 shadow-xs">
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-xl font-bold text-center text-gray-900 mb-1">Bus Schedule</h1>
+          
+          {/* Notice Header Block */}
+          <div className="p-2 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 space-y-1 max-w-4xl mx-auto shadow-2xs">
+            <div className="font-bold text-sm flex items-center gap-1.5 text-amber-950">⚠️ <u>SWB Notice</u>:</div>
             <p className="leading-relaxed">
-              <strong>1.</strong> For any bus related queries, don't hesitate to call admin staff- 
-              <span className="font-semibold text-slate-900"> Mantu Ji (8986162721)</span> and Bus Manager BSRTC - 
+              <strong>1.)</strong> For any bus related queries, call admin staff- 
+              <span className="font-semibold text-slate-900"> Mantu Ji (8986162721)</span> & Bus Manager BSRTC - 
               <span className="font-semibold text-slate-900"> Rajeev Ji (6201957967)</span>.
             </p>
             <p className="leading-relaxed">
-              <strong>2.</strong> When boarding the bus outside campus, keep your ID card handy or you may not be allowed on board.
+              <strong>2.)</strong> Outside campus, keep your ID card handy or boarding may be denied.
             </p>
           </div>
 
-          {/* Auto-Detection Status Banner */}
-          <div className="mb-6 flex justify-between items-center bg-gray-50 border border-gray-200 rounded-xl p-3 max-w-md mx-auto">
-            <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider"> Auto-Selected:</span>
-            <span className="text-xs font-bold bg-blue-100 text-blue-700 px-3 py-1 rounded-full capitalize">
-              {activeTab === "weekdays" ? "⚡️ Weekday Schedule" : "⛺️ Weekend Schedule"}
-            </span>
+          {/* Manual Mode Toggle Controls inside Sticky Container */}
+          <div className="flex justify-center gap-2 mt-1 bg-gray-100 p-1.5 rounded-xl max-w-xs mx-auto shadow-inner border border-gray-200/60">
+            <button 
+              onClick={() => setActiveTab("weekdays")} 
+              className={`flex-1 py-0.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekdays" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
+            >
+              Weekdays
+            </button>
+            <button 
+              onClick={() => setActiveTab("weekends")} 
+              className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekends" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
+            >
+              Weekends
+            </button>
           </div>
+        </div>
+      </div>
 
-          {/* Manual Mode Toggle Controls */}
-          <div className="flex justify-center gap-4 mb-8 bg-gray-100 p-1.5 rounded-xl max-w-xs mx-auto shadow-inner">
-            <button onClick={() => setActiveTab("weekdays")} className={`flex-1 py-1.5 px-3 rounded-lg font-semibold text-xs transition-all ${activeTab === "weekdays" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}>Weekdays</button>
-            <button onClick={() => setActiveTab("weekends")} className={`flex-1 py-1.5 px-3 rounded-lg font-semibold text-xs transition-all ${activeTab === "weekends" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}>Weekends</button>
-          </div>
-
-          {/* Grid container layout for Bus profiles */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* 🛠️ SCROLLABLE GRID FLOW CONTAINER: Notice ke niche ka part sirf scroll karega */}
+      <div className="flex-1 overflow-y-auto px-2 py-2 pb-24 bg-zinc-50/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {buses.map((bus, idx) => {
               const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
 
               return (
-                <div key={idx} className="bg-gray-50 border border-gray-200 rounded-2xl shadow-xs overflow-hidden flex flex-col hover:border-indigo-400 transition-all">
-                  <div className="bg-slate-900 p-4 text-white">
+                <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col hover:border-indigo-400 transition-all">
+                  <div className="bg-slate-900 p-3 text-white shrink-0">
                     <div className="flex items-center justify-between">
-                      <h3 className="font-bold text-base flex items-center gap-2">🚌 {bus.busName}</h3>
+                      <h3 className="font-bold text-sm sm:text-base flex items-center gap-1.5">🚌 {bus.busName}</h3>
                       {bus.busNumber && <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded font-mono font-semibold shadow-xs">{bus.busNumber}</span>}
                     </div>
-                    <p className="text-xs text-slate-400 mt-1">👤 {bus.driverInfo}</p>
-                    <p className="text-xs text-indigo-400 font-mono mt-0.5">📞 {bus.contact}</p>
+                    <div className="flex items-center justify-between mt-1">
+                      <p className="text-xs text-slate-300">👤 {bus.driverInfo}</p>
+                      {bus.contact && <span className="text-[11px] bg-green-600 text-white px-1.5 py-0.5 rounded font-mono font-semibold shadow-xs">📞 {bus.contact}</span>}
+                    </div>
                   </div>
 
-                  <div className="p-4 flex-grow overflow-y-auto max-h-80 bg-white">
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-xs text-gray-400 font-semibold px-2 border-b pb-1">
+                  {/* Individual Bus List Box */}
+                  <div className="p-2 flex-grow overflow-y-auto max-h-64 bg-white">
+                    <div className="space-y-1">
+                      <div className="flex justify-between text-[10px] text-gray-500 font-bold uppercase tracking-wider px-3 border-b pb-1">
                         <span>TIME</span>
                         <span>ROUTE DIRECTION</span>
                       </div>
                       {activeSchedule.map((slot, sIdx) => (
-                        <div key={sIdx} className="flex justify-between items-center text-xs p-2 bg-gray-50 border border-gray-100 rounded-lg">
-                          <span className="font-bold text-indigo-600 shrink-0 bg-indigo-50 px-1.5 py-0.5 rounded">{slot.time}</span>
-                          <span className="text-gray-700 text-right font-medium max-w-[170px] truncate" title={`${slot.from} ➔ ${slot.to}`}>{slot.from} ➔ {slot.to}</span>
+                        <div key={sIdx} className="flex justify-between items-center text-xs p-1 bg-gray-100 border border-gray-100 rounded-lg">
+                          <span className="font-bold text-indigo-600 shrink-0 bg-indigo-100 px-1.5 py-0.5 rounded font-mono text-[11px] border border-indigo-100/60">{slot.time}</span>
+                          <span className="text-gray-700 text-right  max-w-[220px] truncate" title={`${slot.from} ➔ ${slot.to}`}>{slot.from} ➔ {slot.to}</span>
                         </div>
                       ))}
                       {activeSchedule.length === 0 && (
-                        <p className="text-gray-400 text-xs text-center py-6 italic">No active trips scheduled for today.</p>
+                        <p className="text-gray-400 text-xs text-center py-2 italic">No active trips scheduled for today.</p>
                       )}
                     </div>
                   </div>
@@ -254,6 +251,7 @@ export default function BusPage() {
           </div>
         </div>
       </div>
+
     </main>
   );
 }

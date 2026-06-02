@@ -7,7 +7,7 @@ export default function BottomTabs() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-zinc-200 px-4 py-3 shadow-inner">
+    <footer className="fixed bottom-0 left-0 w-full bg-zinc-200 px-2 py-1 shadow-inner">
       <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-3">
         {Array.from({ length: 5 }).map((_, index) => {
           const isActive = active === index;
@@ -17,16 +17,22 @@ export default function BottomTabs() {
 
           const src =
             index === 0 ? "/bus.png" : index === 1 ? "/store.png" : index === 2 ? "/food.png" : index === 4 ? "/schedule.png" : index === 3 ? "/cab.png" : `/tab${index + 1}.svg`;
-          const alt = index === 0 ? "Bus" : index === 1 ? "Store" : index === 2 ? "Food" : index === 3 ? "Cab" : index === 4 ? "Schedule" : `Tab ${index + 1}`;
+          const alt = index === 0 ? "Bus" : index === 1 ? "Store" : index === 2 ? "Mess_Menu" : index === 3 ? "Cab" : index === 4 ? "Schedule" : `Tab ${index + 1}`;
 
           // Content jo button ke andar dikhega (Image icon)
-          const tabContent = (
-            <img
-              src={src}
-              alt={alt}
-              className="h-10 w-10 object-contain"
-            />
-          );
+         const tabContent = (
+          <div className="flex flex-col items-center justify-center gap-0.5">
+              <img
+                src={src}
+                alt={alt}
+               className="h-7 w-7 object-contain" 
+              />
+            <span className="text-[10px] font-bold tracking-tight text-zinc-600">
+              {alt}
+            </span>
+          </div>
+         );
+          
 
           // NECESSARY CHANGE: Agar index === 0 (Bus) hai, toh use Link component bana do
           if (index === 0) {

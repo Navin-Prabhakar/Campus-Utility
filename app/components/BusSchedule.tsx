@@ -52,7 +52,7 @@ export default function BusScheduleTab() {
     return /\d+:\d+/.test(str.trim());
   };
 
-  if (loading) return <div className="p-6 text-center text-gray-500 font-medium animate-pulse">Syncing live SWB schedule configurations...</div>;
+  if (loading) return <div className="p-8 text-center text-red-500 font-medium animate-pulse">Syncing live SWB schedule configurations...</div>;
   if (error) return <div className="p-6 text-center text-red-500 font-medium">{error}</div>;
 
   return (
