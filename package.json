@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "NEXT_DEV_INDICATOR=false next dev",
-    "build": "next build --no-lint",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
