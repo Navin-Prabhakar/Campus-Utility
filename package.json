@@ -2,6 +2,11 @@
   "name": "campus-utility",
   "version": "0.1.1",
   "private": true,
+  "npm": {
+    "config": {
+      "legacy-peer-deps": true
+    }
+  },
   "scripts": {
     "dev": "NEXT_DEV_INDICATOR=false next dev",
     "build": "next build --no-lint",
