@@ -2,9 +2,15 @@
   "name": "campus-utility",
   "version": "0.1.1",
   "private": true,
+  
   "npm": {
     "config": {
       "legacy-peer-deps": true
+    }
+  },
+  "overrides": {
+    "next-auth": {
+      "next": "$next"
     }
   },
   "scripts": {
