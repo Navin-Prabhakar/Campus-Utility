@@ -10,7 +10,9 @@
   },
   "overrides": {
     "next-auth": {
-      "next": "$next"
+      "next": "$next",
+      "react": "$react",
+      "react-dom": "$react-dom"
     }
   },
   "scripts": {
