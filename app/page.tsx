@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
       {/* 🛠️ LAYOUT ADDITION: Interactive Text Button positioned cleanly right above BottomTabs */}
-      <div className="w-full flex justify-center py-2 pb-10 shrink-0 z-40">
+      <div className="w-full flex justify-center py-2 pb-15 shrink-0 z-40">
         <button
           onClick={() => setShowDevModal(true)}
           className="text-[11px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors tracking-wide cursor-pointer py-1 px-3 rounded-md "
