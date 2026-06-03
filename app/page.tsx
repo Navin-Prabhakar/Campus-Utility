@@ -20,7 +20,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   
-  // 🛠️ STATE ADDITION: Controls the visibility of the developer info modal
+  // Controls the visibility of the developer info modal
   const [showDevModal, setShowDevModal] = useState(false);
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function Home() {
 
             const parseTimeToMinutes = (timeString: string) => {
               const cleaned = timeString.trim();
-              const match = cleaned.match(/(\d{1,2})\s*:\s*\d{2}/);
+              const match = cleaned.match(/(\d{1,2})\s*:\s*(\d{2})/);
               if (!match) return 0;
               const hours = parseInt(match[1], 10);
               const minutes = parseInt(match[2], 10);
@@ -112,20 +112,26 @@ export default function Home() {
               }
             });
 
-            const liveFilteredBuses = allParsedBusesCollector
-              .filter((bus) => parseTimeToMinutes(bus.time) >= currentMinutes)
-              .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time))
-              .slice(0, 4);
+            // 🛠️ FIX LOGIC HERE: Sort strictly by time sequence relative to right now 
+            const sortedBuses = allParsedBusesCollector.sort((a, b) => {
+              const timeA = parseTimeToMinutes(a.time);
+              const timeB = parseTimeToMinutes(b.time);
 
-            if (liveFilteredBuses.length === 0 && allParsedBusesCollector.length > 0) {
-              const staticTopFour = allParsedBusesCollector
-                .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time))
-                .slice(0, 4);
-              setUpcomingBuses(staticTopFour);
-            } else {
-              setUpcomingBuses(liveFilteredBuses);
-            }
+              // Check if the bus time has already passed today
+              const hasPassedA = timeA < currentMinutes;
+              const hasPassedB = timeB < currentMinutes;
 
+              // If one has passed and the other hasn't, prioritize the upcoming one
+              if (hasPassedA !== hasPassedB) {
+                return hasPassedA ? 1 : -1;
+              }
+
+              // Otherwise, sort chronically by standard timestamp minutes
+              return timeA - timeB;
+            });
+
+            // Pick the top 4 remaining chronologically
+            setUpcomingBuses(sortedBuses.slice(0, 4));
             setLoading(false);
           },
           error: () => {
@@ -150,7 +156,7 @@ export default function Home() {
       <div className="w-full flex flex-col items-center">
         <Header />
 
-        {/* 🛠️ FORCE PACKAGING */}
+        {/* FORCE PACKAGING */}
         <main className="flex flex-col items-center justify-start py-2 w-[92%] max-w-[350px]">
           
           {/* Main Dashboard Widget Card */}
@@ -169,7 +175,7 @@ export default function Home() {
               </span>
             </div>
 
-            {/* 🛠️ ULTRA DENSE COMPRESSION */}
+            {/* ULTRA DENSE COMPRESSION */}
             <div className="flex flex-col gap-1 w-full">
               {loading ? (
                 [...Array(4)].map((_, i) => (
@@ -219,18 +225,18 @@ export default function Home() {
         </main>
       </div>
 
-      {/* 🛠️ LAYOUT ADDITION: Interactive Text Button positioned cleanly right above BottomTabs */}
+      {/* Interactive Text Button positioned cleanly right above BottomTabs */}
       <div className="w-full flex justify-center py-2 pb-15 shrink-0 z-40">
         <button
           onClick={() => setShowDevModal(true)}
-          className="text-[11px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors tracking-wide cursor-pointer py-1 px-3 rounded-md "
+          className="text-[11px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors tracking-wide cursor-pointer py-1 px-3 rounded-md"
         >
           Developer Info...
         </button>
       </div>
 
-      {/* 🛠️ MODAL ADDITION: Backdrop-blurred floating profile panel */}
-      {showDevModal && (
+      {/* Backdrop-blurred floating profile panel */}
+     {showDevModal && (
         <div className="fixed inset-0 bg-zinc-950/40 backdrop-blur-md flex items-center justify-center p-4 z-[100] transition-all duration-200">
           
           {/* Rectangular Profile Container Card */}

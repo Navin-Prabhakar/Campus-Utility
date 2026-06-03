@@ -176,10 +176,8 @@ export default function BusPage() {
       {/* STICKY TOP CONTAINER */}
       <div className="w-full bg-gray-50 shrink-0 z-30 px-2 pt-2 pb-1 border-b border-gray-200 shadow-xs">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-xl font-bold text-center text-gray-900 mb-1">Bus Schedule</h1>
-          
           {/* Notice Header Block */}
-          <div className="p-2 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 space-y-1 max-w-4xl mx-auto shadow-2xs">
+          <div className="p-1 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 space-y-0 max-w-4xl mx-auto shadow-2xs">
             <div className="font-bold text-sm flex items-center gap-1.5 text-amber-950">⚠️ <u>SWB Notice</u>:</div>
             <p className="leading-relaxed">
               <strong>1.)</strong> For any bus related queries, call admin staff- 
@@ -210,12 +208,12 @@ export default function BusPage() {
       </div>
 
       {/* SCROLLABLE GRID FLOW CONTAINER */}
-      <div className="flex-1 overflow-y-auto px-2 py-2 pb-24 bg-zinc-50/50">
+      <div className="flex-1 overflow-y-auto px-2 py-1 pb-24 bg-zinc-50/50">
         <div className="max-w-7xl mx-auto">
           
           {/* Handled loading inline using a clean Skeleton Layout Grid */}
           {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
               {[...Array(3)].map((_, idx) => (
                 <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col animate-pulse">
                   {/* Fake Top Banner */}
@@ -231,13 +229,13 @@ export default function BusPage() {
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
               {buses.map((bus, idx) => {
                 const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
 
                 return (
                   <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col hover:border-indigo-400 transition-all">
-                    <div className="bg-slate-900 p-3 text-white shrink-0">
+                    <div className="bg-slate-900 p-2 text-white shrink-0">
                       <div className="flex items-center justify-between">
                         <h3 className="font-bold text-sm sm:text-base flex items-center gap-1.5">🚌 {bus.busName}</h3>
                         {bus.busNumber && <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded font-mono font-semibold shadow-xs">{bus.busNumber}</span>}
