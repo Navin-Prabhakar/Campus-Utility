@@ -20,6 +20,7 @@ export default function Header() {
 
   return (
     <header className="w-full">
+      {/* Upper Header - Left completely untouched */}
       <div className="flex h-12 items-center justify-between bg-slate-900 px-6 text-white">
         <div className="flex items-center gap-3 text-lg font-semibold">
           <Image
@@ -93,7 +94,18 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="h-6 bg-sky-900" />
+
+      {/* 🛠️ Lower Header - Modifying this section to include the Home icon */}
+      <div className="flex h-7 bg-sky-900 items-center px-2">
+        <Link 
+          href="/" 
+          className="flex items-center gap-0.5 text-sky-100 hover:text-white transition-colors text-xs font-medium"
+          aria-label="Go to home page"
+        >
+          <span>🏠</span>
+          <span>Home</span>
+        </Link>
+      </div>
     </header>
   );
 }
