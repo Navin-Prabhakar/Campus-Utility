@@ -5,6 +5,7 @@ import Link from "next/link";
 import Papa from "papaparse";
 import BottomTabs from "./components/BottomTabs";
 import Header from "./components/Header";
+import ReportIssueModal from "./components/ReportIssueModal";
 
 const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1p0WTx2O5rUEatdvpVtoQwnPEhv86_nZf5F-LMPwEe_s/export?format=csv&gid=0";
 
@@ -112,25 +113,20 @@ export default function Home() {
               }
             });
 
-            // 🛠️ FIX LOGIC HERE: Sort strictly by time sequence relative to right now 
             const sortedBuses = allParsedBusesCollector.sort((a, b) => {
               const timeA = parseTimeToMinutes(a.time);
               const timeB = parseTimeToMinutes(b.time);
 
-              // Check if the bus time has already passed today
               const hasPassedA = timeA < currentMinutes;
               const hasPassedB = timeB < currentMinutes;
 
-              // If one has passed and the other hasn't, prioritize the upcoming one
               if (hasPassedA !== hasPassedB) {
                 return hasPassedA ? 1 : -1;
               }
 
-              // Otherwise, sort chronically by standard timestamp minutes
               return timeA - timeB;
             });
 
-            // Pick the top 4 remaining chronologically
             setUpcomingBuses(sortedBuses.slice(0, 4));
             setLoading(false);
           },
@@ -225,7 +221,7 @@ export default function Home() {
         </main>
       </div>
 
-      {/* Interactive Text Button positioned cleanly right above BottomTabs */}
+      {/* 🛠️ FIXED LAYOUT HEIGHT: Changed pb-15 to pb-24 so the text links don't crowd out layout layers */}
       <div className="w-full flex justify-center py-2 pb-15 shrink-0 z-40">
         <button
           onClick={() => setShowDevModal(true)}
@@ -239,10 +235,7 @@ export default function Home() {
      {showDevModal && (
         <div className="fixed inset-0 bg-zinc-950/40 backdrop-blur-md flex items-center justify-center p-4 z-[100] transition-all duration-200">
           
-          {/* Rectangular Profile Container Card */}
           <div className="bg-slate-900 rounded-2xl p-5 w-full max-w-[250px] shadow-2xl border border-yellow-500 flex flex-col items-center relative transform scale-100">
-            
-            {/* Close "✕" Trigger Button */}
             <button 
               onClick={() => setShowDevModal(false)}
               className="absolute top-1.5 right-2 text-red-500 hover:text-red-700 text-m font-bold cursor-pointer"
@@ -251,7 +244,6 @@ export default function Home() {
               ✕
             </button>
 
-            {/* Square/Rectangular Profile Picture Container */}
             <div className="w-48 h-52 relative rounded-2xl overflow-hidden bg-zinc-100 mb-3 border border-indigo-900 shadow-inner">
               <img 
                 src="/dev-avatar.jpg" 
@@ -265,11 +257,9 @@ export default function Home() {
 
             <div className="w-full border-t border-zinc-100/60" />
 
-            {/* Social Profile Media Links (GitHub, LinkedIn, Instagram) */}
             <div className="flex items-center gap-4 mt-2">
-              {/* GitHub Link */}
               <a 
-                href="https://github.com/Navin-Prabhakar" // ⚠️ Paste your actual link here
+                href="https://github.com/Navin-Prabhakar" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 bg-zinc-200 hover:bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-200 rounded-xl transition-all shadow-xs"
@@ -279,9 +269,8 @@ export default function Home() {
                 </svg>
               </a>
 
-              {/* LinkedIn Link */}
               <a 
-                href="https://www.linkedin.com/in/navin-prabhakar-5b5070388/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1sSAnfJ0TQ220Ak%2BxuQa8g%3D%3D" // ⚠️ Paste your actual link here
+                href="https://www.linkedin.com/in/navin-prabhakar-5b5070388/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1sSAnfJ0TQ220Ak%2BxuQa8g%3D%3D" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 bg-zinc-200 hover:bg-blue-800 text-zinc-500 hover:text-white rounded-xl transition-all shadow-xs"
@@ -291,9 +280,8 @@ export default function Home() {
                 </svg>
               </a>
 
-              {/* Instagram Link */}
               <a 
-                href="https://instagram.com/prabhakar_2201" // ⚠️ Paste your actual link here
+                href="https://instagram.com/prabhakar_2201" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 bg-zinc-100 hover:bg-pink-600  text-zinc-500 hover:text-white rounded-xl transition-all shadow-xs"
@@ -308,7 +296,9 @@ export default function Home() {
         </div>
       )}
 
+      {/* 🧭 MOUNTED COMPONENT ORDERING */}
       <BottomTabs />
+      <ReportIssueModal />
     </div>
   );
 }

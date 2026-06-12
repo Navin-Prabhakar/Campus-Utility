@@ -1,19 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link"; 
+import { usePathname } from "next/navigation"; // 🟢 Added to track active page accurately
 
 export default function BottomTabs() {
-  const [active, setActive] = useState<number | null>(null);
+  const pathname = usePathname(); // 🟢 Get current URL path
+
+  // 🟢 NEW: Unified click handler for placeholders
+  const handleVacationAlert = () => {
+    alert("It will be available after summer vacation.");
+  };
 
   return (
     <footer className="fixed bottom-0 left-0 w-full bg-zinc-200 px-2 py-1 shadow-inner z-50">
       <div className="mx-auto flex w-full max-w-4xl items-center justify-between gap-3">
         {Array.from({ length: 5 }).map((_, index) => {
-          const isActive = active === index;
+          // 🟢 Determine active state directly from URL route instead of local state
+          const isActive = 
+            (index === 0 && pathname === "/bus") ||
+            (index === 1 && pathname === "/store") ||
+            (index === 2 && pathname === "/mess");
+
           const base =
             "flex-1 rounded-2xl border border-zinc-300 p-1 text-center text-sm font-medium text-zinc-700 shadow-sm cursor-pointer flex items-center justify-center transition transform active:scale-95";
-          const activeClass = "bg-blue-300 text-white ring-1 ring-blue-400";
+          
+          // 🟢 Tweaked text color to keep labels readable when background changes blue
+          const activeClass = "bg-blue-300 text-white ring-1 ring-blue-400 [&_span]:text-white";
 
           const src =
             index === 0 ? "/bus.png" : index === 1 ? "/store.png" : index === 2 ? "/food.png" : index === 4 ? "/schedule.png" : index === 3 ? "/cab.png" : `/tab${index + 1}.svg`;
@@ -27,8 +40,8 @@ export default function BottomTabs() {
                 alt={alt}
                 className="h-7 w-7 object-contain" 
               />
-              <span className="text-[10px] font-bold tracking-tight text-zinc-600">
-                {alt}
+              <span className="text-[10px] font-bold tracking-tight text-zinc-600 transition-colors">
+                {alt === "Mess_Menu" ? "Mess" : alt}
               </span>
             </div>
           );
@@ -39,7 +52,6 @@ export default function BottomTabs() {
               <Link
                 key={index}
                 href="/bus"
-                onClick={() => setActive(index)}
                 className={`${base} ${isActive ? activeClass : "bg-white/80"}`}
                 aria-pressed={isActive}
                 aria-label={alt}
@@ -49,13 +61,27 @@ export default function BottomTabs() {
             );
           }
 
-          // 🛍️ UI CHANGE: Added dynamic Next.js Link router control mapping for Store (index === 1)
+          // 🛍️ STORE LINK ROUTING (index === 1)
           if (index === 1) {
             return (
               <Link
                 key={index}
                 href="/store"
-                onClick={() => setActive(index)}
+                className={`${base} ${isActive ? activeClass : "bg-white/80"}`}
+                aria-pressed={isActive}
+                aria-label={alt}
+              >
+                {tabContent}
+              </Link>
+            );
+          }
+          
+          // 🍴 MESS MENU LINK ROUTING (index === 2)
+          if (index === 2) {
+            return (
+              <Link
+                key={index}
+                href="/mess"
                 className={`${base} ${isActive ? activeClass : "bg-white/80"}`}
                 aria-pressed={isActive}
                 aria-label={alt}
@@ -65,18 +91,38 @@ export default function BottomTabs() {
             );
           }
 
-          // Remaining normal interactive action control fields
+          // 🗓️ SCHEDULE VACATION DISPATCH (index === 4)
+          if (index === 4) {
+            return (
+              <div
+                key={index}
+                role="button"
+                tabIndex={0}
+                onClick={handleVacationAlert}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") handleVacationAlert();
+                }}
+                className={`${base} bg-white/80`}
+                aria-pressed={false}
+                aria-label={alt}
+              >
+                {tabContent}
+              </div>
+            );
+          }
+
+          // Remaining placeholder fields (Cab - index === 3)
           return (
             <div
               key={index}
               role="button"
               tabIndex={0}
-              onClick={() => setActive(index)}
+              onClick={() => alert("Cab sharing logs coming soon!")}
               onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") setActive(index);
+                if (e.key === "Enter" || e.key === " ") alert("Cab sharing logs coming soon!");
               }}
-              className={`${base} ${isActive ? activeClass : "bg-white/80"}`}
-              aria-pressed={isActive}
+              className={`${base} bg-white/80`}
+              aria-pressed={false}
               aria-label={alt}
             >
               {tabContent}

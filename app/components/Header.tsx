@@ -4,11 +4,17 @@ import React from "react";
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // 🟢 Added to detect the active page
 import ProfileAvatar from "./ProfileAvatar";
 
-export default function Header() {
+interface HeaderProps {
+  messActionSlot?: React.ReactNode; // 🟢 Slot to accept the dropdown component from the mess page
+}
+
+export default function Header({ messActionSlot }: HeaderProps) {
   const { data: session, status } = useSession();
   const [showMenu, setShowMenu] = React.useState(false);
+  const pathname = usePathname(); // 🟢 Read current active URL path
 
   const user = session?.user;
   const loading = status === "loading";
@@ -20,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="w-full">
-      {/* Upper Header - Left completely untouched */}
+      {/* Upper Header - Completely Untouched */}
       <div className="flex h-12 items-center justify-between bg-slate-900 px-6 text-white">
         <div className="flex items-center gap-3 text-lg font-semibold">
           <Image
@@ -95,16 +101,22 @@ export default function Header() {
         </div>
       </div>
 
-      {/* 🛠️ Lower Header - Modifying this section to include the Home icon */}
-      <div className="flex h-7 bg-sky-900 items-center px-2">
+      {/* 🛠️ Lower Header - Fixed to support the dropdown on the right side */}
+      <div className="flex h-7 bg-sky-900 items-center justify-between px-3">
+        {/* Left Side: Constant Home Icon Link */}
         <Link 
           href="/" 
-          className="flex items-center gap-0.5 text-sky-100 hover:text-white transition-colors text-xs font-medium"
+          className="flex items-center gap-1 text-sky-100 hover:text-white transition-colors text-xs font-bold"
           aria-label="Go to home page"
         >
           <span>🏠</span>
           <span>Home</span>
         </Link>
+
+        {/* Right Side: Conditional rendering slot strictly active on /mess */}
+        <div className="flex items-center">
+          {pathname === "/mess" && messActionSlot}
+        </div>
       </div>
     </header>
   );

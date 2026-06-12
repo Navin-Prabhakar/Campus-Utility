@@ -19,16 +19,14 @@ interface SellItem {
   price: string;
 }
 
-type TabType = "sell_buy" | "lend_borrow" | "lost_found";
-
 const SELL_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/1p0WTx2O5rUEatdvpVtoQwnPEhv86_nZf5F-LMPwEe_s/export?format=csv&gid=263432444";
 
 export default function StorePage() {
-  const [activeTab, setActiveTab] = useState<TabType>("sell_buy");
   const [items, setItems] = useState<SellItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
   const [flippedCards, setFlippedCards] = useState<Record<string, boolean>>({});
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
   // Search & Filter Dropdown Core States
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -81,18 +79,14 @@ export default function StorePage() {
               const rawTimestamp = row["Timestamp"] || "";
               let displayDate = "Unknown Date";
               
-              // 🟢 FIXED: Internal Conversion Engine from MM/DD/YYYY to DD/MM/YYYY
               if (rawTimestamp) {
-                // Extracts the numbers from the date block securely
                 const dateMatch = rawTimestamp.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
                 if (dateMatch) {
                   const [, month, day, year] = dateMatch;
-                  // Zero-pads single digits out (e.g., '6' becomes '06')
                   const cleanDay = day.padStart(2, "0");
                   const cleanMonth = month.padStart(2, "0");
                   displayDate = `${cleanDay}/${cleanMonth}/${year}`;
                 } else {
-                  // Fallback if the timestamp format does not match basic slashes
                   const datePart = rawTimestamp.split(" ")[0];
                   if (datePart) displayDate = datePart;
                 }
@@ -144,7 +138,13 @@ export default function StorePage() {
     setFlippedCards((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // LIVE FEED FILTERING & CONDITIONAL SORTING ENGINE
+  const handleCopyPhone = (e: React.MouseEvent, id: string, phone: string) => {
+    e.stopPropagation(); // 🟢 Stops the card from flipping back when copying
+    navigator.clipboard.writeText(phone);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
+
   const filteredAndSortedItems = items
     .filter((item) => {
       const matchQuery = searchQuery.toLowerCase().trim();
@@ -170,12 +170,8 @@ export default function StorePage() {
       return timeB - timeA;
     });
 
-  // 🟢 NEW FEATURE: Click handler to display message before opening the link
   const handleSellButtonClick = () => {
-    // Customize your confirmation prompt alert text message here
     alert("1) please write 'Price:___,your other messages'in 'any comments' column.\n \n2) Upload a clear ,cropped picture.\n \n3) Make sure to mark sold out ,once you sold to someone.");
-    
-    // Smoothly redirect to the form in a fresh window tab
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSdu2XRFTWTWR6rJh9JwM_1ebtn_sDnGS5S4SsnsNRGSW9l6ag/viewform", "_blank", "noopener,noreferrer");
   };
 
@@ -186,26 +182,9 @@ export default function StorePage() {
       {/* Persistent Sticky Navigation Control Section */}
       <div className="w-full bg-white border-b border-zinc-200 sticky top-0 z-40 flex flex-col items-center shadow-2xs">
         
-        {/* Tab Toggle Row */}
-        <div className="w-full py-2 px-3 flex justify-center">
-          <div className="w-full max-w-sm flex bg-zinc-100 p-1 rounded-lg gap-1 border border-zinc-200/60">
-            {["sell_buy", "lend_borrow", "lost_found"].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab as TabType)}
-                className={`flex-1 text-center py-1.5 rounded-md text-[11px] font-bold capitalize transition-all ${
-                  activeTab === tab ? "bg-zinc-900 text-white shadow-xs" : "text-zinc-500 hover:text-zinc-800"
-                }`}
-              >
-                {tab.replace("_", " / ")}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Search and Filter Dropdown Structure */}
-        {activeTab === "sell_buy" && !loading && !error && (
-          <div className="w-[94%] max-w-[365px] pb-2 flex gap-2 items-center relative animate-fade-in">
+        {!loading && !error && (
+          <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative animate-fade-in">
             
             <div className="relative flex-1">
               <input
@@ -300,10 +279,6 @@ export default function StorePage() {
           <div className="py-8 text-center text-xs text-red-500 bg-red-50 rounded-lg border border-red-100 font-medium">
             ⚠️ Unable to sync live marketplace records.
           </div>
-        ) : activeTab !== "sell_buy" ? (
-          <div className="py-12 text-center text-xs text-zinc-400 bg-white border border-zinc-200 rounded-xl p-4">
-            🔄 GID connection required. Waiting for data sync...
-          </div>
         ) : filteredAndSortedItems.length === 0 ? (
           <div className="py-12 text-center text-xs text-zinc-400 bg-white border border-zinc-200/60 rounded-xl">
             No items matching your selected filtering options could be found.
@@ -318,7 +293,7 @@ export default function StorePage() {
                 <div
                   key={item.id}
                   onClick={() => toggleCardFlip(item.id)}
-                  className="w-full aspect-[3/4] cursor-pointer [perspective:1000px] select-none"
+                  className="w-full aspect-[3/4] cursor-pointer [perspective:1000px]"
                 >
                   <div
                     className={`relative w-full h-full duration-500 [transform-style:preserve-3d] transition-transform ${
@@ -327,7 +302,7 @@ export default function StorePage() {
                   >
                     
                     {/* FRONT OF THE CARD */}
-                    <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-200 bg-white p-1.5 flex flex-col justify-between shadow-2xs [backface-visibility:hidden]">
+                    <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-200 bg-white p-1.5 flex flex-col justify-between shadow-2xs [backface-visibility:hidden] select-none">
                       
                       <div className="relative w-full h-[80%] bg-zinc-100 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
                         {item.picture ? (
@@ -340,7 +315,6 @@ export default function StorePage() {
                         ) : (
                             <span className="text-[14px] text-zinc-400">Image not available. </span>  
                         )
-                        
                         }
 
                         <div className="absolute bottom-1 right-1 bg-black/60 backdrop-blur-xs text-white text-[7px] font-mono font-medium px-1.5 py-0.5 rounded shadow-xs z-10">
@@ -369,7 +343,7 @@ export default function StorePage() {
 
                     {/* BACK OF THE CARD */}
                     <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-900 bg-zinc-900 p-2.5 flex flex-col justify-between text-white shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                      <div className="border-b border-zinc-800 pb-1 flex justify-between items-center shrink-0">
+                      <div className="border-b border-zinc-800 pb-1 flex justify-between items-center shrink-0 select-none">
                         <span className="text-[8px] font-bold uppercase tracking-widest text-indigo-400">
                           Seller Contact Info
                         </span>
@@ -380,26 +354,33 @@ export default function StorePage() {
 
                       <div className="flex flex-col gap-1.5 py-1.5 flex-grow min-w-0 justify-center">
                         <div className="min-w-0">
-                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold">Name</p>
-                          <p className="text-[11px] font-bold text-zinc-100 truncate mt-0.5">{item.sellerName}</p>
+                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Name</p>
+                          <p className="text-[11px] font-bold text-zinc-100 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.sellerName}</p>
                         </div>
                         <div className="min-w-0">
-                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold">Roll No</p>
-                          <p className="text-[10px] font-mono font-medium text-zinc-300 truncate mt-0.5">{item.rollNo}</p>
+                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Roll No</p>
+                          <p className="text-[10px] font-mono font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.rollNo}</p>
                         </div>
                         <div className="min-w-0">
-                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold">Email</p>
-                          <p className="text-[10px] font-medium text-zinc-300 truncate mt-0.5">{item.email}</p>
+                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Email</p>
+                          <p className="text-[10px] font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.email}</p>
                         </div>
                       </div>
 
-                      <div className="mt-auto shrink-0 bg-zinc-800 rounded-md p-1 border border-zinc-700/50 flex items-center justify-between">
-                        <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wide px-1">
+                      {/* 🟢 FIXED FOOTER SECTION: Text is now highlighting-enabled & has a direct Copy shortcut click */}
+                      <div 
+                        onClick={(e) => e.stopPropagation()} 
+                        className="mt-auto shrink-0 bg-zinc-800 rounded-md p-1 border border-zinc-700/50 flex items-center justify-between"
+                      >
+                        <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wide px-1 select-text">
                           📞 {item.phone}
                         </span>
-                        <span className="text-[7px] text-zinc-500 font-bold uppercase shrink-0">
-                          Tap to flip
-                        </span>
+                        <button
+                          onClick={(e) => handleCopyPhone(e, item.id, item.phone)}
+                          className="text-[7px] bg-zinc-700 text-zinc-200 hover:text-white px-1.5 py-0.5 rounded font-bold uppercase transition-all"
+                        >
+                          {copiedId === item.id ? "Copied!" : "Copy"}
+                        </button>
                       </div>
 
                     </div>
@@ -413,16 +394,13 @@ export default function StorePage() {
 
       </main>
 
-      {/* 🛠️ MODIFIED: Replaced direct <a> anchor tag with an active button invoking the alert trigger script layout */}
-      {activeTab === "sell_buy" && (
-        <button
-          onClick={handleSellButtonClick}
-          className="fixed bottom-20 right-4 w-12 h-12 bg-purple-700 backdrop-blur-xs text-white rounded-full flex items-center justify-center font-bold text-2xs shadow-md tracking-wider border border-zinc-900/30 active:scale-95 transition-all z-40 hover:bg-purple-800 cursor-pointer"
-          aria-label="Sell Item"
-        >
-          Sell
-        </button>
-      )}
+      <button
+        onClick={handleSellButtonClick}
+        className="fixed bottom-20 right-4 w-12 h-12 bg-purple-700 backdrop-blur-xs text-white rounded-full flex items-center justify-center font-bold text-2xs shadow-md tracking-wider border border-zinc-900/30 active:scale-95 transition-all z-40 hover:bg-purple-800 cursor-pointer select-none"
+        aria-label="Sell Item"
+      >
+        Sell
+      </button>
 
       <BottomTabs />
     </div>
