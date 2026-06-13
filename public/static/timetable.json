@@ -1,6 +1,24 @@
 [
   {
     "day": "Monday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 AM - 9.55 AM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "9 AM - 9.55 AM",
     "year": 1,
     "courseCode": "ME1201",
@@ -48,6 +66,15 @@
     "day": "Wednesday",
     "time": "9 AM - 9.55 AM",
     "year": 1,
+    "courseCode": "ME1202",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "9 AM - 9.55 AM",
+    "year": 1,
     "courseCode": "CS1201",
     "group": "G9, G10, G11, G12",
     "venue": "Respective Lab Department",
@@ -61,6 +88,15 @@
     "group": "G21, G22",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 AM - 9.55 AM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -94,6 +130,15 @@
     "time": "9 AM - 9.55 AM",
     "year": 1,
     "courseCode": "CH1201",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "9 AM - 9.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
     "group": "G10, G11, G12",
     "venue": "Respective Lab Department",
     "type": "Lab"
@@ -115,6 +160,231 @@
     "group": "G23, G24",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -144,6 +414,24 @@
     "type": "Lab"
   },
   {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
     "day": "Wednesday",
     "time": "2 PM - 2.55 PM",
     "year": 1,
@@ -151,6 +439,15 @@
     "group": "G13, G14, G15, G16",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -198,6 +495,15 @@
     "type": "Lab"
   },
   {
+    "day": "Monday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
@@ -214,6 +520,132 @@
     "group": "G1, G2, G3",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "6 PM -7:00 PM",
+    "year": 1,
+    "courseCode": "IK1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM -7:00 PM",
+    "year": 1,
+    "courseCode": "IK1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
