@@ -307,7 +307,7 @@
   },
   {
     "day": "Monday",
-    "time": "2 PM - 2.55 PM",
+    "time": "2 AM - 2.55 PM",
     "year": 1,
     "courseCode": "ME1201",
     "group": "G1, G2, G3",
@@ -334,7 +334,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "2 PM - 2.55 PM",
+    "time": "2 AM - 2.55 PM",
     "year": 1,
     "courseCode": "CS1201",
     "group": "G13, G14, G15, G16",
@@ -352,7 +352,7 @@
   },
   {
     "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
+    "time": "2 AM - 2.55 PM",
     "year": 1,
     "courseCode": "PH1201",
     "group": "G15, G16",
@@ -370,7 +370,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 AM - 3.55 PM",
     "year": 1,
     "courseCode": "ME1201",
     "group": "G4, G5, G6",
