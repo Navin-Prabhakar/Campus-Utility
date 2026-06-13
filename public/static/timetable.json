@@ -27,11 +27,38 @@
     "type": "Lab"
   },
   {
+    "day": "Monday",
+    "time": "9 AM - 12 Noon",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G21, G22, G23, G24",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "9 AM - 12 Noon",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19, G20",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
     "day": "Tuesday",
     "time": "9 AM - 12 Noon",
     "year": 1,
     "courseCode": "CS1201",
     "group": "G5, G6, G7, G8",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 AM - 12 Noon",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G17, G18",
     "venue": "Respective Lab Department",
     "type": "Lab"
   },
@@ -54,6 +81,15 @@
     "type": "Lab"
   },
   {
+    "day": "Wednesday",
+    "time": "9 AM - 12 Noon",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G21, G22",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
     "year": 1,
@@ -68,6 +104,24 @@
     "year": 1,
     "courseCode": "CS1201",
     "group": "G1, G2, G3, G4",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 AM - 12 Noon",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G16, G17, G18",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 AM - 12 Noon",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13, G14",
     "venue": "Respective Lab Department",
     "type": "Lab"
   },
@@ -315,6 +369,24 @@
     "type": "Lab"
   },
   {
+    "day": "Monday",
+    "time": "2 PM - 5 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 5 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
     "day": "Tuesday",
     "time": "2 PM - 2.55 PM",
     "year": 1,
@@ -360,6 +432,15 @@
     "type": "Lab"
   },
   {
+    "day": "Thursday",
+    "time": "2 PM - 5 PM",
+    "year": 1,
+    "courseCode": "ME1201",
+    "group": "G7, G8, G9",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
@@ -374,6 +455,15 @@
     "year": 1,
     "courseCode": "ME1201",
     "group": "G4, G5, G6",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 5 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1, G2, G3",
     "venue": "Respective Lab Department",
     "type": "Lab"
   },
