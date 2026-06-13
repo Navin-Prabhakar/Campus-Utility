@@ -94,22 +94,18 @@ export default function BottomTabs() {
           // 🗓️ SCHEDULE VACATION DISPATCH (index === 4)
           if (index === 4) {
             return (
-              <div
+              <Link
                 key={index}
-                role="button"
-                tabIndex={0}
-                onClick={handleVacationAlert}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") handleVacationAlert();
-                }}
-                className={`${base} bg-white/80`}
-                aria-pressed={false}
+                href="/schedule"
+                className={`${base} ${isActive ? activeClass : "bg-white/80"}`}
+                aria-pressed={isActive}
                 aria-label={alt}
               >
                 {tabContent}
-              </div>
+              </Link>
             );
           }
+          
 
           // Remaining placeholder fields (Cab - index === 3)
           return (

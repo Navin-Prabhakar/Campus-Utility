@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Papa from "papaparse";
 import Header from "../components/Header";
 import BottomTabs from "../components/BottomTabs";
@@ -169,111 +170,122 @@ export default function BusPage() {
   if (error) return <div className="p-8 text-center text-red-500 font-medium">{error}</div>;
 
   return (
-    <main className="h-screen max-h-screen w-full bg-gray-50 flex flex-col overflow-hidden">
-      {/* 🏠 GLOBAL HEADER INSERTED HERE */}
-      <Header />
+    <main className="h-screen max-h-screen w-full bg-gray-50 flex flex-col overflow-hidden relative">
+      {/* 📌 PINNED HEADER */}
+      <div className="shrink-0 z-40">
+        <Header />
+      </div>
       
-      {/* STICKY TOP CONTAINER */}
-      <div className="w-full bg-gray-50 shrink-0 z-30 px-2 pt-2 pb-1 border-b border-gray-200 shadow-xs">
-        <div className="max-w-7xl mx-auto">
-          {/* Notice Header Block */}
-          <div className="p-1 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 space-y-0 max-w-4xl mx-auto shadow-2xs">
-            <div className="font-bold text-sm flex items-center gap-1.5 text-amber-950">⚠️ <u>SWB Notice</u>:</div>
-            <p className="leading-relaxed">
-              <strong>1.)</strong> For any bus related queries, call admin staff- 
-              <span className="font-semibold text-slate-900"> Mantu Ji (8986162721)</span> & Bus Manager BSRTC - 
-              <span className="font-semibold text-slate-900"> Rajeev Ji (6201957967)</span>.
-            </p>
-            <p className="leading-relaxed">
-              <strong>2.)</strong> Outside campus, keep your ID card handy or boarding may be denied.
-            </p>
-          </div>
-
-          {/* Manual Mode Toggle Controls inside Sticky Container */}
-          <div className="flex justify-center gap-2 mt-1 bg-gray-100 p-1.5 rounded-xl max-w-xs mx-auto shadow-inner border border-gray-200/60">
-            <button 
-              onClick={() => setActiveTab("weekdays")} 
-              className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekdays" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
-            >
-              Weekdays
-            </button>
-            <button 
-              onClick={() => setActiveTab("weekends")} 
-              className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekends" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
-            >
-              Weekends
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* SCROLLABLE GRID FLOW CONTAINER */}
-      <div className="flex-1 overflow-y-auto px-2 py-1 pb-24 bg-zinc-50/50">
-        <div className="max-w-7xl mx-auto">
+      {/* 📜 MIDDLE CONTAINER: Everything inside here scrolls up together */}
+      <div className="flex-1 overflow-y-auto px-2 py-2 pb-28 bg-zinc-50/50">
+        <div className="max-w-7xl mx-auto flex flex-col min-h-full">
           
-          {/* Handled loading inline using a clean Skeleton Layout Grid */}
-          {loading ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-              {[...Array(3)].map((_, idx) => (
-                <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col animate-pulse">
-                  {/* Fake Top Banner */}
-                  <div className="bg-zinc-300 h-16 w-full" />
-                  {/* Fake Rows Box */}
-                  <div className="p-3 space-y-2">
-                    <div className="h-3 bg-zinc-200 rounded w-1/3 mb-4" />
-                    {[...Array(4)].map((_, rowIdx) => (
-                      <div key={rowIdx} className="flex justify-between items-center h-7 bg-zinc-100 rounded-lg px-2" />
-                    ))}
-                  </div>
-                </div>
-              ))}
+          {/* Top content wrapper to isolate layout items */}
+          <div className="flex-grow">
+            {/* Notice Header Block */}
+            <div className="mb-2 p-1 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 space-y-0 max-w-4xl mx-auto shadow-2xs">
+              <div className="font-bold text-sm flex items-center gap-1.5 text-amber-950">⚠️ <u>SWB Notice</u>:</div>
+              <p className="leading-relaxed">
+                <strong>1.)</strong> For any bus related queries, call admin staff- 
+                <span className="font-semibold text-slate-900"> Mantu Ji (8986162721)</span> & Bus Manager BSRTC - 
+                <span className="font-semibold text-slate-900"> Rajeev Ji (6201957967)</span>.
+              </p>
+              <p className="leading-relaxed">
+                <strong>2.)</strong> Outside campus, keep your ID card handy or boarding may be denied.
+              </p>
             </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-              {buses.map((bus, idx) => {
-                const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
 
-                return (
-                  <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col hover:border-indigo-400 transition-all">
-                    <div className="bg-slate-900 p-2 text-white shrink-0">
-                      <div className="flex items-center justify-between">
-                        <h3 className="font-bold text-sm sm:text-base flex items-center gap-1.5">🚌 {bus.busName}</h3>
-                        {bus.busNumber && <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded font-mono font-semibold shadow-xs">{bus.busNumber}</span>}
-                      </div>
-                      <div className="flex items-center justify-between mt-1">
-                        <p className="text-xs text-slate-300">👤 {bus.driverInfo}</p>
-                        {bus.contact && <span className="text-[11px] bg-green-600 text-white px-1.5 py-0.5 rounded font-mono font-semibold shadow-xs">📞 {bus.contact}</span>}
-                      </div>
+            {/* Toggle Controls */}
+            <div className="flex justify-center gap-2 mb-3 bg-gray-100 p-1.5 rounded-xl max-w-xs mx-auto shadow-inner border border-gray-200/60">
+              <button 
+                onClick={() => setActiveTab("weekdays")} 
+                className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekdays" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
+              >
+                Weekdays
+              </button>
+              <button 
+                onClick={() => setActiveTab("weekends")} 
+                className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekends" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
+              >
+                Weekends
+              </button>
+            </div>
+
+            {/* Layout Grid Layout Boxes */}
+            {loading ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                {[...Array(3)].map((_, idx) => (
+                  <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col animate-pulse">
+                    <div className="bg-zinc-300 h-16 w-full" />
+                    <div className="p-3 space-y-2">
+                      <div className="h-3 bg-zinc-200 rounded w-1/3 mb-4" />
+                      {[...Array(4)].map((_, rowIdx) => (
+                        <div key={rowIdx} className="flex justify-between items-center h-7 bg-zinc-100 rounded-lg px-2" />
+                      ))}
                     </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                {buses.map((bus, idx) => {
+                  const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
 
-                    {/* Individual Bus List Box */}
-                    <div className="p-2 flex-grow overflow-y-auto max-h-64 bg-white">
-                      <div className="space-y-1">
-                        <div className="flex justify-between text-[10px] text-gray-500 font-bold uppercase tracking-wider px-3 border-b pb-1">
-                          <span>TIME</span>
-                          <span>ROUTE DIRECTION</span>
+                  return (
+                    <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col hover:border-indigo-400 transition-all">
+                      <div className="bg-slate-900 p-2 text-white shrink-0">
+                        <div className="flex items-center justify-between">
+                          <h3 className="font-bold text-sm sm:text-base flex items-center gap-1.5">🚌 {bus.busName}</h3>
+                          {bus.busNumber && <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded font-mono font-semibold shadow-xs">{bus.busNumber}</span>}
                         </div>
-                        {activeSchedule.map((slot, sIdx) => (
-                          <div key={sIdx} className="flex justify-between items-center text-xs p-1 bg-gray-100 border border-gray-100 rounded-lg">
-                            <span className="font-bold text-indigo-600 shrink-0 bg-indigo-100 px-1.5 py-0.5 rounded font-mono text-[11px] border border-indigo-100/60">{slot.time}</span>
-                            <span className="text-gray-700 text-right max-w-[220px] truncate" title={`${slot.from} ➔ ${slot.to}`}>{slot.from} ➔ {slot.to}</span>
+                        <div className="flex items-center justify-between mt-1">
+                          <p className="text-xs text-slate-300">👤 {bus.driverInfo}</p>
+                          {bus.contact && <span className="text-[11px] bg-green-600 text-white px-1.5 py-0.5 rounded font-mono font-semibold shadow-xs">📞 {bus.contact}</span>}
+                        </div>
+                      </div>
+
+                      {/* Individual Inside-Card Scroll Area */}
+                      <div className="p-2 flex-grow overflow-y-auto max-h-64 bg-white">
+                        <div className="space-y-1">
+                          <div className="flex justify-between text-[10px] text-gray-500 font-bold uppercase tracking-wider px-3 border-b pb-1">
+                            <span>TIME</span>
+                            <span>ROUTE DIRECTION</span>
                           </div>
-                        ))}
-                        {activeSchedule.length === 0 && (
-                          <p className="text-gray-400 text-xs text-center py-2 italic">No active trips scheduled for today.</p>
-                        )}
+                          {activeSchedule.map((slot, sIdx) => (
+                            <div key={sIdx} className="flex justify-between items-center text-xs p-1 bg-gray-100 border border-gray-100 rounded-lg">
+                              <span className="font-bold text-indigo-600 shrink-0 bg-indigo-100 px-1.5 py-0.5 rounded font-mono text-[11px] border border-indigo-100/60">{slot.time}</span>
+                              <span className="text-gray-700 text-right max-w-[220px] truncate" title={`${slot.from} ➔ ${slot.to}`}>{slot.from} ➔ {slot.to}</span>
+                            </div>
+                          ))}
+                          {activeSchedule.length === 0 && (
+                            <p className="text-gray-400 text-xs text-center py-2 italic">No active trips scheduled for today.</p>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          )}
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* 🛠️ PLACED AT BOTTOM OF SCROLLING LAYER (Right above BottomTabs threshold) */}
+          <div className="w-full text-center mt-6 mb-2 shrink-0">
+            <Link 
+              href="/?openReport=true" 
+              className="text-[11px] sm:text-xs font-bold text-rose-500 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 px-3 py-1.5 rounded-xl transition-all inline-flex items-center gap-1 shadow-2xs cursor-pointer"
+            >
+              ⚠️ Report Incorrect Timing / Issue
+            </Link>
+          </div>
           
         </div>
       </div>
 
-      <BottomTabs />
+      {/* 📌 PINNED BOTTOM TABS */}
+      <div className="shrink-0 z-40">
+        <BottomTabs />
+      </div>
     </main>
   );
 }

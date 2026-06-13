@@ -2,8 +2,13 @@
 
 import React, { useState } from "react";
 
-export default function ReportIssueModal() {
-  const [isOpen, setIsOpen] = useState(false);
+// 🛠️ MODIFICATION 1: Defined expected props to clear the IntrinsicAttributes compiler error
+interface ReportIssueModalProps {
+  isOpen: boolean;
+  onClose: (value: boolean) => void;
+}
+
+export default function ReportIssueModal({ isOpen, onClose }: ReportIssueModalProps) {
   const [category, setCategory] = useState("Bug");
   const [description, setDescription] = useState("");
   const [contactInfo, setContactInfo] = useState("");
@@ -44,7 +49,7 @@ export default function ReportIssueModal() {
         setDescription("");
         setContactInfo("");
         setTimeout(() => {
-          setIsOpen(false);
+          onClose(false); // 🛠️ MODIFICATION 2: Call the parent close controller instead of local state
           setStatus("idle");
         }, 2200);
       } else {
@@ -61,7 +66,7 @@ export default function ReportIssueModal() {
     <>
       {/* Floating Trigger Button (Bottom Left) */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => onClose(true)} // 🛠️ MODIFICATION 3: Set parent modal visibility toggle to true
         className="fixed bottom-20 right-4 w-11 h-11 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-[18px] shadow-md active:scale-95 transition-all z-40 hover:bg-red-700 cursor-pointer select-none"
         aria-label="Report Issue"
       >
@@ -79,7 +84,7 @@ export default function ReportIssueModal() {
                 <span>⚠️</span> Report an Issue / Feedback
               </h3>
               <button 
-                onClick={() => setIsOpen(false)}
+                onClick={() => onClose(false)} // 🛠️ MODIFICATION 4: Closes using parent state
                 className="text-zinc-400 hover:text-zinc-600 text-xs font-bold p-1"
               >
                 ✕

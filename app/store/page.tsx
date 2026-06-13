@@ -139,7 +139,7 @@ export default function StorePage() {
   };
 
   const handleCopyPhone = (e: React.MouseEvent, id: string, phone: string) => {
-    e.stopPropagation(); // 🟢 Stops the card from flipping back when copying
+    e.stopPropagation(); 
     navigator.clipboard.writeText(phone);
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
@@ -176,11 +176,15 @@ export default function StorePage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-zinc-50 font-sans text-zinc-600 antialiased flex flex-col items-center relative">
-      <Header />
+    <div className="h-screen max-h-screen w-full bg-zinc-50 font-sans text-zinc-600 antialiased flex flex-col overflow-hidden relative">
+      
+      {/* 📌 PINNED HEADER: Fixed view context layout wrapper */}
+      <div className="shrink-0 z-40">
+        <Header />
+      </div>
 
       {/* Persistent Sticky Navigation Control Section */}
-      <div className="w-full bg-white border-b border-zinc-200 sticky top-0 z-40 flex flex-col items-center shadow-2xs">
+      <div className="w-full bg-white border-b border-zinc-200 shrink-0 z-30 flex flex-col items-center shadow-2xs">
         
         {/* Search and Filter Dropdown Structure */}
         {!loading && !error && (
@@ -266,134 +270,136 @@ export default function StorePage() {
 
       </div>
 
-      {/* Main Grid Feed Layout Segment */}
-      <main className="w-[94%] max-w-[365px] flex flex-col py-3 pb-24 flex-grow">
-        
-        {loading ? (
-          <div className="grid grid-cols-2 gap-2 w-full">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="aspect-[4/5] w-full animate-pulse rounded-lg bg-zinc-200" />
-            ))}
-          </div>
-        ) : error ? (
-          <div className="py-8 text-center text-xs text-red-500 bg-red-50 rounded-lg border border-red-100 font-medium">
-            ⚠️ Unable to sync live marketplace records.
-          </div>
-        ) : filteredAndSortedItems.length === 0 ? (
-          <div className="py-12 text-center text-xs text-zinc-400 bg-white border border-zinc-200/60 rounded-xl">
-            No items matching your selected filtering options could be found.
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-2 w-full">
-            {filteredAndSortedItems.map((item) => {
-              const isSoldOut = item.status.toLowerCase().includes("sold");
-              const isFlipped = !!flippedCards[item.id];
+      {/* 📜 SCROLLABLE MIDDLE CONTAINER: Marketplace items scroll inside here */}
+      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-1 pb-28 bg-zinc-50/50">
+        <main className="w-[94%] max-w-[365px] flex flex-col py-2 flex-grow">
+          
+          {loading ? (
+            <div className="grid grid-cols-2 gap-2 w-full">
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className="aspect-[4/5] w-full animate-pulse rounded-lg bg-zinc-200" />
+              ))}
+            </div>
+          ) : error ? (
+            <div className="py-8 text-center text-xs text-red-500 bg-red-50 rounded-lg border border-red-100 font-medium">
+              ⚠️ Unable to sync live marketplace records.
+            </div>
+          ) : filteredAndSortedItems.length === 0 ? (
+            <div className="py-12 text-center text-xs text-zinc-400 bg-white border border-zinc-200/60 rounded-xl">
+              No items matching your selected filtering options could be found.
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 gap-2 w-full">
+              {filteredAndSortedItems.map((item) => {
+                const isSoldOut = item.status.toLowerCase().includes("sold");
+                const isFlipped = !!flippedCards[item.id];
 
-              return (
-                <div
-                  key={item.id}
-                  onClick={() => toggleCardFlip(item.id)}
-                  className="w-full aspect-[3/4] cursor-pointer [perspective:1000px]"
-                >
+                return (
                   <div
-                    className={`relative w-full h-full duration-500 [transform-style:preserve-3d] transition-transform ${
-                      isFlipped ? "[transform:rotateY(180deg)]" : ""
-                    }`}
+                    key={item.id}
+                    onClick={() => toggleCardFlip(item.id)}
+                    className="w-full aspect-[3/4] cursor-pointer [perspective:1000px]"
                   >
-                    
-                    {/* FRONT OF THE CARD */}
-                    <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-200 bg-white p-1.5 flex flex-col justify-between shadow-2xs [backface-visibility:hidden] select-none">
+                    <div
+                      className={`relative w-full h-full duration-500 [transform-style:preserve-3d] transition-transform ${
+                        isFlipped ? "[transform:rotateY(180deg)]" : ""
+                      }`}
+                    >
                       
-                      <div className="relative w-full h-[80%] bg-zinc-100 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
-                        {item.picture ? (
-                          <img
-                            src={item.picture}
-                            alt={item.itemName}
-                            className={`w-full h-full object-cover transition-all ${isSoldOut ? "grayscale opacity-50" : ""}`}
-                            referrerPolicy="no-referrer"
-                          />
-                        ) : (
-                            <span className="text-[14px] text-zinc-400">Image not available. </span>  
-                        )
-                        }
+                      {/* FRONT OF THE CARD */}
+                      <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-200 bg-white p-1.5 flex flex-col justify-between shadow-2xs [backface-visibility:hidden] select-none">
+                        
+                        <div className="relative w-full h-[80%] bg-zinc-100 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
+                          {item.picture ? (
+                            <img
+                              src={item.picture}
+                              alt={item.itemName}
+                              className={`w-full h-full object-cover transition-all ${isSoldOut ? "grayscale opacity-50" : ""}`}
+                              referrerPolicy="no-referrer"
+                            />
+                          ) : (
+                              <span className="text-[14px] text-zinc-400">Image not available. </span>  
+                          )
+                          }
 
-                        <div className="absolute bottom-1 right-1 bg-black/60 backdrop-blur-xs text-white text-[7px] font-mono font-medium px-1.5 py-0.5 rounded shadow-xs z-10">
-                          {item.formattedDate}
+                          <div className="absolute bottom-1 right-1 bg-black/60 backdrop-blur-xs text-white text-[7px] font-mono font-medium px-1.5 py-0.5 rounded shadow-xs z-10">
+                            {item.formattedDate}
+                          </div>
+
+                          {isSoldOut && (
+                            <div className="absolute top-1 left-1 bg-red-600 text-white text-[8px] uppercase tracking-wider font-extrabold px-1.5 py-0.5 rounded-full shadow-xs z-10">
+                              Sold Out
+                            </div>
+                          )}
                         </div>
 
-                        {isSoldOut && (
-                          <div className="absolute top-1 left-1 bg-red-600 text-white text-[8px] uppercase tracking-wider font-extrabold px-1.5 py-0.5 rounded-full shadow-xs z-10">
-                            Sold Out
+                        <div className="flex flex-col flex-grow justify-end pt-2 px-0.5 min-w-0">
+                          <h4 className="truncate text-[11px] font-bold text-zinc-800 leading-tight">
+                            {item.itemName}
+                          </h4>
+                          <div className="mt-1 flex items-center justify-between">
+                            <span className="truncate text-[10px] font-mono font-bold text-indigo-600 bg-indigo-50 border border-indigo-100/70 px-1 rounded-sm">
+                              {item.price}
+                            </span>
                           </div>
-                        )}
+                        </div>
+
                       </div>
 
-                      <div className="flex flex-col flex-grow justify-end pt-2 px-0.5 min-w-0">
-                        <h4 className="truncate text-[11px] font-bold text-zinc-800 leading-tight">
-                          {item.itemName}
-                        </h4>
-                        <div className="mt-1 flex items-center justify-between">
-                          <span className="truncate text-[10px] font-mono font-bold text-indigo-600 bg-indigo-50 border border-indigo-100/70 px-1 rounded-sm">
-                            {item.price}
+                      {/* BACK OF THE CARD */}
+                      <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-900 bg-zinc-900 p-2.5 flex flex-col justify-between text-white shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                        <div className="border-b border-zinc-800 pb-1 flex justify-between items-center shrink-0 select-none">
+                          <span className="text-[8px] font-bold uppercase tracking-widest text-indigo-400">
+                            Seller Contact Info
+                          </span>
+                          <span className="text-[7px] font-mono text-zinc-500">
+                            {item.formattedDate}
                           </span>
                         </div>
-                      </div>
 
-                    </div>
-
-                    {/* BACK OF THE CARD */}
-                    <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-900 bg-zinc-900 p-2.5 flex flex-col justify-between text-white shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                      <div className="border-b border-zinc-800 pb-1 flex justify-between items-center shrink-0 select-none">
-                        <span className="text-[8px] font-bold uppercase tracking-widest text-indigo-400">
-                          Seller Contact Info
-                        </span>
-                        <span className="text-[7px] font-mono text-zinc-500">
-                          {item.formattedDate}
-                        </span>
-                      </div>
-
-                      <div className="flex flex-col gap-1.5 py-1.5 flex-grow min-w-0 justify-center">
-                        <div className="min-w-0">
-                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Name</p>
-                          <p className="text-[11px] font-bold text-zinc-100 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.sellerName}</p>
+                        <div className="flex flex-col gap-1.5 py-1.5 flex-grow min-w-0 justify-center">
+                          <div className="min-w-0">
+                            <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Name</p>
+                            <p className="text-[11px] font-bold text-zinc-100 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.sellerName}</p>
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Roll No</p>
+                            <p className="text-[10px] font-mono font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.rollNo}</p>
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Email</p>
+                            <p className="text-[10px] font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.email}</p>
+                          </div>
                         </div>
-                        <div className="min-w-0">
-                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Roll No</p>
-                          <p className="text-[10px] font-mono font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.rollNo}</p>
-                        </div>
-                        <div className="min-w-0">
-                          <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Email</p>
-                          <p className="text-[10px] font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.email}</p>
-                        </div>
-                      </div>
 
-                      {/* 🟢 FIXED FOOTER SECTION: Text is now highlighting-enabled & has a direct Copy shortcut click */}
-                      <div 
-                        onClick={(e) => e.stopPropagation()} 
-                        className="mt-auto shrink-0 bg-zinc-800 rounded-md p-1 border border-zinc-700/50 flex items-center justify-between"
-                      >
-                        <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wide px-1 select-text">
-                          📞 {item.phone}
-                        </span>
-                        <button
-                          onClick={(e) => handleCopyPhone(e, item.id, item.phone)}
-                          className="text-[7px] bg-zinc-700 text-zinc-200 hover:text-white px-1.5 py-0.5 rounded font-bold uppercase transition-all"
+                        <div 
+                          onClick={(e) => e.stopPropagation()} 
+                          className="mt-auto shrink-0 bg-zinc-800 rounded-md p-1 border border-zinc-700/50 flex items-center justify-between"
                         >
-                          {copiedId === item.id ? "Copied!" : "Copy"}
-                        </button>
+                          <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wide px-1 select-text">
+                            📞 {item.phone}
+                          </span>
+                          <button
+                            onClick={(e) => handleCopyPhone(e, item.id, item.phone)}
+                            className="text-[7px] bg-zinc-700 text-zinc-200 hover:text-white px-1.5 py-0.5 rounded font-bold uppercase transition-all"
+                          >
+                            {copiedId === item.id ? "Copied!" : "Copy"}
+                          </button>
+                        </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
+                );
+              })}
+            </div>
+          )}
 
-      </main>
+        </main>
+      </div>
 
+      {/* Floating Sell action switch button */}
       <button
         onClick={handleSellButtonClick}
         className="fixed bottom-20 right-4 w-12 h-12 bg-purple-700 backdrop-blur-xs text-white rounded-full flex items-center justify-center font-bold text-2xs shadow-md tracking-wider border border-zinc-900/30 active:scale-95 transition-all z-40 hover:bg-purple-800 cursor-pointer select-none"
@@ -402,7 +408,11 @@ export default function StorePage() {
         Sell
       </button>
 
-      <BottomTabs />
+      {/* 📌 PINNED BOTTOM NAVIGATION TABS */}
+      <div className="shrink-0 z-40 w-full">
+        <BottomTabs />
+      </div>
+      
     </div>
   );
 }

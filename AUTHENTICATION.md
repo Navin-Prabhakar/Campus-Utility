@@ -9,7 +9,7 @@ This document describes the authentication system implemented for the Campus Uti
 ### 1. **Email-Based Authentication**
 - Students must sign in using their IIT Patna email address
 - Email format validation: `name_rollnumber@iitp.ac.in`
-- Example: `navin_2503ai02@iitp.ac.in`
+- Example: `navin_2501ai18@iitp.ac.in`
 
 ### 2. **Sign-In Flow**
 - **Before Login**: Users see a "Sign In" button in the header

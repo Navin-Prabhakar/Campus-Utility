@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Papa from "papaparse";
 import BottomTabs from "./components/BottomTabs";
@@ -16,6 +17,19 @@ interface Next4BusItem {
   time: string;
 }
 
+// 🛠️ Sub-component to handle the URL search params safely within Next.js Suspense boundary
+function SearchParamsHandler({ setShowReportModal }: { setShowReportModal: (val: boolean) => void }) {
+  const searchParams = useSearchParams();
+  
+  useEffect(() => {
+    if (searchParams.get("openReport") === "true") {
+      setShowReportModal(true);
+    }
+  }, [searchParams, setShowReportModal]);
+
+  return null;
+}
+
 export default function Home() {
   const [upcomingBuses, setUpcomingBuses] = useState<Next4BusItem[]>([]);
   const [loading, setLoading] = useState(true);
@@ -23,6 +37,7 @@ export default function Home() {
   
   // Controls the visibility of the developer info modal
   const [showDevModal, setShowDevModal] = useState(false);
+  const [showReportModal, setShowReportModal] = useState(false); 
 
   useEffect(() => {
     async function getNextFourBuses() {
@@ -59,7 +74,7 @@ export default function Home() {
 
             const isStrictTime = (str: string) => {
               if (!str) return false;
-              return /\d+:\d+/.test(str.trim());
+              return /\d{1,2}\s*:\s*\d{2}/.test(str.trim());
             };
 
             const parseTimeToMinutes = (timeString: string) => {
@@ -73,7 +88,7 @@ export default function Home() {
 
             const allParsedBusesCollector: Next4BusItem[] = [];
 
-            busColumns.forEach((colIndex) => {
+            busColumns.forEach((colIndex, listIdx) => {
               let rawBusName = rows[nameRowIdx]?.[colIndex]?.trim() || "";
               if (!rawBusName && colIndex > 0) {
                 rawBusName = rows[nameRowIdx]?.[colIndex - 1]?.trim() || rows[nameRowIdx]?.[colIndex - 2]?.trim() || "";
@@ -94,40 +109,64 @@ export default function Home() {
                 busName = busName.split("-")[0].trim();
               }
 
-              const startRow = isWeekend ? 68 : 19;
-              const endRow = isWeekend ? 110 : 65;
+              // MODIFICATION 1: Align columns correctly for weekend schedules
+              let targetCol = colIndex;
+              if (isWeekend) {
+                if (listIdx === 1) targetCol = 11;
+                else if (listIdx === 4) targetCol = 23;
+                else return; // If this module doesn't run on weekends, skip it
+              }
 
-              for (let i = startRow; i <= endRow; i++) {
-                const time = rows[i]?.[colIndex]?.trim() || "";
-                if (isStrictTime(time)) {
-                  const from = rows[i]?.[colIndex + 1]?.trim() || "Campus";
-                  const to = rows[i]?.[colIndex + 2]?.trim() || "Campus";
+              // MODIFICATION 2: Sync row indexes exactly with BusPage structure
+              const startRow = isWeekend ? 66 : 19;
+              const endRow = isWeekend ? rows.length : 65;
+
+              for (let i = startRow; i < endRow; i++) {
+                const timeCell = rows[i]?.[targetCol]?.trim() || "";
+                
+                if (timeCell.toLowerCase().includes("note")) {
+                  break;
+                }
+
+                if (isStrictTime(timeCell)) {
+                  // Clean up multiple spaces inside time string (e.g. "14 : 30")
+                  const cleanTime = timeCell.replace(/\s+/g, "");
+                  
+                  let from = rows[i]?.[targetCol + 1]?.trim() || "";
+                  let to = rows[i]?.[targetCol + 2]?.trim() || "";
+                  
+                  if (!from || from === "" || from.toLowerCase().includes("route")) from = "Campus";
+                  if (!to || to === "" || to.toLowerCase().includes("route")) to = "Campus";
 
                   allParsedBusesCollector.push({
-                    id: `${isWeekend ? "wknd" : "wkdy"}-${colIndex}-${i}`,
+                    id: `${isWeekend ? "wknd" : "wkdy"}-${targetCol}-${i}`,
                     name: busName,
                     route: `${from} ➔ ${to}`,
-                    time,
+                    time: cleanTime,
                   });
                 }
               }
             });
 
-            const sortedBuses = allParsedBusesCollector.sort((a, b) => {
-              const timeA = parseTimeToMinutes(a.time);
-              const timeB = parseTimeToMinutes(b.time);
-
-              const hasPassedA = timeA < currentMinutes;
-              const hasPassedB = timeB < currentMinutes;
-
-              if (hasPassedA !== hasPassedB) {
-                return hasPassedA ? 1 : -1;
-              }
-
-              return timeA - timeB;
+            // MODIFICATION 3: Robust filtering for upcoming trips 
+            const upcomingOnly = allParsedBusesCollector.filter(bus => {
+              return parseTimeToMinutes(bus.time) >= currentMinutes;
             });
 
-            setUpcomingBuses(sortedBuses.slice(0, 4));
+            const sortedBuses = upcomingOnly.sort((a, b) => {
+              return parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time);
+            });
+
+            // Fallback: If all routes for today have ended, display early morning schedule items for next day
+            if (sortedBuses.length === 0) {
+              const earlyMorningBuses = allParsedBusesCollector.sort(
+                (a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time)
+              );
+              setUpcomingBuses(earlyMorningBuses.slice(0, 4));
+            } else {
+              setUpcomingBuses(sortedBuses.slice(0, 4));
+            }
+            
             setLoading(false);
           },
           error: () => {
@@ -148,6 +187,11 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full bg-zinc-100 font-sans text-zinc-600 antialiased flex flex-col items-center justify-between relative">
       
+      {/* 🛠️ Next.js boundary protection to handle search parameters during build compilation */}
+      <Suspense fallback={null}>
+        <SearchParamsHandler setShowReportModal={setShowReportModal} />
+      </Suspense>
+
       {/* Upper Layout Section to group Header and Main Content */}
       <div className="w-full flex flex-col items-center">
         <Header />
@@ -221,8 +265,8 @@ export default function Home() {
         </main>
       </div>
 
-      {/* 🛠️ FIXED LAYOUT HEIGHT: Changed pb-15 to pb-24 so the text links don't crowd out layout layers */}
-      <div className="w-full flex justify-center py-2 pb-15 shrink-0 z-40">
+      {/* FIXED LAYOUT HEIGHT */}
+      <div className="w-full flex justify-center py-2 pb-24 shrink-0 z-40">
         <button
           onClick={() => setShowDevModal(true)}
           className="text-[11px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors tracking-wide cursor-pointer py-1 px-3 rounded-md"
@@ -232,7 +276,7 @@ export default function Home() {
       </div>
 
       {/* Backdrop-blurred floating profile panel */}
-     {showDevModal && (
+      {showDevModal && (
         <div className="fixed inset-0 bg-zinc-950/40 backdrop-blur-md flex items-center justify-center p-4 z-[100] transition-all duration-200">
           
           <div className="bg-slate-900 rounded-2xl p-5 w-full max-w-[250px] shadow-2xl border border-yellow-500 flex flex-col items-center relative transform scale-100">
@@ -298,7 +342,12 @@ export default function Home() {
 
       {/* 🧭 MOUNTED COMPONENT ORDERING */}
       <BottomTabs />
-      <ReportIssueModal />
+      
+      {/* 🛠️ MODIFIED: Added state binding parameters to control modal visibility */}
+      <ReportIssueModal 
+        isOpen={showReportModal} 
+        onClose={() => setShowReportModal(false)} 
+      />
     </div>
   );
 }

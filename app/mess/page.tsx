@@ -29,7 +29,7 @@ const DAYS_OF_WEEK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "F
 const MASTER_SPREADSHEET_ID = "19T-kfoZVs5eEn_ADqvXUWKQW1KfQsnF0Fiau5bckllk";
 const GOOGLE_SHEET_BROWSER_URL = `https://docs.google.com/spreadsheets/d/${MASTER_SPREADSHEET_ID}/edit?usp=sharing`;
 const COMPLAINT_SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/1RXapvmvXqpLOJw5n0PHlSmSW9-hmxWzaFM9rXpcjAHc/edit?"; 
-const COMPLAINT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxmvz1KxuSiB6zEUDDjeS_RYt842dXW7GEj01wwIskmshe15JOkMcEHbMkjTtXB3EfFiw/exec";
+const COMPLAINT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2vwDIx8ht6zrOIaS39oQ3oFNCesYpICmn-FJAceynT1CvNhEN5sAUcnjP5wXxp3tpog/exec";
 
 export default function MessPage() {
   const [menuData, setMenuData] = useState<MenuItem[]>([]);
@@ -181,35 +181,38 @@ export default function MessPage() {
   };
 
   const handleLogDataToSheets = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!selectedMess) return;
-    setSubmittingComplaint(true);
+  e.preventDefault();
+  if (!selectedMess) return;
+  setSubmittingComplaint(true);
 
-    try {
-      const base64ImagesArray = await Promise.all(
-        selectedImages.map(file => convertFileToBase64(file))
-      );
+  try {
+    const base64ImagesArray = await Promise.all(
+      selectedImages.map(file => convertFileToBase64(file))
+    );
 
-      await fetch(COMPLAINT_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors", 
-        body: JSON.stringify({
-          messName: selectedMess.name,
-          name: complaintForm.name,
-          rollNumber: complaintForm.roll,
-          category: complaintForm.category,
-          description: complaintForm.desc,
-          images: base64ImagesArray
-        })
-      });
+    // Remove mode: "no-cors" to handle response validation correctly
+    const response = await fetch(COMPLAINT_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8", 
+      },
+      body: JSON.stringify({
+        messName: selectedMess.name,
+        name: complaintForm.name,
+        rollNumber: complaintForm.roll,
+        category: complaintForm.category,
+        description: complaintForm.desc,
+        images: base64ImagesArray // Ensure array passes completely
+      })
+    });
 
-      setIsDataLogged(true); 
-    } catch (err) {
-      console.error("Sheet saving error:", err);
-      alert("Network transmission failure. Check configuration link parameters.");
-    }
-    setSubmittingComplaint(false);
-  };
+    setIsDataLogged(true); 
+  } catch (err) {
+    console.error("Sheet saving error:", err);
+    alert("Network transmission failure. Check configuration link parameters.");
+  }
+  setSubmittingComplaint(false);
+};
 
   const cleanMessName = selectedMess ? selectedMess.name.replace(/[()]/g, "").trim() : "";
   const boldTitle = `*🚨 IITP MESS COMPLAINT REGISTERED*`;
