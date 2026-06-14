@@ -5,7 +5,6 @@ import Link from "next/link";
 import Header from "../components/Header";
 import BottomTabs from "../components/BottomTabs";
 
-// Interface for TypeScript type safety
 interface TimetableItem {
   day: string;
   time: string;
@@ -17,7 +16,6 @@ interface TimetableItem {
 }
 
 export default function SchedulePage() {
-  // States for dynamic filtering
   const [academicYear, setAcademicYear] = useState<string>("1");
   const [selectedGroup, setSelectedGroup] = useState<string>("G1");
   const [timetableData, setTimetableData] = useState<TimetableItem[]>([]);
@@ -27,19 +25,24 @@ export default function SchedulePage() {
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // 🌐 Fetch parsed JSON data dynamically from public directory
+  // 🌐 MODIFIED: Fetch parsed dataset stream dynamically from the secure internal backend route
   useEffect(() => {
     async function fetchTimetableData() {
       try {
         setLoading(true);
         setError(false);
-        const res = await fetch("/static/timetable.json");
-        if (!res.ok) throw new Error("Failed to load JSON asset");
+        
+        // Target your internal server proxy node endpoint safely
+        const res = await fetch("/api/timetable");
+        if (!res.ok) throw new Error("Failed to pull secure JSON payload assets");
+        
         const data = await res.json();
-        setTimetableData(data);
+        
+        // Handle array validation fallback guards gracefully
+        setTimetableData(Array.isArray(data) ? data : []);
         setLoading(false);
       } catch (err) {
-        console.error("Error fetching live timetable database:", err);
+        console.error("Error fetching secure live timetable database:", err);
         setError(true);
         setLoading(false);
       }
@@ -47,7 +50,6 @@ export default function SchedulePage() {
     fetchTimetableData();
   }, []);
 
-  // Universal close action handler for filter dropdown
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -58,10 +60,8 @@ export default function SchedulePage() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Standard formatting sequence for weekdays
   const daysOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
-  // ⏰ Helper Function to parse time strings cleanly for chronological sorting
   const parseTimeToMinutes = (timeStr: string): number => {
     try {
       const startTimePart = timeStr.split("-")[0].trim().toUpperCase();
@@ -83,7 +83,6 @@ export default function SchedulePage() {
     }
   };
 
-  // 🔍 Filter Logic: Matches user selection with parsed json rows
   const filteredSchedule = timetableData.filter((item) => {
     const matchYear = Number(item.year) === Number(academicYear);
     if (!matchYear) return false;
@@ -101,22 +100,18 @@ export default function SchedulePage() {
   return (
     <div className="h-screen max-h-screen w-full bg-zinc-50 font-sans text-zinc-600 antialiased flex flex-col overflow-hidden relative">
       
-      {/* 📌 PINNED HEADER: Stays fixed at the top */}
       <div className="shrink-0 z-40">
         <Header />
       </div>
 
-      {/* Persistent Sticky Control Bar (Filter Actions Area) */}
       <div className="w-full bg-white border-b border-zinc-200 shrink-0 z-30 flex flex-col items-center shadow-2xs">
         {!loading && !error && (
           <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative animate-fade-in">
             
-            {/* View Meta Heading Flag info */}
             <div className="flex-1 bg-zinc-100 border border-zinc-200 rounded-lg py-1.5 px-3 text-[11px] font-bold text-zinc-800 tracking-tight">
               ⚡ Group: <span className="text-indigo-600 font-mono font-black">{selectedGroup}</span> (Year {academicYear})
             </div>
 
-            {/* Configurable Filters Switch Controls Dropdown Frame */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -186,7 +181,6 @@ export default function SchedulePage() {
         )}
       </div>
 
-      {/* 📜 SCROLLABLE MIDDLE CONTAINER: Main grid view tracks scrolling space */}
       <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-3 pb-28 bg-zinc-50/50">
         <main className="w-[94%] max-w-[365px] flex flex-col flex-grow">
           
@@ -210,7 +204,6 @@ export default function SchedulePage() {
                 return (
                   <div key={day} className="w-full bg-white border border-zinc-200 rounded-xl p-3 shadow-2xs flex flex-col">
                     
-                    {/* Card Title Header */}
                     <div className="border-b border-zinc-100 pb-1.5 mb-2.5 flex justify-between items-center select-none">
                       <span className="text-[10px] font-black uppercase tracking-wider text-zinc-700">
                         {day}
@@ -235,9 +228,9 @@ export default function SchedulePage() {
                               key={idx}
                               className={`flex items-center justify-between p-2.5 rounded-lg border transition-all ${
                                 isLab
-                                  ? "bg-emerald-100/15 border-emerald-300" // 🧪 More vibrant, slightly darker green background overlay
+                                  ? "bg-emerald-100/15 border-emerald-300" 
                                   : isTut
-                                  ? "bg-amber-100/20 border-amber-300"   // 🔸 Intensified Tutorial card backgrounds
+                                  ? "bg-amber-100/20 border-amber-300"   
                                   : "bg-zinc-50/60 border-zinc-100"
                               }`}
                             >
@@ -249,9 +242,9 @@ export default function SchedulePage() {
                                   <span
                                     className={`text-[8px] font-extrabold uppercase px-1 py-0.2 rounded-xs border shrink-0 ${
                                       isLab
-                                        ? "bg-emerald-600 text-white border-emerald-700" // 🧪 Deeper solid badge representation rules
+                                        ? "bg-emerald-600 text-white border-emerald-700" 
                                         : isTut
-                                        ? "bg-amber-500 text-white border-amber-600"   // 🔸 Deeper solid tutorial badges
+                                        ? "bg-amber-500 text-white border-amber-600"   
                                         : "bg-blue-50 text-blue-700 border-blue-100"
                                     }`}
                                   >
@@ -263,7 +256,6 @@ export default function SchedulePage() {
                                 </div>
                               </div>
 
-                              {/* Timing block component frame metrics */}
                               <div className="text-right ml-2 shrink-0">
                                 <span className="text-[10px] font-bold text-zinc-700 bg-white border border-zinc-200 rounded-md px-2 py-0.5 shadow-3xs block">
                                   ⏰ {cls.time}
@@ -279,7 +271,6 @@ export default function SchedulePage() {
                 );
               })}
               
-              {/* ⚠️ REPORT INCORRECT TIMING BUTTON: Placed safely right above navigation threshold thresholds */}
               <div className="w-full text-center mt-4 mb-2 shrink-0">
                 <Link 
                   href="/?openReport=true" 
@@ -295,7 +286,6 @@ export default function SchedulePage() {
         </main>
       </div>
 
-      {/* 📌 PINNED BOTTOM TABS: Stays fixed at the bottom threshold */}
       <div className="shrink-0 z-40">
         <BottomTabs />
       </div>
