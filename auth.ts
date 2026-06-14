@@ -1,61 +1,65 @@
 import CredentialsProvider from "next-auth/providers/credentials";
 import { NextAuthOptions } from "next-auth";
-import { validateIitpEmail, verifyOtp } from "@/lib/otp";
+import jwt from "jsonwebtoken";
+
+// Use your central secret key to decrypt incoming links
+const LINK_SECRET = process.env.NEXTAUTH_SECRET || "fallback_secret";
 
 export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
-      name: "IIT Patna Email",
+      id: "magic-link",
+      name: "IIT Patna Email Activation",
       credentials: {
-        email: { label: "Email", type: "email", placeholder: "name_rollnumber@iitp.ac.in" },
-        otp: { label: "OTP", type: "text", placeholder: "123456" },
-        otpToken: { label: "OTP Token", type: "text" },
+        token: { label: "Activation Token", type: "text" },
       },
       async authorize(credentials) {
-        if (!credentials?.email) {
-          throw new Error("Email is required");
+        const token = credentials?.token;
+        if (!token) {
+          throw new Error("Missing verification authentication token.");
         }
 
-        if (!credentials?.otp) {
-          throw new Error("OTP is required");
+        try {
+          // 1. Verify and decrypt the cryptographically signed URL link token
+          const decoded = jwt.verify(token, LINK_SECRET) as { email: string };
+          
+          if (!decoded.email || !decoded.email.endsWith("@iitp.ac.in")) {
+            throw new Error("Access restricted to valid @iitp.ac.in domains.");
+          }
+
+          const email = decoded.email;
+          
+          // 2. Format a clean student username from their roll email structure
+          // e.g., navin_prabhakar_2503ai02@iitp.ac.in -> "Navin Prabhakar"
+          const [namePart] = email.split("@");
+          const parts = namePart.split("_");
+          const nameStr = parts.slice(0, -1).join(" ");
+          const formattedName = nameStr
+            .split(" ")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
+
+          // Return the authenticated payload to construct the session
+          return {
+            id: email,
+            email: email,
+            name: formattedName || namePart,
+            image: null,
+          };
+        } catch (error) {
+          console.error("❌ Token verification layer failed:", error);
+          throw new Error("Your login link has expired or is invalid. Please request a new email.");
         }
-
-        if (!credentials?.otpToken) {
-          throw new Error("Please request a new OTP.");
-        }
-
-        const email = credentials.email as string;
-        const otp = credentials.otp as string;
-        const otpToken = credentials.otpToken as string;
-
-        if (!validateIitpEmail(email)) {
-          throw new Error(
-            "Please use your IIT Patna email (name_rollNumber@iitp.ac.in, where rollNumber can contain digits and lowercase letters)"
-          );
-        }
-
-        if (!verifyOtp(email, otp, otpToken)) {
-          throw new Error("Invalid or expired OTP. Please request a new code.");
-        }
-
-        const [namePart] = email.split("@");
-        const parts = namePart.split("_");
-        const nameStr = parts.slice(0, -1).join("_").replace(/_/g, " ");
-
-        return {
-          id: email,
-          email: email,
-          name: nameStr.charAt(0).toUpperCase() + nameStr.slice(1),
-          image: null,
-        };
       },
     }),
   ],
   pages: {
     signIn: "/signin",
+    error: "/signin",
   },
   session: {
-    maxAge: 30 * 24 * 60 * 60,
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60, // 30 days session persistence
     updateAge: 24 * 60 * 60,
   },
   callbacks: {
@@ -76,4 +80,5 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
+  secret: process.env.NEXTAUTH_SECRET,
 };
