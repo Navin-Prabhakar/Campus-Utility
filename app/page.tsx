@@ -2,6 +2,7 @@
 
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
+import { useSession } from "next-auth/react"; 
 import Link from "next/link";
 import Papa from "papaparse";
 import BottomTabs from "./components/BottomTabs";
@@ -17,7 +18,6 @@ interface Next4BusItem {
   time: string;
 }
 
-// 🛠️ Sub-component to handle the URL search params safely within Next.js Suspense boundary
 function SearchParamsHandler({ setShowReportModal }: { setShowReportModal: (val: boolean) => void }) {
   const searchParams = useSearchParams();
   
@@ -31,13 +31,62 @@ function SearchParamsHandler({ setShowReportModal }: { setShowReportModal: (val:
 }
 
 export default function Home() {
+  const { data: session } = useSession(); 
   const [upcomingBuses, setUpcomingBuses] = useState<Next4BusItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   
-  // Controls the visibility of the developer info modal
   const [showDevModal, setShowDevModal] = useState(false);
   const [showReportModal, setShowReportModal] = useState(false); 
+
+  // 🎂 Universal Search System States
+  const [showBirthdayPanel, setShowBirthdayPanel] = useState(false);
+  const [birthdayList, setBirthdayList] = useState([]);
+  const [fetchingBirthdays, setFetchingBirthdays] = useState(false);
+  const [accessDeniedMessage, setAccessDeniedMessage] = useState("");
+
+  const ALLOWED_DEVELOPERS = ["navin_2503ai02@iitp.ac.in"];
+  const isDeveloper = session?.user?.email && ALLOWED_DEVELOPERS.includes(session.user.email);
+
+  // 🛠️ FIX: The 🎂 button now just triggers the display toggle. Searching is handled by the input field.
+  const handleBirthdayClick = () => {
+    setAccessDeniedMessage("");
+
+    if (!isDeveloper) {
+      setAccessDeniedMessage("Birthday viewer is accessible to only developer.");
+      setTimeout(() => setAccessDeniedMessage(""), 3500);
+      return;
+    }
+
+    // Toggle the search interface open or closed cleanly
+    if (showBirthdayPanel) {
+      setShowBirthdayPanel(false);
+      setBirthdayList([]); // Clear prior queries on collapse
+    } else {
+      setShowBirthdayPanel(true);
+    }
+  };
+
+  // Helper function to process the search query to the API
+  const executeSearchQuery = async (queryVal: string) => {
+    setFetchingBirthdays(true);
+    try {
+      const res = await fetch(`/api/admin/birthdays?query=${encodeURIComponent(queryVal)}`);
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setBirthdayList(data.filteredResults);
+      } else {
+        setAccessDeniedMessage(data.error || "Failed to process search payload.");
+        setTimeout(() => setAccessDeniedMessage(""), 3500);
+      }
+    } catch (err) {
+      console.error(err);
+      setAccessDeniedMessage("Connection timeout targeting database container.");
+      setTimeout(() => setAccessDeniedMessage(""), 3500);
+    } finally {
+      setFetchingBirthdays(false);
+    }
+  };
 
   useEffect(() => {
     async function getNextFourBuses() {
@@ -109,15 +158,13 @@ export default function Home() {
                 busName = busName.split("-")[0].trim();
               }
 
-              // MODIFICATION 1: Align columns correctly for weekend schedules
               let targetCol = colIndex;
               if (isWeekend) {
                 if (listIdx === 1) targetCol = 11;
                 else if (listIdx === 4) targetCol = 23;
-                else return; // If this module doesn't run on weekends, skip it
+                else return; 
               }
 
-              // MODIFICATION 2: Sync row indexes exactly with BusPage structure
               const startRow = isWeekend ? 66 : 19;
               const endRow = isWeekend ? rows.length : 65;
 
@@ -129,7 +176,6 @@ export default function Home() {
                 }
 
                 if (isStrictTime(timeCell)) {
-                  // Clean up multiple spaces inside time string (e.g. "14 : 30")
                   const cleanTime = timeCell.replace(/\s+/g, "");
                   
                   let from = rows[i]?.[targetCol + 1]?.trim() || "";
@@ -148,7 +194,6 @@ export default function Home() {
               }
             });
 
-            // MODIFICATION 3: Robust filtering for upcoming trips 
             const upcomingOnly = allParsedBusesCollector.filter(bus => {
               return parseTimeToMinutes(bus.time) >= currentMinutes;
             });
@@ -157,7 +202,6 @@ export default function Home() {
               return parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time);
             });
 
-            // Fallback: If all routes for today have ended, display early morning schedule items for next day
             if (sortedBuses.length === 0) {
               const earlyMorningBuses = allParsedBusesCollector.sort(
                 (a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time)
@@ -187,22 +231,16 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full bg-zinc-100 font-sans text-zinc-600 antialiased flex flex-col items-center justify-between relative">
       
-      {/* 🛠️ Next.js boundary protection to handle search parameters during build compilation */}
       <Suspense fallback={null}>
         <SearchParamsHandler setShowReportModal={setShowReportModal} />
       </Suspense>
 
-      {/* Upper Layout Section to group Header and Main Content */}
       <div className="w-full flex flex-col items-center">
         <Header />
 
-        {/* FORCE PACKAGING */}
         <main className="flex flex-col items-center justify-start py-2 w-[92%] max-w-[350px]">
-          
-          {/* Main Dashboard Widget Card */}
           <div className="w-full rounded-xl border border-zinc-300 bg-white p-2 shadow-xs">
             
-            {/* Header Bar */}
             <div className="mb-1.5 flex items-center justify-between border-b border-zinc-500 pb-1 px-1">
               <div className="flex items-center gap-1">
                 <span className={`h-1 w-1 rounded-full ${error ? 'bg-red-500' : 'bg-emerald-500 animate-pulse'}`} />
@@ -215,7 +253,6 @@ export default function Home() {
               </span>
             </div>
 
-            {/* ULTRA DENSE COMPRESSION */}
             <div className="flex flex-col gap-1 w-full">
               {loading ? (
                 [...Array(4)].map((_, i) => (
@@ -251,7 +288,6 @@ export default function Home() {
               )}
             </div>
 
-            {/* View Full Schedule Slim Action Control */}
             <div className="mt-1.5 px-0.5">
               <Link 
                 href="/bus"
@@ -265,30 +301,50 @@ export default function Home() {
         </main>
       </div>
 
-      {/* FIXED LAYOUT HEIGHT */}
       <div className="w-full flex justify-center py-2 pb-24 shrink-0 z-40">
         <button
-          onClick={() => setShowDevModal(true)}
+          onClick={() => {
+            setAccessDeniedMessage("");
+            setShowBirthdayPanel(false);
+            setBirthdayList([]);
+            setShowDevModal(true);
+          }}
           className="text-[11px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors tracking-wide cursor-pointer py-1 px-3 rounded-md"
         >
           Developer Info...
         </button>
       </div>
 
-      {/* Backdrop-blurred floating profile panel */}
       {showDevModal && (
         <div className="fixed inset-0 bg-zinc-950/40 backdrop-blur-md flex items-center justify-center p-4 z-[100] transition-all duration-200">
           
-          <div className="bg-slate-900 rounded-2xl p-5 w-full max-w-[250px] shadow-2xl border border-yellow-500 flex flex-col items-center relative transform scale-100">
+          <div className="bg-slate-900 rounded-2xl p-5 w-full max-w-[260px] shadow-2xl border border-yellow-500 flex flex-col items-center relative transform scale-100 overflow-hidden">
+            
+            {accessDeniedMessage && (
+              <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[90%] z-50 rounded-lg bg-red-600 px-2 py-1.5 text-center text-[10px] font-bold text-white shadow-lg border border-red-500 animate-pulse">
+                ⚠️ {accessDeniedMessage}
+              </div>
+            )}
+
             <button 
               onClick={() => setShowDevModal(false)}
-              className="absolute top-1.5 right-2 text-red-500 hover:text-red-700 text-m font-bold cursor-pointer"
+              className="absolute top-1.5 right-2 text-red-500 hover:text-red-700 text-m font-bold cursor-pointer z-40"
               aria-label="Close layout panel"
             >
               ✕
             </button>
 
-            <div className="w-48 h-52 relative rounded-2xl overflow-hidden bg-zinc-100 mb-3 border border-indigo-900 shadow-inner">
+            <button
+              onClick={handleBirthdayClick}
+              className={`mb-2 flex h-8 w-8 items-center justify-center rounded-full text-sm border shadow-md transition-all hover:scale-110 active:scale-95 duration-200 cursor-pointer ${
+                showBirthdayPanel ? 'bg-pink-600 border-pink-500 text-white' : 'bg-slate-800 border-slate-700 text-white'
+              }`}
+              title="Toggle Student Finder"
+            >
+              🎂
+            </button>
+
+            <div className="w-44 h-48 relative rounded-2xl overflow-hidden bg-zinc-100 mb-3 border border-indigo-900 shadow-inner">
               <img 
                 src="/dev-avatar.jpg" 
                 alt="Developer's Profile"
@@ -301,7 +357,7 @@ export default function Home() {
 
             <div className="w-full border-t border-zinc-100/60" />
 
-            <div className="flex items-center gap-4 mt-2">
+            <div className="flex items-center gap-4 mt-2 mb-1">
               <a 
                 href="https://github.com/Navin-Prabhakar" 
                 target="_blank" 
@@ -314,7 +370,7 @@ export default function Home() {
               </a>
 
               <a 
-                href="https://www.linkedin.com/in/navin-prabhakar-5b5070388/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1sSAnfJ0TQ220Ak%2BxuQa8g%3D%3D" 
+                href="https://www.linkedin.com/in/navin-prabhakar-5b5070388/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-2 bg-zinc-200 hover:bg-blue-800 text-zinc-500 hover:text-white rounded-xl transition-all shadow-xs"
@@ -336,14 +392,68 @@ export default function Home() {
               </a>
             </div>
 
+            {showBirthdayPanel && isDeveloper && (
+              <div className="mt-3 w-full rounded-xl bg-slate-950 p-3 border border-pink-500/30 text-left">
+                
+                <div className="flex items-center justify-between border-b border-slate-800 pb-1.5 mb-2">
+                  <h4 className="text-[10px] font-bold uppercase tracking-wider text-pink-400">🔍 Universal Student Finder</h4>
+                </div>
+
+                <div className="flex gap-1.5 mb-2">
+                  <input
+                    type="text"
+                    placeholder="Search name, roll, or date (DD-MM)..."
+                    id="universalSearchInput"
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        executeSearchQuery((e.target as HTMLInputElement).value);
+                      }
+                    }}
+                    className="w-full bg-slate-900 border border-slate-800 rounded px-2 py-1 text-[10px] text-white placeholder-slate-500 focus:outline-none focus:border-pink-500/50"
+                  />
+                  <button
+                    onClick={() => {
+                      const inputEl = document.getElementById("universalSearchInput") as HTMLInputElement;
+                      executeSearchQuery(inputEl?.value || "");
+                    }}
+                    className="bg-pink-600 hover:bg-pink-700 active:scale-95 text-[10px] px-2.5 rounded font-bold text-white transition cursor-pointer"
+                  >
+                    {fetchingBirthdays ? "⏳" : "Go"}
+                  </button>
+                </div>
+
+                <div className="max-h-36 overflow-y-auto custom-scrollbar">
+                  {birthdayList.length === 0 ? (
+                    <p className="text-[9px] text-zinc-500 text-center py-3">
+                      {fetchingBirthdays ? "Querying secure storage database stream..." : "Type parameters and press Enter to match records."}
+                    </p>
+                  ) : (
+                    <ul className="space-y-1">
+                      {birthdayList.map((student: any, idx: number) => (
+                        <li key={idx} className="flex flex-col rounded bg-slate-900/80 p-1.5 border border-slate-800/60 text-[10px]">
+                          <div className="flex justify-between items-start">
+                            <span className="font-semibold text-zinc-200 truncate max-w-[70%]">{student.name}</span>
+                            <span className="text-[9px] font-bold text-pink-400 shrink-0 font-mono">{student.birthday}</span>
+                          </div>
+                          <div className="flex justify-between items-center text-[8px] text-zinc-500 font-mono uppercase mt-0.5">
+                            <span>{student.roll}</span>
+                            <span className="text-zinc-400 font-sans tracking-normal font-medium">{student.gender}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+
+              </div>
+            )}
+
           </div>
         </div>
       )}
 
-      {/* 🧭 MOUNTED COMPONENT ORDERING */}
       <BottomTabs />
       
-      {/* 🛠️ MODIFIED: Added state binding parameters to control modal visibility */}
       <ReportIssueModal 
         isOpen={showReportModal} 
         onClose={() => setShowReportModal(false)} 
