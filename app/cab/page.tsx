@@ -21,6 +21,9 @@ interface Ride {
 export default function CabSharingPage() {
   const { data: session } = useSession(); 
   
+  // ⚡ Dynamic Backend Base Path Resolution
+  const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:5001";
+  
   // App Navigation View States
   const [activeTab, setActiveTab] = useState<"share" | "my-rides">("share");
   
@@ -57,7 +60,7 @@ export default function CabSharingPage() {
   const fetchActiveDashboard = async () => {
     try {
       setLoading(true);
-      const res = await fetch("http://127.0.0.1:5001/api/active-rides");
+      const res = await fetch(`${API_BASE}/api/active-rides`);
       if (!res.ok) throw new Error("Connection failed.");
       const data = await res.json();
       setAllRides(data);
@@ -71,7 +74,7 @@ export default function CabSharingPage() {
   // 📡 FETCH METHOD 2: Logged-in Student's Personal Posting Log
   const fetchUserHistory = async (userEmail: string) => {
     try {
-      const res = await fetch(`http://127.0.0.1:5001/api/my-rides?email=${encodeURIComponent(userEmail)}`);
+      const res = await fetch(`${API_BASE}/api/my-rides?email=${encodeURIComponent(userEmail)}`);
       if (!res.ok) throw new Error("History failed.");
       const data = await res.json();
       setMyRides(data);
@@ -115,7 +118,7 @@ export default function CabSharingPage() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:5001/api/post-ride", {
+      const response = await fetch(`${API_BASE}/api/post-ride`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -143,7 +146,7 @@ export default function CabSharingPage() {
   // 🔄 HANDLER: Update Status / Seats
   const handleUpdateStatus = async (rideId: string, updatedFields: Partial<Ride>) => {
     try {
-      const response = await fetch(`http://127.0.0.1:5001/api/update-ride/${rideId}`, {
+      const response = await fetch(`${API_BASE}/api/update-ride/${rideId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFields)
@@ -161,7 +164,6 @@ export default function CabSharingPage() {
   };
 
   return (
-    // Wrapper matches BusPage structural properties to secure layout boundaries perfectly
     <main className="h-screen max-h-screen w-full bg-gray-50 flex flex-col overflow-hidden relative text-zinc-800">
       
       {/* 📌 PINNED GLOBAL HEADER */}
@@ -196,9 +198,6 @@ export default function CabSharingPage() {
             </button>
           </div>
 
-          {/* ========================================================= */}
-          {/* 🤝 VIEW A: SHARE RIDE FORM VIEW                          */}
-          {/* ========================================================= */}
           {activeTab === "share" && (
             <div className="space-y-5 animate-fadeIn flex-grow">
               <section className="bg-white rounded-2xl border border-gray-200 p-4 shadow-3xs">
@@ -245,7 +244,6 @@ export default function CabSharingPage() {
                     </div>
                   </div>
 
-                  {/* CONDITIONAL "OTHER" TEXT FIELDS */}
                   {(from === "Other" || to === "Other") && (
                     <div className="grid grid-cols-2 gap-3 animate-fadeIn">
                       <div>
@@ -273,7 +271,6 @@ export default function CabSharingPage() {
                     </div>
                   )}
 
-                  {/* TIME SELECTION SEPARATION */}
                   <div className="grid grid-cols-2 gap-3 items-end">
                     <div className="flex flex-col gap-1">
                       <label className="text-[10px] font-bold text-zinc-400 px-1">Departure Date</label>
@@ -305,7 +302,6 @@ export default function CabSharingPage() {
                 </form>
               </section>
 
-              {/* LIVE ACTIVE BOARD VIEW */}
               <section>
                 <div className="flex items-center justify-between mb-3 px-1">
                   <h2 className="text-sm font-bold text-zinc-700">Active Board Postings</h2>
@@ -345,9 +341,6 @@ export default function CabSharingPage() {
             </div>
           )}
 
-          {/* ========================================================= */}
-          {/* 📋 VIEW B: MY RIDES USER LOG VIEW                       */}
-          {/* ========================================================= */}
           {activeTab === "my-rides" && (
             <div className="space-y-3 animate-fadeIn flex-grow">
               <h2 className="text-sm font-bold text-zinc-700 px-1 mb-2">Your Active & Past Postings</h2>
@@ -374,7 +367,6 @@ export default function CabSharingPage() {
                         </span>
                       </div>
 
-                      {/* INLINE EDIT CONTROLS */}
                       {editingId === ride._id ? (
                         <div className="bg-zinc-50 p-3 rounded-xl border border-zinc-200 flex flex-col gap-2">
                           <div className="grid grid-cols-2 gap-2">
@@ -437,7 +429,6 @@ export default function CabSharingPage() {
         </div>
       </div>
 
-      {/* 📌 PINNED BOTTOM TABS */}
       <div className="shrink-0 z-40">
         <BottomTabs />
       </div>

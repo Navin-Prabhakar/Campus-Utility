@@ -8,9 +8,14 @@ router.post('/post-ride', async (req: Request, res: Response): Promise<void> => 
     try {
         const { poster_name, poster_email, phone_number, route_from, route_to, departure_time, available_seats } = req.body;
 
-        // Splitting email to extract the roll number: "firstname_rollnumber@iitp.ac.in"
-        const emailParts = poster_email.split('@')[0].split('_');
-        const extractedRoll = emailParts[emailParts.length - 1].toUpperCase();
+        // 🛠️ Guard rails to extract roll numbers cleanly without throwing execution index errors
+        let extractedRoll = "N/A";
+        if (poster_email && poster_email.includes('@') && poster_email.includes('_')) {
+            const emailParts = poster_email.split('@')[0].split('_');
+            extractedRoll = emailParts[emailParts.length - 1].toUpperCase();
+        } else if (poster_email) {
+            extractedRoll = poster_email.split('@')[0].toUpperCase(); 
+        }
 
         const newRide = new RidePost({
             poster_name,
@@ -38,7 +43,6 @@ router.get('/active-rides', async (req: Request, res: Response): Promise<void> =
         const currentTime = new Date();
         const twoHoursAgo = new Date(currentTime.getTime() - (2 * 60 * 60 * 1000));
 
-        // Fetch rides directly out of the cluster collection
         const rides = await RidePost.find({
             departure_time: { $gte: twoHoursAgo },
             status: 'Active'
@@ -46,19 +50,13 @@ router.get('/active-rides', async (req: Request, res: Response): Promise<void> =
 
         console.log(`📦 [Database Query] Successfully retrieved ${rides?.length || 0} active listings.`);
 
-        // CRITICAL FIX FOR WHITE SCREEN: Force content headers so the browser renders JSON immediately
-        res.setHeader('Content-Type', 'application/json');
+        // 🛠️ Standardized output using native Express json parser to avoid stream blocks
+        res.status(200).json(rides || []);
+        return;
         
-        if (!rides || rides.length === 0) {
-            res.status(200).send(JSON.stringify([]));
-            return;
-        }
-
-        res.status(200).send(JSON.stringify(rides));
     } catch (error) {
         console.error("❌ CRITICAL error inside active-rides fetch handler:", error);
-        res.setHeader('Content-Type', 'application/json');
-        res.status(500).send(JSON.stringify({ error: "Failed to fetch active rides.", details: String(error) }));
+        res.status(500).json({ error: "Failed to fetch active rides.", details: String(error) });
     }
 });
 
