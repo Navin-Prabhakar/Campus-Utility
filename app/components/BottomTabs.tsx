@@ -105,25 +105,21 @@ export default function BottomTabs() {
               </Link>
             );
           }
-          
-
-          // Remaining placeholder fields (Cab - index === 3)
-          return (
-            <div
-              key={index}
-              role="button"
-              tabIndex={0}
-              onClick={() => alert("Cab sharing logs coming soon!")}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") alert("Cab sharing logs coming soon!");
-              }}
-              className={`${base} bg-white/80`}
-              aria-pressed={false}
-              aria-label={alt}
-            >
-              {tabContent}
-            </div>
-          );
+        
+         // CAB ROUTING (index === 3)
+          if (index === 3) {
+            return (
+              <Link
+                key={index}
+                href="/cab"
+                className={`${base} ${isActive ? activeClass : "bg-white/80"}`}
+                aria-pressed={isActive}
+                aria-label={alt}
+              >
+                {tabContent}
+              </Link>
+            );
+          }
         })}
       </div>
     </footer>
