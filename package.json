@@ -19,8 +19,10 @@
     "build": "bash vercel-build.sh",
     "start": "next start",
     "lint": "next lint",
-    "start:backend": "tsx ./src/backend/index.ts"
-  },
+    "start:backend": "tsx ./src/backend/index.ts",
+    
+    "render-build": "npm install" 
+},
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "cors": "^2.8.6",
