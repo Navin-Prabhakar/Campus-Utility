@@ -3,36 +3,59 @@ import RidePost from '../models/RidePost'; // Clean TypeScript import
 
 const router = Router();
 
-// 1. POST A RIDE (with automatic roll number extraction from IITP email)
+// 1. POST A RIDE (with robust validation, type casting, and explicit status fallback)
 router.post('/post-ride', async (req: Request, res: Response): Promise<void> => {
+    console.log("📤 [API Request] Incoming payload to /post-ride:", req.body);
     try {
         const { poster_name, poster_email, phone_number, route_from, route_to, departure_time, available_seats } = req.body;
 
-        // 🛠️ Guard rails to extract roll numbers cleanly without throwing execution index errors
-        let extractedRoll = "N/A";
-        if (poster_email && poster_email.includes('@') && poster_email.includes('_')) {
-            const emailParts = poster_email.split('@')[0].split('_');
-            extractedRoll = emailParts[emailParts.length - 1].toUpperCase();
-        } else if (poster_email) {
-            extractedRoll = poster_email.split('@')[0].toUpperCase(); 
+        // 🛠️ Guard rails: If any vital field is blank, reject it before it hits MongoDB rules
+        if (!poster_email || !phone_number || !route_from || !route_to || !departure_time) {
+            console.error("❌ Validation Failed: Missing mandatory payload fields.");
+            res.status(400).json({ error: "Please fill out all required fields, bro!" });
+            return;
         }
 
+        // 🛠️ Highly resilient roll number extraction from IITP email
+        let extractedRoll = "STUDENT";
+        if (poster_email && poster_email.includes('@')) {
+            const emailPrefix = poster_email.split('@')[0];
+            if (emailPrefix.includes('_')) {
+                const emailParts = emailPrefix.split('_');
+                extractedRoll = emailParts[emailParts.length - 1].toUpperCase();
+            } else {
+                extractedRoll = emailPrefix.toUpperCase();
+            }
+        }
+
+        // 🛠️ Robust Date parsing validation to stop "Invalid Date" MongoDB crashes
+        const parsedDate = new Date(departure_time);
+        if (isNaN(parsedDate.getTime())) {
+            console.error(`❌ Date Parsing Failed for value: ${departure_time}`);
+            res.status(400).json({ error: "Invalid departure time format signature." });
+            return;
+        }
+
+        // 🛠️ Creating document with STRICT primitive casting for Cloud Atlas
         const newRide = new RidePost({
-            poster_name,
+            poster_name: poster_name || "IITP Student",
             poster_email,
             roll_number: extractedRoll,
-            phone_number,
+            phone_number: String(phone_number).trim(),
             route_from,
             route_to,
-            departure_time: new Date(departure_time),
-            available_seats
+            departure_time: parsedDate,
+            available_seats: Number(available_seats) || 1, // 👈 Explicitly forces type conversion to Number
+            status: 'Active' // 👈 Explicitly passing 'Active' satisfies schema constraints for your feed query
         });
 
         await newRide.save();
+        console.log("🚀 [Database Success] New ride post successfully synchronized!");
         res.status(201).json({ message: "Ride posted successfully!", ride: newRide });
     } catch (error) {
-        console.error("Error creating ride post:", error);
-        res.status(500).json({ error: "Failed to create ride post." });
+        // This will print the EXACT schema property that failed out in your Render console terminal logs!
+        console.error("❌ CRITICAL Schema Validation / Save failure inside post-ride:", error);
+        res.status(400).json({ error: "Failed to create ride post due to database schema rules.", details: String(error) });
     }
 });
 
@@ -50,7 +73,6 @@ router.get('/active-rides', async (req: Request, res: Response): Promise<void> =
 
         console.log(`📦 [Database Query] Successfully retrieved ${rides?.length || 0} active listings.`);
 
-        // 🛠️ Standardized output using native Express json parser to avoid stream blocks
         res.status(200).json(rides || []);
         return;
         
@@ -82,7 +104,12 @@ router.get('/my-rides', async (req: Request, res: Response): Promise<void> => {
 router.put('/update-ride/:id', async (req: Request, res: Response): Promise<void> => {
     try {
         const rideId = req.params.id;
-        const updatedRide = await RidePost.findByIdAndUpdate(rideId, req.body, { new: true });
+        
+        // Cast values safely on updates as well
+        const updateData = { ...req.body };
+        if (updateData.available_seats) updateData.available_seats = Number(updateData.available_seats);
+
+        const updatedRide = await RidePost.findByIdAndUpdate(rideId, updateData, { new: true });
         
         if (!updatedRide) {
             res.status(404).json({ error: "Ride post not found." });

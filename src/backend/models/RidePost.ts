@@ -13,21 +13,22 @@ export interface IRidePost extends Document {
     created_at: Date;
 }
 
-const RidePostSchema = new Schema<IRidePost>({
-    poster_name: { type: String, required: true },
-    poster_email: { type: String, required: true },
-    roll_number: { type: String, required: true },
-    phone_number: { type: String, required: true },
-    route_from: { type: String, required: true },
-    route_to: { type: String, required: true },
-    departure_time: { type: Date, required: true },
-    available_seats: { type: Number, required: true },
-    status: { 
-        type: String, 
-        enum: ['Active', 'Seat Full', 'Complete', 'Cancelled'], 
-        default: 'Active' 
-    },
-    created_at: { type: Date, default: Date.now }
-});
 
-export default model<IRidePost>('RidePost', RidePostSchema);
+
+const ridePostSchema = new Schema({
+  poster_name: { type: String, required: true },
+  poster_email: { type: String, required: true },
+  roll_number: { type: String, default: "N/A" }, // Ensure a safe fallback string
+  phone_number: { type: String, required: true },
+  route_from: { type: String, required: true },
+  route_to: { type: String, required: true },
+  departure_time: { type: Date, required: true }, // Must be a native Date object
+  available_seats: { type: Number, required: true, default: 1 }, // Ensure strict Number conversion
+  status: { 
+    type: String, 
+    enum: ['Active', 'Seat Full', 'Complete', 'Cancelled'], 
+    default: 'Active' 
+  }
+}, { timestamps: true });
+
+export default model<IRidePost>('RidePost', ridePostSchema);
