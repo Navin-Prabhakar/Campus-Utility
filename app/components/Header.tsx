@@ -101,17 +101,30 @@ export default function Header({ messActionSlot }: HeaderProps) {
         </div>
       </div>
 
-      {/* 🛠️ Lower Header - Fixed to support the dropdown on the right side */}
+      {/* 🛠️ Lower Header - Adjusted to host both navigation links on the left */}
       <div className="flex h-7 bg-sky-900 items-center justify-between px-3">
-        {/* Left Side: Constant Home Icon Link */}
-        <Link 
-          href="/" 
-          className="flex items-center gap-1 text-sky-100 hover:text-white transition-colors text-xs font-bold"
-          aria-label="Go to home page"
-        >
-          <span>🏠</span>
-          <span>Home</span>
-        </Link>
+        {/* Left Side: Navigation links grouping */}
+        <div className="flex items-center gap-4">
+          {/* Home Link */}
+          <Link 
+            href="/" 
+            className="flex items-center gap-1 text-sky-100 hover:text-white transition-colors text-xs font-bold"
+            aria-label="Go to home page"
+          >
+            <span>🏠</span>
+            <span>Home</span>
+          </Link>
+
+          {/* 🗺️ Campus Tour Link */}
+          <Link 
+            href="/tour" 
+            className="flex items-center gap-1 text-sky-100 hover:text-white transition-colors text-xs font-bold"
+            aria-label="Go to campus tour page"
+          >
+            
+            <span>Campus Tour</span>
+          </Link>
+        </div>
 
         {/* Right Side: Conditional rendering slot strictly active on /mess */}
         <div className="flex items-center">
