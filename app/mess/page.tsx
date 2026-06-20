@@ -15,8 +15,8 @@ interface MenuItem {
 }
 
 const MESS_CONFIG = [
-  { id: "mess1", name: "CVR (4)", gid: "0", contact: "918317731691" }, 
-  { id: "mess2", name: "Aryabhatta (5)", gid: "1633328713", contact: "919999999999" }, 
+  { id: "mess1", name: "CVR (4)", gid: "0", contact: "919999999999" }, 
+  { id: "mess2", name: "Aryabhatta (5)", gid: "1633328713", contact: "919140688647" }, 
   { id: "mess3", name: "Aryabhatta (6)", gid: "1524747018", contact: "919999999999" },
   { id: "mess4", name: "Kalam ()", gid: "754990639", contact: "919999999999" },
   { id: "mess5", name: "Kalam (?)", gid: "491167474", contact: "919999999999" }, 

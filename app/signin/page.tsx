@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react"; // 👈 Added useEffect
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const EMAIL_STORAGE_KEY = "savedIitpEmail";
@@ -19,11 +19,15 @@ export default function SignIn() {
   const [info, setInfo] = useState("");
   const [loading, setLoading] = useState(false);
   const [rememberDevice, setRememberDevice] = useState(true);
-  const [mounted, setMounted] = useState(false); // 👈 1. Added mounted state tracking
+  const [mounted, setMounted] = useState(false);
+  const [isLocal, setIsLocal] = useState(false);
 
-  // 👈 2. Set mounted to true as soon as the client browser loads
   useEffect(() => {
     setMounted(true);
+    // Detect if we are on localhost without triggering an automated redirect loop
+    if (typeof window !== "undefined" && window.location.hostname === "localhost") {
+      setIsLocal(true);
+    }
   }, []);
 
   const sendActivationLink = async (e: React.FormEvent) => {
@@ -32,7 +36,6 @@ export default function SignIn() {
     setInfo("");
     setLoading(true);
 
-    // Frontend validation check
     if (!email.endsWith("@iitp.ac.in")) {
       setError("❌ Access restricted to valid @iitp.ac.in emails.");
       setLoading(false);
@@ -40,12 +43,9 @@ export default function SignIn() {
     }
 
     try {
-      // Trigger our new spam-resistant activation link backend API
       const response = await fetch("/api/auth/send-link", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
       });
 
@@ -85,6 +85,22 @@ export default function SignIn() {
           <p className="text-center text-sm text-slate-600">Secure activation via your college email</p>
         </div>
 
+        {/* 🛠️ Localhost Developer Banner */}
+        {isLocal && (
+          <div className="mb-4 rounded-lg bg-amber-50 p-3 text-xs text-amber-800 border border-amber-200 flex flex-col gap-2">
+            <p className="font-semibold">🛠️ Dev Environment Detected</p>
+            <button
+              type="button"
+              onClick={() => {
+                window.location.href = "/";
+              }}
+              className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-1.5 px-3 rounded text-center transition"
+            >
+              Skip Auth & Go to Home Dashboard →
+            </button>
+          </div>
+        )}
+
         <form onSubmit={sendActivationLink} className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-sm font-medium text-slate-900">
@@ -99,9 +115,7 @@ export default function SignIn() {
               disabled={loading || step === "sent"}
               className="rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 transition hover:bg-slate-100 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:opacity-50"
             />
-            <p className="text-xs text-slate-500">
-              Example: navin_2503ai02@iitp.ac.in
-            </p>
+            <p className="text-xs text-slate-500">Example: navin_2503ai02@iitp.ac.in</p>
           </div>
 
           {step === "email" && (
@@ -133,7 +147,6 @@ export default function SignIn() {
           {step === "email" ? (
             <button
               type="submit"
-              // 👈 3. Included !mounted protection to keep initial HTML perfectly identical to the server
               disabled={!mounted || loading || !email}
               className="rounded-lg bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
@@ -153,7 +166,7 @@ export default function SignIn() {
 
         <div className="mt-6 border-t border-slate-200 pt-4">
           <p className="text-center text-xs text-slate-600">
-            Only students with active @iitp.ac.in credentials can verify. The system utilizes formal transaction pathways to bypass campus firewalls.
+            Only students with active @iitp.ac.in credentials can verify.
           </p>
         </div>
       </div>

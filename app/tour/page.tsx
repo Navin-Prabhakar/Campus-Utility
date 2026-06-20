@@ -7,15 +7,15 @@ export default function CampusTourPage() {
   const officialTourUrl = "https://www.iitp.ac.in/visit/campus-tour";
 
   return (
-    <div className="flex h-[calc(100vh-4.75rem)] w-full flex-col bg-slate-50 p-4 sm:p-6">
+    <div className="flex h-[calc(110vh-5rem)] w-full flex-col bg-slate-50 p-3 sm:p-6">
       {/* Title Header metadata bar */}
-      <div className="mb-4 flex flex-col justify-between gap-2 border-b border-slate-200 pb-3 sm:flex-row sm:items-center">
+      <div className="mb-3 flex flex-col justify-between gap-1 border-b border-slate-200 pb-3 sm:flex-row sm:items-center">
         <div>
-          <h1 className="text-xl font-bold tracking-tight text-slate-800 sm:text-2xl">
+          <h1 className="text-xl text-center font-bold tracking-tight text-slate-800 sm:text-2xl">
             Virtual Campus Tour
           </h1>
           <p className="text-xs text-slate-500">
-            Explore hostels, tutorial blocks, and academic infrastructures and other places live.
+            Explore hostels, tutorial blocks, and academic infrastructures and others.
           </p>
         </div>
         <a

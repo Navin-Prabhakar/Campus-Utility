@@ -31,7 +31,7 @@ function SearchParamsHandler({ setShowReportModal }: { setShowReportModal: (val:
 }
 
 export default function Home() {
-  const { data: session } = useSession(); 
+  const { data: realSession } = useSession(); 
   const [upcomingBuses, setUpcomingBuses] = useState<Next4BusItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -46,9 +46,10 @@ export default function Home() {
   const [accessDeniedMessage, setAccessDeniedMessage] = useState("");
 
   const ALLOWED_DEVELOPERS = ["navin_2503ai02@iitp.ac.in"];
-  const isDeveloper = session?.user?.email && ALLOWED_DEVELOPERS.includes(session.user.email);
 
-  // 🛠️ FIX: The 🎂 button now just triggers the display toggle. Searching is handled by the input field.
+  const isLocalhost = typeof window !== "undefined" && window.location.hostname === "localhost";
+  const isDeveloper = isLocalhost || (realSession?.user?.email && ALLOWED_DEVELOPERS.includes(realSession.user.email));
+
   const handleBirthdayClick = () => {
     setAccessDeniedMessage("");
 
@@ -58,16 +59,14 @@ export default function Home() {
       return;
     }
 
-    // Toggle the search interface open or closed cleanly
     if (showBirthdayPanel) {
       setShowBirthdayPanel(false);
-      setBirthdayList([]); // Clear prior queries on collapse
+      setBirthdayList([]); 
     } else {
       setShowBirthdayPanel(true);
     }
   };
 
-  // Helper function to process the search query to the API
   const executeSearchQuery = async (queryVal: string) => {
     setFetchingBirthdays(true);
     try {
@@ -301,7 +300,17 @@ export default function Home() {
         </main>
       </div>
 
-      <div className="w-full flex justify-center py-2 pb-24 shrink-0 z-40">
+      {/* 🔴 FLOATING ROUND RED TRIGGER BUTTON */}
+      <button
+        onClick={() => setShowReportModal(true)}
+        className="fixed right-6 bottom-24 h-12 w-12 bg-red-600 border border-red-700 text-white flex items-center justify-center rounded-full font-black shadow-2xl hover:bg-red-700 active:scale-90 transition-all duration-150 cursor-pointer text-lg z-[90]"
+        title="Open Report System"
+      >
+        ⚠️
+      </button>
+
+      {/* FOOTER LAYER AREA */}
+      <div className="w-full flex justify-center py-2 pb-24 shrink-0 z-10 relative">
         <button
           onClick={() => {
             setAccessDeniedMessage("");
