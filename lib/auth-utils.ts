@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 
 const LINK_SECRET = process.env.NEXTAUTH_SECRET || "fallback_secret";
-const LINK_TTL_MS = 15 * 60 * 1000; // Link expires in 15 minutes
 
 export function normalizeEmail(email: string): string {
   return email.trim().toLowerCase();
@@ -16,28 +15,31 @@ export function validateIitpEmail(email: string): boolean {
 }
 
 /**
- * Generates a secure, cryptographically signed token containing the user's email
+ * Generates a secure, cryptographically signed token containing the user's email.
+ * This token is stateless and remains valid for exactly 10 minutes.
  */
 export function generateActivationToken(email: string): string {
   const normalized = normalizeEmail(email);
   
-  // Sign the email into a secure JSON Web Token expiring in 15 minutes
-  return jwt.sign({ email: normalized }, LINK_SECRET, { expiresIn: "15m" });
+  // ⏱️ Strictly expires in 10 minutes. Can be verified multiple times during this window.
+  return jwt.sign({ email: normalized }, LINK_SECRET, { expiresIn: "10m" });
 }
 
 /**
- * Verifies that the activation token is authentic and has not expired
+ * Verifies that the activation token is authentic and has not passed its 10-minute expiry window.
  */
 export function verifyActivationToken(token: string): string | null {
   try {
+    // Cryptographically checks if the signature is authentic and validation window is active
     const decoded = jwt.verify(token, LINK_SECRET) as { email: string };
     
     if (decoded.email && decoded.email.endsWith("@iitp.ac.in")) {
-      return decoded.email;
+      return normalizeEmail(decoded.email);
     }
     return null;
   } catch (error) {
-    console.error("❌ Token authentication validation failed:", error);
+    // jwt.verify automatically throws an error if the 10-minute window has expired
+    console.error("❌ Token verification layer failed or window expired:", error);
     return null;
-  }
+  } 
 }

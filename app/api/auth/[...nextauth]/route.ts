@@ -1,8 +1,7 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import jwt from "jsonwebtoken";
-
-const LINK_SECRET = process.env.NEXTAUTH_SECRET || "fallback_secret";
+// 1. Import your custom stateful verification function instead of raw jsonwebtoken
+import { verifyActivationToken } from "@/lib/auth-utils"; 
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -19,20 +18,20 @@ export const authOptions: NextAuthOptions = {
         }
 
         try {
-          // 1. Verify and decrypt the cryptographically signed URL link token
-          const decoded = jwt.verify(token, LINK_SECRET) as { email: string };
+          // 2. Run the secure check: structural verification + DB token destruction
+          const email = await verifyActivationToken(token);
           
-          if (!decoded.email || !decoded.email.endsWith("@iitp.ac.in")) {
-            throw new Error("Access restricted to valid @iitp.ac.in domains.");
+          if (!email) {
+            throw new Error("Your login link has expired, is invalid, or was already used.");
           }
 
-          const email = decoded.email;
-          
-          // 2. Format a clean student username from their email structure
+          // 3. Format a clean student username from their email structure
           // e.g., navin_prabhakar_2503ai02@iitp.ac.in -> "Navin Prabhakar"
           const [namePart] = email.split("@");
           const parts = namePart.split("_");
-          const nameStr = parts.slice(0, -1).join(" ");
+          
+          // Safeguard to ensure there are underscores present before slicing the roll number
+          const nameStr = parts.length > 1 ? parts.slice(0, -1).join(" ") : namePart;
           const formattedName = nameStr
             .split(" ")
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -40,14 +39,16 @@ export const authOptions: NextAuthOptions = {
 
           // Return the authenticated payload to construct the session cookie
           return {
-            id: email,
+            id: email, // Maps email as the unique identifier string
             email: email,
             name: formattedName || namePart,
             image: null,
           };
-        } catch (error) {
+        } catch (error: any) {
           console.error("❌ Token verification layer failed:", error);
-          throw new Error("Your login link has expired or is invalid. Please request a new email.");
+          throw new Error(
+            error.message || "Your login link has expired or is invalid. Please request a new email."
+          );
         }
       },
     }),

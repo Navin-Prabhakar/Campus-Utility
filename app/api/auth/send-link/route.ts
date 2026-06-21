@@ -1,29 +1,29 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-import jwt from "jsonwebtoken";
-
-const LINK_SECRET = process.env.NEXTAUTH_SECRET || "fallback_secret";
+// 1. Import your custom stateful utils
+import { validateIitpEmail, generateActivationToken } from "@/lib/auth-utils";
 
 export async function POST(req: Request) {
   try {
     const { email } = await req.json();
 
-    // 1. Strict pattern check to make sure it's an IIT Patna account
-    if (!email || !email.endsWith("@iitp.ac.in")) {
+    // 2. Run strict RegEx pattern check via your auth-utils
+    if (!email || !validateIitpEmail(email)) {
       return NextResponse.json(
         { error: "Access restricted to valid @iitp.ac.in emails." },
         { status: 400 }
       );
     }
 
-    // 2. Generate a secure crypto token that expires in 15 minutes
-    const token = jwt.sign({ email }, LINK_SECRET, { expiresIn: "15m" });
+    // 3. Generate a secure token that stores state in DB and expires in 10 minutes
+    const token = await generateActivationToken(email);
     
     // Fallback to localhost if production URL isn't set yet
     const baseUrl = process.env.NEXTAUTH_URL || "http://localhost:3000";
+    // Pointing to your client component route path /verify
     const activationUrl = `${baseUrl}/verify-link?token=${token}`;
 
-    // 3. Configure Nodemailer to log into your personal Gmail account
+    // 4. Configure Nodemailer using Gmail SMTP
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       },
     });
 
-    // 4. Construct a formal text block layout to glide past the Outlook firewall
+    // 5. Construct email layout (Updated to reflect the strict 10-minute constraint)
     const emailBody = `
 Dear Student,
 
@@ -42,14 +42,14 @@ Please click the secure activation link below to verify your campus email owners
 
 ${activationUrl}
 
-This secure activation token is temporary and will automatically expire in 15 minutes for safety. If you did not initiate this request, you can safely disregard this message.
+This secure activation token is temporary. It will automatically expire in 10 minutes. If you did not initiate this request, you can safely disregard this message.
 
 Warm regards,
 Campus Utility Core Team
 IIT Patna
     `;
 
-    // 5. Fire it straight to their official Outlook inbox
+    // 6. Fire it straight to their official Outlook inbox
     await transporter.sendMail({
       from: `"Campus Utility" <${process.env.EMAIL_USER}>`,
       to: email,

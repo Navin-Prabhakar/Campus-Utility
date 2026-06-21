@@ -20,18 +20,27 @@ export default function SignIn() {
   const [loading, setLoading] = useState(false);
   const [rememberDevice, setRememberDevice] = useState(true);
   const [mounted, setMounted] = useState(false);
-  const [isLocal, setIsLocal] = useState(false);
+  
+  // Timer state for the 60 seconds cooldown
+  const [countdown, setCountdown] = useState(0);
 
   useEffect(() => {
     setMounted(true);
-    // Detect if we are on localhost without triggering an automated redirect loop
-    if (typeof window !== "undefined" && window.location.hostname === "localhost") {
-      setIsLocal(true);
-    }
   }, []);
 
-  const sendActivationLink = async (e: React.FormEvent) => {
-    e.preventDefault();
+  // Handle countdown side-effect
+  useEffect(() => {
+    if (countdown <= 0) return;
+    
+    const timer = setInterval(() => {
+      setCountdown((prev) => prev - 1);
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [countdown]);
+
+  const sendActivationLink = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     setError("");
     setInfo("");
     setLoading(true);
@@ -58,6 +67,7 @@ export default function SignIn() {
 
       setStep("sent");
       setInfo("📩 Activation link sent! Please open your official Microsoft Outlook mail app to verify.");
+      setCountdown(60); // Start the 60 seconds cooldown
       
       if (rememberDevice && typeof window !== "undefined") {
         window.localStorage.setItem(EMAIL_STORAGE_KEY, email);
@@ -85,22 +95,6 @@ export default function SignIn() {
           <p className="text-center text-sm text-slate-600">Secure activation via your college email</p>
         </div>
 
-        {/* 🛠️ Localhost Developer Banner */}
-        {isLocal && (
-          <div className="mb-4 rounded-lg bg-amber-50 p-3 text-xs text-amber-800 border border-amber-200 flex flex-col gap-2">
-            <p className="font-semibold">🛠️ Dev Environment Detected</p>
-            <button
-              type="button"
-              onClick={() => {
-                window.location.href = "/";
-              }}
-              className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-1.5 px-3 rounded text-center transition"
-            >
-              Skip Auth & Go to Home Dashboard →
-            </button>
-          </div>
-        )}
-
         <form onSubmit={sendActivationLink} className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-sm font-medium text-slate-900">
@@ -115,7 +109,7 @@ export default function SignIn() {
               disabled={loading || step === "sent"}
               className="rounded-lg border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 placeholder-slate-400 transition hover:bg-slate-100 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 disabled:opacity-50"
             />
-            <p className="text-xs text-slate-500">Example: navin_2503ai02@iitp.ac.in</p>
+            <p className="text-xs text-slate-500">Example: hiten_2503cb01@iitp.ac.in</p>
           </div>
 
           {step === "email" && (
@@ -132,8 +126,13 @@ export default function SignIn() {
           )}
 
           {info && (
-            <div className="rounded-lg bg-blue-50 p-3 text-sm text-blue-700 border border-blue-200">
-              {info}
+            <div className="rounded-lg bg-blue-50 p-3 text-sm text-blue-700 border border-blue-200 flex flex-col gap-1">
+              <p>{info}</p>
+              {countdown > 0 && (
+                <p className="text-xs font-semibold text-blue-800 animate-pulse mt-1">
+                  ⏳ Please wait at least {countdown} seconds before requesting another link.
+                </p>
+              )}
             </div>
           )}
 
@@ -155,11 +154,11 @@ export default function SignIn() {
           ) : (
             <button
               type="button"
-              disabled={loading}
-              onClick={() => setStep("email")}
-              className="rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 disabled:opacity-50"
+              disabled={loading || countdown > 0}
+              onClick={() => sendActivationLink()}
+              className="rounded-lg border border-blue-300 bg-blue-50 text-blue-700 px-4 py-3 text-sm font-medium transition hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center gap-2"
             >
-              Try a different email
+              {loading ? "Processing..." : countdown > 0 ? `Resend Link (${countdown}s)` : "Resend Link →"}
             </button>
           )}
         </form>
