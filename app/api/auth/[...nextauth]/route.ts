@@ -1,6 +1,5 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-// 1. Import your custom stateful verification function instead of raw jsonwebtoken
 import { verifyActivationToken } from "@/lib/auth-utils"; 
 
 export const authOptions: NextAuthOptions = {
@@ -18,31 +17,26 @@ export const authOptions: NextAuthOptions = {
         }
 
         try {
-          // 2. Run the secure check: structural verification + DB token destruction
           const email = await verifyActivationToken(token);
           
           if (!email) {
             throw new Error("Your login link has expired, is invalid, or was already used.");
           }
 
-          // 3. Format a clean student username from their email structure
-          // e.g., navin_prabhakar_2503ai02@iitp.ac.in -> "Navin Prabhakar"
           const [namePart] = email.split("@");
           const parts = namePart.split("_");
           
-          // Safeguard to ensure there are underscores present before slicing the roll number
           const nameStr = parts.length > 1 ? parts.slice(0, -1).join(" ") : namePart;
           const formattedName = nameStr
             .split(" ")
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
 
-          // Return the authenticated payload to construct the session cookie
           return {
-            id: email, // Maps email as the unique identifier string
+            id: email, 
             email: email,
             name: formattedName || namePart,
-            image: null,
+            image: null, // Starts as null when first logging in
           };
         } catch (error: any) {
           console.error("❌ Token verification layer failed:", error);
@@ -59,23 +53,33 @@ export const authOptions: NextAuthOptions = {
   },
   session: {
     strategy: "jwt",
-    maxAge: 30 * 24 * 60 * 60, // 30 days session persistence
+    maxAge: 30 * 24 * 60 * 60, 
     updateAge: 24 * 60 * 60,
   },
   callbacks: {
-    async jwt({ token, user }) {
+    // 🛠️ Updated to listen for the frontend calling update()
+    async jwt({ token, user, trigger, session }) {
       if (user) {
         token.id = user.id;
         token.email = user.email;
         token.name = user.name;
+        token.picture = user.image; // Capture the initial avatar state (null)
       }
+
+      // If the frontend triggers a session sync with a new image link, update the token properties
+      if (trigger === "update" && session?.user?.image) {
+        token.picture = session.user.image;
+      }
+
       return token;
     },
+    // 🛠️ Updated to pass the dynamically altered token picture string down to the active UI state
     async session({ session, token }) {
       if (session.user) {
         session.user.id = token.id as string;
         session.user.email = token.email as string;
         session.user.name = token.name as string;
+        session.user.image = token.picture as string | null; // Keeps your navbar and layout perfectly synced!
       }
       return session;
     },

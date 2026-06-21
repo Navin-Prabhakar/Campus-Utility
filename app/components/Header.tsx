@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; 
 import ProfileAvatar from "./ProfileAvatar";
-// 📝 Import custom hook and your Notification Modal component
+// Import custom hook and your Notification Modal component
 import NotificationModal from "./NoticeBox";
 import { useUnseenNotices } from "../../hooks/useUnseenNotices";
 
@@ -20,7 +20,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
   const [showNotificationModal, setShowNotificationModal] = React.useState(false); // Modal control state
   const pathname = usePathname();
 
-  // 🔔 Calculate unread counts dynamically
+  // Calculate unread counts dynamically
   const unseenCount = useUnseenNotices(showNotificationModal);
 
   const user = session?.user;
@@ -47,7 +47,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* 🔔 Notification Bell Button with Badge Counter */}
+          {/* Notification Bell Button with Badge Counter */}
           <button
             onClick={() => setShowNotificationModal(true)}
             aria-label="Notifications"
@@ -98,14 +98,26 @@ export default function Header({ messActionSlot }: HeaderProps) {
 
             {/* Profile Dropdown Menu */}
             {user && showMenu && (
-              <div className="absolute right-0 top-full mt-2 w-48 rounded-lg bg-white text-slate-900 shadow-xl z-50">
-                <div className="border-b border-slate-200 px-4 py-3">
-                  <p className="font-semibold">{user.name}</p>
-                  <p className="text-sm text-slate-600">{user.email}</p>
+              <div className="absolute right-0 top-full mt-2 w-48 rounded-lg bg-white text-slate-900 shadow-xl z-50 py-1 border border-slate-100">
+                <div className="border-b border-slate-200 px-4 py-2.5">
+                  <p className="font-semibold text-sm truncate">{user.name}</p>
+                  <p className="text-xs text-slate-500 truncate font-mono">{user.email}</p>
                 </div>
+                
+                {/* 📷 NEW: Link navigation to profile settings workspace route */}
+                <Link
+                  href="/profile"
+                  onClick={() => setShowMenu(false)}
+                  className="flex w-full px-4 py-2 text-left text-sm text-slate-700 hover:bg-slate-100 transition items-center gap-2"
+                >
+                  ⚙️ Profile Settings
+                </Link>
+
+                <hr className="border-slate-100 my-1" />
+
                 <button
                   onClick={handleSignOut}
-                  className="w-full px-4 py-2 text-left text-sm hover:bg-slate-100 transition rounded-b-lg"
+                  className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50 transition rounded-b-lg"
                 >
                   Sign Out
                 </button>
@@ -141,7 +153,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
         </div>
       </div>
 
-      {/* 🔮 Render Notification Overlay Drawer */}
+      {/* Render Notification Overlay Drawer */}
       <NotificationModal 
         isOpen={showNotificationModal}
         onClose={() => setShowNotificationModal(false)}

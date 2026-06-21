@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 
 interface ProfileAvatarProps {
   name?: string | null;
   email?: string | null;
   image?: string | null;
-  size?: "sm" | "md" | "lg";
-  editable?: boolean; // 🟢 Toggle to allow uploading on profile pages
+  size?: "sm" | "md" | "lg" | "xl"; 
+  editable?: boolean;
 }
 
 export default function ProfileAvatar({
@@ -17,13 +18,33 @@ export default function ProfileAvatar({
   size = "md",
   editable = false,
 }: ProfileAvatarProps) {
+  const { data: session, update } = useSession();
   const [currentImage, setCurrentImage] = useState<string | null>(initialImage || null);
   const [isUploading, setIsSubmitting] = useState(false);
 
-  // Sync image if props load asynchronously from Next-Auth session
+  // 🟢 AUTOMATICALLY FETCH RECENT AVATAR FROM DRIVE ON LOAD
   useEffect(() => {
-    if (initialImage) setCurrentImage(initialImage);
-  }, [initialImage]);
+    async function fetchRecentAvatar() {
+      if (!email) return;
+      try {
+        const response = await fetch(`/api/user/get-avatar?email=${encodeURIComponent(email)}`);
+        if (response.ok) {
+          const data = await response.json();
+          if (data.imageUrl) {
+            setCurrentImage(data.imageUrl);
+          }
+        }
+      } catch (err) {
+        console.error("Error fetching recent avatar from Drive:", err);
+      }
+    }
+
+    if (!initialImage) {
+      fetchRecentAvatar();
+    } else {
+      setCurrentImage(initialImage);
+    }
+  }, [initialImage, email]);
 
   const parts = name?.trim().split(/\s+/).filter(Boolean) ?? [];
   const initials =
@@ -34,7 +55,8 @@ export default function ProfileAvatar({
   const sizeClasses = {
     sm: "h-8 w-8 text-xs",
     md: "h-10 w-10 text-sm",
-    lg: "h-16 w-16 text-lg", // Slightly increased lg size for better display on settings/profile cards
+    lg: "h-16 w-16 text-lg",
+    xl: "h-32 w-32 text-4xl", 
   };
 
   const colors = [
@@ -46,49 +68,59 @@ export default function ProfileAvatar({
     ? email.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0) % colors.length
     : 0;
 
-  // 🛠️ Handle Upload File Vector Conversion (Converts to Base64 String for Lifetime Secure Sync)
   const handleAvatarFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
-    // Guard constraint sizing limits (Keep it under 1MB for smooth DB storage)
-    if (file.size > 1024 * 1024) {
-      alert("Image profile file size must be less than 1MB.");
+    if (!file.type.startsWith("image/")) {
+      alert("Please select a valid image file.");
       return;
     }
 
-    const reader = new FileReader();
-    reader.onloadend = async () => {
-      const base64String = reader.result as string;
-      setIsSubmitting(true);
+    const localPreviewUrl = URL.createObjectURL(file);
+    setCurrentImage(localPreviewUrl);
+    setIsSubmitting(true);
 
-      try {
-        const response = await fetch("/api/user/profile-picture", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ imageUrl: base64String }),
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      const response = await fetch("/api/user/upload-avatar", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setCurrentImage(data.imageUrl); 
+        
+        // Synchronize with the active NextAuth state
+        await update({
+          ...session,
+          user: {
+            ...session?.user,
+            image: data.imageUrl
+          }
         });
-
-        if (response.ok) {
-          setCurrentImage(base64String);
-        } else {
-          alert("Failed to synchronize user picture database entry.");
-        }
-      } catch (err) {
-        console.error(err);
-        alert("Connection timeout targeting database profile matrix.");
-      } finally {
-        setIsSubmitting(false);
+      } else {
+        alert(data.error || "Failed to upload image to Google Drive.");
+        setCurrentImage(initialImage ?? null); 
       }
-    };
-    reader.readAsDataURL(file);
+    } catch (err) {
+      console.error(err);
+      alert("Connection timeout targeting the server gateway.");
+      setCurrentImage(initialImage ?? null); 
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="relative group">
+    <div className="relative group flex items-center justify-center">
       <div
-        className={`${sizeClasses[size]} ${colors[colorIndex]} flex items-center justify-center rounded-full font-semibold text-white overflow-hidden relative shadow-sm`}
-        title={`${name} ${email ? `(${email})` : ""}`}
+        className={`${sizeClasses[size]} ${colors[colorIndex]} flex items-center justify-center rounded-full font-semibold text-white overflow-hidden relative shadow-md transition-all duration-200`}
+        title={`${name} (${email || ""})`}
       >
         {currentImage ? (
           <img src={currentImage} alt={name || "Profile"} className="h-full w-full object-cover rounded-full" />
@@ -96,18 +128,17 @@ export default function ProfileAvatar({
           initials
         )}
 
-        {/* 🟢 Loading overlay during database sync process */}
         {isUploading && (
-          <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-[10px] text-white">
+          <div className="absolute inset-0 bg-black/60 flex items-center justify-center text-xs text-white font-bold">
             ⏳
           </div>
         )}
       </div>
 
-      {/* 🟢 Interactive Click-to-Upload layer overlay (Shows only if editable is passed true) */}
       {editable && !isUploading && (
-        <label className="absolute inset-0 rounded-full bg-black/40 text-white opacity-0 hover:opacity-100 transition-opacity duration-150 flex items-center justify-center text-[10px] font-bold cursor-pointer select-none">
-          <span>Edit 📷</span>
+        <label className="absolute inset-0 rounded-full bg-black/40 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col items-center justify-center text-xs font-bold cursor-pointer select-none">
+          <span>📷</span>
+          <span className="text-[10px] mt-0.5">Edit Photo</span>
           <input
             type="file"
             accept="image/*"
