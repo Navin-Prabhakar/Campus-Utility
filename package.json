@@ -15,14 +15,13 @@
     }
   },
   "scripts": {
-    "dev": "next dev", 
+    "dev": "next dev",
     "build": "bash vercel-build.sh",
     "start": "next start",
     "lint": "next lint",
     "start:backend": "tsx ./src/backend/index.ts",
-    
-    "render-build": "npm install" 
-},
+    "render-build": "npm install"
+  },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "cors": "^2.8.6",
@@ -31,8 +30,8 @@
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.7.0",
     "next": "^16.2.6",
-    "next-auth": "^4.24.10",
-    "nodemailer": "6.6.5",
+    "next-auth": "^4.24.14",
+    "nodemailer": "^7.0.13",
     "papaparse": "^5.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
