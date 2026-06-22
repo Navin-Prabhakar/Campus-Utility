@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Papa from "papaparse";
-import Header from "../components/Header";
-import BottomTabs from "../components/BottomTabs";
 
 interface MenuItem {
   Day: string;
@@ -63,6 +61,9 @@ export default function MessPage() {
         setSelectedMess(savedMess);
         setIsDefaultChecked(true);
       }
+    } else {
+      // Fallback to initial default mess if no preference cached
+      setSelectedMess(MESS_CONFIG[0]);
     }
   }, []);
 
@@ -181,38 +182,37 @@ export default function MessPage() {
   };
 
   const handleLogDataToSheets = async (e: React.FormEvent) => {
-  e.preventDefault();
-  if (!selectedMess) return;
-  setSubmittingComplaint(true);
+    e.preventDefault();
+    if (!selectedMess) return;
+    setSubmittingComplaint(true);
 
-  try {
-    const base64ImagesArray = await Promise.all(
-      selectedImages.map(file => convertFileToBase64(file))
-    );
+    try {
+      const base64ImagesArray = await Promise.all(
+        selectedImages.map(file => convertFileToBase64(file))
+      );
 
-    // Remove mode: "no-cors" to handle response validation correctly
-    const response = await fetch(COMPLAINT_SCRIPT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8", 
-      },
-      body: JSON.stringify({
-        messName: selectedMess.name,
-        name: complaintForm.name,
-        rollNumber: complaintForm.roll,
-        category: complaintForm.category,
-        description: complaintForm.desc,
-        images: base64ImagesArray // Ensure array passes completely
-      })
-    });
+      await fetch(COMPLAINT_SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8", 
+        },
+        body: JSON.stringify({
+          messName: selectedMess.name,
+          name: complaintForm.name,
+          rollNumber: complaintForm.roll,
+          category: complaintForm.category,
+          description: complaintForm.desc,
+          images: base64ImagesArray
+        })
+      });
 
-    setIsDataLogged(true); 
-  } catch (err) {
-    console.error("Sheet saving error:", err);
-    alert("Network transmission failure. Check configuration link parameters.");
-  }
-  setSubmittingComplaint(false);
-};
+      setIsDataLogged(true); 
+    } catch (err) {
+      console.error("Sheet saving error:", err);
+      alert("Network transmission failure. Check configuration link parameters.");
+    }
+    setSubmittingComplaint(false);
+  };
 
   const cleanMessName = selectedMess ? selectedMess.name.replace(/[()]/g, "").trim() : "";
   const boldTitle = `*🚨 IITP MESS COMPLAINT REGISTERED*`;
@@ -230,107 +230,108 @@ export default function MessPage() {
 
   const todaysMenu = menuData.find(item => item.Day?.toLowerCase().trim() === selectedDay.toLowerCase());
 
-  const HeaderDropdownAction = (
-    <div className="flex items-center gap-1.5 relative">
-      {selectedMess && (
-        <button
-          onClick={() => handleDefaultToggle(!isDefaultChecked)}
-          title="Toggle Always Load by Default"
-          className={`h-5 w-5 rounded-md border flex items-center justify-center transition transform active:scale-90 ${
-            isDefaultChecked 
-              ? "bg-blue-500 border-blue-600 text-white" 
-              : "bg-slate-800/60 border-white/10 text-transparent"
-          }`}
-        >
-          <span className="text-[10px] font-extrabold leading-none select-none">✓</span>
-        </button>
-      )}
-
-      <div className="relative">
-        <button
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          className="h-5 px-2 bg-slate-900/40 text-sky-100 hover:text-white transition-colors text-[10px] font-bold rounded-md flex items-center gap-1 border border-white/20 active:scale-95 transform"
-        >
-          <span>{selectedMess ? selectedMess.name.split(" ")[0] : "All Mess"}</span> ▼
-        </button>
-
-        {isDropdownOpen && (
-          <div className="absolute right-0 top-full mt-1.5 w-44 bg-white border border-zinc-300 rounded-xl shadow-xl z-[60] overflow-hidden divide-y divide-zinc-100">
-            {MESS_CONFIG.map((mess) => (
-              <button
-                key={mess.id}
-                onClick={() => {
-                  setSelectedMess(mess);
-                  const savedId = localStorage.getItem("user-default-mess");
-                  setIsDefaultChecked(savedId === mess.id);
-                }}
-                className={`w-full text-left px-3.5 py-2 text-[11px] font-bold block ${
-                  selectedMess?.id === mess.id ? "bg-blue-50 text-blue-600" : "text-zinc-700 hover:bg-zinc-50"
-                }`}
-              >
-                {mess.name}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-
   return (
-    <main className="h-screen max-h-screen w-full bg-zinc-100 font-sans text-zinc-600 antialiased flex flex-col justify-between relative overflow-hidden">
+    <main className="h-full w-full bg-[#050505] font-sans text-zinc-300 antialiased flex flex-col justify-between relative overflow-hidden selection:bg-zinc-800 selection:text-white">
       
-      {/* FIXED AREA: Main Header layout remains pinned */}
-      <div className="w-full flex flex-col items-center shrink-0 RegalZIndex bg-zinc-100 shadow-3xs">
-        <Header messActionSlot={HeaderDropdownAction} />
+      {/* 🛠️ RESTORED: Sticky Control and Selection Bar Sitting Safely Below Global Header Layout */}
+      <div className="w-full bg-[#0C0C0C]/90 backdrop-blur-md border-b border-zinc-900 shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+        <div className="w-[94%] max-w-[365px] py-2.5 flex justify-between items-center relative">
+          
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => handleDefaultToggle(!isDefaultChecked)}
+              title="Toggle Always Load by Default"
+              className={`h-5 w-5 rounded-md border flex items-center justify-center transition-all transform active:scale-[0.85] ${
+                isDefaultChecked 
+                  ? "bg-[#2A2A2A] border-zinc-600 text-[#10B981]" 
+                  : "bg-[#141414] border-zinc-800 text-transparent"
+              }`}
+            >
+              <span className="text-[10px] font-black leading-none select-none">✓</span>
+            </button>
+            <span className="text-[10px] font-black uppercase tracking-wider text-zinc-500">Set Default</span>
+          </div>
+
+          <div className="relative">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="h-7 px-3 bg-[#161616] hover:bg-[#222222] text-zinc-300 hover:text-white transition-colors text-[10px] font-black tracking-wider uppercase rounded-xl flex items-center gap-1.5 border border-zinc-800 active:scale-95 transform shadow-md"
+            >
+              <span>{selectedMess ? selectedMess.name : "Select Mess Stream"}</span> ▼
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute right-0 top-full mt-2 w-44 bg-[#121212] border border-zinc-800 rounded-xl shadow-[0_10px_35px_rgba(0,0,0,0.8)] z-50 overflow-hidden divide-y divide-zinc-900/60 animate-in fade-in zoom-in-95 duration-100">
+                {MESS_CONFIG.map((mess) => (
+                  <button
+                    key={mess.id}
+                    onClick={() => {
+                      setSelectedMess(mess);
+                      const savedId = localStorage.getItem("user-default-mess");
+                      setIsDefaultChecked(savedId === mess.id);
+                    }}
+                    className={`w-full text-left px-4 py-2.5 text-[11px] font-bold block transition-colors ${
+                      selectedMess?.id === mess.id ? "bg-[#1A1A1A] text-[#10B981]" : "text-zinc-400 hover:bg-[#161616] hover:text-white"
+                    }`}
+                  >
+                    {mess.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+        </div>
       </div>
 
-      {/* SCROLLABLE WRAPPER BODY FRAME CONTAINER */}
-      <div className="w-full flex-1 overflow-y-auto px-[0%] flex flex-col items-center pb-4">
+      {/* 📜 SCROLLABLE APP WRAPPER WINDOW */}
+      <div className="w-full flex-1 overflow-y-auto flex flex-col items-center pb-36 style-scrollbar">
         
-        {/* UNPINNED LAYER: Mess Indicator Layer inside scroll track */}
+        {/* Active Node Indicator Badge */}
         {selectedMess && (
-          <div className="w-[96%] max-w-[350px] mt-2 bg-zinc-800 text-zinc-100 rounded-xl py-1 px-4 text-center text-[12px] font-bold tracking-wide shadow-xs shrink-0 select-none border border-zinc-700">
-            📍 Viewing <span className="text-sky-300 font-extrabold">{selectedMess.name}</span> Mess Menu
+          <div className="w-[94%] max-w-[350px] mt-3.5 bg-gradient-to-r from-[#0F0F0F] to-[#0A0A0A] text-zinc-400 border border-zinc-800 rounded-xl py-1.5 px-4 text-center text-[11px] font-black tracking-widest uppercase shadow-md shrink-0 select-none">
+            📍 Node: <span className="text-zinc-200 font-black">{selectedMess.name}</span> System
           </div>
         )}
 
-        {/* LIVE DYNAMIC NOTICE BANNER SECTION BOX */}
+        {/* Live Notices Layer: Warn Accentuation Rules */}
         {selectedMess && liveNotice && (
-          <div className="w-[95%] max-w-[350px] mt-2.5 p-2 bg-amber-50 border border-amber-200 rounded-xl text-[13px] leading-relaxed text-amber-900 shadow-3xs shrink-0">
-            <u>{liveNotice}</u>
+          <div className="w-[94%] max-w-[350px] mt-3 p-3 bg-gradient-to-br from-[#14120F] to-[#0D0B0A] border border-amber-500/10 rounded-xl text-xs leading-relaxed text-amber-200/80 shadow-md shrink-0 font-medium">
+            <span className="text-[#F59E0B] font-black tracking-wide uppercase block mb-0.5">⚠️ Broadcast Log:</span>
+            <p className="italic">"{liveNotice}"</p>
           </div>
         )}
 
-        <main className="flex flex-col items-center justify-start py-3 w-[95%] max-w-[350px] space-y-3">
+        <main className="flex flex-col items-center justify-start py-3 w-[94%] max-w-[350px] space-y-3 flex-grow">
           
           {!selectedMess ? (
-            <div className="flex flex-col items-center justify-center pt-28 text-center select-none">
-              <span className="text-3xl mb-2">🍛</span>
-              <p className="text-sm font-semibold text-zinc-700/80 tracking-wide">Choose your mess</p>
-              <p className="text-[10px] text-zinc-400 mt-0.5 font-medium">Tap "All Mess" at the top right to start viewing.</p>
+            <div className="flex flex-col items-center justify-center pt-28 text-center select-none animate-pulse">
+              <span className="text-4xl mb-3 filter grayscale opacity-40">🍛</span>
+              <p className="text-xs font-black uppercase tracking-wider text-zinc-500">Deactivated Stream</p>
+              <p className="text-[10px] text-zinc-600 mt-1 max-w-[200px] leading-relaxed">Tap the select action button to open terminal records.</p>
             </div>
           ) : (
             <>
-              {/* PRIMARY WEEKDAY MENU CONTAINER CARD */}
-              <div className="w-full rounded-xl border border-zinc-300 bg-white p-2 shadow-xs">
-                <div className="mb-1 flex items-center justify-between border-b border-zinc-500 pb-1 px-1">
-                  <div className="flex items-center gap-1">
-                    <span className="h-1 w-1 rounded-full bg-red-500 animate-pulse" />
-                    <h2 className="text-[10px] font-bold uppercase tracking-wider text-green-500">Today's Layout</h2>
+              {/* PRIMARY DAILY SCHEDULING CARD CONTAINER */}
+              <div className="w-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] p-3 shadow-xl">
+                <div className="mb-2 flex items-center justify-between border-b border-zinc-900 pb-2 px-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#10B981] shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse" />
+                    <h2 className="text-[10px] font-black uppercase tracking-widest text-[#10B981]">Live Layout</h2>
                   </div>
 
+                  {/* Day Toggler (Depth Clickable Accent Structure) */}
                   <div className="relative">
                     <button
                       onClick={() => setIsDayDropdownOpen(!isDayDropdownOpen)}
-                      className="text-[9px] bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-1.5 py-0.5 rounded uppercase tracking-wider font-mono flex items-center gap-0.5"
+                      className="text-[9px] bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black px-2 py-1 rounded-lg uppercase tracking-widest font-mono flex items-center gap-0.5 shadow-sm active:scale-95 transition-all"
                     >
                       <span>{selectedDay.slice(0, 3)}</span>
                       <span>▼</span>
                     </button>
 
                     {isDayDropdownOpen && (
-                      <div className="absolute right-0 mt-1 w-24 bg-white border border-zinc-200 rounded-lg shadow-lg z-50 overflow-hidden divide-y divide-zinc-100">
+                      <div className="absolute right-0 mt-2 w-24 bg-[#121212] border border-zinc-800 rounded-lg shadow-2xl z-50 overflow-hidden divide-y divide-zinc-900 animate-in fade-in zoom-in-95 duration-100">
                         {DAYS_OF_WEEK.map((d) => (
                           <button
                             key={d}
@@ -338,8 +339,8 @@ export default function MessPage() {
                               setSelectedDay(d);
                               setIsDayDropdownOpen(false);
                             }}
-                            className={`w-full text-left px-2 py-1.5 text-[10px] font-bold font-mono uppercase ${
-                              selectedDay === d ? "bg-indigo-50 text-indigo-600" : "text-zinc-600 hover:bg-zinc-50"
+                            className={`w-full text-left px-3 py-2 text-[10px] font-black font-mono uppercase tracking-wider transition-colors ${
+                              selectedDay === d ? "bg-[#1A1A1A] text-[#10B981]" : "text-zinc-500 hover:bg-[#161616] hover:text-zinc-300"
                             }`}
                           >
                             {d.slice(0, 3)} {d === currentDay && "•"}
@@ -350,85 +351,76 @@ export default function MessPage() {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-1 w-full">
+                {/* Individual Plate Schedules Blocks */}
+                <div className="flex flex-col gap-1.5 w-full pt-1">
                   {loading ? (
                     [...Array(5)].map((_, i) => (
-                      <div key={i} className="h-11 w-full animate-pulse rounded-md bg-zinc-200" />
+                      <div key={i} className="h-12 w-full animate-pulse rounded-xl bg-[#121212] border border-zinc-900" />
                     ))
                   ) : error ? (
-                    <div className="py-2.5 text-center text-[11px] text-red-500 bg-red-50/50 border border-red-100 rounded-lg">{error}</div>
+                    <div className="py-4 text-center text-[11px] font-black tracking-wide uppercase text-rose-400 bg-rose-950/10 border border-rose-950/30 rounded-xl">{error}</div>
                   ) : todaysMenu ? (
-                    <div className="flex flex-col gap-1.5 p-0.5">
-                      <div className="flex items-center justify-between rounded-md border border-zinc-200 bg-zinc-200/30 px-2.5 py-1.5">
-                        <div className="flex flex-col">
-                          <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider">☕️<u>Breakfast</u></span>
-                          <span className="text-[11px] font-bold text-zinc-800 mt-0.5 leading-snug">{todaysMenu.Breakfast || "—"}</span>
-                        </div>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
+                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">☕️ Breakfast</span>
+                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Breakfast || "—"}</span>
                       </div>
-                      <div className="flex items-center justify-between rounded-md border border-zinc-200 bg-zinc-200/30 px-2.5 py-1.5">
-                        <div className="flex flex-col">
-                          <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider"><u>🍛Lunch</u></span>
-                          <span className="text-[11px] font-bold text-zinc-800 mt-0.5 leading-snug">{todaysMenu.Lunch || "—"}</span>
-                        </div>
+                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
+                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍛 Lunch</span>
+                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Lunch || "—"}</span>
                       </div>
-                      <div className="flex items-center justify-between rounded-md border border-zinc-200 bg-zinc-200/30 px-2.5 py-1.5">
-                        <div className="flex flex-col">
-                          <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider">🍟<u>Snacks</u></span>
-                          <span className="text-[11px] font-bold text-zinc-800 mt-0.5 leading-snug">{todaysMenu.Snacks || "—"}</span>
-                        </div>
+                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
+                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍟 Snacks</span>
+                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Snacks || "—"}</span>
                       </div>
-                      <div className="flex items-center justify-between rounded-md border border-zinc-200 bg-zinc-200/30 px-2.5 py-1.5">
-                        <div className="flex flex-col">
-                          <span className="text-[10px] font-extrabold text-blue-600 uppercase tracking-wider">🍱<u>Dinner</u></span>
-                          <span className="text-[11px] font-bold text-zinc-800 mt-0.5 leading-snug">{todaysMenu.Dinner || "—"}</span>
-                        </div>
+                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
+                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍱 Dinner</span>
+                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Dinner || "—"}</span>
                       </div>
-                      <div className="flex items-center justify-between rounded-md border border-pink-200 bg-pink-50/40 px-2.5 py-1.5">
-                        <div className="flex flex-col">
-                          <span className="text-[10px] font-extrabold text-pink-600 uppercase tracking-wider flex items-center gap-0.5">🍧<u>Dessert</u></span>
-                          <span className="text-[11px] font-bold text-zinc-800 mt-0.5 leading-snug">{todaysMenu.Dessert || "—"}</span>
-                        </div>
+                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-gradient-to-b from-[#140F11] to-[#0D0A0B] px-3 py-2">
+                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍧 Dessert</span>
+                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Dessert || "—"}</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="py-4 text-center text-[11px] text-zinc-400 italic">No menu matches found for today.</div>
+                    <div className="py-4 text-center text-[10px] text-zinc-600 font-medium italic">No listings registered for this index target.</div>
                   )}
                 </div>
               </div>
 
-              {/* SECONDARY CARD: EVERYDAY ESSENTIALS STUFF BOX */}
-              <div className="w-full rounded-xl border border-amber-300 bg-amber-50/20 p-2 shadow-xs">
-                <div className="mb-2 flex items-center gap-1 border-b border-amber-400 pb-1 px-1">
+              {/* SECONDARY CARD CONTAINER: STANDARD CALORIC CONSTANTS (Amber Notice Layer) */}
+              <div className="w-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] p-3 shadow-xl">
+                <div className="mb-2 flex items-center gap-1.5 border-b border-zinc-900 pb-2 px-1">
                   <span className="text-xs">🔄</span>
-                  <h2 className="text-[10px] font-extrabold uppercase tracking-wider text-amber-800">
-                    Everyday Essentials
+                  <h2 className="text-[10px] font-black uppercase tracking-widest text-amber-500">
+                    Everyday Constants
                   </h2>
                 </div>
 
-                <div className="flex flex-col gap-1 w-full">
+                <div className="flex flex-col gap-1.5 w-full">
                   {loading ? (
-                    <div className="h-16 w-full animate-pulse rounded-md bg-zinc-200" />
+                    <div className="h-16 w-full animate-pulse rounded-xl bg-[#121212]" />
                   ) : everydayMenu ? (
-                    <div className="grid grid-cols-2 gap-1 ">
-                      <div className="rounded-md border border-zinc-200 bg-white p-1.5 flex flex-col">
-                        <span className="text-[10px] font-extrabold text-amber-700 uppercase tracking-wider">☕️ Breakfast</span>
-                        <span className="text-[10px] font-medium text-zinc-700 mt-0.5 leading-tight">{everydayMenu.Breakfast}</span>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
+                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">☕️ Breakfast</span>
+                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Breakfast}</span>
                       </div>
-                      <div className="rounded-md border border-zinc-200 bg-white p-1.5 flex flex-col">
-                        <span className="text-[10px] font-extrabold text-amber-700 uppercase tracking-wider">🍛 Lunch</span>
-                        <span className="text-[10px] font-medium text-zinc-700 mt-0.5 leading-tight">{everydayMenu.Lunch}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
+                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">🍛 Lunch</span>
+                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Lunch}</span>
                       </div>
-                      <div className="rounded-md border border-zinc-200 bg-white p-1.5 flex flex-col">
-                        <span className="text-[10px] font-extrabold text-amber-700 uppercase tracking-wider">🍟 Snacks</span>
-                        <span className="text-[10px] font-medium text-zinc-700 mt-0.5 leading-tight">{everydayMenu.Snacks}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
+                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">🍟 Snacks</span>
+                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Snacks}</span>
                       </div>
-                      <div className="rounded-md border border-zinc-200 bg-white p-1.5 flex flex-col">
-                        <span className="text-[10px] font-extrabold text-amber-700 uppercase tracking-wider">🍱 Dinner</span>
-                        <span className="text-[10px] font-medium text-zinc-700 mt-0.5 leading-tight">{everydayMenu.Dinner}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
+                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">🍱 Dinner</span>
+                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Dinner}</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="py-2 text-center text-[10px] text-zinc-400 italic">No standard everyday entries parsed.</div>
+                    <div className="py-2 text-center text-[10px] text-zinc-600 font-medium italic">No standard elements map configured.</div>
                   )}
                 </div>
               </div>
@@ -436,103 +428,92 @@ export default function MessPage() {
           )}
         </main>
 
-        {/* SCROLLABLE LINKS PREFERENCE CONTAINER: Re-nested safely within the viewport wrapper stream */}
+        {/* 🔗 Spreadsheets links built specifically using structural Blue design guidelines */}
         {selectedMess && (
-          <div className="w-full bg-transparent  pb-12 shrink-0 flex flex-col items-center gap-1 select-none">
+          <div className="w-full bg-transparent pt-2 pb-6 shrink-0 flex flex-col items-center gap-2 select-none">
             <a 
               href={GOOGLE_SHEET_BROWSER_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] font-bold tracking-wide text-green-500 hover:text-emerald-600 underline active:scale-95 transition-transform"
+              className="text-[11px] font-black uppercase tracking-wider text-blue-500 hover:text-blue-400 underline transition-colors"
             >
-              View Full MessMenu Spreadsheet
+              Export Global Menu Matrix ↗
             </a>
             <a 
               href={COMPLAINT_SPREADSHEET_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] font-bold tracking-wide text-rose-600/80 hover:text-rose-700 underline active:scale-95 transition-transform"
+              className="text-[11px] font-black uppercase tracking-wider text-blue-500 hover:text-blue-400 underline transition-colors"
             >
-              View Full MessComplaint Spreadsheet
+              Review Complaint Databanks ↗
             </a>
           </div>
         )}
       </div>
 
-     {/* FLOATING ACTION ALERTS COMPLAINT BUTTON */}
-{selectedMess && (
-  <button
-    onClick={() => setIsComplaintOpen(true)}
-    className="fixed bottom-20 right-4 h-12 w-12 rounded-full bg-gradient-to-br from-blue-600 to-rose-600 text-white font-bold flex flex-col items-center justify-center shadow-[0_4px_10px_rgba(225,29,72,0.4),inset_0_2px_3px_rgba(255,255,255,0.3)] border border-rose-600 z-50 cursor-pointer transition transform active:scale-90"
-  >
-    {/* Center Siren Emoji */}
-    <span className="text-lg leading-none mt-1.5 select-none">🚨</span> 
+      {/* 🚨 CRIMSON HARSH ALERTS COMPLAINT SYSTEM ACTION TRIGGER BUTTON */}
+      {selectedMess && (
+        <button
+          onClick={() => setIsComplaintOpen(true)}
+          className="fixed bottom-24 right-4 h-12 w-12 rounded-full bg-gradient-to-b from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white font-bold flex flex-col items-center justify-center shadow-[0_4px_15px_rgba(244,63,94,0.3)] border border-rose-500/30 z-50 cursor-pointer transition transform active:scale-90 select-none"
+        >
+          <span className="text-base leading-none mt-1">🚨</span> 
+          <svg viewBox="0 0 100 40" className="w-full h-4 mt-0.5 pointer-events-none fill-white font-black select-none">
+            <defs>
+              <path id="smileTextPath" d="M 10,8 Q 50,28 90,8" />
+            </defs>
+            <text className="text-[16px] tracking-widest uppercase">
+              <textPath href="#smileTextPath" startOffset="50%" textAnchor="middle">
+                report
+              </textPath>
+            </text>
+          </svg>
+        </button>
+      )}
 
-    {/*  Curve/Smile Text SVG Wrapper */}
-    <svg 
-      viewBox="0 0 100 40" 
-      className="w-full h-5 mt-0.5 pointer-events-none fill-yellow-300 font-bold select-none"
-    >
-      <defs>
-        {/* This defines the downward arc/smile mathematical path shape */}
-        <path 
-          id="smileTextPath" 
-          d="M 10,10 Q 50,32 90,10" 
-        />
-      </defs>
-      <text className="text-[17px] tracking-wide uppercase">
-        {/* textAnchor="middle" and startOffset="50%" locks the text right in the dead center of the smile path */}
-        <textPath href="#smileTextPath" startOffset="50%" textAnchor="middle">
-          complain
-        </textPath>
-      </text>
-    </svg>
-  </button>
-)}
-
-      {/* COMPLAINT MODAL */}
+      {/* COMPLAINT MODAL WINDOW (PRO DARK GLASSMORPHISM STYLING OVERHAUL) */}
       {isComplaintOpen && (
-        <div className="fixed inset-0 bg-zinc-950/40 backdrop-blur-xs flex items-center justify-center p-4 z-[100] animate-fadeIn">
-          <div className="bg-white rounded-2xl p-4 w-full max-w-[320px] shadow-2xl border border-zinc-200 flex flex-col relative max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-[100] animate-in fade-in duration-150">
+          <div className="bg-[#0A0A0A] border border-zinc-900 rounded-2xl p-4 w-full max-w-[320px] shadow-2xl flex flex-col relative max-h-[86vh] overflow-y-auto style-scrollbar">
             <button 
               onClick={resetModalFormState}
-              className="absolute top-2.5 right-3 text-zinc-400 hover:text-zinc-600 text-sm font-bold cursor-pointer"
+              className="absolute top-3 right-4 text-zinc-500 hover:text-white text-xs font-black transition-colors cursor-pointer"
             >
               ✕
             </button>
 
-            <h3 className="text-xs font-extrabold uppercase tracking-wider text-red-600 mb-3 flex items-center gap-1">
-              <span>🚨</span> File Mess Complaint
+            <h3 className="text-xs font-black uppercase tracking-widest text-rose-500 mb-4 flex items-center gap-1.5">
+              <span>🚨</span> File Mess Grievance
             </h3>
 
             {!isDataLogged ? (
-              <form onSubmit={handleLogDataToSheets} className="space-y-2.5">
+              <form onSubmit={handleLogDataToSheets} className="space-y-3">
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wide text-zinc-500 mb-0.5">Full Name</label>
+                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Full Identity</label>
                   <input 
                     type="text" required
                     value={complaintForm.name}
                     onChange={(e) => setComplaintForm({...complaintForm, name: e.target.value})}
-                    className="w-full border border-zinc-300 rounded-lg px-2 py-1 text-[11px] bg-zinc-50 text-zinc-800 font-medium outline-hidden"
+                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white font-medium outline-hidden focus:border-zinc-700 shadow-inner"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wide text-zinc-500 mb-0.5">Roll Number</label>
+                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Roll Reference</label>
                   <input 
                     type="text" required
                     value={complaintForm.roll}
                     onChange={(e) => setComplaintForm({...complaintForm, roll: e.target.value})}
-                    className="w-full border border-zinc-300 rounded-lg px-2 py-1 text-[11px] bg-zinc-50 text-zinc-800 font-medium outline-hidden"
+                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white font-mono font-medium outline-hidden focus:border-zinc-700 shadow-inner"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wide text-zinc-500 mb-0.5">Issue Category</label>
+                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Grievance Category</label>
                   <select
                     value={complaintForm.category}
                     onChange={(e) => setComplaintForm({...complaintForm, category: e.target.value})}
-                    className="w-full border border-zinc-300 rounded-lg px-1.5 py-1 text-[11px] bg-zinc-50 font-bold text-zinc-700 outline-hidden"
+                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-2 py-2 text-xs font-black text-zinc-300 outline-hidden focus:border-zinc-700 cursor-pointer"
                   >
                     <option value="Food Quality">Food Quality / Raw Rice</option>
                     <option value="Hygiene Issue">Hygiene / Insect / Dirt</option>
@@ -543,39 +524,39 @@ export default function MessPage() {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wide text-zinc-500 mb-0.5">Description</label>
+                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Incident Report Logs</label>
                   <textarea 
                     required rows={3}
                     value={complaintForm.desc}
                     onChange={(e) => setComplaintForm({...complaintForm, desc: e.target.value})}
-                    className="w-full border border-zinc-300 rounded-lg px-2 py-1 text-[11px] bg-zinc-50 text-zinc-800 font-medium outline-hidden resize-none"
-                    placeholder="Explain the detailed grievance here..."
+                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white font-medium outline-hidden focus:border-zinc-700 resize-none shadow-inner"
+                    placeholder="Provide explicit event metrics..."
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold uppercase tracking-wide text-zinc-500 mb-0.5">
-                    Photo Evidence ({selectedImages.length}/3)
+                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">
+                    Evidence Media Capture ({selectedImages.length}/3)
                   </label>
                   <input 
                     type="file" 
                     accept="image/*" 
                     multiple 
                     onChange={handleImageChange}
-                    className="w-full text-[10px] text-zinc-500 file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:text-[10px] file:font-bold file:bg-zinc-800 file:text-white file:cursor-pointer"
+                    className="w-full text-[10px] text-zinc-500 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[9px] file:font-black file:uppercase file:bg-[#1A1A1A] file:text-white file:cursor-pointer"
                   />
 
                   {selectedImages.length > 0 && (
-                    <div className="mt-2 flex gap-1.5 overflow-x-auto py-1">
+                    <div className="mt-2 flex gap-1.5 overflow-x-auto py-1 style-scrollbar">
                       {selectedImages.map((file, idx) => (
-                        <div key={idx} className="relative h-12 w-12 rounded-lg border border-zinc-200 overflow-hidden shrink-0 bg-zinc-50 flex items-center justify-center shadow-3xs">
-                          <span className="text-[9px] font-mono font-bold text-zinc-400 truncate max-w-full px-1">
-                            📷 Img {idx + 1}
+                        <div key={idx} className="relative h-12 w-12 rounded-xl border border-zinc-800 overflow-hidden shrink-0 bg-[#121212] flex items-center justify-center shadow-md">
+                          <span className="text-[8px] font-mono font-bold text-zinc-600 truncate max-w-[60%] px-1">
+                            📷 File {idx + 1}
                           </span>
                           <button
                             type="button"
                             onClick={() => setSelectedImages(selectedImages.filter((_, i) => i !== idx))}
-                            className="absolute top-0 right-0 bg-red-500 text-white text-[8px] font-bold h-3.5 w-3.5 flex items-center justify-center rounded-bl-md shadow-xs active:scale-75 transition-transform"
+                            className="absolute top-0 right-0 bg-rose-600 text-white text-[8px] font-bold h-3.5 w-3.5 flex items-center justify-center rounded-bl-lg shadow-md active:scale-75 transition-transform"
                           >
                             ✕
                           </button>
@@ -585,20 +566,22 @@ export default function MessPage() {
                   )}
                 </div>
 
+                {/* Light colored button trigger for depth perception */}
                 <button
                   type="submit"
                   disabled={submittingComplaint}
-                  className="w-full mt-2 py-1.5 bg-zinc-800 text-white rounded-lg text-xs font-bold shadow-xs active:scale-95 transition transform disabled:opacity-50 cursor-pointer"
+                  className="w-full mt-2 py-2 bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white rounded-xl text-xs font-black tracking-wider uppercase shadow-md active:scale-95 transition transform disabled:opacity-50 cursor-pointer"
                 >
-                  {submittingComplaint ? "Uploading Images & Logging..." : "Continue to Next Step ➔"}
+                  {submittingComplaint ? "Uploading Framework Nodes..." : "Commit To Sheets ➔"}
                 </button>
               </form>
             ) : (
-              <div className="space-y-4 text-center py-4 animate-fadeIn">
-                <div className="h-9 w-9 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto text-base font-bold">✓</div>
+              /* Success confirmation state */
+              <div className="space-y-4 text-center py-4 animate-in fade-in duration-200">
+                <div className="h-10 w-10 rounded-full bg-emerald-500/10 text-[#10B981] border border-emerald-500/20 flex items-center justify-center mx-auto text-base font-bold">✓</div>
                 <div>
-                  <p className="text-xs font-bold text-zinc-800">Grievance Logged Successfully!</p>
-                  <p className="text-[10px] text-zinc-400 mt-0.5">Tap below to open WhatsApp cleanly and alert your mess representative.</p>
+                  <p className="text-xs font-black uppercase tracking-wider text-zinc-200">Grievance Logged!</p>
+                  <p className="text-[10px] text-zinc-500 mt-1 leading-relaxed">System rows modified successfully. Access the emergency chat stream to contact representatives.</p>
                 </div>
                 
                 <a
@@ -606,9 +589,9 @@ export default function MessPage() {
                   onClick={resetModalFormState}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold shadow-md transition transform active:scale-95 tracking-wide cursor-pointer"
+                  className="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-black uppercase tracking-widest shadow-lg transition transform active:scale-95 cursor-pointer"
                 >
-                  🚀 Open Official WhatsApp Chat
+                  🚀 Route WhatsApp Chat
                 </a>
               </div>
             )}
@@ -616,7 +599,23 @@ export default function MessPage() {
         </div>
       )} 
 
-      <BottomTabs />
+      {/* Custom Scrollbars */}
+      <style jsx global>{`
+        .style-scrollbar::-webkit-scrollbar {
+          width: 5px;
+          height: 4px;
+        }
+        .style-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb {
+          background: #222222;
+          border-radius: 20px;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #333333;
+        }
+      `}</style>
     </main>
   );
 }

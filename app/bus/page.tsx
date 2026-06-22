@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Papa from "papaparse";
-import Header from "../components/Header";
-import BottomTabs from "../components/BottomTabs";
 
 interface TimeSlot {
   time: string;
@@ -167,125 +165,185 @@ export default function BusPage() {
     fetchAndParseBusData();
   }, []);
 
-  if (error) return <div className="p-8 text-center text-red-500 font-medium">{error}</div>;
+  if (error) {
+    return (
+      <div className="h-screen w-full bg-[#050505] flex items-center justify-center p-6 text-center">
+        <div className="bg-[#121212] border border-rose-900/40 p-6 rounded-2xl max-w-sm shadow-[0_0_30px_rgba(239,68,68,0.1)]">
+          <span className="text-3xl">⚠️</span>
+          <p className="mt-3 text-rose-400 font-semibold tracking-wide text-sm">{error}</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <main className="h-screen max-h-screen w-full bg-gray-50 flex flex-col overflow-hidden relative">
-      {/* 📌 PINNED HEADER */}
-      <div className="shrink-0 z-40">
-        <Header />
-      </div>
+    <main className="h-full w-full bg-[#050505] text-[#F8FAFC] flex flex-col overflow-hidden relative selection:bg-zinc-800 selection:text-white">
       
-      {/* 📜 MIDDLE CONTAINER: Everything inside here scrolls up together */}
-      <div className="flex-1 overflow-y-auto px-2 py-2 pb-28 bg-zinc-50/50">
-        <div className="max-w-7xl mx-auto flex flex-col min-h-full">
+      {/* 🌌 High-depth radial gradient masking (No blues/indigos) */}
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-zinc-900/40 blur-[120px] rounded-full pointer-events-none" />
+      
+      {/* 📜 APP WINDOW SCROLL BODY */}
+      <div className="flex-1 overflow-y-auto px-4 py-4 pb-32 style-scrollbar">
+        <div className="max-w-md mx-auto sm:max-w-xl md:max-w-4xl lg:max-w-6xl flex flex-col min-h-full space-y-4">
           
-          {/* Top content wrapper to isolate layout items */}
-          <div className="flex-grow">
-            {/* Notice Header Block */}
-            <div className="mb-2 p-1 bg-amber-50 border border-amber-200 rounded-xl text-xs sm:text-sm text-amber-900 space-y-0 max-w-4xl mx-auto shadow-2xs">
-              <div className="font-bold text-sm flex items-center gap-1.5 text-amber-950">⚠️ <u>SWB Notice</u>:</div>
-              <p className="leading-relaxed">
-                <strong>1.)</strong> For any bus related queries, call admin staff- 
-                <span className="font-semibold text-slate-900"> Mantu Ji (8986162721)</span> & Bus Manager BSRTC - 
-                <span className="font-semibold text-slate-900"> Rajeev Ji (6201957967)</span>.
+          {/* Notice Banner - Warning Token */}
+          <div className="p-3.5 bg-gradient-to-br from-[#14120F] to-[#0D0B0A] border border-amber-500/10 rounded-2xl text-[13px] text-amber-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.4)] backdrop-blur-sm space-y-2">
+            <div className="font-extrabold text-sm flex items-center gap-2 text-amber-400 tracking-wide uppercase">
+              <span>⚠️</span> SWB Campus Notice
+            </div>
+            <div className="space-y-1.5 text-xs text-amber-100/70 leading-relaxed font-medium">
+              <p>
+                <strong className="text-amber-300">1.)</strong> Bus queries? Tap contacts below or call Admin Staff:{" "}
+                <span className="text-white bg-amber-500/10 px-1.5 py-0.5 rounded font-semibold border border-amber-500/20">Mantu Ji (8986162721)</span> & Bus Manager BSRTC:{" "}
+                <span className="text-white bg-amber-500/10 px-1.5 py-0.5 rounded font-semibold border border-amber-500/20">Rajeev Ji (6201957967)</span>.
               </p>
-              <p className="leading-relaxed">
-                <strong>2.)</strong> Outside campus, keep your ID card handy or boarding may be denied.
+              <p>
+                <strong className="text-amber-300">2.)</strong> Always carry your physical <span className="text-white font-bold underline decoration-amber-500">ID Card</span> outside campus boundaries to guarantee boarding privileges.
               </p>
             </div>
-
-            {/* Toggle Controls */}
-            <div className="flex justify-center gap-2 mb-3 bg-gray-100 p-1.5 rounded-xl max-w-xs mx-auto shadow-inner border border-gray-200/60">
-              <button 
-                onClick={() => setActiveTab("weekdays")} 
-                className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekdays" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
-              >
-                Weekdays
-              </button>
-              <button 
-                onClick={() => setActiveTab("weekends")} 
-                className={`flex-1 py-1.5 px-3 rounded-lg font-bold text-xs transition-all ${activeTab === "weekends" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"}`}
-              >
-                Weekends
-              </button>
-            </div>
-
-            {/* Layout Grid Layout Boxes */}
-            {loading ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                {[...Array(3)].map((_, idx) => (
-                  <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col animate-pulse">
-                    <div className="bg-zinc-300 h-16 w-full" />
-                    <div className="p-3 space-y-2">
-                      <div className="h-3 bg-zinc-200 rounded w-1/3 mb-4" />
-                      {[...Array(4)].map((_, rowIdx) => (
-                        <div key={rowIdx} className="flex justify-between items-center h-7 bg-zinc-100 rounded-lg px-2" />
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                {buses.map((bus, idx) => {
-                  const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
-
-                  return (
-                    <div key={idx} className="bg-white border border-gray-200 rounded-2xl shadow-3xs overflow-hidden flex flex-col hover:border-indigo-400 transition-all">
-                      <div className="bg-slate-900 p-2 text-white shrink-0">
-                        <div className="flex items-center justify-between">
-                          <h3 className="font-bold text-sm sm:text-base flex items-center gap-1.5">🚌 {bus.busName}</h3>
-                          {bus.busNumber && <span className="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded font-mono font-semibold shadow-xs">{bus.busNumber}</span>}
-                        </div>
-                        <div className="flex items-center justify-between mt-1">
-                          <p className="text-xs text-slate-300">👤 {bus.driverInfo}</p>
-                          {bus.contact && <span className="text-[11px] bg-green-600 text-white px-1.5 py-0.5 rounded font-mono font-semibold shadow-xs">📞 {bus.contact}</span>}
-                        </div>
-                      </div>
-
-                      {/* Individual Inside-Card Scroll Area */}
-                      <div className="p-2 flex-grow overflow-y-auto max-h-64 bg-white">
-                        <div className="space-y-1">
-                          <div className="flex justify-between text-[10px] text-gray-500 font-bold uppercase tracking-wider px-3 border-b pb-1">
-                            <span>TIME</span>
-                            <span>ROUTE DIRECTION</span>
-                          </div>
-                          {activeSchedule.map((slot, sIdx) => (
-                            <div key={sIdx} className="flex justify-between items-center text-xs p-1 bg-gray-100 border border-gray-100 rounded-lg">
-                              <span className="font-bold text-indigo-600 shrink-0 bg-indigo-100 px-1.5 py-0.5 rounded font-mono text-[11px] border border-indigo-100/60">{slot.time}</span>
-                              <span className="text-gray-700 text-right max-w-[220px] truncate" title={`${slot.from} ➔ ${slot.to}`}>{slot.from} ➔ {slot.to}</span>
-                            </div>
-                          ))}
-                          {activeSchedule.length === 0 && (
-                            <p className="text-gray-400 text-xs text-center py-2 italic">No active trips scheduled for today.</p>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
           </div>
 
-          {/* 🛠️ PLACED AT BOTTOM OF SCROLLING LAYER (Right above BottomTabs threshold) */}
-          <div className="w-full text-center mt-6 mb-2 shrink-0">
+          {/* iOS-Style Pill Toggle Controls (Mono Dark Contrast Shift) */}
+          <div className="flex justify-center p-1 bg-[#121212] border border-zinc-800 rounded-2xl max-w-[280px] mx-auto shadow-inner">
+            <button 
+              onClick={() => setActiveTab("weekdays")} 
+              className={`flex-1 py-2 px-4 rounded-xl font-bold text-xs tracking-wider uppercase transition-all duration-300 transform active:scale-95 ${
+                activeTab === "weekdays" 
+                  ? "bg-[#2A2A2A] text-white border border-zinc-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] font-extrabold" 
+                  : "text-zinc-500 hover:text-zinc-300"
+              }`}
+            >
+              Weekdays
+            </button>
+            <button 
+              onClick={() => setActiveTab("weekends")} 
+              className={`flex-1 py-2 px-4 rounded-xl font-bold text-xs tracking-wider uppercase transition-all duration-300 transform active:scale-95 ${
+                activeTab === "weekends" 
+                  ? "bg-[#2A2A2A] text-white border border-zinc-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] font-extrabold" 
+                  : "text-zinc-500 hover:text-zinc-300"
+              }`}
+            >
+              Weekends
+            </button>
+          </div>
+
+          {/* Main Grid Section */}
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {[...Array(3)].map((_, idx) => (
+                <div key={idx} className="bg-[#0F0F0F] border border-zinc-900 rounded-2xl h-64 animate-pulse flex flex-col overflow-hidden">
+                  <div className="bg-zinc-900 h-16 w-full" />
+                  <div className="p-3 space-y-3 flex-1">
+                    <div className="h-3 bg-zinc-900 rounded w-1/3" />
+                    <div className="space-y-2 pt-2">
+                      <div className="h-8 bg-zinc-900 rounded-xl" />
+                      <div className="h-8 bg-zinc-900 rounded-xl" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+              {buses.map((bus, idx) => {
+                const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
+
+                return (
+                  <div 
+                    key={idx} 
+                    className="group bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] border border-zinc-900 hover:border-zinc-700 rounded-2xl shadow-2xl transition-all duration-300 flex flex-col overflow-hidden transform hover:-translate-y-0.5 active:scale-[0.99]"
+                  >
+                    {/* Card App-Header (Raised Contrast clickable layer) */}
+                    <div className="bg-[#161616] p-3 border-b border-zinc-900 shrink-0">
+                      <div className="flex items-center justify-between gap-2">
+                        <h3 className="font-extrabold text-sm sm:text-base text-zinc-100 flex items-center gap-1.5 tracking-tight group-hover:text-white transition-colors">
+                          <span className="text-base">🚌</span> {bus.busName}
+                        </h3>
+                        {bus.busNumber && (
+                          <span className="text-[10px] bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded-lg border border-zinc-700 font-mono font-black tracking-wider shadow-xs uppercase">
+                            {bus.busNumber}
+                          </span>
+                        )}
+                      </div>
+                      <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-zinc-900/60">
+                        <p className="text-xs text-zinc-400 font-medium truncate max-w-[60%]">
+                          <span className="text-zinc-500">👤</span> {bus.driverInfo}
+                        </p>
+                        {bus.contact && bus.contact !== "N/A" ? (
+                          <a 
+                            href={`tel:${bus.contact}`} 
+                            className="text-[11px] bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-lg font-mono font-bold border border-emerald-500/20 transition-all active:scale-95 flex items-center gap-1"
+                          >
+                            📞 {bus.contact}
+                          </a>
+                        ) : (
+                          <span className="text-[11px] text-zinc-600 font-mono">No Mobile Contact</span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Inside Schedule Scroll List */}
+                    <div className="p-2.5 flex-1 overflow-y-auto max-h-64 bg-[#070707] style-scrollbar">
+                      <div className="space-y-1.5">
+                        <div className="flex justify-between text-[10px] text-zinc-500 font-extrabold uppercase tracking-widest px-2 pb-1 border-b border-zinc-900">
+                          <span>Departure</span>
+                          <span>Route Matrix</span>
+                        </div>
+                        {activeSchedule.map((slot, sIdx) => (
+                          <div 
+                            key={sIdx} 
+                            className="flex justify-between items-center text-xs p-2 bg-[#121212] hover:bg-[#1A1A1A] border border-zinc-900/50 rounded-xl transition-all duration-150"
+                          >
+                            <span className="font-extrabold text-[#F59E0B] bg-amber-500/5 px-2 py-0.5 rounded-lg font-mono text-[11px] border border-amber-500/10 shadow-xs">
+                              {slot.time}
+                            </span>
+                            <span className="text-zinc-300 font-medium text-right max-w-[180px] sm:max-w-[220px] truncate" title={`${slot.from} ➔ ${slot.to}`}>
+                              {slot.from} <span className="text-zinc-600 font-black mx-0.5">➔</span> {slot.to}
+                            </span>
+                          </div>
+                        ))}
+                        {activeSchedule.length === 0 && (
+                          <div className="text-zinc-500 text-xs text-center py-6 font-medium italic bg-[#121212]/40 rounded-xl border border-dashed border-zinc-800">
+                            No active trips running today.
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {/* 🚨 Crimson Red Report Button Layer */}
+          <div className="w-full text-center pt-4 pb-2 shrink-0">
             <Link 
               href="/?openReport=true" 
-              className="text-[11px] sm:text-xs font-bold text-rose-500 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 px-3 py-1.5 rounded-xl transition-all inline-flex items-center gap-1 shadow-2xs cursor-pointer"
+              className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-rose-400 hover:text-white bg-rose-500/5 hover:bg-rose-600 border border-rose-500/20 hover:border-rose-500 px-4 py-2.5 rounded-xl transition-all duration-300 inline-flex items-center gap-2 shadow-[0_4px_12px_rgba(244,63,94,0.05)] cursor-pointer active:scale-95 hover:shadow-[0_0_20px_rgba(244,63,94,0.2)]"
             >
-              ⚠️ Report Incorrect Timing / Issue
+              🚨 Report Discrepancy / Schedule Issue
             </Link>
           </div>
           
         </div>
       </div>
 
-      {/* 📌 PINNED BOTTOM TABS */}
-      <div className="shrink-0 z-40">
-        <BottomTabs />
-      </div>
+      {/* Embedded CSS Tricks for Custom Micro Scrollbars inside Cards */}
+      <style jsx global>{`
+        .style-scrollbar::-webkit-scrollbar {
+          width: 5px;
+        }
+        .style-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb {
+          background: #222222;
+          border-radius: 20px;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #333333;
+        }
+      `}</style>
     </main>
   );
 }

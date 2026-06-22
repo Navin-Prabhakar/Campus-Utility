@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useSession } from "next-auth/react"; 
-import Header from "../components/Header";       // 📌 Imported Global Header
-import BottomTabs from "../components/BottomTabs"; // 📌 Imported Global Navigation Footer
 
 interface Ride {
   _id: string;
@@ -21,42 +19,29 @@ interface Ride {
 export default function CabSharingPage() {
   const { data: session } = useSession(); 
   
-  // ⚡ Dynamic Backend Base Path Resolution
   const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:5001";
   
-  // App Navigation View States
   const [activeTab, setActiveTab] = useState<"share" | "my-rides">("share");
-  
-  // Data Feeds States
   const [allRides, setAllRides] = useState<Ride[]>([]);
   const [myRides, setMyRides] = useState<Ride[]>([]);
   const [loading, setLoading] = useState(true);
-  
-  // Interactive Editing States
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  // Form Field States
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [from, setFrom] = useState("IIT Patna Campus");
   const [to, setTo] = useState("Patna Airport");
-  
-  // Custom Input States for "Other" selections
   const [customFrom, setCustomFrom] = useState("");
   const [customTo, setCustomTo] = useState("");
-  
-  // Split Time states to force native round analog clock wheel interface
   const [departureDate, setDepartureDate] = useState(""); 
   const [departureTimeOnly, setDepartureTimeOnly] = useState(""); 
   const [seats, setSeats] = useState(3);
 
-  // Sync profile parameters when session mounts asynchronously
   useEffect(() => {
     if (session?.user?.name) setName(session.user.name);
     if (session?.user?.email) fetchUserHistory(session.user.email);
   }, [session]);
 
-  // 📡 FETCH METHOD 1: Active Global Dashboard Feeds
   const fetchActiveDashboard = async () => {
     try {
       setLoading(true);
@@ -71,7 +56,6 @@ export default function CabSharingPage() {
     }
   };
 
-  // 📡 FETCH METHOD 2: Logged-in Student's Personal Posting Log
   const fetchUserHistory = async (userEmail: string) => {
     try {
       const res = await fetch(`${API_BASE}/api/my-rides?email=${encodeURIComponent(userEmail)}`);
@@ -87,7 +71,6 @@ export default function CabSharingPage() {
     fetchActiveDashboard();
   }, []);
 
-  // 📝 HANDLER: Submit a New Ride Post
   const handlePostRide = async (e: React.FormEvent) => {
     e.preventDefault();
     const activeEmail = session?.user?.email;
@@ -143,7 +126,6 @@ export default function CabSharingPage() {
     }
   };
 
-  // 🔄 HANDLER: Update Status / Seats
   const handleUpdateStatus = async (rideId: string, updatedFields: Partial<Ride>) => {
     try {
       const response = await fetch(`${API_BASE}/api/update-ride/${rideId}`, {
@@ -164,95 +146,97 @@ export default function CabSharingPage() {
   };
 
   return (
-    <main className="h-screen max-h-screen w-full bg-gray-50 flex flex-col overflow-hidden relative text-zinc-800">
+    <main className="h-full w-full bg-[#050505] flex flex-col overflow-hidden relative text-zinc-300 font-sans antialiased selection:bg-zinc-800 selection:text-white">
       
-      {/* 📌 PINNED GLOBAL HEADER */}
-      <div className="shrink-0 z-40">
-        <Header />
-      </div>
-
-      {/* 📜 MIDDLE SCROLLABLE CONTAINER */}
-      <div className="flex-1 overflow-y-auto px-4 py-5 pb-28 bg-zinc-50/50">
-        <div className="max-w-2xl mx-auto flex flex-col min-h-full">
+      {/* 📜 APP WINDOW SCROLL BODY */}
+      <div className="flex-1 overflow-y-auto px-4 py-4 pb-36 style-scrollbar">
+        <div className="max-w-md mx-auto sm:max-w-xl md:max-w-xl flex flex-col min-h-full space-y-4">
           
-          {/* 🎛️ TAB CONTROLLER TOGGLE BUTTONS */}
-          <div className="grid grid-cols-2 gap-2 bg-gray-100 p-1.5 rounded-xl mb-5 shrink-0 border border-gray-200/60 max-w-xs mx-auto w-full shadow-inner">
+          {/* 🎛️ iOS-Style Segmented Tab Controller (Mono Dark Contrast Shift) */}
+          <div className="flex p-1 bg-[#121212] border border-zinc-800 rounded-2xl max-w-[290px] mx-auto w-full shadow-inner shrink-0">
             <button
               onClick={() => setActiveTab("share")}
-              className={`py-1.5 px-3 font-bold text-xs rounded-lg transition-all ${
-                activeTab === "share" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"
+              className={`flex-1 py-2 px-3 font-black text-xs tracking-wider uppercase rounded-xl transition-all duration-300 transform active:scale-95 ${
+                activeTab === "share" 
+                  ? "bg-[#2A2A2A] text-white border border-zinc-700 shadow-md font-black" 
+                  : "text-zinc-500 hover:text-zinc-300"
               }`}
             >
-              🤝 Share a Ride
+              🤝 Share Ride
             </button>
             <button
               onClick={() => {
                 setActiveTab("my-rides");
                 if (session?.user?.email) fetchUserHistory(session.user.email);
               }}
-              className={`py-1.5 px-3 font-bold text-xs rounded-lg transition-all ${
-                activeTab === "my-rides" ? "bg-slate-900 text-white shadow-xs" : "text-gray-500 hover:text-slate-900"
+              className={`flex-1 py-2 px-3 font-black text-xs tracking-wider uppercase rounded-xl transition-all duration-300 transform active:scale-95 ${
+                activeTab === "my-rides" 
+                  ? "bg-[#2A2A2A] text-white border border-zinc-700 shadow-md font-black" 
+                  : "text-zinc-500 hover:text-zinc-300"
               }`}
             >
-              📋 My Rides ({myRides.length})
+              📋 My Logs ({myRides.length})
             </button>
           </div>
 
           {activeTab === "share" && (
-            <div className="space-y-5 animate-fadeIn flex-grow">
-              <section className="bg-white rounded-2xl border border-gray-200 p-4 shadow-3xs">
-                <h2 className="text-xs font-black uppercase tracking-wider text-zinc-400 mb-3">Post Travel Schedule</h2>
-                <form onSubmit={handlePostRide} className="flex flex-col gap-3">
+            <div className="space-y-4 animate-in fade-in duration-200 flex-grow">
+              
+              {/* Form Input Block (Depth Depth Perception via Lighter Background Panels) */}
+              <section className="bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] rounded-2xl border border-zinc-900 p-4 shadow-xl">
+                <h2 className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-3.5">Broadcast Route Details</h2>
+                <form onSubmit={handlePostRide} className="flex flex-col gap-3.5">
                   
                   <div className="grid grid-cols-2 gap-3">
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-400 px-1">Display Name</label>
+                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Display Alias</label>
                       <input 
                         type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)}
-                        className="rounded-xl border border-zinc-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner"
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-400 px-1">Contact WhatsApp</label>
+                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">WhatsApp Node</label>
                       <input 
-                        type="tel" placeholder="Ten digit mobile" value={phone} onChange={(e) => setPhone(e.target.value)}
-                        className="rounded-xl border border-zinc-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+                        type="tel" placeholder="10-digit phone" value={phone} onChange={(e) => setPhone(e.target.value)}
+                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-400 px-1">From Location</label>
-                      <select value={from} onChange={(e) => setFrom(e.target.value)} className="rounded-xl border border-zinc-300 p-2.5 text-xs bg-white">
+                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Origin Hub</label>
+                      <select value={from} onChange={(e) => setFrom(e.target.value)} className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-zinc-300 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
                         <option value="IIT Patna Campus">IIT Patna Campus</option>
                         <option value="Patna Airport">Patna Airport</option>
                         <option value="Patna Junction">Patna Junction</option>
                         <option value="Bihta Station">Bihta Station</option>
-                        <option value="Other">Other (Type custom location)</option>
+                        <option value="Other">Other (Custom Field)</option>
                       </select>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-400 px-1">To Destination</label>
-                      <select value={to} onChange={(e) => setTo(e.target.value)} className="rounded-xl border border-zinc-300 p-2.5 text-xs bg-white">
+                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Target End</label>
+                      <select value={to} onChange={(e) => setTo(e.target.value)} className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-zinc-300 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
                         <option value="Patna Airport">Patna Airport</option>
                         <option value="Patna Junction">Patna Junction</option>
                         <option value="Bihta Station">Bihta Station</option>
                         <option value="IIT Patna Campus">IIT Patna Campus</option>
-                        <option value="Other">Other (Type custom location)</option>
+                        <option value="Other">Other (Custom Field)</option>
                       </select>
                     </div>
                   </div>
 
+                  {/* Custom Location Overlay (Amber Warn Accented Lines) */}
                   {(from === "Other" || to === "Other") && (
-                    <div className="grid grid-cols-2 gap-3 animate-fadeIn">
+                    <div className="grid grid-cols-2 gap-3 animate-in fade-in slide-in-from-top-1 duration-150">
                       <div>
                         {from === "Other" ? (
                           <div className="flex flex-col gap-1">
-                            <label className="text-[10px] font-bold text-blue-500 px-1">Custom Starting Point</label>
+                            <label className="text-[9px] font-black uppercase tracking-wider text-amber-500 px-1">Custom Origin Location</label>
                             <input 
                               type="text" placeholder="e.g., Amrapali Cantt" value={customFrom} onChange={(e) => setCustomFrom(e.target.value)}
-                              className="rounded-xl border border-blue-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-blue-50/30"
+                              className="rounded-xl border border-amber-500/20 p-2.5 text-xs bg-[#1A1815] text-white outline-hidden focus:border-amber-500/40 shadow-inner"
                             />
                           </div>
                         ) : <div />}
@@ -260,10 +244,10 @@ export default function CabSharingPage() {
                       <div>
                         {to === "Other" ? (
                           <div className="flex flex-col gap-1">
-                            <label className="text-[10px] font-bold text-blue-500 px-1">Custom Destination</label>
+                            <label className="text-[9px] font-black uppercase tracking-wider text-amber-500 px-1">Custom Destination</label>
                             <input 
                               type="text" placeholder="e.g., Fraser Road" value={customTo} onChange={(e) => setCustomTo(e.target.value)}
-                              className="rounded-xl border border-blue-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-blue-50/30"
+                              className="rounded-xl border border-amber-500/20 p-2.5 text-xs bg-[#1A1815] text-white outline-hidden focus:border-amber-500/40 shadow-inner"
                             />
                           </div>
                         ) : <div />}
@@ -273,64 +257,75 @@ export default function CabSharingPage() {
 
                   <div className="grid grid-cols-2 gap-3 items-end">
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-400 px-1">Departure Date</label>
+                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Departure Calendar</label>
                       <input 
                         type="date" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}
-                        className="rounded-xl border border-zinc-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <label className="text-[10px] font-bold text-zinc-400 px-1">Select Time (Clock Face)</label>
+                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Clock Matrix Wheel</label>
                       <input 
                         type="time" value={departureTimeOnly} onChange={(e) => setDepartureTimeOnly(e.target.value)}
-                        className="rounded-xl border border-zinc-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
                       />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-1">
-                    <label className="text-[10px] font-bold text-zinc-400 px-1">Vacant Seats</label>
+                    <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Vacant Seats Space</label>
                     <input 
                       type="number" min="1" max="7" value={seats} onChange={(e) => setSeats(Number(e.target.value))}
-                      className="rounded-xl border border-zinc-300 p-2.5 text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+                      className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono"
                     />
                   </div>
 
-                  <button type="submit" className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs py-3 rounded-xl shadow-sm transition mt-2">
-                     🚀 Post Ride
+                  {/* Clickable Action Trigger with lighter contrast depth */}
+                  <button type="submit" className="w-full bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black text-xs py-3 rounded-xl shadow-md transition-all active:scale-95 tracking-widest uppercase mt-2 cursor-pointer">
+                     🚀 Post Schedule
                   </button>
                 </form>
               </section>
 
-              <section>
-                <div className="flex items-center justify-between mb-3 px-1">
-                  <h2 className="text-sm font-bold text-zinc-700">Active Board Postings</h2>
-                  <button onClick={fetchActiveDashboard} className="text-xs font-semibold text-blue-500 hover:underline">🔄 Refresh</button>
+              {/* Active Feeds Board Listings */}
+              <section className="space-y-3">
+                <div className="flex items-center justify-between mb-2 px-1">
+                  <h2 className="text-xs font-black uppercase tracking-widest text-zinc-500">Active Board Postings</h2>
+                  <button onClick={fetchActiveDashboard} className="text-[11px] font-black uppercase tracking-wider text-zinc-400 hover:text-white flex items-center gap-1 transition-colors">
+                    🔄 Refresh
+                  </button>
                 </div>
 
                 {loading ? (
-                  <p className="text-xs text-center text-zinc-400 py-8">Parsing logs feed...</p>
+                  <p className="text-xs text-center text-zinc-500 py-8 italic font-medium">Parsing dashboard registry nodes...</p>
                 ) : allRides.length === 0 ? (
-                  <div className="bg-white border border-dashed border-gray-300 rounded-2xl p-8 text-center">
-                    <p className="text-xs text-gray-400 font-medium">No active co-travelers listed right now.</p>
+                  <div className="bg-[#0C0C0C] border border-dashed border-zinc-800 rounded-2xl p-8 text-center">
+                    <p className="text-xs text-zinc-500 font-medium">No operational pooling lines opened currently.</p>
                   </div>
                 ) : (
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2.5">
                     {allRides.map((ride) => (
-                      <div key={ride._id} className="bg-white border border-gray-200 rounded-2xl p-4 shadow-3xs flex flex-col gap-2 hover:border-indigo-400 border transition-all">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h3 className="text-xs font-bold text-zinc-800">{ride.poster_name} <span className="text-[10px] font-medium text-zinc-400">({ride.roll_number})</span></h3>
-                            <p className="text-[11px] font-bold text-indigo-600 mt-0.5">📍 {ride.route_from} ➔ {ride.route_to}</p>
+                      <div key={ride._id} className="group bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] border border-zinc-900 hover:border-zinc-700 rounded-2xl p-3.5 shadow-xl transition-all duration-200 transform active:scale-[0.99]">
+                        <div className="flex justify-between items-start gap-2">
+                          <div className="min-w-0">
+                            <h3 className="text-xs font-black text-zinc-200 truncate">{ride.poster_name} <span className="text-[10px] font-mono text-zinc-600 font-medium">({ride.roll_number})</span></h3>
+                            <p className="text-[11px] font-black text-zinc-300 mt-1 flex items-center gap-1">
+                              <span>📍</span> {ride.route_from} <span className="text-[#F59E0B] mx-0.5">➔</span> {ride.route_to}
+                            </p>
                           </div>
-                          <span className="bg-emerald-50 text-emerald-600 border border-emerald-200 text-[10px] px-2.5 py-1 rounded-full font-bold">
-                            👥 {ride.available_seats} Seats Left
+                          <span className="shrink-0 bg-[#121212] text-[#10B981] border border-zinc-800 text-[10px] px-2.5 py-1 rounded-xl font-black tracking-wide shadow-inner">
+                            👥 {ride.available_seats} Slots Left
                           </span>
                         </div>
-                        <div className="border-t border-zinc-100 pt-2 mt-1 flex justify-between items-center text-[10px]">
-                          <span className="text-zinc-500 font-medium">📅 {new Date(ride.departure_time).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })}</span>
-                          <a href={`https://wa.me/91${ride.phone_number}`} target="_blank" rel="noreferrer" className="bg-green-600 text-white font-bold px-3 py-1.5 rounded-lg shadow-2xs">
-                            Ping via WhatsApp 💬
+                        <div className="border-t border-zinc-900 pt-2.5 mt-2.5 flex justify-between items-center text-[10px]">
+                          <span className="text-zinc-500 font-mono font-medium">📅 {new Date(ride.departure_time).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })}</span>
+                          <a 
+                            href={`https://wa.me/91${ride.phone_number}`} 
+                            target="_blank" 
+                            rel="noreferrer" 
+                            className="bg-emerald-500/10 hover:bg-emerald-500/20 text-[#10B981] border border-emerald-500/20 font-black px-3 py-1.5 rounded-xl shadow-sm tracking-wider uppercase transition-all active:scale-95"
+                          >
+                            WhatsApp 💬
                           </a>
                         </div>
                       </div>
@@ -342,44 +337,44 @@ export default function CabSharingPage() {
           )}
 
           {activeTab === "my-rides" && (
-            <div className="space-y-3 animate-fadeIn flex-grow">
-              <h2 className="text-sm font-bold text-zinc-700 px-1 mb-2">Your Active & Past Postings</h2>
+            <div className="space-y-3 animate-in fade-in duration-200 flex-grow">
+              <h2 className="text-xs font-black uppercase tracking-widest text-zinc-500 px-1 mb-1">Personal Tracking Log</h2>
               
               {!session?.user?.email ? (
-                <p className="text-xs text-zinc-400 text-center py-6">Please log in to track your personal history.</p>
+                <p className="text-xs text-zinc-500 text-center py-6 italic">Authentication nodes missing. Please authorize account layout access.</p>
               ) : myRides.length === 0 ? (
-                <div className="bg-white border border-dashed border-gray-300 rounded-2xl p-8 text-center">
-                  <p className="text-xs text-gray-400 font-medium">You haven't posted any travel slots yet, bro.</p>
+                <div className="bg-[#0C0C0C] border border-dashed border-zinc-800 rounded-2xl p-8 text-center">
+                  <p className="text-xs text-zinc-500 font-medium">No travel records initialized under this identifier, bro.</p>
                 </div>
               ) : (
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2.5">
                   {myRides.map((ride) => (
-                    <div key={ride._id} className="bg-white border border-gray-200 rounded-2xl p-4 shadow-3xs flex flex-col gap-3">
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <p className="text-[11px] font-bold text-indigo-600">📍 {ride.route_from} ➔ {ride.route_to}</p>
-                          <p className="text-[10px] text-zinc-400 mt-0.5">Departure: {new Date(ride.departure_time).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' })}</p>
+                    <div key={ride._id} className="bg-[#0F0F0F] border border-zinc-900 rounded-2xl p-3.5 shadow-xl flex flex-col gap-3">
+                      <div className="flex justify-between items-center gap-2">
+                        <div className="min-w-0">
+                          <p className="text-[11px] font-black text-zinc-300 truncate">📍 {ride.route_from} <span className="text-zinc-600 mx-0.5">➔</span> {ride.route_to}</p>
+                          <p className="text-[10px] font-mono text-zinc-500 font-medium mt-1">Calendar: {new Date(ride.departure_time).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' })}</p>
                         </div>
-                        <span className={`text-[10px] px-2.5 py-0.5 rounded-full font-bold border ${
-                          ride.status === 'Active' ? 'bg-blue-50 text-blue-600 border-blue-200' : 'bg-zinc-100 text-zinc-500 border-zinc-200'
+                        <span className={`shrink-0 text-[10px] px-2.5 py-0.5 rounded-xl font-black tracking-wider uppercase border ${
+                          ride.status === 'Active' ? 'bg-zinc-900 text-zinc-300 border-zinc-700' : 'bg-[#121212] text-zinc-600 border-transparent'
                         }`}>
                           {ride.status}
                         </span>
                       </div>
 
                       {editingId === ride._id ? (
-                        <div className="bg-zinc-50 p-3 rounded-xl border border-zinc-200 flex flex-col gap-2">
-                          <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-[#121212] p-3 rounded-xl border border-zinc-800 flex flex-col gap-3">
+                          <div className="grid grid-cols-2 gap-2.5">
                             <div>
-                              <label className="text-[9px] font-bold text-zinc-400">Modify Available Seats</label>
+                              <label className="block text-[8px] font-black uppercase tracking-wider text-zinc-500 mb-1">Modify Vacant Capacity</label>
                               <input 
                                 type="number" defaultValue={ride.available_seats} id={`edit-seats-${ride._id}`}
-                                className="w-full rounded-lg border border-zinc-300 p-1.5 text-xs bg-white"
+                                className="w-full rounded-lg border border-zinc-800 p-1.5 text-xs bg-[#161616] text-white font-mono outline-hidden focus:border-zinc-600"
                               />
                             </div>
                             <div>
-                              <label className="text-[9px] font-bold text-zinc-400">Change Status</label>
-                              <select id={`edit-status-${ride._id}`} defaultValue={ride.status} className="w-full rounded-lg border border-zinc-300 p-1.5 text-xs bg-white">
+                              <label className="block text-[8px] font-black uppercase tracking-wider text-zinc-500 mb-1">Status Machine State</label>
+                              <select id={`edit-status-${ride._id}`} defaultValue={ride.status} className="w-full rounded-lg border border-zinc-800 p-1.5 text-xs bg-[#161616] text-zinc-300 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
                                 <option value="Active">Active</option>
                                 <option value="Seat Full">Seat Full</option>
                                 <option value="Complete">Complete</option>
@@ -387,34 +382,34 @@ export default function CabSharingPage() {
                               </select>
                             </div>
                           </div>
-                          <div className="flex justify-end gap-2 mt-1">
-                            <button onClick={() => setEditingId(null)} className="text-[10px] font-bold text-zinc-500 px-3 py-1">Cancel</button>
+                          <div className="flex justify-end gap-2 pt-1">
+                            <button onClick={() => setEditingId(null)} className="text-[10px] font-black uppercase tracking-wider text-zinc-500 px-3 py-1.5 rounded-lg transition-colors hover:text-white">Cancel</button>
                             <button 
                               onClick={() => {
                                 const s = Number((document.getElementById(`edit-seats-${ride._id}`) as HTMLInputElement).value);
                                 const st = (document.getElementById(`edit-status-${ride._id}`) as HTMLSelectElement).value;
                                 handleUpdateStatus(ride._id, { available_seats: s, status: st as any });
                               }}
-                              className="bg-slate-900 text-white text-[10px] font-bold px-4 py-1 rounded-lg"
+                              className="bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white text-[10px] font-black uppercase tracking-widest px-4 py-1.5 rounded-lg shadow-sm transition-all active:scale-95 cursor-pointer"
                             >
                               Save Changes
                             </button>
                           </div>
                         </div>
                       ) : (
-                        <div className="flex justify-end gap-2 border-t border-zinc-100 pt-2">
+                        <div className="flex justify-end gap-2 border-t border-zinc-900 pt-2.5">
                           <button 
                             onClick={() => setEditingId(ride._id)}
-                            className="border border-zinc-300 text-zinc-600 text-[10px] font-bold px-3 py-1.5 rounded-lg hover:bg-zinc-50"
+                            className="border border-zinc-800 text-zinc-400 hover:text-white text-[10px] font-black uppercase tracking-wider px-3 py-1.5 rounded-xl transition-all hover:bg-[#121212] active:scale-95"
                           >
-                            ✏️ Edit details
+                            ✏️ Edit parameters
                           </button>
                           {ride.status === 'Active' && (
                             <button 
                               onClick={() => handleUpdateStatus(ride._id, { status: 'Cancelled' })}
-                              className="border border-red-200 text-red-500 text-[10px] font-bold px-3 py-1.5 rounded-lg hover:bg-red-50"
+                              className="border border-rose-950 text-rose-500 hover:text-white text-[10px] font-black uppercase tracking-wider px-3 py-1.5 rounded-xl transition-all hover:bg-rose-950/20 active:scale-95"
                             >
-                              🛑 Cancel Ride
+                              🛑 Kill Route
                             </button>
                           )}
                         </div>
@@ -429,9 +424,22 @@ export default function CabSharingPage() {
         </div>
       </div>
 
-      <div className="shrink-0 z-40">
-        <BottomTabs />
-      </div>
+      {/* Global Scroll Tracking Style Tokens */}
+      <style jsx global>{`
+        .style-scrollbar::-webkit-scrollbar {
+          width: 5px;
+        }
+        .style-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb {
+          background: #222222;
+          border-radius: 20px;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #333333;
+        }
+      `}</style>
     </main>
   );
 }

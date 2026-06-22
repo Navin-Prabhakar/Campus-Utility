@@ -2,8 +2,6 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Header from "../components/Header";
-import BottomTabs from "../components/BottomTabs";
 
 interface TimetableItem {
   day: string;
@@ -25,20 +23,16 @@ export default function SchedulePage() {
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // 🌐 MODIFIED: Fetch parsed dataset stream dynamically from the secure internal backend route
   useEffect(() => {
     async function fetchTimetableData() {
       try {
         setLoading(true);
         setError(false);
         
-        // Target your internal server proxy node endpoint safely
         const res = await fetch("/api/timetable");
         if (!res.ok) throw new Error("Failed to pull secure JSON payload assets");
         
         const data = await res.json();
-        
-        // Handle array validation fallback guards gracefully
         setTimetableData(Array.isArray(data) ? data : []);
         setLoading(false);
       } catch (err) {
@@ -98,49 +92,49 @@ export default function SchedulePage() {
   });
 
   return (
-    <div className="h-screen max-h-screen w-full bg-zinc-50 font-sans text-zinc-600 antialiased flex flex-col overflow-hidden relative">
+    <div className="h-full w-full bg-[#050505] font-sans text-zinc-300 antialiased flex flex-col overflow-hidden relative selection:bg-zinc-800 selection:text-white">
       
-      <div className="shrink-0 z-40">
-        <Header />
-      </div>
-
-      <div className="w-full bg-white border-b border-zinc-200 shrink-0 z-30 flex flex-col items-center shadow-2xs">
+      {/* Persistent Sticky Navigation Control Bar */}
+      <div className="w-full bg-[#0C0C0C]/90 backdrop-blur-md border-b border-zinc-900 shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
         {!loading && !error && (
-          <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative animate-fade-in">
+          <div className="w-[94%] max-w-[365px] py-2.5 flex gap-2 items-center relative">
             
-            <div className="flex-1 bg-zinc-100 border border-zinc-200 rounded-lg py-1.5 px-3 text-[11px] font-bold text-zinc-800 tracking-tight">
-              ⚡ Group: <span className="text-indigo-600 font-mono font-black">{selectedGroup}</span> (Year {academicYear})
+            {/* Display Active Selection Metadata Status Layer */}
+            <div className="flex-1 bg-[#161616] border border-zinc-800 rounded-xl py-2 px-3.5 text-[11px] font-black tracking-wide text-zinc-300 shadow-inner">
+              ⚡ Class Group: <span className="text-white font-mono font-black underline decoration-zinc-700">{selectedGroup}</span>
             </div>
 
+            {/* Filter Open Panel Trigger (Lighter Background contrast for depth perception) */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`border rounded-lg py-1.5 px-3 text-[11px] font-bold flex items-center gap-1 shrink-0 transition-all active:scale-95 shadow-3xs ${
+                className={`border rounded-xl py-2 px-3.5 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5 shrink-0 transition-all active:scale-95 shadow-md ${
                   isDropdownOpen
-                    ? "bg-indigo-700 border-indigo-900 text-white" 
-                    : "bg-zinc-50 border-zinc-200 text-zinc-700 hover:border-zinc-300"
+                    ? "bg-[#2A2A2A] border-zinc-600 text-white" 
+                    : "bg-[#161616] border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
                 }`}
               >
-                <span>Filter Options</span>
+                <span>Filter</span>
                 <span className={`text-[8px] transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}>
                   ▼
                 </span>
               </button>
 
+              {/* Dynamic Filtering Panel Popout Card */}
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-1.5 w-48 bg-white border border-zinc-200 rounded-xl shadow-lg py-2.5 z-50 flex flex-col text-[11px] font-medium text-zinc-700 animate-fade-in">
+                <div className="absolute right-0 mt-2 w-48 bg-[#121212] border border-zinc-800 rounded-xl shadow-[0_10px_35px_rgba(0,0,0,0.8)] py-3 z-50 flex flex-col text-[11px] font-bold text-zinc-400 animate-in fade-in zoom-in-95 duration-100">
                   
-                  <div className="px-3 py-1 text-[9px] font-bold text-zinc-400 uppercase tracking-wider border-b border-zinc-100 mb-2">
-                    Academic Year
+                  <div className="px-3 py-1 text-[9px] font-black text-zinc-600 uppercase tracking-widest border-b border-zinc-900 mb-2">
+                    Academic Level
                   </div>
-                  <div className="px-2 mb-2">
+                  <div className="px-2 mb-3">
                     <select
                       value={academicYear}
                       onChange={(e) => {
                         setAcademicYear(e.target.value);
                         setSelectedGroup(e.target.value === "1" ? "G1" : "CSE");
                       }}
-                      className="w-full bg-zinc-50 border border-zinc-200 rounded-lg py-1 px-2 text-[11px] font-bold text-zinc-700 outline-hidden"
+                      className="w-full bg-[#161616] border border-zinc-800 rounded-lg py-1.5 px-2 text-[11px] font-black text-zinc-200 outline-hidden focus:border-zinc-700 cursor-pointer"
                     >
                       <option value="1">B.Tech 1st Year</option>
                       <option value="2">B.Tech 2nd Year</option>
@@ -149,14 +143,14 @@ export default function SchedulePage() {
                     </select>
                   </div>
 
-                  <div className="px-3 py-1 text-[9px] font-bold text-zinc-400 uppercase tracking-wider border-b border-zinc-100 mb-2">
-                    Group / Stream
+                  <div className="px-3 py-1 text-[9px] font-black text-zinc-600 uppercase tracking-widest border-b border-zinc-900 mb-2">
+                    Group Stream Node
                   </div>
                   <div className="px-2">
                     <select
                       value={selectedGroup}
                       onChange={(e) => setSelectedGroup(e.target.value)}
-                      className="w-full bg-zinc-50 border border-zinc-200 rounded-lg py-1 px-2 text-[11px] font-bold text-zinc-700 outline-hidden"
+                      className="w-full bg-[#161616] border border-zinc-800 rounded-lg py-1.5 px-2 text-[11px] font-black text-zinc-200 outline-hidden focus:border-zinc-700 cursor-pointer"
                     >
                       {academicYear === "1" ? (
                         Array.from({ length: 24 }, (_, i) => `G${i + 1}`).map((g) => (
@@ -181,41 +175,43 @@ export default function SchedulePage() {
         )}
       </div>
 
-      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-3 pb-28 bg-zinc-50/50">
+      {/* 📜 SCROLLABLE MIDDLE TRACK CONTAINER */}
+      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-3 pb-36 bg-[#050505] style-scrollbar">
         <main className="w-[94%] max-w-[365px] flex flex-col flex-grow">
           
           {loading ? (
-            <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-col gap-3 w-full">
               {[...Array(3)].map((_, i) => (
-                <div key={i} className="h-28 w-full animate-pulse rounded-xl bg-zinc-200" />
+                <div key={i} className="h-24 w-full animate-pulse rounded-2xl bg-[#121212] border border-zinc-900" />
               ))}
             </div>
           ) : error ? (
-            <div className="py-8 text-center text-xs text-red-500 bg-red-50 rounded-lg border border-red-100 font-medium">
-              ⚠️ Unable to sync live timetable records.
+            <div className="py-8 text-center text-xs text-rose-400 bg-rose-950/20 rounded-2xl border border-rose-500/20 font-bold uppercase tracking-wide">
+              🚨 Unable to sync live timetable records.
             </div>
           ) : (
-            <div className="flex flex-col gap-3.5 w-full">
+            <div className="flex flex-col gap-4 w-full">
               {daysOrder.map((day) => {
                 const dayClasses = filteredSchedule
                   .filter((c) => c.day === day)
                   .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time));
 
                 return (
-                  <div key={day} className="w-full bg-white border border-zinc-200 rounded-xl p-3 shadow-2xs flex flex-col">
+                  <div key={day} className="w-full bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] border border-zinc-900 rounded-2xl p-3.5 shadow-xl flex flex-col">
                     
-                    <div className="border-b border-zinc-100 pb-1.5 mb-2.5 flex justify-between items-center select-none">
-                      <span className="text-[10px] font-black uppercase tracking-wider text-zinc-700">
+                    {/* Weekday Header Separator */}
+                    <div className="border-b border-zinc-900 pb-2 mb-3 flex justify-between items-center select-none">
+                      <span className="text-[11px] font-black uppercase tracking-widest text-zinc-400">
                         {day}
                       </span>
-                      <span className="text-[8px] font-mono font-bold bg-zinc-100 text-zinc-500 px-2 py-0.5 rounded-full border border-zinc-200/40">
+                      <span className="text-[9px] font-mono font-black bg-[#121212] text-zinc-500 border border-zinc-800 px-2.5 py-0.5 rounded-lg shadow-inner">
                         {dayClasses.length} Slots
                       </span>
                     </div>
 
                     {dayClasses.length === 0 ? (
-                      <p className="text-[10px] text-zinc-400 italic py-2 text-center">
-                        🎉 No core matches found! Free day or self lab study.
+                      <p className="text-[10px] text-zinc-600 font-medium italic py-3 text-center bg-[#121212]/20 border border-dashed border-zinc-900 rounded-xl">
+                        🎉 No core matches found! Free block layout.
                       </p>
                     ) : (
                       <div className="flex flex-col gap-2">
@@ -226,38 +222,38 @@ export default function SchedulePage() {
                           return (
                             <div
                               key={idx}
-                              className={`flex items-center justify-between p-2.5 rounded-lg border transition-all ${
+                              className={`flex items-center justify-between p-2.5 rounded-xl border transition-all duration-150 transform hover:-translate-y-0.5 active:scale-[0.99] ${
                                 isLab
-                                  ? "bg-emerald-100/15 border-emerald-300" 
+                                  ? "bg-emerald-500/5 border-emerald-500/20 shadow-xs" 
                                   : isTut
-                                  ? "bg-amber-100/20 border-amber-300"   
-                                  : "bg-zinc-50/60 border-zinc-100"
+                                  ? "bg-amber-500/5 border-amber-500/20 shadow-xs"   
+                                  : "bg-[#121212]/60 border-zinc-900 shadow-sm"
                               }`}
                             >
-                              <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                                <div className="flex items-center gap-1.5">
-                                  <span className="text-[11px] font-black tracking-tight text-zinc-800 truncate">
+                              <div className="flex flex-col gap-1 min-w-0 flex-1 pr-1.5">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[11px] font-black tracking-tight text-white truncate">
                                     {cls.courseCode}
                                   </span>
                                   <span
-                                    className={`text-[8px] font-extrabold uppercase px-1 py-0.2 rounded-xs border shrink-0 ${
+                                    className={`text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded-md border shrink-0 ${
                                       isLab
-                                        ? "bg-emerald-600 text-white border-emerald-700" 
+                                        ? "bg-emerald-500/10 text-[#10B981] border-emerald-500/20" 
                                         : isTut
-                                        ? "bg-amber-500 text-white border-amber-600"   
-                                        : "bg-blue-50 text-blue-700 border-blue-100"
+                                        ? "bg-amber-500/10 text-[#F59E0B] border-amber-500/20"   
+                                        : "bg-zinc-800 text-zinc-400 border-zinc-700"
                                     }`}
                                   >
                                     {cls.type}
                                   </span>
                                 </div>
-                                <div className="text-[10px] text-zinc-400 font-semibold truncate">
-                                  📍 {cls.venue}
+                                <div className="text-[10px] text-zinc-500 font-bold truncate">
+                                  📍 Room: <span className="text-zinc-400 font-black">{cls.venue}</span>
                                 </div>
                               </div>
 
-                              <div className="text-right ml-2 shrink-0">
-                                <span className="text-[10px] font-bold text-zinc-700 bg-white border border-zinc-200 rounded-md px-2 py-0.5 shadow-3xs block">
+                              <div className="text-right shrink-0">
+                                <span className="text-[9px] font-black text-zinc-300 bg-[#161616] border border-zinc-800 rounded-lg px-2 py-1 shadow-inner font-mono">
                                   ⏰ {cls.time}
                                 </span>
                               </div>
@@ -271,12 +267,13 @@ export default function SchedulePage() {
                 );
               })}
               
-              <div className="w-full text-center mt-4 mb-2 shrink-0">
+              {/* 🚨 Crimson Alerts Discrepancy Button Block */}
+              <div className="w-full text-center pt-3 pb-1 shrink-0">
                 <Link 
                   href="/?openReport=true" 
-                  className="text-[11px] sm:text-xs font-bold text-rose-500 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 border border-rose-200 px-3 py-1.5 rounded-xl transition-all inline-flex items-center gap-1 shadow-2xs cursor-pointer select-none"
+                  className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-rose-400 hover:text-white bg-rose-500/5 hover:bg-rose-600 border border-rose-500/20 hover:border-rose-500 px-4 py-2.5 rounded-xl transition-all duration-300 inline-flex items-center gap-2 shadow-[0_4px_12px_rgba(244,63,94,0.05)] cursor-pointer active:scale-95"
                 >
-                  ⚠️ Report Incorrect Timing / Issue
+                  🚨 Report Structural Discrepancies
                 </Link>
               </div>
 
@@ -286,9 +283,22 @@ export default function SchedulePage() {
         </main>
       </div>
 
-      <div className="shrink-0 z-40">
-        <BottomTabs />
-      </div>
+      {/* Global Scroll Tracking Style Tokens */}
+      <style jsx global>{`
+        .style-scrollbar::-webkit-scrollbar {
+          width: 5px;
+        }
+        .style-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb {
+          background: #222222;
+          border-radius: 20px;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #333333;
+        }
+      `}</style>
     </div>
   );
 }

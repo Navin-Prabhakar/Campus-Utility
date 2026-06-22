@@ -2,8 +2,6 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import Papa from "papaparse";
-import Header from "../components/Header";
-import BottomTabs from "../components/BottomTabs";
 
 interface SellItem {
   id: string;
@@ -171,51 +169,47 @@ export default function StorePage() {
     });
 
   const handleSellButtonClick = () => {
-    alert("1) please write 'Price:___,your other messages'in 'any comments' column.\n \n2) Upload a clear ,cropped picture.\n \n3) Make sure to mark sold out ,once you sold to someone.");
+    alert("1) please write 'Price:___,your other messages' in 'any comments' column.\n \n2) Upload a clear, cropped picture.\n \n3) Make sure to mark sold out once you sold to someone.");
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSdu2XRFTWTWR6rJh9JwM_1ebtn_sDnGS5S4SsnsNRGSW9l6ag/viewform", "_blank", "noopener,noreferrer");
   };
 
   return (
-    <div className="h-screen max-h-screen w-full bg-zinc-50 font-sans text-zinc-600 antialiased flex flex-col overflow-hidden relative">
+    <div className="h-full w-full bg-[#050505] font-sans text-zinc-300 antialiased flex flex-col overflow-hidden relative selection:bg-zinc-800 selection:text-white">
       
-      {/* 📌 PINNED HEADER: Fixed view context layout wrapper */}
-      <div className="shrink-0 z-40">
-        <Header />
-      </div>
-
-      {/* Persistent Sticky Navigation Control Section */}
-      <div className="w-full bg-white border-b border-zinc-200 shrink-0 z-30 flex flex-col items-center shadow-2xs">
+      {/* Persistent Sticky Controls Bar */}
+      <div className="w-full bg-[#0C0C0C]/90 backdrop-blur-md border-b border-zinc-900 shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
         
-        {/* Search and Filter Dropdown Structure */}
         {!loading && !error && (
-          <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative animate-fade-in">
+          <div className="w-[94%] max-w-[365px] py-2.5 flex gap-2 items-center relative">
             
+            {/* Search Input Box */}
             <div className="relative flex-1">
               <input
                 type="text"
                 placeholder="Search items, prices, names..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-zinc-100 border border-zinc-200 rounded-lg py-1.5 pl-7 pr-2 text-[11px] focus:outline-hidden focus:border-zinc-400 font-medium tracking-tight placeholder-zinc-400 text-zinc-800 transition-all"
+                className="w-full bg-[#161616] border border-zinc-800 rounded-xl py-2 pl-8 pr-8 text-[11px] focus:outline-hidden focus:border-zinc-600 focus:bg-[#1A1A1A] font-medium tracking-tight placeholder-zinc-500 text-white transition-all shadow-inner"
               />
-              <span className="absolute left-2.5 top-2 text-[10px] grayscale opacity-60">🔍</span>
+              <span className="absolute left-2.5 top-2.5 text-[10px] opacity-50">🔍</span>
               {searchQuery && (
                 <button 
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-2 top-1.5 text-[10px] text-zinc-400 hover:text-zinc-600 font-bold px-1"
+                  className="absolute right-2.5 top-2 text-xs text-zinc-500 hover:text-white font-bold px-1 transition-colors"
                 >
                   ✕
                 </button>
               )}
             </div>
 
+            {/* Filter Toggle Button */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`border rounded-lg py-1.5 px-3 text-[11px] font-bold flex items-center gap-1 shrink-0 transition-all active:scale-95 shadow-3xs ${
+                className={`border rounded-xl py-2 px-3.5 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5 shrink-0 transition-all active:scale-95 shadow-md ${
                   isDropdownOpen || filterAvailableOnly || !filterNewestItems
-                    ? "bg-indigo-700 border-indigo-900 text-white" 
-                    : "bg-zinc-50 border-zinc-200 text-zinc-700 hover:border-zinc-300"
+                    ? "bg-[#2D2D2D] border-zinc-600 text-white" 
+                    : "bg-[#161616] border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
                 }`}
               >
                 <span>Filter</span>
@@ -224,15 +218,16 @@ export default function StorePage() {
                 </span>
               </button>
 
+              {/* Dropdown Card */}
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-1.5 w-44 bg-white border border-zinc-200 rounded-xl shadow-lg py-1.5 z-50 flex flex-col text-[11px] font-medium text-zinc-700 animate-fade-in">
+                <div className="absolute right-0 mt-2 w-44 bg-[#121212] border border-zinc-800 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-1.5 z-50 flex flex-col text-[11px] font-bold text-zinc-400 animate-in fade-in zoom-in-95 duration-150">
                   
-                  <div className="px-2.5 py-1 text-[9px] font-bold text-zinc-400 uppercase tracking-wider border-b border-zinc-100 mb-1">
+                  <div className="px-3 py-1 text-[9px] font-black text-zinc-600 uppercase tracking-widest border-b border-zinc-900 mb-1">
                     Refine Feed
                   </div>
 
-                  <label className="flex items-center justify-between px-2.5 py-1.5 hover:bg-zinc-50 cursor-pointer select-none">
-                    <span className={filterAvailableOnly ? "font-bold text-zinc-900" : ""}>Available Only</span>
+                  <label className="flex items-center justify-between px-3 py-2 hover:bg-[#1A1A1A] hover:text-white cursor-pointer select-none transition-colors">
+                    <span className={filterAvailableOnly ? "text-white font-black" : ""}>Available Only</span>
                     <div className="relative flex items-center">
                       <input
                         type="checkbox"
@@ -240,14 +235,14 @@ export default function StorePage() {
                         onChange={(e) => setFilterAvailableOnly(e.target.checked)}
                         className="sr-only peer"
                       />
-                      <div className="w-3.5 h-3.5 border border-indigo-900 rounded-sm bg-zinc-50 peer-checked:bg-blue-600 peer-checked:border-zinc-900 flex items-center justify-center transition-all">
-                        {filterAvailableOnly && <span className="text-white text-[9px] font-bold leading-none">✓</span>}
+                      <div className="w-4 h-4 border border-zinc-700 rounded bg-[#161616] peer-checked:bg-[#333333] peer-checked:border-zinc-400 flex items-center justify-center transition-all shadow-sm">
+                        {filterAvailableOnly && <span className="text-white text-[9px] font-black leading-none">✓</span>}
                       </div>
                     </div>
                   </label>
 
-                  <label className="flex items-center justify-between px-2.5 py-1.5 hover:bg-zinc-50 cursor-pointer select-none">
-                    <span className={filterNewestItems ? "font-bold text-zinc-900" : ""}>Newest Items</span>
+                  <label className="flex items-center justify-between px-3 py-2 hover:bg-[#1A1A1A] hover:text-white cursor-pointer select-none transition-colors">
+                    <span className={filterNewestItems ? "text-white font-black" : ""}>Newest Items</span>
                     <div className="relative flex items-center">
                       <input
                         type="checkbox"
@@ -255,8 +250,8 @@ export default function StorePage() {
                         onChange={(e) => setFilterNewestItems(e.target.checked)}
                         className="sr-only peer"
                       />
-                      <div className="w-3.5 h-3.5 border border-indigo-900 rounded-sm bg-zinc-50 peer-checked:bg-blue-600 peer-checked:border-zinc-900 flex items-center justify-center transition-all">
-                        {filterNewestItems && <span className="text-white text-[9px] font-bold leading-none">✓</span>}
+                      <div className="w-4 h-4 border border-zinc-700 rounded bg-[#161616] peer-checked:bg-[#333333] peer-checked:border-zinc-400 flex items-center justify-center transition-all shadow-sm">
+                        {filterNewestItems && <span className="text-white text-[9px] font-black leading-none">✓</span>}
                       </div>
                     </div>
                   </label>
@@ -270,26 +265,26 @@ export default function StorePage() {
 
       </div>
 
-      {/* 📜 SCROLLABLE MIDDLE CONTAINER: Marketplace items scroll inside here */}
-      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-1 pb-28 bg-zinc-50/50">
+      {/* 📜 SCROLLABLE MIDDLE CONTAINER */}
+      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-1 pb-32 bg-[#050505] style-scrollbar">
         <main className="w-[94%] max-w-[365px] flex flex-col py-2 flex-grow">
           
           {loading ? (
-            <div className="grid grid-cols-2 gap-2 w-full">
+            <div className="grid grid-cols-2 gap-2.5 w-full">
               {[...Array(4)].map((_, i) => (
-                <div key={i} className="aspect-[4/5] w-full animate-pulse rounded-lg bg-zinc-200" />
+                <div key={i} className="aspect-[3/4] w-full animate-pulse rounded-2xl bg-[#121212] border border-zinc-900" />
               ))}
             </div>
           ) : error ? (
-            <div className="py-8 text-center text-xs text-red-500 bg-red-50 rounded-lg border border-red-100 font-medium">
-              ⚠️ Unable to sync live marketplace records.
+            <div className="py-8 text-center text-xs text-rose-400 bg-rose-950/20 rounded-2xl border border-rose-500/20 font-bold uppercase tracking-wide">
+              🚨 Unable to sync live marketplace records.
             </div>
           ) : filteredAndSortedItems.length === 0 ? (
-            <div className="py-12 text-center text-xs text-zinc-400 bg-white border border-zinc-200/60 rounded-xl">
-              No items matching your selected filtering options could be found.
+            <div className="py-12 text-center text-xs text-zinc-500 bg-[#0C0C0C] border border-zinc-900 rounded-2xl italic font-medium">
+              No items matching your selections.
             </div>
           ) : (
-            <div className="grid grid-cols-2 gap-2 w-full">
+            <div className="grid grid-cols-2 gap-2.5 w-full">
               {filteredAndSortedItems.map((item) => {
                 const isSoldOut = item.status.toLowerCase().includes("sold");
                 const isFlipped = !!flippedCards[item.id];
@@ -298,7 +293,7 @@ export default function StorePage() {
                   <div
                     key={item.id}
                     onClick={() => toggleCardFlip(item.id)}
-                    className="w-full aspect-[3/4] cursor-pointer [perspective:1000px]"
+                    className="w-full aspect-[3/4] cursor-pointer [perspective:1000px] transform active:scale-[0.98] transition-transform duration-150"
                   >
                     <div
                       className={`relative w-full h-full duration-500 [transform-style:preserve-3d] transition-transform ${
@@ -306,39 +301,41 @@ export default function StorePage() {
                       }`}
                     >
                       
-                      {/* FRONT OF THE CARD */}
-                      <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-200 bg-white p-1.5 flex flex-col justify-between shadow-2xs [backface-visibility:hidden] select-none">
+                      {/* CARD FRONT LAYER */}
+                      <div className="absolute inset-0 w-full h-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] hover:border-zinc-700 p-2 flex flex-col justify-between shadow-xl [backface-visibility:hidden] select-none transition-all">
                         
-                        <div className="relative w-full h-[80%] bg-zinc-100 rounded-lg overflow-hidden shrink-0 flex items-center justify-center">
+                        <div className="relative w-full h-[76%] bg-[#161616] rounded-xl overflow-hidden shrink-0 flex items-center justify-center border border-zinc-900/60">
                           {item.picture ? (
                             <img
                               src={item.picture}
                               alt={item.itemName}
-                              className={`w-full h-full object-cover transition-all ${isSoldOut ? "grayscale opacity-50" : ""}`}
+                              className={`w-full h-full object-cover transition-all duration-300 ${isSoldOut ? "grayscale opacity-20 blur-[1px]" : "group-hover:scale-105"}`}
                               referrerPolicy="no-referrer"
                             />
                           ) : (
-                              <span className="text-[14px] text-zinc-400">Image not available. </span>  
-                          )
-                          }
+                            <span className="text-[10px] text-zinc-600 font-bold uppercase tracking-wider text-center px-2">No Image Spec</span>  
+                          )}
 
-                          <div className="absolute bottom-1 right-1 bg-black/60 backdrop-blur-xs text-white text-[7px] font-mono font-medium px-1.5 py-0.5 rounded shadow-xs z-10">
+                          {/* Date Stamp Tag */}
+                          <div className="absolute bottom-1 right-1 bg-black/75 backdrop-blur-xs text-zinc-400 text-[7px] font-mono font-bold px-1.5 py-0.5 rounded shadow-md border border-zinc-800/40">
                             {item.formattedDate}
                           </div>
 
+                          {/* Semantic Indicator: Crimson Alert for Sold items */}
                           {isSoldOut && (
-                            <div className="absolute top-1 left-1 bg-red-600 text-white text-[8px] uppercase tracking-wider font-extrabold px-1.5 py-0.5 rounded-full shadow-xs z-10">
+                            <div className="absolute top-1 left-1 bg-rose-600 text-white text-[8px] uppercase tracking-widest font-black px-2 py-0.5 rounded-md shadow-lg">
                               Sold Out
                             </div>
                           )}
                         </div>
 
-                        <div className="flex flex-col flex-grow justify-end pt-2 px-0.5 min-w-0">
-                          <h4 className="truncate text-[11px] font-bold text-zinc-800 leading-tight">
+                        {/* Title and Pricing Details Layout */}
+                        <div className="flex flex-col flex-grow justify-end pt-1.5 px-0.5 min-w-0">
+                          <h4 className="truncate text-[11px] font-black text-zinc-100 leading-tight tracking-tight">
                             {item.itemName}
                           </h4>
                           <div className="mt-1 flex items-center justify-between">
-                            <span className="truncate text-[10px] font-mono font-bold text-indigo-600 bg-indigo-50 border border-indigo-100/70 px-1 rounded-sm">
+                            <span className="truncate text-[10px] font-mono font-extrabold text-[#F59E0B] bg-amber-500/5 border border-amber-500/10 px-1.5 py-0.5 rounded-md shadow-xs">
                               {item.price}
                             </span>
                           </div>
@@ -346,44 +343,46 @@ export default function StorePage() {
 
                       </div>
 
-                      {/* BACK OF THE CARD */}
-                      <div className="absolute inset-0 w-full h-full rounded-xl border border-zinc-900 bg-zinc-900 p-2.5 flex flex-col justify-between text-white shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                        <div className="border-b border-zinc-800 pb-1 flex justify-between items-center shrink-0 select-none">
-                          <span className="text-[8px] font-bold uppercase tracking-widest text-indigo-400">
-                            Seller Contact Info
+                      {/* CARD BACK LAYER (Carbon Flip Mode) */}
+                      <div className="absolute inset-0 w-full h-full rounded-2xl border border-zinc-800 bg-[#0A0A0A] p-3 flex flex-col justify-between text-white shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                        <div className="border-b border-zinc-900 pb-1 flex justify-between items-center shrink-0 select-none">
+                          <span className="text-[8px] font-black uppercase tracking-widest text-zinc-500">
+                            Seller Identity Token
                           </span>
-                          <span className="text-[7px] font-mono text-zinc-500">
+                          <span className="text-[7px] font-mono text-zinc-600">
                             {item.formattedDate}
                           </span>
                         </div>
 
-                        <div className="flex flex-col gap-1.5 py-1.5 flex-grow min-w-0 justify-center">
+                        {/* Middle Credentials Cluster */}
+                        <div className="flex flex-col gap-2 py-2 flex-grow min-w-0 justify-center">
                           <div className="min-w-0">
-                            <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Name</p>
-                            <p className="text-[11px] font-bold text-zinc-100 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.sellerName}</p>
+                            <p className="text-[8px] text-zinc-600 uppercase font-black tracking-wider select-none">Full Name</p>
+                            <p className="text-[11px] font-black text-zinc-200 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.sellerName}</p>
                           </div>
                           <div className="min-w-0">
-                            <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Roll No</p>
-                            <p className="text-[10px] font-mono font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.rollNo}</p>
+                            <p className="text-[8px] text-zinc-600 uppercase font-black tracking-wider select-none">Roll Reference</p>
+                            <p className="text-[10px] font-mono font-bold text-zinc-400 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.rollNo}</p>
                           </div>
                           <div className="min-w-0">
-                            <p className="text-[8px] text-zinc-500 uppercase leading-none font-bold select-none">Email</p>
-                            <p className="text-[10px] font-medium text-zinc-300 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.email}</p>
+                            <p className="text-[8px] text-zinc-600 uppercase font-black tracking-wider select-none">Email Node</p>
+                            <p className="text-[10px] font-medium text-zinc-400 truncate mt-0.5 select-text" onClick={(e) => e.stopPropagation()}>{item.email}</p>
                           </div>
                         </div>
 
+                        {/* Phone Container Box */}
                         <div 
                           onClick={(e) => e.stopPropagation()} 
-                          className="mt-auto shrink-0 bg-zinc-800 rounded-md p-1 border border-zinc-700/50 flex items-center justify-between"
+                          className="mt-auto shrink-0 bg-[#161616] rounded-xl p-1.5 border border-zinc-800 flex items-center justify-between shadow-inner"
                         >
-                          <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wide px-1 select-text">
+                          <span className="text-[10px] font-mono font-black text-emerald-400 tracking-wide px-1 select-text">
                             📞 {item.phone}
                           </span>
                           <button
                             onClick={(e) => handleCopyPhone(e, item.id, item.phone)}
-                            className="text-[7px] bg-zinc-700 text-zinc-200 hover:text-white px-1.5 py-0.5 rounded font-bold uppercase transition-all"
+                            className="text-[8px] bg-[#2A2A2A] hover:bg-[#333333] text-white border border-zinc-700 px-2 py-1 rounded-lg font-black uppercase transition-colors active:scale-95"
                           >
-                            {copiedId === item.id ? "Copied!" : "Copy"}
+                            {copiedId === item.id ? "Copied" : "Copy"}
                           </button>
                         </div>
 
@@ -399,19 +398,31 @@ export default function StorePage() {
         </main>
       </div>
 
-      {/* Floating Sell action switch button */}
+      {/* Floating Action Button: Standard Tech Form Blue For Spreadsheet Interaction */}
       <button
         onClick={handleSellButtonClick}
-        className="fixed bottom-20 right-4 w-12 h-12 bg-purple-700 backdrop-blur-xs text-white rounded-full flex items-center justify-center font-bold text-2xs shadow-md tracking-wider border border-zinc-900/30 active:scale-95 transition-all z-40 hover:bg-purple-800 cursor-pointer select-none"
+        className="fixed bottom-24 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex flex-col items-center justify-center font-black text-[10px] tracking-widest uppercase shadow-[0_4px_20px_rgba(59,130,246,0.3)] border border-blue-400/30 active:scale-90 transition-all z-40 cursor-pointer select-none"
         aria-label="Sell Item"
       >
-        Sell
+        <span>Sell</span>
       </button>
 
-      {/* 📌 PINNED BOTTOM NAVIGATION TABS */}
-      <div className="shrink-0 z-40 w-full">
-        <BottomTabs />
-      </div>
+      {/* Internal Custom Micro-Scrollbars */}
+      <style jsx global>{`
+        .style-scrollbar::-webkit-scrollbar {
+          width: 5px;
+        }
+        .style-scrollbar::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb {
+          background: #222222;
+          border-radius: 20px;
+        }
+        .style-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #333333;
+        }
+      `}</style>
       
     </div>
   );
