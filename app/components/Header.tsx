@@ -165,15 +165,15 @@ export default function Header({ messActionSlot }: HeaderProps) {
       </div>
 
       {/* Lower Header */}
-      <div className="flex h-8 bg-black items-center justify-between px-2">
+      <div className="flex h-8 bg-zinc-900 items-center justify-between px-2">
         <div className="flex items-center gap-2">
           {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
           <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-100 ${
-            isHomeActive ? "bg-slate-200 text-zinc-800 " : "bg-zinc-800 text-sky-100"
+            isHomeActive ? "bg-slate-300 text-zinc-800 " : "bg-zinc-600 text-white"
           }`}>
             <Link 
               href="/" 
-              className="flex items-center gap-0 text-inherit text-lg"
+              className="flex items-center gap-0 text-inherit text-md"
               aria-label="Go to home page"
             >
               <span>Home</span>
@@ -182,11 +182,11 @@ export default function Header({ messActionSlot }: HeaderProps) {
           
           {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
           <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-200 ${
-            isTourActive ? "bg-slate-200 text-zinc-800 " : "bg-zinc-800 text-sky-100"
+            isTourActive ? "bg-slate-300 text-zinc-800 " : "bg-zinc-600 text-white"
           }`}>
             <Link 
               href="/tour" 
-              className="flex items-center gap-0 text-inherit text-lg"
+              className="flex items-center gap-0 text-inherit text-md"
               aria-label="Go to campus tour page"
             >
               <span>Campus Tour</span>

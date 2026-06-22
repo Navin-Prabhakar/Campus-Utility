@@ -66,7 +66,7 @@ export default function SignIn() {
       }
 
       setStep("sent");
-      setInfo("📩 Activation link sent! Please open your official Microsoft Outlook mail app to verify.");
+      setInfo("📩 Activation link sent! Please open your official Microsoft Outlook mail app and click the link to login.");
       setCountdown(60); // Start the 60 seconds cooldown
       
       if (rememberDevice && typeof window !== "undefined") {
@@ -81,22 +81,22 @@ export default function SignIn() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-slate-900 to-slate-800 px-4">
-      <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-2xl">
-        <div className="mb-8 flex flex-col items-center gap-3">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-slate-800 to-indigo-950 px-4">
+      <div className="w-full max-w-md rounded-lg bg-slate-200 p-5 shadow-2xl">
+        <div className="mb-6 flex flex-col items-center gap-2">
           <Image
             src="/iitp-logo.png"
             alt="IIT Patna logo"
-            width={80}
-            height={80}
-            className="h-16 w-16"
+            width={1080}
+            height={1080}
+            className="h-20 w-20"
           />
           <h1 className="text-center text-2xl font-bold text-slate-900">IITP Unofficial</h1>
-          <p className="text-center text-sm text-slate-600">Secure activation via your college email</p>
+          <p className="text-center text-sm text-slate-600">Secure activation via your college mail ID</p>
         </div>
 
         <form onSubmit={sendActivationLink} className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-1">
             <label htmlFor="email" className="text-sm font-medium text-slate-900">
               IIT Patna Email
             </label>
@@ -128,11 +128,8 @@ export default function SignIn() {
           {info && (
             <div className="rounded-lg bg-blue-50 p-3 text-sm text-blue-700 border border-blue-200 flex flex-col gap-1">
               <p>{info}</p>
-              {countdown > 0 && (
-                <p className="text-xs font-semibold text-blue-800 animate-pulse mt-1">
-                  ⏳ Please wait at least {countdown} seconds before requesting another link.
-                </p>
-              )}
+              {countdown > 0 
+              }
             </div>
           )}
 
@@ -163,7 +160,7 @@ export default function SignIn() {
           )}
         </form>
 
-        <div className="mt-6 border-t border-slate-200 pt-4">
+        <div className="mt-4 border-t border-slate-200 pt-3">
           <p className="text-center text-xs text-slate-600">
             Only students with active @iitp.ac.in credentials can verify.
           </p>
