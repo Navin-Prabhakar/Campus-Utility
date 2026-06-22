@@ -3,9 +3,16 @@
 import React from "react";
 import Link from "next/link"; 
 import { usePathname } from "next/navigation"; 
+import { useSession } from "next-auth/react"; // 🛠️ Added session import
 
 export default function BottomTabs() {
   const pathname = usePathname(); 
+  const { data: session, status } = useSession(); // 🛠️ Fetch authentication status
+
+  // Completely hide the navigation bar if on the signin page OR if no user session is present
+  if (pathname === "/signin" || status === "unauthenticated" || !session) {
+    return null;
+  }
 
   return (
     <footer className="fixed bottom-0 left-0 w-full px-4 pb-4 pt-4 bg-gradient-to-t from-[#050608] via-[#0A0B10]/95 to-transparent z-50 pointer-events-none">

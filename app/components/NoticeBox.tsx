@@ -187,18 +187,14 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
   if (!isOpen) return null;
 
   return (
-    /* 🛠️ OVERRIDE: Restored back to floating fixed layout backdrop blur window. Left header and bottom dock fully uncovered */
     <div 
       onClick={onClose}
       className="fixed inset-0 bg-black/60 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4 z-[99999] animate-in fade-in duration-200"
     >
-      
-      {/* 🛠️ OVERRIDE: Bound modal dialog framework down to popup panel tokens. Height capped cleanly to 'max-h-[75vh]' leaving room for surrounding frames */}
       <div 
         onClick={(e) => e.stopPropagation()}
         className="bg-[#0A0A0A] w-full sm:max-w-[380px] max-h-[75vh] rounded-t-[24px] sm:rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5),0_20px_50px_rgba(0,0,0,0.9)] border border-zinc-950 flex flex-col relative overflow-hidden animate-in slide-in-from-bottom duration-300 ease-out"
       >
-        
         {/* Tactile Mobile Drag Pull Indicator Bar */}
         <div className="w-full flex justify-center py-2.5 sm:hidden shrink-0">
           <div className="w-12 h-1 bg-zinc-800 rounded-full" />
@@ -213,14 +209,17 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
           </div>
           
           <div className="flex items-center gap-2 select-none">
-            <a 
-              href="https://docs.google.com/spreadsheets/d/1o3ZTVhnP9_xjzkEtMmKd6JFh-cznagwsCTIAAlAFBZ0/edit"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] font-black uppercase tracking-wider text-blue-500 hover:text-blue-400 bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 px-2.5 py-1.5 rounded-xl transition-colors duration-150 active:scale-95 shadow-sm"
-            >
-              Master log ↗
-            </a>
+            {/* 🛠️ MODIFIED: Wrapped master log button inside session validation check */}
+            {session?.user && (
+              <a 
+                href="https://docs.google.com/spreadsheets/d/1o3ZTVhnP9_xjzkEtMmKd6JFh-cznagwsCTIAAlAFBZ0/edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] font-black uppercase tracking-wider text-blue-500 hover:text-blue-400 bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/20 px-2.5 py-1.5 rounded-xl transition-colors duration-150 active:scale-95 shadow-sm"
+              >
+                Master log ↗
+              </a>
+            )}
 
             <button 
               onClick={onClose} 
@@ -232,7 +231,7 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
           </div>
         </div>
 
-        {/* Scroll Body: Scaled padding variables to look tight inside compact window maps */}
+        {/* Scroll Body */}
         <div className="overflow-y-auto flex-1 px-4 py-4 space-y-3.5 style-modal-scrollbar touch-pan-y bg-[#050505]">
           {loading ? (
             <div className="flex flex-col items-center justify-center py-20 space-y-3">
