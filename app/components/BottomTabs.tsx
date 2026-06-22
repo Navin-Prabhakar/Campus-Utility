@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link"; 
 import { usePathname } from "next/navigation"; 
 import { useSession } from "next-auth/react"; 
@@ -13,16 +13,49 @@ const tabGradients = [
   "from-emerald-400 to-indigo-700",      // Tab 3 (Cab) -> Cool Sky Blue
   "from-sky-400 to-purple-700", // Tab 4 (Schedule) -> Royal Purple/Indigo
 ];
+
 export default function BottomTabs() {
   const pathname = usePathname(); 
   const { data: session, status } = useSession(); 
+
+  // 📱 NEW: State monitors tracking the window scroll vector for smooth transitions
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScrollVector = () => {
+      const currentScrollY = window.scrollY;
+
+      // Safe boundaries for mobile elastic-bouncing tracking layouts (iOS Safari)
+      if (currentScrollY < 0) return;
+      const maxScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (currentScrollY > maxScrollableHeight) return;
+
+      // Intentionality threshold: Filter out shaky inputs below 10px
+      if (Math.abs(currentScrollY - lastScrollY) < 10) return;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setIsVisible(false); // Swipe down -> slide away
+      } else {
+        setIsVisible(true);  // Swipe up -> show tabs
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScrollVector, { passive: true });
+    return () => window.removeEventListener("scroll", handleScrollVector);
+  }, [lastScrollY]);
 
   if (pathname === "/signin" || status === "unauthenticated" || !session) {
     return null;
   }
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full px-0 pb-0 pt-8 bg-gradient-to-t from-[#050608] via-[#0A0B12]/95 to-transparent z-50 pointer-events-none">
+    // 🛠️ MODIFIED: Injected transition tracking mechanics alongside cubic-bezier acceleration settings
+    <footer className={`fixed bottom-0 left-0 w-full px-0 pb-0 pt-8 bg-gradient-to-t from-[#050608] via-[#0A0B12]/95 to-transparent z-50 pointer-events-none transition-transform duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] ${
+      isVisible ? "translate-y-0" : "translate-y-full"
+    }`}>
       <div className="mx-auto grid grid-cols-5 w-full max-w-md items-center bg-slate-950 backdrop-blur-3xl border border-slate-900 p-0 rounded-1xl shadow-[0_12px_40px_rgba(5,4,6,0.7),0_0_30px_rgba(90,102,241,0.15)] pointer-events-auto">
         {Array.from({ length: 5 }).map((_, index) => {
           const isActive = 
@@ -62,7 +95,7 @@ export default function BottomTabs() {
               
               {/* Text label rests safely outside the active box layout */}
               <span className={`text-[10px] font-black tracking-widest uppercase transition-colors duration-300 ${isActive ? 'text-neutral-200' : 'text-slate-400/80 group-hover:text-slate-200'}`}>
-                {alt === "Mess_Menu" ? "Mess" : alt}
+                {alt === "Mess_Menu" ? "Mess_Menu" : alt}
               </span>
             </div>
           );

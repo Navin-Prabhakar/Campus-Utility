@@ -58,6 +58,9 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
   useEffect(() => {
     if (!isOpen) return;
 
+    // 🆕 ADD THIS LINE: Mark notices as read by saving the current timestamp
+    localStorage.setItem("iitp_last_viewed_notices", Date.now().toString());
+
     async function fetchAndFilterNotices() {
       setLoading(true);
       try {
@@ -145,6 +148,15 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
 
         combinedNotices.sort((a, b) => b.timestamp - a.timestamp);
         setNotices(combinedNotices);
+
+        // Automatically save all currently fetched notice IDs to the user's seen history log
+        const seenIds = combinedNotices.map(notice => {
+          return `${notice.title}_${notice.date}_${notice.author}`.replace(/\s+/g, "_");
+        });
+        if (seenIds.length > 0) {
+          localStorage.setItem("iitp_seen_notice_ids", JSON.stringify(seenIds));
+        }
+        
       } catch (err) {
         console.error("Error running notice configuration loop:", err);
       } finally {

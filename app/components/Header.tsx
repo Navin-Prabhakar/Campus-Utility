@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSession, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,6 +23,36 @@ export default function Header({ messActionSlot }: HeaderProps) {
   // Calculate unread counts dynamically
   const unseenCount = useUnseenNotices(showNotificationModal);
 
+  // 📱 NEW: State markers for track scrolling hide/show effects safely on phone/desktop
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScrollVector = () => {
+      const currentScrollY = window.scrollY;
+
+      // 1. Safe boundary: Skip calculating negative/out-of-bound elastic tracking common on iOS safari
+      if (currentScrollY < 0) return;
+      const maxScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (currentScrollY > maxScrollableHeight) return;
+
+      // 2. Intentionality boundary: Skip layout shifting for tiny micro-movements (under 5px)
+      if (Math.abs(currentScrollY - lastScrollY) < 5) return;
+
+      // 3. Evaluate scroll heading
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setIsVisible(false); // Scrolling down -> hide
+      } else {
+        setIsVisible(true);  // Scrolling up -> show
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScrollVector, { passive: true });
+    return () => window.removeEventListener("scroll", handleScrollVector);
+  }, [lastScrollY]);
+
   const user = session?.user;
   const loading = status === "loading";
 
@@ -31,11 +61,18 @@ export default function Header({ messActionSlot }: HeaderProps) {
     await signOut({ callbackUrl: "/signin" });
   };
 
+  // Determine active states for sub-navigation links
+  const isHomeActive = pathname === "/";
+  const isTourActive = pathname === "/tour";
+
   return (
-    <header className="w-full">
+    // 🛠️ MODIFIED: Wrapped wrapper with fixed utility tracking alongside conditional translation vectors
+    <header className={`w-full fixed top-0 left-0 z-50 transition-transform duration-300 ease-in-out ${
+      isVisible ? "translate-y-0" : "-translate-y-full"
+    }`}>
       {/* Upper Header */}
-      <div className="flex h-12 items-center justify-between bg-slate-900 px-6 text-white">
-        <div className="flex items-center gap-3 text-lg font-semibold">
+      <div className="flex h-12 items-center justify-between bg-black px-2 text-white">
+        <div className="flex items-center gap-2 text-xl font-semibold">
           <Image
             src="/iitp-logo.png"
             alt="IIT Patna logo"
@@ -46,17 +83,17 @@ export default function Header({ messActionSlot }: HeaderProps) {
           IITP Unofficial
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5">
           {/* Notification Bell Button with Badge Counter */}
           <button
             onClick={() => setShowNotificationModal(true)}
             aria-label="Notifications"
-            className="relative flex h-10 w-10 items-center justify-center text-sm text-white transition hover:bg-white/10 rounded-lg cursor-pointer"
+            className="relative flex h-10 w-10 items-center justify-center text-sm text-white transition hover:bg-white/10 active:bg-white/10 active:scale-95 rounded-lg cursor-pointer select-none"
           >
             <img
               src="/notification_bell.png"
               alt="Notifications"
-              className="h-6 w-6 object-contain"
+              className="h-7 w-7 object-contain"
             />
             {unseenCount > 0 && (
               <span className="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-600 text-[9px] font-extrabold text-white animate-pulse shadow-md border border-slate-900">
@@ -70,14 +107,14 @@ export default function Header({ messActionSlot }: HeaderProps) {
               user ? (
                 <button
                   onClick={() => setShowMenu(!showMenu)}
-                  className="flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-2 py-1 transition hover:bg-white/20"
+                  className="flex items-center gap-1.5 rounded-full border border-purple-700/80 bg-white/10 px-0 py-0 transition hover:bg-white/20"
                   aria-label="Profile menu"
                 >
                   <ProfileAvatar
                     name={user.name}
                     email={user.email}
                     image={user.image}
-                    size="sm"
+                    size="md"
                   />
                   <span className="hidden sm:inline text-sm font-medium max-w-[100px] truncate">
                     {user.name || user.email}
@@ -98,26 +135,26 @@ export default function Header({ messActionSlot }: HeaderProps) {
 
             {/* Profile Dropdown Menu */}
             {user && showMenu && (
-              <div className="absolute right-0 top-full mt-2 w-48 rounded-lg bg-white text-slate-900 shadow-xl z-50 py-1 border border-slate-100">
-                <div className="border-b border-slate-200 px-4 py-2.5">
+              <div className="absolute right-0 top-full mt-2 w-52 rounded-lg bg-slate-900 text-slate-100 shadow-xl z-50 py-0 border border-slate-700">
+                <div className="border-b border-slate-400 px-2 py-1.5">
                   <p className="font-semibold text-sm truncate">{user.name}</p>
-                  <p className="text-xs text-slate-500 truncate font-mono">{user.email}</p>
+                  <p className="text-xs text-slate-400 truncate font-mono">{user.email}</p>
                 </div>
                 
-                {/* 📷 NEW: Link navigation to profile settings workspace route */}
+                {/*  NEW: Link navigation to profile settings workspace route */}
                 <Link
                   href="/profile"
                   onClick={() => setShowMenu(false)}
-                  className="flex w-full px-4 py-2 text-left text-sm text-slate-700 hover:bg-slate-100 transition items-center gap-2"
+                  className="flex w-full px-2 py-2 text-left text-md text-slate-200 hover:bg-slate-100 hover:text-zinc-800 transition items-center gap-2"
                 >
                   ⚙️ Profile Settings
                 </Link>
 
-                <hr className="border-slate-100 my-1" />
+                <hr className="border-slate-400 my-0" />
 
                 <button
                   onClick={handleSignOut}
-                  className="w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-50 transition rounded-b-lg"
+                  className="w-full px-18 py-2 text-left text-sm text-red-600 hover:bg-red-500 hover:text-white hover:text-bold transition rounded-b-lg"
                 >
                   Sign Out
                 </button>
@@ -128,24 +165,33 @@ export default function Header({ messActionSlot }: HeaderProps) {
       </div>
 
       {/* Lower Header */}
-      <div className="flex h-7 bg-sky-900 items-center justify-between px-3">
-        <div className="flex items-center gap-4">
-          <Link 
-            href="/" 
-            className="flex items-center gap-1 text-sky-100 hover:text-white transition-colors text-xs font-bold"
-            aria-label="Go to home page"
-          >
-            <span>🏠</span>
-            <span>Home</span>
-          </Link>
-
-          <Link 
-            href="/tour" 
-            className="flex items-center gap-1 text-sky-100 hover:text-white transition-colors text-xs font-bold"
-            aria-label="Go to campus tour page"
-          >
-            <span>Campus Tour</span>
-          </Link>
+      <div className="flex h-8 bg-black items-center justify-between px-2">
+        <div className="flex items-center gap-2">
+          {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
+          <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-100 ${
+            isHomeActive ? "bg-slate-200 text-zinc-800 " : "bg-zinc-800 text-sky-100"
+          }`}>
+            <Link 
+              href="/" 
+              className="flex items-center gap-0 text-inherit text-lg"
+              aria-label="Go to home page"
+            >
+              <span>Home</span>
+            </Link>
+          </div>
+          
+          {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
+          <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-200 ${
+            isTourActive ? "bg-slate-200 text-zinc-800 " : "bg-zinc-800 text-sky-100"
+          }`}>
+            <Link 
+              href="/tour" 
+              className="flex items-center gap-0 text-inherit text-lg"
+              aria-label="Go to campus tour page"
+            >
+              <span>Campus Tour</span>
+            </Link>
+          </div>
         </div>
 
         <div className="flex items-center">

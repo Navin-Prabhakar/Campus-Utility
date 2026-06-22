@@ -226,7 +226,18 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-full w-full bg-[#050505] font-sans text-zinc-300 antialiased flex flex-col items-center justify-between relative selection:bg-zinc-800 selection:text-white">
+    <div 
+      className="min-h-screen w-full font-sans text-zinc-300 antialiased flex flex-col items-center justify-between relative selection:bg-zinc-800 selection:text-white"
+      style={{
+        backgroundImage: `
+          radial-gradient(circle at top left, rgba(8, 9, 63, 0.6), transparent 50%),
+          radial-gradient(circle at top right, rgba(16, 46, 22, 0.81), transparent 50%),
+          radial-gradient(circle at bottom left, rgba(21, 40, 20, 0.7), transparent 50%),
+          radial-gradient(circle at bottom right, rgba(56, 18, 18, 0.9), transparent 50%)
+        `,
+        backgroundColor: '#171722' /* Fallback deep base color for the center blend */
+      }}
+    >
       
       <Suspense fallback={null}>
         <SearchParamsHandler setShowReportModal={setShowReportModal} />
@@ -235,12 +246,12 @@ export default function Home() {
       <div className="w-full flex flex-col items-center">
         {/* 📜 APP WINDOW MIDDLE TRACK CONTAINER */}
         <main className="flex flex-col items-center justify-start py-5 w-[92%] max-w-[350px]">
-          <div className="w-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] p-3 shadow-xl">
+          <div className="w-full rounded-2xl border border-zinc-900/60 bg-gradient-to-b from-[#0F0F0F]/90 to-[#0A0A0A]/90 p-3 shadow-xl backdrop-blur-md">
             
             <div className="mb-2.5 flex items-center justify-between border-b border-zinc-900 pb-2 px-1">
               <div className="flex items-center gap-1.5">
                 <span className={`h-1.5 w-1.5 rounded-full ${error ? 'bg-rose-500 shadow-[0_0_8px_#f43f5e]' : 'bg-[#10B981] shadow-[0_0_8px_#10b981] animate-pulse'}`} />
-                <h2 className="text-[10px] font-black uppercase tracking-widest text-zinc-500">
+                <h2 className="text-[10px] font-black uppercase tracking-widest text-zinc-400">
                   Next 4 Upcoming Buses
                 </h2>
               </div>
@@ -252,27 +263,27 @@ export default function Home() {
             <div className="flex flex-col gap-1.5 w-full">
               {loading ? (
                 [...Array(4)].map((_, i) => (
-                  <div key={i} className="h-11 w-full animate-pulse rounded-xl bg-[#121212] border border-zinc-900" />
+                  <div key={i} className="h-11 w-full animate-pulse rounded-xl bg-[#121212]/50 border border-zinc-900/50" />
                 ))
               ) : error ? (
                 <div className="py-4 text-center text-[11px] font-bold text-rose-400 bg-rose-950/10 rounded-xl border border-rose-900/20 uppercase tracking-wide">
                   🚨 Connection Error.
                 </div>
               ) : upcomingBuses.length === 0 ? (
-                <div className="py-4 text-center text-[11px] text-zinc-600 font-medium italic bg-[#121212]/40 rounded-xl border border-dashed border-zinc-900">
+                <div className="py-4 text-center text-[11px] text-zinc-500 font-medium italic bg-[#121212]/40 rounded-xl border border-dashed border-zinc-900">
                   No active routes found.
                 </div>
               ) : (
                 upcomingBuses.map((bus) => (
                   <div 
                     key={bus.id} 
-                    className="flex items-center justify-between rounded-xl border border-zinc-900 bg-[#121212]/60 px-3 py-2 transition-all transform hover:-translate-y-0.5 active:scale-[0.99]"
+                    className="flex items-center justify-between rounded-xl border border-zinc-900/40 bg-[#121212]/40 px-3 py-2 transition-all transform hover:-translate-y-0.5 active:scale-[0.99] backdrop-blur-xs"
                   >
                     <div className="flex flex-col min-w-0 pr-1.5">
                       <span className="truncate text-[11px] font-black text-white leading-tight">
                         Bus {bus.name}
                       </span>
-                      <span className="truncate text-[9px] text-zinc-500 mt-1 font-bold tracking-tight">
+                      <span className="truncate text-[9px] text-zinc-400 mt-1 font-bold tracking-tight">
                         {bus.route}
                       </span>
                     </div>
@@ -287,7 +298,7 @@ export default function Home() {
             <div className="mt-3 px-0.5">
               <Link 
                 href="/bus"
-                className="flex w-full items-center justify-center rounded-xl bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 py-2.5 text-[11px] font-black uppercase tracking-widest text-white transition-all shadow-md active:scale-95"
+                className="flex w-full items-center justify-center rounded-xl bg-zinc-800/80 hover:bg-zinc-700/90 border border-zinc-700/50 py-2.5 text-[11px] font-black uppercase tracking-widest text-white transition-all shadow-md active:scale-95"
               >
                 View Full Schedule
               </Link>
@@ -315,7 +326,7 @@ export default function Home() {
             setBirthdayList([]);
             setShowDevModal(true);
           }}
-          className="text-[11px] font-black uppercase tracking-wider text-zinc-600 hover:text-zinc-400 transition-colors cursor-pointer py-1.5 px-4 rounded-xl hover:bg-[#121212]"
+          className="text-[11px] font-black uppercase tracking-wider text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1.5 px-4 rounded-xl hover:bg-white/5"
         >
           Developer Node Info
         </button>
@@ -473,7 +484,7 @@ export default function Home() {
           background: transparent;
         }
         .style-scrollbar::-webkit-scrollbar-thumb {
-          background: #222222;
+          background: #108b22;
           border-radius: 20px;
         }
         .style-scrollbar::-webkit-scrollbar-thumb:hover {

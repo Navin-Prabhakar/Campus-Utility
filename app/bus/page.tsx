@@ -177,14 +177,15 @@ export default function BusPage() {
   }
 
   return (
-    <main className="h-full w-full bg-[#050505] text-[#F8FAFC] flex flex-col overflow-hidden relative selection:bg-zinc-800 selection:text-white">
+    // 🛠️ THE FIX: Changed h-full/overflow-hidden to full layout dependency stream to let main window fire global scroll events
+    <main className="w-full min-h-screen bg-[#050505] text-[#F8FAFC] relative selection:bg-zinc-800 selection:text-white">
       
       {/* 🌌 High-depth radial gradient masking (No blues/indigos) */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-zinc-900/40 blur-[120px] rounded-full pointer-events-none" />
       
-      {/* 📜 APP WINDOW SCROLL BODY */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 pb-32 style-scrollbar">
-        <div className="max-w-md mx-auto sm:max-w-xl md:max-w-4xl lg:max-w-6xl flex flex-col min-h-full space-y-4">
+      {/* 🛠️ THE FIX: Dropped overflow-y-auto here since layout.tsx controls viewport document scope flow natively now */}
+      <div className="w-full px-4 py-4 pb-32">
+        <div className="max-w-md mx-auto sm:max-w-xl md:max-w-4xl lg:max-w-6xl flex flex-col space-y-4">
           
           {/* Notice Banner - Warning Token */}
           <div className="p-3.5 bg-gradient-to-br from-[#14120F] to-[#0D0B0A] border border-amber-500/10 rounded-2xl text-[13px] text-amber-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.4)] backdrop-blur-sm space-y-2">

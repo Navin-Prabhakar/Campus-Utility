@@ -22,17 +22,21 @@ export default function ProfileAvatar({
   const [currentImage, setCurrentImage] = useState<string | null>(initialImage || null);
   const [isUploading, setIsSubmitting] = useState(false);
 
-  // 🟢 AUTOMATICALLY FETCH RECENT AVATAR FROM DRIVE ON LOAD
+  // 🟢 AUTOMATICALLY FETCH RECENT AVATAR FROM DRIVE ON LOAD (FIXED FOR BINARY BLOB STREAMS)
   useEffect(() => {
+    let objectUrl: string | null = null;
+
     async function fetchRecentAvatar() {
       if (!email) return;
       try {
         const response = await fetch(`/api/user/get-avatar?email=${encodeURIComponent(email)}`);
         if (response.ok) {
-          const data = await response.json();
-          if (data.imageUrl) {
-            setCurrentImage(data.imageUrl);
-          }
+          // 🛠️ THE FIX: Instead of reading JSON, capture the raw binary stream data
+          const blob = await response.blob();
+          
+          // Generate a secure temporary client URL referencing that stream chunk
+          objectUrl = URL.createObjectURL(blob);
+          setCurrentImage(objectUrl);
         }
       } catch (err) {
         console.error("Error fetching recent avatar from Drive:", err);
@@ -44,6 +48,13 @@ export default function ProfileAvatar({
     } else {
       setCurrentImage(initialImage);
     }
+
+    // 🧹 CLEANUP: Release local memory reference when the user leaves or updates email
+    return () => {
+      if (objectUrl) {
+        URL.revokeObjectURL(objectUrl);
+      }
+    };
   }, [initialImage, email]);
 
   const parts = name?.trim().split(/\s+/).filter(Boolean) ?? [];

@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthSessionProvider } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
-// 🛠️ IMPORT GLOBAL VIEW ELEMENTS
 import Header from "./components/Header";
 import BottomTabs from "./components/BottomTabs";
 
@@ -30,26 +29,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full bg-[#050505] antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-[#050505] antialiased`}
     >
-      {/* 🛠️ MODIFIED: Fixed viewport height parameters to lock navigation bars firmly into place on mobile phone displays */}
-      <body className="h-screen max-h-screen w-full bg-[#050505] flex flex-col overflow-hidden text-zinc-300">
+      {/* 🛠️ FIX: Changed h-screen/overflow-hidden to min-h-screen to allow native window scrolling */}
+      <body className="min-h-screen w-full bg-[#050505] text-zinc-300">
         <AuthSessionProvider>
           
-          {/* 📌 FIXED ACCENTS UP HEADER NODE */}
-          <div className="shrink-0 z-40">
-            <Header />
-          </div>
+          {/* Header handles its own 'fixed' positioning and translation states */}
+          <Header />
 
-          {/* 📜 DISPATCH DYNAMIC ACTIVE CLIENT SCREENS VIEW */}
-          <div className="flex-1 w-full overflow-hidden relative">
+          {/* 📜 DYNAMIC ACTIVE VIEW CONTENT */}
+          {/* 🛠️ FIX: Added padding top (pt-20) for the double header and padding bottom (pb-16) for BottomTabs so content isn't cut off */}
+          <main className="w-full pt-20 pb-16 min-h-screen">
             {children}
-          </div>
+          </main>
 
-          {/* 📌 FLOATING SYSTEM NAVIGATION DOCK BAR */}
-          <div className="shrink-0 z-40">
-            <BottomTabs />
-          </div>
+          {/* Bottom tabs handles its own tracking elements */}
+          <BottomTabs />
 
         </AuthSessionProvider>
         <Analytics />

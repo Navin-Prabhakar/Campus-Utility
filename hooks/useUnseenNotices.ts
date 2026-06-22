@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import Papa from "papaparse";
 import { parseStudentEmail } from "../utils/rollParser";
 
-// 🌐 Your configured active numeric Google Sheet tab GIDs
 const GIDS = {
   UNIVERSAL: "0",
   FRESHERS: "621207693",
@@ -14,16 +13,15 @@ const GIDS = {
   SENIORS: "1844437553",
 };
 
-const LAST_VIEWED_KEY = "iitp_last_viewed_notices";
+const SEEN_NOTICES_KEY = "iitp_seen_notice_ids";
 
 export function useUnseenNotices(modalOpen: boolean) {
   const { data: session } = useSession();
   const [unseenCount, setUnseenCount] = useState<number>(0);
 
   useEffect(() => {
-    // If the modal is opened, clear the count by updating the last viewed timestamp
+    // If modal is currently open, we keep count at 0 (handled by modal marking them seen)
     if (modalOpen) {
-      localStorage.setItem(LAST_VIEWED_KEY, new Date().toISOString());
       setUnseenCount(0);
       return;
     }
@@ -33,34 +31,28 @@ export function useUnseenNotices(modalOpen: boolean) {
 
       try {
         const profile = parseStudentEmail(session.user.email);
-        const lastViewedStr = localStorage.getItem(LAST_VIEWED_KEY);
-        // Fallback to a past date if they've never opened it
-        const lastViewedTime = lastViewedStr ? new Date(lastViewedStr).getTime() : 0;
+        
+        // Retrieve list of IDs the user has already seen
+        const seenIdsStr = localStorage.getItem(SEEN_NOTICES_KEY);
+        const seenIds: string[] = seenIdsStr ? JSON.parse(seenIdsStr) : [];
 
         const baseUrl = "https://docs.google.com/spreadsheets/d/1o3ZTVhnP9_xjzkEtMmKd6JFh-cznagwsCTIAAlAFBZ0/export?format=csv&gid=";
+        const urlsToFetch = [{ url: `${baseUrl}${GIDS.UNIVERSAL}`, type: "universal" }];
 
-        // 1. Build the dynamic array of targets to pull down based on user batch
-        const urlsToFetch = [
-          `${baseUrl}${GIDS.UNIVERSAL}` // Always fetch Universal Notices
-        ];
-
-        // 🛠️ Dynamically injects the correct branch sheets matching the profile year group
-        if (profile.yearGroup === "Freshers") urlsToFetch.push(`${baseUrl}${GIDS.FRESHERS}`);
-        if (profile.yearGroup === "Sophomores") urlsToFetch.push(`${baseUrl}${GIDS.SOPHOMORES}`);
-        if (profile.yearGroup === "Juniors") urlsToFetch.push(`${baseUrl}${GIDS.JUNIORS}`);
-        if (profile.yearGroup === "Seniors") urlsToFetch.push(`${baseUrl}${GIDS.SENIORS}`);
+        if (profile.yearGroup === "Freshers") urlsToFetch.push({ url: `${baseUrl}${GIDS.FRESHERS}`, type: "freshers" });
+        if (profile.yearGroup === "Sophomores") urlsToFetch.push({ url: `${baseUrl}${GIDS.SOPHOMORES}`, type: "batch" });
+        if (profile.yearGroup === "Juniors") urlsToFetch.push({ url: `${baseUrl}${GIDS.JUNIORS}`, type: "batch" });
+        if (profile.yearGroup === "Seniors") urlsToFetch.push({ url: `${baseUrl}${GIDS.SENIORS}`, type: "batch" });
 
         let freshNoticeCounter = 0;
 
         await Promise.all(
-          urlsToFetch.map(async (url) => {
+          urlsToFetch.map(async ({ url, type }) => {
             try {
               const res = await fetch(url);
               const rawText = await res.text();
-
-              // 🛠️ THE FIX: Split raw CSV string by lines and remove the decorative row 1
               const lines = rawText.split("\n");
-              const cleanCsvText = lines.slice(1).join("\n"); // Row 2 now sets structural keys
+              const cleanCsvText = lines.slice(1).join("\n");
 
               return new Promise<void>((resolve) => {
                 Papa.parse(cleanCsvText, {
@@ -69,23 +61,31 @@ export function useUnseenNotices(modalOpen: boolean) {
                   complete: (results) => {
                     const rows = results.data as any[];
                     rows.forEach((row) => {
-                      // Normalize column reads supporting exact column headers on Row 2
-                      const targetBranch = (
-                        row["Target Branch"] || 
-                        row["Target Audience"] || 
-                        row["target audience"] || 
-                        ""
-                      ).trim().toUpperCase();
-                      
-                      // Match the branch profile parameters strictly
-                      if (targetBranch === "ALL" || targetBranch === "" || targetBranch === profile.branch) {
-                        
-                        // Parse notice row timestamp string safely
-                        const dateStr = row["Date (dd/mm/yyyy)"] || row["date"] || ""; 
-                        const noticeTime = Date.parse(dateStr) || 0;
+                      const title = (row["Title"] || row["Tittle"] || row["title"] || "").trim();
+                      const description = (row["Description"] || row["description"] || "").trim();
+                      if (!title && !description) return;
 
-                        // If the notice timestamp is newer than the last viewed mark, count it
-                        if (noticeTime > lastViewedTime) {
+                      const targetBranchText = (row["Target Branch"] || row["Target Audience"] || "").trim().toUpperCase();
+                      const isUniversal = type === "universal";
+                      const isFresherOverride = type === "freshers";
+                      const isBatchWideOverride = targetBranchText === `ALL ${profile.yearGroup.toUpperCase()}`;
+                      const userBranch = (profile.branch || "").toUpperCase();
+
+                      const isTargetedBranchMatch = 
+                        targetBranchText === "ALL" || 
+                        targetBranchText === "" || 
+                        isBatchWideOverride ||
+                        targetBranchText.split(/[\s,]+/).some((b: string) => b.trim() === userBranch);
+
+                      if (isUniversal || isFresherOverride || isTargetedBranchMatch) {
+                        const dateStr = (row["Date (dd/mm/yyyy)"] || row["Date"] || "").trim();
+                        const authorStr = (row["Author"] || row["author"] || "Admin").trim();
+                        
+                        // Generate a unique fingerprint ID for this notice entry
+                        const noticeId = `${title}_${dateStr}_${authorStr}`.replace(/\s+/g, "_");
+
+                        // If this ID is missing from our seen list, increment counter
+                        if (!seenIds.includes(noticeId)) {
                           freshNoticeCounter++;
                         }
                       }
@@ -96,7 +96,7 @@ export function useUnseenNotices(modalOpen: boolean) {
                 });
               });
             } catch (fetchErr) {
-              console.error(`Failed loading count stream branch link: ${url}`, fetchErr);
+              console.error(`Failed loading badge counter stream: ${url}`, fetchErr);
             }
           })
         );
@@ -107,10 +107,7 @@ export function useUnseenNotices(modalOpen: boolean) {
       }
     }
 
-    // Run immediately on layout frame mount
     checkNewNotices();
-    
-    // Check for updates every 5 minutes automatically
     const interval = setInterval(checkNewNotices, 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, [session, modalOpen]);
