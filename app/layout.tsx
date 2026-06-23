@@ -27,7 +27,6 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // 🟢 Server-side URL interception
   const headerList = await headers();
   const activePath = headerList.get("x-url") || ""; 
   const isSignInPage = activePath.endsWith("/signin");
@@ -37,18 +36,16 @@ export default async function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-[#050505] antialiased`}
     >
-      <body className="min-h-screen w-full bg-[#050505] text-zinc-300">
+      {/* 🛠️ THE FIX: Added 'relative' and removed any strict constraints so global modals can render flawlessly */}
+      <body className="min-h-screen w-full bg-[#050505] text-zinc-300 relative">
         <AuthSessionProvider>
           
-          {/* Global Header Layout Element */}
+          {/* Global Header Element */}
           <Header />
 
           {/* 📜 DYNAMIC ACTIVE VIEW CONTENT */}
-          {/* 🛠️ THE FIX: Dynamically alters padding configuration out of the server compilation frame.
-              If the route matches /signin, paddings collapse to 0, ensuring your auth page fills the screen perfectly.
-              For all other functional tabs, standard paddings are maintained. */}
           <main className={`w-full min-h-screen transition-all duration-150 ${
-            isSignInPage ? "pt-0 pb-0" : "pt-20 pb-16"
+            isSignInPage ? "pt-0 pb-0" : "pt-0 pb-0"
           }`}>
             {children}
           </main>

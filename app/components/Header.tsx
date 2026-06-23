@@ -30,10 +30,24 @@ export default function Header({ messActionSlot }: HeaderProps) {
   useEffect(() => {
     const handleScrollVector = () => {
       const currentScrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const totalDocumentHeight = document.documentElement.scrollHeight;
 
       // 1. Safe boundary: Skip calculating negative/out-of-bound elastic tracking common on iOS safari
       if (currentScrollY < 0) return;
-      const maxScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      // 🎯 THE BOTTOM DETECTION TRAP:
+      // Evaluates view offsets dynamically to force header visibility 
+      // when hitting the base threshold limit (with a safe 3px display matrix buffer).
+      const isAtAbsoluteBottom = (currentScrollY + windowHeight) >= (totalDocumentHeight - 3);
+
+      if (isAtAbsoluteBottom) {
+        setIsVisible(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      const maxScrollableHeight = totalDocumentHeight - windowHeight;
       if (currentScrollY > maxScrollableHeight) return;
 
       // 2. Intentionality boundary: Skip layout shifting for tiny micro-movements (under 5px)
@@ -66,12 +80,14 @@ export default function Header({ messActionSlot }: HeaderProps) {
   const isTourActive = pathname === "/tour";
 
   return (
-    // 🛠️ MODIFIED: Wrapped wrapper with fixed utility tracking alongside conditional translation vectors
-    <header className={`w-full fixed top-0 left-0 z-50 transition-transform duration-300 ease-in-out ${
+    <>
+    {/* 🛠️ THE FIX: Added pointer-events-none here so the structural overlay bounds don't hijack background frame click vectors */}
+    <header className={`w-full fixed top-0 left-0 z-50 pointer-events-none transition-transform duration-300 ease-in-out ${
       isVisible ? "translate-y-0" : "-translate-y-full"
     }`}>
       {/* Upper Header */}
-      <div className="flex h-12 items-center justify-between bg-black px-2 text-white">
+      {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
+      <div className="flex h-12 items-center justify-between bg-black px-2 text-white pointer-events-auto">
         <div className="flex items-center gap-2 text-xl font-semibold">
           <Image
             src="/iitp-logo.png"
@@ -136,25 +152,26 @@ export default function Header({ messActionSlot }: HeaderProps) {
             {/* Profile Dropdown Menu */}
             {user && showMenu && (
               <div className="absolute right-0 top-full mt-2 w-52 rounded-lg bg-slate-900 text-slate-100 shadow-xl z-50 py-0 border border-slate-700">
-                <div className="border-b border-slate-400 px-2 py-1.5">
+                <div className="border-b border-slate-400 px-4 py-2">
                   <p className="font-semibold text-sm truncate">{user.name}</p>
                   <p className="text-xs text-slate-400 truncate font-mono">{user.email}</p>
                 </div>
                 
-                {/*  NEW: Link navigation to profile settings workspace route */}
+                {/* NEW: Link navigation to profile settings workspace route */}
                 <Link
                   href="/profile"
                   onClick={() => setShowMenu(false)}
-                  className="flex w-full px-2 py-2 text-left text-md text-slate-200 hover:bg-slate-100 hover:text-zinc-800 transition items-center gap-2"
+                  className="flex w-full px-4 py-2 text-left text-md text-slate-200 hover:bg-slate-100 hover:text-zinc-800 transition items-center gap-2"
                 >
                   ⚙️ Profile Settings
                 </Link>
 
                 <hr className="border-slate-400 my-0" />
 
+                {/* 🛠️ FIX: Replaced invalid px-18 class with standard px-4 alignment layout rules */}
                 <button
                   onClick={handleSignOut}
-                  className="w-full px-18 py-2 text-left text-sm text-red-600 hover:bg-red-500 hover:text-white hover:text-bold transition rounded-b-lg"
+                  className="w-full px-4 py-2 text-left text-sm text-red-500 hover:bg-red-600 hover:text-white font-bold transition rounded-b-lg"
                 >
                   Sign Out
                 </button>
@@ -165,7 +182,8 @@ export default function Header({ messActionSlot }: HeaderProps) {
       </div>
 
       {/* Lower Header */}
-      <div className="flex h-8 bg-zinc-900 items-center justify-between px-2">
+      {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
+      <div className="flex h-8 bg-zinc-900 items-center justify-between px-2 pointer-events-auto">
         <div className="flex items-center gap-2">
           {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
           <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-100 ${
@@ -198,12 +216,13 @@ export default function Header({ messActionSlot }: HeaderProps) {
           {pathname === "/mess" && messActionSlot}
         </div>
       </div>
+    </header>      
 
-      {/* Render Notification Overlay Drawer */}
-      <NotificationModal 
-        isOpen={showNotificationModal}
-        onClose={() => setShowNotificationModal(false)}
-      />
-    </header>
+    {/* Render Notification Overlay Drawer */}
+    <NotificationModal 
+      isOpen={showNotificationModal}
+      onClose={() => setShowNotificationModal(false)}
+    />
+    </>
   );
 }

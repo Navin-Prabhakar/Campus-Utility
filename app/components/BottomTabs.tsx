@@ -25,10 +25,24 @@ export default function BottomTabs() {
   useEffect(() => {
     const handleScrollVector = () => {
       const currentScrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const totalDocumentHeight = document.documentElement.scrollHeight;
 
       // Safe boundaries for mobile elastic-bouncing tracking layouts (iOS Safari)
       if (currentScrollY < 0) return;
-      const maxScrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      // 🎯 THE BOTTOM DETECTION TRAP:
+      // Evaluates fractional view offsets dynamically to force container visibility 
+      // when hitting the base threshold limit (with a safe 3px display matrix buffer).
+      const isAtAbsoluteBottom = (currentScrollY + windowHeight) >= (totalDocumentHeight - 3);
+
+      if (isAtAbsoluteBottom) {
+        setIsVisible(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      const maxScrollableHeight = totalDocumentHeight - windowHeight;
       if (currentScrollY > maxScrollableHeight) return;
 
       // Intentionality threshold: Filter out shaky inputs below 10px
@@ -89,7 +103,7 @@ export default function BottomTabs() {
                 <img
                   src={src}
                   alt={alt}
-                  className="h-6 w-9 object-contain transition-all duration-200 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]" 
+                  className="h-9 w-9 object-contain transition-all duration-200 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]" 
                 />
               </div>
               
