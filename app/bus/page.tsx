@@ -177,38 +177,44 @@ export default function BusPage() {
   }
 
   return (
-    // 🛠️ THE FIX: Changed h-full/overflow-hidden to full layout dependency stream to let main window fire global scroll events
-    <main className="w-full min-h-screen bg-[#050505] text-[#F8FAFC] relative selection:bg-zinc-800 selection:text-white">
+    // Changed h-full/overflow-hidden to full layout dependency stream to let main window fire global scroll events
+    <main className="w-full min-h-screen bg-gradient-to-br from-zinc-900/10 to-blue-800/30 bg-zinc-950 text-green-600 relative selection:bg-sky-600/60 selection:text-white">
       
-      {/* 🌌 High-depth radial gradient masking (No blues/indigos) */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[40%] bg-zinc-900/40 blur-[120px] rounded-full pointer-events-none" />
+      {/* High-depth radial gradient masking  */}
+      <div className="absolute top-[-1%]  w-[100%] h-[8%] bg-blue-700/60 blur-[120px] rounded-full pointer-events-none" />
       
-      {/* 🛠️ THE FIX: Dropped overflow-y-auto here since layout.tsx controls viewport document scope flow natively now */}
-      <div className="w-full px-4 py-4 pb-32">
+      {/*  Dropped overflow-y-auto here since layout.tsx controls viewport document scope flow natively now */}
+      <div className="w-full px-2 py-21 pb-20">
         <div className="max-w-md mx-auto sm:max-w-xl md:max-w-4xl lg:max-w-6xl flex flex-col space-y-4">
           
           {/* Notice Banner - Warning Token */}
-          <div className="p-3.5 bg-gradient-to-br from-[#14120F] to-[#0D0B0A] border border-amber-500/10 rounded-2xl text-[13px] text-amber-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.4)] backdrop-blur-sm space-y-2">
-            <div className="font-extrabold text-sm flex items-center gap-2 text-amber-400 tracking-wide uppercase">
+          <div className="px-1.5 py-2  bg-gradient-to-br from-purple-700/20 to-amber-800/30 border border-amber-500/10 rounded-2xl text-[13px] text-amber-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.4)] backdrop-blur-sm space-y-2">
+            <div className="font-semibold text-sm flex items-center gap-1.5 text-amber-400/90 tracking-normal uppercase">
               <span>⚠️</span> SWB Campus Notice
             </div>
-            <div className="space-y-1.5 text-xs text-amber-100/70 leading-relaxed font-medium">
-              <p>
-                <strong className="text-amber-300">1.)</strong> Bus queries? Tap contacts below or call Admin Staff:{" "}
-                <span className="text-white bg-amber-500/10 px-1.5 py-0.5 rounded font-semibold border border-amber-500/20">Mantu Ji (8986162721)</span> & Bus Manager BSRTC:{" "}
-                <span className="text-white bg-amber-500/10 px-1.5 py-0.5 rounded font-semibold border border-amber-500/20">Rajeev Ji (6201957967)</span>.
-              </p>
-              <p>
-                <strong className="text-amber-300">2.)</strong> Always carry your physical <span className="text-white font-bold underline decoration-amber-500">ID Card</span> outside campus boundaries to guarantee boarding privileges.
-              </p>
+            <div className="space-y-1.5 font-semibold text-md text-amber-200/70 leading-relaxed">
+              <div className="flex items-start gap-1.5">
+                <strong className="text-amber-300">1.)</strong> 
+                <p>
+                  Bus queries? Don't hesitate to call:- <br></br>Admin Staff:{" "}
+                  <span className="text-white  px-1.5 ">Mantu Ji (8986162721)</span> & <br></br>Bus Manager BSRTC:{" "}
+                  <span className="text-white  px-1.5 ">Rajeev Ji (6201957967)</span>
+                </p>
+              </div>
+              <div className="flex items-start gap-1.5">
+                <strong className="text-amber-300 shrink-0">2.)</strong>
+                <p>
+                  When boarding the bus outside campus, keep your <span className="text-white font-bold">ID Card</span> handy or you may not be allowed on board.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* iOS-Style Pill Toggle Controls (Mono Dark Contrast Shift) */}
-          <div className="flex justify-center p-1 bg-[#121212] border border-zinc-800 rounded-2xl max-w-[280px] mx-auto shadow-inner">
+          <div className="flex justify-center gap-1 p-1 bg-zinc-950/80 border border-zinc-900/80 rounded-2xl  shadow-inner">
             <button 
               onClick={() => setActiveTab("weekdays")} 
-              className={`flex-1 py-2 px-4 rounded-xl font-bold text-xs tracking-wider uppercase transition-all duration-300 transform active:scale-95 ${
+              className={`flex-1 py-2 px-4 rounded-xl font-bold text-xs tracking-normal uppercase transition-all duration-300 transform active:scale-95 ${
                 activeTab === "weekdays" 
                   ? "bg-[#2A2A2A] text-white border border-zinc-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] font-extrabold" 
                   : "text-zinc-500 hover:text-zinc-300"
@@ -218,7 +224,7 @@ export default function BusPage() {
             </button>
             <button 
               onClick={() => setActiveTab("weekends")} 
-              className={`flex-1 py-2 px-4 rounded-xl font-bold text-xs tracking-wider uppercase transition-all duration-300 transform active:scale-95 ${
+              className={`flex-1 py-2 px-4 rounded-xl font-bold text-xs tracking-normal uppercase transition-all duration-300 transform active:scale-95 ${
                 activeTab === "weekends" 
                   ? "bg-[#2A2A2A] text-white border border-zinc-700 shadow-[0_2px_10px_rgba(0,0,0,0.5)] font-extrabold" 
                   : "text-zinc-500 hover:text-zinc-300"
@@ -252,30 +258,30 @@ export default function BusPage() {
                 return (
                   <div 
                     key={idx} 
-                    className="group bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] border border-zinc-900 hover:border-zinc-700 rounded-2xl shadow-2xl transition-all duration-300 flex flex-col overflow-hidden transform hover:-translate-y-0.5 active:scale-[0.99]"
+                    className="group  border border-zinc-700 hover:border-zinc-500 rounded-2xl shadow-2xl transition-all duration-300 flex flex-col overflow-hidden transform hover:-translate-y-0.5 active:scale-[0.99]"
                   >
                     {/* Card App-Header (Raised Contrast clickable layer) */}
-                    <div className="bg-[#161616] p-3 border-b border-zinc-900 shrink-0">
+                    <div className="bg-[#161616] p-2.5 pt-1 pb-1 border-b border-zinc-700 shrink-0">
                       <div className="flex items-center justify-between gap-2">
-                        <h3 className="font-extrabold text-sm sm:text-base text-zinc-100 flex items-center gap-1.5 tracking-tight group-hover:text-white transition-colors">
+                        <h3 className="font-extrabold text-md sm:text-base text-zinc-100 flex items-center gap-1.5 tracking-tight group-hover:text-white transition-colors">
                           <span className="text-base">🚌</span> {bus.busName}
                         </h3>
                         {bus.busNumber && (
-                          <span className="text-[10px] bg-zinc-800 text-zinc-300 px-2 py-0.5 rounded-lg border border-zinc-700 font-mono font-black tracking-wider shadow-xs uppercase">
+                          <span className="text-[12px] bg-zinc-700/60 text-slate-200 px-2 py-1 rounded-lg border border-zinc-600 font-mono font-black tracking-normal shadow-xs uppercase">
                             {bus.busNumber}
                           </span>
                         )}
                       </div>
-                      <div className="flex items-center justify-between mt-2 pt-1.5 border-t border-zinc-900/60">
-                        <p className="text-xs text-zinc-400 font-medium truncate max-w-[60%]">
+                      <div className="flex items-center justify-between mt-0 pt-1 border-t border-zinc-900/10">
+                        <p className="text-md text-zinc-300 font-medium truncate max-w-[60%]">
                           <span className="text-zinc-500">👤</span> {bus.driverInfo}
                         </p>
                         {bus.contact && bus.contact !== "N/A" ? (
                           <a 
                             href={`tel:${bus.contact}`} 
-                            className="text-[11px] bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-lg font-mono font-bold border border-emerald-500/20 transition-all active:scale-95 flex items-center gap-1"
+                            className="text-[12px] bg-emerald-400/20 hover:bg-emerald-500/30 text-emerald-500 px-1.5 py-1 rounded-lg font-mono font-bold border border-emerald-500/50 transition-all active:scale-95 flex items-center gap-1"
                           >
-                            📞 {bus.contact}
+                            🤙 {bus.contact}
                           </a>
                         ) : (
                           <span className="text-[11px] text-zinc-600 font-mono">No Mobile Contact</span>
@@ -284,7 +290,7 @@ export default function BusPage() {
                     </div>
 
                     {/* Inside Schedule Scroll List */}
-                    <div className="p-2.5 flex-1 overflow-y-auto max-h-64 bg-[#070707] style-scrollbar">
+                    <div className="p-3 flex-1 overflow-y-auto max-h-64 bg-gradient-to-br from-blue-900/50 to-black  bg-gradient-to-tr from-pink-800/10 to-black/50 style-scrollbar">
                       <div className="space-y-1.5">
                         <div className="flex justify-between text-[10px] text-zinc-500 font-extrabold uppercase tracking-widest px-2 pb-1 border-b border-zinc-900">
                           <span>Departure</span>

@@ -59,21 +59,35 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
     return Date.parse(dateStr) || 0;
   };
 
-  // 🎬 NEW: Effect handler to schedule exit and entry animations gracefully
+  // 🎬 EDITED: Effect handler to schedule animations AND lock background scroll
   useEffect(() => {
     if (isOpen) {
       setShouldRender(true);
-      // Small timeout to allow DOM mounting before trigger classes toggle
+      
+      // 🔒 FREEZE the background page scroll immediately when opening
+      document.body.classList.add("overflow-hidden");
+      
       const timer = setTimeout(() => setAnimate(true), 10);
       return () => clearTimeout(timer);
     } else {
       setAnimate(false);
-      // Wait exactly 300ms (matching duration-300 below) before unmounting completely
+      
+      // 🔓 RESTORE the background page scroll immediately when closing
+      document.body.classList.remove("overflow-hidden");
+      
       const timer = setTimeout(() => setShouldRender(false), 300);
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
 
+  // 🛡️ SAFETY CLEANUP: Add this right below the block above.
+  // This ensures if a student switches pages or logs out while the modal is open, 
+  // the background scroll is automatically restored.
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, []);
   useEffect(() => {
     if (!isOpen) return;
 
@@ -219,7 +233,7 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
     <div 
       onClick={onClose}
       // 🛠️ CHANGED: Dynamic transition for background opacity
-      className={`fixed inset-0 bg-sky/80 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 z-[100] pointer-events-auto transition-opacity duration-300 ease-out ${
+      className={`fixed inset-0 bg-sky/80 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4 z-[100] pointer-events-auto transition-opacity duration-300 ease-out ${
         animate ? "opacity-100" : "opacity-0"
       }`}
      >
@@ -276,7 +290,7 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
             <div className="text-center py-20 select-none">
               <span className="text-4xl filter grayscale opacity-30">🏜️</span>
               <p className="text-xs font-black uppercase tracking-widest text-zinc-500 mt-4">Buffer Vacant</p>
-              <p className="text-[10px] text-zinc-600 mt-1 max-w-[220px] mx-auto leading-relaxed">No otice for you.</p>
+              <p className="text-[10px] text-zinc-600 mt-1 max-w-[220px] mx-auto leading-relaxed">No Notice for you.</p>
             </div>
           ) : (
             notices.map((notice, index) => {

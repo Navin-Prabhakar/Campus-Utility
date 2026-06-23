@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Prevent background scrolling */
+.no-scroll {
+  overflow: hidden;
+  /* Optional: prevents page layout shifting if a scrollbar disappears */
+  touch-action: none; 
+}

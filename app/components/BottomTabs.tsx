@@ -7,11 +7,11 @@ import { useSession } from "next-auth/react";
 
 // colour of tabs:
 const tabGradients = [
-  "from-sky-400 to-purple-700",  // Tab 0 (Bus) -> Fresh Green/Teal
-  "from-emerald-400 to-indigo-700",   // Tab 1 (Store) -> Warm Amber/Gold
-  "from-purple-500 to-indigo-800",     // Tab 2 (Mess) -> Appetizing Rose/Red
-  "from-emerald-400 to-indigo-700",      // Tab 3 (Cab) -> Cool Sky Blue
-  "from-sky-400 to-purple-700", // Tab 4 (Schedule) -> Royal Purple/Indigo
+  "from-sky-400 to-purple-700",  
+  "from-emerald-400 to-indigo-700",   
+  "from-purple-500 to-indigo-800",     
+  "from-emerald-400 to-indigo-700",     
+  "from-sky-400 to-purple-700", 
 ];
 
 export default function BottomTabs() {
@@ -31,7 +31,7 @@ export default function BottomTabs() {
       // Safe boundaries for mobile elastic-bouncing tracking layouts (iOS Safari)
       if (currentScrollY < 0) return;
 
-      // 🎯 THE BOTTOM DETECTION TRAP:
+      // THE BOTTOM DETECTION TRAP:
       // Evaluates fractional view offsets dynamically to force container visibility 
       // when hitting the base threshold limit (with a safe 3px display matrix buffer).
       const isAtAbsoluteBottom = (currentScrollY + windowHeight) >= (totalDocumentHeight - 3);
@@ -66,11 +66,11 @@ export default function BottomTabs() {
   }
 
   return (
-    // 🛠️ MODIFIED: Injected transition tracking mechanics alongside cubic-bezier acceleration settings
+    //  Injected transition tracking mechanics alongside cubic-bezier acceleration settings
     <footer className={`fixed bottom-0 left-0 w-full px-0 pb-0 pt-8 bg-gradient-to-t from-[#050608] via-[#0A0B12]/95 to-transparent z-50 pointer-events-none transition-transform duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] ${
       isVisible ? "translate-y-0" : "translate-y-full"
     }`}>
-      <div className="mx-auto grid grid-cols-5 w-full max-w-md items-center bg-slate-950 backdrop-blur-3xl border border-slate-900 p-0 rounded-1xl shadow-[0_12px_40px_rgba(5,4,6,0.7),0_0_30px_rgba(90,102,241,0.15)] pointer-events-auto">
+      <div className="mx-auto grid grid-cols-5 w-full max-w-md items-center bg-slate-950 backdrop-blur-3xl border border-slate-900 p-0 rounded-xl shadow-[0_12px_40px_rgba(5,4,6,0.7),0_0_30px_rgba(90,102,241,0.15)] pointer-events-auto">
         {Array.from({ length: 5 }).map((_, index) => {
           const isActive = 
             (index === 0 && pathname === "/bus") ||
@@ -103,7 +103,7 @@ export default function BottomTabs() {
                 <img
                   src={src}
                   alt={alt}
-                  className="h-9 w-9 object-contain transition-all duration-200 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]" 
+                  className="h-7 w-9 object-contain transition-all duration-200 filter drop-shadow-[0_2px_6px_rgba(0,0,0,0.4)]" 
                 />
               </div>
               
