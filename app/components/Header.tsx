@@ -87,14 +87,14 @@ export default function Header({ messActionSlot }: HeaderProps) {
     }`}>
       {/* Upper Header */}
       {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
-      <div className="flex h-12 items-center justify-between bg-black px-2 text-white pointer-events-auto">
-        <div className="flex items-center gap-2 text-xl font-semibold">
+      <div className="flex h-12 items-center justify-between bg-sky-900 px-2 text-white pointer-events-auto">
+        <div className="flex items-center gap-1.5 text-xl font-semibold">
           <Image
             src="/iitp-logo.png"
             alt="IIT Patna logo"
             width={1080}
             height={1080}
-            className="h-10 w-10"
+            className="h-9 w-9"
           />
           IITP Unofficial
         </div>
@@ -183,7 +183,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
 
       {/* Lower Header */}
       {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
-      <div className="flex h-8 bg-zinc-900 items-center justify-between px-2 pointer-events-auto">
+      <div className="flex h-8 bg-sky-900 items-center justify-between px-2 pointer-events-auto">
         <div className="flex items-center gap-2">
           {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
           <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-100 ${

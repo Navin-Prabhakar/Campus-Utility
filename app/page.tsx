@@ -14,6 +14,7 @@ interface Next4BusItem {
   name: string;
   route: string;
   time: string;
+  contact?: string;
 }
 
 function SearchParamsHandler({ setShowReportModal }: { setShowReportModal: (val: boolean) => void }) {
@@ -37,7 +38,7 @@ export default function Home() {
   const [showDevModal, setShowDevModal] = useState(false);
   const [showReportModal, setShowReportModal] = useState(false); 
 
-  // 🎂 Universal Search System States
+  //  Universal Search System States
   const [showBirthdayPanel, setShowBirthdayPanel] = useState(false);
   const [birthdayList, setBirthdayList] = useState([]);
   const [fetchingBirthdays, setFetchingBirthdays] = useState(false);
@@ -140,6 +141,24 @@ export default function Home() {
                 rawBusName = rows[nameRowIdx]?.[colIndex - 1]?.trim() || rows[nameRowIdx]?.[colIndex - 2]?.trim() || "";
               }
 
+              // 📞 Robust Contact Parsing with Next-Row Lookahead Lookups
+              let rawContact = "";
+              for (let i = 0; i < 40; i++) {
+                const cellVal = rows[i]?.[colIndex]?.trim() || "";
+                const cellLower = cellVal.toLowerCase();
+                
+                if (cellLower.includes("contact") || (i === 18 && cellVal !== "" && /\d+/.test(cellVal))) {
+                  if (cellLower.replace(/[^a-z]/g, "") === "contact" && rows[i + 1]?.[colIndex]) {
+                    rawContact = rows[i + 1][colIndex].trim();
+                  } else {
+                    rawContact = cellVal;
+                  }
+                }
+              }
+              
+              let contactDigits = rawContact.replace(/\D/g, "");
+              const cleanContact = contactDigits.length >= 10 ? contactDigits.slice(-10) : "";
+
               if (!rawBusName || rawBusName.toLowerCase().includes("contact") || rawBusName.toLowerCase().includes("driver")) {
                 if (colIndex === 2) rawBusName = "Bus 01";
                 else if (colIndex === 6) rawBusName = "Bus 02";
@@ -186,6 +205,7 @@ export default function Home() {
                     name: busName,
                     route: `${from} ➔ ${to}`,
                     time: cleanTime,
+                    contact: cleanContact,
                   });
                 }
               }
@@ -230,12 +250,12 @@ export default function Home() {
       className="min-h-screen w-full font-sans text-zinc-300 antialiased flex flex-col items-center justify-between relative selection:bg-zinc-800 selection:text-white"
       style={{
         backgroundImage: `
-          radial-gradient(circle at top left, rgba(8, 9, 63, 0.6), transparent 50%),
-          radial-gradient(circle at top right, rgba(16, 46, 22, 0.81), transparent 50%),
-          radial-gradient(circle at bottom left, rgba(21, 40, 20, 0.7), transparent 50%),
-          radial-gradient(circle at bottom right, rgba(56, 18, 18, 0.9), transparent 50%)
-        `,
-        backgroundColor: '#171722' /* Fallback deep base color for the center blend */
+          radial-gradient(circle at top left, rgba(30 58 138 / 0.6), transparent 50%),
+          radial-gradient(circle at top right, rgba(16, 60, 27, 0.8), transparent 50%),
+          radial-gradient(circle at bottom left, rgba(18, 41, 18, 0.95), transparent 50%),
+          radial-gradient(circle at bottom right, rgba(25, 29, 81, 0.82), transparent 50%)
+          `,
+        backgroundColor: '#2d162f'
       }}
     >
       
@@ -245,60 +265,76 @@ export default function Home() {
 
       <div className="w-full flex flex-col items-center">
         {/* 📜 APP WINDOW MIDDLE TRACK CONTAINER */}
-        <main className="flex flex-col items-center justify-start py-5 w-[92%] max-w-[350px]">
-          <div className="w-full rounded-2xl border border-zinc-900/60 bg-gradient-to-b from-[#0F0F0F]/90 to-[#0A0A0A]/90 p-3 shadow-xl backdrop-blur-md">
+        <main className="flex flex-col items-center justify-start py-21 w-[96%] max-w-[350px]">
+          <div className="w-full rounded-3xl border border-zinc-500 bg-gradient-to-tr from-purple-900/40 to-zinc-950 p-3 shadow-xl backdrop-blur-xl">
             
-            <div className="mb-2.5 flex items-center justify-between border-b border-zinc-900 pb-2 px-1">
+            <div className="mb-1.5 flex items-center justify-between border-b border-zinc-600 pb-2 px-1">
               <div className="flex items-center gap-1.5">
-                <span className={`h-1.5 w-1.5 rounded-full ${error ? 'bg-rose-500 shadow-[0_0_8px_#f43f5e]' : 'bg-[#10B981] shadow-[0_0_8px_#10b981] animate-pulse'}`} />
-                <h2 className="text-[10px] font-black uppercase tracking-widest text-zinc-400">
-                  Next 4 Upcoming Buses
+                <span className="text-[10px] bg-rose-600/90 text-rose-100 animate-pulse border border-rose-700 font-black px-1.5 py-0.5 rounded-lg uppercase tracking-wider">
+                  Live
+                </span>
+                <h2 className="text-[14px] font-black uppercase tracking-wider text-zinc-200">
+                   Upcoming _ Buses
                 </h2>
               </div>
-              <span className="text-[9px] bg-rose-950/40 text-rose-400 border border-rose-900/30 font-black px-2 py-0.5 rounded-lg uppercase tracking-wider">
-                Live
-              </span>
+              
             </div>
 
             <div className="flex flex-col gap-1.5 w-full">
               {loading ? (
                 [...Array(4)].map((_, i) => (
-                  <div key={i} className="h-11 w-full animate-pulse rounded-xl bg-[#121212]/50 border border-zinc-900/50" />
+                  <div key={i} className="h-13 w-full animate-pulse rounded-xl bg-[#121212]/50 border border-zinc-600/80" />
                 ))
               ) : error ? (
-                <div className="py-4 text-center text-[11px] font-bold text-rose-400 bg-rose-950/10 rounded-xl border border-rose-900/20 uppercase tracking-wide">
-                  🚨 Connection Error.
+                <div className="py-4 text-center text-[13px] font-bold text-rose-400 bg-rose-950/10 rounded-xl border border-rose-900/20 uppercase tracking-wide">
+                  ⚠️ Connection Error.
                 </div>
               ) : upcomingBuses.length === 0 ? (
-                <div className="py-4 text-center text-[11px] text-zinc-500 font-medium italic bg-[#121212]/40 rounded-xl border border-dashed border-zinc-900">
+                <div className="py-4 text-center text-[13px] text-zinc-500 font-medium italic bg-[#121212]/40 rounded-xl border border-dashed border-zinc-900">
                   No active routes found.
                 </div>
               ) : (
                 upcomingBuses.map((bus) => (
                   <div 
                     key={bus.id} 
-                    className="flex items-center justify-between rounded-xl border border-zinc-900/40 bg-[#121212]/40 px-3 py-2 transition-all transform hover:-translate-y-0.5 active:scale-[0.99] backdrop-blur-xs"
+                    className="flex items-center justify-between rounded-xl border border-zinc-500 bg-slate-800 px-2 py-2  gap-3"
                   >
-                    <div className="flex flex-col min-w-0 pr-1.5">
-                      <span className="truncate text-[11px] font-black text-white leading-tight">
-                        Bus {bus.name}
+                    {/* Left details pane: Bus identification header and routing track text matrices */}
+                    <div className="flex flex-col min-w-0 flex-1">
+                      <span className="truncate text-[14px] font-black text-white leading-tight">
+                        {bus.name}
                       </span>
-                      <span className="truncate text-[9px] text-zinc-400 mt-1 font-bold tracking-tight">
+                      <span className="truncate text-[11px] text-zinc-200 mt-1.5 font-bold tracking-tight">
                         {bus.route}
                       </span>
                     </div>
-                    <span className="shrink-0 font-mono text-[11px] font-extrabold text-[#F59E0B] bg-amber-500/5 border border-amber-500/10 px-2 py-0.5 rounded-lg shadow-xs">
-                      {bus.time}
-                    </span>
+                    
+                    {/* Right action block: Departure runtime parameter matrix layout with call trigger underneath */}
+                    <div className="flex flex-col items-end shrink-0 gap-1">
+                      <span className="font-mono text-[13px] font-extrabold text-yellow-500 bg-amber-200/20 border border-amber-500/20 px-2 py-0.5 rounded-lg shadow-xs leading-none">
+                        {bus.time}
+                      </span>
+                      {bus.contact ? (
+                        <a 
+                          href={`tel:${bus.contact}`}
+                          className="text-[11px] bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-500 px-1 py-0.5 rounded border border-emerald-500/40 font-mono tracking-tight transition-all duration-150 flex items-center gap-0.5"
+                          title="Call Driver"
+                        >
+                          🤙 {bus.contact}
+                        </a>
+                      ) : (
+                        <span className="text-[9px] text-zinc-500 font-mono tracking-tight">No Mobile Contact</span>
+                      )}
+                    </div>
                   </div>
                 ))
               )}
             </div>
 
-            <div className="mt-3 px-0.5">
+            <div className="mt-3 ">
               <Link 
                 href="/bus"
-                className="flex w-full items-center justify-center rounded-xl bg-zinc-800/80 hover:bg-zinc-700/90 border border-zinc-700/50 py-2.5 text-[11px] font-black uppercase tracking-widest text-white transition-all shadow-md active:scale-95"
+                className="flex w-full items-center justify-center rounded-2xl bg-zinc-700 hover:bg-zinc-800 border border-zinc-400/80 py-2 text-[14px] font-black tracking-wide text-white transition-all transform hover:-translate-y-0.5 active:scale-[0.99] backdrop-blur-xs "
               >
                 View Full Schedule
               </Link>
@@ -311,14 +347,14 @@ export default function Home() {
       {/* 🚨 FLOATING ROUND RED TRIGGER ISSUE BUTTON */}
       <button
         onClick={() => setShowReportModal(true)}
-        className="fixed right-6 bottom-24 h-12 w-12 bg-gradient-to-b from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white flex items-center justify-center rounded-full font-black shadow-[0_4px_15px_rgba(244,63,94,0.3)] border border-rose-500/30 active:scale-90 transition-all duration-150 cursor-pointer text-base z-[90] select-none"
+        className="fixed right-3 bottom-18 h-12 w-12 bg-gradient-to-tl from-red-600 to-purple-700/90 hover:from-violet-700 hover:to-pink-700 text-white flex items-center justify-center rounded-full font-black  active:scale-90 transition-all duration-150 cursor-pointer text-base z-[90] select-none"
         title="Open Report System"
       >
-        🚨
+        ⚠️
       </button>
 
-      {/* FOOTER LAYER DEVELOPER METRICS SIGN POST AREA */}
-      <div className="w-full flex justify-center py-2 pb-28 shrink-0 z-10 relative select-none">
+      {/* FOOTER LAYER DEVELOPER SIGN AREA */}
+      <div className="w-full flex justify-center py-2 pb-16 shrink-0 z-10 relative select-none">
         <button
           onClick={() => {
             setAccessDeniedMessage("");
@@ -326,9 +362,9 @@ export default function Home() {
             setBirthdayList([]);
             setShowDevModal(true);
           }}
-          className="text-[11px] font-black uppercase tracking-wider text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1.5 px-4 rounded-xl hover:bg-white/5"
+          className="text-[11px] font-black  tracking-wide text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1.5 px-4 rounded-xl hover:bg-white/5"
         >
-          Developer Node Info
+          Developer Info...
         </button>
       </div>
 
@@ -478,7 +514,7 @@ export default function Home() {
       {/* Internal Custom Micro-Scrollbars */}
       <style jsx global>{`
         .style-scrollbar::-webkit-scrollbar {
-          width: 5px;
+          width: 4px;
         }
         .style-scrollbar::-webkit-scrollbar-track {
           background: transparent;
