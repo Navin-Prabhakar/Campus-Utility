@@ -18,8 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Campus Utility - IIT Patna",
+  title: "Campus_Utility - IIT Patna",
   description: "Unofficial utility application for IITP students",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default async function RootLayout({
