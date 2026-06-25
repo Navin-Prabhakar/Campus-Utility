@@ -58,6 +58,29 @@ export default async function RootLayout({
 
         </AuthSessionProvider>
         <Analytics />
+
+        {/* 🌐 GLOBAL SCROLLBAR ENGINE INJECTED HERE */}
+        <style dangerouslySetInnerHTML={{ __html: `
+          ::-webkit-scrollbar {
+            width: 1px; /* 👈 Set this to exactly how thick you want it (e.g., 6px, 8px, 10px) */
+            height: 6px; /* Thickness for horizontal scrolling if any */
+          }
+          
+          ::-webkit-scrollbar-track {
+            background: transparent;
+          }
+          
+          ::-webkit-scrollbar-thumb {
+            background: #0b6313;
+            border-radius: 20px;
+            border: 2px solid #0e0505; /* Seamless padding match against your bg-[#050505] background */
+            background-clip: padding-box;
+          }
+          
+          ::-webkit-scrollbar-thumb:hover {
+            background: #15a329;
+          }
+        `}} />
       </body>
     </html>
   );

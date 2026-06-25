@@ -44,7 +44,7 @@ export default function Home() {
   const [fetchingBirthdays, setFetchingBirthdays] = useState(false);
   const [accessDeniedMessage, setAccessDeniedMessage] = useState("");
 
-  const ALLOWED_DEVELOPERS = ["navin_2503ai02@iitp.ac.in"];
+  const ALLOWED_DEVELOPERS = ["navin_2504ai02@iitp.ac.in"];
 
   const isLocalhost = typeof window !== "undefined" && window.location.hostname === "localhost";
   const isDeveloper = isLocalhost || (realSession?.user?.email && ALLOWED_DEVELOPERS.includes(realSession.user.email));
@@ -297,7 +297,7 @@ export default function Home() {
                 upcomingBuses.map((bus) => (
                   <div 
                     key={bus.id} 
-                    className="flex items-center justify-between rounded-xl border border-zinc-500 bg-slate-800 px-2 py-2  gap-3"
+                    className="flex items-center justify-between rounded-xl border border-zinc-700 bg-slate-800 px-2 py-2  gap-3"
                   >
                     {/* Left details pane: Bus identification header and routing track text matrices */}
                     <div className="flex flex-col min-w-0 flex-1">
@@ -344,7 +344,7 @@ export default function Home() {
         </main>
       </div>
 
-      {/* 🚨 FLOATING ROUND RED TRIGGER ISSUE BUTTON */}
+      {/* FLOATING ROUND RED TRIGGER ISSUE BUTTON */}
       <button
         onClick={() => setShowReportModal(true)}
         className="fixed right-3 bottom-18 h-12 w-12 bg-gradient-to-tl from-red-600 to-purple-700/90 hover:from-violet-700 hover:to-pink-700 text-white flex items-center justify-center rounded-full font-black  active:scale-90 transition-all duration-150 cursor-pointer text-base z-[90] select-none"
@@ -354,7 +354,7 @@ export default function Home() {
       </button>
 
       {/* FOOTER LAYER DEVELOPER SIGN AREA */}
-      <div className="w-full flex justify-center py-2 pb-16 shrink-0 z-10 relative select-none">
+      <div className="w-full flex justify-center py-2 pb-15 shrink-0 z-10 relative select-none">
         <button
           onClick={() => {
             setAccessDeniedMessage("");
@@ -362,7 +362,7 @@ export default function Home() {
             setBirthdayList([]);
             setShowDevModal(true);
           }}
-          className="text-[11px] font-black  tracking-wide text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1.5 px-4 rounded-xl hover:bg-white/5"
+          className="text-[10px] font-black  tracking-wide text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1 px-4 rounded-xl hover:bg-white/10"
         >
           Developer Info...
         </button>
@@ -371,7 +371,7 @@ export default function Home() {
       {/* DEVELOPER MODAL INTERFACE DRAWER */}
       {showDevModal && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-[100] animate-in fade-in duration-150">
-          <div className="bg-[#0A0A0A] rounded-2xl p-5 w-full max-w-[280px] shadow-2xl border border-zinc-900 flex flex-col items-center relative transform overflow-hidden">
+          <div className="bg-gradient-to-t from-slate-700/90 to-slate-950 rounded-2xl p-3 w-full max-w-[280px] shadow-2xl border border-zinc-800 flex flex-col items-center relative transform overflow-hidden">
             
             {accessDeniedMessage && (
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[92%] z-50 rounded-xl bg-rose-950 border border-rose-500 text-center text-[10px] font-black uppercase tracking-wider text-rose-200 px-2.5 py-2 shadow-2xl animate-pulse">
@@ -381,7 +381,7 @@ export default function Home() {
 
             <button 
               onClick={() => setShowDevModal(false)}
-              className="absolute top-3 right-4 text-zinc-500 hover:text-white text-xs font-black transition-colors cursor-pointer z-40"
+              className="absolute top-3 right-4 text-zinc-400 hover:text-red-600/90 text-sm font-black transition-colors cursor-pointer z-40"
               aria-label="Close layout panel"
             >
               ✕
@@ -389,35 +389,35 @@ export default function Home() {
 
             <button
               onClick={handleBirthdayClick}
-              className={`mb-3 flex h-8 w-8 items-center justify-center rounded-xl text-sm border transition-all hover:scale-110 active:scale-95 duration-200 cursor-pointer select-none ${
-                showBirthdayPanel ? 'bg-rose-950 border-rose-500 text-white' : 'bg-[#161616] border-zinc-800 text-white'
+              className={`mb-3 mr-30 flex h-9 w-9 items-center justify-center rounded-2xl text-2xl border transition-all hover:scale-110 active:scale-95 duration-200 cursor-pointer select-none ${
+                showBirthdayPanel ? 'bg-rose-600/30 border-rose-500/30 text-white' : 'bg-zinc-800 border-zinc-700 text-white'
               }`}
               title="Toggle Student Finder"
             >
               🎂
             </button>
 
-            <div className="w-44 h-48 relative rounded-2xl overflow-hidden bg-zinc-900 mb-3 border border-zinc-800/80 shadow-inner">
+            <div className="w-50 h-56 relative rounded-2xl overflow-hidden bg-purple-900/60 mb-3 border border-zinc-700/80 shadow-inner">
               <img 
-                src="/dev-avatar.jpg" 
+                src="/dev-avatar.png" 
                 alt="Developer's Profile"
-                className="w-full h-full object-cover grayscale opacity-80"
+                className="w-full h-full object-cover opacity-85"
               />
             </div>
 
             <h3 className="text-sm font-black text-zinc-100 tracking-wide mb-0">~Prabhakar</h3>
-            <p className="text-[9px] text-zinc-500 font-mono font-black uppercase tracking-widest mb-3.5">2503AI02</p>
+            <p className="text-[9px] text-zinc-400 font-mono font-black uppercase tracking-wider mb-2.5">2503AI02</p>
 
-            <div className="w-full border-t border-zinc-900" />
+            <div className="w-full border-t border-zinc-950" />
 
-            <div className="flex items-center gap-4 mt-3 mb-1 select-none">
+            <div className="flex items-center gap-5 mt-2 mb-1 select-none">
               <a 
                 href="https://github.com/Navin-Prabhakar" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="p-2 bg-[#161616] hover:bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-800/60 rounded-xl transition-all shadow-md active:scale-90"
+                className="p-2 bg-zinc-600 hover:bg-zinc-900 text-zinc-100 hover:text-white border border-zinc-500 rounded-xl transition-all shadow-md active:scale-90 hover:scale-110"
               >
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.061.069-.061 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
                 </svg>
               </a>
@@ -426,9 +426,9 @@ export default function Home() {
                 href="https://www.linkedin.com/in/navin-prabhakar-5b5070388/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="p-2 bg-[#161616] hover:bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-800/60 rounded-xl transition-all shadow-md active:scale-90"
+                className="p-2 bg-blue-600 hover:bg-blue-700 text-blue-100 hover:text-white/90 border border-zinc-500 rounded-xl transition-all shadow-md active:scale-90 hover:scale-110"
               >
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                 </svg>
               </a>
@@ -437,9 +437,9 @@ export default function Home() {
                 href="https://instagram.com/prabhakar_2201" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="p-2 bg-[#161616] hover:bg-zinc-900 text-zinc-500 hover:text-white border border-zinc-800/60 rounded-xl transition-all shadow-md active:scale-90"
+                className="p-2 bg-pink-600 hover:bg-pink-700/90 text-zinc-100 hover:text-white border border-zinc-500 rounded-xl transition-all shadow-md active:scale-90 hover:scale-110"
               >
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                   <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
                 </svg>
               </a>
@@ -447,30 +447,30 @@ export default function Home() {
 
             {/* HIDDEN INJECTED ADMIN TERMINAL LAYOUT PANEL */}
             {showBirthdayPanel && isDeveloper && (
-              <div className="mt-4 w-full rounded-xl bg-black p-3 border border-zinc-800 text-left animate-in fade-in zoom-in-95 duration-150">
+              <div className="mt-2 w-full rounded-xl bg-black p-3 border border-zinc-800 text-left animate-in fade-in zoom-in-95 duration-150">
                 
-                <div className="flex items-center justify-between border-b border-zinc-900 pb-2 mb-2.5">
-                  <h4 className="text-[10px] font-black uppercase tracking-widest text-zinc-400">🔍 Student DB Terminal</h4>
+                <div className="flex items-center justify-between border-b border-zinc-700 pb-1 mb-2">
+                  <h4 className="text-[14px] font-black  tracking- text-zinc-300">🔍 Student's DOB Finder</h4>
                 </div>
 
-                <div className="flex gap-1.5 mb-2.5">
+                <div className="flex gap-2 mb-3">
                   <input
                     type="text"
-                    placeholder="Search query params..."
+                    placeholder="Search Name/Roll No."
                     id="universalSearchInput"
                     onKeyDown={(e) => {
                       if (e.key === "Enter") {
                         executeSearchQuery((e.target as HTMLInputElement).value);
                       }
                     }}
-                    className="w-full bg-[#121212] border border-zinc-800 rounded-lg px-2 py-1.5 text-[10px] text-white placeholder-zinc-600 font-medium outline-hidden focus:border-zinc-700 shadow-inner"
+                    className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-1.5 text-[12px] text-white placeholder-zinc-500 font-medium outline-hidden focus:border-zinc-700 shadow-inner"
                   />
                   <button
                     onClick={() => {
                       const inputEl = document.getElementById("universalSearchInput") as HTMLInputElement;
                       executeSearchQuery(inputEl?.value || "");
                     }}
-                    className="bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-[10px] px-3 rounded-lg font-black text-white transition active:scale-95 cursor-pointer"
+                    className="bg-green-700/90 hover:bg-green-600 border border-zinc-700 text-[10px] px-3 rounded-lg font-black text-white transition active:scale-95 cursor-pointer"
                   >
                     {fetchingBirthdays ? "⏳" : "Go"}
                   </button>
@@ -478,7 +478,7 @@ export default function Home() {
 
                 <div className="max-h-36 overflow-y-auto style-scrollbar">
                   {birthdayList.length === 0 ? (
-                    <p className="text-[9px] text-zinc-600 text-center py-4 font-medium italic">
+                    <p className="text-[10px] text-zinc-600 text-center py-4 font-medium italic">
                       {fetchingBirthdays ? "Querying isolated table matrices..." : "Awaiting parameter inputs..."}
                     </p>
                   ) : (
@@ -487,9 +487,9 @@ export default function Home() {
                         <li key={idx} className="flex flex-col rounded-xl bg-[#121212]/80 p-2 border border-zinc-900 text-[10px]">
                           <div className="flex justify-between items-start gap-2">
                             <span className="font-black text-zinc-200 truncate">{student.name}</span>
-                            <span className="text-[9px] font-mono font-black text-amber-500 shrink-0 bg-amber-500/5 border border-amber-500/10 px-1 rounded">{student.birthday}</span>
+                            <span className="text-[11px] font-mono font-black text-amber-500 shrink-0 bg-amber-500/5 border border-amber-500/10 px-1 rounded">{student.birthday}</span>
                           </div>
-                          <div className="flex justify-between items-center text-[8px] font-mono font-bold text-zinc-500 uppercase mt-1 pt-1 border-t border-zinc-900/40">
+                          <div className="flex justify-between items-center text-[10px] font-mono font-bold text-zinc-500 uppercase mt-1 pt-1 border-t border-zinc-900/40">
                             <span>{student.roll}</span>
                             <span className="text-zinc-400 font-sans normal-case font-black">{student.gender}</span>
                           </div>
@@ -510,23 +510,6 @@ export default function Home() {
         isOpen={showReportModal} 
         onClose={() => setShowReportModal(false)} 
       />
-
-      {/* Internal Custom Micro-Scrollbars */}
-      <style jsx global>{`
-        .style-scrollbar::-webkit-scrollbar {
-          width: 4px;
-        }
-        .style-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .style-scrollbar::-webkit-scrollbar-thumb {
-          background: #108b22;
-          border-radius: 20px;
-        }
-        .style-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #333333;
-        }
-      `}</style>
     </div>
   );
 }

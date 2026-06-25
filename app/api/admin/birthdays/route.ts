@@ -4,7 +4,7 @@ import { authOptions } from "../../auth/[...nextauth]/route";
 import fs from "fs";
 import path from "path";
 
-const ALLOWED_DEVELOPERS = ["navin_2503ai02@iitp.ac.in"];
+const ALLOWED_DEVELOPERS = ["navin_2504ai02@iitp.ac.in"];
 
 export async function GET(request: Request) {
   try {

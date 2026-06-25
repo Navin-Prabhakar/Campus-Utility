@@ -88,7 +88,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
       {/* Upper Header */}
       {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
       <div className="flex h-12 items-center justify-between bg-sky-900 px-2 text-white pointer-events-auto">
-        <div className="flex items-center gap-1.5 text-xl font-semibold">
+        <div className="flex items-center gap-1.5 text-2xl font-semibold">
           <Image
             src="/iitp-logo.png"
             alt="IIT Patna logo"
@@ -123,7 +123,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
               user ? (
                 <button
                   onClick={() => setShowMenu(!showMenu)}
-                  className="flex items-center gap-1.5 rounded-full border border-purple-700/80 bg-white/10 px-0 py-0 transition hover:bg-white/20"
+                  className="flex items-center gap-1.5 rounded-full border border-zinc-700/80 bg-white/10 px-0 py-0 transition hover:bg-white/20"
                   aria-label="Profile menu"
                 >
                   <ProfileAvatar
@@ -186,7 +186,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
       <div className="flex h-8 bg-sky-900 items-center justify-between px-2 pointer-events-auto">
         <div className="flex items-center gap-2">
           {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
-          <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-100 ${
+          <div className={`rounded-xl items-center justify-between px-1.5 py-0.5 transition-colors duration-100 ${
             isHomeActive ? "bg-slate-300 text-zinc-800 " : "bg-zinc-600 text-white"
           }`}>
             <Link 
@@ -199,7 +199,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
           </div>
           
           {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
-          <div className={`rounded-xl items-center justify-between px-2 transition-colors duration-200 ${
+          <div className={`rounded-xl items-center justify-between px-1.5 py-0.5 transition-colors duration-200 ${
             isTourActive ? "bg-slate-300 text-zinc-800 " : "bg-zinc-600 text-white"
           }`}>
             <Link 
