@@ -231,37 +231,59 @@ export default function MessPage() {
   const todaysMenu = menuData.find(item => item.Day?.toLowerCase().trim() === selectedDay.toLowerCase());
 
   return (
-    <main className="h-full w-full bg-[#050505] font-sans text-zinc-300 antialiased flex flex-col justify-between relative overflow-hidden selection:bg-zinc-800 selection:text-white">
+    <main className="h-full w-full bg-zinc-950 bg-gradient-to-bl from-slate-700/20 to-violet-700/20 font-sans text-zinc-300 antialiased flex flex-col justify-between relative overflow-hidden selection:bg-zinc-800 selection:text-white">
       
-      {/* 🛠️ RESTORED: Sticky Control and Selection Bar Sitting Safely Below Global Header Layout */}
-      <div className="w-full bg-[#0C0C0C]/90 backdrop-blur-md border-b border-zinc-900 shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
-        <div className="w-[94%] max-w-[365px] py-2.5 flex justify-between items-center relative">
-          
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => handleDefaultToggle(!isDefaultChecked)}
-              title="Toggle Always Load by Default"
-              className={`h-5 w-5 rounded-md border flex items-center justify-center transition-all transform active:scale-[0.85] ${
-                isDefaultChecked 
-                  ? "bg-[#2A2A2A] border-zinc-600 text-[#10B981]" 
-                  : "bg-[#141414] border-zinc-800 text-transparent"
-              }`}
-            >
-              <span className="text-[10px] font-black leading-none select-none">✓</span>
-            </button>
-            <span className="text-[10px] font-black uppercase tracking-wider text-zinc-500">Set Default</span>
-          </div>
-
+      {/* Sticky Control and Selection Bar Sitting Safely Below Global Header Layout */}
+      <div className="w-full shrink-0 z-30 flex flex-col items-center">
+        {/* Adjusted this container to add gap-3 spacing between your elements */}
+        <div className="w-full max-w-[365px] pt-21 pr-1.5  pb-0 flex justify-end items-center gap-3 relative">
+          {selectedMess && (
+            <div className="pl-0.5 pr-0 rounded-xl bg-transparent p-1.5 shrink-0 flex flex-col items-center gap-1 select-none">
+              <a 
+                href={GOOGLE_SHEET_BROWSER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-1  text-[13px] font-black font-normal tracking-normal text-yellow-500/80 hover:text-blue-600 uppercase transition-colors"
+              >
+                <u>Update Mess Menu</u>↗
+              </a>
+            </div>
+          )}
           <div className="relative">
-            <button
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="h-7 px-3 bg-[#161616] hover:bg-[#222222] text-zinc-300 hover:text-white transition-colors text-[10px] font-black tracking-wider uppercase rounded-xl flex items-center gap-1.5 border border-zinc-800 active:scale-95 transform shadow-md"
-            >
-              <span>{selectedMess ? selectedMess.name : "Select Mess Stream"}</span> ▼
-            </button>
+            {/* --- Main Trigger Button with Nestled Checkbox --- */}
+            <div className="h-8 pl-1.5 pr-1.5 bg-zinc-700 hover:bg-zinc-800 text-zinc-200 hover:text-white transition-colors rounded-xl flex items-center gap-1 border border-zinc-600 shadow-md">
+              
+              {/* Inner Checkbox Wrapper */}
+              <div 
+                className="flex items-center gap-1 border-r border-zinc-600/80 pr-1.5 h-full"
+                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()} // Stops dropdown from toggling when clicking checkbox area
+              >
+                <button
+                  onClick={() => handleDefaultToggle(!isDefaultChecked)}
+                  title="Toggle Always Load by Default"
+                  className={`h-6 w-6 rounded-xl border flex items-center justify-center transition-all transform active:scale-[0.85] hover:scale-[105%] ${
+                    isDefaultChecked 
+                      ? "bg-black border-blue-600/90 animate-pulse text-green-500" 
+                      : "bg-emerald-600/70 border-zinc-800 text-transparent"
+                  }`}
+                >
+                  <span className="text-[14px] font-black leading-none select-none">✓</span>
+                </button>
+                
+              </div>
 
+              {/* Dropdown Toggle Target */}
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center gap-1.5 text-[12px] font-black tracking-wide uppercase h-full active:scale-95 transform transition-transform"
+              >
+                <span>{selectedMess ? selectedMess.name : "Select Mess Stream"}</span> ▼
+              </button>
+            </div>
+
+            {/* --- Dropdown Menu --- */}
             {isDropdownOpen && (
-              <div className="absolute right-0 top-full mt-2 w-44 bg-[#121212] border border-zinc-800 rounded-xl shadow-[0_10px_35px_rgba(0,0,0,0.8)] z-50 overflow-hidden divide-y divide-zinc-900/60 animate-in fade-in zoom-in-95 duration-100">
+              <div className="absolute right-0 top-full mt-0.5 w-34 bg-slate-950 border border-zinc-800 rounded-xl z-50 overflow-hidden divide-y divide-zinc-800 animate-in fade-in zoom-in-105 duration-100">
                 {MESS_CONFIG.map((mess) => (
                   <button
                     key={mess.id}
@@ -269,9 +291,12 @@ export default function MessPage() {
                       setSelectedMess(mess);
                       const savedId = localStorage.getItem("user-default-mess");
                       setIsDefaultChecked(savedId === mess.id);
+                      setIsDropdownOpen(false);
                     }}
-                    className={`w-full text-left px-4 py-2.5 text-[11px] font-bold block transition-colors ${
-                      selectedMess?.id === mess.id ? "bg-[#1A1A1A] text-[#10B981]" : "text-zinc-400 hover:bg-[#161616] hover:text-white"
+                    className={`w-full text-left px-3 py-1.5 rounded-lg text-[13px] font-bold block transition-colors ${
+                      selectedMess?.id === mess.id 
+                        ? "bg-zinc-800/90 text-[#10B981]" 
+                        : "text-zinc-400 hover:bg-[#161616] hover:text-white"
                     }`}
                   >
                     {mess.name}
@@ -280,58 +305,52 @@ export default function MessPage() {
               </div>
             )}
           </div>
-
+     
         </div>
       </div>
 
       {/* 📜 SCROLLABLE APP WRAPPER WINDOW */}
-      <div className="w-full flex-1 overflow-y-auto flex flex-col items-center pb-36 style-scrollbar">
-        
-        {/* Active Node Indicator Badge */}
-        {selectedMess && (
-          <div className="w-[94%] max-w-[350px] mt-3.5 bg-gradient-to-r from-[#0F0F0F] to-[#0A0A0A] text-zinc-400 border border-zinc-800 rounded-xl py-1.5 px-4 text-center text-[11px] font-black tracking-widest uppercase shadow-md shrink-0 select-none">
-            📍 Node: <span className="text-zinc-200 font-black">{selectedMess.name}</span> System
-          </div>
-        )}
+      <div className="w-full flex-1 overflow-y-auto flex flex-col items-center pb-18 style-scrollbar">
 
         {/* Live Notices Layer: Warn Accentuation Rules */}
         {selectedMess && liveNotice && (
-          <div className="w-[94%] max-w-[350px] mt-3 p-3 bg-gradient-to-br from-[#14120F] to-[#0D0B0A] border border-amber-500/10 rounded-xl text-xs leading-relaxed text-amber-200/80 shadow-md shrink-0 font-medium">
-            <span className="text-[#F59E0B] font-black tracking-wide uppercase block mb-0.5">⚠️ Broadcast Log:</span>
-            <p className="italic">"{liveNotice}"</p>
+          <div className="w-[94%] max-w-[350px] mt-2 p-2 bg-gradient-to-t from-orange-950/10 to-amber-600/20 border border-amber-500/20 rounded-xl text-sm leading-relaxed text-amber-300/90 shadow-md shrink-0 font-medium">
+            <b><u>Announcement:</u></b>
+            <span className="text-white font-black tracking-wide uppercase block mb-0.5"></span>
+              {liveNotice}
           </div>
         )}
 
-        <main className="flex flex-col items-center justify-start py-3 w-[94%] max-w-[350px] space-y-3 flex-grow">
+        <main className="flex flex-col items-center justify-start py-3 w-[94%] max-w-[350px] space-y-4 flex-grow">
           
           {!selectedMess ? (
             <div className="flex flex-col items-center justify-center pt-28 text-center select-none animate-pulse">
               <span className="text-4xl mb-3 filter grayscale opacity-40">🍛</span>
-              <p className="text-xs font-black uppercase tracking-wider text-zinc-500">Deactivated Stream</p>
-              <p className="text-[10px] text-zinc-600 mt-1 max-w-[200px] leading-relaxed">Tap the select action button to open terminal records.</p>
+              <p className="text-sm font-black uppercase tracking-wider text-zinc-500">Deactivated Stream</p>
+              <p className="text-[12px] text-zinc-600 mt-1 max-w-[200px] leading-relaxed">Tap the select action button to choose your Mess.</p>
             </div>
           ) : (
             <>
               {/* PRIMARY DAILY SCHEDULING CARD CONTAINER */}
-              <div className="w-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] p-3 shadow-xl">
-                <div className="mb-2 flex items-center justify-between border-b border-zinc-900 pb-2 px-1">
+              <div className="w-full rounded-2xl border border-purple-700/40 bg-gradient-to-b from-slate-800 to-black/60 p-2.5 shadow-xl">
+                <div className="mb-2 flex items-center justify-between border-b border-zinc-700 pb-1.5 px-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#10B981] shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse" />
-                    <h2 className="text-[10px] font-black uppercase tracking-widest text-[#10B981]">Live Layout</h2>
+                    <span className="h-2.5 w-2.5 rounded-full bg-rose-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] animate-pulse" />
+                    <h2 className="text-[13px] font-black uppercase tracking-wide font-bold text-green-400/80">Live _ Layout</h2>
                   </div>
 
                   {/* Day Toggler (Depth Clickable Accent Structure) */}
                   <div className="relative">
                     <button
                       onClick={() => setIsDayDropdownOpen(!isDayDropdownOpen)}
-                      className="text-[9px] bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black px-2 py-1 rounded-lg uppercase tracking-widest font-mono flex items-center gap-0.5 shadow-sm active:scale-95 transition-all"
+                      className="text-[12px] bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black px-2 py-0.5 rounded-lg uppercase tracking-widest font-mono flex items-center gap-0.5 shadow-sm active:scale-95 transition-all hover:scale-105"
                     >
                       <span>{selectedDay.slice(0, 3)}</span>
                       <span>▼</span>
                     </button>
 
                     {isDayDropdownOpen && (
-                      <div className="absolute right-0 mt-2 w-24 bg-[#121212] border border-zinc-800 rounded-lg shadow-2xl z-50 overflow-hidden divide-y divide-zinc-900 animate-in fade-in zoom-in-95 duration-100">
+                      <div className="absolute right-0 mt-1 w-16 bg-zinc-800 border border-zinc-700 rounded-lg shadow-2xl z-50 overflow-hidden divide-y divide-zinc-950 animate-in fade-in zoom-in-95 duration-100">
                         {DAYS_OF_WEEK.map((d) => (
                           <button
                             key={d}
@@ -339,11 +358,11 @@ export default function MessPage() {
                               setSelectedDay(d);
                               setIsDayDropdownOpen(false);
                             }}
-                            className={`w-full text-left px-3 py-2 text-[10px] font-black font-mono uppercase tracking-wider transition-colors ${
-                              selectedDay === d ? "bg-[#1A1A1A] text-[#10B981]" : "text-zinc-500 hover:bg-[#161616] hover:text-zinc-300"
+                            className={`w-full text-left px-2 py-1.5 text-[12px] font-black font-mono uppercase tracking-wide font-bold transition-colors  ${
+                              selectedDay === d ? "bg-[#1A1A1A] text-[#10B981]" : "text-zinc-300 hover:bg-[#161616] hover:text-zinc-200"
                             }`}
                           >
-                            {d.slice(0, 3)} {d === currentDay && "•"}
+                            {d.slice(0, 3)} {d === currentDay && "🟢"}
                           </button>
                         ))}
                       </div>
@@ -352,47 +371,46 @@ export default function MessPage() {
                 </div>
 
                 {/* Individual Plate Schedules Blocks */}
-                <div className="flex flex-col gap-1.5 w-full pt-1">
+                <div className="flex flex-col gap-1.5 w-full pt-0.5">
                   {loading ? (
                     [...Array(5)].map((_, i) => (
-                      <div key={i} className="h-12 w-full animate-pulse rounded-xl bg-[#121212] border border-zinc-900" />
+                      <div key={i} className="h-12 w-full animate-pulse rounded-xl bg-[#121212] border border-zinc-800" />
                     ))
                   ) : error ? (
-                    <div className="py-4 text-center text-[11px] font-black tracking-wide uppercase text-rose-400 bg-rose-950/10 border border-rose-950/30 rounded-xl">{error}</div>
+                    <div className="py-4 text-center text-[12px] font-black tracking-wide uppercase text-rose-400 bg-rose-950/10 border border-rose-950/30 rounded-xl">{error}</div>
                   ) : todaysMenu ? (
                     <div className="flex flex-col gap-2">
-                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
-                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">☕️ Breakfast</span>
-                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Breakfast || "—"}</span>
+                      <div className="flex flex-col rounded-2xl border border-zinc-600 bg-gradient-to-b from-zinc-800 to-black/30 px-3 py-0">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-widest"><span className="text-xl">☕️ </span>Breakfast</span>
+                        <span className="text-[12px] font-black text-zinc-200 mt-0 mb-1 leading-snug font-bold">{todaysMenu.Breakfast || "—"}</span>
                       </div>
-                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
-                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍛 Lunch</span>
-                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Lunch || "—"}</span>
+                      <div className="flex flex-col rounded-xl border border-zinc-600 bg-gradient-to-b from-zinc-800 to-black/30 px-3 py-0">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-widest"><span className="text-xl">🍛</span> Lunch</span>
+                        <span className="text-[12px] font-black text-zinc-200 mt-0 mb-1 leading-snug font-bold">{todaysMenu.Lunch || "—"}</span>
                       </div>
-                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
-                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍟 Snacks</span>
-                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Snacks || "—"}</span>
+                      <div className="flex flex-col rounded-xl border border-zinc-600 bg-gradient-to-b from-zinc-800 to-black/30 px-3 py-0">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-widest"><span className="text-xl">🍟 </span>Snacks</span>
+                        <span className="text-[12px] font-black text-zinc-200 mt-0 mb-1 leading-snug font-bold">{todaysMenu.Snacks || "—"}</span>
                       </div>
-                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-[#121212]/50 px-3 py-2">
-                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍱 Dinner</span>
-                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Dinner || "—"}</span>
+                      <div className="flex flex-col rounded-xl border border-zinc-600 bg-gradient-to-b from-zinc-800 to-black/30 px-3 py-0">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-widest"><span className="text-xl">🍱 </span>Dinner</span>
+                        <span className="text-[12px] font-black text-zinc-200 mt-0 mb-1 qleading-snug font-bold">{todaysMenu.Dinner || "—"}</span>
                       </div>
-                      <div className="flex flex-col rounded-xl border border-zinc-900 bg-gradient-to-b from-[#140F11] to-[#0D0A0B] px-3 py-2">
-                        <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest">🍧 Dessert</span>
-                        <span className="text-[11px] font-black text-zinc-200 mt-1 leading-snug">{todaysMenu.Dessert || "—"}</span>
+                      <div className="flex flex-col rounded-xl border border-pink-500/50 bg-gradient-to-b from-zinc-800 to-black/35 px-3 py-0">
+                        <span className="text-[11px] font-black text-pink-500 uppercase tracking-widest"><span className="text-xl">🍧</span> Dessert</span>
+                        <span className="text-[12px] font-black text-zinc-200 mt-1 mb-1 leading-snug font-bold">{todaysMenu.Dessert || "—"}</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="py-4 text-center text-[10px] text-zinc-600 font-medium italic">No listings registered for this index target.</div>
+                    <div className="py-4 text-center text-[11px] text-zinc-600 font-medium italic">No listings registered for this index target.</div>
                   )}
                 </div>
               </div>
 
-              {/* SECONDARY CARD CONTAINER: STANDARD CALORIC CONSTANTS (Amber Notice Layer) */}
-              <div className="w-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] p-3 shadow-xl">
-                <div className="mb-2 flex items-center gap-1.5 border-b border-zinc-900 pb-2 px-1">
+              <div className="w-full rounded-2xl border border-zinc-600 bg-gradient-to-tl from-black/40 to-sky-400/20 p-3 pt-2 shadow-xl">
+                <div className="mb-2 flex items-center gap-1 border-b border-zinc-600 pb-1.5 px-1">
                   <span className="text-xs">🔄</span>
-                  <h2 className="text-[10px] font-black uppercase tracking-widest text-amber-500">
+                  <h2 className="text-[12px] font-black uppercase tracking-wider text-amber-500">
                     Everyday Constants
                   </h2>
                 </div>
@@ -402,25 +420,25 @@ export default function MessPage() {
                     <div className="h-16 w-full animate-pulse rounded-xl bg-[#121212]" />
                   ) : everydayMenu ? (
                     <div className="grid grid-cols-2 gap-2">
-                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
-                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">☕️ Breakfast</span>
-                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Breakfast}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-gradient-to-br from-zinc-700/80 to-black/40 p-2 flex flex-col">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-wider">☕️ Breakfast</span>
+                        <span className="text-[10px] font-bold text-zinc-200 mt-0.5 leading-tight">{everydayMenu.Breakfast}</span>
                       </div>
-                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
-                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">🍛 Lunch</span>
-                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Lunch}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-gradient-to-br from-zinc-700/80 to-black/40 p-2 flex flex-col">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-wider">🍛 Lunch</span>
+                        <span className="text-[10px] font-bold text-zinc-200 mt-0.5 leading-tight">{everydayMenu.Lunch}</span>
                       </div>
-                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
-                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">🍟 Snacks</span>
-                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Snacks}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-gradient-to-br from-zinc-700/80 to-black/40 p-2 flex flex-col">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-wider">🍟 Snacks</span>
+                        <span className="text-[10px] font-bold text-zinc-200 mt-0.5 leading-tight">{everydayMenu.Snacks}</span>
                       </div>
-                      <div className="rounded-xl border border-zinc-900 bg-[#121212]/30 p-2 flex flex-col">
-                        <span className="text-[9px] font-black text-amber-500/70 uppercase tracking-wider">🍱 Dinner</span>
-                        <span className="text-[10px] font-bold text-zinc-400 mt-0.5 leading-tight">{everydayMenu.Dinner}</span>
+                      <div className="rounded-xl border border-zinc-900 bg-gradient-to-br from-zinc-700/80 to-black/40 p-2 flex flex-col">
+                        <span className="text-[11px] font-black text-purple-500 uppercase tracking-wider">🍱 Dinner</span>
+                        <span className="text-[10px] font-bold text-zinc-200 mt-0.5 leading-tight">{everydayMenu.Dinner}</span>
                       </div>
                     </div>
                   ) : (
-                    <div className="py-2 text-center text-[10px] text-zinc-600 font-medium italic">No standard elements map configured.</div>
+                    <div className="py-2 text-center text-[10px] text-zinc-600 font-medium italic">No standard elements mapping configured.</div>
                   )}
                 </div>
               </div>
@@ -428,43 +446,37 @@ export default function MessPage() {
           )}
         </main>
 
-        {/* 🔗 Spreadsheets links built specifically using structural Blue design guidelines */}
+        {/*  Spreadsheets links built specifically using structural Blue design guidelines */}
+       
         {selectedMess && (
-          <div className="w-full bg-transparent pt-2 pb-6 shrink-0 flex flex-col items-center gap-2 select-none">
-            <a 
-              href={GOOGLE_SHEET_BROWSER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] font-black uppercase tracking-wider text-blue-500 hover:text-blue-400 underline transition-colors"
-            >
-              Export Global Menu Matrix ↗
-            </a>
+          <div className="w-full bg-transparent pt-2 pb-5 shrink-0 flex flex-col items-center gap-2 select-none">
+           
             <a 
               href={COMPLAINT_SPREADSHEET_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[11px] font-black uppercase tracking-wider text-blue-500 hover:text-blue-400 underline transition-colors"
+              className="text-[12px] font-black uppercase tracking-wider text-rose-400 hover:text-pink-500 transition-colors"
             >
-              Review Complaint Databanks ↗
+              🔗 <u>Review Complaint Sheets</u> ↗
             </a>
           </div>
         )}
       </div>
 
-      {/* 🚨 CRIMSON HARSH ALERTS COMPLAINT SYSTEM ACTION TRIGGER BUTTON */}
+       {/*complain button */}
       {selectedMess && (
         <button
           onClick={() => setIsComplaintOpen(true)}
-          className="fixed bottom-24 right-4 h-12 w-12 rounded-full bg-gradient-to-b from-rose-600 to-rose-700 hover:from-rose-500 hover:to-rose-600 text-white font-bold flex flex-col items-center justify-center shadow-[0_4px_15px_rgba(244,63,94,0.3)] border border-rose-500/30 z-50 cursor-pointer transition transform active:scale-90 select-none"
+          className="fixed bottom-22 right-3 h-13 w-13 rounded-full bg-gradient-to-t from-pink-700 to-blue-600 hover:from-rose-700 hover:to-indigo-600 text-white font-bold flex flex-col items-center justify-center  border border-slate-900 z-50 cursor-pointer transition transform active:scale-90 select-none"
         >
-          <span className="text-base leading-none mt-1">🚨</span> 
-          <svg viewBox="0 0 100 40" className="w-full h-4 mt-0.5 pointer-events-none fill-white font-black select-none">
+          <span className="text-base leading-none text-xl">🤬</span> 
+          <svg viewBox="0 3 100 20" className="w-full h-4 mt-0 pointer-events-none fill-white font-black select-none">
             <defs>
               <path id="smileTextPath" d="M 10,8 Q 50,28 90,8" />
             </defs>
-            <text className="text-[16px] tracking-widest uppercase">
+            <text className="text-[15px] tracking-wide uppercase">
               <textPath href="#smileTextPath" startOffset="50%" textAnchor="middle">
-                report
+                Complain
               </textPath>
             </text>
           </svg>
@@ -599,23 +611,6 @@ export default function MessPage() {
         </div>
       )} 
 
-      {/* Custom Scrollbars */}
-      <style jsx global>{`
-        .style-scrollbar::-webkit-scrollbar {
-          width: 5px;
-          height: 4px;
-        }
-        .style-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .style-scrollbar::-webkit-scrollbar-thumb {
-          background: #222222;
-          border-radius: 20px;
-        }
-        .style-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #333333;
-        }
-      `}</style>
     </main>
   );
 }

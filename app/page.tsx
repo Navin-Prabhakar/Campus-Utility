@@ -44,7 +44,7 @@ export default function Home() {
   const [fetchingBirthdays, setFetchingBirthdays] = useState(false);
   const [accessDeniedMessage, setAccessDeniedMessage] = useState("");
 
-  const ALLOWED_DEVELOPERS = ["navin_2504ai02@iitp.ac.in"];
+  const ALLOWED_DEVELOPERS = ["navin_2503ai02@iitp.ac.in"];
 
   const isLocalhost = typeof window !== "undefined" && window.location.hostname === "localhost";
   const isDeveloper = isLocalhost || (realSession?.user?.email && ALLOWED_DEVELOPERS.includes(realSession.user.email));
@@ -53,7 +53,7 @@ export default function Home() {
     setAccessDeniedMessage("");
 
     if (!isDeveloper) {
-      setAccessDeniedMessage("Birthday viewer is accessible to only developer.");
+      setAccessDeniedMessage("Birthday viewer is accessible to developer only.");
       setTimeout(() => setAccessDeniedMessage(""), 3500);
       return;
     }
@@ -317,7 +317,7 @@ export default function Home() {
                       {bus.contact ? (
                         <a 
                           href={`tel:${bus.contact}`}
-                          className="text-[11px] bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-500 px-1 py-0.5 rounded border border-emerald-500/40 font-mono tracking-tight transition-all duration-150 flex items-center gap-0.5"
+                          className="text-[11px] bg-emerald-500/20 hover:bg-emerald-500/40 text-emerald-500 px-1 py-0.5 rounded-xl border border-emerald-500/40 font-mono tracking-tight transition-all duration-150 flex items-center gap-0.5"
                           title="Call Driver"
                         >
                           🤙 {bus.contact}
