@@ -5,8 +5,13 @@ import path from "path";
 export async function GET() {
   try {
     // 🔒 Locates the file exactly where your custom Vercel command copies it
-    const filePath = path.join(process.cwd(), "secret-data", "timetable.json");
-    
+    let filePath = path.join(process.cwd(), "secret-data", "timetable.json");
+
+      // If running locally and the production path doesn't exist, check your exact local path
+      if (process.env.NODE_ENV === "development" && !fs.existsSync(filePath)) {
+        // 🧭 Steps out of your project folder directly into the sibling folder
+        filePath = path.join(process.cwd(), "..", "iitp-timetable-sync", "secret-data", "timetable.json");
+      }
     if (!fs.existsSync(filePath)) {
       console.error("Timetable database file missing in compilation workspace context.");
       return NextResponse.json({ error: "Database mapping file missing." }, { status: 404 });
