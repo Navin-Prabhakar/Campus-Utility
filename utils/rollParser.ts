@@ -9,7 +9,7 @@ export function parseStudentEmail(email: string | null | undefined): StudentProf
   }
 
   // Extract the part before @iitp.ac.in
-  const localPart = email.split("@")[0]; // e.g., "navin_2503ai02"
+  const localPart = email.split("@")[0]; // e.g., "hiten_2503ai02"
   
   // Find the roll number string using regex (looks for 4 digits followed by 2 letters and 2 digits)
   const rollMatch = localPart.match(/(\d{2})(\d{2})([a-zA-Z]{2})(\d{2})/);

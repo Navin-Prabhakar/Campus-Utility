@@ -1,7 +1,41 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 import Papa from "papaparse";
+
+export interface StudentProfile {
+  yearGroup: "Freshers" | "Sophomores" | "Juniors" | "Seniors" | "Unknown";
+  branch: string;
+}
+
+export function parseStudentEmail(email: string | null | undefined): StudentProfile {
+  if (!email || !email.includes("@iitp.ac.in")) {
+    return { yearGroup: "Unknown", branch: "" };
+  }
+
+  // Extract the part before @iitp.ac.in
+  const localPart = email.split("@")[0]; // e.g., "navin_2503ai02"
+  
+  // Find the roll number string using regex (looks for 4 digits followed by 2 letters and 2 digits)
+  const rollMatch = localPart.match(/(\d{2})(\d{2})([a-zA-Z]{2})(\d{2})/);
+  
+  if (!rollMatch) {
+    return { yearGroup: "Unknown", branch: "" };
+  }
+
+  const [_, entryYear, courseCode, branchCode] = rollMatch;
+  const branch = branchCode.toUpperCase(); // e.g., "AI", "CS", "EE"
+
+  // Calculate year group based on current year (2026)
+  let yearGroup: StudentProfile["yearGroup"] = "Unknown";
+  if (entryYear === "26") yearGroup = "Freshers";
+  else if (entryYear === "25") yearGroup = "Sophomores";
+  else if (entryYear === "24") yearGroup = "Juniors";
+  else if (entryYear === "23") yearGroup = "Seniors";
+
+  return { yearGroup, branch };
+}
 
 interface MenuItem {
   Day: string;
@@ -30,6 +64,7 @@ const COMPLAINT_SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/1RXapv
 const COMPLAINT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2vwDIx8ht6zrOIaS39oQ3oFNCesYpICmn-FJAceynT1CvNhEN5sAUcnjP5wXxp3tpog/exec";
 
 export default function MessPage() {
+  const { data: session } = useSession();
   const [menuData, setMenuData] = useState<MenuItem[]>([]);
   const [everydayMenu, setEverydayMenu] = useState<MenuItem | null>(null);
   const [liveNotice, setLiveNotice] = useState<string>(""); 
@@ -66,6 +101,21 @@ export default function MessPage() {
       setSelectedMess(MESS_CONFIG[0]);
     }
   }, []);
+
+  // Sync NextAuth Session Identity to Form Input Context Fields
+  useEffect(() => {
+    if (isComplaintOpen) {
+      const userSessionEmail = session?.user?.email || "";
+      const localPart = userSessionEmail.split("@")[0];
+      const rollMatch = localPart.match(/(\d{2})(\d{2})([a-zA-Z]{2})(\d{2})/);
+      
+      setComplaintForm(prev => ({
+        ...prev,
+        name: session?.user?.name || prev.name,
+        roll: rollMatch ? rollMatch[0].toUpperCase() : prev.roll
+      }));
+    }
+  }, [isComplaintOpen, session]);
 
   useEffect(() => {
     if (!selectedMess) return;
@@ -224,7 +274,7 @@ export default function MessPage() {
   const resetModalFormState = () => {
     setIsComplaintOpen(false);
     setIsDataLogged(false);
-    setComplaintForm({ name: "", roll: "", category: "Food Quality", desc: "" });
+    setComplaintForm(prev => ({ ...prev, name: "", category: "Food Quality", desc: "" }));
     setSelectedImages([]);
   };
 
@@ -446,7 +496,7 @@ export default function MessPage() {
           )}
         </main>
 
-        {/*  Spreadsheets links built specifically using structural Blue design guidelines */}
+        {/* Spreadsheets links built specifically using structural Blue design guidelines */}
        
         {selectedMess && (
           <div className="w-full bg-transparent pt-2 pb-5 shrink-0 flex flex-col items-center gap-2 select-none">
@@ -486,46 +536,46 @@ export default function MessPage() {
       {/* COMPLAINT MODAL WINDOW (PRO DARK GLASSMORPHISM STYLING OVERHAUL) */}
       {isComplaintOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-[100] animate-in fade-in duration-150">
-          <div className="bg-[#0A0A0A] border border-zinc-900 rounded-2xl p-4 w-full max-w-[320px] shadow-2xl flex flex-col relative max-h-[86vh] overflow-y-auto style-scrollbar">
+          <div className="bg-slate-900 border border-zinc-700 rounded-2xl p-4 w-full max-w-[320px] shadow-2xl flex flex-col relative max-h-[90vh] overflow-y-auto style-scrollbar">
             <button 
               onClick={resetModalFormState}
-              className="absolute top-3 right-4 text-zinc-500 hover:text-white text-xs font-black transition-colors cursor-pointer"
+              className="absolute  top-3 right-4 text-red-500 hover:text-rose-700 text-sm font-black transition-colors cursor-pointer"
             >
               ✕
             </button>
 
-            <h3 className="text-xs font-black uppercase tracking-widest text-rose-500 mb-4 flex items-center gap-1.5">
+            <h3 className="text-sm font-black uppercase tracking-widesr text-rose-500 mb-4 flex items-center gap-1.5">
               <span>🚨</span> File Mess Grievance
             </h3>
 
             {!isDataLogged ? (
               <form onSubmit={handleLogDataToSheets} className="space-y-3">
                 <div>
-                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Full Identity</label>
+                  <label className="block text-[10px] font-black uppercase tracking-wider text-zinc-300 mb-1">Full Name</label>
                   <input 
                     type="text" required
                     value={complaintForm.name}
                     onChange={(e) => setComplaintForm({...complaintForm, name: e.target.value})}
-                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white font-medium outline-hidden focus:border-zinc-700 shadow-inner"
+                    className="w-full bg-zinc-800 border border-zinc-800 rounded-xl px-3 py-2 text-sm text-white font-medium outline-hidden focus:border-zinc-600 shadow-inner"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Roll Reference</label>
+                  <label className="block text-[10px] font-black uppercase tracking-wider text-zinc-300 mb-1">Roll Number</label>
                   <input 
                     type="text" required
                     value={complaintForm.roll}
                     onChange={(e) => setComplaintForm({...complaintForm, roll: e.target.value})}
-                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white font-mono font-medium outline-hidden focus:border-zinc-700 shadow-inner"
+                    className="w-full bg-zinc-800 border border-zinc-800 rounded-xl px-3 py-2 text-sm text-white font-mono font-medium outline-hidden focus:border-zinc-600 shadow-inner"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Grievance Category</label>
+                  <label className="block text-[10px] font-black uppercase tracking-wider text-zinc-300 mb-1">Grievance Category</label>
                   <select
                     value={complaintForm.category}
                     onChange={(e) => setComplaintForm({...complaintForm, category: e.target.value})}
-                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-2 py-2 text-xs font-black text-zinc-300 outline-hidden focus:border-zinc-700 cursor-pointer"
+                    className="w-full bg-zinc-800 border border-zinc-800 rounded-xl px-2 py-2 text-sm font-black text-zinc-100 outline-hidden focus:border-zinc-600 cursor-pointer"
                   >
                     <option value="Food Quality">Food Quality / Raw Rice</option>
                     <option value="Hygiene Issue">Hygiene / Insect / Dirt</option>
@@ -536,39 +586,39 @@ export default function MessPage() {
                 </div>
 
                 <div>
-                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">Incident Report Logs</label>
+                  <label className="block text-[10px] font-black uppercase tracking-wider text-zinc-300 mb-1">Describe issue</label>
                   <textarea 
                     required rows={3}
                     value={complaintForm.desc}
                     onChange={(e) => setComplaintForm({...complaintForm, desc: e.target.value})}
-                    className="w-full bg-[#121212] border border-zinc-800 rounded-xl px-3 py-2 text-xs text-white font-medium outline-hidden focus:border-zinc-700 resize-none shadow-inner"
-                    placeholder="Provide explicit event metrics..."
+                    className="w-full bg-zinc-800 border border-zinc-800 rounded-xl px-3 py-1 text-sm text-white font-medium outline-hidden focus:border-zinc-600 resize-none shadow-inner"
+                    placeholder="Shortly write your concerns..."
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[9px] font-black uppercase tracking-wider text-zinc-500 mb-1">
-                    Evidence Media Capture ({selectedImages.length}/3)
+                  <label className="block text-[11px] font-black uppercase tracking-wider text-zinc-300 mb-1">
+                    Evidence Capture ({selectedImages.length}/3)
                   </label>
                   <input 
                     type="file" 
                     accept="image/*" 
                     multiple 
                     onChange={handleImageChange}
-                    className="w-full text-[10px] text-zinc-500 file:mr-2 file:py-1 file:px-2 file:rounded-lg file:border-0 file:text-[9px] file:font-black file:uppercase file:bg-[#1A1A1A] file:text-white file:cursor-pointer"
+                    className="w-full text-[11px] text-zinc-400 file:mr-2 file:py-1.5 file:px-2 file:rounded-md file:border-0 file:text-[10px] file:font-black file: file:bg-zinc-800 file:text-white file:cursor-pointer"
                   />
 
                   {selectedImages.length > 0 && (
                     <div className="mt-2 flex gap-1.5 overflow-x-auto py-1 style-scrollbar">
                       {selectedImages.map((file, idx) => (
-                        <div key={idx} className="relative h-12 w-12 rounded-xl border border-zinc-800 overflow-hidden shrink-0 bg-[#121212] flex items-center justify-center shadow-md">
-                          <span className="text-[8px] font-mono font-bold text-zinc-600 truncate max-w-[60%] px-1">
+                        <div key={idx} className="relative h-12 w-12 rounded-sm border border-zinc-800 overflow-hidden shrink-0 bg-[#121212] flex items-center justify-center shadow-md">
+                          <span className="text-[10px] font-mono font-bold text-zinc-600 truncate max-w-[60%] px-1">
                             📷 File {idx + 1}
                           </span>
                           <button
                             type="button"
                             onClick={() => setSelectedImages(selectedImages.filter((_, i) => i !== idx))}
-                            className="absolute top-0 right-0 bg-rose-600 text-white text-[8px] font-bold h-3.5 w-3.5 flex items-center justify-center rounded-bl-lg shadow-md active:scale-75 transition-transform"
+                            className="absolute top-0 right-0 bg-rose-600 text-white text-[9px] font-bold h-3.5 w-3.5 flex items-center justify-center rounded-bl-sm shadow-md active:scale-75 transition-transform"
                           >
                             ✕
                           </button>
@@ -582,9 +632,9 @@ export default function MessPage() {
                 <button
                   type="submit"
                   disabled={submittingComplaint}
-                  className="w-full mt-2 py-2 bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white rounded-xl text-xs font-black tracking-wider uppercase shadow-md active:scale-95 transition transform disabled:opacity-50 cursor-pointer"
+                  className="w-full mt-2 py-2 bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-red-500 rounded-xl text-xs font-black tracking-wider uppercase shadow-md active:scale-95 transition transform disabled:opacity-50 cursor-pointer"
                 >
-                  {submittingComplaint ? "Uploading Framework Nodes..." : "Commit To Sheets ➔"}
+                  {submittingComplaint ? "Uploading...,wait 10 sec..." : "Commit To Sheet ➔"}
                 </button>
               </form>
             ) : (
@@ -593,7 +643,7 @@ export default function MessPage() {
                 <div className="h-10 w-10 rounded-full bg-emerald-500/10 text-[#10B981] border border-emerald-500/20 flex items-center justify-center mx-auto text-base font-bold">✓</div>
                 <div>
                   <p className="text-xs font-black uppercase tracking-wider text-zinc-200">Grievance Logged!</p>
-                  <p className="text-[10px] text-zinc-500 mt-1 leading-relaxed">System rows modified successfully. Access the emergency chat stream to contact representatives.</p>
+                  <p className="text-[10px] text-zinc-400 mt-1 leading-relaxed">System rows modified successfully. Access the emergency chat stream to contact representatives.</p>
                 </div>
                 
                 <a

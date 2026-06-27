@@ -139,10 +139,10 @@ export default function Header({ messActionSlot }: HeaderProps) {
               ) : (
                 <Link
                   href="/signin"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/10 text-sm font-semibold transition hover:bg-white/20 sm:w-auto sm:px-4"
+                  className="flex h-10 w-10 flex-col items-center justify-center rounded-full border border-white/40 bg-white/10 font-semibold transition hover:bg-white/20 select-none"
                 >
-                  <span className="sm:hidden">Sign In</span>
-                  <span className="hidden sm:inline">Sign In</span>
+                  <span className="text-[12px]  tracking-normal leading-[1.1]">Sign</span>
+                  <span className="text-[12px]  tracking-normals leading-[1.1]">In</span>
                 </Link>
               )
             ) : (

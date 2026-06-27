@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import ReportIssueModal from "../components/ReportIssueModal";
 
 const EMAIL_STORAGE_KEY = "savedIitpEmail";
 
@@ -21,6 +22,9 @@ export default function SignIn() {
   const [rememberDevice, setRememberDevice] = useState(true);
   const [mounted, setMounted] = useState(false);
   
+  // State to manage the reporting framework overlay window
+  const [showReportModal, setShowReportModal] = useState(false); 
+
   // Timer state for the 60 seconds cooldown
   const [countdown, setCountdown] = useState(0);
 
@@ -81,7 +85,7 @@ export default function SignIn() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-slate-800 to-indigo-950 px-4">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-8 bg-gradient-to-br from-slate-800 to-indigo-950 px-4 relative">
       <div className="w-full max-w-md rounded-lg bg-slate-200 p-5 shadow-2xl">
         <div className="mb-6 flex flex-col items-center gap-2">
           <Image
@@ -128,8 +132,6 @@ export default function SignIn() {
           {info && (
             <div className="rounded-lg bg-blue-50 p-3 text-sm text-blue-700 border border-blue-200 flex flex-col gap-1">
               <p>{info}</p>
-              {countdown > 0 
-              }
             </div>
           )}
 
@@ -166,6 +168,21 @@ export default function SignIn() {
           </p>
         </div>
       </div>
+
+      {/* FLOATING ROUND RED TRIGGER ISSUE BUTTON (MATCHES HOME LAYOUT MATRIX EXACTLY) */}
+      <button
+        onClick={() => setShowReportModal(true)}
+        className="fixed right-4 bottom-5 h-12 w-12 bg-gradient-to-tl from-red-600 to-purple-700/90 hover:from-violet-700 hover:to-pink-700 text-white flex items-center justify-center rounded-full font-black active:scale-90 transition-all duration-150 cursor-pointer text-base z-[90] select-none"
+        title="Open Report System"
+      >
+        ⚠️
+      </button>
+
+      {/* MODAL MOUNTING FRAMEWORK SYSTEM CONTAINER */}
+      <ReportIssueModal 
+        isOpen={showReportModal} 
+        onClose={() => setShowReportModal(false)} 
+      />
     </div>
   );
 }
