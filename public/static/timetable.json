@@ -1039,7 +1039,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "MA2252",
-    "group": "MC",
+    "group": "IDE",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1057,7 +1057,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "MA2252",
-    "group": "MC",
+    "group": "IDE",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1093,7 +1093,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "MA2252",
-    "group": "MC",
+    "group": "IDE",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1237,7 +1237,7 @@
     "time": "5 PM - 5.55 PM",
     "year": "Elective",
     "courseCode": "MA6218",
-    "group": "MC",
+    "group": "IDE",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1273,7 +1273,7 @@
     "time": "5 PM - 5.55 PM",
     "year": "Elective",
     "courseCode": "MA6218",
-    "group": "MC",
+    "group": "IDE",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1291,7 +1291,7 @@
     "time": "5 PM - 5.55 PM",
     "year": "Elective",
     "courseCode": "MA6218",
-    "group": "MC",
+    "group": "IDE",
     "venue": "R301",
     "type": "Lecture"
   },
