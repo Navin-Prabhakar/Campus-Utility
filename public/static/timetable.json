@@ -45,6 +45,663 @@
     "type": "Lab"
   },
   {
+    "day": "Monday",
+    "time": "9 AM - 9.55 AM",
+    "year": "Elective",
+    "courseCode": "RM6201",
+    "group": "Department Core",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 AM - 9.55 AM",
+    "year": 3,
+    "courseCode": "EC3202",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2202",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": "Elective",
+    "courseCode": "MC5202",
+    "group": "Department Core",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 4,
+    "courseCode": "MA4205",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2201",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2201",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EC3203",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2203",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "MA6215",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 4,
+    "courseCode": "MA4203",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2204",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2204",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3206",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EE3201",
+    "group": "EE",
+    "venue": "Block III R129",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2205",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "MA5214",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 4,
+    "courseCode": "MA4202",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "EC2202",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "EC2202",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "EC3205",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "EE3204",
+    "group": "EE",
+    "venue": "R205",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "ME1201",
+    "group": "G1, G2, G3",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 2.55 PM",
+    "year": 2,
+    "courseCode": "MA2252 (IDE)",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "MA3202",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 4,
+    "courseCode": "MA4202",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "EE3202",
+    "group": "EE",
+    "venue": "Block III R129",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "MA3204",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3202 (Gr 1)",
+    "group": "EE",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EE3202",
+    "group": "EE",
+    "venue": "EE Dept Lab 3",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EE3203",
+    "group": "EE",
+    "venue": "EE Dept Lab 3",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3205",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "MA2203",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "MA3206",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 5.55 PM",
+    "year": 2,
+    "courseCode": "EC2201",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 5.55 PM",
+    "year": 2,
+    "courseCode": "EC2201",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 3,
+    "courseCode": "EC3204",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1",
+    "venue": "Block 9 - Room 101",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G2",
+    "venue": "Block 9 - Room 102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G3",
+    "venue": "Block 9 - Room 103",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G4",
+    "venue": "Block 9 - Room 104",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G5",
+    "venue": "Block 9 - Room 105",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G6",
+    "venue": "Block 9 - Room 106",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7",
+    "venue": "Block 9 - Room 107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G8",
+    "venue": "Block 9 - Room 108",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G9",
+    "venue": "Block 9 - Room 109",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G10",
+    "venue": "Block 9 - Room 110",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G11",
+    "venue": "Block 9 - Room 205",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G12",
+    "venue": "Block 9 - Room 301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13",
+    "venue": "Block 9 - Room 302",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G14",
+    "venue": "Block 9 - Room 303",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G15",
+    "venue": "Block 9 - Room 304",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G16",
+    "venue": "Block 9 - Room 305",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G17",
+    "venue": "Block 9 - Room 306",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G18",
+    "venue": "Block 9 - Room 307",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19",
+    "venue": "Block 9 - Room 308",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G20",
+    "venue": "Block 9 - Room 309",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G21",
+    "venue": "Block 9 - Room 310",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G22",
+    "venue": "Block 9 - Room 409",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G23",
+    "venue": "Block 9 - Room 501",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G24",
+    "venue": "Block 9 - Room 502",
+    "type": "Tutorial"
+  },
+  {
     "day": "Tuesday",
     "time": "9 AM - 11.55 AM",
     "year": 1,
@@ -61,6 +718,528 @@
     "group": "G17, G18",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 AM - 9.55 AM",
+    "year": 4,
+    "courseCode": "MA4202",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 AM - 9.55 AM",
+    "year": 3,
+    "courseCode": "EE3203",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2204",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": "Elective",
+    "courseCode": "MA5214",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 4,
+    "courseCode": "MA4203",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 12 PM",
+    "year": 3,
+    "courseCode": "MA3202",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EC2203",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EC3202",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2202",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "MA6207",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 4,
+    "courseCode": "MA4204",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2204",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2204",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3203",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2201",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6215",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 4,
+    "courseCode": "MA4201",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "EE2202",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "EC3205",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "CE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 4,
+    "courseCode": "MA4204",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "EE3202",
+    "group": "EE",
+    "venue": "Block III R129",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G1",
+    "venue": "Block 9 - Room 101",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G2",
+    "venue": "Block 9 - Room 102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G3",
+    "venue": "Room LT102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G4",
+    "venue": "Block 9 - Room 104",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G5",
+    "venue": "Block 9 - Room 105",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G6",
+    "venue": "Block 9 - Room 106",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G7",
+    "venue": "Block 9 - Room 107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G8",
+    "venue": "Block 9 - Room 303",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G9",
+    "venue": "Block 9 - Room 109",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G10",
+    "venue": "Block 9 - Room 307",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G11",
+    "venue": "Room LT002",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G12",
+    "venue": "Block 9 - Room 301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "ME1201",
+    "group": "G4, G5, G6",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1, G2, G3",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "MA3206",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "EC3204",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2201 (Gr 1)",
+    "group": "EE",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2201 (Gr 1)",
+    "group": "EC",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 2)",
+    "group": "EE",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 2)",
+    "group": "EC",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 3)",
+    "group": "EE",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 3)",
+    "group": "EC",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3201",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 4.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6206",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "MA2201",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 3,
+    "courseCode": "EE3201",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "MA3203",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 5.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6218 (IDE)",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -88,6 +1267,456 @@
     "group": "G21, G22",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EC2203",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2201",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": "Elective",
+    "courseCode": "MC5202",
+    "group": "Department Core",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 4,
+    "courseCode": "MA4202",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 1 PM",
+    "year": 3,
+    "courseCode": "MA3204",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2201",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2201",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EC3206",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2205",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "RM6201",
+    "group": "Department Core",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 4,
+    "courseCode": "MA4205",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2202",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2202",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3202",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2202",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "MA5214",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 4,
+    "courseCode": "MA4203",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "EE3203",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "EC3204",
+    "group": "EC",
+    "venue": "Block III R129",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G13, G14, G15, G16",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 2,
+    "courseCode": "MA2252 (IDE)",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "MA3203",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3202 (Gr 2)",
+    "group": "EE",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "MA3202",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "MA2204",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2201 (Gr 2)",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2201 (Gr 2)",
+    "group": "EC",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 3)",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 3)",
+    "group": "EC",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 1)",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 1)",
+    "group": "EC",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3204",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "MA3205",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6206",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 2,
+    "courseCode": "EC2201",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 2,
+    "courseCode": "EC2201",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 3,
+    "courseCode": "EE3202",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 3,
+    "courseCode": "EE3203",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "6 PM -7:00 PM",
+    "year": 1,
+    "courseCode": "IK1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -126,6 +1755,591 @@
     "type": "Lab"
   },
   {
+    "day": "Thursday",
+    "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EC2203",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 AM - 9.55 AM",
+    "year": 3,
+    "courseCode": "EE3203",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2205",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 4,
+    "courseCode": "MA4205",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 12 PM",
+    "year": 3,
+    "courseCode": "MA3206",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2201",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2201",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EC3203",
+    "group": "EE",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2203",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "RM6201",
+    "group": "Department Core",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 4,
+    "courseCode": "MA4201",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2204",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2204",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3206",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 1 PM",
+    "year": 3,
+    "courseCode": "EE3204",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "EE1201",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 1,
+    "courseCode": "ME1202",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2204",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6207",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 4,
+    "courseCode": "MA4204",
+    "group": "MC",
+    "venue": "Dept classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "EE2202",
+    "group": "EE",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "EC3205",
+    "group": "EC",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 2.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "PH1201",
+    "group": "G15, G16",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "ME1201",
+    "group": "G7, G8, G9",
+    "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "MA3204",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 2.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6215",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "EE3201",
+    "group": "EE",
+    "venue": "Block III R129",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 3.55 PM",
+    "year": 1,
+    "courseCode": "CS1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "MA3205",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "MA2205",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3201",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 4.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6206",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 3,
+    "courseCode": "EE3201",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "MA3206",
+    "group": "MC",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 5.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6218 (IDE)",
+    "group": "MC",
+    "venue": "R301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G1",
+    "venue": "Block 9 - Room 101",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G2",
+    "venue": "Block 9 - Room 102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G3",
+    "venue": "Block 9 - Room 103",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G4",
+    "venue": "Block 9 - Room 104",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G5",
+    "venue": "Block 9 - Room 105",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G6",
+    "venue": "Block 9 - Room 106",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G7",
+    "venue": "Block 9 - Room 107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G8",
+    "venue": "Block 9 - Room 108",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9",
+    "venue": "Block 9 - Room 109",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G10",
+    "venue": "Block 9 - Room 110",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G11",
+    "venue": "Block 9 - Room 205",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G12",
+    "venue": "Block 9 - Room 301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G13",
+    "venue": "Block 9 - Room 302",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G14",
+    "venue": "Block 9 - Room 303",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G15",
+    "venue": "Block 9 - Room 304",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G16",
+    "venue": "Block 9 - Room 305",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G17",
+    "venue": "Block 9 - Room 306",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G18",
+    "venue": "Block 9 - Room 307",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G19",
+    "venue": "Block 9 - Room 308",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G20",
+    "venue": "Block 9 - Room 309",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G21",
+    "venue": "Block 9 - Room 310",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G22",
+    "venue": "Block 9 - Room 409",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G23",
+    "venue": "Block 9 - Room 501",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G24",
+    "venue": "Block 9 - Room 502",
+    "type": "Tutorial"
+  },
+  {
     "day": "Friday",
     "time": "9 AM - 9.55 AM",
     "year": 1,
@@ -162,60 +2376,6 @@
     "type": "Lab"
   },
   {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
     "day": "Friday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
@@ -234,67 +2394,49 @@
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
-    "venue": "CLH: LT003",
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2203",
+    "group": "MC",
+    "venue": "R303",
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": "Elective",
+    "courseCode": "RM6201",
+    "group": "Department Core",
+    "venue": "R301",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT003",
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": 4,
+    "courseCode": "MA4203",
+    "group": "MC",
+    "venue": "Dept classroom",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EE3201",
+    "group": "EE",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
+    "day": "Friday",
+    "time": "10 AM - 12 PM",
+    "year": 2,
+    "courseCode": "EE2202 (Gr 1)",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -306,76 +2448,31 @@
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT003",
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2204",
+    "group": "MC",
+    "venue": "R303",
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": 4,
+    "courseCode": "MA4204",
+    "group": "MC",
+    "venue": "Dept classroom",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
+    "day": "Friday",
+    "time": "11 AM - 1 PM",
+    "year": 3,
+    "courseCode": "EE3204",
+    "group": "EE",
+    "venue": "EE Dept Lab 2",
+    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -387,85 +2484,13 @@
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "2 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "ME1201",
-    "group": "G1, G2, G3",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G7, G8, G9",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "G13, G14, G15",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 4,
+    "courseCode": "MA4201",
+    "group": "MC",
+    "venue": "Dept classroom",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G13, G14, G15, G16",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G15, G16",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "ME1201",
-    "group": "G7, G8, G9",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -495,48 +2520,12 @@
     "type": "Lab"
   },
   {
-    "day": "Monday",
-    "time": "3 PM - 3.55 PM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5.55 PM",
-    "year": 1,
-    "courseCode": "ME1201",
-    "group": "G4, G5, G6",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5.55 PM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G1, G2, G3",
-    "venue": "Respective Lab Department",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
+    "day": "Friday",
+    "time": "2 PM - 2.55 PM",
+    "year": 2,
+    "courseCode": "MA2252 (IDE)",
+    "group": "MC",
+    "venue": "R303",
     "type": "Lecture"
   },
   {
@@ -549,591 +2538,6 @@
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "4 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 5.55 PM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 1,
-    "courseCode": "CS1201",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 5.55 PM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "6 PM -7:00 PM",
-    "year": 1,
-    "courseCode": "IK1201",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "6 PM -7:00 PM",
-    "year": 1,
-    "courseCode": "IK1201",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "9 AM - 9.55 AM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Department Core",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 4,
-    "courseCode": "MA4202",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "MA2202",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "MC5202",
-    "group": "Department Core",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "MA4205",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "MA2204",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "MA5214",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "MA4203",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "MA2201",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "MC5202",
-    "group": "Department Core",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "MA4202",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "MA2205",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "MA4205",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "MA2203",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Department Core",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "MA4203",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2203",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "MA6215",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "MA4203",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2202",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "MA6207",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "MA4204",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2205",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Department Core",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "MA4205",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2203",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Department Core",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "MA4201",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2204",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "MA4204",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2205",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "MA5214",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "MA4202",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2201",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6215",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "MA4201",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2202",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "MA5214",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "MA4203",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2204",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6207",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "MA4204",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "MA4201",
-    "group": "MC",
-    "venue": "Dept classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 2.55 PM",
-    "year": 2,
-    "courseCode": "MA2252 (IDE)",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "MA3202",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 2,
-    "courseCode": "MA2252 (IDE)",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "MA3203",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "MA3204",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6215",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "2 PM - 2.55 PM",
-    "year": 2,
-    "courseCode": "MA2252 (IDE)",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "MA3204",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "MA3206",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "MA3202",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "MA3205",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
     "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 3,
@@ -1143,822 +2547,12 @@
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "MA3205",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "MA3201",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6206",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "MA3204",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "MA3201",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6206",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "MA3202",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6207",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3206",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3203",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6218 (IDE)",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3205",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6206",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3206",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6218 (IDE)",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3201",
-    "group": "MC",
-    "venue": "R303",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "MA6218 (IDE)",
-    "group": "MC",
-    "venue": "R301",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 12 PM",
-    "year": 3,
-    "courseCode": "MA3202",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 1 PM",
-    "year": 3,
-    "courseCode": "MA3204",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 12 PM",
-    "year": 3,
-    "courseCode": "MA3206",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 4 PM",
-    "year": 4,
-    "courseCode": "MA4202",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 4 PM",
-    "year": 4,
-    "courseCode": "MA4204",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 6 PM",
-    "year": 2,
-    "courseCode": "MA2204",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 6 PM",
-    "year": 2,
-    "courseCode": "MA2205",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
     "day": "Friday",
     "time": "3 PM - 5 PM",
     "year": "Elective",
     "courseCode": "MC5202",
     "group": "Department Core",
     "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "MA2203",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "MA2201",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "9 AM - 9.55 AM",
-    "year": 3,
-    "courseCode": "EC3202",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 3,
-    "courseCode": "EE3203",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 2,
-    "courseCode": "EC2203",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "9 AM - 9.55 AM",
-    "year": 2,
-    "courseCode": "EC2203",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "9 AM - 9.55 AM",
-    "year": 3,
-    "courseCode": "EE3203",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EE2201",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EE2201",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EC3203",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EC2203",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EC3202",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EE2201",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EE2201",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EC3206",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EE2201",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EE2201",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EC3203",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EE3201",
-    "group": "EE",
-    "venue": "Block III R129",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 12 PM",
-    "year": 2,
-    "courseCode": "EE2202 (Gr 1)",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2204",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2204",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3206",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EE3201",
-    "group": "EE",
-    "venue": "Block III R129",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2204",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2204",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3203",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2202",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2202",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3202",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2204",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EC2204",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3206",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 1 PM",
-    "year": 3,
-    "courseCode": "EE3204",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 1 PM",
-    "year": 3,
-    "courseCode": "EE3204",
-    "group": "EE",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EC2202",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EC2202",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EC3205",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EE3204",
-    "group": "EE",
-    "venue": "R205",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EE2202",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EC3205",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EE3203",
-    "group": "EE",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EC3204",
-    "group": "EC",
-    "venue": "Block III R129",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EE2202",
-    "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EC3205",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "EE3202",
-    "group": "EE",
-    "venue": "Block III R129",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "EE3202",
-    "group": "EE",
-    "venue": "Block III R129",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3202 (Gr 2)",
-    "group": "EE",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "EC3201",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "EE3201",
-    "group": "EE",
-    "venue": "Block III R129",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3202 (Gr 1)",
-    "group": "EE",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EE3202",
-    "group": "EE",
-    "venue": "EE Dept Lab 3",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EE3203",
-    "group": "EE",
-    "venue": "EE Dept Lab 3",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "EC3204",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2201 (Gr 1)",
-    "group": "EE",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2201 (Gr 1)",
-    "group": "EC",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2202 (Gr 2)",
-    "group": "EE",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2202 (Gr 2)",
-    "group": "EC",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EE2201 (Gr 3)",
-    "group": "EE",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EE2201 (Gr 3)",
-    "group": "EC",
-    "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2201 (Gr 2)",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2201 (Gr 2)",
-    "group": "EC",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2202 (Gr 3)",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EC2202 (Gr 3)",
-    "group": "EC",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EE2201 (Gr 1)",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "EE2201 (Gr 1)",
-    "group": "EC",
-    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1980,112 +2574,58 @@
     "type": "Lab"
   },
   {
-    "day": "Tuesday",
-    "time": "4 PM - 6 PM",
-    "year": 3,
-    "courseCode": "EE3201",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 6 PM",
-    "year": 3,
-    "courseCode": "EC3201",
-    "group": "EC",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 3,
-    "courseCode": "EE3201",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 3,
-    "courseCode": "EC3201",
-    "group": "EC",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "EC3201",
-    "group": "EC",
-    "venue": "R502",
+    "day": "Friday",
+    "time": "4 PM - 4.55 PM",
+    "year": 1,
+    "courseCode": "MA1201",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "5 PM - 5.55 PM",
-    "year": 2,
-    "courseCode": "EC2201",
-    "group": "EE",
-    "venue": "LT101",
+    "day": "Friday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3202",
+    "group": "MC",
+    "venue": "R303",
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "5 PM - 5.55 PM",
-    "year": 2,
-    "courseCode": "EC2201",
-    "group": "EC",
-    "venue": "LT101",
+    "day": "Friday",
+    "time": "4 PM - 4.55 PM",
+    "year": "Elective",
+    "courseCode": "MA6207",
+    "group": "MC",
+    "venue": "R301",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Friday",
+    "time": "5 PM - 5.55 PM",
+    "year": 1,
+    "courseCode": "CH1201",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3201",
-    "group": "EC",
-    "venue": "R502",
+    "courseCode": "MA3201",
+    "group": "MC",
+    "venue": "R303",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Friday",
     "time": "5 PM - 5.55 PM",
-    "year": 2,
-    "courseCode": "EC2201",
-    "group": "EE",
-    "venue": "LT101",
+    "year": "Elective",
+    "courseCode": "MA6218 (IDE)",
+    "group": "MC",
+    "venue": "R301",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 2,
-    "courseCode": "EC2201",
-    "group": "EC",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 7 PM",
-    "year": 3,
-    "courseCode": "EE3202",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 7 PM",
-    "year": 3,
-    "courseCode": "EE3203",
-    "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -2106,2487 +2646,12 @@
     "type": "Lecture"
   },
   {
-    "day": "Monday",
-    "time": "6 PM - 6.55 PM",
-    "year": 3,
-    "courseCode": "EC3204",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "9 AM - 9.55 AM",
-    "year": 4,
-    "courseCode": "PH4201",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 2,
-    "courseCode": "EP2203",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 9.55 AM",
-    "year": "Elective",
-    "courseCode": "ME6212",
-    "group": "ME",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 1 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "9 AM - 11 AM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
     "day": "Friday",
-    "time": "9 AM - 9.55 AM",
-    "year": 2,
-    "courseCode": "EP2202",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "PH4205",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5205",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6205",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EP3204",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "PH4201",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EP2202",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "PH4204",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "EP2201",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5207",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6230",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5205",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6205",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 2 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5207",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6230",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 12 PM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5205",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6205",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EP3201",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EP2203",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EP3201",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "PH4204",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EP2201",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "PH3206",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5218",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6218",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "PH4201",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EP2202",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 3 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "PH4205",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EP2203",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "PH3201",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "EP2204",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5218",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6218",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5220",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6220",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EP2203",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5207",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6230",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "PH4202",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EP2202",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5218",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6218",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5220",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6220",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 PM - 4 AM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "PH4201",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5220",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6220",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "PH3201",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "EE1201",
-    "group": "EE",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 5 PM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "PH3201",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 5 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 2.55 PM",
-    "year": 2,
-    "courseCode": "EP2204",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 6 PM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5207",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6230",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 2,
-    "courseCode": "EP2204",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 6 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": 4,
-    "courseCode": "PH4202",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "EP3201",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "3 PM - 3.55 PM",
-    "year": 2,
-    "courseCode": "EP2205",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Physics Stream",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "PH3209",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 7 PM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Physics Stream",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 4,
-    "courseCode": "PH4202",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "EP3204",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Physics Stream",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 4,
-    "courseCode": "PH4205",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "PH3209",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 7 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": 4,
-    "courseCode": "PH4202",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "Physics Stream",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": 2,
-    "courseCode": "EP2205",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "PH3209",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 8 PM",
-    "year": 4,
-    "courseCode": "PH4203",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6205",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6201 (IDE)",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6230",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6218",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6220",
-    "group": "PH",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "EP3204",
-    "group": "EP",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 8 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 5.55 PM",
-    "year": 4,
-    "courseCode": "PH4204",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 5.55 PM",
-    "year": 2,
-    "courseCode": "EP2201",
-    "group": "EP",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "PH3206",
-    "group": "PH",
-    "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "PH3206",
-    "group": "PH",
-    "venue": "R101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": 3,
-    "courseCode": "CE3201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5211",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": 3,
-    "courseCode": "CE3201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6218",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6229",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": 3,
-    "courseCode": "CE3206",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5204",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5209",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": 3,
-    "courseCode": "CE3201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5217",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": 3,
-    "courseCode": "CE3203",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "09:00 AM - 09.55 AM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "CE3204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5211",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5204",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "CE3204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5207",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5204",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 1 PM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "CE",
-    "venue": "R131/Lab/Others",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "CE3203",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5206",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5209",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "CE3204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6229",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6218",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "CE3206",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "10:00 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "CE3204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5212",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 2 PM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "CE",
-    "venue": "R131/Lab/Others",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "CE2205",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6203",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5212",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "CE2204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6203",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5214",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "CE2204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5212",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5206",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6218",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11:00 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5214",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": 2,
-    "courseCode": "CE2204",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6229",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": 3,
-    "courseCode": "CE3206",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5201",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5209",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": 2,
-    "courseCode": "CE2205",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5210",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5214",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": 3,
-    "courseCode": "CE3203",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5207",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5206",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": 2,
-    "courseCode": "CE2205",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12:00 Noon - 12.55 AM",
-    "year": "Elective",
-    "courseCode": "CE5217",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": 2,
-    "courseCode": "CE2206",
-    "group": "Minor",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 5 PM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "CE",
-    "venue": "R131/Lab/Others",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": 2,
-    "courseCode": "CE2206",
-    "group": "Minor",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5208",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5213",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": 2,
-    "courseCode": "CE2202",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5208",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5203",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": 2,
-    "courseCode": "CE2206",
-    "group": "Minor",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "02:00 PM - 02.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5208",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": 3,
-    "courseCode": "CE3205",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5205",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5201",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": 2,
-    "courseCode": "CE2201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5213",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 6 PM",
-    "year": 1,
-    "courseCode": "CE1201",
-    "group": "CE",
-    "venue": "R131/Lab/Others",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": 2,
-    "courseCode": "CE2202",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5202",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": 2,
-    "courseCode": "CE2202",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5201",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": 2,
-    "courseCode": "CE2201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5207",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "03:00 PM - 03.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5203",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": 2,
-    "courseCode": "CE2203",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6210",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6203",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": 2,
-    "courseCode": "CE2201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5202",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6210",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 7 PM",
+    "time": "6 PM -7:00 PM",
     "year": 1,
-    "courseCode": "CE1201",
-    "group": "CE",
-    "venue": "R131/Lab/Others",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": 2,
-    "courseCode": "CE2203",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6210",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": 3,
-    "courseCode": "CE3205",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5211",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5205",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": 2,
-    "courseCode": "CE2203",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": 3,
-    "courseCode": "CE3202",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "04:00 PM - 04.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5203",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5210",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": 3,
-    "courseCode": "CE3201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5202",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5217",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5210",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5205",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": 3,
-    "courseCode": "CE3202",
-    "group": "CE",
-    "venue": "B9/R105",
+    "courseCode": "IK1201",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "05:00 PM - 05.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5213",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "06:00 PM - 06.55 PM",
-    "year": 3,
-    "courseCode": "CE3205",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "06:00 PM - 06.55 PM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "CE",
-    "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "06:00 PM - 06.55 PM",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "CE",
-    "venue": "B9/R104",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "06:00 PM - 06.55 PM",
-    "year": 3,
-    "courseCode": "CE3202",
-    "group": "CE",
-    "venue": "B9/R105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G1",
-    "venue": "Block 9 - Room 101",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G1",
-    "venue": "Block 9 - Room 101",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G1",
-    "venue": "Block 9 - Room 101",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G2",
-    "venue": "Block 9 - Room 102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G2",
-    "venue": "Block 9 - Room 102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G2",
-    "venue": "Block 9 - Room 102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G3",
-    "venue": "Block 9 - Room 103",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G3",
-    "venue": "Room LT102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G3",
-    "venue": "Block 9 - Room 103",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G4",
-    "venue": "Block 9 - Room 104",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G4",
-    "venue": "Block 9 - Room 104",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G4",
-    "venue": "Block 9 - Room 104",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G5",
-    "venue": "Block 9 - Room 105",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G5",
-    "venue": "Block 9 - Room 105",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G5",
-    "venue": "Block 9 - Room 105",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G6",
-    "venue": "Block 9 - Room 106",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G6",
-    "venue": "Block 9 - Room 106",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G6",
-    "venue": "Block 9 - Room 106",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G7",
-    "venue": "Block 9 - Room 107",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G7",
-    "venue": "Block 9 - Room 107",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G7",
-    "venue": "Block 9 - Room 107",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G8",
-    "venue": "Block 9 - Room 108",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G8",
-    "venue": "Block 9 - Room 303",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G8",
-    "venue": "Block 9 - Room 108",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G9",
-    "venue": "Block 9 - Room 109",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G9",
-    "venue": "Block 9 - Room 109",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G9",
-    "venue": "Block 9 - Room 109",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G10",
-    "venue": "Block 9 - Room 110",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G10",
-    "venue": "Block 9 - Room 307",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G10",
-    "venue": "Block 9 - Room 110",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G11",
-    "venue": "Block 9 - Room 205",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G11",
-    "venue": "Room LT002",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G11",
-    "venue": "Block 9 - Room 205",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G12",
-    "venue": "Block 9 - Room 301",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G12",
-    "venue": "Block 9 - Room 301",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G12",
-    "venue": "Block 9 - Room 301",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G13",
-    "venue": "Block 9 - Room 302",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G13",
-    "venue": "Block 9 - Room 302",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G14",
-    "venue": "Block 9 - Room 303",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G14",
-    "venue": "Block 9 - Room 303",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G15",
-    "venue": "Block 9 - Room 304",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G15",
-    "venue": "Block 9 - Room 304",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G16",
-    "venue": "Block 9 - Room 305",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G16",
-    "venue": "Block 9 - Room 305",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G17",
-    "venue": "Block 9 - Room 306",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G17",
-    "venue": "Block 9 - Room 306",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G18",
-    "venue": "Block 9 - Room 307",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G18",
-    "venue": "Block 9 - Room 307",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G19",
-    "venue": "Block 9 - Room 308",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G19",
-    "venue": "Block 9 - Room 308",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G20",
-    "venue": "Block 9 - Room 309",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G20",
-    "venue": "Block 9 - Room 309",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G21",
-    "venue": "Block 9 - Room 310",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G21",
-    "venue": "Block 9 - Room 310",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G22",
-    "venue": "Block 9 - Room 409",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G22",
-    "venue": "Block 9 - Room 409",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G23",
-    "venue": "Block 9 - Room 501",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G23",
-    "venue": "Block 9 - Room 501",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1201",
-    "group": "G24",
-    "venue": "Block 9 - Room 502",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "MA1201",
-    "group": "G24",
-    "venue": "Block 9 - Room 502",
-    "type": "Tutorial"
   }
 ]
