@@ -283,7 +283,7 @@
     "time": "10 AM - 1 PM",
     "year": 4,
     "courseCode": "CH4206",
-    "group": "CT",
+    "group": "Minor",
     "venue": "Lab1",
     "type": "Lab"
   },
@@ -778,7 +778,7 @@
     "time": "02:00 PM-02:55 PM",
     "year": 2,
     "courseCode": "CH2206",
-    "group": "CT",
+    "group": "Minor",
     "venue": "R502",
     "type": "Lecture"
   },
@@ -1606,7 +1606,7 @@
     "time": "10 AM - 1 PM",
     "year": 4,
     "courseCode": "CH4206",
-    "group": "CT",
+    "group": "Minor",
     "venue": "Lab 1",
     "type": "Lab"
   },
@@ -2083,7 +2083,7 @@
     "time": "02:00 PM-02:55 PM",
     "year": 3,
     "courseCode": "CH3207",
-    "group": "CT",
+    "group": "Minor",
     "venue": "R306",
     "type": "Lecture"
   },
@@ -3505,7 +3505,7 @@
     "time": "02:00 PM-02:55 PM",
     "year": 2,
     "courseCode": "CH2206",
-    "group": "CT",
+    "group": "Minor",
     "venue": "R502",
     "type": "Lecture"
   },
@@ -4729,7 +4729,7 @@
     "time": "02:00 PM-02:55 PM",
     "year": 3,
     "courseCode": "CH3207",
-    "group": "CT",
+    "group": "Minor",
     "venue": "R306",
     "type": "Lecture"
   },
@@ -5881,7 +5881,7 @@
     "time": "02:00 PM-02:55 PM",
     "year": 3,
     "courseCode": "CH3207",
-    "group": "CT",
+    "group": "Minor",
     "venue": "R306",
     "type": "Lecture"
   },
@@ -5890,7 +5890,7 @@
     "time": "02:00 PM-02:55 PM",
     "year": 2,
     "courseCode": "CH2206",
-    "group": "CT",
+    "group": "Minor",
     "venue": "R502 and LT003",
     "type": "Lecture"
   },
