@@ -298,6 +298,15 @@
   },
   {
     "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "HS2203",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": 1,
     "courseCode": "CS1201",
@@ -474,6 +483,15 @@
     "courseCode": "RM6201",
     "group": "CB",
     "venue": "Dept",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "HS2202",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
     "type": "Lecture"
   },
   {
@@ -663,6 +681,15 @@
     "courseCode": "CB6205",
     "group": "CB",
     "venue": "Dept",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "HS2204",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
     "type": "Lecture"
   },
   {
@@ -919,7 +946,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 PM - 4 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1036,7 +1063,7 @@
   },
   {
     "day": "Monday",
-    "time": "4 PM - 5 PM",
+    "time": "4 PM - 7 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1126,7 +1153,7 @@
   },
   {
     "day": "Monday",
-    "time": "5 PM - 6 PM",
+    "time": "5 PM - 8 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1630,12 +1657,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "10 AM - 11 AM",
+    "time": "10 AM - 1 PM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "HS2203",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -1819,12 +1855,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "11 AM - 12 PM",
+    "time": "11 AM - 2 PM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "HS2202",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -1999,12 +2044,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "12 PM - 1 AM",
+    "time": "12 PM - 3 AM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "HS2201",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -3052,6 +3106,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "HS2203",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 1,
     "courseCode": "CS1201",
@@ -3232,6 +3295,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "HS2202",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "12 Noon - 12.55 PM",
     "year": 1,
     "courseCode": "MA1201",
@@ -3408,6 +3480,15 @@
     "courseCode": "CB3204",
     "group": "CB",
     "venue": "R109",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "HS2201",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
     "type": "Lecture"
   },
   {
@@ -3691,12 +3772,21 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 PM - 4 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
     "courseCode": "CB2204",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "HS2204",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3817,7 +3907,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "4 PM - 5 PM",
+    "time": "4 PM - 7 PM",
     "year": 2,
     "courseCode": "CB2204",
     "group": "CB",
@@ -4285,12 +4375,21 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 11 AM",
+    "time": "10 AM - 1 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "HS2203",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -4474,12 +4573,21 @@
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 12 PM",
+    "time": "11 AM - 2 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "HS2202",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -4605,6 +4713,15 @@
     "courseCode": "CB6205",
     "group": "CB",
     "venue": "Dept",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "HS2201",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
     "type": "Lecture"
   },
   {
@@ -4857,6 +4974,15 @@
     "courseCode": "CB3203",
     "group": "CB",
     "venue": "R109",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "HS2204",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
     "type": "Lecture"
   },
   {
@@ -5806,6 +5932,15 @@
   },
   {
     "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "HS2201",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "2 PM - 4.55 PM",
     "year": 1,
     "courseCode": "CH1201",
@@ -6004,12 +6139,21 @@
   },
   {
     "day": "Friday",
-    "time": "3 PM - 4 PM",
+    "time": "3 PM - 6 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "HS2204",
+    "group": "ES",
+    "venue": "R202 (Block-1)",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6103,7 +6247,7 @@
   },
   {
     "day": "Friday",
-    "time": "4 PM - 5 PM",
+    "time": "4 PM - 7 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
