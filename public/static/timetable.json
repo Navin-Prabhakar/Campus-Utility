@@ -1612,6 +1612,15 @@
   },
   {
     "day": "Tuesday",
+    "time": "10 AM - 12 PM",
+    "year": 3,
+    "courseCode": "CH3203",
+    "group": "CT",
+    "venue": "CC lab1",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "CB2205",
@@ -2998,15 +3007,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "10 AM - 12 PM",
-    "year": 3,
-    "courseCode": "CH3203",
-    "group": "CT",
-    "venue": "CC lab1",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "10:00 AM-10:55 AM",
     "year": 4,
     "courseCode": "CH4205",
@@ -3022,6 +3022,15 @@
     "group": "CT",
     "venue": "R306",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 1 PM",
+    "year": 3,
+    "courseCode": "CH3205",
+    "group": "CT",
+    "venue": "Lab2",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3511,6 +3520,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "2 PM - 5 PM",
+    "year": 3,
+    "courseCode": "CH3205",
+    "group": "CT",
+    "venue": "Lab2",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "CB2206",
@@ -3670,6 +3688,15 @@
     "group": "MM",
     "venue": "R310",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "CH2205",
+    "group": "CT",
+    "venue": "Lab3",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -4249,15 +4276,6 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 1 PM",
-    "year": 3,
-    "courseCode": "CH3205",
-    "group": "CT",
-    "venue": "Lab2",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "10:00 AM-10:55 AM",
     "year": 4,
     "courseCode": "CH4202",
@@ -4462,6 +4480,15 @@
     "group": "CT",
     "venue": "R306",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 2 PM",
+    "year": "Elective",
+    "courseCode": "CH6201",
+    "group": "CT",
+    "venue": "CC lab1",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -4717,21 +4744,21 @@
   },
   {
     "day": "Thursday",
-    "time": "2 PM - 5 PM",
-    "year": 3,
-    "courseCode": "CH3205",
-    "group": "CT",
-    "venue": "Lab2",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "02:00 PM-02:55 PM",
     "year": 3,
     "courseCode": "CH3207",
     "group": "Minor",
     "venue": "R306",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 5 PM",
+    "year": 2,
+    "courseCode": "CH2205",
+    "group": "CT",
+    "venue": "Lab3",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -4822,15 +4849,6 @@
     "group": "MM",
     "venue": "R310",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 6 PM",
-    "year": 2,
-    "courseCode": "CH2205",
-    "group": "CT",
-    "venue": "Lab3",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5644,15 +5662,6 @@
   },
   {
     "day": "Friday",
-    "time": "11 AM - 2 PM",
-    "year": "Elective",
-    "courseCode": "CH6201",
-    "group": "CT",
-    "venue": "CC lab1",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
     "time": "11:00 AM-11:55 AM",
     "year": 4,
     "courseCode": "CH4204",
@@ -5857,15 +5866,6 @@
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "2 PM - 5 PM",
-    "year": 2,
-    "courseCode": "CH2205",
-    "group": "CT",
-    "venue": "Lab3",
-    "type": "Lab"
   },
   {
     "day": "Friday",
