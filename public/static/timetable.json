@@ -1219,7 +1219,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "MA4202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1228,7 +1228,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "MA2202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1246,7 +1246,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "MA4205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1255,7 +1255,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "MA2204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1264,7 +1264,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 5,
     "courseCode": "MA5214",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1273,7 +1273,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "MA4203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1282,7 +1282,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "MA2201",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1300,7 +1300,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "MA4202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1309,7 +1309,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "MA2205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1318,7 +1318,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "MA4205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1327,7 +1327,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "MA2203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1336,7 +1336,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 6,
     "courseCode": "MA6215",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1345,7 +1345,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1354,7 +1354,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "MA2202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1363,7 +1363,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 6,
     "courseCode": "MA6207",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1372,7 +1372,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1381,7 +1381,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "MA2205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1399,7 +1399,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1408,7 +1408,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "MA2203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1426,7 +1426,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4201",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1435,7 +1435,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1444,7 +1444,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "MA5214",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1453,7 +1453,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1462,7 +1462,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2201",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1471,7 +1471,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "MA6215",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1480,7 +1480,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4201",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1489,7 +1489,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1498,7 +1498,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "MA5214",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1507,7 +1507,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1516,7 +1516,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1525,7 +1525,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "MA6207",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1534,7 +1534,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "Dept classroom",
     "type": "Lecture"
   },
@@ -1543,7 +1543,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "MA2252",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1552,7 +1552,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "MA3202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1561,7 +1561,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "MA2252",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1570,7 +1570,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "MA3203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1579,7 +1579,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "MA3204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1588,7 +1588,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 6,
     "courseCode": "MA6215",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1597,7 +1597,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "MA3204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1606,7 +1606,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "MA3206",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1615,7 +1615,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "MA3202",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1624,7 +1624,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "MA3205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1633,7 +1633,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "MA3205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1642,7 +1642,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "MA3201",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1651,7 +1651,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 6,
     "courseCode": "MA6206",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1660,7 +1660,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "MA3204",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1669,7 +1669,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "MA3201",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1678,7 +1678,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 6,
     "courseCode": "MA6206",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1687,7 +1687,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "MA3206",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1696,7 +1696,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "MA3203",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1705,7 +1705,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "MA6218",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1714,7 +1714,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "MA3205",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1723,7 +1723,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "MA6206",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1732,7 +1732,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "MA3206",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R303",
     "type": "Lecture"
   },
@@ -1741,7 +1741,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "MA6218",
-    "group": "All Branches",
+    "group": "MC",
     "venue": "R301",
     "type": "Lecture"
   },
@@ -1750,7 +1750,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 3,
     "courseCode": "EC3202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1768,7 +1768,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 5,
     "courseCode": "EC5216",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1777,7 +1777,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 5,
     "courseCode": "EC5202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lab"
   },
@@ -1804,7 +1804,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 5,
     "courseCode": "EC5216",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1813,7 +1813,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 5,
     "courseCode": "EC5201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lab"
   },
@@ -1822,7 +1822,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 2,
     "courseCode": "EC2203",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1840,7 +1840,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 3,
     "courseCode": "EC3203",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1858,7 +1858,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "EC2203",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1867,7 +1867,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 3,
     "courseCode": "EC3202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1894,7 +1894,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 3,
     "courseCode": "EC3206",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1903,7 +1903,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2204",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1912,7 +1912,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 3,
     "courseCode": "EC3206",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1939,7 +1939,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2204",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1948,7 +1948,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 3,
     "courseCode": "EC3203",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1966,7 +1966,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1975,7 +1975,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 3,
     "courseCode": "EC3202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1984,7 +1984,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "EC2202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -1993,7 +1993,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 3,
     "courseCode": "EC3205",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2020,7 +2020,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 3,
     "courseCode": "EC3205",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2029,7 +2029,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "EC5204",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2047,7 +2047,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 5,
     "courseCode": "EC5203",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2056,7 +2056,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 5,
     "courseCode": "EC5220",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2074,7 +2074,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 5,
     "courseCode": "EC5203",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2110,7 +2110,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "EC3202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2137,7 +2137,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "EC3204",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2146,7 +2146,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 5,
     "courseCode": "EC5205",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2164,7 +2164,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EC2201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2173,7 +2173,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EC2202",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2191,7 +2191,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 5,
     "courseCode": "EC5205",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2209,7 +2209,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 5,
     "courseCode": "EC5214",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2218,7 +2218,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 5,
     "courseCode": "EC5214",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2236,7 +2236,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "EC3201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lab"
   },
@@ -2245,7 +2245,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "EC3201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2254,7 +2254,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 2,
     "courseCode": "EC2201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2263,7 +2263,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "EE",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2272,7 +2272,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "EE",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2281,7 +2281,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "EC3201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2290,7 +2290,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 2,
     "courseCode": "EC2201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2299,7 +2299,7 @@
     "time": "6 PM - 6.55 PM",
     "year": 3,
     "courseCode": "EC3204",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2308,7 +2308,7 @@
     "time": "6 PM - 6.55 PM",
     "year": 6,
     "courseCode": "EC6204",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2317,7 +2317,7 @@
     "time": "6 PM - 6.55 PM",
     "year": 5,
     "courseCode": "EC5201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2326,7 +2326,7 @@
     "time": "IKS",
     "year": 5,
     "courseCode": "EC5201",
-    "group": "EE",
+    "group": "EC",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2335,7 +2335,7 @@
     "time": "IKS",
     "year": 5,
     "courseCode": "EC5202",
-    "group": "EE",
+    "group": "EC",
     "venue": "R410",
     "type": "Lecture"
   },
@@ -2344,7 +2344,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "PH4201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2362,7 +2362,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 6,
     "courseCode": "ME6212",
-    "group": "EP",
+    "group": "ME",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2380,7 +2380,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "PH4205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2389,7 +2389,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 5,
     "courseCode": "PH5205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2398,7 +2398,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 6,
     "courseCode": "PH6205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2416,7 +2416,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "PH4201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2434,7 +2434,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 5,
     "courseCode": "PH5222",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2443,7 +2443,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 6,
     "courseCode": "PH6222",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2452,7 +2452,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "PH4204",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2470,7 +2470,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 5,
     "courseCode": "PH5207",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2479,7 +2479,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 6,
     "courseCode": "PH6230",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2488,7 +2488,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 5,
     "courseCode": "PH5205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2497,7 +2497,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 6,
     "courseCode": "PH6205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2515,7 +2515,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 5,
     "courseCode": "PH5207",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2524,7 +2524,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 6,
     "courseCode": "PH6230",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2533,7 +2533,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2560,7 +2560,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4204",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2578,7 +2578,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 3,
     "courseCode": "PH3206",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2587,7 +2587,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 5,
     "courseCode": "PH5218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2596,7 +2596,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 6,
     "courseCode": "PH6218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2605,7 +2605,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2632,7 +2632,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2650,7 +2650,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "PH5218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2659,7 +2659,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "PH6218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2668,7 +2668,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "PH5220",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2677,7 +2677,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "PH6220",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2695,7 +2695,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2713,7 +2713,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "PH5207",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2722,7 +2722,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "PH6230",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2731,7 +2731,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "PH4202",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2749,7 +2749,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "PH5218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2758,7 +2758,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "PH6218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2767,7 +2767,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 5,
     "courseCode": "PH5220",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2776,7 +2776,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 6,
     "courseCode": "PH6220",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2794,7 +2794,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 1,
     "courseCode": "EE1201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2803,7 +2803,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lab"
   },
@@ -2812,7 +2812,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "PH3201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2830,7 +2830,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lab"
   },
@@ -2839,7 +2839,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 5,
     "courseCode": "PH5207",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2848,7 +2848,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 6,
     "courseCode": "PH6230",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2866,7 +2866,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2893,7 +2893,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 4,
     "courseCode": "PH4202",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2902,7 +2902,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2911,7 +2911,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "PH3209",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2920,7 +2920,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lab"
   },
@@ -2929,7 +2929,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2938,7 +2938,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "PH4202",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2956,7 +2956,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2965,7 +2965,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "PH4205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2974,7 +2974,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 3,
     "courseCode": "PH3209",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2983,7 +2983,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "PH4202",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -2992,7 +2992,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 4,
     "courseCode": "PH4203",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lab"
   },
@@ -3001,7 +3001,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "PH6205",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3010,7 +3010,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "PH6201",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3019,7 +3019,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "PH6230",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3028,7 +3028,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "PH6218",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3037,7 +3037,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "PH6220",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3055,7 +3055,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 6,
     "courseCode": "PH6222",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3064,7 +3064,7 @@
     "time": "5 PM - 5.55 PM",
     "year": 4,
     "courseCode": "PH4204",
-    "group": "EP",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -3226,7 +3226,7 @@
     "time": "10:00 AM - 10.55 AM",
     "year": 1,
     "courseCode": "CE1201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "R131/Lab/Others",
     "type": "Lecture"
   },
@@ -3307,7 +3307,7 @@
     "time": "11:00 AM - 11.55 AM",
     "year": 1,
     "courseCode": "CE1201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "R131/Lab/Others",
     "type": "Lecture"
   },
@@ -3505,7 +3505,7 @@
     "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
     "year": 1,
     "courseCode": "CE1201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "R131/Lab/Others",
     "type": "Lecture"
   },
@@ -3613,7 +3613,7 @@
     "time": "03:00 PM - 03.55 PM",
     "year": 1,
     "courseCode": "CE1201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "R131/Lab/Others",
     "type": "Lecture"
   },
@@ -3712,7 +3712,7 @@
     "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
     "year": 1,
     "courseCode": "CE1201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "R131/Lab/Others",
     "type": "Lecture"
   },
@@ -3829,7 +3829,7 @@
     "time": "06:00 PM - 06.55 PM\n(BTech Minor, MWF)",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "B9/R106",
     "type": "Lecture"
   },
@@ -3838,7 +3838,7 @@
     "time": "06:00 PM - 06.55 PM\n(BTech Minor, MWF)",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "CE",
+    "group": "All Branches",
     "venue": "B9/R104",
     "type": "Lecture"
   },
@@ -4162,7 +4162,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "MM",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -4189,7 +4189,7 @@
     "time": "2 PM - 2.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "MM",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -4207,7 +4207,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "MM",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -4792,7 +4792,7 @@
     "time": "9 AM - 9.55 AM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "CB",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -4864,7 +4864,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "CB",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -4882,7 +4882,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "CB",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5161,7 +5161,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "CB",
+    "group": "All Branches",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5269,7 +5269,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2203",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5278,7 +5278,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2203",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5287,7 +5287,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2203",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5296,7 +5296,7 @@
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2203",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5305,7 +5305,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "HS2202",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5314,7 +5314,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "HS2202",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5323,7 +5323,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "HS2202",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5332,7 +5332,7 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "HS2202",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5341,7 +5341,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "HS2204",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5350,7 +5350,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "HS2201",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5359,7 +5359,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "ME2204",
-    "group": "All Branches",
+    "group": "ME",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5368,7 +5368,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "HS2201",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5377,7 +5377,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "HS2201",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5386,7 +5386,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "ME2204",
-    "group": "All Branches",
+    "group": "ME",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5395,7 +5395,7 @@
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "HS2201",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5404,7 +5404,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "HS2204",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5413,7 +5413,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "HS2204",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5422,7 +5422,7 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "HS2204",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5431,7 +5431,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 2,
     "courseCode": "HS2209",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5440,7 +5440,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 2,
     "courseCode": "HS2209",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5449,7 +5449,7 @@
     "time": "4 PM - 4.55 PM",
     "year": 2,
     "courseCode": "HS2209",
-    "group": "All Branches",
+    "group": "ES",
     "venue": "nan",
     "type": "Lecture"
   },
@@ -5512,7 +5512,7 @@
     "time": "2",
     "year": 5,
     "courseCode": "MH5202",
-    "group": "ME",
+    "group": "All Branches",
     "venue": "R304",
     "type": "Lecture"
   },
@@ -5566,7 +5566,7 @@
     "time": "3",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "ME",
+    "group": "All Branches",
     "venue": "R304",
     "type": "Lecture"
   },
@@ -5674,7 +5674,7 @@
     "time": "5",
     "year": 5,
     "courseCode": "MH5201",
-    "group": "ME",
+    "group": "All Branches",
     "venue": "R304",
     "type": "Lecture"
   },
@@ -5692,7 +5692,7 @@
     "time": "5",
     "year": 5,
     "courseCode": "MH5201",
-    "group": "ME",
+    "group": "All Branches",
     "venue": "R304",
     "type": "Lecture"
   },
@@ -5746,7 +5746,7 @@
     "time": "7",
     "year": 6,
     "courseCode": "RM6201",
-    "group": "ME",
+    "group": "All Branches",
     "venue": "R304",
     "type": "Lecture"
   },
@@ -5755,7 +5755,7 @@
     "time": "7",
     "year": 2,
     "courseCode": "HS2208",
-    "group": "ME",
+    "group": "ES",
     "venue": "ME Seminar Room",
     "type": "Lecture"
   },
@@ -5845,7 +5845,7 @@
     "time": "9",
     "year": 5,
     "courseCode": "MH5202",
-    "group": "ME",
+    "group": "All Branches",
     "venue": "R304",
     "type": "Lecture"
   },
