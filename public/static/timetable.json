@@ -19,7 +19,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 - 6",
+    "time": "3 - 7",
     "year": 2,
     "courseCode": "CS2204",
     "group": "AI",
@@ -28,7 +28,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 - 6",
+    "time": "3 - 7",
     "year": 2,
     "courseCode": "CS2204",
     "group": "CS",
@@ -58,7 +58,7 @@
     "time": "05-05:55",
     "year": "Elective",
     "courseCode": "CS6206",
-    "group": "Minor",
+    "group": "AI/CS",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -787,7 +787,7 @@
     "time": "12-12:55",
     "year": 2,
     "courseCode": "CS2206",
-    "group": "Minor",
+    "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -2317,7 +2317,7 @@
     "time": "12-12:55",
     "year": 2,
     "courseCode": "CS2206",
-    "group": "Minor",
+    "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -4594,7 +4594,7 @@
     "time": "06-06:55",
     "year": "Elective",
     "courseCode": "CS6206",
-    "group": "Minor",
+    "group": "AI/CS",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -5296,7 +5296,7 @@
     "time": "12-12:55",
     "year": 2,
     "courseCode": "CS2206",
-    "group": "Minor",
+    "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -5917,7 +5917,7 @@
     "time": "06-06:55",
     "year": "Elective",
     "courseCode": "CS6206",
-    "group": "Minor",
+    "group": "AI/CS",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -6250,7 +6250,7 @@
     "time": "9 - 12",
     "year": 2,
     "courseCode": "CS2206",
-    "group": "Minor",
+    "group": "CS",
     "venue": "Hardware lab + Classroom CSE Dept",
     "type": "Lab"
   },
