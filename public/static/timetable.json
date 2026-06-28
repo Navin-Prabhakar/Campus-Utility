@@ -1540,18 +1540,18 @@
   },
   {
     "day": "Friday",
-    "time": "10 AM - 10.55 AM",
+    "time": "10 AM - 1 PM",
     "year": 2,
-    "courseCode": "EE2202",
+    "courseCode": "EE2202 (Gr 1)",
     "group": "EE",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Friday",
-    "time": "10 AM - 10.55 AM",
+    "time": "10 AM - 1 PM",
     "year": 2,
-    "courseCode": "EE2202",
+    "courseCode": "EE2202 (Gr 1)",
     "group": "EC",
     "venue": "EE Dept Room",
     "type": "Lab"
@@ -1675,7 +1675,7 @@
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
+    "time": "11 AM - 2 PM",
     "year": 3,
     "courseCode": "EE3204",
     "group": "EE",
@@ -1684,7 +1684,7 @@
   },
   {
     "day": "Friday",
-    "time": "11 AM - 11.55 AM",
+    "time": "11 AM - 2 PM",
     "year": 3,
     "courseCode": "EE3204",
     "group": "EE",
@@ -1819,9 +1819,9 @@
   },
   {
     "day": "Wednesday",
-    "time": "2 PM - 2.55 PM",
+    "time": "2 PM - 5 PM",
     "year": 3,
-    "courseCode": "EC3202",
+    "courseCode": "EC3202 (Gr 2)",
     "group": "EE",
     "venue": "EE Dept Room",
     "type": "Lab"
@@ -1846,16 +1846,16 @@
   },
   {
     "day": "Monday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 3,
-    "courseCode": "EC3202",
+    "courseCode": "EC3202 (Gr 1)",
     "group": "EE",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Monday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
@@ -1873,36 +1873,108 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
-    "courseCode": "EC2201",
+    "courseCode": "EC2201 (Gr 1)",
     "group": "EE",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
-    "courseCode": "EC2201",
+    "courseCode": "EC2201 (Gr 1)",
+    "group": "EC",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 2)",
+    "group": "EE",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 2)",
+    "group": "EC",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 3)",
+    "group": "EE",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 3)",
     "group": "EC",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
-    "courseCode": "EC2201",
+    "courseCode": "EC2201 (Gr 2)",
     "group": "EE",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
-    "courseCode": "EC2201",
+    "courseCode": "EC2201 (Gr 2)",
+    "group": "EC",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 3)",
+    "group": "EE",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2202 (Gr 3)",
+    "group": "EC",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 1)",
+    "group": "EE",
+    "venue": "EE Dept Room",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2201 (Gr 1)",
     "group": "EC",
     "venue": "EE Dept Room",
     "type": "Lab"
@@ -1918,25 +1990,25 @@
   },
   {
     "day": "Friday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
-    "courseCode": "EE2202",
+    "courseCode": "EE2202 (Gr 2)",
     "group": "EE",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Friday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
-    "courseCode": "EE2202",
+    "courseCode": "EE2202 (Gr 2)",
     "group": "EC",
     "venue": "EE Dept Room",
     "type": "Lab"
   },
   {
     "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
+    "time": "4 PM - 7 PM",
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
@@ -1945,7 +2017,7 @@
   },
   {
     "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
+    "time": "4 PM - 7 PM",
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
@@ -2008,7 +2080,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
+    "time": "5 PM - 8 PM",
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
