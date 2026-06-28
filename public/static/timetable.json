@@ -1391,7 +1391,7 @@
     "year": 3,
     "courseCode": "EC3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1400,16 +1400,7 @@
     "year": 3,
     "courseCode": "EE3203",
     "group": "EE",
-    "venue": "EE Dept Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 2,
-    "courseCode": "EC2203",
-    "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1418,16 +1409,25 @@
     "year": 2,
     "courseCode": "EC2203",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
+    "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EC2203",
+    "group": "EC",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "9 AM - 9.55 AM",
     "year": 3,
     "courseCode": "EE3203",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1436,7 +1436,7 @@
     "year": 2,
     "courseCode": "EE2201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1445,7 +1445,7 @@
     "year": 2,
     "courseCode": "EE2201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1454,7 +1454,7 @@
     "year": 3,
     "courseCode": "EC3203",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1463,7 +1463,7 @@
     "year": 2,
     "courseCode": "EC2203",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1472,25 +1472,25 @@
     "year": 3,
     "courseCode": "EC3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
+    "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "EE2201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
+    "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "EE2201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1499,34 +1499,34 @@
     "year": 3,
     "courseCode": "EC3206",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "EE2201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "EE2201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
     "courseCode": "EC3203",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1535,7 +1535,7 @@
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
@@ -1544,7 +1544,7 @@
     "year": 2,
     "courseCode": "EE2202 (Gr 1)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1553,7 +1553,7 @@
     "year": 2,
     "courseCode": "EE2202 (Gr 1)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1562,7 +1562,7 @@
     "year": 2,
     "courseCode": "EC2204",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1571,7 +1571,7 @@
     "year": 2,
     "courseCode": "EC2204",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1580,7 +1580,7 @@
     "year": 3,
     "courseCode": "EC3206",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1589,7 +1589,7 @@
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
@@ -1598,7 +1598,7 @@
     "year": 2,
     "courseCode": "EC2204",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1607,7 +1607,7 @@
     "year": 2,
     "courseCode": "EC2204",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1616,25 +1616,25 @@
     "year": 3,
     "courseCode": "EC3203",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
+    "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
+    "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2202",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1643,34 +1643,34 @@
     "year": 3,
     "courseCode": "EC3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2204",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2204",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
     "courseCode": "EC3206",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1679,7 +1679,7 @@
     "year": 3,
     "courseCode": "EE3204",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1688,7 +1688,7 @@
     "year": 3,
     "courseCode": "EE3204",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1697,7 +1697,7 @@
     "year": 2,
     "courseCode": "EC2202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1706,7 +1706,7 @@
     "year": 2,
     "courseCode": "EC2202",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1715,7 +1715,7 @@
     "year": 3,
     "courseCode": "EC3205",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1724,7 +1724,7 @@
     "year": 3,
     "courseCode": "EE3204",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R205",
     "type": "Lecture"
   },
   {
@@ -1733,7 +1733,7 @@
     "year": 2,
     "courseCode": "EE2202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1742,7 +1742,7 @@
     "year": 2,
     "courseCode": "EE2202",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1751,7 +1751,7 @@
     "year": 3,
     "courseCode": "EC3205",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1760,7 +1760,7 @@
     "year": 3,
     "courseCode": "EE3203",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1769,34 +1769,34 @@
     "year": 3,
     "courseCode": "EC3204",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "EE2202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "EE2202",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": 3,
     "courseCode": "EC3205",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -1805,7 +1805,7 @@
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
@@ -1814,7 +1814,7 @@
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
@@ -1823,16 +1823,16 @@
     "year": 3,
     "courseCode": "EC3202 (Gr 2)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
-    "day": "Wednesday",
+    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "EC3201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1841,7 +1841,7 @@
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "Block III R129",
     "type": "Lecture"
   },
   {
@@ -1850,7 +1850,7 @@
     "year": 3,
     "courseCode": "EC3202 (Gr 1)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1859,7 +1859,7 @@
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 3",
     "type": "Lab"
   },
   {
@@ -1868,7 +1868,7 @@
     "year": 3,
     "courseCode": "EC3204",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1877,7 +1877,7 @@
     "year": 2,
     "courseCode": "EC2201 (Gr 1)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1886,7 +1886,7 @@
     "year": 2,
     "courseCode": "EC2201 (Gr 1)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1895,7 +1895,7 @@
     "year": 2,
     "courseCode": "EC2202 (Gr 2)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1904,7 +1904,7 @@
     "year": 2,
     "courseCode": "EC2202 (Gr 2)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1913,7 +1913,7 @@
     "year": 2,
     "courseCode": "EE2201 (Gr 3)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1922,7 +1922,7 @@
     "year": 2,
     "courseCode": "EE2201 (Gr 3)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 2",
     "type": "Lab"
   },
   {
@@ -1931,7 +1931,7 @@
     "year": 2,
     "courseCode": "EC2201 (Gr 2)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1940,7 +1940,7 @@
     "year": 2,
     "courseCode": "EC2201 (Gr 2)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1949,7 +1949,7 @@
     "year": 2,
     "courseCode": "EC2202 (Gr 3)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1958,7 +1958,7 @@
     "year": 2,
     "courseCode": "EC2202 (Gr 3)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1967,7 +1967,7 @@
     "year": 2,
     "courseCode": "EE2201 (Gr 1)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -1976,16 +1976,16 @@
     "year": 2,
     "courseCode": "EE2201 (Gr 1)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
-    "day": "Thursday",
+    "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "R205",
     "type": "Lecture"
   },
   {
@@ -1994,7 +1994,7 @@
     "year": 2,
     "courseCode": "EE2202 (Gr 2)",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -2003,7 +2003,7 @@
     "year": 2,
     "courseCode": "EE2202 (Gr 2)",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -2012,7 +2012,7 @@
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -2021,7 +2021,7 @@
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
@@ -2030,7 +2030,7 @@
     "year": 3,
     "courseCode": "EC3201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -2039,7 +2039,7 @@
     "year": 2,
     "courseCode": "EC2201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -2048,16 +2048,16 @@
     "year": 2,
     "courseCode": "EC2201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
+    "day": "Wednesday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
     "courseCode": "EC3201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -2066,7 +2066,7 @@
     "year": 2,
     "courseCode": "EC2201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -2075,7 +2075,7 @@
     "year": 2,
     "courseCode": "EC2201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -2084,25 +2084,25 @@
     "year": 3,
     "courseCode": "EE3202",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
   {
-    "day": "Thursday",
+    "day": "Friday",
     "time": "5 PM - 5.55 PM",
     "year": 2,
     "courseCode": "EC2201",
     "group": "EE",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
-    "day": "Thursday",
+    "day": "Friday",
     "time": "5 PM - 5.55 PM",
     "year": 2,
     "courseCode": "EC2201",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -2111,7 +2111,7 @@
     "year": 3,
     "courseCode": "EC3204",
     "group": "EC",
-    "venue": "EE Dept Room",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
