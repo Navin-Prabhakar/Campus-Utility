@@ -46,7 +46,8 @@ export default function SchedulePage() {
         setLoading(true);
         setError(false);
         
-        const res = await fetch("/api/timetable");
+        // 🚀 CHANGED: Fetching directly from the static file updated by the Python script to bypass API caching issues
+        const res = await fetch("/static/timetable.json");
         if (!res.ok) throw new Error("Failed to pull secure JSON payload assets");
         
         const data = await res.json();
@@ -245,12 +246,12 @@ export default function SchedulePage() {
                         <>
                           <option value="AI">AI (Ai & Data Science)</option>
                           <option value="CB">CB (Chemical Eng.)</option>
-                          <option value="CS">CS (Commputer Science & Eng.)</option>
+                          <option value="CS">CS (Computer Science & Eng.)</option>
                           <option value="CT">CT (Chemical Science & Technology)</option>
                           <option value="MC">MC (Mathematics & Computing)</option>
                           <option value="CE">CE (Civil Eng.)</option>
                           <option value="ES">ES (BS Economics)</option>
-                          <option value="EC">EC (Electronics and Communicaion Eng.)</option>
+                          <option value="EC">EC (Electronics and Communication Eng.)</option>
                           <option value="EE">EE (Electrical Eng.)</option>
                           <option value="MM">MM (Metallurgical and Materials Eng.)</option>
                           <option value="ME">ME (Mechanical Eng.)</option>
@@ -340,13 +341,13 @@ export default function SchedulePage() {
                                     {cls.type}
                                   </span>
                                 </div>
-                                <div className="text-[12px] text-zinc-300 truncate">
-                                  📍 Room: <span className="text-zinc-200 font-bold font-black">{cls.venue}</span>
+                                <div className="text-[14px]">
+                                  📍 <span className="text-[12px] text-zinc-200 font-bold font-black">{cls.venue}</span>
                                 </div>
                               </div>
 
                               <div className="text-right shrink-0">
-                                <span className="text-[11px] font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-1.5 shadow-inner font-mono">
+                                <span className="text-[11px]  font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-1.5 shadow-inner font-mono">
                                    {cls.time}
                                 </span>
                               </div>
