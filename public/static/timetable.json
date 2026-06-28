@@ -3601,7 +3601,7 @@
   },
   {
     "day": "Monday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": 2,
     "courseCode": "CE2206",
     "group": "CE",
@@ -3619,7 +3619,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": 2,
     "courseCode": "CE2206",
     "group": "CE",
@@ -3628,7 +3628,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
     "courseCode": "CE5208",
     "group": "CE",
@@ -3637,7 +3637,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
     "courseCode": "CE5213",
     "group": "CE",
@@ -3646,7 +3646,7 @@
   },
   {
     "day": "Thursday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": 2,
     "courseCode": "CE2202",
     "group": "CE",
@@ -3655,7 +3655,7 @@
   },
   {
     "day": "Thursday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
     "courseCode": "CE5208",
     "group": "CE",
@@ -3664,7 +3664,7 @@
   },
   {
     "day": "Thursday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
     "courseCode": "CE5203",
     "group": "CE",
@@ -3673,7 +3673,7 @@
   },
   {
     "day": "Friday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": 2,
     "courseCode": "CE2206",
     "group": "CE",
@@ -3682,7 +3682,7 @@
   },
   {
     "day": "Friday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
     "courseCode": "CE5208",
     "group": "CE",
@@ -3808,7 +3808,7 @@
   },
   {
     "day": "Monday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": 2,
     "courseCode": "CE2203",
     "group": "CE",
@@ -3817,7 +3817,7 @@
   },
   {
     "day": "Monday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE6210",
     "group": "CE",
@@ -3826,7 +3826,7 @@
   },
   {
     "day": "Monday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE6203",
     "group": "CE",
@@ -3835,7 +3835,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": 2,
     "courseCode": "CE2201",
     "group": "CE",
@@ -3844,7 +3844,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE5202",
     "group": "CE",
@@ -3853,7 +3853,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE6210",
     "group": "CE",
@@ -3871,7 +3871,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": 2,
     "courseCode": "CE2203",
     "group": "CE",
@@ -3880,7 +3880,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE6210",
     "group": "CE",
@@ -3889,7 +3889,7 @@
   },
   {
     "day": "Thursday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": 3,
     "courseCode": "CE3205",
     "group": "CE",
@@ -3898,7 +3898,7 @@
   },
   {
     "day": "Thursday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE5211",
     "group": "CE",
@@ -3907,7 +3907,7 @@
   },
   {
     "day": "Thursday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE5205",
     "group": "CE",
@@ -3916,7 +3916,7 @@
   },
   {
     "day": "Friday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": 2,
     "courseCode": "CE2203",
     "group": "CE",
@@ -3925,7 +3925,7 @@
   },
   {
     "day": "Friday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": 3,
     "courseCode": "CE3202",
     "group": "CE",
@@ -3934,7 +3934,7 @@
   },
   {
     "day": "Friday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
     "courseCode": "CE5203",
     "group": "CE",
@@ -3943,7 +3943,7 @@
   },
   {
     "day": "Monday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5210",
     "group": "CE",
@@ -3952,7 +3952,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": 3,
     "courseCode": "CE3201",
     "group": "CE",
@@ -3961,7 +3961,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5202",
     "group": "CE",
@@ -3970,7 +3970,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5217",
     "group": "CE",
@@ -3979,7 +3979,7 @@
   },
   {
     "day": "Thursday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5210",
     "group": "CE",
@@ -3988,7 +3988,7 @@
   },
   {
     "day": "Thursday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5205",
     "group": "CE",
@@ -3997,7 +3997,7 @@
   },
   {
     "day": "Friday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": 3,
     "courseCode": "CE3202",
     "group": "CE",
@@ -4006,7 +4006,7 @@
   },
   {
     "day": "Friday",
-    "time": "05:00 PM - 05.55 PM\n(BTech Minor, MWF)",
+    "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5213",
     "group": "CE",
@@ -4015,7 +4015,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "06:00 PM - 06.55 PM\n(BTech Minor, MWF)",
+    "time": "06:00 PM - 06.55 PM",
     "year": 3,
     "courseCode": "CE3205",
     "group": "CE",
@@ -4024,7 +4024,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "06:00 PM - 06.55 PM\n(BTech Minor, MWF)",
+    "time": "06:00 PM - 06.55 PM",
     "year": "Elective",
     "courseCode": "RM6201",
     "group": "CE",
@@ -4033,7 +4033,7 @@
   },
   {
     "day": "Thursday",
-    "time": "06:00 PM - 06.55 PM\n(BTech Minor, MWF)",
+    "time": "06:00 PM - 06.55 PM",
     "year": "Elective",
     "courseCode": "RM6201",
     "group": "CE",
@@ -4042,7 +4042,7 @@
   },
   {
     "day": "Friday",
-    "time": "06:00 PM - 06.55 PM\n(BTech Minor, MWF)",
+    "time": "06:00 PM - 06.55 PM",
     "year": 3,
     "courseCode": "CE3202",
     "group": "CE",
