@@ -1548,15 +1548,6 @@
     "type": "Lab"
   },
   {
-    "day": "Friday",
-    "time": "10 AM - 1 PM",
-    "year": 2,
-    "courseCode": "EE2202 (Gr 1)",
-    "group": "EC",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
@@ -1739,15 +1730,6 @@
   {
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EE2202",
-    "group": "EC",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
     "year": 3,
     "courseCode": "EC3205",
     "group": "EC",
@@ -1778,15 +1760,6 @@
     "year": 2,
     "courseCode": "EE2202",
     "group": "EE",
-    "venue": "R502",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "EE2202",
-    "group": "EC",
     "venue": "R502",
     "type": "Lecture"
   },
@@ -1994,15 +1967,6 @@
     "year": 2,
     "courseCode": "EE2202 (Gr 2)",
     "group": "EE",
-    "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "3 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2202 (Gr 2)",
-    "group": "EC",
     "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
