@@ -1297,7 +1297,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "10 AM - 12 AM",
+    "time": "10 AM - 12 PM",
     "year": 3,
     "courseCode": "MA3202",
     "group": "MC",
@@ -1306,7 +1306,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "10 AM - 1 AM",
+    "time": "10 AM - 1 PM",
     "year": 3,
     "courseCode": "MA3204",
     "group": "MC",
@@ -1315,7 +1315,7 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 12 AM",
+    "time": "10 AM - 12 PM",
     "year": 3,
     "courseCode": "MA3206",
     "group": "MC",
