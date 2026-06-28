@@ -19,20 +19,20 @@
   },
   {
     "day": "Monday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2204",
     "group": "AI",
-    "venue": "CSE Classroom",
+    "venue": "CC Lab 1",
     "type": "Lab"
   },
   {
     "day": "Monday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2204",
     "group": "CS",
-    "venue": "CSE Classroom",
+    "venue": "CC Lab 1",
     "type": "Lab"
   },
   {
@@ -785,15 +785,6 @@
   {
     "day": "Monday",
     "time": "12-12:55",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "Minor",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12-12:55",
     "year": "Elective",
     "courseCode": "CS6210",
     "group": "AI/CS",
@@ -1342,7 +1333,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 3,
     "courseCode": "CS3202",
     "group": "AI",
@@ -1351,7 +1342,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 3,
     "courseCode": "CS3202",
     "group": "CS",
@@ -1360,11 +1351,11 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2205",
     "group": "AI",
-    "venue": "CSE Classroom",
+    "venue": "CSE Dept Lab",
     "type": "Lab"
   },
   {
@@ -2315,15 +2306,6 @@
   {
     "day": "Tuesday",
     "time": "12-12:55",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "Minor",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12-12:55",
     "year": 3,
     "courseCode": "CS3205",
     "group": "AI/CS",
@@ -3061,7 +3043,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 3,
     "courseCode": "CS3203",
     "group": "CS",
@@ -3070,16 +3052,16 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": "Elective",
     "courseCode": "CS5204",
     "group": "AI/CS",
-    "venue": "CSE Classroom",
+    "venue": "2 Hrs MTP Lab",
     "type": "Lab"
   },
   {
     "day": "Wednesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2202",
     "group": "AI",
@@ -3088,7 +3070,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2202",
     "group": "CS",
@@ -3175,15 +3157,6 @@
     "group": "ME",
     "venue": "R110",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 1 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3421,15 +3394,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "10 AM - 2 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
     "courseCode": "CE3203",
@@ -3502,7 +3466,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "10 AM - 12 PM",
+    "time": "10 AM - 1 PM",
     "year": 3,
     "courseCode": "CH3203",
     "group": "CT",
@@ -3652,15 +3616,6 @@
     "group": "EP",
     "venue": "R102",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 3 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3907,15 +3862,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "12 PM - 4 AM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 2,
     "courseCode": "CE2205",
@@ -4047,15 +3993,6 @@
     "courseCode": "EC3202 (Gr 2)",
     "group": "EE",
     "venue": "EE Dept Lab 2",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 5 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
     "type": "Lab"
   },
   {
@@ -4231,15 +4168,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 PM - 6 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "03:00 PM - 03.55 PM",
     "year": 2,
     "courseCode": "CE2202",
@@ -4363,15 +4291,6 @@
     "group": "PH",
     "venue": "R103",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 7 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -4546,15 +4465,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "5 PM - 8 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5217",
@@ -4600,11 +4510,11 @@
   },
   {
     "day": "Thursday",
-    "time": "2 AM - 5 AM",
+    "time": "2 - 5",
     "year": 3,
     "courseCode": "CS3204",
     "group": "AI",
-    "venue": "CSE Classroom",
+    "venue": "CSE Dept.",
     "type": "Lab"
   },
   {
@@ -4618,7 +4528,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2203",
     "group": "AI",
@@ -4627,7 +4537,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3 AM - 6 AM",
+    "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2203",
     "group": "CS",
@@ -4726,11 +4636,11 @@
   },
   {
     "day": "Thursday",
-    "time": "9 AM - 11 AM",
+    "time": "9 AM - 1 PM",
     "year": 3,
-    "courseCode": "EP3203",
+    "courseCode": "EP3202",
     "group": "EP",
-    "venue": "R110",
+    "venue": "LAB",
     "type": "Lab"
   },
   {
@@ -4870,6 +4780,15 @@
   },
   {
     "day": "Thursday",
+    "time": "10 AM - 2 PM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": "Elective",
     "courseCode": "PH5207",
@@ -4885,15 +4804,6 @@
     "group": "PH",
     "venue": "R101",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 AM - 12 PM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R110",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5095,6 +5005,15 @@
   },
   {
     "day": "Thursday",
+    "time": "11 AM - 3 PM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4205",
@@ -5118,24 +5037,6 @@
     "courseCode": "PH3201",
     "group": "PH",
     "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
     "type": "Lecture"
   },
   {
@@ -5320,6 +5221,15 @@
   },
   {
     "day": "Thursday",
+    "time": "12 PM - 4 AM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 3,
     "courseCode": "CE3203",
@@ -5361,15 +5271,6 @@
     "courseCode": "CS2205",
     "group": "AI",
     "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12-12:55",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "Minor",
-    "venue": "LT001",
     "type": "Lecture"
   },
   {
@@ -5482,6 +5383,15 @@
   },
   {
     "day": "Thursday",
+    "time": "2 PM - 5 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "EP2204",
@@ -5577,6 +5487,15 @@
     "courseCode": "MA2205",
     "group": "MC",
     "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 6 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
     "type": "Lab"
   },
   {
@@ -5725,6 +5644,15 @@
   },
   {
     "day": "Thursday",
+    "time": "4 PM - 7 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "PH4202",
@@ -5839,6 +5767,15 @@
     "group": "MC",
     "venue": "R301",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -6211,6 +6148,15 @@
   },
   {
     "day": "Friday",
+    "time": "9 AM - 11 AM",
+    "year": 3,
+    "courseCode": "EP3203",
+    "group": "EP",
+    "venue": "R110",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
     "courseCode": "EP2202",
@@ -6265,20 +6211,11 @@
   },
   {
     "day": "Friday",
-    "time": "9 AM - 12 PM",
+    "time": "9 - 12",
     "year": "Elective",
     "courseCode": "CS5205",
     "group": "AI/CS",
-    "venue": "CSE Classroom",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "9 AM - 12 PM",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "Minor",
-    "venue": "CSE Classroom",
+    "venue": "CSE Dept",
     "type": "Lab"
   },
   {
@@ -6355,6 +6292,15 @@
   },
   {
     "day": "Friday",
+    "time": "10 AM - 12 PM",
+    "year": 3,
+    "courseCode": "EP3203",
+    "group": "EP",
+    "venue": "R110",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "10 AM - 10.55 AM",
     "year": "Elective",
     "courseCode": "PH5205",
@@ -6409,20 +6355,20 @@
   },
   {
     "day": "Friday",
-    "time": "10 AM - 1 PM",
+    "time": "10 - 1",
     "year": 3,
     "courseCode": "CS3201",
     "group": "AI",
-    "venue": "CSE Classroom",
+    "venue": "Cybersecurity Lab 2 hrs in CC Lab1",
     "type": "Lab"
   },
   {
     "day": "Friday",
-    "time": "10 AM - 1 PM",
+    "time": "10 - 1",
     "year": 3,
     "courseCode": "CS3201",
     "group": "CS",
-    "venue": "CSE Classroom",
+    "venue": "Cybersecurity Lab 2 hrs in CC Lab1",
     "type": "Lab"
   },
   {
@@ -6487,6 +6433,24 @@
     "group": "EE",
     "venue": "EE Dept Lab 2",
     "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "PH5222",
+    "group": "PH",
+    "venue": "R110",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "PH6222",
+    "group": "PH",
+    "venue": "R110",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6630,24 +6594,6 @@
     "courseCode": "PH3201",
     "group": "PH",
     "venue": "R103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
     "type": "Lecture"
   },
   {
