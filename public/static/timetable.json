@@ -1836,6 +1836,15 @@
     "type": "Lab"
   },
   {
+    "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EE3203",
+    "group": "EE",
+    "venue": "EE Dept Lab 3",
+    "type": "Lab"
+  },
+  {
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 3,
@@ -1980,11 +1989,29 @@
     "type": "Lab"
   },
   {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
     "day": "Thursday",
     "time": "4 PM - 6 PM",
     "year": 3,
     "courseCode": "EE3201",
     "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 3,
+    "courseCode": "EC3201",
+    "group": "EC",
     "venue": "EE Dept Lab 1",
     "type": "Lab"
   },
@@ -2047,6 +2074,15 @@
     "time": "5 PM - 7 PM",
     "year": 3,
     "courseCode": "EE3202",
+    "group": "EE",
+    "venue": "EE Dept Lab 1",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 3,
+    "courseCode": "EE3203",
     "group": "EE",
     "venue": "EE Dept Lab 1",
     "type": "Lab"
