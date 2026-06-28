@@ -1297,7 +1297,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "10-11 AM",
+    "time": "10 AM - 12 AM",
     "year": 3,
     "courseCode": "MA3202",
     "group": "MC",
@@ -1305,8 +1305,8 @@
     "type": "Lab"
   },
   {
-    "day": "Thursday",
-    "time": "10-11 AM",
+    "day": "Wednesday",
+    "time": "10 AM - 1 AM",
     "year": 3,
     "courseCode": "MA3204",
     "group": "MC",
@@ -1314,8 +1314,17 @@
     "type": "Lab"
   },
   {
+    "day": "Thursday",
+    "time": "10 AM - 12 AM",
+    "year": 3,
+    "courseCode": "MA3206",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
     "day": "Monday",
-    "time": "2-3 PM",
+    "time": "2 PM - 4 PM",
     "year": 4,
     "courseCode": "MA4202",
     "group": "MC",
@@ -1324,7 +1333,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "2-3 PM",
+    "time": "2 PM - 4 PM",
     "year": 4,
     "courseCode": "MA4204",
     "group": "MC",
@@ -1332,8 +1341,8 @@
     "type": "Lab"
   },
   {
-    "day": "Thursday",
-    "time": "3-4 PM",
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
     "year": 2,
     "courseCode": "MA2204",
     "group": "MC",
@@ -1341,8 +1350,26 @@
     "type": "Lab"
   },
   {
+    "day": "Thursday",
+    "time": "3 PM - 6 PM",
+    "year": 2,
+    "courseCode": "MA2205",
+    "group": "MC",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 5 PM",
+    "year": "Elective",
+    "courseCode": "MC5202",
+    "group": "Department Core",
+    "venue": "Department Lab",
+    "type": "Lab"
+  },
+  {
     "day": "Monday",
-    "time": "4-5 PM",
+    "time": "4 PM - 6 PM",
     "year": 2,
     "courseCode": "MA2203",
     "group": "MC",
@@ -1351,7 +1378,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "4-5 PM",
+    "time": "4 PM - 6 PM",
     "year": 2,
     "courseCode": "MA2201",
     "group": "MC",
