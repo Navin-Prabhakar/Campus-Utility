@@ -2,15 +2,6 @@
   {
     "day": "Monday",
     "time": "02-2:55",
-    "year": "Elective",
-    "courseCode": "CS5201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "02-2:55",
     "year": 2,
     "courseCode": "CS2207",
     "group": "Minor",
@@ -34,51 +25,6 @@
     "group": "CS",
     "venue": "IT workshop (CC Lab 1)",
     "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "03-03:55",
-    "year": "Elective",
-    "courseCode": "CS5203",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "04-04:55",
-    "year": "Elective",
-    "courseCode": "CS6203",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "05-05:55",
-    "year": "Elective",
-    "courseCode": "CS6206",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "06-06:55",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "07-07:55",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -802,24 +748,6 @@
   },
   {
     "day": "Monday",
-    "time": "12-12:55",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12-12:55",
-    "year": "Elective",
-    "courseCode": "CS6210",
-    "group": "AI/CS",
-    "venue": "(LT002)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
     "time": "12:00 PM-12:55 PM",
     "year": "Elective",
     "courseCode": "CH6202",
@@ -1342,24 +1270,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "02-2:55",
-    "year": "Elective",
-    "courseCode": "CS6211",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "03-03:55",
-    "year": "Elective",
-    "courseCode": "CS5203",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
     "time": "3 - 6",
     "year": 3,
     "courseCode": "CS3202",
@@ -1384,24 +1294,6 @@
     "group": "AI",
     "venue": "Lab (CSE Dept Lab)",
     "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "04-04:55",
-    "year": "Elective",
-    "courseCode": "CS5201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "05-05:55",
-    "year": "Elective",
-    "courseCode": "CS5202",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -2332,24 +2224,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "12-12:55",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12-12:55",
-    "year": 3,
-    "courseCode": "CS3205",
-    "group": "AI/CS",
-    "venue": "(LT002)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
     "time": "12:00 PM-12:55 PM",
     "year": 2,
     "courseCode": "CH2201",
@@ -3062,15 +2936,6 @@
   {
     "day": "Wednesday",
     "time": "02-2:55",
-    "year": "Elective",
-    "courseCode": "CS6211",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "02-2:55",
     "year": 2,
     "courseCode": "CS2207",
     "group": "Minor",
@@ -3084,15 +2949,6 @@
     "courseCode": "CS3203",
     "group": "CS",
     "venue": "(IoT Lab) Hardware Lab + Classroom +Outdoor",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 - 6",
-    "year": "Elective",
-    "courseCode": "CS5204",
-    "group": "AI/CS",
-    "venue": "2 Hrs MTP Lab",
     "type": "Lab"
   },
   {
@@ -3112,33 +2968,6 @@
     "group": "CS",
     "venue": "(Data Ware House) CCLab 1",
     "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "05-05:55",
-    "year": "Elective",
-    "courseCode": "CS5202",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "06-06:55",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "07-07:55",
-    "year": "Elective",
-    "courseCode": "RM6201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3961,15 +3790,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "12-12:55",
-    "year": "Elective",
-    "courseCode": "CS6210",
-    "group": "AI/CS",
-    "venue": "(LT002)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
     "time": "12:00 PM-12:55 PM",
     "year": 4,
     "courseCode": "CH4204",
@@ -4555,15 +4375,6 @@
   },
   {
     "day": "Thursday",
-    "time": "02-2:55",
-    "year": "Elective",
-    "courseCode": "CS6211",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
     "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2203",
@@ -4579,42 +4390,6 @@
     "group": "CS",
     "venue": "(AI) CC Lab 1",
     "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "03-03:55",
-    "year": "Elective",
-    "courseCode": "CS5202",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "04-04:55",
-    "year": "Elective",
-    "courseCode": "CS5201",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "05-05:55",
-    "year": "Elective",
-    "courseCode": "CS6203",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "06-06:55",
-    "year": "Elective",
-    "courseCode": "CS6206",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -4713,15 +4488,6 @@
     "courseCode": "MM5201",
     "group": "MM",
     "venue": "R310",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "09-09:55",
-    "year": 3,
-    "courseCode": "CS3205",
-    "group": "AI/CS",
-    "venue": "(LT002)",
     "type": "Lecture"
   },
   {
@@ -5307,24 +5073,6 @@
     "courseCode": "CS2205",
     "group": "AI",
     "venue": "(R103)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12-12:55",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12-12:55",
-    "year": "Elective",
-    "courseCode": "CS6210",
-    "group": "AI/CS",
-    "venue": "(LT002)",
     "type": "Lecture"
   },
   {
@@ -5923,24 +5671,6 @@
   },
   {
     "day": "Friday",
-    "time": "05-05:55",
-    "year": "Elective",
-    "courseCode": "CS6203",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "06-06:55",
-    "year": "Elective",
-    "courseCode": "CS6206",
-    "group": "AI/CS",
-    "venue": "(LT001)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
     "time": "8 AM - 8.55 AM",
     "year": 1,
     "courseCode": "MA1201",
@@ -6244,33 +5974,6 @@
     "group": "MM",
     "venue": "R310",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "09-09:55",
-    "year": 3,
-    "courseCode": "CS3205",
-    "group": "AI/CS",
-    "venue": "(LT002)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "9 - 12",
-    "year": "Elective",
-    "courseCode": "CS5205",
-    "group": "AI/CS",
-    "venue": "Advanced Artificial Intelligence Lab (CSE Dept) (9-12pm)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "9 - 12",
-    "year": 2,
-    "courseCode": "CS2206",
-    "group": "AI/CS",
-    "venue": "(Hardware lab + Classroom CSE Dept) (9-12 pm)",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6675,15 +6378,6 @@
     "courseCode": "CE5217",
     "group": "CE",
     "venue": "B9/R106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12-12:55",
-    "year": "Elective",
-    "courseCode": "CS5203",
-    "group": "AI/CS",
-    "venue": "(LT101)",
     "type": "Lecture"
   },
   {
