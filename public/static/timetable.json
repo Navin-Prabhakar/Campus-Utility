@@ -3115,11 +3115,119 @@
   },
   {
     "day": "Monday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": 3,
+    "courseCode": "CE3201",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5211",
+    "group": "CE",
+    "venue": "B9/R105",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": 3,
+    "courseCode": "CE3201",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "CE6218",
+    "group": "CE",
+    "venue": "B9/R105",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "CE6229",
+    "group": "CE",
+    "venue": "B9/R106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": 3,
+    "courseCode": "CE3206",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5204",
+    "group": "CE",
+    "venue": "B9/R105",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5209",
+    "group": "CE",
+    "venue": "B9/R106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": 3,
+    "courseCode": "CE3201",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5217",
+    "group": "CE",
+    "venue": "B9/R106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": 3,
+    "courseCode": "CE3203",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "09:00 AM - 09.55 AM",
+    "year": "Elective",
+    "courseCode": "RM6201",
+    "group": "CE",
+    "venue": "B9/R106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
     "courseCode": "CE3204",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3128,7 +3236,7 @@
     "year": "Elective",
     "courseCode": "CE5211",
     "group": "CE",
-    "venue": "CE5211\n(Nk)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3137,7 +3245,7 @@
     "year": "Elective",
     "courseCode": "CE5204",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3146,7 +3254,7 @@
     "year": 3,
     "courseCode": "CE3204",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3155,7 +3263,7 @@
     "year": "Elective",
     "courseCode": "CE5207",
     "group": "CE",
-    "venue": "CE6218\n(KR)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3164,17 +3272,17 @@
     "year": "Elective",
     "courseCode": "CE5204",
     "group": "CE",
-    "venue": "CE6229\n(SV/MS)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
     "day": "Tuesday",
-    "time": "10:00 AM - 10.55 AM",
+    "time": "10 AM - 1 PM",
     "year": 1,
     "courseCode": "CE1201",
     "group": "CE",
-    "venue": "CE Dept Room",
-    "type": "Lecture"
+    "venue": "R131/Lab/Others",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3182,7 +3290,7 @@
     "year": 3,
     "courseCode": "CE3203",
     "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3191,7 +3299,7 @@
     "year": "Elective",
     "courseCode": "CE5206",
     "group": "CE",
-    "venue": "CE5204\n(PC)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3200,7 +3308,7 @@
     "year": "Elective",
     "courseCode": "CE5209",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3209,7 +3317,7 @@
     "year": 3,
     "courseCode": "CE3204",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3218,7 +3326,7 @@
     "year": "Elective",
     "courseCode": "CE6229",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3227,7 +3335,7 @@
     "year": "Elective",
     "courseCode": "CE6218",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3236,7 +3344,7 @@
     "year": 3,
     "courseCode": "CE3206",
     "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3245,7 +3353,7 @@
     "year": "Elective",
     "courseCode": "RM6201",
     "group": "CE",
-    "venue": "RM6201\n(AT/VD)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3254,7 +3362,7 @@
     "year": 3,
     "courseCode": "CE3204",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3263,17 +3371,17 @@
     "year": "Elective",
     "courseCode": "CE5212",
     "group": "CE",
-    "venue": "CE5211\n(Nk)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
     "day": "Monday",
-    "time": "11:00 AM - 11.55 AM",
+    "time": "11 AM - 2 PM",
     "year": 1,
     "courseCode": "CE1201",
     "group": "CE",
-    "venue": "CE Dept Room",
-    "type": "Lecture"
+    "venue": "R131/Lab/Others",
+    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -3281,7 +3389,7 @@
     "year": 2,
     "courseCode": "CE2205",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3290,7 +3398,7 @@
     "year": "Elective",
     "courseCode": "CE6203",
     "group": "CE",
-    "venue": "CE6218\n(KR)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3299,7 +3407,7 @@
     "year": "Elective",
     "courseCode": "CE5212",
     "group": "CE",
-    "venue": "CE6229\n(SV/MS)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3308,7 +3416,7 @@
     "year": 2,
     "courseCode": "CE2204",
     "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3317,7 +3425,7 @@
     "year": "Elective",
     "courseCode": "CE6203",
     "group": "CE",
-    "venue": "CE5204\n(PC)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3326,7 +3434,7 @@
     "year": "Elective",
     "courseCode": "CE5214",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3335,7 +3443,7 @@
     "year": 2,
     "courseCode": "CE2204",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3344,7 +3452,7 @@
     "year": "Elective",
     "courseCode": "CE5212",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3353,7 +3461,7 @@
     "year": "Elective",
     "courseCode": "CE5206",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3362,7 +3470,7 @@
     "year": "Elective",
     "courseCode": "CE6218",
     "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3371,7 +3479,7 @@
     "year": "Elective",
     "courseCode": "CE5214",
     "group": "CE",
-    "venue": "RM6201\n(AT/VD)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3380,7 +3488,7 @@
     "year": 2,
     "courseCode": "CE2204",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3389,7 +3497,7 @@
     "year": "Elective",
     "courseCode": "CE6229",
     "group": "CE",
-    "venue": "CE5211\n(Nk)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3398,7 +3506,7 @@
     "year": 3,
     "courseCode": "CE3206",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3407,7 +3515,7 @@
     "year": "Elective",
     "courseCode": "CE5201",
     "group": "CE",
-    "venue": "CE6218\n(KR)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3416,7 +3524,7 @@
     "year": "Elective",
     "courseCode": "CE5209",
     "group": "CE",
-    "venue": "CE6229\n(SV/MS)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3425,7 +3533,7 @@
     "year": 2,
     "courseCode": "CE2205",
     "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3434,7 +3542,7 @@
     "year": "Elective",
     "courseCode": "CE5210",
     "group": "CE",
-    "venue": "CE5204\n(PC)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3443,7 +3551,7 @@
     "year": "Elective",
     "courseCode": "CE5214",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3452,7 +3560,7 @@
     "year": 3,
     "courseCode": "CE3203",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3461,7 +3569,7 @@
     "year": "Elective",
     "courseCode": "CE5207",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3470,7 +3578,7 @@
     "year": "Elective",
     "courseCode": "CE5206",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3479,7 +3587,7 @@
     "year": 2,
     "courseCode": "CE2205",
     "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3488,7 +3596,7 @@
     "year": "Elective",
     "courseCode": "CE5217",
     "group": "CE",
-    "venue": "RM6201\n(AT/VD)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3497,17 +3605,17 @@
     "year": 2,
     "courseCode": "CE2206",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
     "day": "Tuesday",
-    "time": "02:00 PM - 02.55 PM\n(IDE, MWF)",
+    "time": "2 PM - 5 PM",
     "year": 1,
     "courseCode": "CE1201",
     "group": "CE",
-    "venue": "CE Dept Room",
-    "type": "Lecture"
+    "venue": "R131/Lab/Others",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3515,7 +3623,7 @@
     "year": 2,
     "courseCode": "CE2206",
     "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3524,7 +3632,7 @@
     "year": "Elective",
     "courseCode": "CE5208",
     "group": "CE",
-    "venue": "CE5204\n(PC)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3533,7 +3641,7 @@
     "year": "Elective",
     "courseCode": "CE5213",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3542,7 +3650,7 @@
     "year": 2,
     "courseCode": "CE2202",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3551,7 +3659,7 @@
     "year": "Elective",
     "courseCode": "CE5208",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3560,7 +3668,7 @@
     "year": "Elective",
     "courseCode": "CE5203",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3569,7 +3677,7 @@
     "year": 2,
     "courseCode": "CE2206",
     "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3578,7 +3686,7 @@
     "year": "Elective",
     "courseCode": "CE5208",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3587,7 +3695,7 @@
     "year": 3,
     "courseCode": "CE3205",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3596,7 +3704,7 @@
     "year": "Elective",
     "courseCode": "CE5205",
     "group": "CE",
-    "venue": "CE5211\n(Nk)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3605,7 +3713,7 @@
     "year": "Elective",
     "courseCode": "CE5201",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3614,7 +3722,7 @@
     "year": 2,
     "courseCode": "CE2201",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3623,17 +3731,17 @@
     "year": "Elective",
     "courseCode": "CE5213",
     "group": "CE",
-    "venue": "CE6229\n(SV/MS)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
     "day": "Tuesday",
-    "time": "03:00 PM - 03.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 1,
     "courseCode": "CE1201",
     "group": "CE",
-    "venue": "CE Dept Room",
-    "type": "Lecture"
+    "venue": "R131/Lab/Others",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3641,7 +3749,7 @@
     "year": 2,
     "courseCode": "CE2202",
     "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3650,7 +3758,7 @@
     "year": "Elective",
     "courseCode": "CE5202",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3659,7 +3767,7 @@
     "year": 2,
     "courseCode": "CE2202",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3668,7 +3776,7 @@
     "year": "Elective",
     "courseCode": "CE5201",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3677,7 +3785,7 @@
     "year": 2,
     "courseCode": "CE2201",
     "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3686,7 +3794,7 @@
     "year": "Elective",
     "courseCode": "CE5207",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3695,7 +3803,7 @@
     "year": "Elective",
     "courseCode": "CE5203",
     "group": "CE",
-    "venue": "RM6201\n(AT/VD)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3704,7 +3812,7 @@
     "year": 2,
     "courseCode": "CE2203",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3713,7 +3821,7 @@
     "year": "Elective",
     "courseCode": "CE6210",
     "group": "CE",
-    "venue": "CE5211\n(Nk)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3722,7 +3830,7 @@
     "year": "Elective",
     "courseCode": "CE6203",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3731,7 +3839,7 @@
     "year": 2,
     "courseCode": "CE2201",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3740,7 +3848,7 @@
     "year": "Elective",
     "courseCode": "CE5202",
     "group": "CE",
-    "venue": "CE6218\n(KR)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3749,17 +3857,17 @@
     "year": "Elective",
     "courseCode": "CE6210",
     "group": "CE",
-    "venue": "CE6229\n(SV/MS)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
     "day": "Tuesday",
-    "time": "04:00 PM - 04.55 PM\n(BTech Minor, MWF)",
+    "time": "4 PM - 7 PM",
     "year": 1,
     "courseCode": "CE1201",
     "group": "CE",
-    "venue": "CE Dept Room",
-    "type": "Lecture"
+    "venue": "R131/Lab/Others",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3767,7 +3875,7 @@
     "year": 2,
     "courseCode": "CE2203",
     "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3776,7 +3884,7 @@
     "year": "Elective",
     "courseCode": "CE6210",
     "group": "CE",
-    "venue": "CE5204\n(PC)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3785,7 +3893,7 @@
     "year": 3,
     "courseCode": "CE3205",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3794,7 +3902,7 @@
     "year": "Elective",
     "courseCode": "CE5211",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3803,7 +3911,7 @@
     "year": "Elective",
     "courseCode": "CE5205",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3812,7 +3920,7 @@
     "year": 2,
     "courseCode": "CE2203",
     "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3821,7 +3929,7 @@
     "year": 3,
     "courseCode": "CE3202",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3830,7 +3938,7 @@
     "year": "Elective",
     "courseCode": "CE5203",
     "group": "CE",
-    "venue": "RM6201\n(AT/VD)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3839,7 +3947,7 @@
     "year": "Elective",
     "courseCode": "CE5210",
     "group": "CE",
-    "venue": "CE5211\n(Nk)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3848,7 +3956,7 @@
     "year": 3,
     "courseCode": "CE3201",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3857,7 +3965,7 @@
     "year": "Elective",
     "courseCode": "CE5202",
     "group": "CE",
-    "venue": "CE6218\n(KR)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3866,7 +3974,7 @@
     "year": "Elective",
     "courseCode": "CE5217",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3875,7 +3983,7 @@
     "year": "Elective",
     "courseCode": "CE5210",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3884,7 +3992,7 @@
     "year": "Elective",
     "courseCode": "CE5205",
     "group": "CE",
-    "venue": "CE5217\n(AT)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3893,7 +4001,7 @@
     "year": 3,
     "courseCode": "CE3202",
     "group": "CE",
-    "venue": "CE Dept Room",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
@@ -3902,7 +4010,7 @@
     "year": "Elective",
     "courseCode": "CE5213",
     "group": "CE",
-    "venue": "RM6201\n(AT/VD)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3911,7 +4019,7 @@
     "year": 3,
     "courseCode": "CE3205",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3920,7 +4028,7 @@
     "year": "Elective",
     "courseCode": "RM6201",
     "group": "CE",
-    "venue": "CE5209\n(VS/Nk)",
+    "venue": "B9/R106",
     "type": "Lecture"
   },
   {
@@ -3929,7 +4037,7 @@
     "year": "Elective",
     "courseCode": "RM6201",
     "group": "CE",
-    "venue": "CE3201\n(VS)",
+    "venue": "B9/R104",
     "type": "Lecture"
   },
   {
@@ -3938,97 +4046,7 @@
     "year": 3,
     "courseCode": "CE3202",
     "group": "CE",
-    "venue": "CE Dept Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "Labs",
-    "year": 2,
-    "courseCode": "CE2203",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "Labs",
-    "year": "Elective",
-    "courseCode": "CE5205",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "Labs",
-    "year": "Elective",
-    "courseCode": "CE5210",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "Labs",
-    "year": 3,
-    "courseCode": "CE3205",
-    "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "Labs",
-    "year": "Elective",
-    "courseCode": "CE5209",
-    "group": "CE",
-    "venue": "CE3206\n(SV/SKKH/BAK)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "Labs",
-    "year": "Elective",
-    "courseCode": "CE5212",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "Labs",
-    "year": 2,
-    "courseCode": "CE2201",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "Labs",
-    "year": "Elective",
-    "courseCode": "CE5202",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "Labs",
-    "year": 2,
-    "courseCode": "CE2202",
-    "group": "CE",
-    "venue": "CE3201\n(VS)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "Labs",
-    "year": "Elective",
-    "courseCode": "CE5207",
-    "group": "CE",
-    "venue": "CE3203\n(KR)",
+    "venue": "B9/R105",
     "type": "Lecture"
   },
   {
