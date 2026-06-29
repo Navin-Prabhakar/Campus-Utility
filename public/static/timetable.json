@@ -937,7 +937,7 @@
   },
   {
     "day": "Monday",
-    "time": "2 PM - 5 PM",
+    "time": "2 PM - 3 PM",
     "year": 4,
     "courseCode": "PH4203",
     "group": "PH",
@@ -1045,7 +1045,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 PM - 6 PM",
+    "time": "3 PM - 4 PM",
     "year": 4,
     "courseCode": "PH4203",
     "group": "PH",
@@ -1180,7 +1180,7 @@
   },
   {
     "day": "Monday",
-    "time": "4 PM - 7 PM",
+    "time": "4 PM - 5 PM",
     "year": 4,
     "courseCode": "PH4203",
     "group": "PH",
@@ -1297,7 +1297,7 @@
   },
   {
     "day": "Monday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 6 PM",
     "year": 4,
     "courseCode": "PH4203",
     "group": "PH",
@@ -4735,7 +4735,7 @@
   },
   {
     "day": "Thursday",
-    "time": "9 AM - 1 PM",
+    "time": "9 AM - 10 AM",
     "year": 3,
     "courseCode": "EP3202",
     "group": "EP",
@@ -4888,7 +4888,7 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 2 PM",
+    "time": "10 AM - 11 AM",
     "year": 3,
     "courseCode": "EP3202",
     "group": "EP",
@@ -5131,7 +5131,7 @@
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 3 PM",
+    "time": "11 AM - 12 PM",
     "year": 3,
     "courseCode": "EP3202",
     "group": "EP",
@@ -5365,7 +5365,7 @@
   },
   {
     "day": "Thursday",
-    "time": "12 PM - 4 AM",
+    "time": "12 PM - 1 AM",
     "year": 3,
     "courseCode": "EP3202",
     "group": "EP",
@@ -5545,7 +5545,7 @@
   },
   {
     "day": "Thursday",
-    "time": "2 PM - 5 PM",
+    "time": "2 PM - 3 PM",
     "year": "Elective",
     "courseCode": "PH5201",
     "group": "PH",
@@ -5662,7 +5662,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3 PM - 6 PM",
+    "time": "3 PM - 4 PM",
     "year": "Elective",
     "courseCode": "PH5201",
     "group": "PH",
@@ -5815,7 +5815,7 @@
   },
   {
     "day": "Thursday",
-    "time": "4 PM - 7 PM",
+    "time": "4 PM - 5 PM",
     "year": "Elective",
     "courseCode": "PH5201",
     "group": "PH",
@@ -5941,7 +5941,7 @@
   },
   {
     "day": "Thursday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 6 PM",
     "year": "Elective",
     "courseCode": "PH5201",
     "group": "PH",
@@ -6346,7 +6346,7 @@
   },
   {
     "day": "Friday",
-    "time": "9 AM - 11 AM",
+    "time": "9 AM - 10 AM",
     "year": 3,
     "courseCode": "EP3203",
     "group": "EP",
@@ -6499,7 +6499,7 @@
   },
   {
     "day": "Friday",
-    "time": "10 AM - 12 PM",
+    "time": "10 AM - 11 AM",
     "year": 3,
     "courseCode": "EP3203",
     "group": "EP",
