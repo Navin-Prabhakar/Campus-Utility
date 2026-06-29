@@ -1315,6 +1315,15 @@
   },
   {
     "day": "Monday",
+    "time": "5 PM - 8 PM",
+    "year": 2,
+    "courseCode": "CE2203 (SKKH/MS)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "05:00 PM-05:55 PM",
     "year": "Elective",
     "courseCode": "CH6209",
@@ -3061,6 +3070,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "CE5205 (AJ)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "CE5210 (AS)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "05:00 PM-05:55 PM",
     "year": 2,
     "courseCode": "CH2203",
@@ -4573,6 +4600,24 @@
   },
   {
     "day": "Wednesday",
+    "time": "5 PM - 8 PM",
+    "year": 3,
+    "courseCode": "CE3205 (OP)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "CE5209 (Nk)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "05:00 PM-05:55 PM",
     "year": "Elective",
     "courseCode": "CH6209",
@@ -5950,6 +5995,42 @@
   },
   {
     "day": "Thursday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "CE5212 (SV)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 8 PM",
+    "year": 2,
+    "courseCode": "CE2201 (SG)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "CE5202 (PR)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 8 PM",
+    "year": 2,
+    "courseCode": "CE2202 (RKB)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "05:00 PM-05:55 PM",
     "year": 3,
     "courseCode": "CH3204",
@@ -7252,6 +7333,15 @@
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 8 PM",
+    "year": "Elective",
+    "courseCode": "CE5207 (AKV)",
+    "group": "CE",
+    "venue": "B9/R104",
+    "type": "Lab"
   },
   {
     "day": "Friday",
