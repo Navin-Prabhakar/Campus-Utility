@@ -1702,7 +1702,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "9  - 12",
+    "time": "9:00-9:55",
     "year": 3,
     "courseCode": "ME3203",
     "group": "ME",
@@ -2800,7 +2800,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "15  - 17",
+    "time": "15:00-15:55",
     "year": 2,
     "courseCode": "ME2201",
     "group": "ME",
@@ -3277,7 +3277,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "9  - 11",
+    "time": "9:00-9:55",
     "year": 2,
     "courseCode": "ME2204",
     "group": "ME",
@@ -3286,7 +3286,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "9  - 11",
+    "time": "9:00-9:55",
     "year": 2,
     "courseCode": "ME2202",
     "group": "ME",
@@ -3799,7 +3799,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "11  - 13",
+    "time": "11:00-11:55",
     "year": 3,
     "courseCode": "ME3201",
     "group": "ME",
@@ -3808,7 +3808,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "11  - 13",
+    "time": "11:00-11:55",
     "year": 3,
     "courseCode": "ME3202",
     "group": "ME",
@@ -4312,7 +4312,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "15  - 17",
+    "time": "15:00-15:55",
     "year": 2,
     "courseCode": "ME2202",
     "group": "ME",
@@ -5554,7 +5554,7 @@
   },
   {
     "day": "Thursday",
-    "time": "14  - 16",
+    "time": "14:00-14:55",
     "year": 3,
     "courseCode": "ME3202",
     "group": "ME",
@@ -5959,7 +5959,7 @@
   },
   {
     "day": "Thursday",
-    "time": "17  - 19",
+    "time": "17:00-17:55",
     "year": 2,
     "courseCode": "ME2201",
     "group": "ME",
@@ -6670,7 +6670,7 @@
   },
   {
     "day": "Friday",
-    "time": "11  - 13",
+    "time": "11:00-11:55",
     "year": 2,
     "courseCode": "ME2204",
     "group": "ME",
@@ -6913,7 +6913,7 @@
   },
   {
     "day": "Friday",
-    "time": "14  - 17",
+    "time": "14:00-14:55",
     "year": 3,
     "courseCode": "ME3203",
     "group": "ME",
@@ -6922,7 +6922,7 @@
   },
   {
     "day": "Friday",
-    "time": "14  - 16",
+    "time": "14:00-14:55",
     "year": 3,
     "courseCode": "ME3201",
     "group": "ME",
