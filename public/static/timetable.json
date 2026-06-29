@@ -102,7 +102,7 @@
     "day": "Monday",
     "time": "09:00 AM - 09.55 AM",
     "year": 3,
-    "courseCode": "CE3201",
+    "courseCode": "CE3201 (VS)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -111,7 +111,7 @@
     "day": "Monday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "CE5211",
+    "courseCode": "CE5211 (Nk)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -264,7 +264,7 @@
     "day": "Monday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3204",
+    "courseCode": "CE3204 (MKY/SH)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -273,7 +273,7 @@
     "day": "Monday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5211",
+    "courseCode": "CE5211 (Nk)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -282,7 +282,7 @@
     "day": "Monday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5204",
+    "courseCode": "CE5204 (PC)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -507,7 +507,7 @@
     "day": "Monday",
     "time": "11:00 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "CE3204",
+    "courseCode": "CE3204 (T)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -516,7 +516,7 @@
     "day": "Monday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5212",
+    "courseCode": "CE5212 (SV)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -525,7 +525,7 @@
     "day": "Monday",
     "time": "11 AM - 2 PM",
     "year": 1,
-    "courseCode": "CE1201",
+    "courseCode": "CE1201 (AKJ/BAK)",
     "group": "CE",
     "venue": "R131/Lab/Others",
     "type": "Lab"
@@ -768,7 +768,7 @@
     "day": "Monday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 2,
-    "courseCode": "CE2204",
+    "courseCode": "CE2204 (OP)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -777,7 +777,7 @@
     "day": "Monday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE6229",
+    "courseCode": "CE6229 (SV/MS)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -1056,7 +1056,7 @@
     "day": "Monday",
     "time": "03:00 PM - 03.55 PM",
     "year": 3,
-    "courseCode": "CE3205",
+    "courseCode": "CE3205 (VD)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -1065,7 +1065,7 @@
     "day": "Monday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5205",
+    "courseCode": "CE5205 (AJ)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -1074,7 +1074,7 @@
     "day": "Monday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5201",
+    "courseCode": "CE5201 (SH)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -1117,7 +1117,7 @@
   },
   {
     "day": "Monday",
-    "time": "3:00 PM - 5:55 PM",
+    "time": "3:00 PM - 3:55 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1191,7 +1191,7 @@
     "day": "Monday",
     "time": "04:00 PM - 04.55 PM",
     "year": 2,
-    "courseCode": "CE2203",
+    "courseCode": "CE2203 (SKKH/MS)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -1200,7 +1200,7 @@
     "day": "Monday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE6210",
+    "courseCode": "CE6210 (AJ/PC)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -1209,7 +1209,7 @@
     "day": "Monday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE6203",
+    "courseCode": "CE6203 (MKY)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -1243,7 +1243,7 @@
   },
   {
     "day": "Monday",
-    "time": "4:00 PM - 6:55 PM",
+    "time": "4:00 PM - 4:55 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1308,7 +1308,7 @@
     "day": "Monday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
-    "courseCode": "CE5210",
+    "courseCode": "CE5210 (AS)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -1333,7 +1333,7 @@
   },
   {
     "day": "Monday",
-    "time": "5:00 PM - 7:55 PM",
+    "time": "5:00 PM - 5:55 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1632,7 +1632,7 @@
     "day": "Tuesday",
     "time": "09:00 AM - 09.55 AM",
     "year": 3,
-    "courseCode": "CE3201",
+    "courseCode": "CE3201 (VS)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -1641,7 +1641,7 @@
     "day": "Tuesday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "CE6218",
+    "courseCode": "CE6218 (KR)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -1650,7 +1650,7 @@
     "day": "Tuesday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "CE6229",
+    "courseCode": "CE6229 (SV/MS)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -1821,7 +1821,7 @@
     "day": "Tuesday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3204",
+    "courseCode": "CE3204 (MKY/SH)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -1830,7 +1830,7 @@
     "day": "Tuesday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5207",
+    "courseCode": "CE5207 (VF)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -1839,7 +1839,7 @@
     "day": "Tuesday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5204",
+    "courseCode": "CE5204 (PC)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -1848,7 +1848,7 @@
     "day": "Tuesday",
     "time": "10 AM - 1 PM",
     "year": 1,
-    "courseCode": "CE1201",
+    "courseCode": "CE1201 (AKJ/BAK)",
     "group": "CE",
     "venue": "R131/Lab/Others",
     "type": "Lab"
@@ -1927,7 +1927,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "10:00 AM - 12:55 PM",
+    "time": "10:00 AM - 10:55 AM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
@@ -2073,7 +2073,7 @@
     "day": "Tuesday",
     "time": "11:00 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2205",
+    "courseCode": "CE2205 (SG/RKB)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -2082,7 +2082,7 @@
     "day": "Tuesday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE6203",
+    "courseCode": "CE6203 (MKY)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -2091,7 +2091,7 @@
     "day": "Tuesday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5212",
+    "courseCode": "CE5212 (SV)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -2170,7 +2170,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "11:00 AM - 1:55 PM",
+    "time": "11:00 AM - 11:55 AM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
@@ -2298,7 +2298,7 @@
     "day": "Tuesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 3,
-    "courseCode": "CE3206",
+    "courseCode": "CE3206 (SV/SKKH/BAK)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -2307,7 +2307,7 @@
     "day": "Tuesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5201",
+    "courseCode": "CE5201 (SH)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -2316,7 +2316,7 @@
     "day": "Tuesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5209",
+    "courseCode": "CE5209 (VS/Nk)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -2386,7 +2386,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "12:00 PM - 2:55 AM",
+    "time": "12:00 PM - 12:55 AM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
@@ -2469,7 +2469,7 @@
     "day": "Tuesday",
     "time": "2 PM - 5 PM",
     "year": 1,
-    "courseCode": "CE1201",
+    "courseCode": "CE1201 (T)",
     "group": "CE",
     "venue": "R131/Lab/Others",
     "type": "Lab"
@@ -2739,7 +2739,7 @@
     "day": "Tuesday",
     "time": "03:00 PM - 03.55 PM",
     "year": 2,
-    "courseCode": "CE2201",
+    "courseCode": "CE2201 (SG)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -2748,7 +2748,7 @@
     "day": "Tuesday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5213",
+    "courseCode": "CE5213 (SKKH)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -2757,7 +2757,7 @@
     "day": "Tuesday",
     "time": "3 PM - 6 PM",
     "year": 1,
-    "courseCode": "CE1201",
+    "courseCode": "CE1201 (T)",
     "group": "CE",
     "venue": "R131/Lab/Others",
     "type": "Lab"
@@ -2901,7 +2901,7 @@
     "day": "Tuesday",
     "time": "04:00 PM - 04.55 PM",
     "year": 2,
-    "courseCode": "CE2201",
+    "courseCode": "CE2201 (SG)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -2910,7 +2910,7 @@
     "day": "Tuesday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE5202",
+    "courseCode": "CE5202 (PR)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -2919,7 +2919,7 @@
     "day": "Tuesday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE6210",
+    "courseCode": "CE6210 (AJ/PC)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -2928,7 +2928,7 @@
     "day": "Tuesday",
     "time": "4 PM - 7 PM",
     "year": 1,
-    "courseCode": "CE1201",
+    "courseCode": "CE1201 (T)",
     "group": "CE",
     "venue": "R131/Lab/Others",
     "type": "Lab"
@@ -3045,7 +3045,7 @@
     "day": "Tuesday",
     "time": "05:00 PM - 05.55 PM",
     "year": 3,
-    "courseCode": "CE3201",
+    "courseCode": "CE3201 (T)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -3054,7 +3054,7 @@
     "day": "Tuesday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
-    "courseCode": "CE5202",
+    "courseCode": "CE5202 (PR)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -3090,7 +3090,7 @@
     "day": "Tuesday",
     "time": "06:00 PM - 06.55 PM",
     "year": 3,
-    "courseCode": "CE3205",
+    "courseCode": "CE3205 (VD)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -3189,7 +3189,7 @@
     "day": "Wednesday",
     "time": "09:00 AM - 09.55 AM",
     "year": 3,
-    "courseCode": "CE3206",
+    "courseCode": "CE3206 (SV/SKKH/BAK)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -3198,7 +3198,7 @@
     "day": "Wednesday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "CE5204",
+    "courseCode": "CE5204 (PC)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -3207,7 +3207,7 @@
     "day": "Wednesday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "CE5209",
+    "courseCode": "CE5209 (VS/Nk)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -3450,7 +3450,7 @@
     "day": "Wednesday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3203",
+    "courseCode": "CE3203 (KR)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -3459,7 +3459,7 @@
     "day": "Wednesday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5206",
+    "courseCode": "CE5206 (AkJ)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -3468,7 +3468,7 @@
     "day": "Wednesday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5209",
+    "courseCode": "CE5209 (VS/Nk)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -3684,7 +3684,7 @@
     "day": "Wednesday",
     "time": "11:00 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2204",
+    "courseCode": "CE2204 (OP)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -3693,7 +3693,7 @@
     "day": "Wednesday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE6203",
+    "courseCode": "CE6203 (MKY)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -3702,7 +3702,7 @@
     "day": "Wednesday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5214",
+    "courseCode": "CE5214 (BAK/MS)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -3954,7 +3954,7 @@
     "day": "Wednesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 2,
-    "courseCode": "CE2205",
+    "courseCode": "CE2205 (SG/RKB)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -3963,7 +3963,7 @@
     "day": "Wednesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5210",
+    "courseCode": "CE5210 (AS)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -3972,7 +3972,7 @@
     "day": "Wednesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5214",
+    "courseCode": "CE5214 (T)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4089,7 +4089,7 @@
     "day": "Wednesday",
     "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
-    "courseCode": "CE5208",
+    "courseCode": "CE5208 (AKV)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -4098,7 +4098,7 @@
     "day": "Wednesday",
     "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
-    "courseCode": "CE5213",
+    "courseCode": "CE5213 (SKKH)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4260,7 +4260,7 @@
     "day": "Wednesday",
     "time": "03:00 PM - 03.55 PM",
     "year": 2,
-    "courseCode": "CE2202",
+    "courseCode": "CE2202 (RKB)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -4269,7 +4269,7 @@
     "day": "Wednesday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5202",
+    "courseCode": "CE5202 (PR)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4312,7 +4312,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3:00 PM - 5:55 PM",
+    "time": "3:00 PM - 3:55 PM",
     "year": 2,
     "courseCode": "CB2204",
     "group": "CB",
@@ -4395,7 +4395,7 @@
     "day": "Wednesday",
     "time": "04:00 PM - 04.55 PM",
     "year": 2,
-    "courseCode": "CE2203",
+    "courseCode": "CE2203 (SKKH/MS)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -4404,7 +4404,7 @@
     "day": "Wednesday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE6210",
+    "courseCode": "CE6210 (AJ/PC)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -4447,7 +4447,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "4:00 PM - 6:55 PM",
+    "time": "4:00 PM - 4:55 PM",
     "year": 2,
     "courseCode": "CB2204",
     "group": "CB",
@@ -4566,7 +4566,7 @@
     "day": "Wednesday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
-    "courseCode": "CE5217",
+    "courseCode": "CE5217 (AT)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4602,7 +4602,7 @@
     "day": "Wednesday",
     "time": "06:00 PM - 06.55 PM",
     "year": "Elective",
-    "courseCode": "RM6201",
+    "courseCode": "RM6201 (AT/VD)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4701,7 +4701,7 @@
     "day": "Thursday",
     "time": "09:00 AM - 09.55 AM",
     "year": 3,
-    "courseCode": "CE3201",
+    "courseCode": "CE3201 (VS)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -4710,7 +4710,7 @@
     "day": "Thursday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "CE5217",
+    "courseCode": "CE5217 (AT)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4872,7 +4872,7 @@
     "day": "Thursday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3204",
+    "courseCode": "CE3204 (MKY/SH)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -4881,7 +4881,7 @@
     "day": "Thursday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE6229",
+    "courseCode": "CE6229 (SV/MS)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -4890,7 +4890,7 @@
     "day": "Thursday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE6218",
+    "courseCode": "CE6218 (KR)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -4978,7 +4978,7 @@
   },
   {
     "day": "Thursday",
-    "time": "10:00 AM - 12:55 PM",
+    "time": "10:00 AM - 10:55 AM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -5124,7 +5124,7 @@
     "day": "Thursday",
     "time": "11:00 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2204",
+    "courseCode": "CE2204 (OP)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -5133,7 +5133,7 @@
     "day": "Thursday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5212",
+    "courseCode": "CE5212 (SV)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -5142,7 +5142,7 @@
     "day": "Thursday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5206",
+    "courseCode": "CE5206 (AkJ)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -5221,7 +5221,7 @@
   },
   {
     "day": "Thursday",
-    "time": "11:00 AM - 1:55 PM",
+    "time": "11:00 AM - 11:55 AM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -5331,7 +5331,7 @@
     "day": "Thursday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 3,
-    "courseCode": "CE3203",
+    "courseCode": "CE3203 (KR)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -5340,7 +5340,7 @@
     "day": "Thursday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5207",
+    "courseCode": "CE5207 (VF)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -5349,7 +5349,7 @@
     "day": "Thursday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5206",
+    "courseCode": "CE5206 (AkJ)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -5520,7 +5520,7 @@
     "day": "Thursday",
     "time": "02:00 PM - 02.55 PM",
     "year": 2,
-    "courseCode": "CE2202",
+    "courseCode": "CE2202 (RKB)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -5529,7 +5529,7 @@
     "day": "Thursday",
     "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
-    "courseCode": "CE5208",
+    "courseCode": "CE5208 (AKV)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -5538,7 +5538,7 @@
     "day": "Thursday",
     "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
-    "courseCode": "CE5203",
+    "courseCode": "CE5203 (PR)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -5646,7 +5646,7 @@
     "day": "Thursday",
     "time": "03:00 PM - 03.55 PM",
     "year": 2,
-    "courseCode": "CE2202",
+    "courseCode": "CE2202 (RKB)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -5655,7 +5655,7 @@
     "day": "Thursday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5201",
+    "courseCode": "CE5201 (SH)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -5799,7 +5799,7 @@
     "day": "Thursday",
     "time": "04:00 PM - 04.55 PM",
     "year": 3,
-    "courseCode": "CE3205",
+    "courseCode": "CE3205 (VD)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -5808,7 +5808,7 @@
     "day": "Thursday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE5211",
+    "courseCode": "CE5211 (Nk)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -5817,7 +5817,7 @@
     "day": "Thursday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE5205",
+    "courseCode": "CE5205 (AJ)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -5934,7 +5934,7 @@
     "day": "Thursday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
-    "courseCode": "CE5210",
+    "courseCode": "CE5210 (AS)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -5943,7 +5943,7 @@
     "day": "Thursday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
-    "courseCode": "CE5205",
+    "courseCode": "CE5205 (AJ)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -5997,7 +5997,7 @@
     "day": "Thursday",
     "time": "06:00 PM - 06.55 PM",
     "year": "Elective",
-    "courseCode": "RM6201",
+    "courseCode": "RM6201 (AT/VD)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -6285,7 +6285,7 @@
     "day": "Friday",
     "time": "09:00 AM - 09.55 AM",
     "year": 3,
-    "courseCode": "CE3203",
+    "courseCode": "CE3203 (KR)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -6294,7 +6294,7 @@
     "day": "Friday",
     "time": "09:00 AM - 09.55 AM",
     "year": "Elective",
-    "courseCode": "RM6201",
+    "courseCode": "RM6201 (AT/VD)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -6456,7 +6456,7 @@
     "day": "Friday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3206",
+    "courseCode": "CE3206 (SV/SKKH/BAK)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -6465,7 +6465,7 @@
     "day": "Friday",
     "time": "10:00 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "RM6201",
+    "courseCode": "RM6201 (T)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -6618,7 +6618,7 @@
     "day": "Friday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE6218",
+    "courseCode": "CE6218 (KR)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -6627,7 +6627,7 @@
     "day": "Friday",
     "time": "11:00 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5214",
+    "courseCode": "CE5214 (BAK/MS)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -6771,7 +6771,7 @@
     "day": "Friday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 2,
-    "courseCode": "CE2205",
+    "courseCode": "CE2205 (SG/RKB)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -6780,7 +6780,7 @@
     "day": "Friday",
     "time": "12:00 Noon - 12.55 AM",
     "year": "Elective",
-    "courseCode": "CE5217",
+    "courseCode": "CE5217 (AT)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -6897,7 +6897,7 @@
     "day": "Friday",
     "time": "02:00 PM - 02.55 PM",
     "year": "Elective",
-    "courseCode": "CE5208",
+    "courseCode": "CE5208 (AKV)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -7023,7 +7023,7 @@
     "day": "Friday",
     "time": "03:00 PM - 03.55 PM",
     "year": 2,
-    "courseCode": "CE2201",
+    "courseCode": "CE2201 (SG)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -7032,7 +7032,7 @@
     "day": "Friday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5207",
+    "courseCode": "CE5207 (VF)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -7041,7 +7041,7 @@
     "day": "Friday",
     "time": "03:00 PM - 03.55 PM",
     "year": "Elective",
-    "courseCode": "CE5203",
+    "courseCode": "CE5203 (PR)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -7066,7 +7066,7 @@
   },
   {
     "day": "Friday",
-    "time": "3:00 PM - 5:55 PM",
+    "time": "3:00 PM - 3:55 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -7140,7 +7140,7 @@
     "day": "Friday",
     "time": "04:00 PM - 04.55 PM",
     "year": 2,
-    "courseCode": "CE2203",
+    "courseCode": "CE2203 (SKKH/MS)",
     "group": "CE",
     "venue": "B9/R104",
     "type": "Lecture"
@@ -7149,7 +7149,7 @@
     "day": "Friday",
     "time": "04:00 PM - 04.55 PM",
     "year": 3,
-    "courseCode": "CE3202",
+    "courseCode": "CE3202 (AS/PC)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -7158,7 +7158,7 @@
     "day": "Friday",
     "time": "04:00 PM - 04.55 PM",
     "year": "Elective",
-    "courseCode": "CE5203",
+    "courseCode": "CE5203 (PR)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -7174,7 +7174,7 @@
   },
   {
     "day": "Friday",
-    "time": "4:00 PM - 6:55 PM",
+    "time": "4:00 PM - 4:55 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -7239,7 +7239,7 @@
     "day": "Friday",
     "time": "05:00 PM - 05.55 PM",
     "year": 3,
-    "courseCode": "CE3202",
+    "courseCode": "CE3202 (AS/PC)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
@@ -7248,7 +7248,7 @@
     "day": "Friday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
-    "courseCode": "CE5213",
+    "courseCode": "CE5213 (SKKH)",
     "group": "CE",
     "venue": "B9/R106",
     "type": "Lecture"
@@ -7284,7 +7284,7 @@
     "day": "Friday",
     "time": "06:00 PM - 06.55 PM",
     "year": 3,
-    "courseCode": "CE3202",
+    "courseCode": "CE3202 (AS/PC)",
     "group": "CE",
     "venue": "B9/R105",
     "type": "Lecture"
