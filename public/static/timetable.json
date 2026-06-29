@@ -10,7 +10,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 - 7",
+    "time": "3:00 - 6:55",
     "year": 2,
     "courseCode": "CS2204",
     "group": "AI",
@@ -19,7 +19,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 - 7",
+    "time": "3:00 - 6:55",
     "year": 2,
     "courseCode": "CS2204",
     "group": "CS",
@@ -1108,7 +1108,7 @@
   },
   {
     "day": "Monday",
-    "time": "3 PM - 6 PM",
+    "time": "3:00 PM - 5:55 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1234,7 +1234,7 @@
   },
   {
     "day": "Monday",
-    "time": "4 PM - 7 PM",
+    "time": "4:00 PM - 6:55 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1324,7 +1324,7 @@
   },
   {
     "day": "Monday",
-    "time": "5 PM - 8 PM",
+    "time": "5:00 PM - 7:55 PM",
     "year": 2,
     "courseCode": "CB2201",
     "group": "CB",
@@ -1342,7 +1342,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 3,
     "courseCode": "CS3202",
     "group": "AI",
@@ -1351,7 +1351,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 3,
     "courseCode": "CS3202",
     "group": "CS",
@@ -1360,7 +1360,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 2,
     "courseCode": "CS2205",
     "group": "AI",
@@ -1918,7 +1918,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "10 AM - 1 PM",
+    "time": "10:00 AM - 12:55 PM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
@@ -2161,7 +2161,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "11 AM - 2 PM",
+    "time": "11:00 AM - 1:55 PM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
@@ -2368,7 +2368,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "12 PM - 3 AM",
+    "time": "12:00 PM - 2:55 AM",
     "year": "Elective",
     "courseCode": "CB5203",
     "group": "CB",
@@ -3088,7 +3088,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 3,
     "courseCode": "CS3203",
     "group": "CS",
@@ -3097,7 +3097,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 2,
     "courseCode": "CS2202",
     "group": "AI",
@@ -3106,7 +3106,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 2,
     "courseCode": "CS2202",
     "group": "CS",
@@ -4294,7 +4294,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 PM - 6 PM",
+    "time": "3:00 PM - 5:55 PM",
     "year": 2,
     "courseCode": "CB2204",
     "group": "CB",
@@ -4429,7 +4429,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "4 PM - 7 PM",
+    "time": "4:00 PM - 6:55 PM",
     "year": 2,
     "courseCode": "CB2204",
     "group": "CB",
@@ -4591,7 +4591,7 @@
   },
   {
     "day": "Thursday",
-    "time": "2 - 5",
+    "time": "2:00 - 4:55",
     "year": 3,
     "courseCode": "CS3204",
     "group": "AI",
@@ -4600,7 +4600,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 2,
     "courseCode": "CS2203",
     "group": "AI",
@@ -4609,7 +4609,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3 - 6",
+    "time": "3:00 - 5:55",
     "year": 2,
     "courseCode": "CS2203",
     "group": "CS",
@@ -4960,7 +4960,7 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 1 PM",
+    "time": "10:00 AM - 12:55 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -5203,7 +5203,7 @@
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 2 PM",
+    "time": "11:00 AM - 1:55 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -6445,7 +6445,7 @@
   },
   {
     "day": "Friday",
-    "time": "10 - 12",
+    "time": "10:00 - 11:55",
     "year": 3,
     "courseCode": "CS3201",
     "group": "AI",
@@ -6454,7 +6454,7 @@
   },
   {
     "day": "Friday",
-    "time": "10 - 12",
+    "time": "10:00 - 11:55",
     "year": 3,
     "courseCode": "CS3201",
     "group": "CS",
@@ -7030,7 +7030,7 @@
   },
   {
     "day": "Friday",
-    "time": "3 PM - 6 PM",
+    "time": "3:00 PM - 5:55 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
@@ -7138,7 +7138,7 @@
   },
   {
     "day": "Friday",
-    "time": "4 PM - 7 PM",
+    "time": "4:00 PM - 6:55 PM",
     "year": 3,
     "courseCode": "CB3204",
     "group": "CB",
