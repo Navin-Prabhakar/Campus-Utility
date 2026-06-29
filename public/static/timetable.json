@@ -3214,6 +3214,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "9 AM - 10 AM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "09:00 AM - 09.55 AM",
     "year": 3,
     "courseCode": "CE3206 (SV/SKKH/BAK)",
@@ -3475,6 +3484,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "10 AM - 11 AM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "10:00 AM - 10.55 AM",
     "year": 3,
     "courseCode": "CE3203 (KR)",
@@ -3706,6 +3724,15 @@
     "group": "EP",
     "venue": "R102",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 12 PM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3979,6 +4006,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "12 PM - 1 AM",
+    "year": 3,
+    "courseCode": "EP3202",
+    "group": "EP",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 2,
     "courseCode": "CE2205 (SG/RKB)",
@@ -4101,6 +4137,15 @@
     "courseCode": "EC3202 (Gr 2)",
     "group": "EE",
     "venue": "EE Dept Lab 2",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 3 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
     "type": "Lab"
   },
   {
@@ -4285,6 +4330,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "3 PM - 4 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "03:00 PM - 03.55 PM",
     "year": 2,
     "courseCode": "CE2202 (RKB)",
@@ -4417,6 +4471,15 @@
     "group": "PH",
     "venue": "R103",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 5 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -4591,6 +4654,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "5 PM - 6 PM",
+    "year": "Elective",
+    "courseCode": "PH5201",
+    "group": "PH",
+    "venue": "LAB",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "05:00 PM - 05.55 PM",
     "year": "Elective",
     "courseCode": "CE5217 (AT)",
@@ -4737,9 +4809,9 @@
     "day": "Thursday",
     "time": "9 AM - 10 AM",
     "year": 3,
-    "courseCode": "EP3202",
+    "courseCode": "EP3203",
     "group": "EP",
-    "venue": "LAB",
+    "venue": "R110",
     "type": "Lab"
   },
   {
@@ -4888,15 +4960,6 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 11 AM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": "Elective",
     "courseCode": "PH5207",
@@ -4912,6 +4975,15 @@
     "group": "PH",
     "venue": "R101",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 11 AM",
+    "year": 3,
+    "courseCode": "EP3203",
+    "group": "EP",
+    "venue": "R110",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5131,15 +5203,6 @@
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 12 PM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4205",
@@ -5163,6 +5226,24 @@
     "courseCode": "PH3201",
     "group": "PH",
     "venue": "R103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "PH5222",
+    "group": "PH",
+    "venue": "R110",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "PH6222",
+    "group": "PH",
+    "venue": "R110",
     "type": "Lecture"
   },
   {
@@ -5365,15 +5446,6 @@
   },
   {
     "day": "Thursday",
-    "time": "12 PM - 1 AM",
-    "year": 3,
-    "courseCode": "EP3202",
-    "group": "EP",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "12:00 Noon - 12.55 AM",
     "year": 3,
     "courseCode": "CE3203 (KR)",
@@ -5545,15 +5617,6 @@
   },
   {
     "day": "Thursday",
-    "time": "2 PM - 3 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": 2,
     "courseCode": "EP2204",
@@ -5658,15 +5721,6 @@
     "courseCode": "MA2205",
     "group": "MC",
     "venue": "Department Lab",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 4 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
     "type": "Lab"
   },
   {
@@ -5815,15 +5869,6 @@
   },
   {
     "day": "Thursday",
-    "time": "4 PM - 5 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "PH4202",
@@ -5938,15 +5983,6 @@
     "group": "MC",
     "venue": "R301",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 6 PM",
-    "year": "Elective",
-    "courseCode": "PH5201",
-    "group": "PH",
-    "venue": "LAB",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -6346,15 +6382,6 @@
   },
   {
     "day": "Friday",
-    "time": "9 AM - 10 AM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R110",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
     "courseCode": "EP2202",
@@ -6495,15 +6522,6 @@
     "courseCode": "EE2202 (Gr 1)",
     "group": "EE",
     "venue": "EE Dept Lab 1",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "10 AM - 11 AM",
-    "year": 3,
-    "courseCode": "EP3203",
-    "group": "EP",
-    "venue": "R110",
     "type": "Lab"
   },
   {
@@ -6658,24 +6676,6 @@
     "group": "EE",
     "venue": "EE Dept Lab 2",
     "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH5222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "PH6222",
-    "group": "PH",
-    "venue": "R110",
-    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6846,6 +6846,24 @@
     "courseCode": "PH3201",
     "group": "PH",
     "venue": "R103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "PH5222",
+    "group": "PH",
+    "venue": "R110",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "PH6222",
+    "group": "PH",
+    "venue": "R110",
     "type": "Lecture"
   },
   {
