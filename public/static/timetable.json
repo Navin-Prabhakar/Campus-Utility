@@ -523,7 +523,7 @@
   },
   {
     "day": "Monday",
-    "time": "11 AM - 2 PM",
+    "time": "11 AM - 1 PM",
     "year": 1,
     "courseCode": "CE1201 (AKJ/BAK)",
     "group": "CE",
@@ -1315,7 +1315,7 @@
   },
   {
     "day": "Monday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": 2,
     "courseCode": "CE2203 (SKKH/MS)",
     "group": "CE",
@@ -1855,7 +1855,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "10 AM - 1 PM",
+    "time": "10 AM - 12 PM",
     "year": 1,
     "courseCode": "CE1201 (AKJ/BAK)",
     "group": "CE",
@@ -2476,7 +2476,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "2 PM - 5 PM",
+    "time": "2 PM - 4 PM",
     "year": 1,
     "courseCode": "CE1201 (T)",
     "group": "CE",
@@ -2764,7 +2764,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 6 PM",
+    "time": "3 PM - 5 PM",
     "year": 1,
     "courseCode": "CE1201 (T)",
     "group": "CE",
@@ -2935,7 +2935,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "4 PM - 7 PM",
+    "time": "4 PM - 6 PM",
     "year": 1,
     "courseCode": "CE1201 (T)",
     "group": "CE",
@@ -3070,7 +3070,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": "Elective",
     "courseCode": "CE5205 (AJ)",
     "group": "CE",
@@ -3079,7 +3079,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": "Elective",
     "courseCode": "CE5210 (AS)",
     "group": "CE",
@@ -4600,7 +4600,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": 3,
     "courseCode": "CE3205 (OP)",
     "group": "CE",
@@ -4609,7 +4609,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": "Elective",
     "courseCode": "CE5209 (Nk)",
     "group": "CE",
@@ -5995,7 +5995,7 @@
   },
   {
     "day": "Thursday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": "Elective",
     "courseCode": "CE5212 (SV)",
     "group": "CE",
@@ -6004,7 +6004,7 @@
   },
   {
     "day": "Thursday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": 2,
     "courseCode": "CE2201 (SG)",
     "group": "CE",
@@ -6013,7 +6013,7 @@
   },
   {
     "day": "Thursday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": "Elective",
     "courseCode": "CE5202 (PR)",
     "group": "CE",
@@ -6022,7 +6022,7 @@
   },
   {
     "day": "Thursday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": 2,
     "courseCode": "CE2202 (RKB)",
     "group": "CE",
@@ -7336,7 +7336,7 @@
   },
   {
     "day": "Friday",
-    "time": "5 PM - 8 PM",
+    "time": "5 PM - 7 PM",
     "year": "Elective",
     "courseCode": "CE5207 (AKV)",
     "group": "CE",
