@@ -291,7 +291,7 @@ export default function SchedulePage() {
                   .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time));
 
                 return (
-                  <div key={day} className="w-full bg-gradient-to-b from-sky-300/30 to-amber-700/20 border border-sky-600/30 rounded-2xl p-3 shadow-xl flex flex-col">
+                  <div key={day} className="w-full bg-gradient-to-b from-sky-300/30 to-black border border-sky-600/30 rounded-2xl p-3 shadow-xl flex flex-col">
                     
                     {/* Weekday Header Separator */}
                     <div className="border-b border-zinc-950 pb-2 mb-2.5 flex justify-between items-center select-none">
@@ -318,10 +318,10 @@ export default function SchedulePage() {
                               key={idx}
                               className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform hover:-translate-y-0 active:scale-[0.98] ${
                                 isLab
-                                  ? "bg-amber-400/30 border-amber-800 shadow-sm" 
+                                  ? "bg-emerald-950 border-green-800 border-2 shadow-sm" 
                                   : isTut
-                                  ? "bg-green-400/30 border-emerald-800 shadow-xs"   
-                                  : "bg-zinc-900/80 border-zinc-600 shadow-sm"
+                                  ? "bg-zinc-700 border-amber-800 border-2 shadow-xs"   
+                                  : "bg-zinc-700 border-zinc-700 shadow-sm"
                               }`}
                             >
                               <div className="flex flex-col gap-2 min-w-0 flex-1 pr-1.5">
@@ -332,9 +332,9 @@ export default function SchedulePage() {
                                   <span
                                     className={`text-[9px] py-1 font-black uppercase tracking-normal px-1.5 py-0.5 rounded-lg border shrink-0 ${
                                       isLab
-                                        ? "bg-amber-900 text-zinc-100 border-red-500" 
+                                        ? "bg-green-800 text-zinc-100 border-green-800" 
                                         : isTut
-                                        ? "bg-green-800 text-zinc-100 border-green-500"   
+                                        ? "bg-amber-800 text-zinc-100 border-amber-800"   
                                         : "bg-zinc-700 text-zinc-200 border-zinc-500"
                                     }`}
                                   >
@@ -342,12 +342,12 @@ export default function SchedulePage() {
                                   </span>
                                 </div>
                                 <div className="text-[14px]">
-                                  📍 <span className="text-[12px] text-zinc-200 font-bold font-black">{cls.venue}</span>
+                                  📍 <span className="text-[11px] text-zinc-200 font-bold font-black">{cls.venue}</span>
                                 </div>
                               </div>
 
                               <div className="text-right shrink-0">
-                                <span className="text-[11px]  font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-1.5 shadow-inner font-mono">
+                                <span className="text-[11px] font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-2 shadow-inner font-">
                                    {cls.time}
                                 </span>
                               </div>

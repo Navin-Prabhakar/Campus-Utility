@@ -146,10 +146,10 @@ export default function CabSharingPage() {
   };
 
   return (
-    <main className="h-full w-full bg-[#050505] flex flex-col overflow-hidden relative text-zinc-300 font-sans antialiased selection:bg-zinc-800 selection:text-white">
+    <main className="h-full w-full bg-slate-900 flex flex-col overflow-hidden relative text-zinc-300 font-sans antialiased selection:bg-zinc-800 selection:text-white">
       
       {/* 📜 APP WINDOW SCROLL BODY */}
-      <div className="flex-1 overflow-y-auto px-4 py-4 pb-36 style-scrollbar">
+      <div className="flex-1 overflow-y-auto px-3 py-21 pb-36 style-scrollbar">
         <div className="max-w-md mx-auto sm:max-w-xl md:max-w-xl flex flex-col min-h-full space-y-4">
           
           {/* 🎛️ iOS-Style Segmented Tab Controller (Mono Dark Contrast Shift) */}
@@ -175,7 +175,7 @@ export default function CabSharingPage() {
                   : "text-zinc-500 hover:text-zinc-300"
               }`}
             >
-              📋 My Logs ({myRides.length})
+              📋 My Rides ({myRides.length})
             </button>
           </div>
 
@@ -183,31 +183,31 @@ export default function CabSharingPage() {
             <div className="space-y-4 animate-in fade-in duration-200 flex-grow">
               
               {/* Form Input Block (Depth Depth Perception via Lighter Background Panels) */}
-              <section className="bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] rounded-2xl border border-zinc-900 p-4 shadow-xl">
-                <h2 className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-3.5">Broadcast Route Details</h2>
+              <section className="bg-gradient-to-t from-zinc-950 to-zinc-800/90 rounded-2xl border border-zinc-700 p-3 shadow-xl">
+                <h2 className="text-[12px] font-black uppercase tracking-wide text-zinc-400 mb-3.5">Broadcast Route Details</h2>
                 <form onSubmit={handlePostRide} className="flex flex-col gap-3.5">
                   
                   <div className="grid grid-cols-2 gap-3">
                     <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Display Alias</label>
+                      <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">Display Name</label>
                       <input 
                         type="text" placeholder="Your Name" value={name} onChange={(e) => setName(e.target.value)}
-                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner"
+                        className="rounded-xl border border-slate-500 p-2 text-sm bg-slate-700 text-white outline-hidden focus:border-zinc-600 shadow-inner"
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">WhatsApp Node</label>
+                      <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">WhatsApp Number</label>
                       <input 
-                        type="tel" placeholder="10-digit phone" value={phone} onChange={(e) => setPhone(e.target.value)}
-                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono"
+                        type="tel" placeholder="10-digit number" value={phone} onChange={(e) => setPhone(e.target.value)}
+                        className="rounded-xl border border-slate-500 p-2 text-sm bg-slate-700 text-white outline-hidden focus:border-zinc-600 shadow-inner"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Origin Hub</label>
-                      <select value={from} onChange={(e) => setFrom(e.target.value)} className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-zinc-300 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
+                  <div className="grid grid-cols-2  gap-3">
+                    <div className="flex flex-col gap-1 ">
+                      <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1"> Origin</label>
+                      <select value={from} onChange={(e) => setFrom(e.target.value)} className="rounded-xl border border-slate-500 p-2 px-1 text-xs bg-slate-700 text-zinc-200 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
                         <option value="IIT Patna Campus">IIT Patna Campus</option>
                         <option value="Patna Airport">Patna Airport</option>
                         <option value="Patna Junction">Patna Junction</option>
@@ -216,11 +216,11 @@ export default function CabSharingPage() {
                       </select>
                     </div>
                     <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Target End</label>
-                      <select value={to} onChange={(e) => setTo(e.target.value)} className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-zinc-300 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
+                      <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">Destination</label>
+                      <select value={to} onChange={(e) => setTo(e.target.value)} className="rounded-xl border border-slate-500 p-2 px-1 text-xs bg-slate-700 text-zinc-200 font-bold outline-hidden focus:border-zinc-600 cursor-pointer">
+                        <option value="Bihta Station">Bihta Station</option>
                         <option value="Patna Airport">Patna Airport</option>
                         <option value="Patna Junction">Patna Junction</option>
-                        <option value="Bihta Station">Bihta Station</option>
                         <option value="IIT Patna Campus">IIT Patna Campus</option>
                         <option value="Other">Other (Custom Field)</option>
                       </select>
@@ -233,10 +233,10 @@ export default function CabSharingPage() {
                       <div>
                         {from === "Other" ? (
                           <div className="flex flex-col gap-1">
-                            <label className="text-[9px] font-black uppercase tracking-wider text-amber-500 px-1">Custom Origin Location</label>
+                            <label className="text-[9px] font-black  uppercase tracking-wide text-amber-500 px-1">Custom Origin</label>
                             <input 
-                              type="text" placeholder="e.g., Amrapali Cantt" value={customFrom} onChange={(e) => setCustomFrom(e.target.value)}
-                              className="rounded-xl border border-amber-500/20 p-2.5 text-xs bg-[#1A1815] text-white outline-hidden focus:border-amber-500/40 shadow-inner"
+                              type="text" placeholder="e.g.- Danapur" value={customFrom} onChange={(e) => setCustomFrom(e.target.value)}
+                              className="rounded-3xl border border-amber-500/20 p-2 text-sm bg-[#1A1815] text-white outline-hidden focus:border-amber-500/40 shadow-inner"
                             />
                           </div>
                         ) : <div />}
@@ -246,8 +246,8 @@ export default function CabSharingPage() {
                           <div className="flex flex-col gap-1">
                             <label className="text-[9px] font-black uppercase tracking-wider text-amber-500 px-1">Custom Destination</label>
                             <input 
-                              type="text" placeholder="e.g., Fraser Road" value={customTo} onChange={(e) => setCustomTo(e.target.value)}
-                              className="rounded-xl border border-amber-500/20 p-2.5 text-xs bg-[#1A1815] text-white outline-hidden focus:border-amber-500/40 shadow-inner"
+                              type="text" placeholder="e.g.- Gandhi Maidan" value={customTo} onChange={(e) => setCustomTo(e.target.value)}
+                              className="rounded-3xl border border-amber-500/20 p-2 text-sm bg-[#1A1815] text-white outline-hidden focus:border-amber-500/40 shadow-inner"
                             />
                           </div>
                         ) : <div />}
@@ -257,31 +257,31 @@ export default function CabSharingPage() {
 
                   <div className="grid grid-cols-2 gap-3 items-end">
                     <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Departure Calendar</label>
+                      <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">Departure Day</label>
                       <input 
                         type="date" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}
-                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
+                        className="rounded-xl border border-slate-500 p-2.5 text-xs bg-slate-700 text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
                       />
                     </div>
                     <div className="flex flex-col gap-1">
-                      <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Clock Matrix Wheel</label>
+                      <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">Departure Time</label>
                       <input 
                         type="time" value={departureTimeOnly} onChange={(e) => setDepartureTimeOnly(e.target.value)}
-                        className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
+                        className="rounded-xl border border-slate-500 p-2.5 text-xs bg-slate-700 text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
                       />
                     </div>
                   </div>
 
                   <div className="flex flex-col gap-1">
-                    <label className="text-[9px] font-black uppercase tracking-wider text-zinc-500 px-1">Vacant Seats Space</label>
+                    <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">Vacant Seats</label>
                     <input 
                       type="number" min="1" max="7" value={seats} onChange={(e) => setSeats(Number(e.target.value))}
-                      className="rounded-xl border border-zinc-800 p-2.5 text-xs bg-[#161616] text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono"
+                      className="rounded-xl border border-slate-500 p-2.5 text-xs bg-slate-700 text-white outline-hidden focus:border-zinc-400 shadow-inner font-mono"
                     />
                   </div>
 
                   {/* Clickable Action Trigger with lighter contrast depth */}
-                  <button type="submit" className="w-full bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black text-xs py-3 rounded-xl shadow-md transition-all active:scale-95 tracking-widest uppercase mt-2 cursor-pointer">
+                  <button type="submit" className="w-full bg-amber-700 hover:bg-amber-600 border border-zinc-700 text-white font-black text-xs py-3 rounded-xl shadow-md transition-all active:scale-95 tracking-widest uppercase mt-2 cursor-pointer">
                      🚀 Post Schedule
                   </button>
                 </form>
@@ -290,9 +290,9 @@ export default function CabSharingPage() {
               {/* Active Feeds Board Listings */}
               <section className="space-y-3">
                 <div className="flex items-center justify-between mb-2 px-1">
-                  <h2 className="text-xs font-black uppercase tracking-widest text-zinc-500">Active Board Postings</h2>
-                  <button onClick={fetchActiveDashboard} className="text-[11px] font-black uppercase tracking-wider text-zinc-400 hover:text-white flex items-center gap-1 transition-colors">
-                    🔄 Refresh
+                  <h2 className="text-xs font-black uppercase tracking-wide text-zinc-300">Active Cab Schedules</h2>
+                  <button onClick={fetchActiveDashboard} className="text-[12px] font-black uppercase tracking-wide text-zinc-400 hover:text-white flex items-center gap-1 transition-colors">
+                    🔄  Refresh
                   </button>
                 </div>
 
@@ -337,14 +337,14 @@ export default function CabSharingPage() {
           )}
 
           {activeTab === "my-rides" && (
-            <div className="space-y-3 animate-in fade-in duration-200 flex-grow">
-              <h2 className="text-xs font-black uppercase tracking-widest text-zinc-500 px-1 mb-1">Personal Tracking Log</h2>
+            <div className="space-y-3 pb-70 animate-in fade-in duration-200 flex-grow">
+              <h2 className="text-xs font-black uppercase tracking-wider text-zinc-400 px-1 mb-1">My Posted Rides</h2>
               
               {!session?.user?.email ? (
                 <p className="text-xs text-zinc-500 text-center py-6 italic">Authentication nodes missing. Please authorize account layout access.</p>
               ) : myRides.length === 0 ? (
                 <div className="bg-[#0C0C0C] border border-dashed border-zinc-800 rounded-2xl p-8 text-center">
-                  <p className="text-xs text-zinc-500 font-medium">No travel records initialized under this identifier, bro.</p>
+                  <p className="text-sm text-zinc-500 font-medium">No travel records initialized you, bro ☹️.</p>
                 </div>
               ) : (
                 <div className="flex flex-col gap-2.5">
@@ -424,22 +424,6 @@ export default function CabSharingPage() {
         </div>
       </div>
 
-      {/* Global Scroll Tracking Style Tokens */}
-      <style jsx global>{`
-        .style-scrollbar::-webkit-scrollbar {
-          width: 5px;
-        }
-        .style-scrollbar::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        .style-scrollbar::-webkit-scrollbar-thumb {
-          background: #222222;
-          border-radius: 20px;
-        }
-        .style-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #333333;
-        }
-      `}</style>
     </main>
   );
 }

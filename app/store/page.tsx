@@ -174,13 +174,13 @@ export default function StorePage() {
   };
 
   return (
-    <div className="h-full w-full bg-[#050505] font-sans text-zinc-300 antialiased flex flex-col overflow-hidden relative selection:bg-zinc-800 selection:text-white">
+    <div className="h-full w-full bg-slate-900 py-21 font-sans text-zinc-300 antialiased flex flex-col overflow-hidden relative selection:bg-zinc-800 selection:text-white">
       
       {/* Persistent Sticky Controls Bar */}
-      <div className="w-full bg-[#0C0C0C]/90 backdrop-blur-md border-b border-zinc-900 shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
+      <div className="w-full bg-slate-900 backdrop-blur-md border-b border-zinc-900 shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.4)]">
         
         {!loading && !error && (
-          <div className="w-[94%] max-w-[365px] py-2.5 flex gap-2 items-center relative">
+          <div className="w-[96%] max-w-[365px] py-1.5 flex gap-2 items-center relative">
             
             {/* Search Input Box */}
             <div className="relative flex-1">
@@ -189,13 +189,13 @@ export default function StorePage() {
                 placeholder="Search items, prices, names..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-[#161616] border border-zinc-800 rounded-xl py-2 pl-8 pr-8 text-[11px] focus:outline-hidden focus:border-zinc-600 focus:bg-[#1A1A1A] font-medium tracking-tight placeholder-zinc-500 text-white transition-all shadow-inner"
+                className="w-full bg-zinc-300 border border-zinc-800 rounded-2xl py-2 pl-8 pr-8 text-[13px]  focus:border-zinc-600 focus:outline-hidden font-medium tracking-tight placeholder-zinc-600 text-black transition-all shadow-inner"
               />
-              <span className="absolute left-2.5 top-2.5 text-[10px] opacity-50">🔍</span>
+              <span className="absolute left-2.5 top-2.5 text-[14px] opacity-1000">🔍</span>
               {searchQuery && (
                 <button 
                   onClick={() => setSearchQuery("")}
-                  className="absolute right-2.5 top-2 text-xs text-zinc-500 hover:text-white font-bold px-1 transition-colors"
+                  className="absolute right-2.5 top-2.5 text-sm text-zinc-800 hover:text-red-600 font-bold px-1 transition-colors"
                 >
                   ✕
                 </button>
@@ -213,7 +213,7 @@ export default function StorePage() {
                 }`}
               >
                 <span>Filter</span>
-                <span className={`text-[8px] transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}>
+                <span className={`text-[9x] transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}>
                   ▼
                 </span>
               </button>
@@ -266,8 +266,8 @@ export default function StorePage() {
       </div>
 
       {/* 📜 SCROLLABLE MIDDLE CONTAINER */}
-      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-1 pb-32 bg-[#050505] style-scrollbar">
-        <main className="w-[94%] max-w-[365px] flex flex-col py-2 flex-grow">
+      <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-1 pb-32 bg-slate-800 style-scrollbar">
+        <main className="w-[99%] max-w-[365px] flex flex-col py-2 flex-grow">
           
           {loading ? (
             <div className="grid grid-cols-2 gap-2.5 w-full">
@@ -302,7 +302,7 @@ export default function StorePage() {
                     >
                       
                       {/* CARD FRONT LAYER */}
-                      <div className="absolute inset-0 w-full h-full rounded-2xl border border-zinc-900 bg-gradient-to-b from-[#0F0F0F] to-[#0A0A0A] hover:border-zinc-700 p-2 flex flex-col justify-between shadow-xl [backface-visibility:hidden] select-none transition-all">
+                      <div className="absolute inset-0 w-full h-full rounded-2xl border border-zinc-700 bg-gradient-to-t from-zinc-800 to-[#0A0A0A] hover:border-zinc-600 p-2 flex flex-col justify-between shadow-xl [backface-visibility:hidden] select-none transition-all">
                         
                         <div className="relative w-full h-[76%] bg-[#161616] rounded-xl overflow-hidden shrink-0 flex items-center justify-center border border-zinc-900/60">
                           {item.picture ? (
@@ -401,7 +401,7 @@ export default function StorePage() {
       {/* Floating Action Button: Standard Tech Form Blue For Spreadsheet Interaction */}
       <button
         onClick={handleSellButtonClick}
-        className="fixed bottom-24 right-4 w-12 h-12 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex flex-col items-center justify-center font-black text-[10px] tracking-widest uppercase shadow-[0_4px_20px_rgba(59,130,246,0.3)] border border-blue-400/30 active:scale-90 transition-all z-40 cursor-pointer select-none"
+        className="fixed bottom-24 right-4 w-12 h-12 bg-gradient-to-tr from-blue-600/80 to-purple-500 hover:bg-blue-700 text-white rounded-full flex flex-col items-center justify-center font-black text-[12px] tracking-widest uppercase shadow-[0_4px_20px_rgba(59,130,246,0.3)] border border-blue-400/30 active:scale-90 transition-all z-40 cursor-pointer select-none"
         aria-label="Sell Item"
       >
         <span>Sell</span>
