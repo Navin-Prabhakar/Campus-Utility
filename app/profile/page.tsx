@@ -65,9 +65,7 @@ export default function ProfileSettingsPage() {
           <ProfileAvatar
             name={displayName || user?.name}
             email={user?.email}
-            image={user?.image}
-            size="xl" 
-            editable={true} 
+            size="xl"
           />
 
           {/* Student Identity Input Field (Permanent Local Storage Engine Switch) */}

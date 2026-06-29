@@ -18,6 +18,10 @@ export default function Header({ messActionSlot }: HeaderProps) {
   const { data: session, status } = useSession();
   const [showMenu, setShowMenu] = React.useState(false);
   const [showNotificationModal, setShowNotificationModal] = React.useState(false); // Modal control state
+  
+  // 🟢 NEW: Local state marker to manage your compact floating tour portal window
+  const [showTourDropdown, setShowTourDropdown] = React.useState(false);
+
   const pathname = usePathname();
 
   // Calculate unread counts dynamically
@@ -26,6 +30,8 @@ export default function Header({ messActionSlot }: HeaderProps) {
   // 📱 NEW: State markers for track scrolling hide/show effects safely on phone/desktop
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const officialTourUrl = "https://www.iitp.ac.in/visit/campus-tour";
 
   useEffect(() => {
     const handleScrollVector = () => {
@@ -77,7 +83,6 @@ export default function Header({ messActionSlot }: HeaderProps) {
 
   // Determine active states for sub-navigation links
   const isHomeActive = pathname === "/";
-  const isTourActive = pathname === "/tour";
 
   return (
     <>
@@ -102,7 +107,10 @@ export default function Header({ messActionSlot }: HeaderProps) {
         <div className="flex items-center gap-1.5">
           {/* Notification Bell Button with Badge Counter */}
           <button
-            onClick={() => setShowNotificationModal(true)}
+            onClick={() => {
+              setShowNotificationModal(true);
+              setShowTourDropdown(false); // Close tour popup if open
+            }}
             aria-label="Notifications"
             className="relative flex h-10 w-10 items-center justify-center text-sm text-white transition hover:bg-white/10 active:bg-white/10 active:scale-95 rounded-lg cursor-pointer select-none"
           >
@@ -122,14 +130,16 @@ export default function Header({ messActionSlot }: HeaderProps) {
             {!loading ? (
               user ? (
                 <button
-                  onClick={() => setShowMenu(!showMenu)}
+                  onClick={() => {
+                    setShowMenu(!showMenu);
+                    setShowTourDropdown(false); // Close tour popup if open
+                  }}
                   className="flex items-center gap-1.5 rounded-full border border-zinc-700/80 bg-white/10 px-0 py-0 transition hover:bg-white/20"
                   aria-label="Profile menu"
                 >
                   <ProfileAvatar
                     name={user.name}
                     email={user.email}
-                    image={user.image}
                     size="md"
                   />
                   <span className="hidden sm:inline text-sm font-medium max-w-[100px] truncate">
@@ -198,17 +208,51 @@ export default function Header({ messActionSlot }: HeaderProps) {
             </Link>
           </div>
           
-          {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
-          <div className={`rounded-xl items-center justify-between px-1.5 py-0.5 transition-colors duration-200 ${
-            isTourActive ? "bg-slate-300 text-zinc-800 " : "bg-zinc-600 text-white"
-          }`}>
-            <Link 
-              href="/tour" 
-              className="flex items-center gap-0 text-inherit text-md"
-              aria-label="Go to campus tour page"
+          {/* 🟢 FLOATING DROPDOWN CONTAINER FOR CAMPUS TOUR */}
+          <div className="relative">
+            <button 
+              onClick={() => {
+                setShowTourDropdown(!showTourDropdown);
+                setShowMenu(false); // Close profile dropdown if open
+              }}
+              className={`rounded-xl items-center justify-between px-1.5 py-0.5 transition-colors duration-200 text-md cursor-pointer select-none ${
+                showTourDropdown ? "bg-slate-300 text-zinc-800" : "bg-zinc-600 text-white"
+              }`}
+              aria-label="Toggle campus tour links menu"
             >
               <span>Campus Tour</span>
-            </Link>
+            </button>
+
+            {/* FLOATING TEXT OVERLAY PANEL */}
+            {showTourDropdown && (
+              <div className="absolute left-0 top-full mt-2 w-60 rounded-xl bg-slate-900 text-slate-100 shadow-2xl z-50 p-3.5 border border-slate-700 animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-sky-400 mb-1">
+                  <span>🗺️</span> Campus Tour
+                </div>
+                
+                <p className="text-[11px] text-slate-300 leading-relaxed mb-3 font-medium">
+                  Explore hostels, tutorial blocks, and academic infrastructures live.
+                </p>
+                
+                <div className="flex gap-2">
+                  <a
+                    href={officialTourUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setShowTourDropdown(false)}
+                    className="flex-1 bg-sky-600 hover:bg-sky-500 transition text-white font-bold text-[11px] py-1.5 px-3 rounded-lg text-center shadow-md shadow-sky-600/20"
+                  >
+                    Open Window ↗
+                  </a>
+                  <button
+                    onClick={() => setShowTourDropdown(false)}
+                    className="bg-zinc-800 hover:bg-zinc-700 transition text-zinc-400 text-[11px] py-1.5 px-2.5 rounded-lg font-medium"
+                  >
+                    Dismiss
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
