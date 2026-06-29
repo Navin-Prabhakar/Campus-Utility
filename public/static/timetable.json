@@ -10,6 +10,24 @@
   },
   {
     "day": "Monday",
+    "time": "2",
+    "year": 2,
+    "courseCode": "ME2201",
+    "group": "ME",
+    "venue": "Monday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2",
+    "year": 3,
+    "courseCode": "ME3201",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "3 - 7",
     "year": 2,
     "courseCode": "CS2204",
@@ -28,11 +46,65 @@
   },
   {
     "day": "Monday",
+    "time": "3",
+    "year": 2,
+    "courseCode": "ME2202",
+    "group": "ME",
+    "venue": "Monday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3",
+    "year": 3,
+    "courseCode": "ME3202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4",
+    "year": 2,
+    "courseCode": "ME2204",
+    "group": "ME",
+    "venue": "Monday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4",
+    "year": 3,
+    "courseCode": "ME3203",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5",
+    "year": 3,
+    "courseCode": "ME3201",
+    "group": "ME",
+    "venue": "Monday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "8 AM - 8.55 AM",
     "year": 1,
     "courseCode": "CE1201",
     "group": "G19, G20, G21, G22, G23, G24",
     "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "8",
+    "year": 2,
+    "courseCode": "ME2203",
+    "group": "ME",
+    "venue": "Monday",
     "type": "Lecture"
   },
   {
@@ -1270,6 +1342,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "2",
+    "year": 2,
+    "courseCode": "ME2202",
+    "group": "ME",
+    "venue": "Tuesday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2",
+    "year": 3,
+    "courseCode": "ME3203",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "3 - 6",
     "year": 3,
     "courseCode": "CS3202",
@@ -1294,6 +1384,60 @@
     "group": "AI",
     "venue": "Lab (CSE Dept Lab)",
     "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3",
+    "year": 2,
+    "courseCode": "ME2201",
+    "group": "ME",
+    "venue": "Tuesday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4",
+    "year": 2,
+    "courseCode": "ME2203",
+    "group": "ME",
+    "venue": "Tuesday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5",
+    "year": 3,
+    "courseCode": "ME3202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5",
+    "year": 2,
+    "courseCode": "ME2204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "7",
+    "year": 3,
+    "courseCode": "ME3203",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "8",
+    "year": 2,
+    "courseCode": "ME2201",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -2944,6 +3088,33 @@
   },
   {
     "day": "Wednesday",
+    "time": "2",
+    "year": 3,
+    "courseCode": "ME3204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2",
+    "year": 2,
+    "courseCode": "ME2204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2",
+    "year": 2,
+    "courseCode": "ME2202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "3 - 6",
     "year": 3,
     "courseCode": "CS3203",
@@ -2968,6 +3139,60 @@
     "group": "CS",
     "venue": "(Data Ware House) CCLab 1",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3",
+    "year": 3,
+    "courseCode": "ME3201",
+    "group": "ME",
+    "venue": "Wednesday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4",
+    "year": 2,
+    "courseCode": "ME2203",
+    "group": "ME",
+    "venue": "Wednesday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4",
+    "year": 3,
+    "courseCode": "ME3201",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4",
+    "year": 3,
+    "courseCode": "ME3202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "7",
+    "year": 3,
+    "courseCode": "ME3205",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8",
+    "year": 2,
+    "courseCode": "ME2202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -4375,6 +4600,24 @@
   },
   {
     "day": "Thursday",
+    "time": "2",
+    "year": 2,
+    "courseCode": "ME2203",
+    "group": "ME",
+    "venue": "Thursday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2",
+    "year": 3,
+    "courseCode": "ME3204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "3 - 6",
     "year": 2,
     "courseCode": "CS2203",
@@ -4390,6 +4633,69 @@
     "group": "CS",
     "venue": "(AI) CC Lab 1",
     "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3",
+    "year": 2,
+    "courseCode": "ME2202",
+    "group": "ME",
+    "venue": "Thursday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3",
+    "year": 3,
+    "courseCode": "ME3202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4",
+    "year": 2,
+    "courseCode": "ME2201",
+    "group": "ME",
+    "venue": "Thursday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4",
+    "year": 3,
+    "courseCode": "ME3204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5",
+    "year": 3,
+    "courseCode": "ME3201",
+    "group": "ME",
+    "venue": "Thursday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5",
+    "year": 2,
+    "courseCode": "ME2204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "7",
+    "year": 3,
+    "courseCode": "ME3202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -4731,6 +5037,15 @@
     "courseCode": "HS2203",
     "group": "ES",
     "venue": "R202 (Block-1)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10",
+    "year": 2,
+    "courseCode": "ME2201",
+    "group": "ME",
+    "venue": "ME Department Room",
     "type": "Lecture"
   },
   {
@@ -5667,6 +5982,78 @@
     "courseCode": "CS2207",
     "group": "Minor",
     "venue": "(LT002)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "2",
+    "year": 2,
+    "courseCode": "ME2201",
+    "group": "ME",
+    "venue": "Friday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "2",
+    "year": 3,
+    "courseCode": "ME3204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3",
+    "year": 2,
+    "courseCode": "ME2202",
+    "group": "ME",
+    "venue": "Friday",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3",
+    "year": 3,
+    "courseCode": "ME3203",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4",
+    "year": 3,
+    "courseCode": "ME3202",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4",
+    "year": 2,
+    "courseCode": "ME2204",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "7",
+    "year": 3,
+    "courseCode": "ME3203",
+    "group": "ME",
+    "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "7",
+    "year": 3,
+    "courseCode": "ME3201",
+    "group": "ME",
+    "venue": "ME Department Room",
     "type": "Lecture"
   },
   {
