@@ -147,7 +147,7 @@
     "day": "Monday",
     "time": "9:00-9:55",
     "year": 3,
-    "courseCode": "ME3201:00 (T):55",
+    "courseCode": "ME3201 (T)",
     "group": "ME",
     "venue": "R308",
     "type": "Lecture"
@@ -1119,7 +1119,7 @@
     "day": "Monday",
     "time": "15:00-15:55",
     "year": 2,
-    "courseCode": "ME2203:00 (T):55",
+    "courseCode": "ME2203 (T)",
     "group": "ME",
     "venue": "LT102",
     "type": "Lecture"
@@ -1702,9 +1702,9 @@
   },
   {
     "day": "Tuesday",
-    "time": "9 - 12",
+    "time": "9:00 - 11:55",
     "year": 3,
-    "courseCode": "ME3203:00 (P, G2):55",
+    "courseCode": "ME3203 (P, G2)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -2800,9 +2800,9 @@
   },
   {
     "day": "Tuesday",
-    "time": "15 - 17",
+    "time": "15:00 - 16:55",
     "year": 2,
-    "courseCode": "ME2201:00 (P, G1):55",
+    "courseCode": "ME2201 (P, G1)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -3277,18 +3277,18 @@
   },
   {
     "day": "Wednesday",
-    "time": "9 - 11",
+    "time": "9:00 - 10:55",
     "year": 2,
-    "courseCode": "ME2204:00 (P, G1):55",
+    "courseCode": "ME2204 (P, G1)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
   },
   {
     "day": "Wednesday",
-    "time": "9 - 11",
+    "time": "9:00 - 10:55",
     "year": 2,
-    "courseCode": "ME2202:00 (P, G2):55",
+    "courseCode": "ME2202 (P, G2)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -3799,18 +3799,18 @@
   },
   {
     "day": "Wednesday",
-    "time": "11 - 13",
+    "time": "11:00 - 12:55",
     "year": 3,
-    "courseCode": "ME3201:00 (P, G1):55",
+    "courseCode": "ME3201 (P, G1)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
   },
   {
     "day": "Wednesday",
-    "time": "11 - 13",
+    "time": "11:00 - 12:55",
     "year": 3,
-    "courseCode": "ME3202:00 (P, G2):55",
+    "courseCode": "ME3202 (P, G2)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -4123,9 +4123,9 @@
   },
   {
     "day": "Wednesday",
-    "time": "14 - 18",
+    "time": "14:00 - 17:55",
     "year": 3,
-    "courseCode": "ME3205:00 (P):55",
+    "courseCode": "ME3205 (P)",
     "group": "ME",
     "venue": "R308",
     "type": "Lab"
@@ -4312,9 +4312,9 @@
   },
   {
     "day": "Wednesday",
-    "time": "15 - 17",
+    "time": "15:00 - 16:55",
     "year": 2,
-    "courseCode": "ME2202:00 (P, G1):55",
+    "courseCode": "ME2202 (P, G1)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -5232,7 +5232,7 @@
     "day": "Thursday",
     "time": "11:00-11:55",
     "year": 3,
-    "courseCode": "ME3204:00 (T):55",
+    "courseCode": "ME3204 (T)",
     "group": "ME",
     "venue": "R308",
     "type": "Lecture"
@@ -5554,9 +5554,9 @@
   },
   {
     "day": "Thursday",
-    "time": "14 - 16",
+    "time": "14:00 - 15:55",
     "year": 3,
-    "courseCode": "ME3202:00 (P, G1):55",
+    "courseCode": "ME3202 (P, G1)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -5959,9 +5959,9 @@
   },
   {
     "day": "Thursday",
-    "time": "17 - 19",
+    "time": "17:00 - 18:55",
     "year": 2,
-    "courseCode": "ME2201:00 (P, G2):55",
+    "courseCode": "ME2201 (P, G2)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -6303,7 +6303,7 @@
     "day": "Friday",
     "time": "9:00-9:55",
     "year": 2,
-    "courseCode": "ME2201:00 (T):55",
+    "courseCode": "ME2201 (T)",
     "group": "ME",
     "venue": "LT102",
     "type": "Lecture"
@@ -6492,7 +6492,7 @@
     "day": "Friday",
     "time": "10:00-10:55",
     "year": 2,
-    "courseCode": "ME2202:00 (T):55",
+    "courseCode": "ME2202 (T)",
     "group": "ME",
     "venue": "LT102",
     "type": "Lecture"
@@ -6663,16 +6663,16 @@
     "day": "Friday",
     "time": "11:00-11:55",
     "year": 3,
-    "courseCode": "ME3202:00 (T):55",
+    "courseCode": "ME3202 (T)",
     "group": "ME",
     "venue": "R308",
     "type": "Lecture"
   },
   {
     "day": "Friday",
-    "time": "11 - 13",
+    "time": "11:00 - 12:55",
     "year": 2,
-    "courseCode": "ME2204:00 (P, G2):55",
+    "courseCode": "ME2204 (P, G2)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
@@ -6913,18 +6913,18 @@
   },
   {
     "day": "Friday",
-    "time": "14 - 17",
+    "time": "14:00 - 16:55",
     "year": 3,
-    "courseCode": "ME3203:00 (P, G1):55",
+    "courseCode": "ME3203 (P, G1)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
   },
   {
     "day": "Friday",
-    "time": "14 - 16",
+    "time": "14:00 - 15:55",
     "year": 3,
-    "courseCode": "ME3201:00 (P, G2):55",
+    "courseCode": "ME3201 (P, G2)",
     "group": "ME",
     "venue": "Lab",
     "type": "Lab"
