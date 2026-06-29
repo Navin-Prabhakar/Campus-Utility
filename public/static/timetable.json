@@ -802,6 +802,15 @@
   },
   {
     "day": "Monday",
+    "time": "12-12:55",
+    "year": 2,
+    "courseCode": "CS2206",
+    "group": "CS",
+    "venue": "(LT001)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "12:00 PM-12:55 PM",
     "year": "Elective",
     "courseCode": "CH6202",
@@ -2328,6 +2337,15 @@
     "courseCode": "CS2205",
     "group": "AI",
     "venue": "(R103)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12-12:55",
+    "year": 2,
+    "courseCode": "CS2206",
+    "group": "CS",
+    "venue": "(LT001)",
     "type": "Lecture"
   },
   {
@@ -5356,6 +5374,15 @@
   },
   {
     "day": "Thursday",
+    "time": "12-12:55",
+    "year": 2,
+    "courseCode": "CS2206",
+    "group": "CS",
+    "venue": "(LT001)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "12:00 PM-12:55 PM",
     "year": 4,
     "courseCode": "CH4204",
@@ -6289,6 +6316,15 @@
     "group": "MM",
     "venue": "R310",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "9:00 - 11:55",
+    "year": 2,
+    "courseCode": "CS2206",
+    "group": "CS",
+    "venue": "(Hardware lab + Classroom CSE Dept) (9-12 pm)",
+    "type": "Lab"
   },
   {
     "day": "Friday",
