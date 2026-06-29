@@ -88,7 +88,7 @@ export default function CabSharingPage() {
       return;
     }
 
-    const combinedDateTime = `${departureDate}T${departureTimeOnly}`;
+    const combinedDateTime = `${departureDate}T${departureTimeOnly}:00+05:30`;
 
     const payload = {
       poster_name: name,
@@ -260,7 +260,7 @@ export default function CabSharingPage() {
                       <label className="text-[10px] font-black uppercase tracking-wide text-zinc-500 px-1">Departure Day</label>
                       <input 
                         type="date" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)}
-                        className="rounded-xl border border-slate-500 p-2.5 text-xs bg-slate-700 text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
+                        className="rounded-xl border border-slate-500 p-2.5 px-2 text-xs bg-slate-700 text-white outline-hidden focus:border-zinc-600 shadow-inner font-mono cursor-text"
                       />
                     </div>
                     <div className="flex flex-col gap-1">
