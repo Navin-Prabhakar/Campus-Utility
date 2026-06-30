@@ -93,7 +93,7 @@ export default function SignIn() {
             alt="Campus-Utility logo"
             width={1080}
             height={1080}
-            className="h-20 w-20"
+            className="h-24 w-24"
           />
           <h1 className="text-center text-2xl font-bold text-slate-900">Campus Utility</h1>
           <p className="text-center text-sm text-slate-600">Secure activation via your college mail ID</p>

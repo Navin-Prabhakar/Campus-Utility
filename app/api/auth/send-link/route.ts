@@ -36,17 +36,17 @@ export async function POST(req: Request) {
     const emailBody = `
 Dear Student,
 
-You requested an access validation link to configure your student profile with the Campus Utility portal for IIT Patna.
+You requested an access validation link to configure your student profile with the Campus Utility portal.
 
-Please click the secure activation link below to verify your campus email ownership and log into the application:
+Please click the secure activation link below to verify your email ownership and log into the application:
 
 ${activationUrl}
 
 This secure activation token is temporary. It will automatically expire in 10 minutes. If you did not initiate this request, you can safely disregard this message.
 
 Warm regards,
-Campus Utility Core Team
-IIT Patna
+Campus Utility
+
     `;
 
     // 6. Fire it straight to their official Outlook inbox
