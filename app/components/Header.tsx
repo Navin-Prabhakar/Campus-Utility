@@ -93,15 +93,15 @@ export default function Header({ messActionSlot }: HeaderProps) {
       {/* Upper Header */}
       {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
       <div className="flex h-12 items-center justify-between bg-sky-900 px-2 text-white pointer-events-auto">
-        <div className="flex items-center gap-1.5 text-2xl font-semibold">
+        <div className="flex items-center gap-0 text-2xl">
           <Image
-            src="/iitp-logo.png"
+            src="/CU-logo1.png"
             alt="IIT Patna logo"
             width={1080}
             height={1080}
-            className="h-9 w-9"
+            className="h-11 w-11"
           />
-          IITP Unofficial
+          Campus Utility
         </div>
 
         <div className="flex items-center gap-1.5">
