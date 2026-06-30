@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Campus_Utility",
   description: "Daily Utility application for students of IIT Patna",
   icons: {
-    icon: "/logo.png",
+    icon: "/CU-logo1.png",
   },
 };
 

@@ -96,10 +96,10 @@ export default function Header({ messActionSlot }: HeaderProps) {
         <div className="flex items-center gap-0 text-2xl">
           <Image
             src="/CU-logo1.png"
-            alt="IIT Patna logo"
+            alt="CU logo"
             width={1080}
             height={1080}
-            className="h-11 w-11"
+            className="h-12 w-12"
           />
           Campus Utility
         </div>

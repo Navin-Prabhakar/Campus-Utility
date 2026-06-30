@@ -89,13 +89,13 @@ export default function SignIn() {
       <div className="w-full max-w-md rounded-lg bg-slate-200 p-5 shadow-2xl">
         <div className="mb-6 flex flex-col items-center gap-2">
           <Image
-            src="/iitp-logo.png"
-            alt="IIT Patna logo"
+            src="/CU-logo1.png"
+            alt="Campus-Utility logo"
             width={1080}
             height={1080}
             className="h-20 w-20"
           />
-          <h1 className="text-center text-2xl font-bold text-slate-900">IITP Unofficial</h1>
+          <h1 className="text-center text-2xl font-bold text-slate-900">Campus Utility</h1>
           <p className="text-center text-sm text-slate-600">Secure activation via your college mail ID</p>
         </div>
 
