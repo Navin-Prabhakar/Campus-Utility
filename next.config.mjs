@@ -28,6 +28,20 @@ const withPWA = withPWAInit({
           }
         }
       },
+      // 🛠️ FIX 1: DYNAMIC APP SHELLS CACHING ENGINE
+      // Yeh block bina internet ke bhi /mess, /store, aur /schedule ke HTML/JS chunks ko freeze karke safe rakhega, 
+      // jisse offline hone par black cloud screen bypass ho jayegi.
+      {
+        urlPattern: /\/(mess|store|schedule)$/i,
+        handler: 'StaleWhileRevalidate',
+        options: {
+          cacheName: 'protected-app-pages-shell',
+          expiration: {
+            maxEntries: 10,
+            maxAgeSeconds: 7 * 24 * 60 * 60 // 7 Din ka absolute fallback freeze window
+          }
+        }
+      },
       {
         urlPattern: /\/$/, 
         handler: 'StaleWhileRevalidate',
