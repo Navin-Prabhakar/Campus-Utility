@@ -18,4 +18,4 @@ rm -rf secure_temp
 
 # 4. Run the ACTUAL framework build command natively
 echo "Starting project build..."
-npx next build
+npx next build --webpack

@@ -2,15 +2,15 @@ import withPWAInit from "@ducanh2912/next-pwa";
 
 const withPWA = withPWAInit({
   dest: "public",
+  sw: "sw.js", // 🛠️ FORCE PATH: Generator ko clear instruction ki public/sw.js file likhni hai
   cacheOnFrontEndNav: true, 
   aggressiveFrontEndNavCaching: true,
   reloadOnOnline: true,
   swMinify: true,
-  disable: process.env.NODE_ENV === "development",
+  disable: false, // 🛠️ LOCAL TESTING: Abhi false rakho taaki localhost par service worker file compile ho sake
   scope: "/",
   startUrl: "/",
 
-  // 🛠️ FIX: Forces the service worker to cache pages and raw CSV streams for absolute offline autonomy
   workboxOptions: {
     runtimeCaching: [
       {
@@ -20,12 +20,12 @@ const withPWA = withPWAInit({
           cacheName: 'google-sheets-data',
           expiration: {
             maxEntries: 20,
-            maxAgeSeconds: 24 * 60 * 60 // Keeps the sheet records stored alive for 24 Hours
+            maxAgeSeconds: 24 * 60 * 60 
           }
         }
       },
       {
-        urlPattern: /\/$/, // Caches the root page wrapper framework shell
+        urlPattern: /\/$/, 
         handler: 'StaleWhileRevalidate',
         options: {
           cacheName: 'root-landing-shell'
@@ -37,7 +37,8 @@ const withPWA = withPWAInit({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {},
+  // 🛠️ TURBOPACK COMPATIBILITY ENGINE: Next.js 16 compilation pipeline ko optimize karne ke liye
+  transpilePackages: ["@ducanh2912/next-pwa"],
 
   images: {
     remotePatterns: [
