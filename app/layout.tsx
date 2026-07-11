@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Campus_Utility",
-  manifest: '/manifest.json', // 🛠️ FIX: Removed the stuck CSS classes so it resolves as a clean file path
+  manifest: '/manifest.json', 
   description: "Daily Utility application for students of IIT Patna",
   icons: {
     icon: "/CU-logo1.png",
@@ -31,16 +31,21 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headerList = await headers();
-  const activePath = headerList.get("x-url") || ""; 
-  const isSignInPage = activePath.endsWith("/signin");
+  // 🛠️ FIX: Safe offline initialization to prevent server-side header resolution from crashing the app shell
+  let isSignInPage = false;
+  try {
+    const headerList = await headers();
+    const activePath = headerList.get("x-url") || ""; 
+    isSignInPage = activePath.endsWith("/signin");
+  } catch (e) {
+    console.log("App architecture running in offline fallback matrix mode safely, bro.");
+  }
 
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-[#050505] antialiased`}
     >
-      {/* 🛠️ THE FIX: Moved the layout typography formatting classes here where they belong */}
       <body className="min-h-screen w-full bg-[#050505] text-zinc-300 relative font-sans font-black tracking-normal">
         <AuthSessionProvider>
           

@@ -9,11 +9,34 @@ const withPWA = withPWAInit({
   disable: process.env.NODE_ENV === "development",
   scope: "/",
   startUrl: "/",
+
+  // 🛠️ FIX: Forces the service worker to cache pages and raw CSV streams for absolute offline autonomy
+  workboxOptions: {
+    runtimeCaching: [
+      {
+        urlPattern: /^https:\/\/docs\.google\.com\/spreadsheets.*/i,
+        handler: 'StaleWhileRevalidate',
+        options: {
+          cacheName: 'google-sheets-data',
+          expiration: {
+            maxEntries: 20,
+            maxAgeSeconds: 24 * 60 * 60 // Keeps the sheet records stored alive for 24 Hours
+          }
+        }
+      },
+      {
+        urlPattern: /\/$/, // Caches the root page wrapper framework shell
+        handler: 'StaleWhileRevalidate',
+        options: {
+          cacheName: 'root-landing-shell'
+        }
+      }
+    ]
+  }
 });
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 1. SILENCES THE CRITICAL TURBOPACK CRASH
   turbopack: {},
 
   images: {
@@ -25,13 +48,9 @@ const nextConfig = {
     ],
   },
 
-  // 2. CORRECT NEXT.JS 16 OPT-OUT SYNTAX INSIDE PROD BUILDS
   typescript: {
     ignoreBuildErrors: true,
   },
-  
-  // Note: Top-level eslint key is removed here to satisfy Next.js 16 rules.
-  // To ignore ESLint on build now, run your builds using: NEXT_LINT_IGNORE=true npm run build
 };
 
 export default withPWA(nextConfig);
