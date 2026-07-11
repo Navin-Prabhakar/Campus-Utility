@@ -416,8 +416,14 @@ export default function MessPage() {
       <div className="w-full flex-1 overflow-y-auto flex flex-col items-center pb-18 style-scrollbar">
 
         {selectedMess && liveNotice && (
-          <div className="w-[94%] max-w-[350px] mt-2 p-2 bg-gradient-to-t from-orange-950/10 to-amber-600/20 border border-amber-500/20 rounded-xl text-sm leading-relaxed text-amber-300/90 shadow-md shrink-0 font-medium">
-            <b><u>Announcement:</u></b> {liveNotice}
+          <div className="w-[94%] max-w-[350px] mt-2 p-3 bg-gradient-to-t from-orange-950/20 to-amber-600/10 border border-amber-500/20 rounded-xl text-xs leading-relaxed shadow-md shrink-0 font-medium">
+            <div className="text-amber-400 font-black tracking-wider uppercase text-[13px] mb-1 flex items-center gap-1 select-none">
+              <span></span> <u>Announcement</u>:
+            </div>
+            
+            <p className="text-blue-500 text-[13px] font-normal font-sans whitespace-pre-wrap break-words">
+              {liveNotice}
+            </p>
           </div>
         )}
 
@@ -441,7 +447,7 @@ export default function MessPage() {
                   <div className="relative">
                     <button
                       onClick={() => setIsDayDropdownOpen(!isDayDropdownOpen)}
-                      className="text-[12px] bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black px-2 py-0.5 rounded-lg uppercase tracking-widest font-mono flex items-center gap-0.5 shadow-sm active:scale-95 transition-all hover:scale-105"
+                      className="text-[12px] bg-[#2A2A2A] hover:bg-[#333333] border border-zinc-700 text-white font-black px-2 py-1 rounded-lg uppercase tracking-widest font-mono flex items-center gap-0.5 shadow-sm active:scale-95 transition-all hover:scale-105"
                     >
                       <span>{selectedDay.slice(0, 3)}</span>
                       <span>▼</span>

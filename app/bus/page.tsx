@@ -352,19 +352,19 @@ export default function BusPage() {
 
                     <div className="p-3 flex-1 overflow-y-auto max-h-64 bg-gradient-to-br from-blue-900/50 to-black  bg-gradient-to-tr from-pink-800/10 to-black/50 style-scrollbar">
                       <div className="space-y-1.5 ">
-                        <div className="flex justify-between text-[10px] text-zinc-500 font-extrabold uppercase tracking-widest px-2 pb-1 border-b border-zinc-900">
+                        <div className="flex justify-between text-[11px] text-zinc-500 font-extrabold uppercase tracking-widest px-2 pb-1 border-b border-zinc-900">
                           <span>Departure</span>
                           <span>Route </span>
                         </div>
                         {activeSchedule.map((slot, sIdx) => (
                           <div 
                             key={sIdx} 
-                            className="flex justify-between items-center text-xs p-2 bg-zinc-800 hover:bg-zinc-800 border border-zinc-700/50 rounded-xl transition-all duration-150"
+                            className="flex justify-between items-center text-sm p-2 bg-zinc-800 hover:bg-zinc-800 border border-zinc-700/50 rounded-xl transition-all duration-150"
                           >
-                            <span className="font-extrabold text-[#F59E0B] bg-amber-500/5 px-2 py-0.5 rounded-lg font-mono text-[11px] border border-amber-500/10 shadow-xs">
+                            <span className="font-extrabold text-[#F59E0B] bg-amber-500/5 px-2 py-0.5 rounded-lg font-mono text-[12px] border border-amber-500/10 shadow-xs">
                               {slot.time}
                             </span>
-                            <span className="text-zinc-300 font-medium text-right max-w-[218px] sm:max-w-[220px] truncate flex items-center gap-1.5" title={`${slot.from} ➔ ${slot.to}`}>
+                            <span className="text-zinc-300 font-medium text-right max-w-[240px] sm:max-w-[220px] truncate flex items-center gap-1.5" title={`${slot.from} ➔ ${slot.to}`}>
                               {slot.isReserved && (
                                 <span className="text-[10px] bg-rose-500/20 text-rose-400 px-1 py-0.5 rounded font-mono font-bold uppercase tracking- shrink-0 border border-amber-500/30">
                                   Reserved
