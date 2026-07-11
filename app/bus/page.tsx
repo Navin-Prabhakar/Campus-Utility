@@ -23,6 +23,9 @@ interface BusSchedule {
 }
 
 export default function BusPage() {
+  const CACHE_KEY = "swb_bus_schedule_cache";
+
+  // 🛠️ FIX: Initialize safe states that look identical on both the Server and Client at frame zero
   const [buses, setBuses] = useState<BusSchedule[]>([]);
   const [activeTab, setActiveTab] = useState<"weekdays" | "weekends">("weekdays");
   const [loading, setLoading] = useState<boolean>(true);
@@ -34,25 +37,31 @@ export default function BusPage() {
     const currentDay = new Date().getDay();
     setActiveTab(currentDay === 0 || currentDay === 6 ? "weekends" : "weekdays");
 
-    const CACHE_KEY = "swb_bus_schedule_cache";
+    // 🛠️ FIX: Read local cache data inside useEffect AFTER hydration completes safely in the browser
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    if (cachedData) {
+      try {
+        const parsedCache = JSON.parse(cachedData);
+        if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+          setBuses(parsedCache);
+          setLoading(false); // Drop loading skeleton instantly since we have cached data
+        }
+      } catch (e) {
+        console.error("Failed to parse local bus cache string", e);
+      }
+    }
 
     const fetchAndParseBusData = async () => {
       try {
-        // 1. Instantly render from storage cache to eliminate layout lag
-        const cachedData = localStorage.getItem(CACHE_KEY);
-        if (cachedData) {
-          try {
-            const parsedCache = JSON.parse(cachedData);
-            if (Array.isArray(parsedCache) && parsedCache.length > 0) {
-              setBuses(parsedCache);
-              setLoading(false);
-            }
-          } catch (e) {
-            console.error("Failed to parse local bus cache string", e);
+        // 🛠️ OFFLINE GUARD: If navigator reports offline state, exit quietly if cache is available
+        if (typeof window !== "undefined" && !navigator.onLine) {
+          if (cachedData) {
+            console.log("App operating safely in offline grid mode via local snapshots, bro!");
+            setLoading(false);
+            return;
           }
         }
 
-        // 2. Quiet network revalidation runs concurrently in background
         Papa.parse(SHEET_URL, {
           download: true,
           header: false,
@@ -101,7 +110,6 @@ export default function BusPage() {
               let rawWeekendDriver = "SWB Assigned Staff";
               let rawWeekendContact = "";
 
-              // Gather Bus Name & Weekdays Metadata (Rows 0 to 40)
               for (let i = 0; i < 40; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
@@ -115,7 +123,6 @@ export default function BusPage() {
                 }
               }
 
-              // Gather Weekend Specific Metadata (Rows 73 to 75)
               for (let i = 73; i <= 75; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
@@ -145,7 +152,6 @@ export default function BusPage() {
               const weekendDriverInfo = parseDriverName(rawWeekendDriver);
               const weekendContact = parseContact(rawWeekendContact);
 
-              // Parse Weekdays Schedule (Rows 37 to 60)
               const weekdaysSchedule: TimeSlot[] = [];
               for (let i = 37; i <= 60; i++) {
                 const time = cleanAndExtractTime(rows[i]?.[colIndex] || "");
@@ -160,7 +166,6 @@ export default function BusPage() {
                 }
               }
 
-              // Parse Weekends Schedule (Rows 66 onwards)
               const weekendsSchedule: TimeSlot[] = [];
               for (let i = 66; i < rows.length; i++) {
                 const cellVal = rows[i]?.[colIndex] || "";
@@ -199,7 +204,6 @@ export default function BusPage() {
               });
             });
 
-            // 3. Deep comparison logic: Only commit updates to state/cache if network payload differs
             const serializedData = JSON.stringify(parsedBuses);
             if (serializedData !== localStorage.getItem(CACHE_KEY)) {
               setBuses(parsedBuses);
@@ -208,7 +212,7 @@ export default function BusPage() {
             setLoading(false);
           },
           error: (err) => {
-            console.error(err);
+            console.error("Network sync interrupted:", err);
             if (!localStorage.getItem(CACHE_KEY)) {
               setError("Failed to process spreadsheet values.");
             }
@@ -216,6 +220,7 @@ export default function BusPage() {
           }
         });
       } catch (err) {
+        console.error("System error during parsing route engine:", err);
         if (!localStorage.getItem(CACHE_KEY)) {
           setError("Error rendering interface matrices.");
         }
@@ -290,7 +295,7 @@ export default function BusPage() {
             </button>
           </div>
 
-          {loading ? (
+          {loading && buses.length === 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
               {[...Array(3)].map((_, idx) => (
                 <div key={idx} className="bg-[#0F0F0F] border border-zinc-900 rounded-2xl h-64 animate-pulse flex flex-col overflow-hidden">

@@ -6,7 +6,9 @@ const withPWA = withPWAInit({
   aggressiveFrontEndNavCaching: true,
   reloadOnOnline: true,
   swMinify: true,
-  disable: process.env.NODE_ENV === "development", 
+  disable: process.env.NODE_ENV === "development",
+  scope: "/",
+  startUrl: "/",
 });
 
 /** @type {import('next').NextConfig} */

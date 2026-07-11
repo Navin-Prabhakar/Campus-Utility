@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Campus_Utility",
+  manifest: '/manifest.json', // 🛠️ FIX: Removed the stuck CSS classes so it resolves as a clean file path
   description: "Daily Utility application for students of IIT Patna",
   icons: {
     icon: "/CU-logo1.png",
@@ -39,8 +40,8 @@ export default async function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} min-h-full bg-[#050505] antialiased`}
     >
-      {/* 🛠️ THE FIX: Added 'relative' and removed any strict constraints so global modals can render flawlessly */}
-      <body className="min-h-screen w-full bg-[#050505] text-zinc-300 relative">
+      {/* 🛠️ THE FIX: Moved the layout typography formatting classes here where they belong */}
+      <body className="min-h-screen w-full bg-[#050505] text-zinc-300 relative font-sans font-black tracking-normal">
         <AuthSessionProvider>
           
           {/* Global Header Element */}
@@ -62,8 +63,8 @@ export default async function RootLayout({
         {/* 🌐 GLOBAL SCROLLBAR ENGINE INJECTED HERE */}
         <style dangerouslySetInnerHTML={{ __html: `
           ::-webkit-scrollbar {
-            width: 1px; /* 👈 Set this to exactly how thick you want it (e.g., 6px, 8px, 10px) */
-            height: 6px; /* Thickness for horizontal scrolling if any */
+            width: 1px;
+            height: 6px; 
           }
           
           ::-webkit-scrollbar-track {
@@ -73,7 +74,7 @@ export default async function RootLayout({
           ::-webkit-scrollbar-thumb {
             background: #0b6313;
             border-radius: 20px;
-            border: 2px solid #0e0505; /* Seamless padding match against your bg-[#050505] background */
+            border: 2px solid #0e0505; 
             background-clip: padding-box;
           }
           
