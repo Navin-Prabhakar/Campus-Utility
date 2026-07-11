@@ -20,7 +20,6 @@ export function useUnseenNotices(modalOpen: boolean) {
   const [unseenCount, setUnseenCount] = useState<number>(0);
 
   useEffect(() => {
-    // If modal is currently open, we keep count at 0 (handled by modal marking them seen)
     if (modalOpen) {
       setUnseenCount(0);
       return;
@@ -32,7 +31,6 @@ export function useUnseenNotices(modalOpen: boolean) {
       try {
         const profile = parseStudentEmail(session.user.email);
         
-        // Retrieve list of IDs the user has already seen
         const seenIdsStr = localStorage.getItem(SEEN_NOTICES_KEY);
         const seenIds: string[] = seenIdsStr ? JSON.parse(seenIdsStr) : [];
 
@@ -49,7 +47,15 @@ export function useUnseenNotices(modalOpen: boolean) {
         await Promise.all(
           urlsToFetch.map(async ({ url, type }) => {
             try {
+              // 🛠️ FIX 1: Offline Guard Rail - Prevent execution entirely if network connectivity is missing
+              if (typeof window !== "undefined" && !navigator.onLine) {
+                console.log(`[PWA Offline Cache] Notice badge count check skipped for ${type}: Device running offline.`);
+                return;
+              }
+
               const res = await fetch(url);
+              if (!res.ok) throw new Error(`HTTP network error matrix: ${res.status}`);
+
               const rawText = await res.text();
               const lines = rawText.split("\n");
               const cleanCsvText = lines.slice(1).join("\n");
@@ -81,10 +87,8 @@ export function useUnseenNotices(modalOpen: boolean) {
                         const dateStr = (row["Date (dd/mm/yyyy)"] || row["Date"] || "").trim();
                         const authorStr = (row["Author"] || row["author"] || "Admin").trim();
                         
-                        // Generate a unique fingerprint ID for this notice entry
                         const noticeId = `${title}_${dateStr}_${authorStr}`.replace(/\s+/g, "_");
 
-                        // If this ID is missing from our seen list, increment counter
                         if (!seenIds.includes(noticeId)) {
                           freshNoticeCounter++;
                         }
@@ -96,7 +100,8 @@ export function useUnseenNotices(modalOpen: boolean) {
                 });
               });
             } catch (fetchErr) {
-              console.error(`Failed loading badge counter stream: ${url}`, fetchErr);
+              // 🛠️ FIX 2: Gracefully swallow tracking stream exceptions when offline without raising console crashes
+              console.warn(`[PWA Offline Fallback] Badge counter stream for ${type} is offline.`);
             }
           })
         );
@@ -108,6 +113,8 @@ export function useUnseenNotices(modalOpen: boolean) {
     }
 
     checkNewNotices();
+
+    
     const interval = setInterval(checkNewNotices, 5 * 60 * 1000);
     return () => clearInterval(interval);
   }, [session, modalOpen]);
