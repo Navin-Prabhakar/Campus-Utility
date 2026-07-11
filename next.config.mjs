@@ -2,12 +2,16 @@ import withPWAInit from "@ducanh2912/next-pwa";
 
 const withPWA = withPWAInit({
   dest: "public",
-  sw: "sw.js", // 🛠️ FORCE PATH: Generator ko clear instruction ki public/sw.js file likhni hai
+  sw: "sw.js", 
   cacheOnFrontEndNav: true, 
   aggressiveFrontEndNavCaching: true,
   reloadOnOnline: true,
   swMinify: true,
-  disable: false, // 🛠️ LOCAL TESTING: Abhi false rakho taaki localhost par service worker file compile ho sake
+  
+  // 🛠️ THE ABSOLUTE KILL SWITCH FIX: Development environment me PWA disabled rahega loop se bachne ke liye,
+  // aur final build / Vercel production deployment me automatically absolute TRUE (offline network active) ho jayega.
+  disable: process.env.NODE_ENV === "development", 
+  
   scope: "/",
   startUrl: "/",
 
@@ -37,7 +41,6 @@ const withPWA = withPWAInit({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // 🛠️ TURBOPACK COMPATIBILITY ENGINE: Next.js 16 compilation pipeline ko optimize karne ke liye
   transpilePackages: ["@ducanh2912/next-pwa"],
 
   images: {

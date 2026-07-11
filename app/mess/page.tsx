@@ -62,7 +62,6 @@ const COMPLAINT_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw2vwDIx8h
 export default function MessPage() {
   const { data: session } = useSession();
   
-  // 🛠️ FIX HYDRATION: Core states initialization must be uniform across server/client on mount
   const [menuData, setMenuData] = useState<MenuItem[]>([]);
   const [everydayMenu, setEverydayMenu] = useState<MenuItem | null>(null);
   const [liveNotice, setLiveNotice] = useState<string>(""); 
@@ -82,7 +81,6 @@ export default function MessPage() {
   const [isDataLogged, setIsDataLogged] = useState<boolean>(false);
   const [submittingComplaint, setSubmittingComplaint] = useState<boolean>(false);
 
-  // Clean initial browser-data assembly loop triggers strictly client-side
   useEffect(() => {
     const dayName = DAYS_OF_WEEK[new Date().getDay()];
     setCurrentDay(dayName);
@@ -100,7 +98,6 @@ export default function MessPage() {
     setSelectedMess(MESS_CONFIG[0]);
   }, []);
 
-  // Sync NextAuth Session Identity to Form Input Context Fields
   useEffect(() => {
     if (isComplaintOpen) {
       const userSessionEmail = session?.user?.email || "";
@@ -123,7 +120,7 @@ export default function MessPage() {
 
     const CACHE_KEY = `swb_mess_cache_${selectedMess.id}`;
 
-    // 1. Safe Client Cache Layer Injection Execution Flow
+    // 🛠️ 1. ACTIVE LOCAL STORAGE PERSISTENCE CHECKER
     const cachedData = localStorage.getItem(CACHE_KEY);
     if (cachedData) {
       try {
@@ -132,7 +129,7 @@ export default function MessPage() {
           setMenuData(parsedCache.menuData);
           setEverydayMenu(parsedCache.everydayMenu || null);
           setLiveNotice(parsedCache.liveNotice || "");
-          setLoading(false); // Clear skeleton instantly
+          setLoading(false); // Immediate display optimization
         }
       } catch (e) {
         console.error("Failed to parse local mess cache string", e);
@@ -143,7 +140,7 @@ export default function MessPage() {
       setLiveNotice("");
     }
 
-    // 🛠️ OFFLINE INTERCEPT NODE: Stop network orchestration call if navigator indicates complete signal failure
+    // 🛠️ 2. OFFLINE INTERCEPT NODE
     if (typeof window !== "undefined" && !navigator.onLine) {
       if (cachedData) {
         console.log("App operating safely in offline grid mode via local snapshots, bro!");
@@ -154,7 +151,6 @@ export default function MessPage() {
 
     const GOOGLE_SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${MASTER_SPREADSHEET_ID}/export?format=csv&gid=${selectedMess.gid}`;
 
-    // 2. Dynamic spreadsheet revalidation execution scope
     Papa.parse(GOOGLE_SHEET_CSV_URL, {
       download: true,
       header: false,
@@ -215,6 +211,15 @@ export default function MessPage() {
         }
 
         if (parsedMenu.length > 0) {
+          // 🛠️ FIX: DEV LOOP PROTECTION - Dev mode me infinite lifecycle re-renders block karo
+          if (process.env.NODE_ENV === "development") {
+            setMenuData(parsedMenu);
+            setEverydayMenu(tempEverydayMenu);
+            setLiveNotice(extractedNotice);
+            setLoading(false);
+            return;
+          }
+
           const freshCachePayload = {
             menuData: parsedMenu,
             everydayMenu: tempEverydayMenu,
@@ -222,6 +227,7 @@ export default function MessPage() {
           };
           const serializedData = JSON.stringify(freshCachePayload);
 
+          // 🛠️ 3. SERIALIZED SYNC BLOCK FOR ZERO FLICKER UPDATES
           if (serializedData !== localStorage.getItem(CACHE_KEY)) {
             setMenuData(parsedMenu);
             setEverydayMenu(tempEverydayMenu);
@@ -237,7 +243,6 @@ export default function MessPage() {
       },
       error: (err) => {
         console.error("Network synchronization crash logged safely:", err);
-        // 🛠️ PROTECTION POINT: Never surface connectivity error overlay screen if cache metrics are accessible
         if (!localStorage.getItem(CACHE_KEY)) {
           setError("Failed to fetch live schedule rows.");
         }
@@ -286,7 +291,6 @@ export default function MessPage() {
     e.preventDefault();
     if (!selectedMess) return;
 
-    // 🛠️ WRITE OPERATION GUARD RAIL: Instantly abort and warn user if they attempt to post a form while offline
     if (typeof window !== "undefined" && !navigator.onLine) {
       alert("You are operating offline, bro! Connect to your network connection parameters to submit complaints.");
       return;
@@ -422,7 +426,7 @@ export default function MessPage() {
           {!selectedMess ? (
             <div className="flex flex-col items-center justify-center pt-28 text-center select-none animate-pulse">
               <span className="text-4xl mb-3 filter grayscale opacity-40">🍛</span>
-              <p className="text-sm font-black uppercase tracking-wider text-zinc-500">Deactivated Stream</p>
+              <p className="text-sm font-black tracking-wider text-zinc-500">Deactivated Stream</p>
               <p className="text-[12px] text-zinc-600 mt-1 max-w-[200px] leading-relaxed">Tap the select action button to choose your Mess.</p>
             </div>
           ) : (
@@ -629,7 +633,7 @@ export default function MessPage() {
                     required rows={3}
                     value={complaintForm.desc}
                     onChange={(e) => setComplaintForm({...complaintForm, desc: e.target.value})}
-                    className="w-full bg-zinc-800 border border-zinc-800 rounded-xl px-3 py-1 text-sm text-white font-medium outline-hidden focus:border-zinc-600 resize-none shadow-inner"
+                    className="w-full bg-[#1e1b29] border border-zinc-800 rounded-xl px-3 py-1 text-sm text-white font-medium outline-hidden focus:border-zinc-600 resize-none shadow-inner"
                     placeholder="Shortly write your concerns..."
                   />
                 </div>

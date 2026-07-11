@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; 
 import ProfileAvatar from "./ProfileAvatar";
-// Import custom hook and your Notification Modal component
 import NotificationModal from "./NoticeBox";
 import { useUnseenNotices } from "../../hooks/useUnseenNotices";
 
@@ -17,17 +16,12 @@ interface HeaderProps {
 export default function Header({ messActionSlot }: HeaderProps) {
   const { data: session, status } = useSession();
   const [showMenu, setShowMenu] = React.useState(false);
-  const [showNotificationModal, setShowNotificationModal] = React.useState(false); // Modal control state
-  
-  // 🟢 NEW: Local state marker to manage your compact floating tour portal window
+  const [showNotificationModal, setShowNotificationModal] = React.useState(false); 
   const [showTourDropdown, setShowTourDropdown] = React.useState(false);
 
   const pathname = usePathname();
-
-  // Calculate unread counts dynamically
   const unseenCount = useUnseenNotices(showNotificationModal);
 
-  // 📱 NEW: State markers for track scrolling hide/show effects safely on phone/desktop
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -39,12 +33,8 @@ export default function Header({ messActionSlot }: HeaderProps) {
       const windowHeight = window.innerHeight;
       const totalDocumentHeight = document.documentElement.scrollHeight;
 
-      // 1. Safe boundary: Skip calculating negative/out-of-bound elastic tracking common on iOS safari
       if (currentScrollY < 0) return;
 
-      // 🎯 THE BOTTOM DETECTION TRAP:
-      // Evaluates view offsets dynamically to force header visibility 
-      // when hitting the base threshold limit (with a safe 3px display matrix buffer).
       const isAtAbsoluteBottom = (currentScrollY + windowHeight) >= (totalDocumentHeight - 3);
 
       if (isAtAbsoluteBottom) {
@@ -56,14 +46,12 @@ export default function Header({ messActionSlot }: HeaderProps) {
       const maxScrollableHeight = totalDocumentHeight - windowHeight;
       if (currentScrollY > maxScrollableHeight) return;
 
-      // 2. Intentionality boundary: Skip layout shifting for tiny micro-movements (under 5px)
       if (Math.abs(currentScrollY - lastScrollY) < 5) return;
 
-      // 3. Evaluate scroll heading
       if (currentScrollY > lastScrollY && currentScrollY > 60) {
-        setIsVisible(false); // Scrolling down -> hide
+        setIsVisible(false); 
       } else {
-        setIsVisible(true);  // Scrolling up -> show
+        setIsVisible(true);  
       }
 
       setLastScrollY(currentScrollY);
@@ -74,44 +62,43 @@ export default function Header({ messActionSlot }: HeaderProps) {
   }, [lastScrollY]);
 
   const user = session?.user;
-  const loading = status === "loading";
+  
+  // 🛠️ FIX: OFFLINE ANCHOR PROTECTION GRID
+  // Local dev ya offline mode me status infinite loading skeleton loop ko bypass karo
+  const isOffline = typeof window !== "undefined" && !navigator.onLine;
+  const loading = status === "loading" && !isOffline;
 
   const handleSignOut = async () => {
     setShowMenu(false);
     await signOut({ callbackUrl: "/signin" });
   };
 
-  // Determine active states for sub-navigation links
   const isHomeActive = pathname === "/";
 
   return (
     <>
-    {/* 🛠️ THE FIX: Added pointer-events-none here so the structural overlay bounds don't hijack background frame click vectors */}
     <header className={`w-full fixed top-0 left-0 z-50 pointer-events-none transition-transform duration-300 ease-in-out ${
       isVisible ? "translate-y-0" : "-translate-y-full"
     }`}>
-      {/* Upper Header */}
-      {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
       <div className="flex h-12 items-center justify-between bg-sky-900 px-1 text-white pointer-events-auto">
         <div className="flex items-center gap-0 text-2xl">
           <Link href="/" className="flex items-center gap-0 hover:opacity-90 transition-opacity">
             <Image
               src="/CU-logo1.png"
-              alt="CU logo"
-              width={1080}
-              height={1080}
-              className="h-13 w-13"
+              alt="CU"
+              width={50}
+              height={50}
+              className="h-11 w-11 object-contain"
             />
-            <span>Campus Utility</span>
+            <span className="text-lg font-bold ml-1">Campus Utility</span>
           </Link>
         </div>
 
         <div className="flex items-center gap-1.5">
-          {/* Notification Bell Button with Badge Counter */}
           <button
             onClick={() => {
               setShowNotificationModal(true);
-              setShowTourDropdown(false); // Close tour popup if open
+              setShowTourDropdown(false); 
             }}
             aria-label="Notifications"
             className="relative flex h-10 w-10 items-center justify-center text-sm text-white transition hover:bg-white/10 active:bg-white/10 active:scale-95 rounded-lg cursor-pointer select-none"
@@ -134,7 +121,7 @@ export default function Header({ messActionSlot }: HeaderProps) {
                 <button
                   onClick={() => {
                     setShowMenu(!showMenu);
-                    setShowTourDropdown(false); // Close tour popup if open
+                    setShowTourDropdown(false); 
                   }}
                   className="flex items-center gap-1.5 rounded-full border border-zinc-700/80 bg-white/10 px-0 py-0 transition hover:bg-white/20"
                   aria-label="Profile menu"
@@ -153,15 +140,14 @@ export default function Header({ messActionSlot }: HeaderProps) {
                   href="/signin"
                   className="flex h-10 w-10 flex-col items-center justify-center rounded-full border border-white/40 bg-white/10 font-semibold transition hover:bg-white/20 select-none"
                 >
-                  <span className="text-[12px]  tracking-normal leading-[1.1]">Sign</span>
-                  <span className="text-[12px]  tracking-normals leading-[1.1]">In</span>
+                  <span className="text-[12px] tracking-normal leading-[1.1]">Sign</span>
+                  <span className="text-[12px] tracking-normal leading-[1.1]">In</span>
                 </Link>
               )
             ) : (
               <div className="h-10 w-10 rounded-full bg-white/10 animate-pulse" />
             )}
 
-            {/* Profile Dropdown Menu */}
             {user && showMenu && (
               <div className="absolute right-0 top-full mt-2 w-52 rounded-lg bg-slate-900 text-slate-100 shadow-xl z-50 py-0 border border-slate-700">
                 <div className="border-b border-slate-400 px-4 py-2">
@@ -169,7 +155,6 @@ export default function Header({ messActionSlot }: HeaderProps) {
                   <p className="text-xs text-slate-400 truncate font-mono">{user.email}</p>
                 </div>
                 
-                {/* NEW: Link navigation to profile settings workspace route */}
                 <Link
                   href="/profile"
                   onClick={() => setShowMenu(false)}
@@ -180,7 +165,6 @@ export default function Header({ messActionSlot }: HeaderProps) {
 
                 <hr className="border-slate-400 my-0" />
 
-                {/* 🛠️ FIX: Replaced invalid px-18 class with standard px-4 alignment layout rules */}
                 <button
                   onClick={handleSignOut}
                   className="w-full px-4 py-2 text-left text-sm text-red-500 hover:bg-red-600 hover:text-white font-bold transition rounded-b-lg"
@@ -193,11 +177,8 @@ export default function Header({ messActionSlot }: HeaderProps) {
         </div>
       </div>
 
-      {/* Lower Header */}
-      {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
       <div className="flex h-8 bg-sky-900 items-center justify-between px-2 pointer-events-auto">
         <div className="flex items-center gap-2">
-          {/* 🛠️ MODIFIED: Added dynamic text/bg classes based on active state */}
           <div className={`rounded-xl items-center justify-between px-1.5 py-0.5 transition-colors duration-100 ${
             isHomeActive ? "bg-slate-300 text-zinc-800 " : "bg-zinc-600 text-white"
           }`}>
@@ -210,12 +191,11 @@ export default function Header({ messActionSlot }: HeaderProps) {
             </Link>
           </div>
           
-          {/* 🟢 FLOATING DROPDOWN CONTAINER FOR CAMPUS TOUR */}
           <div className="relative">
             <button 
               onClick={() => {
                 setShowTourDropdown(!showTourDropdown);
-                setShowMenu(false); // Close profile dropdown if open
+                setShowMenu(false); 
               }}
               className={`rounded-xl items-center justify-between px-1.5 py-0.5 transition-colors duration-200 text-md cursor-pointer select-none ${
                 showTourDropdown ? "bg-slate-300 text-zinc-800" : "bg-zinc-600 text-white"
@@ -225,7 +205,6 @@ export default function Header({ messActionSlot }: HeaderProps) {
               <span>Campus Tour</span>
             </button>
 
-            {/* FLOATING TEXT OVERLAY PANEL */}
             {showTourDropdown && (
               <div className="absolute left-0 top-full mt-2 w-60 rounded-xl bg-slate-900 text-slate-100 shadow-2xl z-50 p-3.5 border border-slate-700 animate-in fade-in slide-in-from-top-1 duration-150">
                 <div className="flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-sky-400 mb-1">
@@ -264,7 +243,6 @@ export default function Header({ messActionSlot }: HeaderProps) {
       </div>
     </header>      
 
-    {/* Render Notification Overlay Drawer */}
     <NotificationModal 
       isOpen={showNotificationModal}
       onClose={() => setShowNotificationModal(false)}

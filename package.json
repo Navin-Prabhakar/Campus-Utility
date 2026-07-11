@@ -15,7 +15,7 @@
     }
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "bash vercel-build.sh",
     "start": "next start",
     "lint": "next lint",

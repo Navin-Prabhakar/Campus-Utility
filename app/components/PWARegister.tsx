@@ -4,8 +4,13 @@ import { useEffect } from "react";
 
 export default function PWARegister() {
   useEffect(() => {
+    // 🛠️ FIX: Local dev mode me SW register block karo taaki next dev infinite compilation loop me na phase
+    if (process.env.NODE_ENV === "development") {
+      console.log("🛠️ Dev mode detected: Bypassing PWA Service Worker registration.");
+      return;
+    }
+
     if (typeof window !== "undefined" && "serviceWorker" in navigator) {
-      // 🛠️ BYPASS CONDITION: Direct register call block bina kisi extra checking validation ke
       navigator.serviceWorker
         .register("/sw.js")
         .then((reg) => {

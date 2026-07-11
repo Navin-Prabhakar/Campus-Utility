@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 
 interface TimetableItem {
@@ -13,63 +13,99 @@ interface TimetableItem {
   type: string;
 }
 
+const MESS_CONFIG = []; // Empty fallback placeholder if required structurally
+
 export default function SchedulePage() {
-  // 💾 Load workspace initial parameters dynamically from localStorage pins or fallback cleanly
-  const [academicYear, setAcademicYear] = useState<string>(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("iitp_default_year") || "1";
-    }
-    return "1";
-  });
-
-  const [selectedGroup, setSelectedGroup] = useState<string>(() => {
-    if (typeof window !== "undefined") {
-      return localStorage.getItem("iitp_default_group") || "G1";
-    }
-    return "G1";
-  });
-
+  // 🛠️ FIX 1: HYDRATION SECURE PARAMS - Uniform server/client frame logic init
+  const [academicYear, setAcademicYear] = useState<string>("1");
+  const [selectedGroup, setSelectedGroup] = useState<string>("G1");
   const [timetableData, setTimetableData] = useState<TimetableItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
-  
-  // 🔄 Checkbox persistent pinning state machine tracking engine
   const [isPersistedDefault, setIsPersistedDefault] = useState<boolean>(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const CACHE_KEY = "swb_timetable_schedule_cache";
 
-  // 📡 Sync live asset JSON registers
+  // 🛠️ FIX 2: Client-side storage pins extraction inside safe mount window
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedYear = localStorage.getItem("iitp_default_year") || "1";
+      const storedGroup = localStorage.getItem("iitp_default_group") || (storedYear === "1" ? "G1" : "AI");
+      setAcademicYear(storedYear);
+      setSelectedGroup(storedGroup);
+    }
+  }, []);
+
+  // 📡 Sync live asset JSON registers with local backup layer
   useEffect(() => {
     async function fetchTimetableData() {
       try {
         setLoading(true);
         setError(false);
         
-        // 🚀 CHANGED: Fetching directly from the static file updated by the Python script to bypass API caching issues
+        // 🛠️ 1. PULL UP LOCAL SNAPSHOT PERSISTENCE INSTANTLY
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        if (cachedData) {
+          try {
+            const parsedCache = JSON.parse(cachedData);
+            if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+              setTimetableData(parsedCache);
+              setLoading(false); // Speed up viewport display
+            }
+          } catch (e) {
+            console.error("Failed parsing timetable persistence layer blocks:", e);
+          }
+        }
+
+        // 🛠️ 2. OFFLINE OVERRIDE TERMINATOR
+        if (typeof window !== "undefined" && !navigator.onLine) {
+          if (cachedData) {
+            console.log("Timetable database running autonomously in offline matrix state, bro!");
+            setLoading(false);
+            return;
+          }
+        }
+
         const res = await fetch("/static/timetable.json");
         if (!res.ok) throw new Error("Failed to pull secure JSON payload assets");
         
         const data = await res.json();
-        setTimetableData(Array.isArray(data) ? data : []);
+        const parsedData = Array.isArray(data) ? data : [];
+        // 🛠️ DEV LOOP PROTECTION:
+          if (process.env.NODE_ENV === "development") {
+            setTimetableData(parsedData);
+            setLoading(false);
+            return;
+          }
+
+        // 🛠️ 3. SERIALIZED DEEP STRINGS MATRIX COMPARISON
+        const serializedData = JSON.stringify(parsedData);
+        if (serializedData !== localStorage.getItem(CACHE_KEY)) {
+          setTimetableData(parsedData);
+          localStorage.setItem(CACHE_KEY, serializedData);
+        }
         setLoading(false);
       } catch (err) {
         console.error("Error fetching secure live timetable database:", err);
-        setError(true);
+        if (!localStorage.getItem(CACHE_KEY)) {
+          setError(true);
+        }
         setLoading(false);
       }
     }
     fetchTimetableData();
   }, []);
 
-  // 🎯 Re-evaluate pinned synchronization states context whenever filter choices move
+  // Re-evaluate pinned synchronization states context whenever filter choices move
   useEffect(() => {
     const savedYear = localStorage.getItem("iitp_default_year");
     const savedGroup = localStorage.getItem("iitp_default_group");
     setIsPersistedDefault(savedYear === academicYear && savedGroup === selectedGroup);
   }, [academicYear, selectedGroup]);
 
-  // 🗺️ Click outside interception hooks
+  // Click outside interception hooks
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -80,7 +116,7 @@ export default function SchedulePage() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // ⚡ Handler execution array to write/clear permanent storage layers
+  // Handler execution array to write/clear permanent storage layers
   const handlePersistenceToggle = () => {
     if (isPersistedDefault) {
       localStorage.removeItem("iitp_default_year");
@@ -148,7 +184,7 @@ export default function SchedulePage() {
         {!loading && !error && (
           <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative">
             
-            {/* Display Active Selection Metadata Status Layer + Checkbox Trigger Control */}
+            {/* Display Pinned Group Block Tracker */}
             <div 
               onClick={handlePersistenceToggle}
               className={`flex-1 bg-zinc-800 border rounded-xl py-2 px-2 flex items-center justify-between cursor-pointer select-none transition-all duration-200 shadow-inner hover:border-zinc-600 active:scale-[0.98] ${
@@ -156,7 +192,6 @@ export default function SchedulePage() {
               }`}
             >
               <div className="flex items-center gap-2 min-w-0">
-                {/* Custom Styled Checkbox Core Indicator */}
                 <div className={`w-4.5 h-4.5 rounded-xl border flex items-center justify-center transition-all shrink-0 ${
                   isPersistedDefault 
                     ? "bg-blue-600 border-blue-500 text-white" 
@@ -179,7 +214,6 @@ export default function SchedulePage() {
                 </div>
               </div>
 
-              {/* Faint UI Context Token Indicator */}
               <span className={`text-[9px] font-black uppercase tracking-wider px-1 py-0.5 rounded-md font-sans border transition-colors ${
                 isPersistedDefault 
                   ? 'bg-blue-500/20 text-blue-200 border-blue-500/20' 
@@ -273,7 +307,7 @@ export default function SchedulePage() {
       <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-2 pb-2 style-scrollbar">
         <main className="w-[97%] max-w-[365px] flex flex-col flex-grow">
           
-          {loading ? (
+          {loading && timetableData.length === 0 ? (
             <div className="flex flex-col gap-3 w-full">
               {[...Array(3)].map((_, i) => (
                 <div key={i} className="h-24 w-full animate-pulse rounded-2xl bg-[#121212]/50 border border-zinc-900" />
@@ -293,7 +327,6 @@ export default function SchedulePage() {
                 return (
                   <div key={day} className="w-full bg-gradient-to-b from-sky-300/30 to-black border border-sky-600/30 rounded-2xl p-3 shadow-xl flex flex-col">
                     
-                    {/* Weekday Header Separator */}
                     <div className="border-b border-zinc-950 pb-2 mb-2.5 flex justify-between items-center select-none">
                       <span className="text-[12px] font-black uppercase tracking-wider text-zinc-300">
                         {day}
@@ -316,7 +349,7 @@ export default function SchedulePage() {
                           return (
                             <div
                               key={idx}
-                              className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform hover:-translate-y-0 active:scale-[0.98] ${
+                              className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform hover:-translate-y-0 active:scale-[0.99] ${
                                 isLab
                                   ? "bg-emerald-950 border-green-800 border-2 shadow-sm" 
                                   : isTut
@@ -361,7 +394,6 @@ export default function SchedulePage() {
                 );
               })}
               
-              {/* 🚨 Crimson Alerts Discrepancy Button Block */}
               <div className="w-full text-center pt-3 pb-1 shrink-0">
                 <Link 
                   href="/?openReport=true" 

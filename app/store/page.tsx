@@ -37,6 +37,7 @@ export default function StorePage() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // 🛠️ UNIQUE CACHE KEY: Is marketplace configuration data ke liye unique identity token
     const CACHE_KEY = "swb_store_marketplace_cache";
 
     async function fetchMarketplaceData() {
@@ -44,17 +45,26 @@ export default function StorePage() {
         setLoading(true);
         setError(false);
 
-        // 1. Instantly pull up local text cache to beat network latency
+        // 🛠️ 1. INSTANT LOCAL STORAGE SNAPSHOT RENDERING (No network delay for offline grid)
         const cachedData = localStorage.getItem(CACHE_KEY);
         if (cachedData) {
           try {
             const parsedCache = JSON.parse(cachedData);
             if (Array.isArray(parsedCache) && parsedCache.length > 0) {
               setItems(parsedCache);
-              setLoading(false);
+              setLoading(false); // Loader clear out karo, saved items load ho chuke hain
             }
           } catch (e) {
             console.error("Failed to parse local store cache string", e);
+          }
+        }
+
+        // 🛠️ 2. OFFLINE SERVICE INTERCEPT NODE: Agar completely offline hai toh fetch call abort kar do
+        if (typeof window !== "undefined" && !navigator.onLine) {
+          if (cachedData) {
+            console.log("Store operations active safely on fallback matrix snapshots, bro!");
+            setLoading(false);
+            return;
           }
         }
 
@@ -120,8 +130,13 @@ export default function StorePage() {
                 price: row["Any comments."] || row["Any comments"] || "Contact Seller",
               });
             });
-
-            // 2. Deep comparison logic verification sequence
+            // 🛠️ DEV LOOP PROTECTION: Local dev mode me dynamic comparison inject band
+              if (process.env.NODE_ENV === "development") {
+                setItems(cleanParsedItems);
+                setLoading(false);
+                return;
+              }
+            // 🛠️ 3. DEEP COMPARE LOGIC FOR ZERO FLICKER DYNAMIC OVERWRITE
             const serializedData = JSON.stringify(cleanParsedItems);
             if (serializedData !== localStorage.getItem(CACHE_KEY)) {
               setItems(cleanParsedItems);

@@ -5,7 +5,6 @@ import { AuthSessionProvider } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "./components/Header";
 import BottomTabs from "./components/BottomTabs";
-import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,20 +25,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // 🛠️ FIX: Safe offline initialization to prevent server-side header resolution from crashing the app shell
-  let isSignInPage = false;
-  try {
-    const headerList = await headers();
-    const activePath = headerList.get("x-url") || ""; 
-    isSignInPage = activePath.endsWith("/signin");
-  } catch (e) {
-    console.log("App architecture running in offline fallback matrix mode safely, bro.");
-  }
+  // 🛠️ BYPASS COMPLETE SYNC: Server-side dynamic headers checking ko completely hata diya hai
+  // Taaki application shell statically optimize reh sake aur routing path engine crash na ho.
 
   return (
     <html
@@ -53,9 +45,7 @@ export default async function RootLayout({
           <Header />
 
           {/* 📜 DYNAMIC ACTIVE VIEW CONTENT */}
-          <main className={`w-full min-h-screen transition-all duration-150 ${
-            isSignInPage ? "pt-0 pb-0" : "pt-0 pb-0"
-          }`}>
+          <main className="w-full min-h-screen transition-all duration-150 pt-0 pb-0">
             {children}
           </main>
 

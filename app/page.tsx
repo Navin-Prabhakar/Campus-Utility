@@ -54,7 +54,7 @@ export default function Home() {
     setAccessDeniedMessage("");
 
     if (!isDeveloper) {
-      setAccessDeniedMessage("Birthday viewer is accessible to developer only.");
+      setAccessDeniedMessage("Student info is accessible to developer only.");
       setTimeout(() => setAccessDeniedMessage(""), 3500);
       return;
     }
