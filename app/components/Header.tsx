@@ -94,14 +94,16 @@ export default function Header({ messActionSlot }: HeaderProps) {
       {/* 🛠️ THE FIX: Restored active clickable events using pointer-events-auto */}
       <div className="flex h-12 items-center justify-between bg-sky-900 px-1 text-white pointer-events-auto">
         <div className="flex items-center gap-0 text-2xl">
-          <Image
-            src="/CU-logo1.png"
-            alt="CU logo"
-            width={1080}
-            height={1080}
-            className="h-13 w-13"
-          />
-          Campus Utility
+          <Link href="/" className="flex items-center gap-0 hover:opacity-90 transition-opacity">
+            <Image
+              src="/CU-logo1.png"
+              alt="CU logo"
+              width={1080}
+              height={1080}
+              className="h-13 w-13"
+            />
+            <span>Campus Utility</span>
+          </Link>
         </div>
 
         <div className="flex items-center gap-1.5">

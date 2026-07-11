@@ -15,6 +15,7 @@ interface Next4BusItem {
   route: string;
   time: string;
   contact?: string;
+  isReserved?: boolean;
 }
 
 function SearchParamsHandler({ setShowReportModal }: { setShowReportModal: (val: boolean) => void }) {
@@ -38,7 +39,7 @@ export default function Home() {
   const [showDevModal, setShowDevModal] = useState(false);
   const [showReportModal, setShowReportModal] = useState(false); 
 
-  //  Universal Search System States
+  // Universal Search System States
   const [showBirthdayPanel, setShowBirthdayPanel] = useState(false);
   const [birthdayList, setBirthdayList] = useState([]);
   const [fetchingBirthdays, setFetchingBirthdays] = useState(false);
@@ -86,11 +87,28 @@ export default function Home() {
     }
   };
 
+  // Effect 1: Core Dashboard Initializer & Global Multi-Page Background Pre-fetcher
   useEffect(() => {
+    const CACHE_KEY = "swb_home_upcoming_buses_cache";
+
     async function getNextFourBuses() {
       try {
         setLoading(true);
         setError(false);
+
+        // 1. Instantly pull up local text cache to beat network latency
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        if (cachedData) {
+          try {
+            const parsedCache = JSON.parse(cachedData);
+            if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+              setUpcomingBuses(parsedCache);
+              setLoading(false); // Disable core layout spinner instantly
+            }
+          } catch (e) {
+            console.error("Failed to parse local upcoming buses cache string", e);
+          }
+        }
 
         const response = await fetch(GOOGLE_SHEET_CSV_URL);
         if (!response.ok) throw new Error("Network response failed");
@@ -104,14 +122,15 @@ export default function Home() {
           complete: (results) => {
             const rows = results.data as string[][];
 
-            if (!rows || rows.length < 110) {
-              setError(true);
+            if (!rows || rows.length < 20) {
+              if (!localStorage.getItem(CACHE_KEY)) {
+                setError(true);
+              }
               setLoading(false);
               return;
             }
 
-            const busColumns = [2, 6, 10, 14, 18, 22];
-            const nameRowIdx = 16;
+            const busColumns = [0, 4, 8, 12, 16, 20, 24, 28];
             
             const currentDay = new Date().getDay(); 
             const isWeekend = currentDay === 0 || currentDay === 6;
@@ -119,9 +138,10 @@ export default function Home() {
             const now = new Date();
             const currentMinutes = now.getHours() * 60 + now.getMinutes();
 
-            const isStrictTime = (str: string) => {
-              if (!str) return false;
-              return /\d{1,2}\s*:\s*\d{2}/.test(str.trim());
+            const cleanAndExtractTime = (str: string): string | null => {
+              if (!str) return null;
+              const match = str.trim().match(/\b\d{1,2}\s*:\s*\d{2}\b/);
+              return match ? match[0].replace(/\s+/g, "") : null;
             };
 
             const parseTimeToMinutes = (timeString: string) => {
@@ -133,79 +153,81 @@ export default function Home() {
               return hours * 60 + minutes;
             };
 
+            const parseContact = (rawContact: string): string => {
+              let contact = "N/A";
+              const cleanDigits = rawContact.replace(/\D/g, "");
+              if (cleanDigits.length >= 10) {
+                contact = cleanDigits.slice(-10);
+              }
+              return contact;
+            };
+
             const allParsedBusesCollector: Next4BusItem[] = [];
 
-            busColumns.forEach((colIndex, listIdx) => {
-              let rawBusName = rows[nameRowIdx]?.[colIndex]?.trim() || "";
-              if (!rawBusName && colIndex > 0) {
-                rawBusName = rows[nameRowIdx]?.[colIndex - 1]?.trim() || rows[nameRowIdx]?.[colIndex - 2]?.trim() || "";
-              }
+            busColumns.forEach((colIndex) => {
+              let rawBusName = "";
+              let rawWeekdayContact = "";
+              let rawWeekendContact = "";
 
-              // 📞 Robust Contact Parsing with Next-Row Lookahead Lookups
-              let rawContact = "";
+              // Gather Bus Name & Weekdays Contact (Rows 0 to 40)
               for (let i = 0; i < 40; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
                 
-                if (cellLower.includes("contact") || (i === 18 && cellVal !== "" && /\d+/.test(cellVal))) {
-                  if (cellLower.replace(/[^a-z]/g, "") === "contact" && rows[i + 1]?.[colIndex]) {
-                    rawContact = rows[i + 1][colIndex].trim();
-                  } else {
-                    rawContact = cellVal;
-                  }
+                if (cellLower.startsWith("bus") || cellLower.startsWith("institute")) {
+                  rawBusName = cellVal;
+                } else if (cellLower.includes("contact") || (i === 18 && cellVal !== "" && /\d+/.test(cellVal))) {
+                  rawWeekdayContact = cellVal;
                 }
               }
-              
-              let contactDigits = rawContact.replace(/\D/g, "");
-              const cleanContact = contactDigits.length >= 10 ? contactDigits.slice(-10) : "";
 
-              if (!rawBusName || rawBusName.toLowerCase().includes("contact") || rawBusName.toLowerCase().includes("driver")) {
-                if (colIndex === 2) rawBusName = "Bus 01";
-                else if (colIndex === 6) rawBusName = "Bus 02";
-                else if (colIndex === 10) rawBusName = "Bus 03";
-                else if (colIndex === 14) rawBusName = "Bus 04";
-                else if (colIndex === 18) rawBusName = "Institute Bus 1";
-                else if (colIndex === 22) rawBusName = "Institute Bus 2";
-                else rawBusName = "Campus Bus";
+              // Gather Weekend Specific Contact (Rows 73 to 75)
+              for (let i = 73; i <= 75; i++) {
+                const cellVal = rows[i]?.[colIndex]?.trim() || "";
+                const cellLower = cellVal.toLowerCase();
+
+                if (cellLower.includes("contact") || (i === 75 && cellVal !== "" && /\d+/.test(cellVal))) {
+                  rawWeekendContact = cellVal;
+                }
+              }
+
+              if (!rawBusName) {
+                rawBusName = `Bus ${Math.floor(colIndex / 4) + 1}`;
               }
 
               let busName = rawBusName;
               if (busName.includes("-")) {
                 busName = busName.split("-")[0].trim();
               }
+              
+              const cleanContact = parseContact(isWeekend ? rawWeekendContact : rawWeekdayContact);
 
-              let targetCol = colIndex;
-              if (isWeekend) {
-                if (listIdx === 1) targetCol = 11;
-                else if (listIdx === 4) targetCol = 23;
-                else return; 
-              }
-
-              const startRow = isWeekend ? 66 : 19;
-              const endRow = isWeekend ? rows.length : 65;
+              const startRow = isWeekend ? 66 : 37;
+              const endRow = isWeekend ? rows.length : 61;
 
               for (let i = startRow; i < endRow; i++) {
-                const timeCell = rows[i]?.[targetCol]?.trim() || "";
+                const cellVal = rows[i]?.[colIndex] || "";
                 
-                if (timeCell.toLowerCase().includes("note")) {
+                if (cellVal.toLowerCase().includes("note")) {
                   break;
                 }
 
-                if (isStrictTime(timeCell)) {
-                  const cleanTime = timeCell.replace(/\s+/g, "");
-                  
-                  let from = rows[i]?.[targetCol + 1]?.trim() || "";
-                  let to = rows[i]?.[targetCol + 2]?.trim() || "";
+                const time = cleanAndExtractTime(cellVal);
+                if (time) {
+                  let from = rows[i]?.[colIndex + 1]?.trim() || "";
+                  let to = rows[i]?.[colIndex + 2]?.trim() || "";
+                  const reserveCheck = rows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
                   
                   if (!from || from === "" || from.toLowerCase().includes("route")) from = "Campus";
                   if (!to || to === "" || to.toLowerCase().includes("route")) to = "Campus";
 
                   allParsedBusesCollector.push({
-                    id: `${isWeekend ? "wknd" : "wkdy"}-${targetCol}-${i}`,
+                    id: `${isWeekend ? "wknd" : "wkdy"}-${colIndex}-${i}`,
                     name: busName,
                     route: `${from} ➔ ${to}`,
-                    time: cleanTime,
-                    contact: cleanContact,
+                    time,
+                    contact: cleanContact !== "N/A" ? cleanContact : undefined,
+                    isReserved: reserveCheck.includes("reserve")
                   });
                 }
               }
@@ -219,30 +241,374 @@ export default function Home() {
               return parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time);
             });
 
+            let finalNext4: Next4BusItem[] = [];
             if (sortedBuses.length === 0) {
               const earlyMorningBuses = allParsedBusesCollector.sort(
                 (a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time)
               );
-              setUpcomingBuses(earlyMorningBuses.slice(0, 4));
+              finalNext4 = earlyMorningBuses.slice(0, 4);
             } else {
-              setUpcomingBuses(sortedBuses.slice(0, 4));
+              finalNext4 = sortedBuses.slice(0, 4);
+            }
+
+            // 2. Deep comparison: Update layout structure only if data metrics changed
+            const serializedData = JSON.stringify(finalNext4);
+            if (serializedData !== localStorage.getItem(CACHE_KEY)) {
+              setUpcomingBuses(finalNext4);
+              localStorage.setItem(CACHE_KEY, serializedData);
             }
             
             setLoading(false);
           },
           error: () => {
-            setError(true);
+            if (!localStorage.getItem(CACHE_KEY)) {
+              setError(true);
+            }
             setLoading(false);
           }
         });
 
       } catch (err) {
-        setError(true);
+        if (!localStorage.getItem(CACHE_KEY)) {
+          setError(true);
+        }
         setLoading(false);
       }
     }
 
     getNextFourBuses();
+
+    // 2. Silent background pipeline sync sequence targeting down-stream app sections
+    if (typeof window !== "undefined" && navigator.onLine) {
+      const syncAllAppDataInBackground = async () => {
+        try {
+          // --- Full Bus Matrix Sync ---
+          Papa.parse(GOOGLE_SHEET_CSV_URL, {
+            download: true,
+            header: false,
+            skipEmptyLines: false,
+            complete: (results) => {
+              const parsedRows = results.data as string[][];
+              if (!parsedRows || parsedRows.length < 20) return;
+
+              const busColumns = [0, 4, 8, 12, 16, 20, 24, 28];
+              const parsedBusesData: any[] = [];
+
+              const cleanAndExtractTime = (str: string): string | null => {
+                if (!str) return null;
+                const match = str.trim().match(/\b\d{1,2}\s*:\s*\d{2}\b/);
+                return match ? match[0].replace(/\s+/g, "") : null;
+              };
+
+              const parseContact = (rawContact: string): string => {
+                let contact = "N/A";
+                const cleanDigits = rawContact.replace(/\D/g, "");
+                if (cleanDigits.length >= 10) contact = cleanDigits.slice(-10);
+                return contact;
+              };
+
+              const parseDriverName = (rawDriver: string): string => {
+                return rawDriver
+                  .replace(/Driver\s*-\s*/i, "")
+                  .replace(/Conductor\s*-\s*/i, "")
+                  .replace(/Conductor\s*/i, "")
+                  .trim() || "SWB Assigned Staff";
+              };
+
+              busColumns.forEach((colIndex) => {
+                let rawBusName = "";
+                let rawWeekdayDriver = "SWB Assigned Staff";
+                let rawWeekdayContact = "";
+                let rawWeekendDriver = "SWB Assigned Staff";
+                let rawWeekendContact = "";
+
+                for (let i = 0; i < 40; i++) {
+                  const cellVal = parsedRows[i]?.[colIndex]?.trim() || "";
+                  const cellLower = cellVal.toLowerCase();
+                  if (cellLower.startsWith("bus") || cellLower.startsWith("institute")) {
+                    rawBusName = cellVal;
+                  } else if (cellLower.includes("driver") || cellLower.includes("conductor") || (i === 17 && cellVal !== "" && !cellLower.includes("contact"))) {
+                    rawWeekdayDriver = cellVal; 
+                  } else if (cellLower.includes("contact") || (i === 18 && cellVal !== "" && /\d+/.test(cellVal))) {
+                    rawWeekdayContact = cellVal;
+                  }
+                }
+
+                for (let i = 73; i <= 75; i++) {
+                  const cellVal = parsedRows[i]?.[colIndex]?.trim() || "";
+                  const cellLower = cellVal.toLowerCase();
+                  if (cellLower.includes("driver") || cellLower.includes("conductor") || (i === 74 && cellVal !== "" && !cellLower.includes("contact"))) {
+                    rawWeekendDriver = cellVal;
+                  } else if (cellLower.includes("contact") || (i === 75 && cellVal !== "" && /\d+/.test(cellVal))) {
+                    rawWeekendContact = cellVal;
+                  }
+                }
+
+                if (!rawBusName) rawBusName = `Bus ${Math.floor(colIndex / 4) + 1}`;
+
+                let busName = rawBusName;
+                let busNumber = "";
+                if (busName.includes("-")) {
+                  const parts = busName.split("-");
+                  busName = parts[0].trim();
+                  busNumber = parts[1]?.replace(/[()]/g, "").trim() || "";
+                }
+
+                const weekdaysSchedule: any[] = [];
+                for (let i = 37; i <= 60; i++) {
+                  const time = cleanAndExtractTime(parsedRows[i]?.[colIndex] || "");
+                  if (time) {
+                    const reserveCheck = parsedRows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
+                    weekdaysSchedule.push({
+                      time,
+                      from: parsedRows[i]?.[colIndex + 1]?.trim() || "Campus",
+                      to: parsedRows[i]?.[colIndex + 2]?.trim() || "Campus",
+                      isReserved: reserveCheck.includes("reserve")
+                    });
+                  }
+                }
+
+                const weekendsSchedule: any[] = [];
+                for (let i = 66; i < parsedRows.length; i++) {
+                  const cellVal = parsedRows[i]?.[colIndex] || "";
+                  if (cellVal.toLowerCase().includes("note")) break;
+
+                  const time = cleanAndExtractTime(cellVal);
+                  if (time) {
+                    let from = parsedRows[i]?.[colIndex + 1]?.trim() || "";
+                    let to = parsedRows[i]?.[colIndex + 2]?.trim() || "";
+                    const reserveCheck = parsedRows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
+
+                    if (!from || from === "" || from.toLowerCase().includes("route")) from = "Campus";
+                    if (!to || to === "" || to.toLowerCase().includes("route")) to = "Campus";
+
+                    weekendsSchedule.push({ time, from, to, isReserved: reserveCheck.includes("reserve") });
+                  }
+                }
+
+                parsedBusesData.push({
+                  busName,
+                  busNumber,
+                  weekdayDriverInfo: parseDriverName(rawWeekdayDriver),
+                  weekdayContact: parseContact(rawWeekdayContact),
+                  weekendDriverInfo: parseDriverName(rawWeekendDriver),
+                  weekendContact: parseContact(rawWeekendContact),
+                  weekdaysSchedule,
+                  weekendsSchedule
+                });
+              });
+
+              const serializedBusData = JSON.stringify(parsedBusesData);
+              if (serializedBusData !== localStorage.getItem("swb_bus_schedule_cache")) {
+                localStorage.setItem("swb_bus_schedule_cache", serializedBusData);
+              }
+            }
+          });
+
+          // --- All Hostel Mess Layout Sync ---
+          const MASTER_MESS_SPREADSHEET_ID = "19T-kfoZVs5eEn_ADqvXUWKQW1KfQsnF0Fiau5bckllk";
+          const MESS_GIDS = ["0", "1633328713", "1524747018", "754990639", "491167474", "1461673664", "477079361"];
+          const MESS_IDS = ["mess1", "mess2", "mess3", "mess4", "mess5", "mess6", "mess7"];
+
+          MESS_GIDS.forEach((gid, index) => {
+            const MESS_URL = `https://docs.google.com/spreadsheets/d/${MASTER_MESS_SPREADSHEET_ID}/export?format=csv&gid=${gid}`;
+            Papa.parse(MESS_URL, {
+              download: true,
+              header: false,
+              skipEmptyLines: true,
+              complete: (messResults) => {
+                const mRows = messResults.data as string[][];
+                if (!mRows || mRows.length < 4) return;
+
+                let extractedNotice = "";
+                if (mRows[14] && mRows[14][1]) extractedNotice = mRows[14][1].trim();
+
+                const headers = mRows[2].map(h => h.trim().toUpperCase());
+                const weekdayIdx = headers.indexOf("WEEKDAY");
+                const breakfastIdx = headers.indexOf("BREAKFAST");
+                const lunchIdx = headers.indexOf("LUNCH");
+                const snacksIdx = headers.indexOf("SNACKS");
+                const dinnerIdx = headers.indexOf("DINNER");
+                const dessertIdx = headers.indexOf("DESSERT");
+
+                if (weekdayIdx === -1 || breakfastIdx === -1 || lunchIdx === -1) return;
+
+                const parsedMenu: any[] = [];
+                let tempEverydayMenu: any = null;
+
+                for (let i = 3; i < Math.min(mRows.length, 14); i++) {
+                  const row = mRows[i];
+                  const dayName = row[weekdayIdx]?.trim() || "";
+                  if (!dayName) continue;
+
+                  const itemPayload = {
+                    Day: dayName,
+                    Breakfast: row[breakfastIdx]?.trim() || "—",
+                    Lunch: row[lunchIdx]?.trim() || "—",
+                    Snacks: row[snacksIdx]?.trim() || "—",
+                    Dinner: row[dinnerIdx]?.trim() || "—",
+                    Dessert: dessertIdx !== -1 ? (row[dessertIdx]?.trim() || "—") : "—"
+                  };
+
+                  if (dayName.toUpperCase() === "EVERYDAY") {
+                    tempEverydayMenu = itemPayload;
+                  } else {
+                    parsedMenu.push(itemPayload);
+                  }
+                }
+
+                if (parsedMenu.length > 0) {
+                  const cachePayload = { menuData: parsedMenu, everydayMenu: tempEverydayMenu, liveNotice: extractedNotice };
+                  const serializedMessData = JSON.stringify(cachePayload);
+                  const currentMessCacheKey = `swb_mess_cache_${MESS_IDS[index]}`;
+                  if (serializedMessData !== localStorage.getItem(currentMessCacheKey)) {
+                    localStorage.setItem(currentMessCacheKey, serializedMessData);
+                  }
+                }
+              }
+            });
+          });
+
+          // --- Marketplace Store Items Sync ---
+          const STORE_SHEET = "https://docs.google.com/spreadsheets/d/1p0WTx2O5rUEatdvpVtoQwnPEhv86_nZf5F-LMPwEe_s/export?format=csv&gid=263432444";
+          const storeResponse = await fetch(STORE_SHEET);
+          if (storeResponse.ok) {
+            const storeCsvText = await storeResponse.text();
+            Papa.parse(storeCsvText, {
+              download: false,
+              header: true,
+              skipEmptyLines: true,
+              complete: (storeResults) => {
+                const records = storeResults.data as any[];
+                const cleanParsedItems: any[] = [];
+
+                records.forEach((row, idx) => {
+                  const itemName = row["Items you want to sell"] || row["Items you want to sell\u00a0"] || row["Items you want to sell "] || "";
+                  if (!itemName) return;
+
+                  const rawUrl = row["Reference picture (if you to sell multiple items then attach a pdf)"] || "";
+                  let cleanPictureUrl = "";
+
+                  if (rawUrl && typeof rawUrl === "string") {
+                    const trimmedUrl = rawUrl.trim();
+                    if (trimmedUrl.includes("drive.google.com")) {
+                      const match = trimmedUrl.match(/id=([^&]+)|\/d\/([^/]+)/);
+                      const imageId = match ? (match[1] || match[2]) : null;
+                      if (imageId) cleanPictureUrl = `https://images.weserv.nl/?url=https://drive.google.com/uc?id=${imageId}`;
+                    } else if (trimmedUrl.startsWith("http")) {
+                      cleanPictureUrl = trimmedUrl;
+                    }
+                  }
+
+                  const rawTimestamp = row["Timestamp"] || "";
+                  let displayDate = "Unknown Date";
+
+                  if (rawTimestamp) {
+                    const dateMatch = rawTimestamp.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+                    if (dateMatch) {
+                      const [, month, day, year] = dateMatch;
+                      displayDate = `${day.padStart(2, "0")}/${month.padStart(2, "0")}/${year}`;
+                    } else {
+                      const datePart = rawTimestamp.split(" ")[0];
+                      if (datePart) displayDate = datePart;
+                    }
+                  }
+
+                  cleanParsedItems.push({
+                    id: `item-${idx}-${rawTimestamp || "time"}`,
+                    timestamp: rawTimestamp,
+                    formattedDate: displayDate,
+                    email: row["Email Address"] || "",
+                    sellerName: row["Name"] || "Anonymous",
+                    rollNo: row["Roll no."] || "N/A",
+                    phone: row["Phone no."] || "N/A",
+                    status: row["Current status"] || "Available",
+                    itemName: itemName.trim(),
+                    picture: cleanPictureUrl,
+                    price: row["Any comments."] || row["Any comments"] || "Contact Seller",
+                  });
+                });
+
+                const serializedStoreData = JSON.stringify(cleanParsedItems);
+                if (serializedStoreData !== localStorage.getItem("swb_store_marketplace_cache")) {
+                  localStorage.setItem("swb_store_marketplace_cache", serializedStoreData);
+                }
+              }
+            });
+          }
+
+          // --- NEW: Global Notices Cohorts Matrix Sync ---
+          const NOTICE_BASE_URL = "https://docs.google.com/spreadsheets/d/1o3ZTVhnP9_xjzkEtMmKd6JFh-cznagwsCTIAAlAFBZ0/export?format=csv&gid=";
+          const NOTICE_COHORTS = [
+            { gid: "0", key: "universal" },
+            { gid: "621207693", key: "freshers" },
+            { gid: "2119507775", key: "sophomores" },
+            { gid: "1930386959", key: "juniors" },
+            { gid: "1844437553", key: "seniors" }
+          ];
+
+          const cachedNoticesMap: Record<string, any[]> = {};
+
+          await Promise.all(
+            NOTICE_COHORTS.map(async ({ gid, key }) => {
+              try {
+                const res = await fetch(`${NOTICE_BASE_URL}${gid}`);
+                if (!res.ok) return;
+                const rawText = await res.text();
+                
+                const lines = rawText.split("\n");
+                const cleanCsvText = lines.slice(1).join("\n");
+
+                return new Promise<void>((resolve) => {
+                  Papa.parse(cleanCsvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (noticeResults) => {
+                      const nRows = noticeResults.data as any[];
+                      const compiledRows: any[] = [];
+                      
+                      nRows.forEach((row) => {
+                        const title = (row["Title"] || row["Tittle"] || row["tittle"] || row["title"] || "").trim();
+                        const description = (row["Description"] || row["description"] || "").trim();
+                        if (!title && !description) return;
+
+                        compiledRows.push({
+                          title,
+                          description,
+                          date: (row["Date (dd/mm/yyyy)"] || row["Date"] || row["date"] || "").trim(),
+                          author: (row["Author"] || row["author"] || "Admin").trim(),
+                          phone: (row["Phone No."] || row["phone"] || row["Phone"] || "").trim(),
+                          targetBranch: (row["Target Branch"] || row["Target Audience"] || row["target audience"] || "").trim()
+                        });
+                      });
+                      
+                      cachedNoticesMap[key] = compiledRows;
+                      resolve();
+                    },
+                    error: () => resolve()
+                  });
+                });
+              } catch (e) {
+                console.error(`Failed loading target notice network stream: ${gid}`, e);
+              }
+            })
+          );
+
+          if (Object.keys(cachedNoticesMap).length > 0) {
+            const serializedNoticeData = JSON.stringify(cachedNoticesMap);
+            if (serializedNoticeData !== localStorage.getItem("swb_global_notices_raw_map")) {
+              localStorage.setItem("swb_global_notices_raw_map", serializedNoticeData);
+            }
+          }
+
+        } catch (error) {
+          console.error("SWB Global Sync Error:", error);
+        }
+      };
+
+      const syncTimeout = setTimeout(syncAllAppDataInBackground, 2500);
+      return () => clearTimeout(syncTimeout);
+    }
   }, []);
 
   return (
@@ -264,7 +630,6 @@ export default function Home() {
       </Suspense>
 
       <div className="w-full flex flex-col items-center">
-        {/* 📜 APP WINDOW MIDDLE TRACK CONTAINER */}
         <main className="flex flex-col items-center justify-start py-21 w-[96%] max-w-[350px]">
           <div className="w-full rounded-3xl border border-zinc-500 bg-gradient-to-tr from-purple-900/40 to-zinc-950 p-3 shadow-xl backdrop-blur-xl">
             
@@ -277,11 +642,10 @@ export default function Home() {
                    Upcoming _ Buses
                 </h2>
               </div>
-              
             </div>
 
             <div className="flex flex-col gap-1.5 w-full">
-              {loading ? (
+              {loading && upcomingBuses.length === 0 ? (
                 [...Array(4)].map((_, i) => (
                   <div key={i} className="h-13 w-full animate-pulse rounded-xl bg-[#121212]/50 border border-zinc-600/80" />
                 ))
@@ -297,19 +661,22 @@ export default function Home() {
                 upcomingBuses.map((bus) => (
                   <div 
                     key={bus.id} 
-                    className="flex items-center justify-between rounded-xl border border-zinc-700 bg-slate-800 px-2 py-2  gap-3"
+                    className="flex items-center justify-between rounded-xl border border-zinc-700 bg-slate-800 px-2 py-2 gap-3"
                   >
-                    {/* Left details pane: Bus identification header and routing track text matrices */}
                     <div className="flex flex-col min-w-0 flex-1">
                       <span className="truncate text-[14px] font-black text-white leading-tight">
                         {bus.name}
                       </span>
-                      <span className="truncate text-[11px] text-zinc-200 mt-1.5 font-bold tracking-tight">
-                        {bus.route}
+                      <span className="truncate text-[11px] text-zinc-200 mt-1.5 font-bold tracking-tight flex items-center gap-1.5">
+                        {bus.isReserved && (
+                          <span className="text-[9px] bg-rose-500/20 text-rose-400 px-1 py-0.2 rounded font-mono font-bold uppercase tracking-wide shrink-0 border border-rose-500/30">
+                            Reserved
+                          </span>
+                        )}
+                        <span>{bus.route}</span>
                       </span>
                     </div>
                     
-                    {/* Right action block: Departure runtime parameter matrix layout with call trigger underneath */}
                     <div className="flex flex-col items-end shrink-0 gap-1">
                       <span className="font-mono text-[13px] font-extrabold text-yellow-500 bg-amber-200/20 border border-amber-500/20 px-2 py-0.5 rounded-lg shadow-xs leading-none">
                         {bus.time}
@@ -344,16 +711,14 @@ export default function Home() {
         </main>
       </div>
 
-      {/* FLOATING ROUND RED TRIGGER ISSUE BUTTON */}
       <button
         onClick={() => setShowReportModal(true)}
-        className="fixed right-3 bottom-18 h-12 w-12 bg-gradient-to-tl from-red-600 to-purple-700/90 hover:from-violet-700 hover:to-pink-700 text-white flex items-center justify-center rounded-full font-black  active:scale-90 transition-all duration-150 cursor-pointer text-base z-[90] select-none"
+        className="fixed right-3 bottom-18 h-12 w-12 bg-gradient-to-tl from-red-600 to-purple-700/90 hover:from-violet-700 hover:to-pink-700 text-white flex items-center justify-center rounded-full font-black active:scale-90 transition-all duration-150 cursor-pointer text-base z-[90] select-none"
         title="Open Report System"
       >
         ⚠️
       </button>
 
-      {/* FOOTER LAYER DEVELOPER SIGN AREA */}
       <div className="w-full flex justify-center py-2 pb-15 shrink-0 z-10 relative select-none">
         <button
           onClick={() => {
@@ -362,13 +727,12 @@ export default function Home() {
             setBirthdayList([]);
             setShowDevModal(true);
           }}
-          className="text-[10px] font-black  tracking-wide text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1 px-4 rounded-xl hover:bg-white/10"
+          className="text-[10px] font-black tracking-wide text-zinc-400/70 hover:text-white transition-colors cursor-pointer py-1 px-4 rounded-xl hover:bg-white/10"
         >
           Developer Info...
         </button>
       </div>
 
-      {/* DEVELOPER MODAL INTERFACE DRAWER */}
       {showDevModal && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-[100] animate-in fade-in duration-150">
           <div className="bg-gradient-to-t from-slate-700/90 to-slate-950 rounded-2xl p-3 w-full max-w-[280px] shadow-2xl border border-zinc-800 flex flex-col items-center relative transform overflow-hidden">
@@ -445,12 +809,11 @@ export default function Home() {
               </a>
             </div>
 
-            {/* HIDDEN INJECTED ADMIN TERMINAL LAYOUT PANEL */}
             {showBirthdayPanel && isDeveloper && (
               <div className="mt-2 w-full rounded-xl bg-black p-3 border border-zinc-800 text-left animate-in fade-in zoom-in-95 duration-150">
                 
                 <div className="flex items-center justify-between border-b border-zinc-700 pb-1 mb-2">
-                  <h4 className="text-[14px] font-black  tracking- text-zinc-300">🔍 Student's DOB Finder</h4>
+                  <h4 className="text-[14px] font-black tracking- text-zinc-300">🔍 Student's DOB Finder</h4>
                 </div>
 
                 <div className="flex gap-2 mb-3">

@@ -20,6 +20,7 @@ export default function CabSharingPage() {
   const { data: session } = useSession(); 
   
   const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:5001";
+  const CACHE_KEY = "swb_cab_sharing_active_feed_cache";
   
   const [activeTab, setActiveTab] = useState<"share" | "my-rides">("share");
   const [allRides, setAllRides] = useState<Ride[]>([]);
@@ -44,11 +45,28 @@ export default function CabSharingPage() {
 
   const fetchActiveDashboard = async () => {
     try {
-      setLoading(true);
+      const cachedData = localStorage.getItem(CACHE_KEY);
+      if (cachedData) {
+        try {
+          const parsedCache = JSON.parse(cachedData);
+          if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+            setAllRides(parsedCache);
+            setLoading(false);
+          }
+        } catch (e) {
+          console.error("Failed to parse local cab sharing cache string", e);
+        }
+      }
+
       const res = await fetch(`${API_BASE}/api/active-rides`);
       if (!res.ok) throw new Error("Connection failed.");
       const data = await res.json();
-      setAllRides(data);
+      
+      const serializedData = JSON.stringify(data);
+      if (serializedData !== localStorage.getItem(CACHE_KEY)) {
+        setAllRides(data);
+        localStorage.setItem(CACHE_KEY, serializedData);
+      }
     } catch (err) {
       console.error("Dashboard engine down:", err);
     } finally {
@@ -145,14 +163,34 @@ export default function CabSharingPage() {
     }
   };
 
+  // 🗑️ GLOBAL DELETION TRIGGER: Wipes it out of MongoDB entirely
+  const handleClearRideGlobally = async (rideId: string) => {
+    const confirmation = window.confirm("Are you sure you want to permanently delete this ride listing from the app, bro?");
+    if (!confirmation) return;
+
+    try {
+      const response = await fetch(`${API_BASE}/api/delete-ride/${rideId}`, {
+        method: "DELETE"
+      });
+
+      if (response.ok) {
+        alert("🗑️ Ride successfully deleted and removed from global feeds!");
+        fetchActiveDashboard();
+        if (session?.user?.email) fetchUserHistory(session.user.email);
+      } else {
+        alert("Failed to delete the ride from backend nodes.");
+      }
+    } catch (error) {
+      console.error("Database eviction failure:", error);
+    }
+  };
+
   return (
     <main className="h-full w-full bg-slate-900 flex flex-col overflow-hidden relative text-zinc-300 font-sans antialiased selection:bg-zinc-800 selection:text-white">
       
-      {/* 📜 APP WINDOW SCROLL BODY */}
       <div className="flex-1 overflow-y-auto px-3 py-21 pb-36 style-scrollbar">
         <div className="max-w-md mx-auto sm:max-w-xl md:max-w-xl flex flex-col min-h-full space-y-4">
           
-          {/* 🎛️ iOS-Style Segmented Tab Controller (Mono Dark Contrast Shift) */}
           <div className="flex p-1 bg-[#121212] border border-zinc-800 rounded-2xl max-w-[290px] mx-auto w-full shadow-inner shrink-0">
             <button
               onClick={() => setActiveTab("share")}
@@ -182,7 +220,6 @@ export default function CabSharingPage() {
           {activeTab === "share" && (
             <div className="space-y-4 animate-in fade-in duration-200 flex-grow">
               
-              {/* Form Input Block (Depth Depth Perception via Lighter Background Panels) */}
               <section className="bg-gradient-to-t from-zinc-950 to-zinc-800/90 rounded-2xl border border-zinc-700 p-3 shadow-xl">
                 <h2 className="text-[12px] font-black uppercase tracking-wide text-zinc-400 mb-3.5">Broadcast Route Details</h2>
                 <form onSubmit={handlePostRide} className="flex flex-col gap-3.5">
@@ -227,7 +264,6 @@ export default function CabSharingPage() {
                     </div>
                   </div>
 
-                  {/* Custom Location Overlay (Amber Warn Accented Lines) */}
                   {(from === "Other" || to === "Other") && (
                     <div className="grid grid-cols-2 gap-3 animate-in fade-in slide-in-from-top-1 duration-150">
                       <div>
@@ -280,14 +316,12 @@ export default function CabSharingPage() {
                     />
                   </div>
 
-                  {/* Clickable Action Trigger with lighter contrast depth */}
                   <button type="submit" className="w-full bg-amber-700 hover:bg-amber-600 border border-zinc-700 text-white font-black text-xs py-3 rounded-xl shadow-md transition-all active:scale-95 tracking-widest uppercase mt-2 cursor-pointer">
                      🚀 Post Schedule
                   </button>
                 </form>
               </section>
 
-              {/* Active Feeds Board Listings */}
               <section className="space-y-3">
                 <div className="flex items-center justify-between mb-2 px-1">
                   <h2 className="text-xs font-black uppercase tracking-wide text-zinc-300">Active Cab Schedules</h2>
@@ -296,7 +330,7 @@ export default function CabSharingPage() {
                   </button>
                 </div>
 
-                {loading ? (
+                {loading && allRides.length === 0 ? (
                   <p className="text-xs text-center text-zinc-500 py-8 italic font-medium">Parsing dashboard registry nodes...</p>
                 ) : allRides.length === 0 ? (
                   <div className="bg-[#0C0C0C] border border-dashed border-zinc-800 rounded-2xl p-8 text-center">
@@ -344,7 +378,7 @@ export default function CabSharingPage() {
                 <p className="text-xs text-zinc-500 text-center py-6 italic">Authentication nodes missing. Please authorize account layout access.</p>
               ) : myRides.length === 0 ? (
                 <div className="bg-[#0C0C0C] border border-dashed border-zinc-800 rounded-2xl p-8 text-center">
-                  <p className="text-sm text-zinc-500 font-medium">No travel records initialized you, bro ☹️.</p>
+                  <p className="text-sm text-zinc-500 font-medium">No travel records initialized by you, bro ☹️.</p>
                 </div>
               ) : (
                 <div className="flex flex-col gap-2.5">
@@ -398,6 +432,13 @@ export default function CabSharingPage() {
                         </div>
                       ) : (
                         <div className="flex justify-end gap-2 border-t border-zinc-900 pt-2.5">
+                          {/* 🗑️ UPDATED ACTION: Clears the entire database record for all viewports */}
+                          <button 
+                            onClick={() => handleClearRideGlobally(ride._id)}
+                            className="border border-zinc-800 text-zinc-500 hover:text-white text-[10px] font-black uppercase tracking-wider px-3 py-1.5 rounded-xl transition-all hover:bg-zinc-950/40 active:scale-95"
+                          >
+                            🗑️ Clear Ride
+                          </button>
                           <button 
                             onClick={() => setEditingId(ride._id)}
                             className="border border-zinc-800 text-zinc-400 hover:text-white text-[10px] font-black uppercase tracking-wider px-3 py-1.5 rounded-xl transition-all hover:bg-[#121212] active:scale-95"

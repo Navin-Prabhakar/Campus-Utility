@@ -37,10 +37,26 @@ export default function StorePage() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const CACHE_KEY = "swb_store_marketplace_cache";
+
     async function fetchMarketplaceData() {
       try {
         setLoading(true);
         setError(false);
+
+        // 1. Instantly pull up local text cache to beat network latency
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        if (cachedData) {
+          try {
+            const parsedCache = JSON.parse(cachedData);
+            if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+              setItems(parsedCache);
+              setLoading(false);
+            }
+          } catch (e) {
+            console.error("Failed to parse local store cache string", e);
+          }
+        }
 
         const response = await fetch(SELL_SHEET_CSV_URL);
         if (!response.ok) throw new Error("Network request failed");
@@ -105,16 +121,25 @@ export default function StorePage() {
               });
             });
 
-            setItems(cleanParsedItems);
+            // 2. Deep comparison logic verification sequence
+            const serializedData = JSON.stringify(cleanParsedItems);
+            if (serializedData !== localStorage.getItem(CACHE_KEY)) {
+              setItems(cleanParsedItems);
+              localStorage.setItem(CACHE_KEY, serializedData);
+            }
             setLoading(false);
           },
           error: () => {
-            setError(true);
+            if (!localStorage.getItem(CACHE_KEY)) {
+              setError(true);
+            }
             setLoading(false);
           }
         });
       } catch (err) {
-        setError(true);
+        if (!localStorage.getItem(CACHE_KEY)) {
+          setError(true);
+        }
         setLoading(false);
       }
     }
@@ -191,7 +216,7 @@ export default function StorePage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-zinc-300 border border-zinc-800 rounded-2xl py-2 pl-8 pr-8 text-[13px]  focus:border-zinc-600 focus:outline-hidden font-medium tracking-tight placeholder-zinc-600 text-black transition-all shadow-inner"
               />
-              <span className="absolute left-2.5 top-2.5 text-[14px] opacity-1000">🔍</span>
+              <span className="absolute left-2.5 top-2.5 text-[14px]">🔍</span>
               {searchQuery && (
                 <button 
                   onClick={() => setSearchQuery("")}
@@ -269,7 +294,7 @@ export default function StorePage() {
       <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-1 pb-32 bg-slate-800 style-scrollbar">
         <main className="w-[99%] max-w-[365px] flex flex-col py-2 flex-grow">
           
-          {loading ? (
+          {loading && items.length === 0 ? (
             <div className="grid grid-cols-2 gap-2.5 w-full">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="aspect-[3/4] w-full animate-pulse rounded-2xl bg-[#121212] border border-zinc-900" />
@@ -321,7 +346,7 @@ export default function StorePage() {
                             {item.formattedDate}
                           </div>
 
-                          {/* Semantic Indicator: Crimson Alert for Sold items */}
+                          {/* Semantic Indicator */}
                           {isSoldOut && (
                             <div className="absolute top-1 left-1 bg-rose-600 text-white text-[8px] uppercase tracking-widest font-black px-2 py-0.5 rounded-md shadow-lg">
                               Sold Out
@@ -343,7 +368,7 @@ export default function StorePage() {
 
                       </div>
 
-                      {/* CARD BACK LAYER (Carbon Flip Mode) */}
+                      {/* CARD BACK LAYER */}
                       <div className="absolute inset-0 w-full h-full rounded-2xl border border-zinc-800 bg-[#0A0A0A] p-3 flex flex-col justify-between text-white shadow-2xl [backface-visibility:hidden] [transform:rotateY(180deg)]">
                         <div className="border-b border-zinc-900 pb-1 flex justify-between items-center shrink-0 select-none">
                           <span className="text-[8px] font-black uppercase tracking-widest text-zinc-500">
@@ -398,7 +423,7 @@ export default function StorePage() {
         </main>
       </div>
 
-      {/* Floating Action Button: Standard Tech Form Blue For Spreadsheet Interaction */}
+      {/* Floating Action Button */}
       <button
         onClick={handleSellButtonClick}
         className="fixed bottom-24 right-4 w-12 h-12 bg-gradient-to-tr from-blue-600/80 to-purple-500 hover:bg-blue-700 text-white rounded-full flex flex-col items-center justify-center font-black text-[12px] tracking-widest uppercase shadow-[0_4px_20px_rgba(59,130,246,0.3)] border border-blue-400/30 active:scale-90 transition-all z-40 cursor-pointer select-none"
@@ -407,7 +432,6 @@ export default function StorePage() {
         <span>Sell</span>
       </button>
 
-      {/* Internal Custom Micro-Scrollbars */}
       <style jsx global>{`
         .style-scrollbar::-webkit-scrollbar {
           width: 5px;

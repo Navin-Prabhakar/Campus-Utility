@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import Papa from "papaparse";
 import { parseStudentEmail } from "../../utils/rollParser";
@@ -34,7 +34,6 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
   const [loading, setLoading] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
-  // 🎬 NEW: States to orchestrate DOM mounting and visual animation timing
   const [shouldRender, setShouldRender] = useState(isOpen);
   const [animate, setAnimate] = useState(false);
 
@@ -59,35 +58,26 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
     return Date.parse(dateStr) || 0;
   };
 
-  // 🎬 EDITED: Effect handler to schedule animations AND lock background scroll
   useEffect(() => {
     if (isOpen) {
       setShouldRender(true);
-      
-      // 🔒 FREEZE the background page scroll immediately when opening
       document.body.classList.add("overflow-hidden");
-      
       const timer = setTimeout(() => setAnimate(true), 10);
       return () => clearTimeout(timer);
     } else {
       setAnimate(false);
-      
-      // 🔓 RESTORE the background page scroll immediately when closing
       document.body.classList.remove("overflow-hidden");
-      
       const timer = setTimeout(() => setShouldRender(false), 300);
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
 
-  // 🛡️ SAFETY CLEANUP: Add this right below the block above.
-  // This ensures if a student switches pages or logs out while the modal is open, 
-  // the background scroll is automatically restored.
   useEffect(() => {
     return () => {
       document.body.classList.remove("overflow-hidden");
     };
   }, []);
+
   useEffect(() => {
     if (!isOpen) return;
 
@@ -97,11 +87,67 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
       setLoading(true);
       try {
         const profile = parseStudentEmail(session?.user?.email);
-        const baseUrl = "https://docs.google.com/spreadsheets/d/1o3ZTVhnP9_xjzkEtMmKd6JFh-cznagwsCTIAAlAFBZ0/export?format=csv&gid=";
+        const userBranch = (profile.branch || "").toUpperCase();
         
-        const urlsToFetch = [
-          { url: `${baseUrl}${GIDS.UNIVERSAL}`, type: "universal" }
-        ];
+        let targetKey = "";
+        if (profile.yearGroup === "Freshers") targetKey = "freshers";
+        else if (profile.yearGroup === "Sophomores") targetKey = "sophomores";
+        else if (profile.yearGroup === "Juniors") targetKey = "juniors";
+        else if (profile.yearGroup === "Seniors") targetKey = "seniors";
+
+        const processRawNoticeRows = (rows: any[], type: string, collector: NoticeItem[]) => {
+          rows.forEach((row) => {
+            const title = (row.title || "").trim();
+            const description = (row.description || "").trim();
+            if (!title && !description) return;
+
+            const targetBranchText = (row.targetBranch || "").trim().toUpperCase();
+            const isUniversal = type === "universal";
+            const isFresherOverride = type === "freshers";
+            const userYearGroupUpper = `ALL ${profile.yearGroup.toUpperCase()}`;
+            const isBatchWideOverride = targetBranchText === userYearGroupUpper;
+
+            const isTargetedBranchMatch = 
+              targetBranchText === "ALL" || 
+              targetBranchText === "" || 
+              isBatchWideOverride ||
+              targetBranchText.split(/[\s,]+/).some((b: string) => b.trim() === userBranch);
+
+            if (isUniversal || isFresherOverride || isTargetedBranchMatch) {
+              collector.push({
+                date: row.date || "",
+                title,
+                description,
+                targetBranch: isUniversal ? "Universal" : (targetBranchText || "ALL"),
+                author: row.author || "Admin",
+                phone: row.phone || "",
+                timestamp: getTimestampFromDDMMYYYY(row.date || "")
+              });
+            }
+          });
+        };
+
+        // 1. Instantly pull data from the global synchronizer cache to ensure low-latency loading
+        const globalRawCache = localStorage.getItem("swb_global_notices_raw_map");
+        if (globalRawCache) {
+          try {
+            const rawMap = JSON.parse(globalRawCache);
+            const localCollector: NoticeItem[] = [];
+
+            if (rawMap.universal) processRawNoticeRows(rawMap.universal, "universal", localCollector);
+            if (targetKey && rawMap[targetKey]) processRawNoticeRows(rawMap[targetKey], targetKey, localCollector);
+
+            localCollector.sort((a, b) => b.timestamp - a.timestamp);
+            setNotices(localCollector);
+            setLoading(false); // Drop loader wrapper layer instantly
+          } catch (e) {
+            console.error("Failed to parse swb raw global notices map cache string", e);
+          }
+        }
+
+        // 2. Direct Network Fallback: If cache is empty or user deep-linked directly to a specific target routing index
+        const baseUrl = "https://docs.google.com/spreadsheets/d/1o3ZTVhnP9_xjzkEtMmKd6JFh-cznagwsCTIAAlAFBZ0/export?format=csv&gid=";
+        const urlsToFetch = [{ url: `${baseUrl}${GIDS.UNIVERSAL}`, type: "universal" }];
 
         if (profile.yearGroup === "Freshers") urlsToFetch.push({ url: `${baseUrl}${GIDS.FRESHERS}`, type: "freshers" });
         if (profile.yearGroup === "Sophomores") urlsToFetch.push({ url: `${baseUrl}${GIDS.SOPHOMORES}`, type: "batch" });
@@ -115,7 +161,6 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
             try {
               const res = await fetch(url);
               const rawText = await res.text();
-              
               const lines = rawText.split("\n");
               const cleanCsvText = lines.slice(1).join("\n");
 
@@ -125,48 +170,15 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
                   skipEmptyLines: true,
                   complete: (results) => {
                     const rows = results.data as any[];
-                    
-                    rows.forEach((row) => {
-                      const title = (row["Title"] || row["Tittle"] || row["tittle"] || row["title"] || "").trim();
-                      const description = (row["Description"] || row["description"] || "").trim();
-                      const date = (row["Date (dd/mm/yyyy)"] || row["Date"] || row["date"] || "").trim();
-                      const author = (row["Author"] || row["author"] || "Admin").trim();
-                      const phone = (row["Phone No."] || row["phone"] || row["Phone"] || "").trim();
-                      
-                      if (!title && !description) return;
-
-                      const targetBranchText = (
-                        row["Target Branch"] || 
-                        row["Target Audience"] || 
-                        row["target audience"] || 
-                        ""
-                      ).trim().toUpperCase();
-                      
-                      const isUniversal = type === "universal";
-                      const isFresherOverride = type === "freshers";
-                      
-                      const userYearGroupUpper = `ALL ${profile.yearGroup.toUpperCase()}`;
-                      const isBatchWideOverride = targetBranchText === userYearGroupUpper;
-
-                      const userBranch = (profile.branch || "").toUpperCase();
-                      const isTargetedBranchMatch = 
-                        targetBranchText === "ALL" || 
-                        targetBranchText === "" || 
-                        isBatchWideOverride ||
-                        targetBranchText.split(/[\s,]+/).some((b: string) => b.trim() === userBranch);
-
-                      if (isUniversal || isFresherOverride || isTargetedBranchMatch) {
-                        combinedNotices.push({
-                          date,
-                          title,
-                          description,
-                          targetBranch: isUniversal ? "Universal" : (targetBranchText || "ALL"),
-                          author,
-                          phone,
-                          timestamp: getTimestampFromDDMMYYYY(date)
-                        });
-                      }
-                    });
+                    const cleanRows = rows.map(row => ({
+                      title: (row["Title"] || row["Tittle"] || row["tittle"] || row["title"] || "").trim(),
+                      description: (row["Description"] || row["description"] || "").trim(),
+                      date: (row["Date (dd/mm/yyyy)"] || row["Date"] || row["date"] || "").trim(),
+                      author: (row["Author"] || row["author"] || "Admin").trim(),
+                      phone: (row["Phone No."] || row["phone"] || row["Phone"] || "").trim(),
+                      targetBranch: (row["Target Branch"] || row["Target Audience"] || row["target audience"] || "").trim()
+                    }));
+                    processRawNoticeRows(cleanRows, type, combinedNotices);
                     resolve();
                   },
                   error: () => resolve(),
@@ -179,15 +191,16 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
         );
 
         combinedNotices.sort((a, b) => b.timestamp - a.timestamp);
-        setNotices(combinedNotices);
 
-        const seenIds = combinedNotices.map(notice => {
-          return `${notice.title}_${notice.date}_${notice.author}`.replace(/\s+/g, "_");
-        });
+        // 3. Deep Comparison check update step configuration verification block
+        const serializedNoticeData = JSON.stringify(combinedNotices);
+        const seenIds = combinedNotices.map(notice => `${notice.title}_${notice.date}_${notice.author}`.replace(/\s+/g, "_"));
+        
         if (seenIds.length > 0) {
           localStorage.setItem("iitp_seen_notice_ids", JSON.stringify(seenIds));
         }
-        
+
+        setNotices(combinedNotices);
       } catch (err) {
         console.error("Error running notice configuration loop:", err);
       } finally {
@@ -232,24 +245,20 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
   return (
     <div 
       onClick={onClose}
-      // 🛠️ CHANGED: Dynamic transition for background opacity
       className={`fixed inset-0 bg-sky/80 backdrop-blur-xl flex items-center justify-center p-2 sm:p-4 z-[100] pointer-events-auto transition-opacity duration-300 ease-out ${
         animate ? "opacity-100" : "opacity-0"
       }`}
      >
       <div 
         onClick={(e) => e.stopPropagation()}
-        // 🛠️ CHANGED: Swapped tailwind dynamic animate-in properties with manual transition-all duration-300 scale rules tracking center expansion vectors
         className={`bg-sky-700 w-full sm:max-w-[800px] max-h-[91vh] rounded-[16px] sm:rounded-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.5),0_20px_50px_rgba(0,0,0,0.9)] border border-zinc-800 flex flex-col relative overflow-hidden transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] origin-center transform ${
           animate ? "scale-100 opacity-100" : "scale-75 opacity-0"
         }`}
        >
-        {/* Tactile Mobile Drag Pull Indicator Bar */}
         <div className="w-full flex justify-center py-1.5 sm:hidden shrink-0">
           <div className="w-12 h-1 bg-zinc-800 rounded-full" />
         </div>
 
-        {/* Modal App Header Row */}
         <div className="flex items-center justify-between px-2 pb-2 pt-2 sm:pt-4 border-b border-zinc-950 bg-zinc-900 shrink-0">
           <div>
             <h3 className="text-lg font-black text-white uppercase flex items-center gap-1.5">
@@ -279,9 +288,8 @@ export default function NotificationModal({ isOpen, onClose }: NotificationModal
           </div>
         </div>
 
-        {/* Scroll Body */}
         <div className="overflow-y-auto flex-1 px-2 py-3 space-y-3 style-modal-scrollbar touch-pan-y bg-[#050505]">
-          {loading ? (
+          {loading && notices.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20 space-y-3">
               <div className="w-7 h-7 border-2 border-zinc-700 border-t-transparent rounded-full animate-spin" />
               <p className="text-xs font-black uppercase tracking-wider text-zinc-500 animate-pulse">Loading Notices...</p>

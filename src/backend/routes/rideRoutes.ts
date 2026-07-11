@@ -33,7 +33,7 @@ router.post('/post-ride', async (req: Request, res: Response): Promise<void> => 
         if (isNaN(parsedDate.getTime())) {
             console.error(`❌ Date Parsing Failed for value: ${departure_time}`);
             res.status(400).json({ error: "Invalid departure time format signature." });
-            return;
+            return; // 👈 Fixed: Safely cuts off execution path if format is garbage
         }
 
         // 🛠️ Creating document with STRICT primitive casting for Cloud Atlas
@@ -45,15 +45,14 @@ router.post('/post-ride', async (req: Request, res: Response): Promise<void> => 
             route_from,
             route_to,
             departure_time: parsedDate,
-            available_seats: Number(available_seats) || 1, // 👈 Explicitly forces type conversion to Number
-            status: 'Active' // 👈 Explicitly passing 'Active' satisfies schema constraints for your feed query
+            available_seats: Number(available_seats) || 1, 
+            status: 'Active' 
         });
 
         await newRide.save();
         console.log("🚀 [Database Success] New ride post successfully synchronized!");
         res.status(201).json({ message: "Ride posted successfully!", ride: newRide });
     } catch (error) {
-        // This will print the EXACT schema property that failed out in your Render console terminal logs!
         console.error("❌ CRITICAL Schema Validation / Save failure inside post-ride:", error);
         res.status(400).json({ error: "Failed to create ride post due to database schema rules.", details: String(error) });
     }
@@ -105,7 +104,6 @@ router.put('/update-ride/:id', async (req: Request, res: Response): Promise<void
     try {
         const rideId = req.params.id;
         
-        // Cast values safely on updates as well
         const updateData = { ...req.body };
         if (updateData.available_seats) updateData.available_seats = Number(updateData.available_seats);
 
@@ -120,6 +118,36 @@ router.put('/update-ride/:id', async (req: Request, res: Response): Promise<void
     } catch (error) {
         console.error("Error updating ride:", error);
         res.status(500).json({ error: "Failed to update ride." });
+    }
+});
+
+// 5. 🗑️ PERMANENTLY EVICT/DELETE A RIDE POST FROM THE DATABASE
+router.delete('/delete-ride/:id', async (req: Request, res: Response): Promise<void> => {
+    console.log(`🗑️ [API Request] Received global deletion command for Ride ID: ${req.params.id}`);
+    try {
+        const rideId = req.params.id;
+        const cleanRideId = String(rideId);
+
+        // 🛡️ Safety check: Ensure the string fits standard MongoDB ObjectId 24-character hex requirements
+        if (!cleanRideId.match(/^[0-9a-fA-F]{24}$/)) {
+            console.error("❌ Deletion Stopped: Malformed ObjectId payload structure.");
+            res.status(400).json({ error: "Malformed document ID reference parameter structure." });
+            return;
+        }
+
+        const deletedRide = await RidePost.findByIdAndDelete(cleanRideId);
+
+        if (!deletedRide) {
+            console.warn(`⚠️ [Database Warning] Ride ID ${cleanRideId} not found in collection (may have already been deleted).`);
+            res.status(404).json({ error: "Ride post not found or already cleared, bro." });
+            return;
+        }
+
+        console.log(`✅ [Database Success] Ride ID ${cleanRideId} completely wiped from cloud cluster.`);
+        res.status(200).json({ success: true, message: "Ride request completely removed from database." });
+    } catch (error) {
+        console.error("❌ CRITICAL error inside delete-ride handler:", error);
+        res.status(500).json({ error: "Internal database failure handling record deletion.", details: String(error) });
     }
 });
 

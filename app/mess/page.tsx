@@ -14,10 +14,7 @@ export function parseStudentEmail(email: string | null | undefined): StudentProf
     return { yearGroup: "Unknown", branch: "" };
   }
 
-  // Extract the part before @iitp.ac.in
-  const localPart = email.split("@")[0]; // e.g., "navin_2503ai02"
-  
-  // Find the roll number string using regex (looks for 4 digits followed by 2 letters and 2 digits)
+  const localPart = email.split("@")[0];
   const rollMatch = localPart.match(/(\d{2})(\d{2})([a-zA-Z]{2})(\d{2})/);
   
   if (!rollMatch) {
@@ -25,9 +22,8 @@ export function parseStudentEmail(email: string | null | undefined): StudentProf
   }
 
   const [_, entryYear, courseCode, branchCode] = rollMatch;
-  const branch = branchCode.toUpperCase(); // e.g., "AI", "CS", "EE"
+  const branch = branchCode.toUpperCase();
 
-  // Calculate year group based on current year (2026)
   let yearGroup: StudentProfile["yearGroup"] = "Unknown";
   if (entryYear === "26") yearGroup = "Freshers";
   else if (entryYear === "25") yearGroup = "Sophomores";
@@ -97,7 +93,6 @@ export default function MessPage() {
         setIsDefaultChecked(true);
       }
     } else {
-      // Fallback to initial default mess if no preference cached
       setSelectedMess(MESS_CONFIG[0]);
     }
   }, []);
@@ -122,11 +117,32 @@ export default function MessPage() {
     setLoading(true);
     setError(null);
     setIsDropdownOpen(false); 
-    setEverydayMenu(null);
-    setLiveNotice(""); 
+
+    const CACHE_KEY = `swb_mess_cache_${selectedMess.id}`;
+
+    // 1. Pull localized menu structure from storage to break network loading latency
+    const cachedData = localStorage.getItem(CACHE_KEY);
+    if (cachedData) {
+      try {
+        const parsedCache = JSON.parse(cachedData);
+        if (parsedCache.menuData && parsedCache.menuData.length > 0) {
+          setMenuData(parsedCache.menuData);
+          setEverydayMenu(parsedCache.everydayMenu || null);
+          setLiveNotice(parsedCache.liveNotice || "");
+          setLoading(false); // Drop spinner layer instantly
+        }
+      } catch (e) {
+        console.error("Failed to parse local mess cache string", e);
+      }
+    } else {
+      // Clear visible stale state variables only if there's no cache layer to act as fallback layout
+      setEverydayMenu(null);
+      setLiveNotice("");
+    }
 
     const GOOGLE_SHEET_CSV_URL = `https://docs.google.com/spreadsheets/d/${MASTER_SPREADSHEET_ID}/export?format=csv&gid=${selectedMess.gid}`;
 
+    // 2. Quiet network revalidation runs in background scope thread thread
     Papa.parse(GOOGLE_SHEET_CSV_URL, {
       download: true,
       header: false,
@@ -134,14 +150,16 @@ export default function MessPage() {
       complete: (results) => {
         const rows = results.data as string[][];
         if (!rows || rows.length < 4) {
-          setError("Spreadsheet layout is empty or formatting is too short.");
+          if (!localStorage.getItem(CACHE_KEY)) {
+            setError("Spreadsheet layout is empty or formatting is too short.");
+          }
           setLoading(false);
           return;
         }
 
+        let extractedNotice = "";
         if (rows[14] && rows[14][1]) {
-          const extractedNotice = rows[14][1].trim();
-          setLiveNotice(extractedNotice);
+          extractedNotice = rows[14][1].trim();
         }
 
         const headers = rows[2].map(h => h.trim().toUpperCase());
@@ -153,12 +171,16 @@ export default function MessPage() {
         const dessertIdx = headers.indexOf("DESSERT");
 
         if (weekdayIdx === -1 || breakfastIdx === -1 || lunchIdx === -1) {
-          setError("Columns alignment mismatch. Row 3 layout is modified.");
+          if (!localStorage.getItem(CACHE_KEY)) {
+            setError("Columns alignment mismatch. Row 3 layout is modified.");
+          }
           setLoading(false);
           return;
         }
 
         const parsedMenu: MenuItem[] = [];
+        let tempEverydayMenu: MenuItem | null = null;
+
         for (let i = 3; i < Math.min(rows.length, 14); i++) { 
           const row = rows[i];
           const dayName = row[weekdayIdx]?.trim() || "";
@@ -174,22 +196,39 @@ export default function MessPage() {
           };
 
           if (dayName.toUpperCase() === "EVERYDAY") {
-            setEverydayMenu(itemPayload);
+            tempEverydayMenu = itemPayload;
           } else {
             parsedMenu.push(itemPayload);
           }
         }
 
         if (parsedMenu.length > 0) {
-          setMenuData(parsedMenu);
+          const freshCachePayload = {
+            menuData: parsedMenu,
+            everydayMenu: tempEverydayMenu,
+            liveNotice: extractedNotice
+          };
+          const serializedData = JSON.stringify(freshCachePayload);
+
+          // 3. Deep comparison logic verification sequence: prevent UI render flashes
+          if (serializedData !== localStorage.getItem(CACHE_KEY)) {
+            setMenuData(parsedMenu);
+            setEverydayMenu(tempEverydayMenu);
+            setLiveNotice(extractedNotice);
+            localStorage.setItem(CACHE_KEY, serializedData);
+          }
         } else {
-          setError("Unable to parse worksheet structural fields.");
+          if (!localStorage.getItem(CACHE_KEY)) {
+            setError("Unable to parse worksheet structural fields.");
+          }
         }
         setLoading(false);
       },
       error: (err) => {
         console.error(err);
-        setError("Failed to fetch live schedule rows.");
+        if (!localStorage.getItem(CACHE_KEY)) {
+          setError("Failed to fetch live schedule rows.");
+        }
         setLoading(false);
       },
     });
@@ -283,9 +322,7 @@ export default function MessPage() {
   return (
     <main className="h-full w-full bg-zinc-950 bg-gradient-to-bl from-slate-700/20 to-violet-700/20 font-sans text-zinc-300 antialiased flex flex-col justify-between relative overflow-hidden selection:bg-zinc-800 selection:text-white">
       
-      {/* Sticky Control and Selection Bar Sitting Safely Below Global Header Layout */}
       <div className="w-full shrink-0 z-30 flex flex-col items-center">
-        {/* Adjusted this container to add gap-3 spacing between your elements */}
         <div className="w-full max-w-[365px] pt-21 pr-1.5  pb-0 flex justify-end items-center gap-3 relative">
           {selectedMess && (
             <div className="pl-0.5 pr-0 rounded-xl bg-transparent p-1.5 shrink-0 flex flex-col items-center gap-1 select-none">
@@ -293,20 +330,18 @@ export default function MessPage() {
                 href={GOOGLE_SHEET_BROWSER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-1  text-[13px] font-black font-normal tracking-normal text-yellow-500/80 hover:text-blue-600 uppercase transition-colors"
+                className="px-1 text-[13px] font-black font-normal tracking-normal text-yellow-500/80 hover:text-blue-600 uppercase transition-colors"
               >
                 <u>Update Mess Menu</u>↗
               </a>
             </div>
           )}
           <div className="relative">
-            {/* --- Main Trigger Button with Nestled Checkbox --- */}
             <div className="h-8 pl-1.5 pr-1.5 bg-zinc-700 hover:bg-zinc-800 text-zinc-200 hover:text-white transition-colors rounded-xl flex items-center gap-1 border border-zinc-600 shadow-md">
               
-              {/* Inner Checkbox Wrapper */}
               <div 
                 className="flex items-center gap-1 border-r border-zinc-600/80 pr-1.5 h-full"
-                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()} // Stops dropdown from toggling when clicking checkbox area
+                onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()} 
               >
                 <button
                   onClick={() => handleDefaultToggle(!isDefaultChecked)}
@@ -319,10 +354,8 @@ export default function MessPage() {
                 >
                   <span className="text-[14px] font-black leading-none select-none">✓</span>
                 </button>
-                
               </div>
 
-              {/* Dropdown Toggle Target */}
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center gap-1.5 text-[12px] font-black tracking-wide uppercase h-full active:scale-95 transform transition-transform"
@@ -331,7 +364,6 @@ export default function MessPage() {
               </button>
             </div>
 
-            {/* --- Dropdown Menu --- */}
             {isDropdownOpen && (
               <div className="absolute right-0 top-full mt-0.5 w-34 bg-slate-950 border border-zinc-800 rounded-xl z-50 overflow-hidden divide-y divide-zinc-800 animate-in fade-in zoom-in-105 duration-100">
                 {MESS_CONFIG.map((mess) => (
@@ -355,19 +387,14 @@ export default function MessPage() {
               </div>
             )}
           </div>
-     
         </div>
       </div>
 
-      {/* 📜 SCROLLABLE APP WRAPPER WINDOW */}
       <div className="w-full flex-1 overflow-y-auto flex flex-col items-center pb-18 style-scrollbar">
 
-        {/* Live Notices Layer: Warn Accentuation Rules */}
         {selectedMess && liveNotice && (
           <div className="w-[94%] max-w-[350px] mt-2 p-2 bg-gradient-to-t from-orange-950/10 to-amber-600/20 border border-amber-500/20 rounded-xl text-sm leading-relaxed text-amber-300/90 shadow-md shrink-0 font-medium">
-            <b><u>Announcement:</u></b>
-            <span className="text-white font-black tracking-wide uppercase block mb-0.5"></span>
-              {liveNotice}
+            <b><u>Announcement:</u></b> {liveNotice}
           </div>
         )}
 
@@ -381,7 +408,6 @@ export default function MessPage() {
             </div>
           ) : (
             <>
-              {/* PRIMARY DAILY SCHEDULING CARD CONTAINER */}
               <div className="w-full rounded-2xl border border-purple-700/40 bg-gradient-to-b from-slate-800 to-black/60 p-2.5 shadow-xl">
                 <div className="mb-2 flex items-center justify-between border-b border-zinc-700 pb-1.5 px-1">
                   <div className="flex items-center gap-1.5">
@@ -389,7 +415,6 @@ export default function MessPage() {
                     <h2 className="text-[13px] font-black uppercase tracking-wide font-bold text-green-400/80">Live _ Layout</h2>
                   </div>
 
-                  {/* Day Toggler (Depth Clickable Accent Structure) */}
                   <div className="relative">
                     <button
                       onClick={() => setIsDayDropdownOpen(!isDayDropdownOpen)}
@@ -420,7 +445,6 @@ export default function MessPage() {
                   </div>
                 </div>
 
-                {/* Individual Plate Schedules Blocks */}
                 <div className="flex flex-col gap-1.5 w-full pt-0.5">
                   {loading ? (
                     [...Array(5)].map((_, i) => (
@@ -444,7 +468,7 @@ export default function MessPage() {
                       </div>
                       <div className="flex flex-col rounded-xl border border-zinc-600 bg-gradient-to-b from-zinc-800 to-black/30 px-3 py-0">
                         <span className="text-[11px] font-black text-purple-500 uppercase tracking-widest"><span className="text-xl">🍱 </span>Dinner</span>
-                        <span className="text-[12px] font-black text-zinc-200 mt-0 mb-1 qleading-snug font-bold">{todaysMenu.Dinner || "—"}</span>
+                        <span className="text-[12px] font-black text-zinc-200 mt-0 mb-1 leading-snug font-bold">{todaysMenu.Dinner || "—"}</span>
                       </div>
                       <div className="flex flex-col rounded-xl border border-pink-500/50 bg-gradient-to-b from-zinc-800 to-black/35 px-3 py-0">
                         <span className="text-[11px] font-black text-pink-500 uppercase tracking-widest"><span className="text-xl">🍧</span> Dessert</span>
@@ -495,12 +519,9 @@ export default function MessPage() {
             </>
           )}
         </main>
-
-        {/* Spreadsheets links built specifically using structural Blue design guidelines */}
        
         {selectedMess && (
           <div className="w-full bg-transparent pt-2 pb-5 shrink-0 flex flex-col items-center gap-2 select-none">
-           
             <a 
               href={COMPLAINT_SPREADSHEET_URL}
               target="_blank"
@@ -513,11 +534,10 @@ export default function MessPage() {
         )}
       </div>
 
-       {/*complain button */}
       {selectedMess && (
         <button
           onClick={() => setIsComplaintOpen(true)}
-          className="fixed bottom-22 right-3 h-13 w-13 rounded-full bg-gradient-to-t from-pink-700 to-blue-600 hover:from-rose-700 hover:to-indigo-600 text-white font-bold flex flex-col items-center justify-center  border border-slate-900 z-50 cursor-pointer transition transform active:scale-90 select-none"
+          className="fixed bottom-22 right-3 h-13 w-13 rounded-full bg-gradient-to-t from-pink-700 to-blue-600 hover:from-rose-700 hover:to-indigo-600 text-white font-bold flex flex-col items-center justify-center border border-slate-900 z-50 cursor-pointer transition transform active:scale-90 select-none"
         >
           <span className="text-base leading-none text-xl">🤬</span> 
           <svg viewBox="0 3 100 20" className="w-full h-4 mt-0 pointer-events-none fill-white font-black select-none">
@@ -533,13 +553,12 @@ export default function MessPage() {
         </button>
       )}
 
-      {/* COMPLAINT MODAL WINDOW (PRO DARK GLASSMORPHISM STYLING OVERHAUL) */}
       {isComplaintOpen && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-[100] animate-in fade-in duration-150">
           <div className="bg-slate-900 border border-zinc-700 rounded-2xl p-4 w-full max-w-[320px] shadow-2xl flex flex-col relative max-h-[90vh] overflow-y-auto style-scrollbar">
             <button 
               onClick={resetModalFormState}
-              className="absolute  top-3 right-4 text-red-500 hover:text-rose-700 text-sm font-black transition-colors cursor-pointer"
+              className="absolute top-3 right-4 text-red-500 hover:text-rose-700 text-sm font-black transition-colors cursor-pointer"
             >
               ✕
             </button>
@@ -605,7 +624,7 @@ export default function MessPage() {
                     accept="image/*" 
                     multiple 
                     onChange={handleImageChange}
-                    className="w-full text-[11px] text-zinc-400 file:mr-2 file:py-1.5 file:px-2 file:rounded-md file:border-0 file:text-[10px] file:font-black file: file:bg-zinc-800 file:text-white file:cursor-pointer"
+                    className="w-full text-[11px] text-zinc-400 file:mr-2 file:py-1.5 file:px-2 file:rounded-md file:border-0 file:text-[10px] file:font-black file:bg-zinc-800 file:text-white file:cursor-pointer"
                   />
 
                   {selectedImages.length > 0 && (
@@ -628,7 +647,6 @@ export default function MessPage() {
                   )}
                 </div>
 
-                {/* Light colored button trigger for depth perception */}
                 <button
                   type="submit"
                   disabled={submittingComplaint}
@@ -638,7 +656,6 @@ export default function MessPage() {
                 </button>
               </form>
             ) : (
-              /* Success confirmation state */
               <div className="space-y-4 text-center py-4 animate-in fade-in duration-200">
                 <div className="h-10 w-10 rounded-full bg-emerald-500/10 text-[#10B981] border border-emerald-500/20 flex items-center justify-center mx-auto text-base font-bold">✓</div>
                 <div>
@@ -660,7 +677,6 @@ export default function MessPage() {
           </div>
         </div>
       )} 
-
     </main>
   );
 }

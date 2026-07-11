@@ -8,13 +8,16 @@ interface TimeSlot {
   time: string;
   from: string;
   to: string;
+  isReserved?: boolean;
 }
 
 interface BusSchedule {
   busName: string;
   busNumber: string;
-  driverInfo: string;
-  contact: string;
+  weekdayDriverInfo: string;
+  weekdayContact: string;
+  weekendDriverInfo: string;
+  weekendContact: string;
   weekdaysSchedule: TimeSlot[];
   weekendsSchedule: TimeSlot[];
 }
@@ -31,8 +34,25 @@ export default function BusPage() {
     const currentDay = new Date().getDay();
     setActiveTab(currentDay === 0 || currentDay === 6 ? "weekends" : "weekdays");
 
+    const CACHE_KEY = "swb_bus_schedule_cache";
+
     const fetchAndParseBusData = async () => {
       try {
+        // 1. Instantly render from storage cache to eliminate layout lag
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        if (cachedData) {
+          try {
+            const parsedCache = JSON.parse(cachedData);
+            if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+              setBuses(parsedCache);
+              setLoading(false);
+            }
+          } catch (e) {
+            console.error("Failed to parse local bus cache string", e);
+          }
+        }
+
+        // 2. Quiet network revalidation runs concurrently in background
         Papa.parse(SHEET_URL, {
           download: true,
           header: false,
@@ -41,12 +61,14 @@ export default function BusPage() {
             const rows = results.data as string[][];
 
             if (!rows || rows.length < 20) {
-              setError("Spreadsheet data is too short or empty.");
+              if (!localStorage.getItem(CACHE_KEY)) {
+                setError("Spreadsheet data is too short or empty.");
+              }
               setLoading(false);
               return;
             }
 
-            const busColumns = [2, 6, 10, 14, 18, 22];
+            const busColumns = [0, 4, 8, 12, 16, 20, 24, 28];
             const parsedBuses: BusSchedule[] = [];
 
             const cleanAndExtractTime = (str: string): string | null => {
@@ -55,11 +77,31 @@ export default function BusPage() {
               return match ? match[0].replace(/\s+/g, "") : null;
             };
 
-            busColumns.forEach((colIndex, listIdx) => {
-              let rawBusName = "";
-              let rawDriver = "SWB Assigned Staff";
-              let rawContact = "";
+            const parseContact = (rawContact: string): string => {
+              let contact = "N/A";
+              const cleanDigits = rawContact.replace(/\D/g, "");
+              if (cleanDigits.length >= 10) {
+                contact = cleanDigits.slice(-10);
+              }
+              return contact;
+            };
 
+            const parseDriverName = (rawDriver: string): string => {
+              return rawDriver
+                .replace(/Driver\s*-\s*/i, "")
+                .replace(/Conductor\s*-\s*/i, "")
+                .replace(/Conductor\s*/i, "")
+                .trim() || "SWB Assigned Staff";
+            };
+
+            busColumns.forEach((colIndex) => {
+              let rawBusName = "";
+              let rawWeekdayDriver = "SWB Assigned Staff";
+              let rawWeekdayContact = "";
+              let rawWeekendDriver = "SWB Assigned Staff";
+              let rawWeekendContact = "";
+
+              // Gather Bus Name & Weekdays Metadata (Rows 0 to 40)
               for (let i = 0; i < 40; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
@@ -67,17 +109,26 @@ export default function BusPage() {
                 if (cellLower.startsWith("bus") || cellLower.startsWith("institute")) {
                   rawBusName = cellVal;
                 } else if (cellLower.includes("driver") || cellLower.includes("conductor") || (i === 17 && cellVal !== "" && !cellLower.includes("contact"))) {
-                  rawDriver = cellVal; 
+                  rawWeekdayDriver = cellVal; 
                 } else if (cellLower.includes("contact") || (i === 18 && cellVal !== "" && /\d+/.test(cellVal))) {
-                  rawContact = cellVal;
+                  rawWeekdayContact = cellVal;
                 }
               }
 
-              if (!rawBusName && colIndex > 0) {
-                rawBusName = rows[16]?.[colIndex - 1] || rows[16]?.[colIndex - 2] || "";
+              // Gather Weekend Specific Metadata (Rows 73 to 75)
+              for (let i = 73; i <= 75; i++) {
+                const cellVal = rows[i]?.[colIndex]?.trim() || "";
+                const cellLower = cellVal.toLowerCase();
+
+                if (cellLower.includes("driver") || cellLower.includes("conductor") || (i === 74 && cellVal !== "" && !cellLower.includes("contact"))) {
+                  rawWeekendDriver = cellVal;
+                } else if (cellLower.includes("contact") || (i === 75 && cellVal !== "" && /\d+/.test(cellVal))) {
+                  rawWeekendContact = cellVal;
+                }
               }
+
               if (!rawBusName) {
-                rawBusName = colIndex === 18 ? "Institute Bus 1" : colIndex === 22 ? "Institute Bus 2" : `Bus Module`;
+                rawBusName = `Bus ${Math.floor(colIndex / 4) + 1}`;
               }
 
               let busName = rawBusName;
@@ -88,76 +139,86 @@ export default function BusPage() {
                 busNumber = parts[1]?.replace(/[()]/g, "").trim() || "";
               }
 
-              const cleanedDriver = rawDriver
-                .replace(/Driver\s*-\s*/i, "")
-                .replace(/Conductor\s*-\s*/i, "")
-                .replace(/Conductor\s*/i, "")
-                .trim();
-              const driverInfo = cleanedDriver || "SWB Assigned Staff";
+              const weekdayDriverInfo = parseDriverName(rawWeekdayDriver);
+              const weekdayContact = parseContact(rawWeekdayContact);
+              
+              const weekendDriverInfo = parseDriverName(rawWeekendDriver);
+              const weekendContact = parseContact(rawWeekendContact);
 
-              let contact = "N/A";
-              const cleanDigits = rawContact.replace(/\D/g, "");
-              if (cleanDigits.length >= 10) {
-                contact = cleanDigits.slice(-10);
-              }
-
+              // Parse Weekdays Schedule (Rows 37 to 60)
               const weekdaysSchedule: TimeSlot[] = [];
-              for (let i = 19; i <= 65; i++) {
+              for (let i = 37; i <= 60; i++) {
                 const time = cleanAndExtractTime(rows[i]?.[colIndex] || "");
                 if (time) {
+                  const reserveCheck = rows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
                   weekdaysSchedule.push({
                     time,
                     from: rows[i]?.[colIndex + 1]?.trim() || "Campus",
-                    to: rows[i]?.[colIndex + 2]?.trim() || "Campus"
+                    to: rows[i]?.[colIndex + 2]?.trim() || "Campus",
+                    isReserved: reserveCheck.includes("reserve")
                   });
                 }
               }
 
+              // Parse Weekends Schedule (Rows 66 onwards)
               const weekendsSchedule: TimeSlot[] = [];
-              let weekendTargetCol = -1;
-              if (listIdx === 1) weekendTargetCol = 11;
-              if (listIdx === 4) weekendTargetCol = 23;
+              for (let i = 66; i < rows.length; i++) {
+                const cellVal = rows[i]?.[colIndex] || "";
+                
+                if (cellVal.toLowerCase().includes("note")) {
+                  break;
+                }
 
-              if (weekendTargetCol !== -1) {
-                for (let i = 66; i < rows.length; i++) {
-                  const time = cleanAndExtractTime(rows[i]?.[weekendTargetCol] || "");
-                  
-                  if (rows[i]?.[weekendTargetCol]?.toLowerCase().includes("note")) {
-                    break;
-                  }
+                const time = cleanAndExtractTime(cellVal);
+                if (time) {
+                  let from = rows[i]?.[colIndex + 1]?.trim() || "";
+                  let to = rows[i]?.[colIndex + 2]?.trim() || "";
+                  const reserveCheck = rows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
 
-                  if (time) {
-                    let from = rows[i]?.[weekendTargetCol + 1]?.trim() || "";
-                    let to = rows[i]?.[weekendTargetCol + 2]?.trim() || "";
-                    if (!from || from === "" || from.toLowerCase().includes("route")) from = "Campus";
-                    if (!to || to === "" || to.toLowerCase().includes("route")) to = "Campus";
+                  if (!from || from === "" || from.toLowerCase().includes("route")) from = "Campus";
+                  if (!to || to === "" || to.toLowerCase().includes("route")) to = "Campus";
 
-                    weekendsSchedule.push({ time, from, to });
-                  }
+                  weekendsSchedule.push({ 
+                    time, 
+                    from, 
+                    to,
+                    isReserved: reserveCheck.includes("reserve")
+                  });
                 }
               }
 
               parsedBuses.push({
                 busName,
                 busNumber,
-                driverInfo,
-                contact,
+                weekdayDriverInfo,
+                weekdayContact,
+                weekendDriverInfo,
+                weekendContact,
                 weekdaysSchedule,
                 weekendsSchedule
               });
             });
 
-            setBuses(parsedBuses);
+            // 3. Deep comparison logic: Only commit updates to state/cache if network payload differs
+            const serializedData = JSON.stringify(parsedBuses);
+            if (serializedData !== localStorage.getItem(CACHE_KEY)) {
+              setBuses(parsedBuses);
+              localStorage.setItem(CACHE_KEY, serializedData);
+            }
             setLoading(false);
           },
           error: (err) => {
             console.error(err);
-            setError("Failed to process spreadsheet values.");
+            if (!localStorage.getItem(CACHE_KEY)) {
+              setError("Failed to process spreadsheet values.");
+            }
             setLoading(false);
           }
         });
       } catch (err) {
-        setError("Error rendering interface matrices.");
+        if (!localStorage.getItem(CACHE_KEY)) {
+          setError("Error rendering interface matrices.");
+        }
         setLoading(false);
       }
     };
@@ -177,17 +238,13 @@ export default function BusPage() {
   }
 
   return (
-    // Changed h-full/overflow-hidden to full layout dependency stream to let main window fire global scroll events
     <main className="w-full min-h-screen bg-gradient-to-br from-zinc-900/10 to-blue-800/30 bg-zinc-950 text-green-600 relative selection:bg-sky-600/60 selection:text-white">
       
-      {/* High-depth radial gradient masking  */}
       <div className="absolute top-[-1%]  w-[100%] h-[8%] bg-blue-700/60 blur-[120px] rounded-full pointer-events-none" />
       
-      {/*  Dropped overflow-y-auto here since layout.tsx controls viewport document scope flow natively now */}
       <div className="w-full px-2 py-21 pb-20">
         <div className="max-w-md mx-auto sm:max-w-xl md:max-w-4xl lg:max-w-6xl flex flex-col space-y-4">
           
-          {/* Notice Banner - Warning Token */}
           <div className="px-1.5 py-2  bg-gradient-to-br from-purple-700/20 to-amber-800/30 border border-amber-500/10 rounded-2xl text-[13px] text-amber-200/90 shadow-[0_4px_20px_rgba(0,0,0,0.4)] backdrop-blur-sm space-y-2">
             <div className="font-semibold text-sm flex items-center gap-1.5 text-amber-400/90 tracking-normal uppercase">
               <span>⚠️</span> SWB Campus Notice
@@ -197,7 +254,7 @@ export default function BusPage() {
                 <strong className="text-amber-300">1.)</strong> 
                 <p>
                   Bus queries? Don't hesitate to call:- <br></br>Admin Staff:{" "}
-                  <span className="text-white  px-1.5 ">Mantu Ji (8986162721)</span> & <br></br>Bus Manager BSRTC:{" "}
+                  <span className="text-white  px-1.5 ">_______</span> & <br></br>Bus Manager BSRTC:{" "}
                   <span className="text-white  px-1.5 ">Rajeev Ji (6201957967)</span>
                 </p>
               </div>
@@ -210,7 +267,6 @@ export default function BusPage() {
             </div>
           </div>
 
-          {/* iOS-Style Pill Toggle Controls (Mono Dark Contrast Shift) */}
           <div className="flex justify-center gap-1 p-1 bg-zinc-950/80 border border-zinc-900/80 rounded-2xl  shadow-inner">
             <button 
               onClick={() => setActiveTab("weekdays")} 
@@ -234,7 +290,6 @@ export default function BusPage() {
             </button>
           </div>
 
-          {/* Main Grid Section */}
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
               {[...Array(3)].map((_, idx) => (
@@ -254,13 +309,14 @@ export default function BusPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
               {buses.map((bus, idx) => {
                 const activeSchedule = activeTab === "weekdays" ? bus.weekdaysSchedule : bus.weekendsSchedule;
+                const activeDriver = activeTab === "weekdays" ? bus.weekdayDriverInfo : bus.weekendDriverInfo;
+                const activeContact = activeTab === "weekdays" ? bus.weekdayContact : bus.weekendContact;
 
                 return (
                   <div 
                     key={idx} 
                     className="group  border border-zinc-700 hover:border-zinc-500 rounded-2xl shadow-2xl transition-all duration-300 flex flex-col overflow-hidden transform hover:-translate-y-0.5 active:scale-[0.99]"
                   >
-                    {/* Card App-Header (Raised Contrast clickable layer) */}
                     <div className="bg-[#161616] p-2.5 pt-1 pb-1 border-b border-zinc-700 shrink-0">
                       <div className="flex items-center justify-between gap-2">
                         <h3 className="font-extrabold text-md sm:text-base text-zinc-100 flex items-center gap-1.5 tracking-tight group-hover:text-white transition-colors">
@@ -274,14 +330,14 @@ export default function BusPage() {
                       </div>
                       <div className="flex items-center justify-between mt-0 pt-1 border-t border-zinc-900/10">
                         <p className="text-md text-zinc-300 font-medium truncate max-w-[60%]">
-                          <span className="text-zinc-500">👤</span> {bus.driverInfo}
+                          <span className="text-zinc-500">👤</span> {activeDriver}
                         </p>
-                        {bus.contact && bus.contact !== "N/A" ? (
+                        {activeContact && activeContact !== "N/A" ? (
                           <a 
-                            href={`tel:${bus.contact}`} 
+                            href={`tel:${activeContact}`} 
                             className="text-[12px] bg-emerald-400/20 hover:bg-emerald-500/30 text-emerald-500 px-1.5 py-1 rounded-lg font-mono font-bold border border-emerald-500/50 transition-all active:scale-95 flex items-center gap-1"
                           >
-                            🤙 {bus.contact}
+                            🤙 {activeContact}
                           </a>
                         ) : (
                           <span className="text-[11px] text-zinc-600 font-mono">No Mobile Contact</span>
@@ -289,7 +345,6 @@ export default function BusPage() {
                       </div>
                     </div>
 
-                    {/* Inside Schedule Scroll List */}
                     <div className="p-3 flex-1 overflow-y-auto max-h-64 bg-gradient-to-br from-blue-900/50 to-black  bg-gradient-to-tr from-pink-800/10 to-black/50 style-scrollbar">
                       <div className="space-y-1.5 ">
                         <div className="flex justify-between text-[10px] text-zinc-500 font-extrabold uppercase tracking-widest px-2 pb-1 border-b border-zinc-900">
@@ -304,8 +359,15 @@ export default function BusPage() {
                             <span className="font-extrabold text-[#F59E0B] bg-amber-500/5 px-2 py-0.5 rounded-lg font-mono text-[11px] border border-amber-500/10 shadow-xs">
                               {slot.time}
                             </span>
-                            <span className="text-zinc-300 font-medium text-right max-w-[180px] sm:max-w-[220px] truncate" title={`${slot.from} ➔ ${slot.to}`}>
-                              {slot.from} <span className="text-zinc-600 font-black mx-0.5">➔</span> {slot.to}
+                            <span className="text-zinc-300 font-medium text-right max-w-[218px] sm:max-w-[220px] truncate flex items-center gap-1.5" title={`${slot.from} ➔ ${slot.to}`}>
+                              {slot.isReserved && (
+                                <span className="text-[10px] bg-rose-500/20 text-rose-400 px-1 py-0.5 rounded font-mono font-bold uppercase tracking- shrink-0 border border-amber-500/30">
+                                  Reserved
+                                </span>
+                              )}
+                              <span>
+                                {slot.from} <span className="text-zinc-600 font-black mx-0.5">➔</span> {slot.to}
+                              </span>
                             </span>
                           </div>
                         ))}
@@ -322,7 +384,6 @@ export default function BusPage() {
             </div>
           )}
 
-          {/* 🚨 Crimson Red Report Button Layer */}
           <div className="w-full text-center pt-4 pb-2 shrink-0">
             <Link 
               href="/?openReport=true" 
@@ -335,7 +396,6 @@ export default function BusPage() {
         </div>
       </div>
 
-      {/* Embedded CSS Tricks for Custom Micro Scrollbars inside Cards */}
       <style jsx global>{`
         .style-scrollbar::-webkit-scrollbar {
           width: 5px;
