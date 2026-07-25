@@ -1873,39 +1873,12 @@
   },
   {
     "day": "Monday",
-    "time": "CS2101",
-    "year": 2,
-    "courseCode": "CS2101",
-    "group": "CS",
-    "venue": "Algorithms Lab (Algorithms)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
     "time": "ME2101",
     "year": 2,
     "courseCode": "ME2101",
     "group": "ME",
     "venue": "ME Department Room",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "CS2102",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "AI",
-    "venue": "Digital Logic Lab (Digital Logic)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS2102",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "CS",
-    "venue": "Digital Logic Lab (Digital Logic)",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1918,15 +1891,6 @@
   },
   {
     "day": "Monday",
-    "time": "CS2103",
-    "year": 2,
-    "courseCode": "CS2103",
-    "group": "AI",
-    "venue": "AI Concept Lab (AI concept)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
     "time": "ME2103",
     "year": 2,
     "courseCode": "ME2104",
@@ -1936,129 +1900,12 @@
   },
   {
     "day": "Monday",
-    "time": "CS2104",
-    "year": 2,
-    "courseCode": "CS2104",
-    "group": "AI",
-    "venue": "Discrete Mathematics Lab (Discrete Mathematics)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS2104",
-    "year": 2,
-    "courseCode": "CS2104",
-    "group": "CS",
-    "venue": "Discrete Mathematics Lab (Discrete Mathematics)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS2105",
-    "year": 2,
-    "courseCode": "CS2105",
-    "group": "AI",
-    "venue": "Optimization Technique Lab (Optimization Technique)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS2105",
-    "year": 2,
-    "courseCode": "CS2105",
-    "group": "CS",
-    "venue": "Optimization Technique Lab (Optimization Technique)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3101",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "AI",
-    "venue": "Operating System Lab (Operating System)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3101",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "CS",
-    "venue": "Operating System Lab (Operating System)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3102",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "AI",
-    "venue": "Computer Networks Lab (Computer Networks)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3102",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "CS",
-    "venue": "Computer Networks Lab (Computer Networks)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3103",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "AI",
-    "venue": "Machine Learning Lab (Machine Learning)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3103",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "CS",
-    "venue": "Machine Learning Lab (Machine Learning)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
     "time": "ME3103",
     "year": 3,
     "courseCode": "ME3102",
     "group": "ME",
     "venue": "ME Department Room",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3104",
-    "year": 3,
-    "courseCode": "CS3104",
-    "group": "CS",
-    "venue": "Compiler Lab (Compiler)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3105",
-    "year": 2,
-    "courseCode": "CS Lab",
-    "group": "AI",
-    "venue": "Natural Langauge Processing (Natural Langauge Processing)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS3105",
-    "year": 2,
-    "courseCode": "CS Lab",
-    "group": "CS",
-    "venue": "Natural Langauge Processing (Natural Langauge Processing)",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -2077,159 +1924,6 @@
     "group": "ME",
     "venue": "ME Department Room",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "CS4101",
-    "year": 4,
-    "courseCode": "CS4101",
-    "group": "AI",
-    "venue": "Pattern Recognition Lab (Pattern Recognition)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS4101",
-    "year": 4,
-    "courseCode": "CS4101",
-    "group": "CS",
-    "venue": "Pattern Recognition Lab (Pattern Recognition)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS4110",
-    "year": 4,
-    "courseCode": "CS4110",
-    "group": "AI",
-    "venue": "Blockchain Technology Lab (Blockchain Technology)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS4110",
-    "year": 4,
-    "courseCode": "CS4110",
-    "group": "CS",
-    "venue": "Blockchain Technology Lab (Blockchain Technology)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS5101",
-    "year": 2,
-    "courseCode": "CS2101",
-    "group": "CS",
-    "venue": "Algorithms Lab (Design and Analysis of Algorithms)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS5102",
-    "year": 2,
-    "courseCode": "CS5102",
-    "group": "AI",
-    "venue": "Foundations of Computer Systems Lab (Foundations of Computer Systems)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS5102",
-    "year": 2,
-    "courseCode": "CS5102",
-    "group": "CS",
-    "venue": "Foundations of Computer Systems Lab (Foundations of Computer Systems)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS5103",
-    "year": 2,
-    "courseCode": "CS5103",
-    "group": "AI",
-    "venue": "Computing Lab-1 Lab (Computing Lab-1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS5103",
-    "year": 2,
-    "courseCode": "CS5103",
-    "group": "CS",
-    "venue": "Computing Lab-1 Lab (Computing Lab-1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6103",
-    "year": 4,
-    "courseCode": "CS4101",
-    "group": "AI",
-    "venue": "Pattern Recognition Lab (Advanced Pattern Recognition)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6103",
-    "year": 4,
-    "courseCode": "CS4101",
-    "group": "CS",
-    "venue": "Pattern Recognition Lab (Advanced Pattern Recognition)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6109",
-    "year": 2,
-    "courseCode": "CS6109",
-    "group": "AI",
-    "venue": "Reinforcement Learning Lab (Reinforcement Learning)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6109",
-    "year": 2,
-    "courseCode": "CS6109",
-    "group": "CS",
-    "venue": "Reinforcement Learning Lab (Reinforcement Learning)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6112",
-    "year": 2,
-    "courseCode": "CS6112",
-    "group": "AI",
-    "venue": "Drone Data Processing & Analysis Lab (Drone Data Processing & Analysis)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6112",
-    "year": 2,
-    "courseCode": "CS6112",
-    "group": "CS",
-    "venue": "Drone Data Processing & Analysis Lab (Drone Data Processing & Analysis)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6101/MA5104",
-    "year": 4,
-    "courseCode": "CS4110",
-    "group": "AI",
-    "venue": "Blockchain Technology Lab (Advanced Blockchain Technology/Fundam. of Block Chain)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "CS6101/MA5104",
-    "year": 4,
-    "courseCode": "CS4110",
-    "group": "CS",
-    "venue": "Blockchain Technology Lab (Advanced Blockchain Technology/Fundam. of Block Chain)",
-    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -6541,24 +6235,6 @@
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "9-10 AM",
-    "year": 2,
-    "courseCode": "CS Lab",
-    "group": "AI",
-    "venue": "Computing Lab -1 CSE dept (Computing Lab -1 CSE dept)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "9-10 AM",
-    "year": 2,
-    "courseCode": "CS Lab",
-    "group": "CS",
-    "venue": "Computing Lab -1 CSE dept (Computing Lab -1 CSE dept)",
-    "type": "Lab"
   },
   {
     "day": "Friday",
