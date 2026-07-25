@@ -1081,6 +1081,114 @@
   },
   {
     "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G1",
+    "venue": "Block 9 - Room R101",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G2",
+    "venue": "Block 9 - Room R102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G3",
+    "venue": "Block 9 - Room R103",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G4",
+    "venue": "Block 9 - Room R107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G5",
+    "venue": "Block 9 - Room R109",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G6",
+    "venue": "Block 9 - Room R301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G7",
+    "venue": "Block 9 - Room R302",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G8",
+    "venue": "Block 9 - Room R303",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G9",
+    "venue": "Block 9 - Room R305",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G10",
+    "venue": "Block 9 - Room R306",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G11",
+    "venue": "Block 9 - Room R307",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "HS1101",
+    "group": "G12",
+    "venue": "Block 9 - Room R308",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
     "time": "ME2101",
     "year": 2,
     "courseCode": "ME2101",
@@ -1159,222 +1267,6 @@
     "group": "G7, G8, G9, G10, G11, G12",
     "venue": "CLH: LT103",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G1",
-    "venue": "Room R101",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G2",
-    "venue": "Room R102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G3",
-    "venue": "Room R103",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G4",
-    "venue": "Room R104",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G5",
-    "venue": "Room R105",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G6",
-    "venue": "Room R106",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G7",
-    "venue": "Room R107",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G8",
-    "venue": "Room R108",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G9",
-    "venue": "Room R109",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G10",
-    "venue": "Room R110",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G11",
-    "venue": "Room LT102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G12",
-    "venue": "Room R301",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G13",
-    "venue": "Room R302",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G14",
-    "venue": "Room R303",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G15",
-    "venue": "Room R304",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G16",
-    "venue": "Room R305",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G17",
-    "venue": "Room R306",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G18",
-    "venue": "Room R307",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G19",
-    "venue": "Room R308",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G20",
-    "venue": "Room R309",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G21",
-    "venue": "Room R310",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G22",
-    "venue": "Room LT001",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G23",
-    "venue": "Room LT002",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "CH1201",
-    "group": "G24",
-    "venue": "Room LT101",
-    "type": "Tutorial"
   },
   {
     "day": "Tuesday",
@@ -2035,114 +1927,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G13",
-    "venue": "Room R101",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G14",
-    "venue": "Room R102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G15",
-    "venue": "Room R103",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G16",
-    "venue": "Room R107",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G17",
-    "venue": "Room R109",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G18",
-    "venue": "Room R301",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G19",
-    "venue": "Room R302",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G20",
-    "venue": "Room R303",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G21",
-    "venue": "Room R305",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G22",
-    "venue": "Room R306",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G23",
-    "venue": "Room R307",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "ME1202",
-    "group": "G24",
-    "venue": "Room R308",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "CE1101",
@@ -2590,6 +2374,114 @@
     "group": "G19, G20, G21, G22, G23, G24",
     "venue": "CLH: LT003",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G13",
+    "venue": "Block 9 - Room R101",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G14",
+    "venue": "Block 9 - Room R103",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G15",
+    "venue": "Block 9 - Room R104",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G16",
+    "venue": "Block 9 - Room R105",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G17",
+    "venue": "Block 9 - Room R106",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G18",
+    "venue": "Block 9 - Room R107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G19",
+    "venue": "Block 9 - Room R108",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G20",
+    "venue": "Block 9 - Room R109",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G21",
+    "venue": "Block 9 - Room R301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G22",
+    "venue": "Block 9 - Room R302",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G23",
+    "venue": "Block 9 - Room R304",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "8 AM - 8.55 AM",
+    "year": 1,
+    "courseCode": "PH1101",
+    "group": "G24",
+    "venue": "Block 9 - Room R306",
+    "type": "Tutorial"
   },
   {
     "day": "Wednesday",
@@ -3996,111 +3888,111 @@
     "type": "Lecture"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G13",
-    "venue": "Room R101",
+    "venue": "Block 9 - Room R101",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G14",
-    "venue": "Room R103",
+    "venue": "Block 9 - Room R102",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G15",
-    "venue": "Room R104",
+    "venue": "Block 9 - Room R103",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G16",
-    "venue": "Room R105",
+    "venue": "Block 9 - Room R107",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G17",
-    "venue": "Room R106",
+    "venue": "Block 9 - Room R109",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G18",
-    "venue": "Room R107",
+    "venue": "Block 9 - Room R301",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G19",
-    "venue": "Room R108",
+    "venue": "Block 9 - Room R302",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G20",
-    "venue": "Room R109",
+    "venue": "Block 9 - Room R303",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G21",
-    "venue": "Room R301",
+    "venue": "Block 9 - Room R305",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G22",
-    "venue": "Room R302",
+    "venue": "Block 9 - Room R306",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G23",
-    "venue": "Room R304",
+    "venue": "Block 9 - Room R307",
     "type": "Tutorial"
   },
   {
-    "day": "Friday",
-    "time": "8 AM - 8.55 AM",
+    "day": "Thursday",
+    "time": "6 PM - 6.55 PM",
     "year": 1,
-    "courseCode": "MA1201",
+    "courseCode": "CH1101",
     "group": "G24",
-    "venue": "Room R306",
+    "venue": "Block 9 - Room R308",
     "type": "Tutorial"
   },
   {
@@ -4705,5 +4597,221 @@
     "group": "EC",
     "venue": "CE Dept Room",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G1",
+    "venue": "Block 9 - Room R101",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G2",
+    "venue": "Block 9 - Room R102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G3",
+    "venue": "Block 9 - Room R103",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G4",
+    "venue": "Block 9 - Room R104",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G5",
+    "venue": "Block 9 - Room R105",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G6",
+    "venue": "Block 9 - Room R106",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G7",
+    "venue": "Block 9 - Room R107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G8",
+    "venue": "Block 9 - Room R108",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G9",
+    "venue": "Block 9 - Room R109",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G10",
+    "venue": "Block 9 - Room R110",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G11",
+    "venue": "LT102",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G12",
+    "venue": "Block 9 - Room R301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G13",
+    "venue": "Block 9 - Room R302",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G14",
+    "venue": "Block 9 - Room R303",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G15",
+    "venue": "Block 9 - Room R304",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G16",
+    "venue": "Block 9 - Room R305",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G17",
+    "venue": "Block 9 - Room R306",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G18",
+    "venue": "Block 9 - Room R307",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G19",
+    "venue": "Block 9 - Room R308",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G20",
+    "venue": "Block 9 - Room R309",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G21",
+    "venue": "Block 9 - Room R310",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G22",
+    "venue": "LT001",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G23",
+    "venue": "LT002",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "6 PM - 6.55 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G24",
+    "venue": "LT101",
+    "type": "Tutorial"
   }
 ]
