@@ -22,6 +22,15 @@
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS5101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "CS5101",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -58,7 +67,25 @@
     "time": "3 - 3.55",
     "year": 4,
     "courseCode": "CS4101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101",
     "group": "CS",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103",
+    "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
   },
@@ -70,6 +97,15 @@
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3105",
+    "group": "AI",
+    "venue": "Natural Language Processing Lab (NLP Lab CSE dept)",
+    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -112,9 +148,27 @@
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4-5 PM",
+    "year": 2,
+    "courseCode": "CS2103",
+    "group": "AI",
+    "venue": "AI concept Lab (AI Concept lab CC1/New lab)",
+    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -148,6 +202,15 @@
     "time": "5 - 5.55",
     "year": 4,
     "courseCode": "CS4110",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -157,7 +220,25 @@
     "time": "5 - 5.55",
     "year": "Elective",
     "courseCode": "CS6101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
     "group": "CS",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
   },
@@ -1039,6 +1120,15 @@
     "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "CS5101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CS5101",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -1849,6 +1939,15 @@
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS6112",
+    "group": "AI",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "CS6112",
     "group": "CS",
     "venue": "R303",
     "type": "Lecture"
@@ -1861,6 +1960,24 @@
     "group": "CT",
     "venue": "R-305",
     "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3103",
+    "group": "AI",
+    "venue": "Machine Learning Lab (Machine learning lab CC1 or New Lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3103",
+    "group": "CS",
+    "venue": "Machine Learning Lab (Machine learning lab CC1 or New Lab)",
+    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -2713,6 +2830,15 @@
     "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "CS5101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CS5101",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3307,6 +3433,15 @@
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS6112",
+    "group": "AI",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "CS6112",
     "group": "CS",
     "venue": "R303",
     "type": "Lecture"
@@ -3325,7 +3460,25 @@
     "time": "3 - 3.55",
     "year": 4,
     "courseCode": "CS4101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101",
     "group": "CS",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103",
+    "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
   },
@@ -3337,6 +3490,42 @@
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-4 PM",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "AI",
+    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-4 PM",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "CS",
+    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3101",
+    "group": "AI",
+    "venue": "Operating System Lab (Operating system lab CC1 or New Lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3101",
+    "group": "CS",
+    "venue": "Operating System Lab (Operating system lab CC1 or New Lab)",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3379,6 +3568,15 @@
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3406,6 +3604,15 @@
     "time": "5 - 5.55",
     "year": 4,
     "courseCode": "CS4110",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3415,7 +3622,25 @@
     "time": "5 - 5.55",
     "year": "Elective",
     "courseCode": "CS6101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
     "group": "CS",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
   },
@@ -4351,6 +4576,15 @@
     "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "CS6109",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CS6109",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4756,8 +4990,26 @@
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS5101",
+    "group": "AI",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "CS5101",
     "group": "CS",
     "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101",
+    "group": "AI",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -4774,7 +5026,43 @@
     "time": "3 - 3.55",
     "year": "Elective",
     "courseCode": "CS6103",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103",
     "group": "CS",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3104",
+    "group": "CS",
+    "venue": "Compiler Lab (Compiler lab CSE Dept)",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3-4 PM",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "CS",
+    "venue": "Algorithms Lab (Algorithms Lab CC1)",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102",
+    "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
   },
@@ -4792,6 +5080,15 @@
     "time": "5 - 5.55",
     "year": 4,
     "courseCode": "CS4110",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4801,7 +5098,25 @@
     "time": "5 - 5.55",
     "year": "Elective",
     "courseCode": "CS6101",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
     "group": "CS",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
   },
@@ -5359,6 +5674,15 @@
     "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "CS6109",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CS6109",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -5782,9 +6106,36 @@
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS6112",
+    "group": "AI",
+    "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "CS6112",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3102",
+    "group": "AI",
+    "venue": "Computer Networks Lab (Computer Networks lab CC1 or New Lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "3-4 PM",
+    "year": 3,
+    "courseCode": "CS3102",
+    "group": "CS",
+    "venue": "Computer Networks Lab (Computer Networks lab CC1 or New Lab)",
+    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6144,6 +6495,15 @@
     "courseCode": "CS2105",
     "group": "CS",
     "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CS6109",
+    "group": "AI",
+    "venue": "LT101",
     "type": "Lecture"
   },
   {
