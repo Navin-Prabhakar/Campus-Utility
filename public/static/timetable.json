@@ -10,6 +10,24 @@
   },
   {
     "day": "Monday",
+    "time": "Wednesday",
+    "year": 3,
+    "courseCode": "CS3105",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "Thursday",
+    "year": 3,
+    "courseCode": "CS3105",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "Reserved-34",
     "year": 2,
     "courseCode": "ME2104",
@@ -1347,6 +1365,222 @@
     "courseCode": "ME3102",
     "group": "ME",
     "venue": "ME Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Monday",
+    "year": 2,
+    "courseCode": "CS2103",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Monday",
+    "year": 2,
+    "courseCode": "CS2103",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Tuesday",
+    "year": 2,
+    "courseCode": "CS2103",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Tuesday",
+    "year": 2,
+    "courseCode": "CS2103",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Wednesday",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Wednesday",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Thursday",
+    "year": 2,
+    "courseCode": "CS2104",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Thursday",
+    "year": 2,
+    "courseCode": "CS2104",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Monday",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Monday",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Tuesday",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Tuesday",
+    "year": 2,
+    "courseCode": "CS2102",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Wednesday",
+    "year": 2,
+    "courseCode": "CS2105",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Wednesday",
+    "year": 2,
+    "courseCode": "CS2105",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Thursday",
+    "year": 2,
+    "courseCode": "CS2105",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Thursday",
+    "year": 2,
+    "courseCode": "CS2105",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Monday",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Monday",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Tuesday",
+    "year": 2,
+    "courseCode": "CS2104",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Tuesday",
+    "year": 2,
+    "courseCode": "CS2104",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Wednesday",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Wednesday",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "CS",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Thursday",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "AI",
+    "venue": "CSE Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Thursday",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "CS",
+    "venue": "CSE Department Room",
     "type": "Lecture"
   },
   {
