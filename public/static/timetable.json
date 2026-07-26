@@ -3025,20 +3025,20 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 6.55 PM",
+    "time": "3 PM - 5.55 PM",
     "year": 1,
     "courseCode": "CE1101",
     "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "Respective Lab Department",
+    "venue": "CLH: LT003",
     "type": "Lab"
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 6.55 PM",
+    "time": "3 PM - 5.55 PM",
     "year": 1,
     "courseCode": "CE1101",
     "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "Respective Lab Department",
+    "venue": "CLH: LT103",
     "type": "Lab"
   },
   {
