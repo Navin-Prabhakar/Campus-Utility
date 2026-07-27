@@ -110,7 +110,7 @@ export default function BusPage() {
               let rawWeekendDriver = "SWB Assigned Staff";
               let rawWeekendContact = "";
 
-              for (let i = 0; i < 40; i++) {
+              for (let i = 0; i < 60; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
                 
@@ -123,7 +123,7 @@ export default function BusPage() {
                 }
               }
 
-              for (let i = 73; i <= 75; i++) {
+              for (let i = 70; i <= 100; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
 
