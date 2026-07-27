@@ -170,7 +170,7 @@ export default function Home() {
               let rawWeekendContact = "";
 
               // Gather Bus Name & Weekdays Contact (Rows 0 to 40)
-              for (let i = 0; i < 40; i++) {
+              for (let i = 0; i < 60; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
                 
@@ -182,7 +182,7 @@ export default function Home() {
               }
 
               // Gather Weekend Specific Contact (Rows 73 to 75)
-              for (let i = 73; i <= 75; i++) {
+              for (let i = 70; i <= 100; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
 
