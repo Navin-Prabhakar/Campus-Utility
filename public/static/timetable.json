@@ -91,15 +91,6 @@
   },
   {
     "day": "Monday",
-    "time": "3-4 PM",
-    "year": 2,
-    "courseCode": "CS2103",
-    "group": "AI",
-    "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
     "time": "03:00 - 03:55",
     "year": "Elective",
     "courseCode": "CH5105",
@@ -253,15 +244,6 @@
   },
   {
     "day": "Monday",
-    "time": "5-6 PM",
-    "year": 2,
-    "courseCode": "CS2103",
-    "group": "AI",
-    "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
     "time": "05:00 - 05:55",
     "year": 2,
     "courseCode": "CH2103",
@@ -286,15 +268,6 @@
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "6-7 PM",
-    "year": 2,
-    "courseCode": "CS2103",
-    "group": "AI",
-    "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -2062,24 +2035,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "AI",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "CS",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
     "time": "04:00 - 04:55",
     "year": 4,
     "courseCode": "CH4108",
@@ -2107,24 +2062,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "AI",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "CS",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
     "time": "05:00 - 05:55",
     "year": 3,
     "courseCode": "CH3104",
@@ -2149,24 +2086,6 @@
     "group": "CT",
     "venue": "R-305",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "AI",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3103",
-    "group": "CS",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -3610,42 +3529,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "4-5 PM",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "AI",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4-5 PM",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "CS",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "AI",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "CS",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "04:00 - 04:55",
     "year": 2,
     "courseCode": "CH2103",
@@ -3718,42 +3601,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "5-6 PM",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "AI",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5-6 PM",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "CS",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "AI",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "CS",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
     "time": "05:00 - 05:55",
     "year": 4,
     "courseCode": "CH4109",
@@ -3778,42 +3625,6 @@
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "6-7 PM",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "AI",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "6-7 PM",
-    "year": 2,
-    "courseCode": "CS2102",
-    "group": "CS",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "AI",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3101",
-    "group": "CS",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -5239,33 +5050,6 @@
   },
   {
     "day": "Thursday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3104",
-    "group": "CS",
-    "venue": "Compiler Lab (Compiler lab CSE Dept)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4-5 PM",
-    "year": 2,
-    "courseCode": "CS2101",
-    "group": "CS",
-    "venue": "Algorithms Lab (Algorithms Lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3105",
-    "group": "AI",
-    "venue": "Natural Language Processing Lab (NLP Lab New CC Lab (Middle portion))",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
     "time": "5 - 5.55",
     "year": 4,
     "courseCode": "CS4110",
@@ -5317,60 +5101,6 @@
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3104",
-    "group": "CS",
-    "venue": "Compiler Lab (Compiler lab CSE Dept)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "5-6 PM",
-    "year": 2,
-    "courseCode": "CS2101",
-    "group": "CS",
-    "venue": "Algorithms Lab (Algorithms Lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3105",
-    "group": "AI",
-    "venue": "Natural Language Processing Lab (NLP Lab New CC Lab (Middle portion))",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3104",
-    "group": "CS",
-    "venue": "Compiler Lab (Compiler lab CSE Dept)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "6-7 PM",
-    "year": 2,
-    "courseCode": "CS2101",
-    "group": "CS",
-    "venue": "Algorithms Lab (Algorithms Lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3105",
-    "group": "AI",
-    "venue": "Natural Language Processing Lab (NLP Lab New CC Lab (Middle portion))",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -6401,60 +6131,6 @@
   {
     "day": "Friday",
     "time": "3-4 PM",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "CS",
-    "venue": "Computer Networks Lab (Computer Networks lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "AI",
-    "venue": "Computer Networks Lab (Computer Networks lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "4-5 PM",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "CS",
-    "venue": "Computer Networks Lab (Computer Networks lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "AI",
-    "venue": "Computer Networks Lab (Computer Networks lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "5-6 PM",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "CS",
-    "venue": "Computer Networks Lab (Computer Networks lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "6-7 PM",
-    "year": 3,
-    "courseCode": "CS3102",
-    "group": "AI",
-    "venue": "Computer Networks Lab (Computer Networks lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "6-7 PM",
     "year": 3,
     "courseCode": "CS3102",
     "group": "CS",
