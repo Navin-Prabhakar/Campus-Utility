@@ -154,6 +154,15 @@
   },
   {
     "day": "Monday",
+    "time": "4-5 PM",
+    "year": 2,
+    "courseCode": "CS2103",
+    "group": "CS",
+    "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "04:00 - 04:55",
     "year": "Elective",
     "courseCode": "CH7103",
@@ -5010,6 +5019,15 @@
     "courseCode": "CS3104",
     "group": "CS",
     "venue": "Compiler Lab (Compiler lab CSE Dept)",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3-4 PM",
+    "year": 2,
+    "courseCode": "CS2101",
+    "group": "AI",
+    "venue": "Algorithms Lab (Algorithms Lab CC1)",
     "type": "Lab"
   },
   {
