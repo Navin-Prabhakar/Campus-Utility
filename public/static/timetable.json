@@ -1990,7 +1990,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3103",
     "group": "AI",
@@ -1999,7 +1999,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3103",
     "group": "CS",
@@ -3448,7 +3448,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 2,
     "courseCode": "CS2102",
     "group": "AI",
@@ -3457,7 +3457,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 2,
     "courseCode": "CS2102",
     "group": "CS",
@@ -3466,7 +3466,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3101",
     "group": "AI",
@@ -3475,7 +3475,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3101",
     "group": "CS",
@@ -5014,7 +5014,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3104",
     "group": "CS",
@@ -5023,7 +5023,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 2,
     "courseCode": "CS2101",
     "group": "AI",
@@ -5032,7 +5032,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 2,
     "courseCode": "CS2101",
     "group": "CS",
@@ -5041,7 +5041,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3105",
     "group": "AI",
@@ -6139,7 +6139,7 @@
   },
   {
     "day": "Friday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3102",
     "group": "AI",
@@ -6148,7 +6148,7 @@
   },
   {
     "day": "Friday",
-    "time": "3-4 PM",
+    "time": "3-7 PM",
     "year": 3,
     "courseCode": "CS3102",
     "group": "CS",
