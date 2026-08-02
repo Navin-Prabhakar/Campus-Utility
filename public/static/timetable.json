@@ -345,7 +345,7 @@
     "day": "Monday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "CE2103 (OM)",
+    "courseCode": "CE2103 (OM) ~ Fluid Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -363,7 +363,7 @@
     "day": "Monday",
     "time": "9 AM - 9.55 AM",
     "year": 3,
-    "courseCode": "CE3102 (PC)",
+    "courseCode": "CE3102 (PC) ~ Foundation Engineering",
     "group": "CE",
     "venue": "R102",
     "type": "Lecture"
@@ -624,7 +624,7 @@
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2102 (Nk/VS)",
+    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -1092,7 +1092,7 @@
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 3,
-    "courseCode": "CE3104 (MKY/SH)",
+    "courseCode": "CE3104 (MKY/SH) ~ Environmental Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -1110,7 +1110,7 @@
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "CE2104 (AKV)",
+    "courseCode": "CE2104 (AKV) ~ Geology for Engineers",
     "group": "CE",
     "venue": "R102",
     "type": "Lecture"
@@ -1263,7 +1263,7 @@
     "day": "Monday",
     "time": "4 PM - 6 PM",
     "year": 3,
-    "courseCode": "CE3104 (MKY/SH)",
+    "courseCode": "CE3104 (MKY/SH) ~ Environmental Engineering - I",
     "group": "CE",
     "venue": "CE Dept R-105",
     "type": "Lab"
@@ -1272,7 +1272,7 @@
     "day": "Monday",
     "time": "4 PM - 6 PM",
     "year": 2,
-    "courseCode": "CE2103 (OM)",
+    "courseCode": "CE2103 (OM) ~ Fluid Mechanics",
     "group": "CE",
     "venue": "CE Dept R-106",
     "type": "Lab"
@@ -1929,7 +1929,7 @@
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
     "year": 3,
-    "courseCode": "CE3102 (PC)",
+    "courseCode": "CE3102 (PC) ~ Foundation Engineering",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -1947,7 +1947,7 @@
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "CE2102 (Nk/VS)",
+    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
     "venue": "R102",
     "type": "Lecture"
@@ -2055,7 +2055,7 @@
     "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3101 (AS)",
+    "courseCode": "CE3101 (AS) ~ Design of Reinforced Concrete Structures",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -2226,7 +2226,7 @@
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2103 (OM)",
+    "courseCode": "CE2103 (OM) ~ Fluid Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -2424,7 +2424,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
-    "courseCode": "CE2103 (OM)",
+    "courseCode": "CE2103 (OM) ~ Fluid Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -2802,7 +2802,7 @@
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 3,
-    "courseCode": "CE3103 (SKKH/MS)",
+    "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -2811,7 +2811,7 @@
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "CE2101 (AT)",
+    "courseCode": "CE2101 (AT) ~ Geomatics Engineering",
     "group": "CE",
     "venue": "R102",
     "type": "Lecture"
@@ -2919,7 +2919,7 @@
     "day": "Tuesday",
     "time": "4 PM - 6 PM",
     "year": 3,
-    "courseCode": "CE3103 (SKKH/MS)",
+    "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
     "group": "CE",
     "venue": "CE Dept R-104",
     "type": "Lab"
@@ -2928,7 +2928,7 @@
     "day": "Tuesday",
     "time": "4 PM - 6 PM",
     "year": 2,
-    "courseCode": "CE2104 (AKV)",
+    "courseCode": "CE2104 (AKV) ~ Geology for Engineers",
     "group": "CE",
     "venue": "CE Dept R102",
     "type": "Lab"
@@ -3198,7 +3198,7 @@
     "day": "Wednesday",
     "time": "8 AM - 8.55 AM",
     "year": 2,
-    "courseCode": "CE2101 (AT)",
+    "courseCode": "CE2101 (AT) ~ Geomatics Engineering",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -3378,7 +3378,7 @@
     "day": "Wednesday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "CE2103 (OM)",
+    "courseCode": "CE2103 (OM) ~ Fluid Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -3558,7 +3558,7 @@
     "day": "Wednesday",
     "time": "10 AM - 12 AM",
     "year": 3,
-    "courseCode": "CE3101 (AS)",
+    "courseCode": "CE3101 (AS) ~ Design of Reinforced Concrete Structures",
     "group": "CE",
     "venue": "CE Dept Dept Classroom\n(B6 R131)",
     "type": "Lab"
@@ -3720,7 +3720,7 @@
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2104 (AKV)",
+    "courseCode": "CE2104 (AKV) ~ Geology for Engineers",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -4215,7 +4215,7 @@
     "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "CE3101 (AS)",
+    "courseCode": "CE3101 (AS) ~ Design of Reinforced Concrete Structures",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -4314,7 +4314,7 @@
     "day": "Wednesday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "CE3104 (MKY/SH)",
+    "courseCode": "CE3104 (MKY/SH) ~ Environmental Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -4593,7 +4593,7 @@
     "day": "Thursday",
     "time": "8 AM - 8.55 AM",
     "year": 2,
-    "courseCode": "CE2101 (AT)",
+    "courseCode": "CE2101 (AT) ~ Geomatics Engineering",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -4692,7 +4692,7 @@
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "CE2102 (Nk/VS)",
+    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -4863,7 +4863,7 @@
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "CE2102 (Nk/VS)",
+    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -4881,7 +4881,7 @@
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "CE3102 (PC)",
+    "courseCode": "CE3102 (PC) ~ Foundation Engineering",
     "group": "CE",
     "venue": "R102",
     "type": "Lecture"
@@ -5466,7 +5466,7 @@
     "day": "Thursday",
     "time": "3 PM - 3.55 PM",
     "year": 3,
-    "courseCode": "CE3103 (SKKH/MS)",
+    "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -5574,7 +5574,7 @@
     "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "CE3104 (MKY/SH)",
+    "courseCode": "CE3104 (MKY/SH) ~ Environmental Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -5889,7 +5889,7 @@
     "day": "Friday",
     "time": "8 AM - 11 AM",
     "year": 2,
-    "courseCode": "CE2101 (AT)",
+    "courseCode": "CE2101 (AT) ~ Geomatics Engineering",
     "group": "CE",
     "venue": "CE Dept R-106",
     "type": "Lab"
@@ -5979,7 +5979,7 @@
     "day": "Friday",
     "time": "9 AM - 11 AM",
     "year": 3,
-    "courseCode": "CE3102 (PC)",
+    "courseCode": "CE3102 (PC) ~ Foundation Engineering",
     "group": "CE",
     "venue": "CE Dept R-105",
     "type": "Lab"
@@ -6195,7 +6195,7 @@
     "day": "Friday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "CE3101 (AS)",
+    "courseCode": "CE3101 (AS) ~ Design of Reinforced Concrete Structures",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -6330,7 +6330,7 @@
     "day": "Friday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
-    "courseCode": "CE2104 (AKV)",
+    "courseCode": "CE2104 (AKV) ~ Geology for Engineers",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -6555,7 +6555,7 @@
     "day": "Friday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "CE3103 (SKKH/MS)",
+    "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -6591,7 +6591,7 @@
     "day": "Friday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "CE3103 (SKKH/MS)",
+    "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
