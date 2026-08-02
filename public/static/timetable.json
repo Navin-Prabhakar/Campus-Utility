@@ -1342,15 +1342,6 @@
   },
   {
     "day": "Monday",
-    "time": "6 PM - 7 PM",
-    "year": 2,
-    "courseCode": "Reserved for first year tutorial classes, please check first year time table before scheduling the classes in this slot",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
     "time": "6 PM - 6.55 PM",
     "year": 1,
     "courseCode": "HS1101",
