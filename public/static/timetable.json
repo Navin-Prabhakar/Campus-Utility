@@ -662,7 +662,7 @@
     "year": 3,
     "courseCode": "MM3103 ~ Engineering Polymers",
     "group": "MM",
-    "venue": "Rooms are in bracket",
+    "venue": "R303",
     "type": "Lecture"
   },
   {
@@ -833,7 +833,7 @@
     "year": 4,
     "courseCode": "MM4102",
     "group": "MM",
-    "venue": "Rooms are in bracket",
+    "venue": "R205",
     "type": "Lecture"
   },
   {
@@ -3407,7 +3407,7 @@
     "year": 2,
     "courseCode": "MM2103 ~ Thermodynamics and Phase Equilibria",
     "group": "MM",
-    "venue": "Rooms are in bracket",
+    "venue": "R304",
     "type": "Lecture"
   },
   {
@@ -4118,7 +4118,7 @@
     "year": 2,
     "courseCode": "MM2101 ~ Introduction to Metallurgical and Materials Engineering",
     "group": "MM",
-    "venue": "Rooms are in bracket",
+    "venue": "R304",
     "type": "Lecture"
   },
   {
@@ -4766,7 +4766,7 @@
     "year": 4,
     "courseCode": "MM4102",
     "group": "MM",
-    "venue": "Rooms are in bracket",
+    "venue": "R205",
     "type": "Lecture"
   },
   {
