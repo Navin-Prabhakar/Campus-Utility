@@ -912,6 +912,15 @@
     "day": "Monday",
     "time": "2 PM - 4 PM",
     "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
     "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
     "venue": "EE Dept R-109",
@@ -2478,6 +2487,15 @@
     "day": "Tuesday",
     "time": "2 PM - 4 PM",
     "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
     "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
     "venue": "EE Dept R-109",
@@ -4015,6 +4033,24 @@
   },
   {
     "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
     "courseCode": "PH5113",
@@ -5329,6 +5365,24 @@
   },
   {
     "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": 2,
     "courseCode": "EP2101 ~ Quantum Physics",
@@ -6295,6 +6349,24 @@
     "time": "4 PM - 6 PM",
     "year": 2,
     "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EC",
     "venue": "EE Dept LT102",
     "type": "Lab"
