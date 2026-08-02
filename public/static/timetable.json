@@ -982,7 +982,7 @@
   },
   {
     "day": "Monday",
-    "time": "2:00 PM - 6:00 PM",
+    "time": "2:00 PM - 3:00 PM",
     "year": 4,
     "courseCode": "CH4106",
     "group": "CT",
@@ -1126,7 +1126,7 @@
   },
   {
     "day": "Monday",
-    "time": "3:00 PM - 6:00 PM",
+    "time": "3:00 PM - 4:00 PM",
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
@@ -2548,7 +2548,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "2:00 PM - 6:00 PM",
+    "time": "2:00 PM - 3:00 PM",
     "year": 4,
     "courseCode": "CH4106",
     "group": "CT",
@@ -2809,7 +2809,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3:00 PM - 6:00 PM",
+    "time": "3:00 PM - 4:00 PM",
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
@@ -3466,7 +3466,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "9:00 AM - 6:00 PM",
+    "time": "9:00 AM - 10:00 AM",
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
@@ -3646,7 +3646,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "10:00 AM - 6:00 PM",
+    "time": "10:00 AM - 11:00 AM",
     "year": "Elective",
     "courseCode": "CH5101",
     "group": "CT",
@@ -4138,6 +4138,15 @@
     "group": "MM",
     "venue": "R304",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3:00 PM - 4:00 PM",
+    "year": "Elective",
+    "courseCode": "CH5101",
+    "group": "CT",
+    "venue": "Chem Lab",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -5428,7 +5437,7 @@
   },
   {
     "day": "Thursday",
-    "time": "2:00 PM - 6:00 PM",
+    "time": "2:00 PM - 3:00 PM",
     "year": 3,
     "courseCode": "CH3105 ~ Chemical Technology Laboratory II",
     "group": "CT",
@@ -6067,7 +6076,7 @@
   },
   {
     "day": "Friday",
-    "time": "9:00 AM - 6:00 PM",
+    "time": "9:00 AM - 10:00 AM",
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
@@ -6184,7 +6193,7 @@
   },
   {
     "day": "Friday",
-    "time": "10:00 AM - 6:00 PM",
+    "time": "10:00 AM - 11:00 AM",
     "year": 2,
     "courseCode": "CH2104 ~ Fluid Mechanics",
     "group": "CT",
@@ -6463,7 +6472,7 @@
   },
   {
     "day": "Friday",
-    "time": "2:00 PM - 6:00 PM",
+    "time": "2:00 PM - 3:00 PM",
     "year": 3,
     "courseCode": "CH3105 ~ Chemical Technology Laboratory II",
     "group": "CT",
