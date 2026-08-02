@@ -351,27 +351,17 @@ export default function SchedulePage() {
                               key={idx}
                               className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform hover:-translate-y-0 active:scale-[0.99] ${
                                 isLab
-                                  ? "bg-emerald-950 border-green-800 border-2 shadow-sm" 
+                                  ? "bg-emerald-950 border-green-800 border-2 shadow-sm"
                                   : isTut
-                                  ? "bg-zinc-700 border-amber-800 border-2 shadow-xs"   
+                                  ? "bg-zinc-700 border-amber-800 border-2 shadow-xs"
                                   : "bg-zinc-700 border-zinc-700 shadow-sm"
                               }`}
                             >
+                              {/* Left section: Course info and Venue */}
                               <div className="flex flex-col gap-2 min-w-0 flex-1 pr-1.5">
                                 <div className="flex items-center gap-2">
                                   <span className="text-[13px] font-black tracking-tight text-white truncate">
                                     {cls.courseCode}
-                                  </span>
-                                  <span
-                                    className={`text-[9px] py-1 font-black uppercase tracking-normal px-1.5 py-0.5 rounded-lg border shrink-0 ${
-                                      isLab
-                                        ? "bg-green-800 text-zinc-100 border-green-800" 
-                                        : isTut
-                                        ? "bg-amber-800 text-zinc-100 border-amber-800"   
-                                        : "bg-zinc-700 text-zinc-200 border-zinc-500"
-                                    }`}
-                                  >
-                                    {cls.type}
                                   </span>
                                 </div>
                                 <div className="text-[14px]">
@@ -379,9 +369,21 @@ export default function SchedulePage() {
                                 </div>
                               </div>
 
-                              <div className="text-right shrink-0">
-                                <span className="text-[11px] font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-2 shadow-inner font-">
-                                   {cls.time}
+                              {/* Right section: Time and Type badge stacked vertically */}
+                              <div className="flex flex-col items-end gap-2 shrink-0">
+                                <span className="text-[11px] font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-1 shadow-inner">
+                                  {cls.time}
+                                </span>
+                                <span
+                                  className={`text-[9px] font-black uppercase tracking-normal px-1.5 py-0.5 rounded-lg border ${
+                                    isLab
+                                      ? "bg-green-800 text-zinc-100 border-green-800"
+                                      : isTut
+                                      ? "bg-amber-800 text-zinc-100 border-amber-800"
+                                      : "bg-zinc-700 text-zinc-200 border-zinc-500"
+                                  }`}
+                                >
+                                  {cls.type}
                                 </span>
                               </div>
                             </div>
