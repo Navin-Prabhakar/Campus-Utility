@@ -905,7 +905,7 @@
     "year": 3,
     "courseCode": "EC3102/EC3103 (G1/G2) ~ VLSI Design / Analog Communication",
     "group": "EC",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -914,7 +914,7 @@
     "year": 3,
     "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -1139,7 +1139,7 @@
     "year": 2,
     "courseCode": "EC2103 ~ Semiconductor Devices",
     "group": "EC",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -1148,7 +1148,7 @@
     "year": 2,
     "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
     "group": "EE",
-    "venue": "EE Dept R-310",
+    "venue": "R-310",
     "type": "Lab"
   },
   {
@@ -2462,7 +2462,7 @@
     "year": 3,
     "courseCode": "EC3102/EC3103 (G1/G2) ~ VLSI Design / Analog Communication",
     "group": "EC",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -2471,7 +2471,7 @@
     "year": 3,
     "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -2750,7 +2750,7 @@
     "year": 2,
     "courseCode": "EC2103 ~ Semiconductor Devices",
     "group": "EC",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -2759,7 +2759,7 @@
     "year": 2,
     "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
     "group": "EE",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -3740,7 +3740,7 @@
     "year": 3,
     "courseCode": "EC3101 (G1) ~ Microcontroller and Embedded System",
     "group": "EC",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -3947,7 +3947,7 @@
     "year": 2,
     "courseCode": "EC2101/EE2101 (G1/G2) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EE",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -3956,7 +3956,7 @@
     "year": 2,
     "courseCode": "EC2101/EE2101 (G1/G2) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EC",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -5063,7 +5063,7 @@
     "year": 3,
     "courseCode": "EC3101 (G2) ~ Microcontroller and Embedded System",
     "group": "EC",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -5234,7 +5234,7 @@
     "year": 2,
     "courseCode": "EC2101/EE2101 (G2/G3) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EE",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -5243,7 +5243,7 @@
     "year": 2,
     "courseCode": "EC2101/EE2101 (G2/G3) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EC",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -5837,7 +5837,7 @@
     "year": 3,
     "courseCode": "EE3101 ~ Power Systems-I",
     "group": "EE",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -6089,7 +6089,7 @@
     "year": 3,
     "courseCode": "EC3101 (G3) ~ Microcontroller and Embedded System",
     "group": "EC",
-    "venue": "EE Dept R-109",
+    "venue": "R-109",
     "type": "Lab"
   },
   {
@@ -6179,7 +6179,7 @@
     "year": 2,
     "courseCode": "EC2101/EE2101 (G3/G1) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EE",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
@@ -6188,7 +6188,7 @@
     "year": 2,
     "courseCode": "EC2101/EE2101 (G3/G1) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EC",
-    "venue": "EE Dept LT102",
+    "venue": "LT102",
     "type": "Lab"
   },
   {
