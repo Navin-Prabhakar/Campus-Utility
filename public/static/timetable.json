@@ -452,24 +452,6 @@
   {
     "day": "Monday",
     "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EC3104",
-    "group": "EE",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "EC3104",
-    "group": "EC",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "PH4102",
     "group": "PH",
@@ -645,6 +627,24 @@
     "courseCode": "EC2101",
     "group": "EC",
     "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3104",
+    "group": "EE",
+    "venue": "R-109",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3104",
+    "group": "EC",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -1212,6 +1212,24 @@
     "courseCode": "MA5102",
     "group": "MC",
     "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "EC3105",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "EC3105",
+    "group": "EC",
+    "venue": "LT102",
     "type": "Lecture"
   },
   {
