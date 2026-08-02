@@ -384,7 +384,7 @@
     "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Monday",
@@ -3165,7 +3165,7 @@
     "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Wednesday",
@@ -4803,7 +4803,7 @@
     "courseCode": "CH3102 ~ Design and Applications of Nanomaterials",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Thursday",
@@ -5901,7 +5901,7 @@
     "courseCode": "CH4101",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Friday",
@@ -6054,7 +6054,7 @@
     "courseCode": "CH2103 ~ Introduction to Quantum Chemistry",
     "group": "CT",
     "venue": "R-305",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Friday",
