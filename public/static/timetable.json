@@ -338,7 +338,7 @@
     "year": 3,
     "courseCode": "EP3102 ~ Data Science for Physicists",
     "group": "EP",
-    "venue": "Physics Dept R-101",
+    "venue": "R-101",
     "type": "Lab"
   },
   {
@@ -455,7 +455,7 @@
     "year": 3,
     "courseCode": "EP3102 ~ Data Science for Physicists",
     "group": "EP",
-    "venue": "Physics Dept R-101",
+    "venue": "R-101",
     "type": "Lab"
   },
   {
@@ -941,7 +941,7 @@
     "year": 4,
     "courseCode": "PH4105",
     "group": "PH",
-    "venue": "Physics Dept R-101",
+    "venue": "R-101",
     "type": "Lab"
   },
   {
@@ -950,7 +950,7 @@
     "year": 4,
     "courseCode": "EP4105",
     "group": "EP",
-    "venue": "Physics Dept R-304",
+    "venue": "R-304",
     "type": "Lab"
   },
   {
@@ -2021,7 +2021,7 @@
     "year": 3,
     "courseCode": "EP3104 ~ Solid State Physics",
     "group": "EP",
-    "venue": "Physics Dept R205",
+    "venue": "R205",
     "type": "Lab"
   },
   {
@@ -2732,7 +2732,7 @@
     "year": 4,
     "courseCode": "PH4104",
     "group": "PH",
-    "venue": "Physics Dept R-101",
+    "venue": "R-101",
     "type": "Lab"
   },
   {
@@ -2741,7 +2741,7 @@
     "year": 3,
     "courseCode": "EP3103 ~ Digital Electronics and Microprocessors",
     "group": "EP",
-    "venue": "Physics Dept R205",
+    "venue": "R205",
     "type": "Lab"
   },
   {
@@ -3407,7 +3407,7 @@
     "year": 2,
     "courseCode": "EP2102 ~ Optics and Lasers",
     "group": "EP",
-    "venue": "Physics Dept R-103",
+    "venue": "R-103",
     "type": "Lab"
   },
   {
@@ -3416,7 +3416,7 @@
     "year": 3,
     "courseCode": "EP3105 ~ Instrumentation Techniques",
     "group": "EP",
-    "venue": "Physics Dept R205",
+    "venue": "R205",
     "type": "Lab"
   },
   {
@@ -3938,7 +3938,7 @@
     "year": 3,
     "courseCode": "EP3102 ~ Data Science for Physicists",
     "group": "EP",
-    "venue": "Physics Dept R205",
+    "venue": "R205",
     "type": "Lab"
   },
   {
@@ -4532,7 +4532,7 @@
     "year": "Elective",
     "courseCode": "PH5103",
     "group": "PH",
-    "venue": "Physics Dept R-101",
+    "venue": "R-101",
     "type": "Lab"
   },
   {
@@ -5252,7 +5252,7 @@
     "year": 3,
     "courseCode": "EP3101 ~ Computational Techniques",
     "group": "EP",
-    "venue": "Physics Dept R205",
+    "venue": "R205",
     "type": "Lab"
   },
   {
