@@ -39,7 +39,7 @@
     "day": "Monday",
     "time": "02:00 - 02:55",
     "year": 3,
-    "courseCode": "CH3102",
+    "courseCode": "CH3102 ~ Design and Applications of Nanomaterials",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -93,7 +93,7 @@
     "day": "Monday",
     "time": "03:00 - 03:55",
     "year": 3,
-    "courseCode": "CH3103",
+    "courseCode": "CH3103 ~ Chemical Kinetics and Electrochemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -141,13 +141,13 @@
     "courseCode": "CH7103",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Monday",
     "time": "04:00 - 04:55",
     "year": 2,
-    "courseCode": "CH2104",
+    "courseCode": "CH2104 ~ Fluid Mechanics",
     "group": "CT",
     "venue": "R-102",
     "type": "Lecture"
@@ -210,7 +210,7 @@
     "day": "Monday",
     "time": "05:00 - 05:55",
     "year": 2,
-    "courseCode": "CH2103",
+    "courseCode": "CH2103 ~ Introduction to Quantum Chemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -381,7 +381,7 @@
     "day": "Monday",
     "time": "09:00 -  09:55",
     "year": 3,
-    "courseCode": "CH3101",
+    "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -516,7 +516,7 @@
     "day": "Monday",
     "time": "10:00 - 10.55",
     "year": 3,
-    "courseCode": "CH3101",
+    "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -714,7 +714,7 @@
     "day": "Monday",
     "time": "11:00 - 11:55",
     "year": 3,
-    "courseCode": "CH3104",
+    "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -982,6 +982,15 @@
   },
   {
     "day": "Monday",
+    "time": "2:00 PM - 6:00 PM",
+    "year": 4,
+    "courseCode": "CH4106",
+    "group": "CT",
+    "venue": "Chem Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "PH1101",
@@ -1121,7 +1130,7 @@
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
-    "venue": "Lab1",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -1641,7 +1650,7 @@
     "day": "Tuesday",
     "time": "02:00 - 02:55",
     "year": 3,
-    "courseCode": "CH3102",
+    "courseCode": "CH3102 ~ Design and Applications of Nanomaterials",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -1713,7 +1722,7 @@
     "day": "Tuesday",
     "time": "03:00 - 03:55",
     "year": 3,
-    "courseCode": "CH3104",
+    "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -1740,7 +1749,7 @@
     "day": "Tuesday",
     "time": "04:00 - 04:55",
     "year": 2,
-    "courseCode": "CH2101",
+    "courseCode": "CH2101 ~ Organic Chemistry",
     "group": "CT",
     "venue": "R-305",
     "type": "Lecture"
@@ -1749,7 +1758,7 @@
     "day": "Tuesday",
     "time": "04:00 - 04:55",
     "year": 3,
-    "courseCode": "CH3103",
+    "courseCode": "CH3103 ~ Chemical Kinetics and Electrochemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -1821,7 +1830,7 @@
     "day": "Tuesday",
     "time": "05:00 - 05:55",
     "year": 3,
-    "courseCode": "CH3101",
+    "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -1950,7 +1959,7 @@
     "courseCode": "CH4102",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Tuesday",
@@ -2118,7 +2127,7 @@
     "day": "Tuesday",
     "time": "10:00 - 10.55",
     "year": 2,
-    "courseCode": "CH2105",
+    "courseCode": "CH2105 ~ Chemical Process Calculations",
     "group": "CT",
     "venue": "R-102",
     "type": "Lecture"
@@ -2539,6 +2548,15 @@
   },
   {
     "day": "Tuesday",
+    "time": "2:00 PM - 6:00 PM",
+    "year": 4,
+    "courseCode": "CH4106",
+    "group": "CT",
+    "venue": "Chem Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "2 PM - 3 PM",
     "year": 1,
     "courseCode": "ME1102",
@@ -2795,7 +2813,7 @@
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
-    "venue": "Lab1",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -3108,7 +3126,7 @@
     "day": "Wednesday",
     "time": "03:00 - 03:55",
     "year": 3,
-    "courseCode": "CH3103",
+    "courseCode": "CH3103 ~ Chemical Kinetics and Electrochemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -3117,7 +3135,7 @@
     "day": "Wednesday",
     "time": "03:00 - 03:55",
     "year": 2,
-    "courseCode": "CH2104",
+    "courseCode": "CH2104 ~ Fluid Mechanics",
     "group": "CT",
     "venue": "R-102     CBE",
     "type": "Lecture"
@@ -3135,7 +3153,7 @@
     "day": "Wednesday",
     "time": "04:00 - 04:55",
     "year": 3,
-    "courseCode": "CH3104",
+    "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -3144,7 +3162,7 @@
     "day": "Wednesday",
     "time": "05:00 - 05:55",
     "year": 3,
-    "courseCode": "CH3104",
+    "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -3153,7 +3171,7 @@
     "day": "Wednesday",
     "time": "05:00 - 05:55",
     "year": 2,
-    "courseCode": "CH2105",
+    "courseCode": "CH2105 ~ Chemical Process Calculations",
     "group": "CT",
     "venue": "R-102     CBE",
     "type": "Lecture"
@@ -3441,18 +3459,18 @@
     "day": "Wednesday",
     "time": "09:00 -  09:55",
     "year": 2,
-    "courseCode": "CH2101",
+    "courseCode": "CH2101 ~ Organic Chemistry",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Wednesday",
-    "time": "9:00 AM - 12:00 AM",
+    "time": "9:00 AM - 6:00 PM",
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
-    "venue": "Lab1",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -3621,18 +3639,18 @@
     "day": "Wednesday",
     "time": "10:00 - 10.55",
     "year": 2,
-    "courseCode": "CH2101",
+    "courseCode": "CH2101 ~ Organic Chemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
   },
   {
     "day": "Wednesday",
-    "time": "10:00 AM - 1:00 PM",
+    "time": "10:00 AM - 6:00 PM",
     "year": "Elective",
     "courseCode": "CH5101",
     "group": "CT",
-    "venue": "Lab3",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -3801,7 +3819,7 @@
     "day": "Wednesday",
     "time": "11:00 - 11:55",
     "year": 2,
-    "courseCode": "CH2102",
+    "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -4120,15 +4138,6 @@
     "group": "MM",
     "venue": "R304",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3:00 PM - 6:00 PM",
-    "year": "Elective",
-    "courseCode": "CH5101",
-    "group": "CT",
-    "venue": "Lab3",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -4512,7 +4521,7 @@
     "day": "Thursday",
     "time": "03:00 - 03:55",
     "year": 2,
-    "courseCode": "CH2103",
+    "courseCode": "CH2103 ~ Introduction to Quantum Chemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -4521,7 +4530,7 @@
     "day": "Thursday",
     "time": "03:00 - 03:55",
     "year": 2,
-    "courseCode": "CH2105",
+    "courseCode": "CH2105 ~ Chemical Process Calculations",
     "group": "CT",
     "venue": "R-102",
     "type": "Lecture"
@@ -4791,7 +4800,7 @@
     "day": "Thursday",
     "time": "09:00 -  09:55",
     "year": 3,
-    "courseCode": "CH3102",
+    "courseCode": "CH3102 ~ Design and Applications of Nanomaterials",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -4980,10 +4989,10 @@
     "day": "Thursday",
     "time": "10:00 - 10.55",
     "year": 2,
-    "courseCode": "CH2102",
+    "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Thursday",
@@ -5169,7 +5178,7 @@
     "day": "Thursday",
     "time": "11:00 - 11:55",
     "year": 2,
-    "courseCode": "CH2102",
+    "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -5415,6 +5424,15 @@
     "courseCode": "MM3103 ~ Engineering Polymers",
     "group": "MM",
     "venue": "MME Dept Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "2:00 PM - 6:00 PM",
+    "year": 3,
+    "courseCode": "CH3105 ~ Chemical Technology Laboratory II",
+    "group": "CT",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -5820,7 +5838,7 @@
     "courseCode": "CH4103",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Friday",
@@ -5862,7 +5880,7 @@
     "day": "Friday",
     "time": "03:00 - 03:55",
     "year": 2,
-    "courseCode": "CH2104",
+    "courseCode": "CH2104 ~ Fluid Mechanics",
     "group": "CT",
     "venue": "R-102",
     "type": "Lecture"
@@ -5871,7 +5889,7 @@
     "day": "Friday",
     "time": "04:00 - 04:55",
     "year": 2,
-    "courseCode": "CH2103",
+    "courseCode": "CH2103 ~ Introduction to Quantum Chemistry",
     "group": "CT",
     "venue": "R-305",
     "type": "Lecture"
@@ -5889,7 +5907,7 @@
     "day": "Friday",
     "time": "05:00 - 05:55",
     "year": 2,
-    "courseCode": "CH2101",
+    "courseCode": "CH2101 ~ Organic Chemistry",
     "group": "CT",
     "venue": "R-305",
     "type": "Lecture"
@@ -6033,7 +6051,7 @@
     "day": "Friday",
     "time": "09:00 -  09:55",
     "year": 2,
-    "courseCode": "CH2103",
+    "courseCode": "CH2103 ~ Introduction to Quantum Chemistry",
     "group": "CT",
     "venue": "R-305",
     "type": "Lecture"
@@ -6049,11 +6067,11 @@
   },
   {
     "day": "Friday",
-    "time": "9:00 AM - 12:00 AM",
+    "time": "9:00 AM - 6:00 PM",
     "year": 1,
     "courseCode": "CH1101",
     "group": "CT",
-    "venue": "Lab1",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -6166,11 +6184,11 @@
   },
   {
     "day": "Friday",
-    "time": "10:00 AM - 1:00 PM",
+    "time": "10:00 AM - 6:00 PM",
     "year": 2,
-    "courseCode": "CH2104",
+    "courseCode": "CH2104 ~ Fluid Mechanics",
     "group": "CT",
-    "venue": "Lab4",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
@@ -6276,7 +6294,7 @@
     "day": "Friday",
     "time": "11:00 - 11:55",
     "year": 3,
-    "courseCode": "CH3101",
+    "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -6402,7 +6420,7 @@
     "day": "Friday",
     "time": "12:00 - 12:55",
     "year": 2,
-    "courseCode": "CH2102",
+    "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
@@ -6441,6 +6459,15 @@
     "courseCode": "EC3101 (G3) ~ Microcontroller and Embedded System",
     "group": "EC",
     "venue": "R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "2:00 PM - 6:00 PM",
+    "year": 3,
+    "courseCode": "CH3105 ~ Chemical Technology Laboratory II",
+    "group": "CT",
+    "venue": "Chem Lab",
     "type": "Lab"
   },
   {
