@@ -219,8 +219,8 @@
     "day": "Monday",
     "time": "8 AM - 8.55 AM",
     "year": 1,
-    "courseCode": "ME1102",
-    "group": "G13, G14, G15, G16, G17, G18",
+    "courseCode": "CE1101",
+    "group": "G7, G8, G9, G10, G11, G12",
     "venue": "CLH: LT003",
     "type": "Lecture"
   },
@@ -228,8 +228,8 @@
     "day": "Monday",
     "time": "8 AM - 8.55 AM",
     "year": 1,
-    "courseCode": "CE1101",
-    "group": "G7, G8, G9, G10, G11, G12",
+    "courseCode": "ME1102",
+    "group": "G13, G14, G15, G16, G17, G18",
     "venue": "CLH: LT103",
     "type": "Lecture"
   },
@@ -240,6 +240,15 @@
     "courseCode": "CE1101",
     "group": "G1, G2, G3, G4, G5, G6",
     "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 AM - 9.55 AM",
+    "year": 1,
+    "courseCode": "CH1101",
+    "group": "G13, G14, G15, G16, G17, G18",
+    "venue": "CLH: LT103",
     "type": "Lecture"
   },
   {
@@ -348,24 +357,6 @@
     "courseCode": "CE6128 (SKKH)",
     "group": "CE",
     "venue": "R-105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "9 AM - 9.55 AM",
-    "year": "Elective",
-    "courseCode": "CE6116",
-    "group": "CE",
-    "venue": "R-106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "9 AM - 9.55 AM",
-    "year": 4,
-    "courseCode": "CE4101 (KR/AS)",
-    "group": "CE",
-    "venue": "R-106",
     "type": "Lecture"
   },
   {
@@ -803,28 +794,19 @@
   {
     "day": "Monday",
     "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "MA1101",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "PH1101",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2104",
     "group": "MC",
     "venue": "MA2102(T)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "MA7102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
     "type": "Lecture"
   },
   {
@@ -1000,29 +982,11 @@
   },
   {
     "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "HS3101",
-    "group": "ES",
-    "venue": "B1/202",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "CH1101",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
     "time": "2 PM - 2.55 PM",
     "year": 1,
     "courseCode": "HS1101",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT103",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
@@ -1033,6 +997,15 @@
     "group": "MC",
     "venue": "MA2102(T)",
     "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 3 PM",
+    "year": 4,
+    "courseCode": "EP4105",
+    "group": "EP",
+    "venue": "R-304",
+    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1075,8 +1048,8 @@
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "PH1101",
-    "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "CLH: LT103",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
@@ -1163,6 +1136,15 @@
   {
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
+    "year": "Elective",
+    "courseCode": "PH6124",
+    "group": "PH",
+    "venue": "R-304",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EP2102",
     "group": "EP",
@@ -1185,6 +1167,15 @@
     "courseCode": "CE3104 (MKY/SH)",
     "group": "CE",
     "venue": "R-104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 3.55 PM",
+    "year": "Elective",
+    "courseCode": "CE6101 (PR)",
+    "group": "CE",
+    "venue": "R-106",
     "type": "Lecture"
   },
   {
@@ -1213,15 +1204,6 @@
     "group": "CT",
     "venue": "Lab1",
     "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 3.55 PM",
-    "year": 2,
-    "courseCode": "HS2101",
-    "group": "ES",
-    "venue": "B1/202",
-    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -1317,7 +1299,7 @@
     "day": "Monday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
-    "courseCode": "CE5110",
+    "courseCode": "CE6116",
     "group": "CE",
     "venue": "R-105",
     "type": "Lecture"
@@ -1325,8 +1307,8 @@
   {
     "day": "Monday",
     "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6120 (Nk)",
+    "year": 4,
+    "courseCode": "CE4101 (KR/AS)",
     "group": "CE",
     "venue": "R-105",
     "type": "Lecture"
@@ -1362,8 +1344,8 @@
     "day": "Monday",
     "time": "5 PM - 5.55 PM",
     "year": 1,
-    "courseCode": "CH1101",
-    "group": "G13, G14, G15, G16, G17, G18",
+    "courseCode": "PH1101",
+    "group": "G1, G2, G3, G4, G5, G6",
     "venue": "CLH: LT003",
     "type": "Lecture"
   },
@@ -1443,7 +1425,7 @@
     "day": "Monday",
     "time": "5 PM - 5.55 PM",
     "year": "Elective",
-    "courseCode": "CE5110",
+    "courseCode": "CE6116",
     "group": "CE",
     "venue": "R-105",
     "type": "Lecture"
@@ -1451,8 +1433,8 @@
   {
     "day": "Monday",
     "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6120 (Nk)",
+    "year": 4,
+    "courseCode": "CE4101 (KR/AS)",
     "group": "CE",
     "venue": "R-105",
     "type": "Lecture"
@@ -1464,15 +1446,6 @@
     "courseCode": "CE6109 (RKB)",
     "group": "CE",
     "venue": "R-106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6101 (PR)",
-    "group": "CE",
-    "venue": "R102",
     "type": "Lecture"
   },
   {
@@ -1756,6 +1729,42 @@
   },
   {
     "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "3-6 PM",
     "year": 3,
     "courseCode": "CS3103",
@@ -1792,6 +1801,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "04:00 - 04:55",
     "year": 2,
     "courseCode": "CH2101",
@@ -1806,6 +1833,60 @@
     "courseCode": "CH3103",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "CS",
+    "venue": "LT001",
     "type": "Lecture"
   },
   {
@@ -1839,18 +1920,9 @@
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
     "year": 1,
-    "courseCode": "MA1101",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "courseCode": "CH1101",
+    "group": "G19, G20, G21, G22, G23, G24",
     "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 1,
-    "courseCode": "HS1101",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
     "type": "Lecture"
   },
   {
@@ -1910,6 +1982,15 @@
   {
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5109 (SG/KR)",
+    "group": "CE",
+    "venue": "R-105",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "MM4105",
     "group": "MM",
@@ -1923,6 +2004,15 @@
     "courseCode": "CH4102",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 1,
+    "courseCode": "ME1102",
+    "group": "G19, G20, G21, G22, G23, G24",
+    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
@@ -2001,7 +2091,7 @@
     "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5106 (AKJ)",
+    "courseCode": "CE5109 (SG/KR)",
     "group": "CE",
     "venue": "R-105",
     "type": "Lecture"
@@ -2010,7 +2100,7 @@
     "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": "Elective",
-    "courseCode": "CE5109 (SG/KR)",
+    "courseCode": "CE5106 (AKJ)",
     "group": "CE",
     "venue": "R-106",
     "type": "Lecture"
@@ -2090,6 +2180,15 @@
   {
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "MA7102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4109",
     "group": "MC",
@@ -2130,6 +2229,15 @@
     "courseCode": "EC3105",
     "group": "EC",
     "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -2251,33 +2359,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "HS3102",
-    "group": "ES",
-    "venue": "B1/219",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "EE1101",
-    "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "ME1102",
-    "group": "G19, G20, G21, G22, G23, G24",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4106",
@@ -2325,15 +2406,6 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": 3,
-    "courseCode": "EC3102",
-    "group": "EC",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
     "courseCode": "EE3102",
     "group": "EE",
     "venue": "R-310",
@@ -2346,15 +2418,6 @@
     "courseCode": "PH4103",
     "group": "PH",
     "venue": "R-101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "EP4105",
-    "group": "EP",
-    "venue": "R-304",
     "type": "Lecture"
   },
   {
@@ -2476,11 +2539,11 @@
   },
   {
     "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 1,
-    "courseCode": "MA1101",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
-    "venue": "CLH: LT003",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "HS7104",
+    "group": "ES",
+    "venue": "B1/211",
     "type": "Lecture"
   },
   {
@@ -2509,15 +2572,6 @@
     "group": "CE",
     "venue": "R-104",
     "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": "Elective",
-    "courseCode": "HS7104",
-    "group": "ES",
-    "venue": "B1/211",
-    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -2784,7 +2838,7 @@
     "day": "Tuesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "EC3103",
+    "courseCode": "EC3102",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
@@ -2796,6 +2850,15 @@
     "courseCode": "EE3101",
     "group": "EE",
     "venue": "R-310",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 4.55 PM",
+    "year": "Elective",
+    "courseCode": "PH6124",
+    "group": "PH",
+    "venue": "R-101",
     "type": "Lecture"
   },
   {
@@ -2989,42 +3052,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 - 3.55",
-    "year": 4,
-    "courseCode": "CS4101",
-    "group": "AI",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 - 3.55",
-    "year": 4,
-    "courseCode": "CS4101",
-    "group": "CS",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 - 3.55",
-    "year": "Elective",
-    "courseCode": "CS6103",
-    "group": "AI",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 - 3.55",
-    "year": "Elective",
-    "courseCode": "CS6103",
-    "group": "CS",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
     "time": "3-6 PM",
     "year": 2,
     "courseCode": "CS2102",
@@ -3088,24 +3115,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "4 - 4.55",
-    "year": "Elective",
-    "courseCode": "CS5102",
-    "group": "AI",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 - 4.55",
-    "year": "Elective",
-    "courseCode": "CS5102",
-    "group": "CS",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
     "time": "04:00 - 04:55",
     "year": 4,
     "courseCode": "CH4108",
@@ -3120,60 +3129,6 @@
     "courseCode": "CH3104",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 - 5.55",
-    "year": 4,
-    "courseCode": "CS4110",
-    "group": "AI",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 - 5.55",
-    "year": 4,
-    "courseCode": "CS4110",
-    "group": "CS",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "CS6101",
-    "group": "AI",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "CS6101",
-    "group": "CS",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "MA5104",
-    "group": "AI",
-    "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "MA5104",
-    "group": "CS",
-    "venue": "LT101",
     "type": "Lecture"
   },
   {
@@ -3319,6 +3274,15 @@
     "group": "G12",
     "venue": "Block 9 - Room R308",
     "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "9 AM - 9.55 AM",
+    "year": 1,
+    "courseCode": "EE1101",
+    "group": "G1, G2, G3, G4, G5, G6",
+    "venue": "CLH: LT003",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3486,8 +3450,8 @@
     "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
-    "courseCode": "MA1101",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "courseCode": "PH1101",
+    "group": "G1, G2, G3, G4, G5, G6",
     "venue": "CLH: LT003",
     "type": "Lecture"
   },
@@ -3692,6 +3656,15 @@
   {
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "MA3103",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4110",
     "group": "MC",
@@ -3714,6 +3687,15 @@
     "courseCode": "EC2101",
     "group": "EC",
     "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -3827,15 +3809,6 @@
   {
     "day": "Wednesday",
     "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "PH1101",
-    "group": "G1, G2, G3, G4, G5, G6",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4107",
     "group": "MC",
@@ -3873,15 +3846,6 @@
     "day": "Wednesday",
     "time": "12 Noon - 12.55 PM",
     "year": 3,
-    "courseCode": "EC3102",
-    "group": "EC",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
     "courseCode": "EE3102",
     "group": "EE",
     "venue": "R-310",
@@ -3912,15 +3876,6 @@
     "courseCode": "PH4109",
     "group": "PH",
     "venue": "R-304",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "PH5105",
-    "group": "PH",
-    "venue": "R-103",
     "type": "Lecture"
   },
   {
@@ -4044,7 +3999,7 @@
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
-    "courseCode": "MA1101",
+    "courseCode": "HS1101",
     "group": "G9, G10, G11, G12, G13, G14, G15, G16",
     "venue": "CLH: LT003",
     "type": "Lecture"
@@ -4101,6 +4056,15 @@
     "courseCode": "EP2103",
     "group": "EP",
     "venue": "R-103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": "Elective",
+    "courseCode": "PH5105",
+    "group": "PH",
+    "venue": "R205",
     "type": "Lecture"
   },
   {
@@ -4170,7 +4134,7 @@
     "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "EC3103",
+    "courseCode": "EC3102",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
@@ -4215,18 +4179,9 @@
     "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
-    "courseCode": "CE6116",
-    "group": "CE",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 4,
-    "courseCode": "CE4101 (KR/AS)",
-    "group": "CE",
-    "venue": "R102",
+    "courseCode": "PH6124",
+    "group": "PH",
+    "venue": "R-101",
     "type": "Lecture"
   },
   {
@@ -4317,24 +4272,6 @@
     "courseCode": "PH5105",
     "group": "PH",
     "venue": "R-101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6116",
-    "group": "CE",
-    "venue": "R102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 4,
-    "courseCode": "CE4101 (KR/AS)",
-    "group": "CE",
-    "venue": "R102",
     "type": "Lecture"
   },
   {
@@ -4494,6 +4431,15 @@
     "day": "Thursday",
     "time": "03:00 - 03:55",
     "year": 2,
+    "courseCode": "CH2103",
+    "group": "CT",
+    "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "03:00 - 03:55",
+    "year": 2,
     "courseCode": "CH2105",
     "group": "CT",
     "venue": "R-102",
@@ -4578,15 +4524,6 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "05:00 - 05:55",
-    "year": 2,
-    "courseCode": "CH2103",
-    "group": "CT",
-    "venue": "R-305",
     "type": "Lecture"
   },
   {
@@ -4762,19 +4699,10 @@
   },
   {
     "day": "Thursday",
-    "time": "9 AM - 9.55 AM",
-    "year": 3,
-    "courseCode": "HS3102",
-    "group": "ES",
-    "venue": "B1/219",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
-    "courseCode": "MA1101",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "courseCode": "ME1102",
+    "group": "G13, G14, G15, G16, G17, G18",
     "venue": "CLH: LT003",
     "type": "Lecture"
   },
@@ -4989,18 +4917,18 @@
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5103 (SH)",
-    "group": "CE",
-    "venue": "R-106",
+    "courseCode": "PH6124",
+    "group": "PH",
+    "venue": "R-101",
     "type": "Lecture"
   },
   {
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5104 (RKB/AJ)",
+    "courseCode": "CE5103 (SH)",
     "group": "CE",
-    "venue": "R-104",
+    "venue": "R-106",
     "type": "Lecture"
   },
   {
@@ -5096,24 +5024,6 @@
   {
     "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "MA1101",
-    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
-    "venue": "CLH: LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "ME1102",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2103",
     "group": "MC",
@@ -5124,7 +5034,25 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": "Elective",
-    "courseCode": "CE5109 (SG/KR)",
+    "courseCode": "MA7102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5110",
+    "group": "CE",
+    "venue": "R-106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "CE6120 (Nk)",
     "group": "CE",
     "venue": "R-106",
     "type": "Lecture"
@@ -5194,6 +5122,15 @@
   },
   {
     "day": "Thursday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 3,
+    "courseCode": "HS3101",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "MA3102",
@@ -5232,9 +5169,9 @@
     "day": "Thursday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
-    "courseCode": "MA1101",
-    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
-    "venue": "CLH: LT103",
+    "courseCode": "PH1101",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
@@ -5316,15 +5253,6 @@
     "courseCode": "MM3104",
     "group": "MM",
     "venue": "R-108",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "HS3103",
-    "group": "ES",
-    "venue": "B1/219",
     "type": "Lecture"
   },
   {
@@ -5420,10 +5348,10 @@
   {
     "day": "Thursday",
     "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3103",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
+    "year": 1,
+    "courseCode": "EE1101",
+    "group": "G7, G8, G9, G10, G11, G12",
+    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
@@ -5680,15 +5608,6 @@
   },
   {
     "day": "Friday",
-    "time": "8 AM - 8.55 AM",
-    "year": 1,
-    "courseCode": "PH1101",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
     "time": "9 AM - 9.55 AM",
     "year": 1,
     "courseCode": "EE1101",
@@ -5736,7 +5655,7 @@
     "day": "Friday",
     "time": "9 AM - 9.55 AM",
     "year": "Elective",
-    "courseCode": "CE6128 (SKKH)",
+    "courseCode": "CE6130 (SG/KR)",
     "group": "CE",
     "venue": "R-105",
     "type": "Lecture"
@@ -5745,7 +5664,7 @@
     "day": "Friday",
     "time": "9 AM - 9.55 AM",
     "year": "Elective",
-    "courseCode": "CE6130 (SG/KR)",
+    "courseCode": "CE6128 (SKKH)",
     "group": "CE",
     "venue": "R-106",
     "type": "Lecture"
@@ -5820,6 +5739,15 @@
     "courseCode": "PH1101",
     "group": "G1, G2, G3, G4, G5, G6",
     "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5109 (SG/KR)",
+    "group": "CE",
+    "venue": "R-105",
     "type": "Lecture"
   },
   {
@@ -5900,7 +5828,7 @@
     "year": "Elective",
     "courseCode": "CE5112 (SV/MS)",
     "group": "CE",
-    "venue": "R102",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -5960,15 +5888,6 @@
   {
     "day": "Friday",
     "time": "12 Noon - 12.55 PM",
-    "year": 1,
-    "courseCode": "EE1101",
-    "group": "G7, G8, G9, G10, G11, G12",
-    "venue": "CLH: LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "PH4109",
     "group": "PH",
@@ -6006,9 +5925,36 @@
     "day": "Friday",
     "time": "12 Noon - 12.55 PM",
     "year": "Elective",
-    "courseCode": "CE5113 (BAK)",
+    "courseCode": "CE5104 (RKB/AJ)",
+    "group": "CE",
+    "venue": "R-106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "CE6116",
     "group": "CE",
     "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 4,
+    "courseCode": "CE4101 (KR/AS)",
+    "group": "CE",
+    "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5113 (BAK)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -6067,10 +6013,19 @@
   },
   {
     "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "HS7104",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
-    "courseCode": "MA1101",
-    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "courseCode": "CH1101",
+    "group": "G13, G14, G15, G16, G17, G18",
     "venue": "CLH: LT003",
     "type": "Lecture"
   },
@@ -6126,15 +6081,6 @@
     "courseCode": "MM2101",
     "group": "MM",
     "venue": "Rooms are in bracket",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 4.55 PM",
-    "year": 1,
-    "courseCode": "CH1101",
-    "group": "G13, G14, G15, G16, G17, G18",
-    "venue": "CLH: LT003",
     "type": "Lecture"
   },
   {
