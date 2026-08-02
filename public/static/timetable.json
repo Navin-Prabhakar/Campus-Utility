@@ -901,6 +901,33 @@
   },
   {
     "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3102",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EE3102",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "2 PM - 3 PM",
     "year": 4,
     "courseCode": "EP4105",
@@ -1009,6 +1036,33 @@
   },
   {
     "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3102",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EE3102",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": "Elective",
     "courseCode": "PH5105",
@@ -1114,6 +1168,24 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2103",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2103",
+    "group": "EE",
+    "venue": "EE Dept R-310",
+    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1240,6 +1312,24 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2103",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2103",
+    "group": "EE",
+    "venue": "EE Dept R-310",
+    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -2431,6 +2521,33 @@
   },
   {
     "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3102",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EE3102",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "EP3103",
@@ -2629,6 +2746,33 @@
   },
   {
     "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3102",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EE3102",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": "Elective",
     "courseCode": "PH7204",
@@ -2710,6 +2854,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2103",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2103",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
     "courseCode": "PH6124",
@@ -2779,6 +2941,24 @@
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2103",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2103",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -3709,6 +3889,24 @@
   },
   {
     "day": "Wednesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G1)",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G1)",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "2 PM - 2.55 PM",
     "year": 4,
     "courseCode": "PH4101",
@@ -3774,19 +3972,37 @@
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102(T)",
     "group": "EE",
     "venue": "LT102",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102(T)",
     "group": "EC",
     "venue": "LT102",
-    "type": "Lecture"
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G1)",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G1)",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3907,6 +4123,42 @@
   },
   {
     "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
     "courseCode": "PH5113",
@@ -4021,6 +4273,42 @@
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -5023,6 +5311,24 @@
   },
   {
     "day": "Thursday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G2)",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G2)",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": "Elective",
     "courseCode": "PH5102",
@@ -5104,6 +5410,24 @@
   },
   {
     "day": "Thursday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G2)",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G2)",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EP2103",
@@ -5182,6 +5506,42 @@
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5272,6 +5632,42 @@
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5788,6 +6184,15 @@
   },
   {
     "day": "Friday",
+    "time": "11 AM - 1 PM",
+    "year": 3,
+    "courseCode": "EE3101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
     "courseCode": "CE5102 (MKY)",
@@ -5875,6 +6280,15 @@
     "group": "MC",
     "venue": "R-309",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 PM - 2 AM",
+    "year": 3,
+    "courseCode": "EE3101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6031,6 +6445,24 @@
   },
   {
     "day": "Friday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G3)",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G3)",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "CH1101",
@@ -6064,6 +6496,24 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G3)",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 5 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G3)",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6112,6 +6562,42 @@
   },
   {
     "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
     "courseCode": "PH5101",
@@ -6154,6 +6640,42 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EC2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 7 PM",
+    "year": 2,
+    "courseCode": "EE2101",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Friday",
