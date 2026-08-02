@@ -901,6 +901,24 @@
   },
   {
     "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3102 ~ VLSI Design",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EE3102 ~ Modern Control Theory",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "2 PM - 3 PM",
     "year": 4,
     "courseCode": "EP4105",
@@ -1114,6 +1132,24 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2103 ~ Semiconductor Devices",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
+    "group": "EE",
+    "venue": "EE Dept R-310",
+    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -2431,6 +2467,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3102 ~ VLSI Design",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EE3102 ~ Modern Control Theory",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "EP3103 ~ Digital Electronics and Microprocessors",
@@ -2707,6 +2761,24 @@
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2103 ~ Semiconductor Devices",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -3709,6 +3781,24 @@
   },
   {
     "day": "Wednesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G1) ~ Microcontroller and Embedded System",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G1) ~ Microcontroller and Embedded System",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "2 PM - 2.55 PM",
     "year": 4,
     "courseCode": "PH4101",
@@ -3904,6 +3994,24 @@
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -5023,6 +5131,24 @@
   },
   {
     "day": "Thursday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G2) ~ Microcontroller and Embedded System",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G2) ~ Microcontroller and Embedded System",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": "Elective",
     "courseCode": "PH5102",
@@ -5182,6 +5308,24 @@
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5788,6 +5932,15 @@
   },
   {
     "day": "Friday",
+    "time": "11 AM - 1 PM",
+    "year": 3,
+    "courseCode": "EE3101 ~ Power Systems-I",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
     "courseCode": "CE5102 (MKY)",
@@ -6031,6 +6184,24 @@
   },
   {
     "day": "Friday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G3) ~ Microcontroller and Embedded System",
+    "group": "EE",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "2 PM - 4 PM",
+    "year": 3,
+    "courseCode": "EC3101 (G3) ~ Microcontroller and Embedded System",
+    "group": "EC",
+    "venue": "EE Dept R-109",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "CH1101",
@@ -6109,6 +6280,24 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EE",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 6 PM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EC",
+    "venue": "EE Dept LT102",
+    "type": "Lab"
   },
   {
     "day": "Friday",
