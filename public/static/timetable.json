@@ -308,6 +308,15 @@
   {
     "day": "Monday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "PH4101",
     "group": "PH",
@@ -401,6 +410,15 @@
     "year": 2,
     "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
   },
@@ -538,6 +556,15 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -979,6 +1006,15 @@
     "group": "MC",
     "venue": "CSE Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "EC2102 ~ Signals and Systems",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -1829,6 +1865,15 @@
   {
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "PH4105",
     "group": "PH",
@@ -1922,6 +1967,15 @@
     "year": 2,
     "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
   },
@@ -2074,8 +2128,26 @@
     "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EC",
     "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
+    "group": "EE",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -2605,6 +2677,15 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EC2102 ~ Signals and Systems",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -2670,6 +2751,15 @@
     "courseCode": "MA5101",
     "group": "MC",
     "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
+    "group": "EE",
+    "venue": "LT102",
     "type": "Lecture"
   },
   {
@@ -2751,6 +2841,15 @@
     "courseCode": "MA5102",
     "group": "MC",
     "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
+    "group": "EE",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -3262,6 +3361,15 @@
     "time": "10 AM - 10.55 AM",
     "year": 3,
     "courseCode": "EC3104 ~ Engineering Electromagnetics",
+    "group": "EE",
+    "venue": "R-109",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
@@ -3399,6 +3507,15 @@
     "courseCode": "MA4108",
     "group": "MC",
     "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
+    "group": "EE",
+    "venue": "LT102",
     "type": "Lecture"
   },
   {
@@ -3748,6 +3865,15 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EC2102 ~ Signals and Systems",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -3874,15 +4000,6 @@
     "time": "4 PM - 6 PM",
     "year": 2,
     "courseCode": "EC2101/EE2101 (G1/G2) ~ Analog Circuits / Measurements and Instrumentation",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101/EE2101 (G1/G2) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EC",
     "venue": "EE Dept LT102",
     "type": "Lab"
@@ -3984,6 +4101,15 @@
     "courseCode": "MA4106",
     "group": "MC",
     "venue": "R-309",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
+    "group": "EE",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -4349,6 +4475,15 @@
   {
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 AM - 9.55 AM",
     "year": "Elective",
     "courseCode": "PH5111",
     "group": "PH",
@@ -4488,6 +4623,24 @@
     "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
     "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
+    "group": "EE",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -4668,6 +4821,15 @@
     "courseCode": "MA4110",
     "group": "MC",
     "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "EC2101 ~ Analog Circuits",
+    "group": "EE",
+    "venue": "LT102",
     "type": "Lecture"
   },
   {
@@ -5035,6 +5197,15 @@
     "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EC2102 ~ Signals and Systems",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 3.55 PM",
+    "year": 2,
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -5125,15 +5296,6 @@
     "time": "4 PM - 6 PM",
     "year": 2,
     "courseCode": "EC2101/EE2101 (G2/G3) ~ Analog Circuits / Measurements and Instrumentation",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101/EE2101 (G2/G3) ~ Analog Circuits / Measurements and Instrumentation",
     "group": "EC",
     "venue": "EE Dept LT102",
     "type": "Lab"
@@ -5208,6 +5370,15 @@
     "courseCode": "MA4106",
     "group": "MC",
     "venue": "R-309",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
+    "group": "EE",
+    "venue": "R-109",
     "type": "Lecture"
   },
   {
@@ -5719,6 +5890,15 @@
     "time": "11 AM - 11.55 AM",
     "year": 3,
     "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
+    "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -6064,15 +6244,6 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101/EE2101 (G3/G1) ~ Analog Circuits / Measurements and Instrumentation",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Friday",
