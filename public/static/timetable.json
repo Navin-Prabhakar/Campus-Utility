@@ -21,7 +21,7 @@
     "day": "Monday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -30,7 +30,7 @@
     "day": "Monday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -48,7 +48,7 @@
     "day": "Monday",
     "time": "3 - 3.55",
     "year": 4,
-    "courseCode": "CS4101",
+    "courseCode": "CS4101 ~ Pattern Recognition",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -57,7 +57,7 @@
     "day": "Monday",
     "time": "3 - 3.55",
     "year": 4,
-    "courseCode": "CS4101",
+    "courseCode": "CS4101 ~ Pattern Recognition",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -66,7 +66,7 @@
     "day": "Monday",
     "time": "3 - 3.55",
     "year": "Elective",
-    "courseCode": "CS6103",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -75,7 +75,7 @@
     "day": "Monday",
     "time": "3 - 3.55",
     "year": "Elective",
-    "courseCode": "CS6103",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -102,7 +102,7 @@
     "day": "Monday",
     "time": "4 - 4.55",
     "year": "Elective",
-    "courseCode": "CS5102",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -111,7 +111,7 @@
     "day": "Monday",
     "time": "4 - 4.55",
     "year": "Elective",
-    "courseCode": "CS5102",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -120,7 +120,7 @@
     "day": "Monday",
     "time": "4-6 PM",
     "year": 2,
-    "courseCode": "CS2103",
+    "courseCode": "CS2103 ~ AI concept",
     "group": "AI",
     "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
     "type": "Lab"
@@ -129,7 +129,7 @@
     "day": "Monday",
     "time": "4-6 PM",
     "year": 2,
-    "courseCode": "CS2103",
+    "courseCode": "CS2103 ~ AI concept",
     "group": "CS",
     "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
     "type": "Lab"
@@ -156,7 +156,7 @@
     "day": "Monday",
     "time": "5 - 5.55",
     "year": 4,
-    "courseCode": "CS4110",
+    "courseCode": "CS4110 ~ Blockchain Technology",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -165,7 +165,7 @@
     "day": "Monday",
     "time": "5 - 5.55",
     "year": 4,
-    "courseCode": "CS4110",
+    "courseCode": "CS4110 ~ Blockchain Technology",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -300,7 +300,7 @@
     "day": "Monday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "EE2102",
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -309,7 +309,7 @@
     "day": "Monday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "EE2102",
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -408,7 +408,7 @@
     "day": "Monday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "EE2101",
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -417,7 +417,7 @@
     "day": "Monday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "EE2101",
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -462,7 +462,7 @@
     "day": "Monday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2103",
+    "courseCode": "CS2103 ~ AI concept",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -471,7 +471,7 @@
     "day": "Monday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2103",
+    "courseCode": "CS2103 ~ AI concept",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -480,7 +480,7 @@
     "day": "Monday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -489,7 +489,7 @@
     "day": "Monday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -561,7 +561,7 @@
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "EC2101",
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -570,7 +570,7 @@
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "EC2101",
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -660,7 +660,7 @@
     "day": "Monday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -669,7 +669,7 @@
     "day": "Monday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -678,7 +678,7 @@
     "day": "Monday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -687,7 +687,7 @@
     "day": "Monday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -750,7 +750,7 @@
     "day": "Monday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
-    "courseCode": "EE2103",
+    "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -831,7 +831,7 @@
     "day": "Monday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -840,7 +840,7 @@
     "day": "Monday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -849,7 +849,7 @@
     "day": "Monday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -858,7 +858,7 @@
     "day": "Monday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -898,33 +898,6 @@
     "group": "MC",
     "venue": "R-107",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3102",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3103",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EE3102",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1020,7 +993,7 @@
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -1029,37 +1002,10 @@
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3102",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3103",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EE3102",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1168,24 +1114,6 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2103",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2103",
-    "group": "EE",
-    "venue": "EE Dept R-310",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1312,24 +1240,6 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2103",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Monday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2103",
-    "group": "EE",
-    "venue": "EE Dept R-310",
-    "type": "Lab"
   },
   {
     "day": "Monday",
@@ -1650,7 +1560,7 @@
     "day": "Tuesday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS6112",
+    "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "AI",
     "venue": "R303",
     "type": "Lecture"
@@ -1659,7 +1569,7 @@
     "day": "Tuesday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS6112",
+    "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "CS",
     "venue": "R303",
     "type": "Lecture"
@@ -1677,7 +1587,7 @@
     "day": "Tuesday",
     "time": "3 - 3.55",
     "year": 4,
-    "courseCode": "CS4101",
+    "courseCode": "CS4101 ~ Pattern Recognition",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -1686,7 +1596,7 @@
     "day": "Tuesday",
     "time": "3 - 3.55",
     "year": 4,
-    "courseCode": "CS4101",
+    "courseCode": "CS4101 ~ Pattern Recognition",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -1695,7 +1605,7 @@
     "day": "Tuesday",
     "time": "3 - 3.55",
     "year": "Elective",
-    "courseCode": "CS6103",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -1704,7 +1614,7 @@
     "day": "Tuesday",
     "time": "3 - 3.55",
     "year": "Elective",
-    "courseCode": "CS6103",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -1713,7 +1623,7 @@
     "day": "Tuesday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "AI",
     "venue": "Machine Learning Lab (Machine learning lab CC1)",
     "type": "Lab"
@@ -1722,7 +1632,7 @@
     "day": "Tuesday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "CS",
     "venue": "Machine Learning Lab (Machine learning lab CC1)",
     "type": "Lab"
@@ -1749,7 +1659,7 @@
     "day": "Tuesday",
     "time": "4 - 4.55",
     "year": "Elective",
-    "courseCode": "CS5102",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -1758,7 +1668,7 @@
     "day": "Tuesday",
     "time": "4 - 4.55",
     "year": "Elective",
-    "courseCode": "CS5102",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -1785,7 +1695,7 @@
     "day": "Tuesday",
     "time": "5 - 5.55",
     "year": 4,
-    "courseCode": "CS4110",
+    "courseCode": "CS4110 ~ Blockchain Technology",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -1794,7 +1704,7 @@
     "day": "Tuesday",
     "time": "5 - 5.55",
     "year": 4,
-    "courseCode": "CS4110",
+    "courseCode": "CS4110 ~ Blockchain Technology",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -1902,7 +1812,7 @@
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "EE2102",
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -1911,7 +1821,7 @@
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "EE2102",
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -2010,7 +1920,7 @@
     "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "EE2101",
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -2019,7 +1929,7 @@
     "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "EE2101",
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -2082,7 +1992,7 @@
     "day": "Tuesday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2103",
+    "courseCode": "CS2103 ~ AI concept",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -2091,7 +2001,7 @@
     "day": "Tuesday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2103",
+    "courseCode": "CS2103 ~ AI concept",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -2100,7 +2010,7 @@
     "day": "Tuesday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -2109,7 +2019,7 @@
     "day": "Tuesday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -2172,7 +2082,7 @@
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "EC2101",
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -2181,7 +2091,7 @@
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "EC2101",
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -2190,7 +2100,7 @@
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "EC3104",
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EE",
     "venue": "R-109",
     "type": "Lecture"
@@ -2199,7 +2109,7 @@
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "EC3104",
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
@@ -2271,7 +2181,7 @@
     "day": "Tuesday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -2280,7 +2190,7 @@
     "day": "Tuesday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -2289,7 +2199,7 @@
     "day": "Tuesday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -2298,7 +2208,7 @@
     "day": "Tuesday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -2352,7 +2262,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
-    "courseCode": "EE2103",
+    "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -2370,7 +2280,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": 3,
-    "courseCode": "EE3102",
+    "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
@@ -2460,7 +2370,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2104",
+    "courseCode": "CS2104 ~ Discrete Mathematics",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -2469,7 +2379,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2104",
+    "courseCode": "CS2104 ~ Discrete Mathematics",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -2478,7 +2388,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -2487,7 +2397,7 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -2518,33 +2428,6 @@
     "group": "ES",
     "venue": "B1/211",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3102",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3103",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EE3102",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -2730,7 +2613,7 @@
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -2739,37 +2622,10 @@
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3102",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3103",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EE3102",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -2838,7 +2694,7 @@
     "day": "Tuesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "EC3105",
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -2847,28 +2703,10 @@
     "day": "Tuesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "EC3105",
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2103",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2103",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -2928,7 +2766,7 @@
     "day": "Tuesday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3101",
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
     "group": "EE",
     "venue": "R-109",
     "type": "Lecture"
@@ -2937,28 +2775,10 @@
     "day": "Tuesday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3101",
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2103",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2103",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -3072,7 +2892,7 @@
     "day": "Wednesday",
     "time": "3-6 PM",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "AI",
     "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
     "type": "Lab"
@@ -3081,7 +2901,7 @@
     "day": "Wednesday",
     "time": "3-6 PM",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "CS",
     "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
     "type": "Lab"
@@ -3090,7 +2910,7 @@
     "day": "Wednesday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "AI",
     "venue": "Operating System Lab (Operating system lab CC1)",
     "type": "Lab"
@@ -3099,7 +2919,7 @@
     "day": "Wednesday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "CS",
     "venue": "Operating System Lab (Operating system lab CC1)",
     "type": "Lab"
@@ -3387,7 +3207,7 @@
     "day": "Wednesday",
     "time": "9 - 9.55",
     "year": 3,
-    "courseCode": "CS3105",
+    "courseCode": "CS3105 ~ Natural Language Processing",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -3396,7 +3216,7 @@
     "day": "Wednesday",
     "time": "9 - 9.55",
     "year": 3,
-    "courseCode": "CS3104",
+    "courseCode": "CS3104 ~ Compiler",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3459,7 +3279,7 @@
     "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "EC3104",
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EE",
     "venue": "R-109",
     "type": "Lecture"
@@ -3468,7 +3288,7 @@
     "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "EC3104",
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
@@ -3513,7 +3333,7 @@
     "day": "Wednesday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -3522,7 +3342,7 @@
     "day": "Wednesday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2102",
+    "courseCode": "CS2102 ~ Digital Logic",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -3531,7 +3351,7 @@
     "day": "Wednesday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -3540,7 +3360,7 @@
     "day": "Wednesday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3612,7 +3432,7 @@
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "EC3105",
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -3621,7 +3441,7 @@
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "EC3105",
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -3693,7 +3513,7 @@
     "day": "Wednesday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2105",
+    "courseCode": "CS2105 ~ Optimization Technique",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -3702,7 +3522,7 @@
     "day": "Wednesday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2105",
+    "courseCode": "CS2105 ~ Optimization Technique",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -3711,7 +3531,7 @@
     "day": "Wednesday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -3720,7 +3540,7 @@
     "day": "Wednesday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3765,7 +3585,7 @@
     "day": "Wednesday",
     "time": "12 Noon - 12.55 PM",
     "year": 3,
-    "courseCode": "EE3102",
+    "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
@@ -3837,7 +3657,7 @@
     "day": "Wednesday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -3846,7 +3666,7 @@
     "day": "Wednesday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -3855,7 +3675,7 @@
     "day": "Wednesday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS6109",
+    "courseCode": "CS6109 ~ Reinforcement Learning",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -3864,7 +3684,7 @@
     "day": "Wednesday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS6109",
+    "courseCode": "CS6109 ~ Reinforcement Learning",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -3886,24 +3706,6 @@
     "group": "MC",
     "venue": "R-107",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G1)",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G1)",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3972,37 +3774,19 @@
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102(T)",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EE",
     "venue": "LT102",
-    "type": "Tutorial"
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102(T)",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
-    "type": "Tutorial"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G1)",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G1)",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -4116,46 +3900,10 @@
     "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "EE3101",
+    "courseCode": "EE3101 ~ Power Systems-I",
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -4260,7 +4008,7 @@
     "day": "Wednesday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3101",
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
     "group": "EE",
     "venue": "R-109",
     "type": "Lecture"
@@ -4269,46 +4017,10 @@
     "day": "Wednesday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3101",
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -4377,7 +4089,7 @@
     "day": "Thursday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "AI",
     "venue": "R303",
     "type": "Lecture"
@@ -4386,7 +4098,7 @@
     "day": "Thursday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS5101",
+    "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "CS",
     "venue": "R303",
     "type": "Lecture"
@@ -4404,7 +4116,7 @@
     "day": "Thursday",
     "time": "3 - 3.55",
     "year": 4,
-    "courseCode": "CS4101",
+    "courseCode": "CS4101 ~ Pattern Recognition",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -4413,7 +4125,7 @@
     "day": "Thursday",
     "time": "3 - 3.55",
     "year": 4,
-    "courseCode": "CS4101",
+    "courseCode": "CS4101 ~ Pattern Recognition",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4422,7 +4134,7 @@
     "day": "Thursday",
     "time": "3 - 3.55",
     "year": "Elective",
-    "courseCode": "CS6103",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -4431,7 +4143,7 @@
     "day": "Thursday",
     "time": "3 - 3.55",
     "year": "Elective",
-    "courseCode": "CS6103",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4440,7 +4152,7 @@
     "day": "Thursday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3104",
+    "courseCode": "CS3104 ~ Compiler",
     "group": "CS",
     "venue": "Compiler Lab (Compiler lab CSE Dept)",
     "type": "Lab"
@@ -4449,7 +4161,7 @@
     "day": "Thursday",
     "time": "3-6 PM",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "AI",
     "venue": "Algorithms Lab (Algorithms Lab CC1)",
     "type": "Lab"
@@ -4458,7 +4170,7 @@
     "day": "Thursday",
     "time": "3-6 PM",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "CS",
     "venue": "Algorithms Lab (Algorithms Lab CC1)",
     "type": "Lab"
@@ -4467,7 +4179,7 @@
     "day": "Thursday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3105",
+    "courseCode": "CS3105 ~ Natural Language Processing",
     "group": "AI",
     "venue": "Natural Language Processing Lab (NLP Lab New CC Lab (Middle portion))",
     "type": "Lab"
@@ -4503,7 +4215,7 @@
     "day": "Thursday",
     "time": "4 - 4.55",
     "year": "Elective",
-    "courseCode": "CS5102",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -4512,7 +4224,7 @@
     "day": "Thursday",
     "time": "4 - 4.55",
     "year": "Elective",
-    "courseCode": "CS5102",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4530,7 +4242,7 @@
     "day": "Thursday",
     "time": "5 - 5.55",
     "year": 4,
-    "courseCode": "CS4110",
+    "courseCode": "CS4110 ~ Blockchain Technology",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -4539,7 +4251,7 @@
     "day": "Thursday",
     "time": "5 - 5.55",
     "year": 4,
-    "courseCode": "CS4110",
+    "courseCode": "CS4110 ~ Blockchain Technology",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4656,7 +4368,7 @@
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "EE2102",
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -4665,7 +4377,7 @@
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "EE2102",
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -4746,7 +4458,7 @@
     "day": "Thursday",
     "time": "9 - 9.55",
     "year": 3,
-    "courseCode": "CS3105",
+    "courseCode": "CS3105 ~ Natural Language Processing",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -4755,7 +4467,7 @@
     "day": "Thursday",
     "time": "9 - 9.55",
     "year": 3,
-    "courseCode": "CS3104",
+    "courseCode": "CS3104 ~ Compiler",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -4809,7 +4521,7 @@
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "EE2101",
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -4818,7 +4530,7 @@
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "EE2101",
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -4827,7 +4539,7 @@
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "EC3104",
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EE",
     "venue": "R-109",
     "type": "Lecture"
@@ -4836,7 +4548,7 @@
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 3,
-    "courseCode": "EC3104",
+    "courseCode": "EC3104 ~ Engineering Electromagnetics",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
@@ -4908,7 +4620,7 @@
     "day": "Thursday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2104",
+    "courseCode": "CS2104 ~ Discrete Mathematics",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -4917,7 +4629,7 @@
     "day": "Thursday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "CS2104",
+    "courseCode": "CS2104 ~ Discrete Mathematics",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -4926,7 +4638,7 @@
     "day": "Thursday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -4935,7 +4647,7 @@
     "day": "Thursday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3103",
+    "courseCode": "CS3103 ~ Machine Learning",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -5016,7 +4728,7 @@
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "EC2101",
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -5025,7 +4737,7 @@
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "EC2101",
+    "courseCode": "EC2101 ~ Analog Circuits",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
@@ -5097,7 +4809,7 @@
     "day": "Thursday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2105",
+    "courseCode": "CS2105 ~ Optimization Technique",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -5106,7 +4818,7 @@
     "day": "Thursday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2105",
+    "courseCode": "CS2105 ~ Optimization Technique",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -5115,7 +4827,7 @@
     "day": "Thursday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -5124,7 +4836,7 @@
     "day": "Thursday",
     "time": "11 - 11.55",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -5187,7 +4899,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
-    "courseCode": "EE2103",
+    "courseCode": "EE2103 ~ Electrical Machines \u2013 I",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -5196,7 +4908,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": 3,
-    "courseCode": "EE3102",
+    "courseCode": "EE3102 ~ Modern Control Theory",
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
@@ -5241,7 +4953,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -5250,7 +4962,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2101",
+    "courseCode": "CS2101 ~ Algorithms",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -5259,7 +4971,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS6109",
+    "courseCode": "CS6109 ~ Reinforcement Learning",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -5268,7 +4980,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS6109",
+    "courseCode": "CS6109 ~ Reinforcement Learning",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -5308,24 +5020,6 @@
     "group": "MC",
     "venue": "R-309",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G2)",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G2)",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5394,7 +5088,7 @@
     "day": "Thursday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -5403,28 +5097,10 @@
     "day": "Thursday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102",
+    "courseCode": "EC2102 ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G2)",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G2)",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5502,46 +5178,10 @@
     "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "EE3101",
+    "courseCode": "EE3101 ~ Power Systems-I",
     "group": "EE",
     "venue": "R-310",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5619,7 +5259,7 @@
     "day": "Thursday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3101",
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
     "group": "EE",
     "venue": "R-109",
     "type": "Lecture"
@@ -5628,46 +5268,10 @@
     "day": "Thursday",
     "time": "5 PM - 5.55 PM",
     "year": 3,
-    "courseCode": "EC3101",
+    "courseCode": "EC3101 ~ Microcontroller and Embedded System",
     "group": "EC",
     "venue": "R-109",
     "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -5790,7 +5394,7 @@
     "day": "Friday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS6112",
+    "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "AI",
     "venue": "R502",
     "type": "Lecture"
@@ -5799,7 +5403,7 @@
     "day": "Friday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS6112",
+    "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "CS",
     "venue": "R502",
     "type": "Lecture"
@@ -5808,7 +5412,7 @@
     "day": "Friday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS6112",
+    "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -5817,7 +5421,7 @@
     "day": "Friday",
     "time": "2 - 2.55",
     "year": "Elective",
-    "courseCode": "CS6112",
+    "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -5835,7 +5439,7 @@
     "day": "Friday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "AI",
     "venue": "Computer Networks Lab (Computer Networks lab CC1)",
     "type": "Lab"
@@ -5844,7 +5448,7 @@
     "day": "Friday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CS3102",
+    "courseCode": "CS3102 ~ Computer Networks",
     "group": "CS",
     "venue": "Computer Networks Lab (Computer Networks lab CC1)",
     "type": "Lab"
@@ -6015,7 +5619,7 @@
     "day": "Friday",
     "time": "9 - 9.55",
     "year": 3,
-    "courseCode": "CS3105",
+    "courseCode": "CS3105 ~ Natural Language Processing",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -6024,7 +5628,7 @@
     "day": "Friday",
     "time": "9 - 9.55",
     "year": 3,
-    "courseCode": "CS3104",
+    "courseCode": "CS3104 ~ Compiler",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -6105,7 +5709,7 @@
     "day": "Friday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -6114,7 +5718,7 @@
     "day": "Friday",
     "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "CS3101",
+    "courseCode": "CS3101 ~ Operating System",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -6168,7 +5772,7 @@
     "day": "Friday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "EC3105",
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EE",
     "venue": "LT102",
     "type": "Lecture"
@@ -6177,19 +5781,10 @@
     "day": "Friday",
     "time": "11 AM - 11.55 AM",
     "year": 3,
-    "courseCode": "EC3105",
+    "courseCode": "EC3105 ~ Random Signals and Stochastic Processes",
     "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 1 PM",
-    "year": 3,
-    "courseCode": "EE3101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6222,7 +5817,7 @@
     "day": "Friday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2104",
+    "courseCode": "CS2104 ~ Discrete Mathematics",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -6231,7 +5826,7 @@
     "day": "Friday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "CS2104",
+    "courseCode": "CS2104 ~ Discrete Mathematics",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -6280,15 +5875,6 @@
     "group": "MC",
     "venue": "R-309",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 PM - 2 AM",
-    "year": 3,
-    "courseCode": "EE3101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6375,7 +5961,7 @@
     "day": "Friday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2105",
+    "courseCode": "CS2105 ~ Optimization Technique",
     "group": "AI",
     "venue": "LT001",
     "type": "Lecture"
@@ -6384,7 +5970,7 @@
     "day": "Friday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "CS2105",
+    "courseCode": "CS2105 ~ Optimization Technique",
     "group": "CS",
     "venue": "LT001",
     "type": "Lecture"
@@ -6393,7 +5979,7 @@
     "day": "Friday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS6109",
+    "courseCode": "CS6109 ~ Reinforcement Learning",
     "group": "AI",
     "venue": "LT101",
     "type": "Lecture"
@@ -6402,7 +5988,7 @@
     "day": "Friday",
     "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "CS6109",
+    "courseCode": "CS6109 ~ Reinforcement Learning",
     "group": "CS",
     "venue": "LT101",
     "type": "Lecture"
@@ -6445,24 +6031,6 @@
   },
   {
     "day": "Friday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G3)",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "2 PM - 4 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G3)",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "CH1101",
@@ -6496,24 +6064,6 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G3)",
-    "group": "EE",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "3 PM - 5 PM",
-    "year": 3,
-    "courseCode": "EC3101 (G3)",
-    "group": "EC",
-    "venue": "EE Dept R-109",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -6562,42 +6112,6 @@
   },
   {
     "day": "Friday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "4 PM - 6 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
     "courseCode": "PH5101",
@@ -6640,42 +6154,6 @@
     "group": "MC",
     "venue": "Dept Classroom (If available)",
     "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EC2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EE",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 7 PM",
-    "year": 2,
-    "courseCode": "EE2101",
-    "group": "EC",
-    "venue": "EE Dept LT102",
-    "type": "Lab"
   },
   {
     "day": "Friday",
