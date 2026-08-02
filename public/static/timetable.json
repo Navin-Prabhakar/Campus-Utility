@@ -3783,19 +3783,19 @@
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102 ~ Signals and Systems",
+    "courseCode": "EC2102 (TuT) ~ Signals and Systems",
     "group": "EE",
     "venue": "LT102",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "EC2102 ~ Signals and Systems",
+    "courseCode": "EC2102 (TuT) ~ Signals and Systems",
     "group": "EC",
     "venue": "LT102",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Wednesday",
