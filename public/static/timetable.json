@@ -308,6 +308,15 @@
   {
     "day": "Monday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "PH4101",
     "group": "PH",
@@ -401,6 +410,15 @@
     "year": 2,
     "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
   },
@@ -1847,6 +1865,15 @@
   {
     "day": "Tuesday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "PH4105",
     "group": "PH",
@@ -1940,6 +1967,15 @@
     "year": 2,
     "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
   },
@@ -4394,6 +4430,15 @@
   {
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "EE2102 ~ Network Analysis and Synthesis",
+    "group": "EC",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 AM - 9.55 AM",
     "year": "Elective",
     "courseCode": "PH5111",
     "group": "PH",
@@ -4532,6 +4577,15 @@
     "year": 2,
     "courseCode": "EE2101 ~ Measurements and Instrumentation",
     "group": "EE",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "EE2101 ~ Measurements and Instrumentation",
+    "group": "EC",
     "venue": "LT102",
     "type": "Lecture"
   },
