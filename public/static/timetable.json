@@ -417,15 +417,6 @@
     "day": "Monday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
-    "courseCode": "MA2104",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
     "courseCode": "EE2101",
     "group": "EE",
     "venue": "LT102",
@@ -607,15 +598,6 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4111",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2101",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -823,15 +805,6 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4107",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2102",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -2018,6 +1991,15 @@
   {
     "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2104",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 10.55 AM",
     "year": "Elective",
     "courseCode": "MA6106",
     "group": "MC",
@@ -2030,15 +2012,6 @@
     "year": 4,
     "courseCode": "MA4111",
     "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
-    "year": "Elective",
-    "courseCode": "MC5102",
-    "group": "Department Core",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
   },
@@ -2180,6 +2153,15 @@
   {
     "day": "Tuesday",
     "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2101",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 AM - 11.55 AM",
     "year": "Elective",
     "courseCode": "MA7102",
     "group": "MC",
@@ -2191,24 +2173,6 @@
     "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4109",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2101",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
-    "courseCode": "MA6106",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -2360,6 +2324,15 @@
   {
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4106",
     "group": "MC",
@@ -2371,15 +2344,6 @@
     "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4110",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2105",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -2544,15 +2508,6 @@
     "courseCode": "HS7104",
     "group": "ES",
     "venue": "B1/211",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2 PM - 2.55 PM",
-    "year": 3,
-    "courseCode": "MA3103",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
     "type": "Lecture"
   },
   {
@@ -2729,15 +2684,6 @@
   {
     "day": "Tuesday",
     "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "MA3105",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
     "year": 2,
     "courseCode": "EC2102",
     "group": "EE",
@@ -2820,24 +2766,6 @@
     "day": "Tuesday",
     "time": "4 PM - 4.55 PM",
     "year": 3,
-    "courseCode": "MA3102",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 4,
-    "courseCode": "MA4103",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
     "courseCode": "EC3102",
     "group": "EC",
     "venue": "R-109",
@@ -2902,24 +2830,6 @@
     "time": "5 PM - 5.55 PM",
     "year": "Elective",
     "courseCode": "MA5102",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 3,
-    "courseCode": "MA3104",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 PM - 5.55 PM",
-    "year": 4,
-    "courseCode": "MA4106",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -3315,24 +3225,6 @@
     "day": "Wednesday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "MA2104",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 3,
-    "courseCode": "MA3101",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "9 AM - 9.55 AM",
-    "year": 2,
     "courseCode": "EE2102",
     "group": "EE",
     "venue": "LT102",
@@ -3458,35 +3350,17 @@
   {
     "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
+    "year": "Elective",
+    "courseCode": "MC5102",
+    "group": "Department Core",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 AM - 10.55 AM",
     "year": 4,
     "courseCode": "MA4109",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 2,
-    "courseCode": "MA2102",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 3,
-    "courseCode": "MA3105",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "10 AM - 10.55 AM",
-    "year": 4,
-    "courseCode": "MA4111",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -3638,35 +3512,26 @@
   {
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2101",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "MA6106",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "MA4108",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 2,
-    "courseCode": "MA2103",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "MA3103",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
-    "year": 4,
-    "courseCode": "MA4110",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -3809,26 +3674,17 @@
   {
     "day": "Wednesday",
     "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2105",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55 PM",
     "year": 4,
     "courseCode": "MA4107",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 2,
-    "courseCode": "MA2101",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 4,
-    "courseCode": "MA4108",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -3972,7 +3828,7 @@
     "day": "Wednesday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
-    "courseCode": "MA3104",
+    "courseCode": "MA3103",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -4012,6 +3868,15 @@
     "group": "G3, G4",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "MA3105",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -4124,6 +3989,15 @@
   {
     "day": "Wednesday",
     "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "MA4103",
     "group": "MC",
@@ -4227,6 +4101,15 @@
     "courseCode": "PH1101",
     "group": "G7, G8, G9, G10, G11, G12",
     "venue": "CLH: LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 PM - 5.55 PM",
+    "year": 3,
+    "courseCode": "MA3104",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
     "type": "Lecture"
   },
   {
@@ -4584,7 +4467,7 @@
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
     "year": 2,
-    "courseCode": "MA2105",
+    "courseCode": "MA2104",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -4592,8 +4475,8 @@
   {
     "day": "Thursday",
     "time": "9 AM - 9.55 AM",
-    "year": 4,
-    "courseCode": "MA4110",
+    "year": 3,
+    "courseCode": "MA3101",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -4709,8 +4592,26 @@
   {
     "day": "Thursday",
     "time": "10 AM - 10.55 AM",
+    "year": 2,
+    "courseCode": "MA2102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
+    "year": 3,
+    "courseCode": "MA3105",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 10.55 AM",
     "year": 4,
-    "courseCode": "MA4109",
+    "courseCode": "MA4111",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -4863,7 +4764,16 @@
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "MA2102",
+    "courseCode": "MA2103",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "MA3103",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -4872,7 +4782,7 @@
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
     "year": 4,
-    "courseCode": "MA4108",
+    "courseCode": "MA4110",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -5025,7 +4935,7 @@
     "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
-    "courseCode": "MA2103",
+    "courseCode": "MA2101",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -5033,8 +4943,8 @@
   {
     "day": "Thursday",
     "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "MA7102",
+    "year": 4,
+    "courseCode": "MA4108",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -5133,7 +5043,7 @@
     "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
-    "courseCode": "MA3102",
+    "courseCode": "MA3104",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -5191,24 +5101,6 @@
     "group": "G1, G2",
     "venue": "Respective Lab Department",
     "type": "Lab"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "MA3101",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "3 PM - 3.55 PM",
-    "year": "Elective",
-    "courseCode": "MA5102",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
   },
   {
     "day": "Thursday",
@@ -5276,17 +5168,8 @@
   {
     "day": "Thursday",
     "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "MA3104",
-    "group": "MC",
-    "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": "Elective",
-    "courseCode": "MA5101",
+    "year": 4,
+    "courseCode": "MA4103",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -5357,8 +5240,8 @@
   {
     "day": "Thursday",
     "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "MA5103",
+    "year": 4,
+    "courseCode": "MA4106",
     "group": "MC",
     "venue": "Math Dept Classroom",
     "type": "Lecture"
@@ -5654,6 +5537,24 @@
   {
     "day": "Friday",
     "time": "9 AM - 9.55 AM",
+    "year": 2,
+    "courseCode": "MA2105",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "9 AM - 9.55 AM",
+    "year": 4,
+    "courseCode": "MA4110",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "9 AM - 9.55 AM",
     "year": "Elective",
     "courseCode": "CE6130 (SG/KR)",
     "group": "CE",
@@ -5744,6 +5645,15 @@
   {
     "day": "Friday",
     "time": "10 AM - 10.55 AM",
+    "year": 4,
+    "courseCode": "MA4109",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "10 AM - 10.55 AM",
     "year": "Elective",
     "courseCode": "CE5109 (SG/KR)",
     "group": "CE",
@@ -5816,6 +5726,24 @@
   {
     "day": "Friday",
     "time": "11 AM - 11.55 AM",
+    "year": 2,
+    "courseCode": "MA2102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": 4,
+    "courseCode": "MA4108",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
     "year": "Elective",
     "courseCode": "CE5102 (MKY)",
     "group": "CE",
@@ -5883,6 +5811,24 @@
     "courseCode": "HS7103",
     "group": "ES",
     "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": 2,
+    "courseCode": "MA2103",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "MA7102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
     "type": "Lecture"
   },
   {
@@ -6022,6 +5968,15 @@
   },
   {
     "day": "Friday",
+    "time": "2 PM - 2.55 PM",
+    "year": 3,
+    "courseCode": "MA3102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "CH1101",
@@ -6037,6 +5992,24 @@
     "group": "G10, G11, G12",
     "venue": "Respective Lab Department",
     "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 3.55 PM",
+    "year": 3,
+    "courseCode": "MA3101",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 3.55 PM",
+    "year": "Elective",
+    "courseCode": "MA5102",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6086,6 +6059,24 @@
   {
     "day": "Friday",
     "time": "4 PM - 4.55 PM",
+    "year": 3,
+    "courseCode": "MA3104",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 4.55 PM",
+    "year": "Elective",
+    "courseCode": "MA5101",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 PM - 4.55 PM",
     "year": "Elective",
     "courseCode": "PH5101",
     "group": "PH",
@@ -6117,6 +6108,15 @@
     "courseCode": "CE5105 (AJ)",
     "group": "CE",
     "venue": "R-106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 PM - 5.55 PM",
+    "year": "Elective",
+    "courseCode": "MA5103",
+    "group": "MC",
+    "venue": "Math Dept Classroom",
     "type": "Lecture"
   },
   {
