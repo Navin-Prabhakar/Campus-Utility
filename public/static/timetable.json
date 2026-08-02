@@ -2427,7 +2427,7 @@
     "courseCode": "CE2103 (OM) ~ Fluid Mechanics",
     "group": "CE",
     "venue": "R-104",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Tuesday",
@@ -4866,7 +4866,7 @@
     "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
     "venue": "R-104",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Thursday",
@@ -6594,7 +6594,7 @@
     "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
     "group": "CE",
     "venue": "R-104",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Friday",
