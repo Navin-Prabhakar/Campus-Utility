@@ -641,6 +641,15 @@
   {
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
+    "year": 3,
+    "courseCode": "EC3103",
+    "group": "EC",
+    "venue": "R-109",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EC2101",
     "group": "EE",
@@ -1230,15 +1239,6 @@
     "courseCode": "MA5102",
     "group": "MC",
     "venue": "Math Dept Classroom",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "EC3103",
-    "group": "EC",
-    "venue": "R-109",
     "type": "Lecture"
   },
   {
