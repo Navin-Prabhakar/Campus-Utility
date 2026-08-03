@@ -29,6 +29,24 @@
   {
     "day": "Monday",
     "time": "2 - 2.55",
+    "year": 2,
+    "courseCode": "HS2108 ~ Soft Skills",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "HS7103",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2 - 2.55",
     "year": 4,
     "courseCode": "ME4101",
     "group": "ME",
@@ -88,6 +106,24 @@
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "HS3103 ~ International Trade and Investment",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "HS7103",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -169,6 +205,24 @@
     "venue": "Dept Classroom (220)",
     "type": "Lecture",
     "time": "4-5 PM"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "HS3111",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "HS7105",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -321,6 +375,15 @@
     "courseCode": "MA2102(T) ~ Probability and Stochastic Processes",
     "group": "MC",
     "venue": "R-107",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Monday",
+    "time": "8 - 8.55",
+    "year": 2,
+    "courseCode": "MA2102 (T) ~ Probability and Stochastic Processes",
+    "group": "MA",
+    "venue": "B1/202",
     "type": "Tutorial"
   },
   {
@@ -703,11 +766,20 @@
   },
   {
     "day": "Monday",
-    "time": "10 AM - 10.55 AM",
+    "time": "10 - 10.55",
     "year": 2,
     "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
     "group": "ES",
     "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "HS3111",
+    "group": "ES",
+    "venue": "B1/219",
     "type": "Lecture"
   },
   {
@@ -919,7 +991,7 @@
   },
   {
     "day": "Monday",
-    "time": "11 AM - 11.55 AM",
+    "time": "11 - 11.55",
     "year": 2,
     "courseCode": "HS2102 ~ Fundamentals of Economics",
     "group": "ES",
@@ -1159,6 +1231,15 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "12 Noon - 12.55 PM"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "HS7104",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -2091,6 +2172,15 @@
     "day": "Tuesday",
     "time": "3 - 3.55",
     "year": "Elective",
+    "courseCode": "HS7105",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
     "courseCode": "ME6102",
     "group": "ME",
     "venue": "LT002",
@@ -2140,6 +2230,24 @@
     "venue": "Dept Classroom (220)",
     "type": "Lecture",
     "time": "4-5 PM"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "HS2104 ~ History of Economic Thought",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "HS7105",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -2211,6 +2319,15 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "HS7101",
+    "group": "ES",
+    "venue": "B1/214",
     "type": "Lecture"
   },
   {
@@ -2602,12 +2719,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "10 AM - 10.55 AM",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "HS3111",
+    "courseCode": "HS3101 ~ Econometrics \u2013 II",
     "group": "ES",
     "venue": "B1/219",
-    "type": "Lecture"
+    "type": "Lab"
   },
   {
     "day": "Tuesday",
@@ -2856,6 +2982,33 @@
     "day": "Tuesday",
     "time": "11 - 11.55",
     "year": 2,
+    "courseCode": "HS2102 ~ Fundamentals of Economics",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "HS3111",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "HS7103",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 - 11.55",
+    "year": 2,
     "courseCode": "ME2104 ~ Engineering Materials",
     "group": "ME",
     "venue": "LT002",
@@ -3079,7 +3232,25 @@
   },
   {
     "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "MA2102 ~ Probability and Stochastic Processes",
+    "group": "MA",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
+    "year": 3,
+    "courseCode": "HS3101 (T) ~ Econometrics \u2013 II",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "HS7104",
     "group": "ES",
@@ -3475,15 +3646,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 3.55 PM",
-    "year": 3,
-    "courseCode": "HS3103 ~ International Trade and Investment",
-    "group": "ES",
-    "venue": "B1/219",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
     "time": "3 PM - 4 PM",
     "year": 3,
     "courseCode": "ME3101 (T) ~ Data Analytics and Machine Learning Tools for Engineers",
@@ -3637,15 +3799,6 @@
   },
   {
     "day": "Tuesday",
-    "time": "4 PM - 4.55 PM",
-    "year": 3,
-    "courseCode": "HS3111",
-    "group": "ES",
-    "venue": "B1/219",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
     "time": "5 PM - 5.55 PM",
     "year": "Elective",
     "courseCode": "MA5102",
@@ -3747,6 +3900,15 @@
     "day": "Wednesday",
     "time": "2 - 2.55",
     "year": 3,
+    "courseCode": "HS3104 ~ Debate in Indian Economy",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 - 2.55",
+    "year": 3,
     "courseCode": "ME3105 ~ Numerical Methods for Engineers",
     "group": "ME",
     "venue": "LT002",
@@ -3809,6 +3971,33 @@
   {
     "day": "Wednesday",
     "time": "3 - 3.55",
+    "year": 2,
+    "courseCode": "HS2104 ~ History of Economic Thought",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "HS3103 ~ International Trade and Investment",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "HS7101",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
     "year": 3,
     "courseCode": "ME3101 ~ Data Analytics and Machine Learning Tools for Engineers",
     "group": "ME",
@@ -3841,6 +4030,15 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "4-5 PM"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "HS7101",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -4538,6 +4736,24 @@
   {
     "day": "Wednesday",
     "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "HS3103 (T) ~ International Trade and Investment",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "HS7104",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 - 10.55",
     "year": "Elective",
     "courseCode": "ME5103",
     "group": "ME",
@@ -4732,6 +4948,24 @@
     "venue": "Dept Classroom (220)",
     "type": "Lecture",
     "time": "11-1 AM"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": 2,
+    "courseCode": "HS2102 ~ Fundamentals of Economics",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "HS7105",
+    "group": "ES",
+    "venue": "B1/211",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -5077,15 +5311,6 @@
   },
   {
     "day": "Wednesday",
-    "time": "2 PM - 2.55 PM",
-    "year": "Elective",
-    "courseCode": "HS7103",
-    "group": "ES",
-    "venue": "B1/214",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "HS1101 ~ English for Professionals",
@@ -5272,15 +5497,6 @@
     "group": "CT",
     "venue": "Chem Lab",
     "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 3.55 PM",
-    "year": "Elective",
-    "courseCode": "HS7103",
-    "group": "ES",
-    "venue": "B1/214",
-    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -5574,6 +5790,15 @@
     "day": "Thursday",
     "time": "2 - 2.55",
     "year": 3,
+    "courseCode": "HS3104 ~ Debate in Indian Economy",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 - 2.55",
+    "year": 3,
     "courseCode": "ME3102 ~ Design of Machine Elements",
     "group": "ME",
     "venue": "LT002",
@@ -5690,6 +5915,15 @@
   {
     "day": "Thursday",
     "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "HS3103 ~ International Trade and Investment",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 - 3.55",
     "year": "Elective",
     "courseCode": "ME5108",
     "group": "Minor",
@@ -5721,6 +5955,33 @@
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "HS2104 ~ History of Economic Thought",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "HS3111 (T)",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "HS7106",
+    "group": "ES",
+    "venue": "B1/211",
     "type": "Lecture"
   },
   {
@@ -6024,6 +6285,15 @@
     "day": "Thursday",
     "time": "9 - 9.55",
     "year": 2,
+    "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 - 9.55",
+    "year": 2,
     "courseCode": "ME2101 ~ Dynamics",
     "group": "ME",
     "venue": "LT002",
@@ -6265,21 +6535,21 @@
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
+    "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
-    "group": "ES",
+    "courseCode": "MA2102 ~ Probability and Stochastic Processes",
+    "group": "MA",
     "venue": "B1/202",
     "type": "Lecture"
   },
   {
     "day": "Thursday",
-    "time": "10 AM - 10.55 AM",
+    "time": "10 - 10.55",
     "year": 3,
-    "courseCode": "HS3101 ~ Econometrics \u2013 II",
+    "courseCode": "HS3101 (T) ~ Econometrics \u2013 II",
     "group": "ES",
     "venue": "B1/219",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Thursday",
@@ -6508,20 +6778,20 @@
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
+    "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "HS2102 ~ Fundamentals of Economics",
+    "courseCode": "HS2102 (T) ~ Fundamentals of Economics",
     "group": "ES",
     "venue": "B1/202",
-    "type": "Lecture"
+    "type": "Tutorial"
   },
   {
     "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "HS3111",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "HS7103",
     "group": "ES",
-    "venue": "B1/219",
+    "venue": "B1/211",
     "type": "Lecture"
   },
   {
@@ -6706,11 +6976,20 @@
   },
   {
     "day": "Thursday",
-    "time": "12 Noon - 12.55 PM",
-    "year": 3,
-    "courseCode": "HS3101 ~ Econometrics \u2013 II",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "HS2108 ~ Soft Skills",
     "group": "ES",
-    "venue": "B1/219",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "HS7103",
+    "group": "ES",
+    "venue": "B1/211",
     "type": "Lecture"
   },
   {
@@ -7138,15 +7417,6 @@
   },
   {
     "day": "Thursday",
-    "time": "4 PM - 4.55 PM",
-    "year": 2,
-    "courseCode": "HS2104 ~ History of Economic Thought",
-    "group": "ES",
-    "venue": "B1/202",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
     "time": "5 PM - 5.55 PM",
     "year": 1,
     "courseCode": "EE1101 ~ Electrical Sciences",
@@ -7354,6 +7624,24 @@
   },
   {
     "day": "Friday",
+    "time": "2 - 2.55",
+    "year": 3,
+    "courseCode": "HS3101 ~ Econometrics \u2013 II",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "2 - 2.55",
+    "year": "Elective",
+    "courseCode": "HS7105",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "3-6 PM",
     "year": 3,
     "courseCode": "CS3102 ~ Computer Networks",
@@ -7382,6 +7670,24 @@
   {
     "day": "Friday",
     "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "HS3101 ~ Econometrics \u2013 II",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "HS7105",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3 - 3.55",
     "year": "Elective",
     "courseCode": "ME6107",
     "group": "Minor",
@@ -7405,6 +7711,24 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "4-5 PM"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "HS3104 (T) ~ Debate in Indian Economy",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "HS7103",
+    "group": "ES",
+    "venue": "B1/214",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -7975,9 +8299,27 @@
   },
   {
     "day": "Friday",
-    "time": "11 AM - 11.55 AM",
+    "time": "11 - 11.55",
+    "year": 2,
+    "courseCode": "MA2102 ~ Probability and Stochastic Processes",
+    "group": "MA",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "HS3104 ~ Debate in Indian Economy",
+    "group": "ES",
+    "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
     "year": "Elective",
-    "courseCode": "HS7103",
+    "courseCode": "HS7106",
     "group": "ES",
     "venue": "B1/211",
     "type": "Lecture"
@@ -8173,9 +8515,18 @@
   },
   {
     "day": "Friday",
-    "time": "12 Noon - 12.55 PM",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "HS2108 ~ Soft Skills",
+    "group": "ES",
+    "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
     "year": "Elective",
-    "courseCode": "HS7104",
+    "courseCode": "HS7106",
     "group": "ES",
     "venue": "B1/211",
     "type": "Lecture"
@@ -8592,15 +8943,6 @@
     "courseCode": "CH4101",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 PM - 5.55 PM",
-    "year": "Elective",
-    "courseCode": "HS7101",
-    "group": "ES",
-    "venue": "B1/214",
     "type": "Lecture"
   },
   {
