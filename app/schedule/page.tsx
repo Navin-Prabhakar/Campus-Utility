@@ -478,7 +478,7 @@ export default function SchedulePage() {
                               {/* Left section: Course info and Venue */}
                               <div className="flex flex-col gap-1.5 min-w-0 flex-1 pr-2">
                                 <div className="flex items-center">
-                                  <span className="text-[11px] sm:text-[12px] font-black leading-snug text-white break-words">
+                                  <span className="text-[12px] sm:text-[12px] font-black leading-snug text-white break-words">
                                     {cls.courseCode}
                                   </span>
                                 </div>
