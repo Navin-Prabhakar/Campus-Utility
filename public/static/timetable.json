@@ -1,6 +1,15 @@
 [
   {
     "day": "Monday",
+    "time": "nan",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "ES",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "Reserved-34",
     "year": 2,
     "courseCode": "ME2104 ~ Engineering Materials",
@@ -159,6 +168,24 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "6 - 6.55",
+    "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "6 - 6.55",
+    "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "CS",
+    "venue": "LT001",
     "type": "Lecture"
   },
   {
@@ -533,15 +560,6 @@
   {
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3103 ~ Analog Communication",
-    "group": "EC",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 AM - 11.55 AM",
     "year": 2,
     "courseCode": "EP2103 ~ Classical dynamics: discrete and continuum systems",
     "group": "EP",
@@ -561,7 +579,7 @@
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": 2,
-    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
+    "courseCode": "CE2104 (AKV) ~ Geology for Engineers",
     "group": "CE",
     "venue": "R-104",
     "type": "Lecture"
@@ -649,7 +667,7 @@
   },
   {
     "day": "Monday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 4,
     "courseCode": "CH4105",
     "group": "CT",
@@ -658,7 +676,7 @@
   },
   {
     "day": "Monday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 3,
     "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
@@ -1065,7 +1083,7 @@
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
     "year": 2,
-    "courseCode": "CE2104 (AKV) ~ Geology for Engineers",
+    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
     "venue": "R102",
     "type": "Lecture"
@@ -1571,7 +1589,7 @@
     "year": 1,
     "courseCode": "HS1101",
     "group": "G22",
-    "venue": "LT001",
+    "venue": "Block 9 - Room R502",
     "type": "Tutorial"
   },
   {
@@ -1644,6 +1662,15 @@
     "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
     "group": "CS",
     "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "Friday (LT003)",
+    "year": 4,
+    "courseCode": "HS4111",
+    "group": "ES",
+    "venue": "LT003",
     "type": "Lecture"
   },
   {
@@ -2233,7 +2260,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": "Elective",
     "courseCode": "CH5105",
     "group": "CT",
@@ -2242,7 +2269,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 4,
     "courseCode": "CH4105",
     "group": "CT",
@@ -3079,6 +3106,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "Friday (LT003)",
+    "year": 4,
+    "courseCode": "HS4111",
+    "group": "ES",
+    "venue": "LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "3-6 PM",
     "year": 2,
     "courseCode": "CS2102 ~ Digital Logic",
@@ -3112,6 +3148,24 @@
     "group": "CS",
     "venue": "Operating System Lab (Operating system lab CC1)",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "6 - 6.55",
+    "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "6 - 6.55",
+    "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3638,15 +3692,6 @@
   {
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3103 ~ Analog Communication",
-    "group": "EC",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "11 AM - 11.55 AM",
     "year": 4,
     "courseCode": "PH4104",
     "group": "PH",
@@ -3745,7 +3790,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 4,
     "courseCode": "CH4105",
     "group": "CT",
@@ -3754,7 +3799,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 2,
     "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
@@ -3822,24 +3867,6 @@
     "courseCode": "CE5111 (BAK)",
     "group": "CE",
     "venue": "R-105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "CE5110",
-    "group": "CE",
-    "venue": "R-106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6120 (Nk)",
-    "group": "CE",
-    "venue": "R-106",
     "type": "Lecture"
   },
   {
@@ -4420,6 +4447,15 @@
   },
   {
     "day": "Thursday",
+    "time": "nan",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "ES",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
@@ -4578,6 +4614,24 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "6 - 6.55",
+    "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "6 - 6.55",
+    "year": 3,
+    "courseCode": "EC3103 ~ Analog Communication",
+    "group": "CS",
+    "venue": "LT001",
     "type": "Lecture"
   },
   {
@@ -5024,15 +5078,6 @@
   {
     "day": "Thursday",
     "time": "11 AM - 11.55 AM",
-    "year": 3,
-    "courseCode": "EC3103 ~ Analog Communication",
-    "group": "EC",
-    "venue": "R-109",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "11 AM - 11.55 AM",
     "year": "Elective",
     "courseCode": "PH5101",
     "group": "PH",
@@ -5122,7 +5167,7 @@
   },
   {
     "day": "Thursday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": "Elective",
     "courseCode": "CH5103",
     "group": "CT",
@@ -5131,7 +5176,7 @@
   },
   {
     "day": "Thursday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 2,
     "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
@@ -5806,6 +5851,15 @@
   },
   {
     "day": "Friday",
+    "time": "nan",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "ES",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS6112 ~ Drone Data Processing & Analysis",
@@ -6220,7 +6274,7 @@
   },
   {
     "day": "Friday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": "Elective",
     "courseCode": "CH5102",
     "group": "CT",
@@ -6229,7 +6283,7 @@
   },
   {
     "day": "Friday",
-    "time": "11:00 AM - 12:00 AM",
+    "time": "11:00 AM - 12:00 PM",
     "year": 3,
     "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
@@ -6883,5 +6937,41 @@
     "group": "G24",
     "venue": "LT101",
     "type": "Tutorial"
+  },
+  {
+    "day": "30",
+    "time": "nan",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "ES",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "19",
+    "time": "nan",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "ES",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "28",
+    "time": "nan",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "ES",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "29",
+    "time": "Friday (LT003)",
+    "year": 4,
+    "courseCode": "HS4111",
+    "group": "ES",
+    "venue": "LT001",
+    "type": "Lecture"
   }
 ]
