@@ -1657,7 +1657,7 @@
   },
   {
     "day": "Monday",
-    "time": "4 PM - 5 PM",
+    "time": "4 PM - 6 PM",
     "year": 2,
     "courseCode": "ME2104 (P, G2) ~ Engineering Materials",
     "group": "ME",
@@ -3493,7 +3493,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 PM - 4 PM",
+    "time": "3 PM - 5 PM",
     "year": 2,
     "courseCode": "ME2103 (P, G1) ~ Fluid Mechanics",
     "group": "ME",
@@ -3727,7 +3727,7 @@
   },
   {
     "day": "Tuesday",
-    "time": "5 PM - 6 PM",
+    "time": "5 PM - 7 PM",
     "year": 2,
     "courseCode": "ME2103 (P, G2) ~ Fluid Mechanics",
     "group": "ME",
@@ -6985,7 +6985,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3 PM - 4 PM",
+    "time": "3 PM - 5 PM",
     "year": 2,
     "courseCode": "ME2104 (P, G1) ~ Engineering Materials",
     "group": "ME",
