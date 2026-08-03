@@ -110,7 +110,7 @@ export default function BusPage() {
               let rawWeekendDriver = "SWB Assigned Staff";
               let rawWeekendContact = "";
 
-              for (let i = 0; i < 60; i++) {
+              for (let i = 0; i < 74; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
                 
@@ -123,7 +123,7 @@ export default function BusPage() {
                 }
               }
 
-              for (let i = 70; i <= 100; i++) {
+              for (let i = 75; i <= 120; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
 
@@ -153,7 +153,7 @@ export default function BusPage() {
               const weekendContact = parseContact(rawWeekendContact);
 
               const weekdaysSchedule: TimeSlot[] = [];
-              for (let i = 37; i <= 60; i++) {
+              for (let i = 40; i <= 75; i++) {
                 const time = cleanAndExtractTime(rows[i]?.[colIndex] || "");
                 if (time) {
                   const reserveCheck = rows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
@@ -167,7 +167,7 @@ export default function BusPage() {
               }
 
               const weekendsSchedule: TimeSlot[] = [];
-              for (let i = 66; i < rows.length; i++) {
+              for (let i = 75; i < rows.length; i++) {
                 const cellVal = rows[i]?.[colIndex] || "";
                 
                 if (cellVal.toLowerCase().includes("note")) {

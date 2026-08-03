@@ -170,7 +170,7 @@ export default function Home() {
               let rawWeekendContact = "";
 
               // Gather Bus Name & Weekdays Contact (Rows 0 to 40)
-              for (let i = 0; i < 60; i++) {
+              for (let i = 0; i < 75; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
                 
@@ -182,7 +182,7 @@ export default function Home() {
               }
 
               // Gather Weekend Specific Contact (Rows 73 to 75)
-              for (let i = 70; i <= 100; i++) {
+              for (let i = 75; i <= 120; i++) {
                 const cellVal = rows[i]?.[colIndex]?.trim() || "";
                 const cellLower = cellVal.toLowerCase();
 
@@ -202,8 +202,8 @@ export default function Home() {
               
               const cleanContact = parseContact(isWeekend ? rawWeekendContact : rawWeekdayContact);
 
-              const startRow = isWeekend ? 66 : 37;
-              const endRow = isWeekend ? rows.length : 61;
+              const startRow = isWeekend ? 75 : 37;
+              const endRow = isWeekend ? rows.length : 75;
 
               for (let i = startRow; i < endRow; i++) {
                 const cellVal = rows[i]?.[colIndex] || "";
@@ -355,7 +355,7 @@ export default function Home() {
                 }
 
                 const weekdaysSchedule: any[] = [];
-                for (let i = 37; i <= 60; i++) {
+                for (let i = 40; i <= 75; i++) {
                   const time = cleanAndExtractTime(parsedRows[i]?.[colIndex] || "");
                   if (time) {
                     const reserveCheck = parsedRows[i]?.[colIndex + 3]?.trim().toLowerCase() || "";
@@ -369,7 +369,7 @@ export default function Home() {
                 }
 
                 const weekendsSchedule: any[] = [];
-                for (let i = 66; i < parsedRows.length; i++) {
+                for (let i = 75; i < parsedRows.length; i++) {
                   const cellVal = parsedRows[i]?.[colIndex] || "";
                   if (cellVal.toLowerCase().includes("note")) break;
 
