@@ -1,15 +1,6 @@
 [
   {
     "day": "Monday",
-    "time": "nan",
-    "year": "Elective",
-    "courseCode": "HS5111",
-    "group": "All",
-    "venue": "LT103",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
     "time": "Reserved-34",
     "year": 2,
     "courseCode": "ME2104 ~ Engineering Materials",
@@ -168,6 +159,15 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "6-7 PM",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "All",
+    "venue": "LT103",
     "type": "Lecture"
   },
   {
@@ -361,6 +361,51 @@
   },
   {
     "day": "Monday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "CB4108 (IDE)",
+    "group": "All",
+    "venue": "102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "ME4103 (IDE)",
+    "group": "All",
+    "venue": "104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "MM4107 (IDE)",
+    "group": "All",
+    "venue": "107",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "PH4110 (IDE)",
+    "group": "All",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "CS4113 (IDE)",
+    "group": "All",
+    "venue": "303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
     "courseCode": "EE1101",
@@ -501,6 +546,15 @@
     "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
     "group": "ES",
     "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11-12 PM",
+    "year": 4,
+    "courseCode": "HS4119",
+    "group": "All",
+    "venue": "LT003",
     "type": "Lecture"
   },
   {
@@ -694,6 +748,51 @@
   },
   {
     "day": "Monday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "CB3106 (IDE)",
+    "group": "All",
+    "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "ME3106 (IDE)",
+    "group": "All",
+    "venue": "R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "CS3106 (IDE)",
+    "group": "All",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "HS3108 (IDE)",
+    "group": "All",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "MM3106 (IDE)",
+    "group": "All",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2104 ~ Algebra",
@@ -852,6 +951,33 @@
     "courseCode": "CH7103",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MA6109 (IDE)",
+    "group": "All",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MM6105 (IDE)",
+    "group": "All",
+    "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MA6109",
+    "group": "All",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -1666,137 +1792,137 @@
   },
   {
     "day": "Tuesday",
-    "time": "Friday (LT003)",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101 ~ Pattern Recognition",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CS4101 ~ Pattern Recognition",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CS3103 ~ Machine Learning",
+    "group": "AI",
+    "venue": "Machine Learning Lab (Machine learning lab CC1)",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CS3103 ~ Machine Learning",
+    "group": "CS",
+    "venue": "Machine Learning Lab (Machine learning lab CC1)",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CS5102 ~ Foundations of Computer Systems",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110 ~ Blockchain Technology",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": 4,
+    "courseCode": "CS4110 ~ Blockchain Technology",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "CS6101",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "AI",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MA5104",
+    "group": "CS",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "6-7 PM",
     "year": 4,
     "courseCode": "HS4111",
     "group": "All",
     "venue": "LT003",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 - 3.55",
-    "year": 4,
-    "courseCode": "CS4101 ~ Pattern Recognition",
-    "group": "AI",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 - 3.55",
-    "year": 4,
-    "courseCode": "CS4101 ~ Pattern Recognition",
-    "group": "CS",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 - 3.55",
-    "year": "Elective",
-    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
-    "group": "AI",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3 - 3.55",
-    "year": "Elective",
-    "courseCode": "CS6103 ~ Advanced Pattern Recognition",
-    "group": "CS",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3-6 PM",
-    "year": 3,
-    "courseCode": "CS3103 ~ Machine Learning",
-    "group": "AI",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "3-6 PM",
-    "year": 3,
-    "courseCode": "CS3103 ~ Machine Learning",
-    "group": "CS",
-    "venue": "Machine Learning Lab (Machine learning lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 - 4.55",
-    "year": "Elective",
-    "courseCode": "CS5102 ~ Foundations of Computer Systems",
-    "group": "AI",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 - 4.55",
-    "year": "Elective",
-    "courseCode": "CS5102 ~ Foundations of Computer Systems",
-    "group": "CS",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 - 5.55",
-    "year": 4,
-    "courseCode": "CS4110 ~ Blockchain Technology",
-    "group": "AI",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 - 5.55",
-    "year": 4,
-    "courseCode": "CS4110 ~ Blockchain Technology",
-    "group": "CS",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "CS6101",
-    "group": "AI",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "CS6101",
-    "group": "CS",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "MA5104",
-    "group": "AI",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "5 - 5.55",
-    "year": "Elective",
-    "courseCode": "MA5104",
-    "group": "CS",
-    "venue": "LT001",
     "type": "Lecture"
   },
   {
@@ -2103,6 +2229,24 @@
     "courseCode": "HS3111",
     "group": "ES",
     "venue": "B1/219",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11-12 PM",
+    "year": 4,
+    "courseCode": "HS4119",
+    "group": "All",
+    "venue": "LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11-12 PM",
+    "year": 4,
+    "courseCode": "HS4118",
+    "group": "All",
+    "venue": "LT103",
     "type": "Lecture"
   },
   {
@@ -2481,6 +2625,42 @@
     "courseCode": "HS7104",
     "group": "ES",
     "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2112 ~ Introduction to Demography",
+    "group": "All",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2111 ~ Introductory Sociology",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "ME6122 (IDE)",
+    "group": "All",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "CS6112 (IDE) ~ Drone Data Processing & Analysis",
+    "group": "All",
+    "venue": "502",
     "type": "Lecture"
   },
   {
@@ -3106,48 +3286,48 @@
   },
   {
     "day": "Wednesday",
-    "time": "Friday (LT003)",
+    "time": "3-6 PM",
+    "year": 2,
+    "courseCode": "CS2102 ~ Digital Logic",
+    "group": "AI",
+    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-6 PM",
+    "year": 2,
+    "courseCode": "CS2102 ~ Digital Logic",
+    "group": "CS",
+    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CS3101 ~ Operating System",
+    "group": "AI",
+    "venue": "Operating System Lab (Operating system lab CC1)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CS3101 ~ Operating System",
+    "group": "CS",
+    "venue": "Operating System Lab (Operating system lab CC1)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "6-7 PM",
     "year": 4,
     "courseCode": "HS4111",
     "group": "All",
     "venue": "LT003",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3-6 PM",
-    "year": 2,
-    "courseCode": "CS2102 ~ Digital Logic",
-    "group": "AI",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3-6 PM",
-    "year": 2,
-    "courseCode": "CS2102 ~ Digital Logic",
-    "group": "CS",
-    "venue": "Digital Logic Lab (Digital logic lab in CSE Dept class room and Hardware lab + extension)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3-6 PM",
-    "year": 3,
-    "courseCode": "CS3101 ~ Operating System",
-    "group": "AI",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3-6 PM",
-    "year": 3,
-    "courseCode": "CS3101 ~ Operating System",
-    "group": "CS",
-    "venue": "Operating System Lab (Operating system lab CC1)",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -3466,6 +3646,51 @@
   },
   {
     "day": "Wednesday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "CB4108 (IDE)",
+    "group": "All",
+    "venue": "102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "ME4103 (IDE)",
+    "group": "All",
+    "venue": "104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "MM4107 (IDE)",
+    "group": "All",
+    "venue": "107",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "PH4110 (IDE)",
+    "group": "All",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "CS4113 (IDE)",
+    "group": "All",
+    "venue": "303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
     "courseCode": "PH1101",
@@ -3646,6 +3871,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "11-12 PM",
+    "year": 4,
+    "courseCode": "HS4118",
+    "group": "All",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": 1,
     "courseCode": "HS1101",
@@ -3808,6 +4042,51 @@
   },
   {
     "day": "Wednesday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "CB3106 (IDE)",
+    "group": "All",
+    "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "ME3106 (IDE)",
+    "group": "All",
+    "venue": "R104",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "CS3106 (IDE)",
+    "group": "All",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "HS3108 (IDE)",
+    "group": "All",
+    "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "MM3106 (IDE)",
+    "group": "All",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2105 ~ Discrete Mathematics",
@@ -3912,6 +4191,69 @@
     "courseCode": "CH7103",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2112 ~ Introduction to Demography",
+    "group": "All",
+    "venue": "LT003",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2110 ~ Language Human Mind and Indian Society",
+    "group": "All",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2111 ~ Introductory Sociology",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "ME6122 (IDE)",
+    "group": "All",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MA6109 (IDE)",
+    "group": "All",
+    "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MM6105 (IDE)",
+    "group": "All",
+    "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MA6109",
+    "group": "All",
+    "venue": "R502",
     "type": "Lecture"
   },
   {
@@ -4443,15 +4785,6 @@
     "courseCode": "ME2102 (M) ~ Thermodynamics",
     "group": "ME",
     "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "nan",
-    "year": "Elective",
-    "courseCode": "HS5111",
-    "group": "All",
-    "venue": "LT103",
     "type": "Lecture"
   },
   {
@@ -5365,6 +5698,24 @@
   },
   {
     "day": "Thursday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2110 ~ Language Human Mind and Indian Society",
+    "group": "All",
+    "venue": "LT103",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "CS6112 (IDE) ~ Drone Data Processing & Analysis",
+    "group": "All",
+    "venue": "502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "MA3104 ~ Computer Networks",
@@ -5848,15 +6199,6 @@
     "group": "G24",
     "venue": "Block 9 - Room R308",
     "type": "Tutorial"
-  },
-  {
-    "day": "Friday",
-    "time": "nan",
-    "year": "Elective",
-    "courseCode": "HS5111",
-    "group": "All",
-    "venue": "LT103",
-    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6939,8 +7281,8 @@
     "type": "Tutorial"
   },
   {
-    "day": "30",
-    "time": "nan",
+    "day": "6. Students of M Sc 1st Semster should be kept free during HS4111 slot",
+    "time": "M Tech",
     "year": "Elective",
     "courseCode": "HS5111",
     "group": "All",
@@ -6948,28 +7290,208 @@
     "type": "Lecture"
   },
   {
-    "day": "19",
-    "time": "nan",
-    "year": "Elective",
-    "courseCode": "HS5111",
-    "group": "All",
-    "venue": "LT001",
-    "type": "Lecture"
-  },
-  {
-    "day": "28",
-    "time": "nan",
-    "year": "Elective",
-    "courseCode": "HS5111",
+    "day": "7. Students of M Tech 1st Semster should be kept free during HS5111 slot",
+    "time": "M Sc",
+    "year": 4,
+    "courseCode": "HS4111",
     "group": "All",
     "venue": "LT001",
     "type": "Lecture"
   },
   {
     "day": "29",
-    "time": "Friday (LT003)",
+    "time": "6-7 PM",
     "year": 4,
     "courseCode": "HS4111",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "30",
+    "time": "6-7 PM",
+    "year": "Elective",
+    "courseCode": "HS5111",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "43",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "CB4108 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "44",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "ME4103 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "45",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "MM4107 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "13",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "PH4110 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "47",
+    "time": "10-11 AM",
+    "year": 4,
+    "courseCode": "CS4113 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "9",
+    "time": "11-12 PM",
+    "year": 4,
+    "courseCode": "HS4119",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "10",
+    "time": "11-12 PM",
+    "year": 4,
+    "courseCode": "HS4118",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "2",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "CB3106 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "22",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "ME3106 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "34",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "CS3106 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "35",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "HS3108 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "15",
+    "time": "12:00 PM - 1:00 PM",
+    "year": 3,
+    "courseCode": "MM3106 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "1",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2112 ~ Introduction to Demography",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "6",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2110 ~ Language Human Mind and Indian Society",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "32",
+    "time": "2:00 PM - 3:00 PM",
+    "year": 2,
+    "courseCode": "HS2111 ~ Introductory Sociology",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "36",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "ME6122 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "16",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MA6109 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "51",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MM6105 (IDE)",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "25",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "CS6112 (IDE) ~ Drone Data Processing & Analysis",
+    "group": "All",
+    "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "16",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
+    "courseCode": "MA6109",
     "group": "All",
     "venue": "LT001",
     "type": "Lecture"
