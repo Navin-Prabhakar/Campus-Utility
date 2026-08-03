@@ -957,6 +957,15 @@
     "day": "Monday",
     "time": "2:00 PM - 3:00 PM",
     "year": "Elective",
+    "courseCode": "ME6122 (IDE)",
+    "group": "All",
+    "venue": "LT102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "2:00 PM - 3:00 PM",
+    "year": "Elective",
     "courseCode": "MA6109 (IDE)",
     "group": "All",
     "venue": "R502",
@@ -2649,15 +2658,6 @@
     "day": "Tuesday",
     "time": "2:00 PM - 3:00 PM",
     "year": "Elective",
-    "courseCode": "ME6122 (IDE)",
-    "group": "All",
-    "venue": "LT102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "2:00 PM - 3:00 PM",
-    "year": "Elective",
     "courseCode": "CS6112 (IDE) ~ Drone Data Processing & Analysis",
     "group": "All",
     "venue": "502",
@@ -3502,6 +3502,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "9 AM - 12 PM",
+    "year": 1,
+    "courseCode": "CS1101",
+    "group": "G9, G10, G11, G12, G13, G14, G15, G16",
+    "venue": "Old Library, Main Building",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "9 AM - 9.55 AM",
     "year": 4,
     "courseCode": "MA4111",
@@ -4195,6 +4204,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "1 PM - 2 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Institute Auditorium",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "2:00 PM - 3:00 PM",
     "year": 2,
     "courseCode": "HS2112 ~ Introduction to Demography",
@@ -4254,6 +4272,15 @@
     "courseCode": "MA6109",
     "group": "All",
     "venue": "R502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 3 PM",
+    "year": 1,
+    "courseCode": "CS1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Institute Auditorium",
     "type": "Lecture"
   },
   {
@@ -4326,6 +4353,15 @@
     "courseCode": "PH1101",
     "group": "G3, G4",
     "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 6 PM",
+    "year": 1,
+    "courseCode": "CS1101",
+    "group": "G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Old Library, Main Building",
     "type": "Lab"
   },
   {
@@ -5698,6 +5734,15 @@
   },
   {
     "day": "Thursday",
+    "time": "1 PM - 2 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Institute Auditorium",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "2:00 PM - 3:00 PM",
     "year": 2,
     "courseCode": "HS2110 ~ Language Human Mind and Indian Society",
@@ -5712,6 +5757,15 @@
     "courseCode": "CS6112 (IDE) ~ Drone Data Processing & Analysis",
     "group": "All",
     "venue": "502",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 PM - 3 PM",
+    "year": 1,
+    "courseCode": "CS1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Institute Auditorium",
     "type": "Lecture"
   },
   {
@@ -6769,6 +6823,24 @@
   },
   {
     "day": "Friday",
+    "time": "1 PM - 2 PM",
+    "year": 1,
+    "courseCode": "MA1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Institute Auditorium",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "2 PM - 3 PM",
+    "year": 1,
+    "courseCode": "CS1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8, G9, G10, G11, G12, G13, G14, G15, G16, G17, G18, G19, G20, G21, G22, G23, G24",
+    "venue": "Institute Auditorium",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "2 PM - 2.55 PM",
     "year": 3,
     "courseCode": "MA3102 ~ Complex Analysis",
@@ -6828,6 +6900,15 @@
     "courseCode": "EE1101",
     "group": "G10, G11, G12",
     "venue": "Respective Lab Department",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "3 PM - 6 PM",
+    "year": 1,
+    "courseCode": "CS1101",
+    "group": "G1, G2, G3, G4, G5, G6, G7, G8",
+    "venue": "Old Library, Main Building",
     "type": "Lab"
   },
   {
