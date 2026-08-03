@@ -38,7 +38,7 @@
   {
     "day": "Monday",
     "year": 3,
-    "courseCode": "CB3104",
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -83,7 +83,7 @@
   {
     "day": "Monday",
     "year": 3,
-    "courseCode": "CB3101",
+    "courseCode": "CB3101 ~ Mass Transfer-II",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab",
@@ -93,7 +93,7 @@
     "day": "Monday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CB3101",
+    "courseCode": "CB3101 ~ Mass Transfer-II",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
@@ -137,7 +137,7 @@
   {
     "day": "Monday",
     "year": 2,
-    "courseCode": "CB2102",
+    "courseCode": "CB2102 ~ Fluid Mechanics",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -209,7 +209,7 @@
   {
     "day": "Monday",
     "year": 2,
-    "courseCode": "CB2103",
+    "courseCode": "CB2103 ~ Heat Transfer",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -416,7 +416,7 @@
   {
     "day": "Monday",
     "year": 3,
-    "courseCode": "CB3101",
+    "courseCode": "CB3101 ~ Mass Transfer-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -605,7 +605,7 @@
   {
     "day": "Monday",
     "year": 3,
-    "courseCode": "CB3102",
+    "courseCode": "CB3102 ~ Chemical Process Technology",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -1946,7 +1946,7 @@
   {
     "day": "Tuesday",
     "year": 2,
-    "courseCode": "CB2101",
+    "courseCode": "CB2101 ~ Introduction to Chemical Engineering",
     "group": "CB",
     "venue": "R105",
     "type": "Lecture",
@@ -2189,7 +2189,7 @@
   {
     "day": "Tuesday",
     "year": 2,
-    "courseCode": "CB2105",
+    "courseCode": "CB2105 ~ Chemical Engineering Thermodynamics",
     "group": "CB",
     "venue": "R106",
     "type": "Lecture",
@@ -2198,7 +2198,7 @@
   {
     "day": "Tuesday",
     "year": 3,
-    "courseCode": "CB3101",
+    "courseCode": "CB3101 ~ Mass Transfer-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -2387,7 +2387,7 @@
   {
     "day": "Tuesday",
     "year": 2,
-    "courseCode": "CB2104",
+    "courseCode": "CB2104 ~ Chemical Process Calculations",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -2396,7 +2396,7 @@
   {
     "day": "Tuesday",
     "year": 3,
-    "courseCode": "CB3104",
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -2594,7 +2594,7 @@
   {
     "day": "Tuesday",
     "year": 3,
-    "courseCode": "CB3105",
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -3494,7 +3494,7 @@
   {
     "day": "Wednesday",
     "year": 3,
-    "courseCode": "CB3105",
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab",
@@ -3504,7 +3504,7 @@
     "day": "Wednesday",
     "time": "2-5 PM",
     "year": 3,
-    "courseCode": "CB3105",
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
@@ -3548,7 +3548,7 @@
   {
     "day": "Wednesday",
     "year": 2,
-    "courseCode": "CB2102",
+    "courseCode": "CB2102 ~ Fluid Mechanics",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -3566,7 +3566,7 @@
   {
     "day": "Wednesday",
     "year": 2,
-    "courseCode": "CB2104",
+    "courseCode": "CB2104 ~ Chemical Process Calculations",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -3908,7 +3908,7 @@
   {
     "day": "Wednesday",
     "year": 2,
-    "courseCode": "CB2105",
+    "courseCode": "CB2105 ~ Chemical Engineering Thermodynamics",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -4142,7 +4142,7 @@
   {
     "day": "Wednesday",
     "year": 2,
-    "courseCode": "CB2103",
+    "courseCode": "CB2103 ~ Heat Transfer",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -4331,7 +4331,7 @@
   {
     "day": "Wednesday",
     "year": 3,
-    "courseCode": "CB3102",
+    "courseCode": "CB3102 ~ Chemical Process Technology",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -5240,7 +5240,7 @@
   {
     "day": "Thursday",
     "year": 2,
-    "courseCode": "CB2104",
+    "courseCode": "CB2104 ~ Chemical Process Calculations",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -5330,7 +5330,7 @@
   {
     "day": "Thursday",
     "year": 2,
-    "courseCode": "CB2103",
+    "courseCode": "CB2103 ~ Heat Transfer",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -5537,7 +5537,7 @@
   {
     "day": "Thursday",
     "year": 3,
-    "courseCode": "CB3103",
+    "courseCode": "CB3103 ~ Process Equipment Design",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -5951,7 +5951,7 @@
   {
     "day": "Thursday",
     "year": 3,
-    "courseCode": "CB3101",
+    "courseCode": "CB3101 ~ Mass Transfer-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -6743,7 +6743,7 @@
   {
     "day": "Friday",
     "year": 3,
-    "courseCode": "CB3104",
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab",
@@ -6752,7 +6752,7 @@
   {
     "day": "Friday",
     "year": 2,
-    "courseCode": "CB2102",
+    "courseCode": "CB2102 ~ Fluid Mechanics",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -6762,7 +6762,7 @@
     "day": "Friday",
     "time": "3-6 PM",
     "year": 3,
-    "courseCode": "CB3104",
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab"
@@ -6770,7 +6770,7 @@
   {
     "day": "Friday",
     "year": 2,
-    "courseCode": "CB2105",
+    "courseCode": "CB2105 ~ Chemical Engineering Thermodynamics",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
@@ -6950,7 +6950,7 @@
   {
     "day": "Friday",
     "year": 3,
-    "courseCode": "CB3103",
+    "courseCode": "CB3103 ~ Process Equipment Design",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -7121,7 +7121,7 @@
   {
     "day": "Friday",
     "year": 2,
-    "courseCode": "CB2103",
+    "courseCode": "CB2103 ~ Heat Transfer",
     "group": "CB",
     "venue": "Lab",
     "type": "Lab",
@@ -7130,7 +7130,7 @@
   {
     "day": "Friday",
     "year": 3,
-    "courseCode": "CB3104",
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
@@ -7265,7 +7265,7 @@
   {
     "day": "Friday",
     "year": 3,
-    "courseCode": "CB3105",
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
