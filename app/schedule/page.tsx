@@ -184,6 +184,7 @@ export default function SchedulePage() {
 
   const daysOrder = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
 
+  // Enhanced Chronological Minutes Parser
   const parseTimeToMinutes = (timeStr: string): number => {
     try {
       const startTimePart = timeStr.split("-")[0].trim().toUpperCase();
@@ -194,7 +195,14 @@ export default function SchedulePage() {
 
       let hours = parseInt(match[1], 10);
       const minutes = match[2] ? parseInt(match[2], 10) : 0;
-      const period = match[3];
+      let period = match[3];
+
+      // Contextual inferencing for untagged timetable slots
+      if (!period) {
+        if (hours >= 1 && hours <= 7) period = "PM";
+        else if (hours >= 8 && hours <= 11) period = "AM";
+        else if (hours === 12) period = "PM";
+      }
 
       if (period === "PM" && hours !== 12) hours += 12;
       if (period === "AM" && hours === 12) hours = 0;
@@ -211,12 +219,20 @@ export default function SchedulePage() {
       if (parts.length < 2) return parseTimeToMinutes(timeStr) + 55;
 
       const endTimePart = parts[1].trim().toUpperCase();
+      if (endTimePart.includes("NOON")) return 12 * 60 + 55;
+
       const match = endTimePart.match(/(\d+)(?::(\d+))?\s*(AM|PM)?/);
       if (!match) return parseTimeToMinutes(timeStr) + 55;
 
       let hours = parseInt(match[1], 10);
       const minutes = match[2] ? parseInt(match[2], 10) : 0;
-      const period = match[3];
+      let period = match[3];
+
+      if (!period) {
+        if (hours >= 1 && hours <= 7) period = "PM";
+        else if (hours >= 8 && hours <= 11) period = "AM";
+        else if (hours === 12) period = "PM";
+      }
 
       if (period === "PM" && hours !== 12) hours += 12;
       if (period === "AM" && hours === 12) hours = 0;
