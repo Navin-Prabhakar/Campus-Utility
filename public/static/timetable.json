@@ -4,7 +4,7 @@
     "time": "nan",
     "year": "Elective",
     "courseCode": "HS5111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT103",
     "type": "Lecture"
   },
@@ -1669,7 +1669,7 @@
     "time": "Friday (LT003)",
     "year": 4,
     "courseCode": "HS4111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT003",
     "type": "Lecture"
   },
@@ -3109,7 +3109,7 @@
     "time": "Friday (LT003)",
     "year": 4,
     "courseCode": "HS4111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT003",
     "type": "Lecture"
   },
@@ -4450,7 +4450,7 @@
     "time": "nan",
     "year": "Elective",
     "courseCode": "HS5111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT103",
     "type": "Lecture"
   },
@@ -5854,7 +5854,7 @@
     "time": "nan",
     "year": "Elective",
     "courseCode": "HS5111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT103",
     "type": "Lecture"
   },
@@ -6943,7 +6943,7 @@
     "time": "nan",
     "year": "Elective",
     "courseCode": "HS5111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -6952,7 +6952,7 @@
     "time": "nan",
     "year": "Elective",
     "courseCode": "HS5111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -6961,7 +6961,7 @@
     "time": "nan",
     "year": "Elective",
     "courseCode": "HS5111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT001",
     "type": "Lecture"
   },
@@ -6970,7 +6970,7 @@
     "time": "Friday (LT003)",
     "year": 4,
     "courseCode": "HS4111",
-    "group": "ES",
+    "group": "All",
     "venue": "LT001",
     "type": "Lecture"
   }
