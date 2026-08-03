@@ -37,6 +37,15 @@
   },
   {
     "day": "Monday",
+    "time": "2 - 2.55",
+    "year": 3,
+    "courseCode": "CB3104",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "3 - 3.55",
     "year": 4,
     "courseCode": "CS4101 ~ Pattern Recognition",
@@ -73,6 +82,24 @@
   },
   {
     "day": "Monday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "CB3101 Lab (Lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -106,6 +133,33 @@
     "group": "CS",
     "venue": "AI Concept Lab (AI Concept lab CC1/New lab)",
     "type": "Lab"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "CB2102",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CB5102",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -159,6 +213,24 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 - 5.55",
+    "year": 2,
+    "courseCode": "CB2103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "5 - 5.55",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "Lab",
     "type": "Lecture"
   },
   {
@@ -361,6 +433,15 @@
   },
   {
     "day": "Monday",
+    "time": "9 - 9.55",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "10-11 AM",
     "year": 4,
     "courseCode": "CB4108 (IDE)",
@@ -541,6 +622,24 @@
   },
   {
     "day": "Monday",
+    "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "CB3102",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "CB5103",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
@@ -651,7 +750,7 @@
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5113 (BAK)",
+    "courseCode": "CE5104 (RKB/AJ)",
     "group": "CE",
     "venue": "R-106",
     "type": "Lecture"
@@ -660,9 +759,9 @@
     "day": "Monday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5104 (RKB/AJ)",
+    "courseCode": "CE5113 (BAK)",
     "group": "CE",
-    "venue": "R102",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -735,6 +834,24 @@
     "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "CB3102",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "CB5103",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -878,7 +995,7 @@
     "year": "Elective",
     "courseCode": "CE5113 (BAK)",
     "group": "CE",
-    "venue": "R-106",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -951,6 +1068,24 @@
     "courseCode": "CH7103",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55",
+    "year": 4,
+    "courseCode": "CB4103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CB5103",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -1208,19 +1343,19 @@
   {
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
-    "year": "Elective",
-    "courseCode": "CE6101 (PR)",
+    "year": 2,
+    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
     "group": "CE",
-    "venue": "R-106",
+    "venue": "R102",
     "type": "Lecture"
   },
   {
     "day": "Monday",
     "time": "3 PM - 3.55 PM",
-    "year": 2,
-    "courseCode": "CE2102 (Nk/VS) ~ Structural Mechanics",
+    "year": "Elective",
+    "courseCode": "CE6101 (PR)",
     "group": "CE",
-    "venue": "R102",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -1855,6 +1990,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": 2,
+    "courseCode": "CB2101",
+    "group": "CB",
+    "venue": "CB Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CB4107",
+    "group": "Minor",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -1869,6 +2022,33 @@
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "CB2101",
+    "group": "CB",
+    "venue": "CB Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": 4,
+    "courseCode": "CB4103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CB5101",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -2062,6 +2242,33 @@
   },
   {
     "day": "Tuesday",
+    "time": "9 - 9.55",
+    "year": 2,
+    "courseCode": "CB2105",
+    "group": "CB",
+    "venue": "CB Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 - 9.55",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "CB5102",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
     "courseCode": "ME1102 ~ Engineering Mechanics",
@@ -2229,6 +2436,33 @@
     "courseCode": "CH2105 ~ Chemical Process Calculations",
     "group": "CT",
     "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "CB2104",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "CB3104",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "CB5102",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -2422,6 +2656,15 @@
   },
   {
     "day": "Tuesday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "CB3105",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": 2,
     "courseCode": "MA2102 ~ Probability and Stochastic Processes",
@@ -2532,15 +2775,6 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55 PM",
     "year": "Elective",
-    "courseCode": "CE5111 (BAK)",
-    "group": "CE",
-    "venue": "R-106",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "12 Noon - 12.55 PM",
-    "year": "Elective",
     "courseCode": "CE5108",
     "group": "CE",
     "venue": "R102",
@@ -2562,6 +2796,15 @@
     "courseCode": "CE6119 (VS)",
     "group": "CE",
     "venue": "R102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5111 (BAK)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -2616,6 +2859,15 @@
     "courseCode": "CH7103",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CB6104",
+    "group": "CB",
+    "venue": "R-307",
     "type": "Lecture"
   },
   {
@@ -2935,6 +3187,15 @@
   },
   {
     "day": "Tuesday",
+    "time": "3 PM - 3.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5113 (BAK)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "3 PM - 6 PM",
     "year": "Elective",
     "courseCode": "CE5113 (BAK)",
@@ -3061,6 +3322,15 @@
   },
   {
     "day": "Tuesday",
+    "time": "4 PM - 4.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5113 (BAK)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "4 PM - 6 PM",
     "year": 3,
     "courseCode": "CE3103 (SKKH/MS) ~ Transportation Engineering - I",
@@ -3165,6 +3435,15 @@
     "courseCode": "CE5105 (AJ)",
     "group": "CE",
     "venue": "R-106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 5.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5113 (BAK)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -3277,6 +3556,24 @@
   },
   {
     "day": "Wednesday",
+    "time": "2 - 2.55",
+    "year": 3,
+    "courseCode": "CB3105",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2-5 PM",
+    "year": 3,
+    "courseCode": "CB3105",
+    "group": "CB",
+    "venue": "CB3105 Lab (Lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
     "time": "3-6 PM",
     "year": 2,
     "courseCode": "CS2102 ~ Digital Logic",
@@ -3310,6 +3607,60 @@
     "group": "CS",
     "venue": "Operating System Lab (Operating system lab CC1)",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "CB3105",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": 2,
+    "courseCode": "CB2102",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "CB3105",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "CB2102",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CB6105",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": 2,
+    "courseCode": "CB2104",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3646,6 +3997,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "9 - 9.55",
+    "year": 2,
+    "courseCode": "CB2105",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "10-11 AM",
     "year": 4,
     "courseCode": "CB4108 (IDE)",
@@ -3776,7 +4136,7 @@
     "year": "Elective",
     "courseCode": "CE5101 (PR/MKY)",
     "group": "CE",
-    "venue": "R-106",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -3868,6 +4228,24 @@
     "group": "CT",
     "venue": "Chem Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "CB2103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "CB5102",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3963,18 +4341,18 @@
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5111 (BAK)",
+    "courseCode": "CE5103 (SH)",
     "group": "CE",
-    "venue": "R-105",
+    "venue": "R-106",
     "type": "Lecture"
   },
   {
     "day": "Wednesday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5103 (SH)",
+    "courseCode": "CE5111 (BAK)",
     "group": "CE",
-    "venue": "R-106",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -4038,6 +4416,24 @@
     "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "CB3102",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "CB5101",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -4145,7 +4541,7 @@
     "year": "Elective",
     "courseCode": "CE5111 (BAK)",
     "group": "CE",
-    "venue": "R-105",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -4191,6 +4587,24 @@
     "courseCode": "CH7103",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55",
+    "year": 4,
+    "courseCode": "CB4103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CB5101",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -4299,6 +4713,15 @@
     "courseCode": "PH4101",
     "group": "PH",
     "venue": "R-101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "2 PM - 2.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5109 (SG/KR)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -4444,6 +4867,15 @@
     "group": "EP",
     "venue": "R205",
     "type": "Lab"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 PM - 3.55 PM",
+    "year": "Elective",
+    "courseCode": "CE5109 (SG/KR)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -4906,6 +5338,24 @@
   },
   {
     "day": "Thursday",
+    "time": "3 - 3.55",
+    "year": 2,
+    "courseCode": "CB2104",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "CB4107",
+    "group": "Minor",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -4920,6 +5370,24 @@
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "CB2104",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": 4,
+    "courseCode": "CB4107",
+    "group": "Minor",
+    "venue": "R-307",
     "type": "Lecture"
   },
   {
@@ -4974,6 +5442,15 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "5 - 5.55",
+    "year": 2,
+    "courseCode": "CB2103",
+    "group": "CB",
+    "venue": "R-307",
     "type": "Lecture"
   },
   {
@@ -5176,6 +5653,15 @@
   },
   {
     "day": "Thursday",
+    "time": "9 - 9.55",
+    "year": 3,
+    "courseCode": "CB3103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
     "courseCode": "ME1102 ~ Engineering Mechanics",
@@ -5374,6 +5860,24 @@
   },
   {
     "day": "Thursday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "CB6104",
+    "group": "CB",
+    "venue": "CB Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "CB3103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
@@ -5559,6 +6063,24 @@
     "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "CB6105",
+    "group": "CB",
+    "venue": "CB Department Room",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "CB3101",
+    "group": "CB",
+    "venue": "R-307",
     "type": "Lecture"
   },
   {
@@ -6096,18 +6618,18 @@
     "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
-    "courseCode": "CE6101 (PR)",
+    "courseCode": "CE5105 (AJ)",
     "group": "CE",
-    "venue": "R-105",
+    "venue": "R-106",
     "type": "Lecture"
   },
   {
     "day": "Thursday",
     "time": "4 PM - 4.55 PM",
     "year": "Elective",
-    "courseCode": "CE5105 (AJ)",
+    "courseCode": "CE6101 (PR)",
     "group": "CE",
-    "venue": "R-106",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -6346,6 +6868,60 @@
   },
   {
     "day": "Friday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "CB3104",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3 - 3.55",
+    "year": 2,
+    "courseCode": "CB2102",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CB3104",
+    "group": "CB",
+    "venue": "CB3104 Lab (Lab)",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "CB3104",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "CB2105",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "CB6105",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "6-7 PM",
     "year": 4,
     "courseCode": "HS4111",
@@ -6505,6 +7081,15 @@
     "group": "CT",
     "venue": "Chem Lab",
     "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "9 - 9.55",
+    "year": 3,
+    "courseCode": "CB3103",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6670,6 +7255,24 @@
   },
   {
     "day": "Friday",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "CB2103",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "CB3104",
+    "group": "CB",
+    "venue": "R-307",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "11-12 PM",
     "year": 4,
     "courseCode": "HS4118",
@@ -6726,15 +7329,6 @@
     "day": "Friday",
     "time": "11 AM - 11.55 AM",
     "year": "Elective",
-    "courseCode": "CE5104 (RKB/AJ)",
-    "group": "CE",
-    "venue": "R-105",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 AM - 11.55 AM",
-    "year": "Elective",
     "courseCode": "CE5110",
     "group": "CE",
     "venue": "R-106",
@@ -6747,6 +7341,15 @@
     "courseCode": "CE6120 (Nk)",
     "group": "CE",
     "venue": "R-106",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 AM - 11.55 AM",
+    "year": "Elective",
+    "courseCode": "CE5104 (RKB/AJ)",
+    "group": "CE",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -6783,6 +7386,33 @@
     "courseCode": "CH3101 ~ Macromolecular Science and Engineering",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": 2,
+    "courseCode": "CB2103",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "CB6104",
+    "group": "CB",
+    "venue": "R-102",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "CB3105",
+    "group": "CB",
+    "venue": "R-307",
     "type": "Lecture"
   },
   {
@@ -6890,7 +7520,7 @@
     "year": "Elective",
     "courseCode": "CE5101 (PR/MKY)",
     "group": "CE",
-    "venue": "R-105",
+    "venue": "Dept Classroom\n(B6 R131)",
     "type": "Lecture"
   },
   {
@@ -6945,6 +7575,24 @@
     "courseCode": "CH2102 ~ Inorganic Chemistry",
     "group": "CT",
     "venue": "R-306",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "CB5103",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "CB2103",
+    "group": "CB",
+    "venue": "Lab",
     "type": "Lecture"
   },
   {
