@@ -68,7 +68,7 @@ export default function SchedulePage() {
       const storedYear = localStorage.getItem("iitp_default_year") || "1";
       const storedGroup = localStorage.getItem("iitp_default_group") || (storedYear === "1" ? "G1" : "AI");
       const storedElective = localStorage.getItem("iitp_default_elective") || "ALL";
-      
+
       setAcademicYear(storedYear);
       setSelectedGroup(storedGroup);
       setSelectedElective(storedElective);
@@ -81,7 +81,7 @@ export default function SchedulePage() {
       try {
         setLoading(true);
         setError(false);
-        
+
         const cachedData = localStorage.getItem(CACHE_KEY);
         if (cachedData) {
           try {
@@ -104,7 +104,7 @@ export default function SchedulePage() {
 
         const res = await fetch("/static/timetable.json");
         if (!res.ok) throw new Error("Failed to pull secure JSON payload assets");
-        
+
         const data = await res.json();
         const parsedData = Array.isArray(data) ? data : [];
 
@@ -138,8 +138,8 @@ export default function SchedulePage() {
     const savedElective = localStorage.getItem("iitp_default_elective") || "ALL";
 
     setIsPersistedDefault(
-      savedYear === academicYear && 
-      savedGroup === selectedGroup && 
+      savedYear === academicYear &&
+      savedGroup === selectedGroup &&
       savedElective === selectedElective
     );
   }, [academicYear, selectedGroup, selectedElective]);
@@ -188,17 +188,17 @@ export default function SchedulePage() {
     try {
       const startTimePart = timeStr.split("-")[0].trim().toUpperCase();
       if (startTimePart.includes("NOON")) return 12 * 60;
-      
+
       const match = startTimePart.match(/(\d+)(?::(\d+))?\s*(AM|PM)?/);
       if (!match) return 0;
-      
+
       let hours = parseInt(match[1], 10);
       const minutes = match[2] ? parseInt(match[2], 10) : 0;
       const period = match[3];
-      
+
       if (period === "PM" && hours !== 12) hours += 12;
       if (period === "AM" && hours === 12) hours = 0;
-      
+
       return hours * 60 + minutes;
     } catch (e) {
       return 0;
@@ -209,7 +209,7 @@ export default function SchedulePage() {
     try {
       const parts = timeStr.split("-");
       if (parts.length < 2) return parseTimeToMinutes(timeStr) + 55;
-      
+
       const endTimePart = parts[1].trim().toUpperCase();
       const match = endTimePart.match(/(\d+)(?::(\d+))?\s*(AM|PM)?/);
       if (!match) return parseTimeToMinutes(timeStr) + 55;
@@ -250,7 +250,7 @@ export default function SchedulePage() {
   });
 
   return (
-    <div 
+    <div
       className="h-full w-full py-20 font-sans text-zinc-300 antialiased flex flex-col overflow-hidden relative selection:bg-blue-500 selection:text-white"
       style={{
         backgroundImage: `
@@ -261,32 +261,30 @@ export default function SchedulePage() {
         backgroundColor: '#110f11'
       }}
     >
-      
+
       {/* Persistent Sticky Navigation Control Bar */}
       <div className="w-full bg-[#0A0A0A]/60 backdrop-blur-md shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
         {!loading && !error && (
           <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative">
-            
+
             {/* Display Pinned Group Block Tracker */}
-            <div 
+            <div
               onClick={handlePersistenceToggle}
-              className={`flex-1 bg-zinc-800 border rounded-xl py-2 px-2 flex items-center justify-between cursor-pointer select-none transition-all duration-200 shadow-inner hover:border-zinc-600 active:scale-[0.98] ${
-                isPersistedDefault ? 'border-zinc-700 bg-[#141414]' : 'border-zinc-900'
-              }`}
+              className={`flex-1 bg-zinc-800 border rounded-xl py-2 px-2 flex items-center justify-between cursor-pointer select-none transition-all duration-200 shadow-inner hover:border-zinc-600 active:scale-[0.98] ${isPersistedDefault ? 'border-zinc-700 bg-[#141414]' : 'border-zinc-900'
+                }`}
             >
               <div className="flex items-center gap-2 min-w-0">
-                <div className={`w-4.5 h-4.5 rounded-xl border flex items-center justify-center transition-all shrink-0 ${
-                  isPersistedDefault 
-                    ? "bg-blue-600 border-blue-500 text-white" 
-                    : "border-zinc-700 bg-[#0A0A0A]"
-                }`}>
+                <div className={`w-4.5 h-4.5 rounded-xl border flex items-center justify-center transition-all shrink-0 ${isPersistedDefault
+                  ? "bg-blue-600 border-blue-500 text-white"
+                  : "border-zinc-700 bg-[#0A0A0A]"
+                  }`}>
                   {isPersistedDefault && (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="w-2 h-2">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   )}
                 </div>
-                
+
                 <div className="flex items-center gap-1 text-[12px] font-black tracking-wide truncate">
                   <span className="text-zinc-300 font-sans font-bold truncate">
                     B.Tech {academicYear === "1" ? "1st" : academicYear === "2" ? "2nd" : academicYear === "3" ? "3rd" : "4th"} Year
@@ -297,18 +295,16 @@ export default function SchedulePage() {
                 </div>
               </div>
 
-              
             </div>
 
             {/* Filter Open Panel Trigger */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className={`border rounded-xl py-2 px-3.5 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5 shrink-0 transition-all active:scale-95 shadow-md ${
-                  isDropdownOpen
-                    ? "bg-zinc-900 border-zinc-500 text-white" 
-                    : "bg-zinc-800 border-zinc-900 text-zinc-400 hover:text-white hover:border-zinc-700"
-                }`}
+                className={`border rounded-xl py-2 px-3.5 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5 shrink-0 transition-all active:scale-95 shadow-md ${isDropdownOpen
+                  ? "bg-zinc-900 border-zinc-500 text-white"
+                  : "bg-zinc-800 border-zinc-900 text-zinc-400 hover:text-white hover:border-zinc-700"
+                  }`}
               >
                 <span>Filter</span>
                 <span className={`text-[9px] transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}>
@@ -319,7 +315,7 @@ export default function SchedulePage() {
               {/* Dynamic Filtering Panel Popout Card */}
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-1 w-52 bg-zinc-900 backdrop-blur-xl border border-zinc-800 rounded-xl shadow-[0_10px_35px_rgba(0,0,0,0.9)] py-2 z-50 flex flex-col text-[11px] font-bold text-zinc-400 animate-in fade-in zoom-in-95 duration-100">
-                  
+
                   <div className="px-3 text-[12px] font-black text-zinc-400 tracking-wide mb-1">
                     Year
                   </div>
@@ -407,7 +403,7 @@ export default function SchedulePage() {
       {/* 📜 SCROLLABLE MIDDLE TRACK CONTAINER */}
       <div className="flex-1 overflow-y-auto w-full flex flex-col items-center px-2 py-2 pb-2 style-scrollbar">
         <main className="w-[97%] max-w-[365px] flex flex-col flex-grow">
-          
+
           {loading && timetableData.length === 0 ? (
             <div className="flex flex-col gap-3 w-full">
               {[...Array(3)].map((_, i) => (
@@ -427,16 +423,15 @@ export default function SchedulePage() {
                   .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time));
 
                 return (
-                  <div 
-                    key={day} 
+                  <div
+                    key={day}
                     ref={isToday ? activeDayRef : null}
-                    className={`w-full border rounded-2xl p-3 shadow-xl flex flex-col transition-all duration-300 ${
-                      isToday 
-                        ? "bg-gradient-to-b from-sky-400/30 via-slate-900/80 to-black border-sky-400/80 ring-1 ring-sky-500/50" 
-                        : "bg-gradient-to-b from-sky-300/10 to-black border-sky-600/20"
-                    }`}
+                    className={`w-full border rounded-2xl p-3 shadow-xl flex flex-col transition-all duration-300 ${isToday
+                      ? "bg-gradient-to-b from-sky-400/30 via-slate-900/80 to-black border-sky-400/80 ring-1 ring-sky-500/50"
+                      : "bg-gradient-to-b from-sky-300/10 to-black border-sky-600/20"
+                      }`}
                   >
-                    
+
                     <div className="border-b border-zinc-950 pb-2 mb-2.5 flex justify-between items-center select-none">
                       <div className="flex items-center gap-2">
                         <span className={`text-[12px] font-black uppercase tracking-wider ${isToday ? "text-sky-300" : "text-zinc-300"}`}>
@@ -471,47 +466,44 @@ export default function SchedulePage() {
                             <div
                               key={idx}
                               ref={isOngoing ? activeClassRef : null}
-                              className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform active:scale-[0.99] relative overflow-hidden ${
-                                isOngoing
-                                  ? "bg-sky-950/90 border-sky-400 ring-2 ring-sky-400/80 shadow-[0_0_15px_rgba(56,189,248,0.3)] animate-pulse"
-                                  : isLab
+                              className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform active:scale-[0.99] relative overflow-hidden ${isOngoing
+                                ? "bg-sky-950/90 border-sky-400 ring-2 ring-sky-400/80 shadow-[0_0_15px_rgba(56,189,248,0.3)] animate-pulse"
+                                : isLab
                                   ? "bg-emerald-950 border-green-800 border-2 shadow-sm"
                                   : isTut
-                                  ? "bg-zinc-700 border-amber-800 border-2 shadow-xs"
-                                  : "bg-zinc-700 border-zinc-700 shadow-sm"
-                              }`}
+                                    ? "bg-zinc-700 border-amber-800 border-2 shadow-xs"
+                                    : "bg-zinc-700 border-zinc-700 shadow-sm"
+                                }`}
                             >
                               {/* Left section: Course info and Venue */}
-                              <div className="flex flex-col gap-2 min-w-0 flex-1 pr-1.5">
-                                <div className="flex items-center gap-2">
-                                  <span className="text-[13px] font-black tracking-tight text-white truncate">
+                              <div className="flex flex-col gap-1.5 min-w-0 flex-1 pr-2">
+                                <div className="flex items-center">
+                                  <span className="text-[11px] sm:text-[12px] font-black leading-snug text-white break-words">
                                     {cls.courseCode}
                                   </span>
                                 </div>
-                                <div className="text-[14px]">
+                                <div className="text-[13px]">
                                   📍 <span className="text-[11px] text-zinc-200 font-black">{cls.venue}</span>
                                 </div>
                               </div>
 
                               {/* Right section: Time and Type badge stacked vertically */}
                               <div className="flex flex-col items-end gap-2 shrink-0">
-                                <span className={`text-[11px] font-black border rounded-2xl px-2 py-1 shadow-inner ${
-                                  isOngoing 
-                                    ? "bg-sky-400 text-black border-sky-300 font-bold"
-                                    : "text-amber-500 bg-zinc-700 border-amber-500/70"
-                                }`}>
+                                <span className={`text-[11px] font-black border rounded-2xl px-2 py-1 shadow-inner ${isOngoing
+                                  ? "bg-sky-400 text-black border-sky-300 font-bold"
+                                  : "text-amber-500 bg-zinc-700 border-amber-500/70"
+                                  }`}>
                                   {cls.time}
                                 </span>
                                 <span
-                                  className={`text-[9px] font-black uppercase tracking-normal px-1.5 py-0.5 rounded-lg border ${
-                                    isOngoing
-                                      ? "bg-sky-500 text-black border-sky-300 font-bold"
-                                      : isLab
+                                  className={`text-[9px] font-black uppercase tracking-normal px-1.5 py-0.5 rounded-lg border ${isOngoing
+                                    ? "bg-sky-500 text-black border-sky-300 font-bold"
+                                    : isLab
                                       ? "bg-green-800 text-zinc-100 border-green-800"
                                       : isTut
-                                      ? "bg-amber-800 text-zinc-100 border-amber-800"
-                                      : "bg-zinc-700 text-zinc-200 border-zinc-500"
-                                  }`}
+                                        ? "bg-amber-800 text-zinc-100 border-amber-800"
+                                        : "bg-zinc-700 text-zinc-200 border-zinc-500"
+                                    }`}
                                 >
                                   {isOngoing ? "Active Now" : cls.type}
                                 </span>
@@ -525,10 +517,10 @@ export default function SchedulePage() {
                   </div>
                 );
               })}
-              
+
               <div className="w-full text-center pt-3 pb-1 shrink-0">
-                <Link 
-                  href="/?openReport=true" 
+                <Link
+                  href="/?openReport=true"
                   className="text-[11px] sm:text-xs font-bold tracking-wide uppercase text-rose-400 hover:text-white bg-rose-500/5 hover:bg-rose-600 border border-rose-500/20 hover:border-rose-500 px-4 py-2.5 rounded-xl transition-all duration-300 inline-flex items-center gap-2 shadow-[0_4px_12px_rgba(244,63,94,0.05)] cursor-pointer active:scale-95"
                 >
                   🚨 Report Structural Discrepancies
