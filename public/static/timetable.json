@@ -1891,6 +1891,24 @@
   },
   {
     "day": "Tuesday",
+    "year": 3,
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab",
+    "time": "2-5 PM"
+  },
+  {
+    "day": "Tuesday",
+    "time": "2-5 PM",
+    "year": 3,
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "3 - 3.55",
     "year": 4,
     "courseCode": "CS4101 ~ Pattern Recognition",
@@ -3490,24 +3508,6 @@
     "group": "ME",
     "venue": "ME Department Room",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "year": 3,
-    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lab",
-    "time": "2-5 PM"
-  },
-  {
-    "day": "Wednesday",
-    "time": "2-5 PM",
-    "year": 3,
-    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -5257,6 +5257,24 @@
   },
   {
     "day": "Thursday",
+    "year": 3,
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab",
+    "time": "3-5 PM"
+  },
+  {
+    "day": "Thursday",
+    "time": "3-6 PM",
+    "year": 3,
+    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -5752,6 +5770,15 @@
   },
   {
     "day": "Thursday",
+    "year": 2,
+    "courseCode": "CB2103 ~ Heat Transfer",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab",
+    "time": "10-1 AM"
+  },
+  {
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 2,
     "courseCode": "HS2103 ~ Multivariate Analysis and Basic Econometrics",
@@ -6136,6 +6163,15 @@
     "group": "CT",
     "venue": "R-306",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "year": "Elective",
+    "courseCode": "CB5103",
+    "group": "CB",
+    "venue": "Dept Classroom (220)",
+    "type": "Lecture",
+    "time": "12 Noon - 12.55 PM"
   },
   {
     "day": "Thursday",
@@ -6724,6 +6760,24 @@
   },
   {
     "day": "Friday",
+    "year": 3,
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab",
+    "time": "2-5 PM"
+  },
+  {
+    "day": "Friday",
+    "time": "2-5 PM",
+    "year": 3,
+    "courseCode": "CB3105 ~ Chemical Process Modeling and Simulation",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
     "time": "3-6 PM",
     "year": 3,
     "courseCode": "CS3102 ~ Computer Networks",
@@ -6742,30 +6796,12 @@
   },
   {
     "day": "Friday",
-    "year": 3,
-    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lab",
-    "time": "3-5 PM"
-  },
-  {
-    "day": "Friday",
     "year": 2,
     "courseCode": "CB2102 ~ Fluid Mechanics",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
     "time": "3-4 PM"
-  },
-  {
-    "day": "Friday",
-    "time": "3-6 PM",
-    "year": 3,
-    "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lab"
   },
   {
     "day": "Friday",
@@ -7120,21 +7156,21 @@
   },
   {
     "day": "Friday",
-    "year": 2,
-    "courseCode": "CB2103 ~ Heat Transfer",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lab",
-    "time": "10-1 AM"
-  },
-  {
-    "day": "Friday",
     "year": 3,
     "courseCode": "CB3104 ~ Chemical Reaction Engineering-II",
     "group": "CB",
     "venue": "R-307",
     "type": "Lecture",
     "time": "10-11 AM"
+  },
+  {
+    "day": "Friday",
+    "year": 2,
+    "courseCode": "CB2102 ~ Fluid Mechanics",
+    "group": "CB",
+    "venue": "Lab",
+    "type": "Lab",
+    "time": "10-12 PM"
   },
   {
     "day": "Friday",
@@ -7436,7 +7472,7 @@
   {
     "day": "Friday",
     "year": "Elective",
-    "courseCode": "CB5103",
+    "courseCode": "CB5101",
     "group": "CB",
     "venue": "Dept Classroom (220)",
     "type": "Lecture",
