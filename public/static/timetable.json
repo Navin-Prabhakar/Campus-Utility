@@ -31,7 +31,7 @@
     "time": "2 - 2.55",
     "year": 2,
     "courseCode": "HS2108 ~ Soft Skills",
-    "group": "ES",
+    "group": "elective",
     "venue": "B1/202",
     "type": "Lecture"
   },
@@ -381,8 +381,8 @@
     "day": "Monday",
     "time": "8 - 8.55",
     "year": 2,
-    "courseCode": "MA2102 (T) ~ Probability and Stochastic Processes",
-    "group": "MA",
+    "courseCode": "HS2105/MA2102 (T) ~ Probability and Stochastic Processes",
+    "group": "ES",
     "venue": "B1/202",
     "type": "Tutorial"
   },
@@ -3234,8 +3234,8 @@
     "day": "Tuesday",
     "time": "12 Noon - 12.55",
     "year": 2,
-    "courseCode": "MA2102 ~ Probability and Stochastic Processes",
-    "group": "MA",
+    "courseCode": "HS2105/MA2102 ~ Probability and Stochastic Processes",
+    "group": "ES",
     "venue": "B1/202",
     "type": "Lecture"
   },
@@ -4645,7 +4645,7 @@
   },
   {
     "day": "Wednesday",
-    "time": "10 AM - 11 AM",
+    "time": "10 AM - 1 PM",
     "year": 2,
     "courseCode": "MM2102 ~ Mineral Processing and Process Metallurgy",
     "group": "MM",
@@ -5344,15 +5344,6 @@
     "group": "MC",
     "venue": "R-107",
     "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 PM - 5 PM",
-    "year": 2,
-    "courseCode": "MA2101 ~ Design and Analysis of Algorithms",
-    "group": "MC",
-    "venue": "Department Lab",
-    "type": "Lab"
   },
   {
     "day": "Wednesday",
@@ -6537,8 +6528,8 @@
     "day": "Thursday",
     "time": "10 - 10.55",
     "year": 2,
-    "courseCode": "MA2102 ~ Probability and Stochastic Processes",
-    "group": "MA",
+    "courseCode": "HS2105/MA2102 ~ Probability and Stochastic Processes",
+    "group": "ES",
     "venue": "B1/202",
     "type": "Lecture"
   },
@@ -6979,7 +6970,7 @@
     "time": "12 Noon - 12.55",
     "year": 2,
     "courseCode": "HS2108 ~ Soft Skills",
-    "group": "ES",
+    "group": "elective",
     "venue": "B1/202",
     "type": "Lecture"
   },
@@ -7246,7 +7237,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3:00 PM - 4:00 PM",
+    "time": "5:00 PM - 5:55 PM",
     "year": 2,
     "courseCode": "CH2103 ~ Introduction to Quantum Chemistry",
     "group": "CT",
@@ -7255,7 +7246,7 @@
   },
   {
     "day": "Thursday",
-    "time": "3:00 PM - 4:00 PM",
+    "time": "3:00 PM - 4:55 PM",
     "year": 2,
     "courseCode": "CH2105 ~ Chemical Process Calculations",
     "group": "CT",
@@ -7755,15 +7746,6 @@
     "courseCode": "ME2104 ~ Engineering Materials",
     "group": "ME",
     "venue": "LT002",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "5 - 5.55",
-    "year": 2,
-    "courseCode": "ME2102 ~ Thermodynamics",
-    "group": "ME",
-    "venue": "R-301",
     "type": "Lecture"
   },
   {
@@ -8301,8 +8283,8 @@
     "day": "Friday",
     "time": "11 - 11.55",
     "year": 2,
-    "courseCode": "MA2102 ~ Probability and Stochastic Processes",
-    "group": "MA",
+    "courseCode": "HS2105/MA2102 ~ Probability and Stochastic Processes",
+    "group": "ES",
     "venue": "B1/202",
     "type": "Lecture"
   },
@@ -8518,7 +8500,7 @@
     "time": "12 Noon - 12.55",
     "year": 2,
     "courseCode": "HS2108 ~ Soft Skills",
-    "group": "ES",
+    "group": "elective",
     "venue": "B1/202",
     "type": "Lecture"
   },
@@ -8758,7 +8740,7 @@
   },
   {
     "day": "Friday",
-    "time": "3 PM - 3.55 PM",
+    "time": "3 PM - 6 PM",
     "year": 3,
     "courseCode": "MM3104 ~ Ceramic Science and Technology",
     "group": "MM",
@@ -8767,7 +8749,7 @@
   },
   {
     "day": "Friday",
-    "time": "3 PM - 4 PM",
+    "time": "3 PM - 6 PM",
     "year": 2,
     "courseCode": "MM2103 ~ Thermodynamics and Phase Equilibria",
     "group": "MM",
