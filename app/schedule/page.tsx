@@ -242,7 +242,7 @@ export default function SchedulePage() {
     const itemGroup = item.group.trim();
     const currentSelection = selectedGroup.trim();
 
-    if (itemGroup === "All Branches" || itemGroup === "All" || itemGroup === "ES") return true;
+    if (itemGroup === "All Branches" || itemGroup === "All") return true;
     if (itemGroup === currentSelection) return true;
 
     const targetGroupRegex = new RegExp(`\\b${currentSelection}\\b`);
