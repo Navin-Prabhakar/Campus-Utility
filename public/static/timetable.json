@@ -1,24 +1,6 @@
 [
   {
     "day": "Monday",
-    "time": "Reserved-34",
-    "year": 2,
-    "courseCode": "ME2104 ~ Engineering Materials",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "Reserved-34",
-    "year": 2,
-    "courseCode": "ME2103 ~ Fluid Mechanics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
     "time": "2 - 2.55",
     "year": "Elective",
     "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
@@ -43,6 +25,15 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "2-3 PM"
+  },
+  {
+    "day": "Monday",
+    "time": "2 - 2.55",
+    "year": 4,
+    "courseCode": "ME4101",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -100,6 +91,33 @@
   },
   {
     "day": "Monday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "ME3103 ~ Manufacturing Technology- I",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME6109",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "3 - 3.55",
+    "year": 4,
+    "courseCode": "ME4106",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -151,6 +169,33 @@
     "venue": "Dept Classroom (220)",
     "type": "Lecture",
     "time": "4-5 PM"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "ME3105 ~ Numerical Methods for Engineers",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME5101",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "Minor",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -214,6 +259,15 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "5-6 PM"
+  },
+  {
+    "day": "Monday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "ME5101 (T)",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Tutorial"
   },
   {
     "day": "Monday",
@@ -424,6 +478,33 @@
   },
   {
     "day": "Monday",
+    "time": "9 - 9.55",
+    "year": 2,
+    "courseCode": "ME2101 ~ Dynamics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME5102",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME5108",
+    "group": "Minor",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "10-11 AM",
     "year": 4,
     "courseCode": "CB4108 (IDE)",
@@ -631,6 +712,24 @@
   },
   {
     "day": "Monday",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "ME6111",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
     "time": "11-12 PM",
     "year": 4,
     "courseCode": "HS4119",
@@ -825,6 +924,24 @@
     "courseCode": "HS2102 ~ Fundamentals of Economics",
     "group": "ES",
     "venue": "B1/202",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 - 11.55",
+    "year": 2,
+    "courseCode": "ME2103 ~ Fluid Mechanics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "ME5106",
+    "group": "ME",
+    "venue": "R-301",
     "type": "Lecture"
   },
   {
@@ -1042,6 +1159,24 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "12 Noon - 12.55 PM"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "ME6107",
+    "group": "Minor",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Monday",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "ME2104 ~ Engineering Materials",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Monday",
@@ -1522,6 +1657,15 @@
   },
   {
     "day": "Monday",
+    "time": "4 PM - 5 PM",
+    "year": 2,
+    "courseCode": "ME2104 (P, G2) ~ Engineering Materials",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lab"
+  },
+  {
+    "day": "Monday",
     "time": "5 PM - 5.55 PM",
     "year": 1,
     "courseCode": "PH1101 ~ Physics",
@@ -1836,42 +1980,6 @@
     "type": "Tutorial"
   },
   {
-    "day": "Monday",
-    "time": "ME2101",
-    "year": 2,
-    "courseCode": "ME2101 ~ Dynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "ME2102",
-    "year": 2,
-    "courseCode": "ME2102 ~ Thermodynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "ME2103",
-    "year": 2,
-    "courseCode": "ME2104 ~ Engineering Materials",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "ME3105",
-    "year": 2,
-    "courseCode": "ME2102 (M) ~ Thermodynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
     "day": "Tuesday",
     "time": "2 - 2.55",
     "year": "Elective",
@@ -1981,6 +2089,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME6102",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME6107",
+    "group": "Minor",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -2017,6 +2143,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME5105",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "MH5101",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
     "time": "5 - 5.55",
     "year": 4,
     "courseCode": "CS4110 ~ Blockchain Technology",
@@ -2067,6 +2211,15 @@
     "courseCode": "MA5104",
     "group": "CS",
     "venue": "LT001",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "MH5101",
+    "group": "ME",
+    "venue": "R-308",
     "type": "Lecture"
   },
   {
@@ -2230,6 +2383,33 @@
     "venue": "Dept Classroom (220)",
     "type": "Lecture",
     "time": "9-11 AM"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 - 9.55",
+    "year": 2,
+    "courseCode": "ME2101 ~ Dynamics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME6104",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "9 - 9.55",
+    "year": 4,
+    "courseCode": "ME4106",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -2431,6 +2611,60 @@
   },
   {
     "day": "Tuesday",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "ME5102",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 - 10.55",
+    "year": 4,
+    "courseCode": "ME4101",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 11 AM",
+    "year": "Elective",
+    "courseCode": "ME5107 (P)",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 11 AM",
+    "year": 3,
+    "courseCode": "ME3103 (P,G2) ~ Manufacturing Technology- I",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "10 AM - 11 AM",
+    "year": 3,
+    "courseCode": "ME3102 (P,G1) ~ Design of Machine Elements",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "11-12 PM",
     "year": 4,
     "courseCode": "HS4119",
@@ -2617,6 +2851,24 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "11-12 PM"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 - 11.55",
+    "year": 2,
+    "courseCode": "ME2104 ~ Engineering Materials",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "ME5103",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Tuesday",
@@ -2832,6 +3084,33 @@
     "courseCode": "HS7104",
     "group": "ES",
     "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "ME2103 ~ Fluid Mechanics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "ME6106",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Tuesday",
+    "time": "12 Noon - 12.55",
+    "year": 4,
+    "courseCode": "ME4105",
+    "group": "ME",
+    "venue": "R-308",
     "type": "Lecture"
   },
   {
@@ -3205,6 +3484,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "3 PM - 4 PM",
+    "year": 3,
+    "courseCode": "ME3101 (T) ~ Data Analytics and Machine Learning Tools for Engineers",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Tuesday",
+    "time": "3 PM - 4 PM",
+    "year": 2,
+    "courseCode": "ME2103 (P, G1) ~ Fluid Mechanics",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "4 PM - 4.55 PM",
     "year": 4,
     "courseCode": "MA4103",
@@ -3421,6 +3718,24 @@
   },
   {
     "day": "Tuesday",
+    "time": "5 PM - 6 PM",
+    "year": 3,
+    "courseCode": "ME3101 (P) ~ Data Analytics and Machine Learning Tools for Engineers",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
+    "time": "5 PM - 6 PM",
+    "year": 2,
+    "courseCode": "ME2103 (P, G2) ~ Fluid Mechanics",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lab"
+  },
+  {
+    "day": "Tuesday",
     "time": "6 PM - 6.55 PM",
     "year": "Elective",
     "courseCode": "CE6109 (RKB)",
@@ -3429,84 +3744,21 @@
     "type": "Lecture"
   },
   {
-    "day": "Tuesday",
-    "time": "ME2101",
-    "year": 2,
-    "courseCode": "ME2101 ~ Dynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME2102",
-    "year": 2,
-    "courseCode": "ME2102 ~ Thermodynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME2103",
+    "day": "Wednesday",
+    "time": "2 - 2.55",
     "year": 3,
-    "courseCode": "ME3103 ~ Manufacturing Technology- I",
+    "courseCode": "ME3105 ~ Numerical Methods for Engineers",
     "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME2103",
-    "year": 2,
-    "courseCode": "ME2103 (T) ~ Fluid Mechanics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME3103",
-    "year": 3,
-    "courseCode": "ME3101 ~ Data Analytics and Machine Learning Tools for Engineers",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME3103",
-    "year": 2,
-    "courseCode": "ME2101 (T) ~ Dynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME3105",
-    "year": 2,
-    "courseCode": "ME2103 ~ Fluid Mechanics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "ME3105",
-    "year": 3,
-    "courseCode": "ME3102 ~ Design of Machine Elements",
-    "group": "ME",
-    "venue": "ME Department Room",
+    "venue": "LT002",
     "type": "Lecture"
   },
   {
     "day": "Wednesday",
-    "time": "Reserved-34",
-    "year": 2,
-    "courseCode": "ME2102 (T) ~ Thermodynamics",
+    "time": "2 - 2.55",
+    "year": 4,
+    "courseCode": "ME4105",
     "group": "ME",
-    "venue": "ME Department Room",
+    "venue": "R-308",
     "type": "Lecture"
   },
   {
@@ -3556,6 +3808,33 @@
   },
   {
     "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": 3,
+    "courseCode": "ME3101 ~ Data Analytics and Machine Learning Tools for Engineers",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME5101",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "3 - 3.55",
+    "year": 2,
+    "courseCode": "ME2101 (T) ~ Dynamics",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Wednesday",
     "year": "Elective",
     "courseCode": "CB6105",
     "group": "CB",
@@ -3565,12 +3844,93 @@
   },
   {
     "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "ME2103 ~ Fluid Mechanics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME5108",
+    "group": "Minor",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": 3,
+    "courseCode": "ME3102 ~ Design of Machine Elements",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "EC5105",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "EC5152",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "year": 2,
     "courseCode": "CB2104 ~ Chemical Process Calculations",
     "group": "CB",
     "venue": "R-102",
     "type": "Lecture",
     "time": "5-6 PM"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "Minor",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": 3,
+    "courseCode": "ME3102 ~ Design of Machine Elements",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "EC5105",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "5 - 5.55",
+    "year": "Elective",
+    "courseCode": "EC5152",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -3916,6 +4276,24 @@
   },
   {
     "day": "Wednesday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME6104",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "MH5101",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "10-11 AM",
     "year": 4,
     "courseCode": "CB4108 (IDE)",
@@ -4159,6 +4537,15 @@
   },
   {
     "day": "Wednesday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "ME5103",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "11-12 PM",
     "year": 4,
     "courseCode": "HS4118",
@@ -4348,6 +4735,33 @@
   },
   {
     "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "ME3103 ~ Manufacturing Technology- I",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "ME6106",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "ME5106",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
     "time": "12:00 PM - 1:00 PM",
     "year": 3,
     "courseCode": "CB3106 (IDE)",
@@ -4507,6 +4921,24 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "12 Noon - 12.55 PM"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "ME6109",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Wednesday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "ME5105",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Wednesday",
@@ -5121,33 +5553,6 @@
     "type": "Lecture"
   },
   {
-    "day": "Wednesday",
-    "time": "ME2102",
-    "year": 3,
-    "courseCode": "ME3103 ~ Manufacturing Technology- I",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "ME2103",
-    "year": 3,
-    "courseCode": "ME3104 ~ Engineering Software Laboratory",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "ME3105",
-    "year": 2,
-    "courseCode": "ME2102 (M) ~ Thermodynamics",
-    "group": "ME",
-    "venue": "ME Department Room",
-    "type": "Lecture"
-  },
-  {
     "day": "Thursday",
     "time": "2 - 2.55",
     "year": "Elective",
@@ -5163,6 +5568,15 @@
     "courseCode": "CS5101 ~ Design and Analysis of Algorithms",
     "group": "CS",
     "venue": "R303",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "2 - 2.55",
+    "year": 3,
+    "courseCode": "ME3102 ~ Design of Machine Elements",
+    "group": "ME",
+    "venue": "LT002",
     "type": "Lecture"
   },
   {
@@ -5275,6 +5689,24 @@
   },
   {
     "day": "Thursday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME5108",
+    "group": "Minor",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME6104",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
@@ -5289,6 +5721,33 @@
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT101",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME6102",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME6111",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME6106",
+    "group": "ME",
+    "venue": "R-308",
     "type": "Lecture"
   },
   {
@@ -5563,6 +6022,33 @@
   },
   {
     "day": "Thursday",
+    "time": "9 - 9.55",
+    "year": 2,
+    "courseCode": "ME2101 ~ Dynamics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME6109",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "9 - 9.55",
+    "year": 4,
+    "courseCode": "ME4106",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "10 AM - 10.55 AM",
     "year": 1,
     "courseCode": "ME1102 ~ Engineering Mechanics",
@@ -5797,6 +6283,42 @@
   },
   {
     "day": "Thursday",
+    "time": "10 - 10.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 - 10.55",
+    "year": 4,
+    "courseCode": "ME4101",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 11 AM",
+    "year": "Elective",
+    "courseCode": "ME5104 (P) MH5102 (P) ME5109 (P)",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "10 AM - 11 AM",
+    "year": 3,
+    "courseCode": "ME3104 (P,G2) ~ Engineering Software Laboratory",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "11-12 PM",
     "year": 4,
     "courseCode": "HS4119",
@@ -6004,6 +6526,15 @@
   },
   {
     "day": "Thursday",
+    "time": "11 - 11.55",
+    "year": 2,
+    "courseCode": "ME2103 (T) ~ Fluid Mechanics",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Thursday",
     "time": "12:00 PM - 1:00 PM",
     "year": 3,
     "courseCode": "ME3106 (IDE)",
@@ -6184,6 +6715,15 @@
   },
   {
     "day": "Thursday",
+    "time": "12 Noon - 12.55",
+    "year": 4,
+    "courseCode": "ME4105",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
     "time": "1 PM - 2 PM",
     "year": 1,
     "courseCode": "MA1101 ~ Calculus and Linear Algebra",
@@ -6319,6 +6859,15 @@
   },
   {
     "day": "Thursday",
+    "time": "2 PM - 3 PM",
+    "year": "Elective",
+    "courseCode": "EC5105/EC5152         (EE, P)",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
     "time": "3 PM - 3.55 PM",
     "year": 1,
     "courseCode": "PH1101 ~ Physics",
@@ -6433,6 +6982,33 @@
     "group": "CT",
     "venue": "R-102",
     "type": "Lecture"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 4 PM",
+    "year": 2,
+    "courseCode": "ME2104 (P, G1) ~ Engineering Materials",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 4 PM",
+    "year": 3,
+    "courseCode": "ME3102 (P, G2) ~ Design of Machine Elements",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lab"
+  },
+  {
+    "day": "Thursday",
+    "time": "3 PM - 4 PM",
+    "year": 3,
+    "courseCode": "ME3103 (P,G1) ~ Manufacturing Technology- I",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lab"
   },
   {
     "day": "Thursday",
@@ -6805,6 +7381,15 @@
   },
   {
     "day": "Friday",
+    "time": "3 - 3.55",
+    "year": "Elective",
+    "courseCode": "ME6107",
+    "group": "Minor",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "year": 2,
     "courseCode": "CB2105 ~ Chemical Engineering Thermodynamics",
     "group": "CB",
@@ -6820,6 +7405,51 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "4-5 PM"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "Minor",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "4 - 4.55",
+    "year": "Elective",
+    "courseCode": "ME5105",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 - 5.55",
+    "year": 2,
+    "courseCode": "ME2104 ~ Engineering Materials",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 - 5.55",
+    "year": 2,
+    "courseCode": "ME2102 ~ Thermodynamics",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "5 - 5.55",
+    "year": 3,
+    "courseCode": "ME3105 ~ Numerical Methods for Engineers",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -6991,6 +7621,24 @@
     "venue": "R-307",
     "type": "Lecture",
     "time": "9-10 AM"
+  },
+  {
+    "day": "Friday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME6102",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "9 - 9.55",
+    "year": "Elective",
+    "courseCode": "ME5103",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
   },
   {
     "day": "Friday",
@@ -7174,6 +7822,24 @@
   },
   {
     "day": "Friday",
+    "time": "10 - 10.55",
+    "year": 3,
+    "courseCode": "ME3103 ~ Manufacturing Technology- I",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "10 - 10.55",
+    "year": "Elective",
+    "courseCode": "ME5101",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "11-12 PM",
     "year": 4,
     "courseCode": "HS4118",
@@ -7314,6 +7980,33 @@
     "courseCode": "HS7103",
     "group": "ES",
     "venue": "B1/211",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": 3,
+    "courseCode": "ME3104 ~ Engineering Software Laboratory",
+    "group": "ME",
+    "venue": "LT002",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "ME5106",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "11 - 11.55",
+    "year": "Elective",
+    "courseCode": "ME6111",
+    "group": "ME",
+    "venue": "R-308",
     "type": "Lecture"
   },
   {
@@ -7489,6 +8182,42 @@
   },
   {
     "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "ME5102",
+    "group": "ME",
+    "venue": "R-301",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": 2,
+    "courseCode": "ME2102 (T) ~ Thermodynamics",
+    "group": "ME",
+    "venue": "R-308",
+    "type": "Tutorial"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "EC5105",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
+    "time": "12 Noon - 12.55",
+    "year": "Elective",
+    "courseCode": "EC5152",
+    "group": "ME",
+    "venue": "Dept Classroom (If available)",
+    "type": "Lecture"
+  },
+  {
+    "day": "Friday",
     "time": "1 PM - 2 PM",
     "year": 1,
     "courseCode": "MA1101 ~ Calculus and Linear Algebra",
@@ -7602,6 +8331,15 @@
     "courseCode": "CH3105 ~ Chemical Technology Laboratory II",
     "group": "CT",
     "venue": "Chem Lab",
+    "type": "Lab"
+  },
+  {
+    "day": "Friday",
+    "time": "2 PM - 3 PM",
+    "year": 3,
+    "courseCode": "ME3104 (P, G1) ~ Engineering Software Laboratory",
+    "group": "ME",
+    "venue": "LT002",
     "type": "Lab"
   },
   {
