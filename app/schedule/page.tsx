@@ -13,56 +13,90 @@ interface TimetableItem {
   type: string;
 }
 
-const MESS_CONFIG = []; // Empty fallback placeholder if required structurally
-
 export default function SchedulePage() {
-  // 🛠️ FIX 1: HYDRATION SECURE PARAMS - Uniform server/client frame logic init
   const [academicYear, setAcademicYear] = useState<string>("1");
   const [selectedGroup, setSelectedGroup] = useState<string>("G1");
+  const [selectedElective, setSelectedElective] = useState<string>("ALL");
   const [timetableData, setTimetableData] = useState<TimetableItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [isPersistedDefault, setIsPersistedDefault] = useState<boolean>(false);
 
+  const [currentDayName, setCurrentDayName] = useState<string>("");
+  const [currentMinutesNow, setCurrentMinutesNow] = useState<number>(0);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const activeClassRef = useRef<HTMLDivElement>(null);
+  const activeDayRef = useRef<HTMLDivElement>(null);
+
   const CACHE_KEY = "swb_timetable_schedule_cache";
 
-  // 🛠️ FIX 2: Client-side storage pins extraction inside safe mount window
+  // Electives Configuration Lookup
+  const ELECTIVES_CONFIG: Record<string, { code: string; name: string }[]> = {
+    "2": [
+      { code: "HS2110", name: "Language Human Mind and Indian Society" },
+      { code: "HS2111", name: "Introductory Sociology" },
+      { code: "HS2112", name: "Introduction to Demography" },
+    ],
+    "3": [
+      { code: "CB3106", name: "IDE-II (Chemical)" },
+      { code: "ME3106", name: "IDE-II (Mechanical)" },
+      { code: "CS3106", name: "IDE-II (Computer Science)" },
+      { code: "MM3106", name: "IDE-II (Metallurgical)" },
+      { code: "HS3108", name: "IDE-II (Humanities)" },
+    ],
+  };
+
+  // Live device time tracking for auto-scrolling & highlighting
+  useEffect(() => {
+    const updateTimeContext = () => {
+      const now = new Date();
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      setCurrentDayName(days[now.getDay()]);
+      setCurrentMinutesNow(now.getHours() * 60 + now.getMinutes());
+    };
+
+    updateTimeContext();
+    const interval = setInterval(updateTimeContext, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Client-side storage pins extraction inside safe mount window
   useEffect(() => {
     if (typeof window !== "undefined") {
       const storedYear = localStorage.getItem("iitp_default_year") || "1";
       const storedGroup = localStorage.getItem("iitp_default_group") || (storedYear === "1" ? "G1" : "AI");
+      const storedElective = localStorage.getItem("iitp_default_elective") || "ALL";
+      
       setAcademicYear(storedYear);
       setSelectedGroup(storedGroup);
+      setSelectedElective(storedElective);
     }
   }, []);
 
-  // 📡 Sync live asset JSON registers with local backup layer
+  // Sync live asset JSON registers
   useEffect(() => {
     async function fetchTimetableData() {
       try {
         setLoading(true);
         setError(false);
         
-        // 🛠️ 1. PULL UP LOCAL SNAPSHOT PERSISTENCE INSTANTLY
         const cachedData = localStorage.getItem(CACHE_KEY);
         if (cachedData) {
           try {
             const parsedCache = JSON.parse(cachedData);
             if (Array.isArray(parsedCache) && parsedCache.length > 0) {
               setTimetableData(parsedCache);
-              setLoading(false); // Speed up viewport display
+              setLoading(false);
             }
           } catch (e) {
             console.error("Failed parsing timetable persistence layer blocks:", e);
           }
         }
 
-        // 🛠️ 2. OFFLINE OVERRIDE TERMINATOR
         if (typeof window !== "undefined" && !navigator.onLine) {
           if (cachedData) {
-            console.log("Timetable database running autonomously in offline matrix state, bro!");
             setLoading(false);
             return;
           }
@@ -73,14 +107,13 @@ export default function SchedulePage() {
         
         const data = await res.json();
         const parsedData = Array.isArray(data) ? data : [];
-        // 🛠️ DEV LOOP PROTECTION:
-          if (process.env.NODE_ENV === "development") {
-            setTimetableData(parsedData);
-            setLoading(false);
-            return;
-          }
 
-        // 🛠️ 3. SERIALIZED DEEP STRINGS MATRIX COMPARISON
+        if (process.env.NODE_ENV === "development") {
+          setTimetableData(parsedData);
+          setLoading(false);
+          return;
+        }
+
         const serializedData = JSON.stringify(parsedData);
         if (serializedData !== localStorage.getItem(CACHE_KEY)) {
           setTimetableData(parsedData);
@@ -98,14 +131,20 @@ export default function SchedulePage() {
     fetchTimetableData();
   }, []);
 
-  // Re-evaluate pinned synchronization states context whenever filter choices move
+  // Re-evaluate pinned synchronization states context
   useEffect(() => {
     const savedYear = localStorage.getItem("iitp_default_year");
     const savedGroup = localStorage.getItem("iitp_default_group");
-    setIsPersistedDefault(savedYear === academicYear && savedGroup === selectedGroup);
-  }, [academicYear, selectedGroup]);
+    const savedElective = localStorage.getItem("iitp_default_elective") || "ALL";
 
-  // Click outside interception hooks
+    setIsPersistedDefault(
+      savedYear === academicYear && 
+      savedGroup === selectedGroup && 
+      savedElective === selectedElective
+    );
+  }, [academicYear, selectedGroup, selectedElective]);
+
+  // Click outside interception
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -116,15 +155,29 @@ export default function SchedulePage() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Handler execution array to write/clear permanent storage layers
+  // Auto-scroll to current day / active class slot
+  useEffect(() => {
+    if (!loading && timetableData.length > 0) {
+      setTimeout(() => {
+        if (activeClassRef.current) {
+          activeClassRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+        } else if (activeDayRef.current) {
+          activeDayRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 300);
+    }
+  }, [loading, timetableData, academicYear, selectedGroup, selectedElective]);
+
   const handlePersistenceToggle = () => {
     if (isPersistedDefault) {
       localStorage.removeItem("iitp_default_year");
       localStorage.removeItem("iitp_default_group");
+      localStorage.removeItem("iitp_default_elective");
       setIsPersistedDefault(false);
     } else {
       localStorage.setItem("iitp_default_year", academicYear);
       localStorage.setItem("iitp_default_group", selectedGroup);
+      localStorage.setItem("iitp_default_elective", selectedElective);
       setIsPersistedDefault(true);
     }
   };
@@ -134,9 +187,9 @@ export default function SchedulePage() {
   const parseTimeToMinutes = (timeStr: string): number => {
     try {
       const startTimePart = timeStr.split("-")[0].trim().toUpperCase();
-      if (startTimePart === "12 NOON") return 12 * 60;
+      if (startTimePart.includes("NOON")) return 12 * 60;
       
-      const match = startTimePart.match(/(\d+)(?:\.(\d+))?\s*(AM|PM)?/);
+      const match = startTimePart.match(/(\d+)(?::(\d+))?\s*(AM|PM)?/);
       if (!match) return 0;
       
       let hours = parseInt(match[1], 10);
@@ -152,14 +205,44 @@ export default function SchedulePage() {
     }
   };
 
+  const parseEndTimeToMinutes = (timeStr: string): number => {
+    try {
+      const parts = timeStr.split("-");
+      if (parts.length < 2) return parseTimeToMinutes(timeStr) + 55;
+      
+      const endTimePart = parts[1].trim().toUpperCase();
+      const match = endTimePart.match(/(\d+)(?::(\d+))?\s*(AM|PM)?/);
+      if (!match) return parseTimeToMinutes(timeStr) + 55;
+
+      let hours = parseInt(match[1], 10);
+      const minutes = match[2] ? parseInt(match[2], 10) : 0;
+      const period = match[3];
+
+      if (period === "PM" && hours !== 12) hours += 12;
+      if (period === "AM" && hours === 12) hours = 0;
+
+      return hours * 60 + minutes;
+    } catch (e) {
+      return parseTimeToMinutes(timeStr) + 55;
+    }
+  };
+
   const filteredSchedule = timetableData.filter((item) => {
     const matchYear = Number(item.year) === Number(academicYear);
     if (!matchYear) return false;
 
+    // Filter out electives if specific elective is chosen
+    if (selectedElective !== "ALL" && (academicYear === "2" || academicYear === "3")) {
+      const isElectiveCourse = ELECTIVES_CONFIG[academicYear]?.some((e) => item.courseCode.includes(e.code));
+      if (isElectiveCourse && !item.courseCode.includes(selectedElective)) {
+        return false;
+      }
+    }
+
     const itemGroup = item.group.trim();
     const currentSelection = selectedGroup.trim();
 
-    if (itemGroup === "All Branches" || itemGroup === "All") return true;
+    if (itemGroup === "All Branches" || itemGroup === "All" || itemGroup === "ES") return true;
     if (itemGroup === currentSelection) return true;
 
     const targetGroupRegex = new RegExp(`\\b${currentSelection}\\b`);
@@ -180,7 +263,7 @@ export default function SchedulePage() {
     >
       
       {/* Persistent Sticky Navigation Control Bar */}
-      <div className="w-full bg-[#0A0A0A]/60 backdrop-blur-md  shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
+      <div className="w-full bg-[#0A0A0A]/60 backdrop-blur-md shrink-0 z-30 flex flex-col items-center shadow-[0_4px_20px_rgba(0,0,0,0.6)]">
         {!loading && !error && (
           <div className="w-[94%] max-w-[365px] py-2 flex gap-2 items-center relative">
             
@@ -209,18 +292,12 @@ export default function SchedulePage() {
                     B.Tech {academicYear === "1" ? "1st" : academicYear === "2" ? "2nd" : academicYear === "3" ? "3rd" : "4th"} Year
                   </span>
                   <span className="text-white font-mono font-black shrink-0">
-                    ({selectedGroup})
+                    ({selectedGroup}{selectedElective !== "ALL" ? ` • ${selectedElective}` : ""})
                   </span>
                 </div>
               </div>
 
-              <span className={`text-[9px] font-black uppercase tracking-wider px-1 py-0.5 rounded-md font-sans border transition-colors ${
-                isPersistedDefault 
-                  ? 'bg-blue-500/20 text-blue-200 border-blue-500/20' 
-                  : 'bg-zinc-900 text-zinc-500 border-transparent'
-              }`}>
-                {isPersistedDefault ? 'Saved' : 'Pin'}
-              </span>
+              
             </div>
 
             {/* Filter Open Panel Trigger */}
@@ -241,9 +318,9 @@ export default function SchedulePage() {
 
               {/* Dynamic Filtering Panel Popout Card */}
               {isDropdownOpen && (
-                <div className="absolute right-0 mt-1 w-40 bg-zinc-900 backdrop-blur-xl border border-zinc-800 rounded-xl shadow-[0_10px_35px_rgba(0,0,0,0.9)] py-2 z-50 flex flex-col text-[11px] font-bold text-zinc-400 animate-in fade-in zoom-in-95 duration-100">
+                <div className="absolute right-0 mt-1 w-52 bg-zinc-900 backdrop-blur-xl border border-zinc-800 rounded-xl shadow-[0_10px_35px_rgba(0,0,0,0.9)] py-2 z-50 flex flex-col text-[11px] font-bold text-zinc-400 animate-in fade-in zoom-in-95 duration-100">
                   
-                  <div className="px-3  text-[12px] font-black text-zinc-400  tracking-wide   mb-1">
+                  <div className="px-3 text-[12px] font-black text-zinc-400 tracking-wide mb-1">
                     Year
                   </div>
                   <div className="px-2 mb-2">
@@ -253,6 +330,7 @@ export default function SchedulePage() {
                         const nextYear = e.target.value;
                         setAcademicYear(nextYear);
                         setSelectedGroup(nextYear === "1" ? "G1" : "AI");
+                        setSelectedElective("ALL");
                       }}
                       className="w-full bg-[#121212] border border-zinc-800 rounded-lg py-1.5 px-2 text-[11px] font-black text-zinc-200 outline-hidden focus:border-zinc-700 cursor-pointer"
                     >
@@ -266,7 +344,7 @@ export default function SchedulePage() {
                   <div className="px-3 py-1 text-[11px] font-black text-zinc-400 tracking-widest mb-1">
                     Group / Stream
                   </div>
-                  <div className="px-2">
+                  <div className="px-2 mb-2">
                     <select
                       value={selectedGroup}
                       onChange={(e) => setSelectedGroup(e.target.value)}
@@ -295,6 +373,29 @@ export default function SchedulePage() {
                     </select>
                   </div>
 
+                  {/* 🎯 ELECTIVE SELECTION MENU (For 2nd and 3rd Years) */}
+                  {(academicYear === "2" || academicYear === "3") && (
+                    <>
+                      <div className="px-3 py-1 text-[11px] font-black text-zinc-400 tracking-widest mb-1">
+                        Elective Course
+                      </div>
+                      <div className="px-2">
+                        <select
+                          value={selectedElective}
+                          onChange={(e) => setSelectedElective(e.target.value)}
+                          className="w-full bg-[#121212] border border-zinc-800 rounded-lg py-1.5 px-2 text-[10px] font-black text-zinc-200 outline-hidden focus:border-zinc-700 cursor-pointer truncate"
+                        >
+                          <option value="ALL">Show All Electives</option>
+                          {ELECTIVES_CONFIG[academicYear]?.map((ele) => (
+                            <option key={ele.code} value={ele.code}>
+                              {ele.code} - {ele.name}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </>
+                  )}
+
                 </div>
               )}
             </div>
@@ -320,17 +421,33 @@ export default function SchedulePage() {
           ) : (
             <div className="flex flex-col gap-4.5 w-full">
               {daysOrder.map((day) => {
+                const isToday = currentDayName === day;
                 const dayClasses = filteredSchedule
                   .filter((c) => c.day === day)
                   .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time));
 
                 return (
-                  <div key={day} className="w-full bg-gradient-to-b from-sky-300/30 to-black border border-sky-600/30 rounded-2xl p-3 shadow-xl flex flex-col">
+                  <div 
+                    key={day} 
+                    ref={isToday ? activeDayRef : null}
+                    className={`w-full border rounded-2xl p-3 shadow-xl flex flex-col transition-all duration-300 ${
+                      isToday 
+                        ? "bg-gradient-to-b from-sky-400/30 via-slate-900/80 to-black border-sky-400/80 ring-1 ring-sky-500/50" 
+                        : "bg-gradient-to-b from-sky-300/10 to-black border-sky-600/20"
+                    }`}
+                  >
                     
                     <div className="border-b border-zinc-950 pb-2 mb-2.5 flex justify-between items-center select-none">
-                      <span className="text-[12px] font-black uppercase tracking-wider text-zinc-300">
-                        {day}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className={`text-[12px] font-black uppercase tracking-wider ${isToday ? "text-sky-300" : "text-zinc-300"}`}>
+                          {day}
+                        </span>
+                        {isToday && (
+                          <span className="text-[9px] bg-sky-500 text-black font-black uppercase px-1.5 py-0.2 rounded-md animate-pulse">
+                            Today
+                          </span>
+                        )}
+                      </div>
                       <span className="text-[11px] font-mono font-black bg-[#121212] text-zinc-400 border border-zinc-800 px-2.5 py-0.5 rounded-lg shadow-inner">
                         {dayClasses.length} Slots
                       </span>
@@ -346,11 +463,18 @@ export default function SchedulePage() {
                           const isLab = cls.type.toLowerCase().includes("lab");
                           const isTut = cls.type === "Tutorial";
 
+                          const startMin = parseTimeToMinutes(cls.time);
+                          const endMin = parseEndTimeToMinutes(cls.time);
+                          const isOngoing = isToday && currentMinutesNow >= startMin && currentMinutesNow <= endMin;
+
                           return (
                             <div
                               key={idx}
-                              className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform hover:-translate-y-0 active:scale-[0.99] ${
-                                isLab
+                              ref={isOngoing ? activeClassRef : null}
+                              className={`flex justify-between p-2.5 rounded-xl border transition-all duration-150 transform active:scale-[0.99] relative overflow-hidden ${
+                                isOngoing
+                                  ? "bg-sky-950/90 border-sky-400 ring-2 ring-sky-400/80 shadow-[0_0_15px_rgba(56,189,248,0.3)] animate-pulse"
+                                  : isLab
                                   ? "bg-emerald-950 border-green-800 border-2 shadow-sm"
                                   : isTut
                                   ? "bg-zinc-700 border-amber-800 border-2 shadow-xs"
@@ -365,25 +489,31 @@ export default function SchedulePage() {
                                   </span>
                                 </div>
                                 <div className="text-[14px]">
-                                  📍 <span className="text-[11px] text-zinc-200 font-bold font-black">{cls.venue}</span>
+                                  📍 <span className="text-[11px] text-zinc-200 font-black">{cls.venue}</span>
                                 </div>
                               </div>
 
                               {/* Right section: Time and Type badge stacked vertically */}
                               <div className="flex flex-col items-end gap-2 shrink-0">
-                                <span className="text-[11px] font-black text-amber-500 bg-zinc-700 border border-amber-500/70 rounded-2xl px-2 py-1 shadow-inner">
+                                <span className={`text-[11px] font-black border rounded-2xl px-2 py-1 shadow-inner ${
+                                  isOngoing 
+                                    ? "bg-sky-400 text-black border-sky-300 font-bold"
+                                    : "text-amber-500 bg-zinc-700 border-amber-500/70"
+                                }`}>
                                   {cls.time}
                                 </span>
                                 <span
                                   className={`text-[9px] font-black uppercase tracking-normal px-1.5 py-0.5 rounded-lg border ${
-                                    isLab
+                                    isOngoing
+                                      ? "bg-sky-500 text-black border-sky-300 font-bold"
+                                      : isLab
                                       ? "bg-green-800 text-zinc-100 border-green-800"
                                       : isTut
                                       ? "bg-amber-800 text-zinc-100 border-amber-800"
                                       : "bg-zinc-700 text-zinc-200 border-zinc-500"
                                   }`}
                                 >
-                                  {cls.type}
+                                  {isOngoing ? "Active Now" : cls.type}
                                 </span>
                               </div>
                             </div>
