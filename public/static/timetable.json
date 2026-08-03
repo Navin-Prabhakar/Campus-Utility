@@ -37,12 +37,12 @@
   },
   {
     "day": "Monday",
-    "time": "2 - 2.55",
     "year": 3,
     "courseCode": "CB3104",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "2-3 PM"
   },
   {
     "day": "Monday",
@@ -82,12 +82,12 @@
   },
   {
     "day": "Monday",
-    "time": "3 - 3.55",
     "year": 3,
     "courseCode": "CB3101",
     "group": "CB",
     "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lab",
+    "time": "3-6 PM"
   },
   {
     "day": "Monday",
@@ -95,7 +95,7 @@
     "year": 3,
     "courseCode": "CB3101",
     "group": "CB",
-    "venue": "CB3101 Lab (Lab)",
+    "venue": "Lab",
     "type": "Lab"
   },
   {
@@ -136,30 +136,21 @@
   },
   {
     "day": "Monday",
-    "time": "4 - 4.55",
     "year": 2,
     "courseCode": "CB2102",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Monday",
-    "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CB5102",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "4 - 4.55",
-    "year": 3,
-    "courseCode": "CB3101",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Monday",
@@ -217,21 +208,12 @@
   },
   {
     "day": "Monday",
-    "time": "5 - 5.55",
     "year": 2,
     "courseCode": "CB2103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "5 - 5.55",
-    "year": 3,
-    "courseCode": "CB3101",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "5-6 PM"
   },
   {
     "day": "Monday",
@@ -433,12 +415,12 @@
   },
   {
     "day": "Monday",
-    "time": "9 - 9.55",
     "year": 3,
     "courseCode": "CB3101",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "9-10 AM"
   },
   {
     "day": "Monday",
@@ -622,21 +604,21 @@
   },
   {
     "day": "Monday",
-    "time": "10 - 10.55",
     "year": 3,
     "courseCode": "CB3102",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "10-12 PM"
   },
   {
     "day": "Monday",
-    "time": "10 - 10.55",
     "year": "Elective",
     "courseCode": "CB5103",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lab",
+    "time": "10-1 AM"
   },
   {
     "day": "Monday",
@@ -834,24 +816,6 @@
     "courseCode": "CH3104 ~ Techniques for Chemical Analysis",
     "group": "CT",
     "venue": "R-306",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 - 11.55",
-    "year": 3,
-    "courseCode": "CB3102",
-    "group": "CB",
-    "venue": "R-307",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "11 - 11.55",
-    "year": "Elective",
-    "courseCode": "CB5103",
-    "group": "CB",
-    "venue": "Dept Classroom (220)",
     "type": "Lecture"
   },
   {
@@ -1072,21 +1036,12 @@
   },
   {
     "day": "Monday",
-    "time": "12 Noon - 12.55",
     "year": 4,
     "courseCode": "CB4103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
-  },
-  {
-    "day": "Monday",
-    "time": "12 Noon - 12.55",
-    "year": "Elective",
-    "courseCode": "CB5103",
-    "group": "CB",
-    "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "12 Noon - 12.55 PM"
   },
   {
     "day": "Monday",
@@ -1990,21 +1945,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "3 - 3.55",
     "year": 2,
     "courseCode": "CB2101",
     "group": "CB",
-    "venue": "CB Department Room",
-    "type": "Lecture"
+    "venue": "R105",
+    "type": "Lecture",
+    "time": "3-5 PM"
   },
   {
     "day": "Tuesday",
-    "time": "3 - 3.55",
     "year": 4,
     "courseCode": "CB4107",
     "group": "Minor",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "3-4 PM"
   },
   {
     "day": "Tuesday",
@@ -2026,30 +1981,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "4 - 4.55",
-    "year": 2,
-    "courseCode": "CB2101",
-    "group": "CB",
-    "venue": "CB Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "4 - 4.55",
     "year": 4,
     "courseCode": "CB4103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Tuesday",
-    "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CB5101",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Tuesday",
@@ -2242,30 +2188,30 @@
   },
   {
     "day": "Tuesday",
-    "time": "9 - 9.55",
     "year": 2,
     "courseCode": "CB2105",
     "group": "CB",
-    "venue": "CB Department Room",
-    "type": "Lecture"
+    "venue": "R106",
+    "type": "Lecture",
+    "time": "9-10 AM"
   },
   {
     "day": "Tuesday",
-    "time": "9 - 9.55",
     "year": 3,
     "courseCode": "CB3101",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "9-10 AM"
   },
   {
     "day": "Tuesday",
-    "time": "9 - 9.55",
     "year": "Elective",
     "courseCode": "CB5102",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "9-11 AM"
   },
   {
     "day": "Tuesday",
@@ -2440,30 +2386,21 @@
   },
   {
     "day": "Tuesday",
-    "time": "10 - 10.55",
     "year": 2,
     "courseCode": "CB2104",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "10-11 AM"
   },
   {
     "day": "Tuesday",
-    "time": "10 - 10.55",
     "year": 3,
     "courseCode": "CB3104",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
-  },
-  {
-    "day": "Tuesday",
-    "time": "10 - 10.55",
-    "year": "Elective",
-    "courseCode": "CB5102",
-    "group": "CB",
-    "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "10-11 AM"
   },
   {
     "day": "Tuesday",
@@ -2656,12 +2593,12 @@
   },
   {
     "day": "Tuesday",
-    "time": "11 - 11.55",
     "year": 3,
     "courseCode": "CB3105",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "11-12 PM"
   },
   {
     "day": "Tuesday",
@@ -2863,12 +2800,12 @@
   },
   {
     "day": "Tuesday",
-    "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "CB6104",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "12 Noon - 12.55 PM"
   },
   {
     "day": "Tuesday",
@@ -3556,12 +3493,12 @@
   },
   {
     "day": "Wednesday",
-    "time": "2 - 2.55",
     "year": 3,
     "courseCode": "CB3105",
     "group": "CB",
     "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lab",
+    "time": "2-5 PM"
   },
   {
     "day": "Wednesday",
@@ -3569,7 +3506,7 @@
     "year": 3,
     "courseCode": "CB3105",
     "group": "CB",
-    "venue": "CB3105 Lab (Lab)",
+    "venue": "Lab",
     "type": "Lab"
   },
   {
@@ -3610,57 +3547,30 @@
   },
   {
     "day": "Wednesday",
-    "time": "3 - 3.55",
-    "year": 3,
-    "courseCode": "CB3105",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "3 - 3.55",
     "year": 2,
     "courseCode": "CB2102",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "3-5 PM"
   },
   {
     "day": "Wednesday",
-    "time": "4 - 4.55",
-    "year": 3,
-    "courseCode": "CB3105",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 - 4.55",
-    "year": 2,
-    "courseCode": "CB2102",
-    "group": "CB",
-    "venue": "R-102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CB6105",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Wednesday",
-    "time": "5 - 5.55",
     "year": 2,
     "courseCode": "CB2104",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "5-6 PM"
   },
   {
     "day": "Wednesday",
@@ -3997,12 +3907,12 @@
   },
   {
     "day": "Wednesday",
-    "time": "9 - 9.55",
     "year": 2,
     "courseCode": "CB2105",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "9-10 AM"
   },
   {
     "day": "Wednesday",
@@ -4231,21 +4141,21 @@
   },
   {
     "day": "Wednesday",
-    "time": "10 - 10.55",
     "year": 2,
     "courseCode": "CB2103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "10-11 AM"
   },
   {
     "day": "Wednesday",
-    "time": "10 - 10.55",
     "year": "Elective",
     "courseCode": "CB5102",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "10-11 AM"
   },
   {
     "day": "Wednesday",
@@ -4420,21 +4330,21 @@
   },
   {
     "day": "Wednesday",
-    "time": "11 - 11.55",
     "year": 3,
     "courseCode": "CB3102",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "11-12 PM"
   },
   {
     "day": "Wednesday",
-    "time": "11 - 11.55",
     "year": "Elective",
     "courseCode": "CB5101",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "11-1 AM"
   },
   {
     "day": "Wednesday",
@@ -4591,21 +4501,12 @@
   },
   {
     "day": "Wednesday",
-    "time": "12 Noon - 12.55",
     "year": 4,
     "courseCode": "CB4103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
-  },
-  {
-    "day": "Wednesday",
-    "time": "12 Noon - 12.55",
-    "year": "Elective",
-    "courseCode": "CB5101",
-    "group": "CB",
-    "venue": "Dept Classroom (220)",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "12 Noon - 12.55 PM"
   },
   {
     "day": "Wednesday",
@@ -5338,21 +5239,21 @@
   },
   {
     "day": "Thursday",
-    "time": "3 - 3.55",
     "year": 2,
     "courseCode": "CB2104",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "3-5 PM"
   },
   {
     "day": "Thursday",
-    "time": "3 - 3.55",
     "year": 4,
     "courseCode": "CB4107",
     "group": "Minor",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "3-5 PM"
   },
   {
     "day": "Thursday",
@@ -5370,24 +5271,6 @@
     "courseCode": "CS5102 ~ Foundations of Computer Systems",
     "group": "CS",
     "venue": "LT101",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 - 4.55",
-    "year": 2,
-    "courseCode": "CB2104",
-    "group": "CB",
-    "venue": "R-102",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "4 - 4.55",
-    "year": 4,
-    "courseCode": "CB4107",
-    "group": "Minor",
-    "venue": "R-307",
     "type": "Lecture"
   },
   {
@@ -5446,12 +5329,12 @@
   },
   {
     "day": "Thursday",
-    "time": "5 - 5.55",
     "year": 2,
     "courseCode": "CB2103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "5-6 PM"
   },
   {
     "day": "Thursday",
@@ -5653,12 +5536,12 @@
   },
   {
     "day": "Thursday",
-    "time": "9 - 9.55",
     "year": 3,
     "courseCode": "CB3103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "9-11 AM"
   },
   {
     "day": "Thursday",
@@ -5860,21 +5743,12 @@
   },
   {
     "day": "Thursday",
-    "time": "10 - 10.55",
     "year": "Elective",
     "courseCode": "CB6104",
     "group": "CB",
-    "venue": "CB Department Room",
-    "type": "Lecture"
-  },
-  {
-    "day": "Thursday",
-    "time": "10 - 10.55",
-    "year": 3,
-    "courseCode": "CB3103",
-    "group": "CB",
-    "venue": "R-307",
-    "type": "Lecture"
+    "venue": "R106",
+    "type": "Lecture",
+    "time": "10-11 AM"
   },
   {
     "day": "Thursday",
@@ -6067,21 +5941,21 @@
   },
   {
     "day": "Thursday",
-    "time": "11 - 11.55",
     "year": "Elective",
     "courseCode": "CB6105",
     "group": "CB",
-    "venue": "CB Department Room",
-    "type": "Lecture"
+    "venue": "R106",
+    "type": "Lecture",
+    "time": "11-12 PM"
   },
   {
     "day": "Thursday",
-    "time": "11 - 11.55",
     "year": 3,
     "courseCode": "CB3101",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "11-12 PM"
   },
   {
     "day": "Thursday",
@@ -6868,21 +6742,21 @@
   },
   {
     "day": "Friday",
-    "time": "3 - 3.55",
     "year": 3,
     "courseCode": "CB3104",
     "group": "CB",
     "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lab",
+    "time": "3-5 PM"
   },
   {
     "day": "Friday",
-    "time": "3 - 3.55",
     "year": 2,
     "courseCode": "CB2102",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "3-4 PM"
   },
   {
     "day": "Friday",
@@ -6890,35 +6764,26 @@
     "year": 3,
     "courseCode": "CB3104",
     "group": "CB",
-    "venue": "CB3104 Lab (Lab)",
+    "venue": "Lab",
     "type": "Lab"
   },
   {
     "day": "Friday",
-    "time": "4 - 4.55",
-    "year": 3,
-    "courseCode": "CB3104",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "4 - 4.55",
     "year": 2,
     "courseCode": "CB2105",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Friday",
-    "time": "4 - 4.55",
     "year": "Elective",
     "courseCode": "CB6105",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "4-5 PM"
   },
   {
     "day": "Friday",
@@ -7084,12 +6949,12 @@
   },
   {
     "day": "Friday",
-    "time": "9 - 9.55",
     "year": 3,
     "courseCode": "CB3103",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "9-10 AM"
   },
   {
     "day": "Friday",
@@ -7255,21 +7120,21 @@
   },
   {
     "day": "Friday",
-    "time": "10 - 10.55",
     "year": 2,
     "courseCode": "CB2103",
     "group": "CB",
     "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lab",
+    "time": "10-1 AM"
   },
   {
     "day": "Friday",
-    "time": "10 - 10.55",
     "year": 3,
     "courseCode": "CB3104",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "10-11 AM"
   },
   {
     "day": "Friday",
@@ -7390,30 +7255,21 @@
   },
   {
     "day": "Friday",
-    "time": "11 - 11.55",
-    "year": 2,
-    "courseCode": "CB2103",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "11 - 11.55",
     "year": "Elective",
     "courseCode": "CB6104",
     "group": "CB",
     "venue": "R-102",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "11-12 PM"
   },
   {
     "day": "Friday",
-    "time": "11 - 11.55",
     "year": 3,
     "courseCode": "CB3105",
     "group": "CB",
     "venue": "R-307",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "11-12 PM"
   },
   {
     "day": "Friday",
@@ -7579,21 +7435,12 @@
   },
   {
     "day": "Friday",
-    "time": "12 Noon - 12.55",
     "year": "Elective",
     "courseCode": "CB5103",
     "group": "CB",
     "venue": "Dept Classroom (220)",
-    "type": "Lecture"
-  },
-  {
-    "day": "Friday",
-    "time": "12 Noon - 12.55",
-    "year": 2,
-    "courseCode": "CB2103",
-    "group": "CB",
-    "venue": "Lab",
-    "type": "Lecture"
+    "type": "Lecture",
+    "time": "12 Noon - 12.55 PM"
   },
   {
     "day": "Friday",
