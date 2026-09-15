@@ -2,11 +2,13 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import dns from "dns";
 
-// 🌐 Bypass Campus/ISP SRV block issues (matching Python sync script logic)
-try {
-  dns.setServers(["8.8.8.8", "1.1.1.1", "8.8.4.4"]);
-} catch {
-  // Fallback gracefully if runtime doesn't allow custom DNS
+// 🌐 Bypass Campus/ISP SRV block issues on local devices (only run in dev, not on cloud serverless like Vercel)
+if (process.env.NODE_ENV === "development" && !process.env.VERCEL) {
+  try {
+    dns.setServers(["8.8.8.8", "1.1.1.1", "8.8.4.4"]);
+  } catch {
+    // Fallback gracefully if runtime doesn't allow custom DNS
+  }
 }
 
 interface ScheduleRecord {
