@@ -4,7 +4,11 @@ import { authOptions } from "../../auth/[...nextauth]/route";
 import fs from "fs";
 import path from "path";
 
-const ALLOWED_DEVELOPERS = ["navin_2503ai02@iitp.ac.in"];
+const ALLOWED_DEVELOPERS = [
+  "navin_2503ai02@iitp.ac.in",
+  "yash_2503ai03@iitp.ac.in",
+  "patlory_2503ai04@iitp.ac.in",
+];
 
 export async function GET(request: Request) {
   try {
@@ -40,7 +44,7 @@ export async function GET(request: Request) {
       const nameMatch = student.name?.toLowerCase().includes(searchTerm);
       const rollMatch = student.roll?.toLowerCase().includes(searchTerm);
       const dateMatch = student.birthday?.toLowerCase().includes(searchTerm);
-      
+
       return nameMatch || rollMatch || dateMatch;
     });
 

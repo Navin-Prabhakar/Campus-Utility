@@ -45,7 +45,11 @@ export default function Home() {
   const [fetchingBirthdays, setFetchingBirthdays] = useState(false);
   const [accessDeniedMessage, setAccessDeniedMessage] = useState("");
 
-  const ALLOWED_DEVELOPERS = ["avin_2503ai02@iitp.ac.in"];
+  const ALLOWED_DEVELOPERS = [
+    "navin_2503ai02@iitp.ac.in",
+    "yash_2503ai03@iitp.ac.in",
+    "patlory_2503ai04@iitp.ac.in"
+  ];
 
   const isLocalhost = typeof window !== "undefined" && window.location.hostname === "localhost";
   const isDeveloper = isLocalhost || (realSession?.user?.email && ALLOWED_DEVELOPERS.includes(realSession.user.email));
