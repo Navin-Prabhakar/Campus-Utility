@@ -1,32 +1,85 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+import mongoose from "mongoose";
+import dns from "dns";
+
+// 🌐 Bypass Campus/ISP SRV block issues (matching Python sync script logic)
+try {
+  dns.setServers(["8.8.8.8", "1.1.1.1", "8.8.4.4"]);
+} catch {
+  // Fallback gracefully if runtime doesn't allow custom DNS
+}
+
+interface ScheduleRecord {
+  day?: string;
+  time?: string;
+  year?: number | string;
+  branch?: string;
+  courseCode?: string;
+  courseName?: string;
+  group?: string[] | string;
+  venue?: string;
+  type?: string;
+  isElective?: boolean;
+}
+
+declare global {
+  var timetableMongoConn: mongoose.Connection | undefined;
+}
+
+// ⚡ Reuse connection across serverless invocations
+let cachedConnection: mongoose.Connection | null = global.timetableMongoConn || null;
+
+async function getScheduleCollection() {
+  const uri = process.env.MONGO_URI2 || process.env.MONGO_URI;
+  if (!uri) {
+    throw new Error("MONGO_URI2 is missing from environment variables.");
+  }
+
+  if (!cachedConnection || cachedConnection.readyState !== 1) {
+    const conn = mongoose.createConnection(uri, {
+      dbName: "oneiitp_db",
+      serverSelectionTimeoutMS: 5000,
+      connectTimeoutMS: 5000,
+    });
+    await conn.asPromise();
+    cachedConnection = conn;
+    global.timetableMongoConn = conn;
+  }
+
+  return cachedConnection.collection<ScheduleRecord>("schedules");
+}
+
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   try {
-    // 🔒 Locates the file exactly where your custom Vercel command copies it
-    let filePath = path.join(process.cwd(), "secret-data", "timetable.json");
+    const collection = await getScheduleCollection();
+    const rawRecords = await collection.find({}, { projection: { _id: 0 } }).toArray();
 
-      // If running locally and the production path doesn't exist, check your exact local path
-      if (process.env.NODE_ENV === "development" && !fs.existsSync(filePath)) {
-        // 🧭 Steps out of your project folder directly into the sibling folder
-        filePath = path.join(process.cwd(), "..", "iitp-timetable-sync", "secret-data", "timetable.json");
-      }
-    if (!fs.existsSync(filePath)) {
-      console.error("Timetable database file missing in compilation workspace context.");
-      return NextResponse.json({ error: "Database mapping file missing." }, { status: 404 });
-    }
+    // Map records to the format expected by the schedule page
+    const timetableData = rawRecords.map((item: ScheduleRecord) => ({
+      day: item.day || "",
+      time: item.time || "",
+      year: item.year,
+      branch: item.branch || "",
+      courseCode:
+        item.courseName && item.courseCode && !item.courseCode.includes("~")
+          ? `${item.courseCode} ~ ${item.courseName}`
+          : item.courseCode || "",
+      courseName: item.courseName || "",
+      group: item.group || [],
+      venue: item.venue || "",
+      type: item.type || "Lecture",
+      isElective: Boolean(item.isElective),
+    }));
 
-    const rawData = fs.readFileSync(filePath, "utf-8").trim();
-    if (!rawData) {
-      return NextResponse.json([]);
-    }
-
-    const timetableData = JSON.parse(rawData);
     return NextResponse.json(timetableData);
-
-  } catch (error) {
-    console.error("Secure Timetable Pipeline error hook:", error);
-    return NextResponse.json({ error: "Internal Server Processing Error." }, { status: 500 });
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    console.error("❌ Timetable MongoDB fetch error:", error);
+    return NextResponse.json(
+      { error: "Failed to fetch timetable records from MongoDB.", details: errorMessage },
+      { status: 500 }
+    );
   }
 }

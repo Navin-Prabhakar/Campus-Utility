@@ -6,11 +6,14 @@ import Link from "next/link";
 interface TimetableItem {
   day: string;
   time: string;
-  year: number;
+  year: number | string;
   courseCode: string;
-  group: string;
+  courseName?: string;
+  group: string | string[];
+  branch?: string;
   venue: string;
   type: string;
+  isElective?: boolean;
 }
 
 export default function SchedulePage() {
@@ -102,7 +105,7 @@ export default function SchedulePage() {
           }
         }
 
-        const res = await fetch("/static/timetable.json");
+        const res = await fetch("/api/timetable");
         if (!res.ok) throw new Error("Failed to pull secure JSON payload assets");
 
         const data = await res.json();
@@ -247,6 +250,26 @@ export default function SchedulePage() {
     const matchYear = Number(item.year) === Number(academicYear);
     if (!matchYear) return false;
 
+    // Normalizing groups into a string array
+    const itemGroups: string[] = Array.isArray(item.group)
+      ? item.group
+      : typeof item.group === "string"
+        ? [item.group]
+        : [];
+
+    const isElective =
+      Boolean(item.isElective) ||
+      item.branch === "ELECTIVE" ||
+      itemGroups.includes("ELECTIVE");
+
+    // Handle Elective slots
+    if (isElective) {
+      if (selectedElective !== "ALL") {
+        return item.courseCode.includes(selectedElective);
+      }
+      return true;
+    }
+
     // Filter out electives if specific elective is chosen
     if (selectedElective !== "ALL" && (academicYear === "2" || academicYear === "3")) {
       const isElectiveCourse = ELECTIVES_CONFIG[academicYear]?.some((e) => item.courseCode.includes(e.code));
@@ -255,14 +278,23 @@ export default function SchedulePage() {
       }
     }
 
-    const itemGroup = item.group.trim();
     const currentSelection = selectedGroup.trim();
 
-    if (itemGroup === "All Branches" || itemGroup === "All") return true;
-    if (itemGroup === currentSelection) return true;
+    if (itemGroups.some((g) => g === "All Branches" || g === "ALL" || g === "All")) {
+      return true;
+    }
 
-    const targetGroupRegex = new RegExp(`\\b${currentSelection}\\b`);
-    return targetGroupRegex.test(itemGroup);
+    // 1st Year: match student group (G1, G2, etc.)
+    if (academicYear === "1") {
+      return itemGroups.includes(currentSelection);
+    }
+
+    // 2nd & 3rd Year: match branch (AI, CS, EE, etc.) or group
+    if (item.branch && item.branch === currentSelection) return true;
+    if (itemGroups.includes(currentSelection)) return true;
+
+    const targetGroupRegex = new RegExp(`\\b${currentSelection}\\b`, "i");
+    return itemGroups.some((g) => targetGroupRegex.test(g));
   });
 
   return (
